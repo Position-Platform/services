@@ -35,5 +35,6 @@ Route::middleware('auth:api')->group(function () {
     Route::group(['middleware' => ['role:admin']], function () {
         Route::apiResource('roles', App\Http\Controllers\Api\RoleController::class);
         Route::apiResource('permissions', App\Http\Controllers\Api\PermissionController::class);
+        Route::apiResource('admins', App\Http\Controllers\Api\AdminController::class);
     });
 });

@@ -56,6 +56,8 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
+    protected $guard_name = 'api';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -87,4 +89,10 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function admin()
+    {
+        return $this->hasOne(Admin::class, 'idUser');
+    }
 }

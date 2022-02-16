@@ -57,8 +57,10 @@ class UserController extends BaseController
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
+            $roles = $user->getRoleNames();
             $success['token'] = $user->createToken('Position')->accessToken;
             $success['user'] = $user;
+            $succes['roles'] = $roles;
 
             return $this->sendResponse($success, 'Connexion réussie.');
         } else {
