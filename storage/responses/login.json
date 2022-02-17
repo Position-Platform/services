@@ -1,0 +1,32 @@
+{
+    "success": true,
+    "data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE2ZWRlYzY5OGM2NTcxYzg5NjkyN2QzMmYyYzRiMzE4NDA1MWFiMWM1ODM1NjQyMDEyODY0YzEzYWNmNDM5N2JlNDU3Njg4NzdiMWNjMzAiLCJpYXQiOjE2NDUxMDA2NjQuOTA0NTU3LCJuYmYiOjE2NDUxMDA2NjQuOTA0NTYsImV4cCI6MTY0NzY5MjY2NC45MDAxODQsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.WBpakLxW0HADFThmYnz0q7EuyLYUoWRbmNFWAlzONvEfwWN8RtfWJN5It4dFWzY1IXi6yfIT6ND5P9IO0ihum61pnExgIYSmTn_r1Y43CR2ng8YZXXJT7Tx3mb3tOoy26fnF0sr2WV7wfP5GxPRLpqbGWxmHhfaP8nu2sjt7xoODl1bY7VDqv5Mt_onSxyWrRVWx6ClYd1DWbBvX3Cdc97GPitRqw_F15kQi7H-rdaqz9WbxLbCBjQHrPU_kkZfHc_yUbmhBgaua4VztKtQ5VgYeEFZhlls_cej-XfSq3owj9FVrhQsjWtlYjOk3M9RghPji-s6NeCawhFmJ1y-uEQDIKaLDW9uk3U5UwJ67ZK2ki2vjmVaaK-x72DBAtrVKILqZF1XysLbz6hZEqtLngldRIrYvbb_L7SyuaupYKgCoVUozbQbtadKGAv_QHEEtH6d7T2BUwfNJbnyk1WuY8r-B1gArKgkwAW71-NwVKRF50X-r3yrmWPMJG9Bo8b6ndupWptRNyrzlS1CSgT5cqt9hL51BjcsiLAqmopXoY2G-Nl5gR2egcJpDzTJzdeXCnAihzDsA0arlm0GZr6UZtBSOuKXY0FBLtDWaU19ZS6sZdNAI_BKz-3QYc-hY3uIE263ZQNRt159qMNovGsSbb56l_aFhMEV39uMiivNycwo",
+        "user": {
+            "id": 3,
+            "name": "Gautier",
+            "email": "infos@geo.sm",
+            "email_verified_at": "2022-02-17T12:16:39.000000Z",
+            "phone": "699999997",
+            "fcmToken": null,
+            "imageProfil": null,
+            "created_at": "2022-02-17T12:16:16.000000Z",
+            "updated_at": "2022-02-17T12:16:39.000000Z",
+            "roles": [
+                {
+                    "id": 4,
+                    "name": "user",
+                    "guard_name": "api",
+                    "created_at": "2022-02-17T10:38:34.000000Z",
+                    "updated_at": "2022-02-17T10:38:34.000000Z",
+                    "pivot": {
+                        "model_id": 3,
+                        "role_id": 4,
+                        "model_type": "App\\Models\\User"
+                    }
+                }
+            ]
+        }
+    },
+    "message": "Connexion réussie."
+}

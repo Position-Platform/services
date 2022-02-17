@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\SendResetLinkParams;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -89,6 +90,19 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Send a password reset notification to the user.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $url = 'https://services.position.cm/reset-password?token=' . $token;
+
+        $this->notify(new SendResetLinkParams($token, $url));
+    }
 
 
     public function admin()
