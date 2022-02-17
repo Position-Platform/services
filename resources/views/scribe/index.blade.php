@@ -79,20 +79,20 @@
                     <a href="#account-management">Account management</a>
                 </li>
                                     <ul id="tocify-subheader-account-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-register">
-                        <a href="#account-management-POSTapi-auth-register">Register a new user.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-password-forgot">
+                                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-password-forgot">
                         <a href="#account-management-POSTapi-auth-password-forgot">Forgot Password</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-password-reset">
+                        <a href="#account-management-POSTapi-auth-password-reset">Reset Password</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-register">
+                        <a href="#account-management-POSTapi-auth-register">Register a new user.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-login">
                         <a href="#account-management-POSTapi-auth-login">Login a new user.</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="account-management-GETapi-auth-logout">
                         <a href="#account-management-GETapi-auth-logout">Logout a user.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="account-management-POSTapi-auth-password-reset">
-                        <a href="#account-management-POSTapi-auth-password-reset">Reset Password</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="account-management-POSTapi-user-update">
                         <a href="#account-management-POSTapi-user-update">Update user account.</a>
@@ -190,6 +190,344 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 
     
 
+            <h2 id="account-management-POSTapi-auth-password-forgot">Forgot Password</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-auth-password-forgot">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/auth/password/forgot" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"email\": \"gautier@position.cm\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/auth/password/forgot"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "email": "gautier@position.cm"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth/password/forgot',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'email' =&gt; 'gautier@position.cm',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/auth/password/forgot'
+payload = {
+    "email": "gautier@position.cm"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-auth-password-forgot">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Un lien de reinitialisation vous a &eacute;t&eacute; envoy&eacute; par mail.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-auth-password-forgot" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-auth-password-forgot"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-password-forgot"></code></pre>
+</span>
+<span id="execution-error-POSTapi-auth-password-forgot" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-auth-password-forgot"></code></pre>
+</span>
+<form id="form-POSTapi-auth-password-forgot" data-method="POST"
+      data-path="api/auth/password/forgot"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-password-forgot', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-auth-password-forgot"
+                    onclick="tryItOut('POSTapi-auth-password-forgot');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-auth-password-forgot"
+                    onclick="cancelTryOut('POSTapi-auth-password-forgot');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-auth-password-forgot" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/auth/password/forgot</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-auth-password-forgot"
+               value="gautier@position.cm"
+               data-component="body" hidden>
+    <br>
+<p>the email of the user.</p>
+        </p>
+        </form>
+
+            <h2 id="account-management-POSTapi-auth-password-reset">Reset Password</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-auth-password-reset">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/auth/password/reset" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"email\": \"gautier@position.cm\",
+    \"token\": \"aperiam\",
+    \"password\": \"gautier124\",
+    \"password_confirmation\": \"gautier124\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/auth/password/reset"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "email": "gautier@position.cm",
+    "token": "aperiam",
+    "password": "gautier124",
+    "password_confirmation": "gautier124"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/auth/password/reset',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'email' =&gt; 'gautier@position.cm',
+            'token' =&gt; 'aperiam',
+            'password' =&gt; 'gautier124',
+            'password_confirmation' =&gt; 'gautier124',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/auth/password/reset'
+payload = {
+    "email": "gautier@position.cm",
+    "token": "aperiam",
+    "password": "gautier124",
+    "password_confirmation": "gautier124"
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-auth-password-reset">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Password has been successfully changed&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-auth-password-reset" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-auth-password-reset"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-auth-password-reset"></code></pre>
+</span>
+<span id="execution-error-POSTapi-auth-password-reset" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-auth-password-reset"></code></pre>
+</span>
+<form id="form-POSTapi-auth-password-reset" data-method="POST"
+      data-path="api/auth/password/reset"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-password-reset', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-auth-password-reset"
+                    onclick="tryItOut('POSTapi-auth-password-reset');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-auth-password-reset"
+                    onclick="cancelTryOut('POSTapi-auth-password-reset');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-auth-password-reset" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/auth/password/reset</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-auth-password-reset"
+               value="gautier@position.cm"
+               data-component="body" hidden>
+    <br>
+<p>the email of the user.</p>
+        </p>
+                <p>
+            <b><code>token</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="token"
+               data-endpoint="POSTapi-auth-password-reset"
+               value="aperiam"
+               data-component="body" hidden>
+    <br>
+<p>token give in mail.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-auth-password-reset"
+               value="gautier124"
+               data-component="body" hidden>
+    <br>
+<p>the new password of the user.</p>
+        </p>
+                <p>
+            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password_confirmation"
+               data-endpoint="POSTapi-auth-password-reset"
+               value="gautier124"
+               data-component="body" hidden>
+    <br>
+<p>the password confirmation of the user.</p>
+        </p>
+        </form>
+
             <h2 id="account-management-POSTapi-auth-register">Register a new user.</h2>
 
 <p>
@@ -206,11 +544,12 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
     "http://localhost:8000/api/auth/register" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE533.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDED3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -221,6 +560,7 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 const headers = {
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 const body = new FormData();
@@ -245,6 +585,7 @@ $response = $client-&gt;post(
         'headers' =&gt; [
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'multipart' =&gt; [
             [
@@ -265,7 +606,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE533.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDED3.tmp', 'r')
             ],
         ],
     ]
@@ -280,7 +621,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE533.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDED3.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -290,7 +631,8 @@ payload = {
 }
 headers = {
   'Content-Type': 'multipart/form-data',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers, files=files, data=payload)
@@ -350,7 +692,7 @@ response.json()</code></pre></div>
       data-authed="0"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-register', this);">
     <h3>
@@ -427,150 +769,6 @@ response.json()</code></pre></div>
         </p>
         </form>
 
-            <h2 id="account-management-POSTapi-auth-password-forgot">Forgot Password</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-auth-password-forgot">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/password/forgot" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"gautier@position.cm\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/password/forgot"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "gautier@position.cm"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/auth/password/forgot',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'email' =&gt; 'gautier@position.cm',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/auth/password/forgot'
-payload = {
-    "email": "gautier@position.cm"
-}
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-auth-password-forgot">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;Un lien de reinitialisation vous a &eacute;t&eacute; envoy&eacute; par mail.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-auth-password-forgot" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-auth-password-forgot"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-auth-password-forgot"></code></pre>
-</span>
-<span id="execution-error-POSTapi-auth-password-forgot" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-auth-password-forgot"></code></pre>
-</span>
-<form id="form-POSTapi-auth-password-forgot" data-method="POST"
-      data-path="api/auth/password/forgot"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-password-forgot', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-auth-password-forgot"
-                    onclick="tryItOut('POSTapi-auth-password-forgot');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-auth-password-forgot"
-                    onclick="cancelTryOut('POSTapi-auth-password-forgot');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-auth-password-forgot" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/auth/password/forgot</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-auth-password-forgot"
-               value="gautier@position.cm"
-               data-component="body" hidden>
-    <br>
-<p>the email of the user.</p>
-        </p>
-        </form>
-
             <h2 id="account-management-POSTapi-auth-login">Login a new user.</h2>
 
 <p>
@@ -587,6 +785,7 @@ response.json()</code></pre></div>
     "http://localhost:8000/api/auth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
     \"password\": \"gautier123\",
@@ -603,6 +802,7 @@ response.json()</code></pre></div>
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 let body = {
@@ -626,6 +826,7 @@ $response = $client-&gt;post(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
@@ -650,7 +851,8 @@ payload = {
 }
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers, json=payload)
@@ -713,7 +915,7 @@ response.json()</code></pre></div>
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-login', this);">
     <h3>
@@ -787,7 +989,8 @@ response.json()</code></pre></div>
     --get "http://localhost:8000/api/auth/logout" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -799,6 +1002,7 @@ const headers = {
     "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -816,6 +1020,7 @@ $response = $client-&gt;get(
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -831,7 +1036,8 @@ url = 'http://localhost:8000/api/auth/logout'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -867,7 +1073,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-auth-logout', this);">
     <h3>
@@ -901,192 +1107,6 @@ response.json()</code></pre></div>
         </p>
                 </form>
 
-            <h2 id="account-management-POSTapi-auth-password-reset">Reset Password</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-auth-password-reset">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/password/reset" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"gautier@position.cm\",
-    \"token\": \"aut\",
-    \"password\": \"gautier124\",
-    \"password_confirmation\": \"gautier124\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/password/reset"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "gautier@position.cm",
-    "token": "aut",
-    "password": "gautier124",
-    "password_confirmation": "gautier124"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/auth/password/reset',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-        'json' =&gt; [
-            'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'aut',
-            'password' =&gt; 'gautier124',
-            'password_confirmation' =&gt; 'gautier124',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/auth/password/reset'
-payload = {
-    "email": "gautier@position.cm",
-    "token": "aut",
-    "password": "gautier124",
-    "password_confirmation": "gautier124"
-}
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-auth-password-reset">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;Password has been successfully changed&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-auth-password-reset" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-auth-password-reset"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-auth-password-reset"></code></pre>
-</span>
-<span id="execution-error-POSTapi-auth-password-reset" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-auth-password-reset"></code></pre>
-</span>
-<form id="form-POSTapi-auth-password-reset" data-method="POST"
-      data-path="api/auth/password/reset"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-auth-password-reset', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-auth-password-reset"
-                    onclick="tryItOut('POSTapi-auth-password-reset');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-auth-password-reset"
-                    onclick="cancelTryOut('POSTapi-auth-password-reset');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-auth-password-reset" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/auth/password/reset</code></b>
-        </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-auth-password-reset"
-               value="gautier@position.cm"
-               data-component="body" hidden>
-    <br>
-<p>the email of the user.</p>
-        </p>
-                <p>
-            <b><code>token</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="token"
-               data-endpoint="POSTapi-auth-password-reset"
-               value="aut"
-               data-component="body" hidden>
-    <br>
-<p>token give in mail.</p>
-        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-auth-password-reset"
-               value="gautier124"
-               data-component="body" hidden>
-    <br>
-<p>the new password of the user.</p>
-        </p>
-                <p>
-            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password_confirmation"
-               data-endpoint="POSTapi-auth-password-reset"
-               value="gautier124"
-               data-component="body" hidden>
-    <br>
-<p>the password confirmation of the user.</p>
-        </p>
-        </form>
-
             <h2 id="account-management-POSTapi-user-update">Update user account.</h2>
 
 <p>
@@ -1105,9 +1125,10 @@ response.json()</code></pre></div>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --form "phone=699999999" \
     --form "name=Gautier" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE554.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDEF3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1119,6 +1140,7 @@ const headers = {
     "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 const body = new FormData();
@@ -1142,6 +1164,7 @@ $response = $client-&gt;post(
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
             'Content-Type' =&gt; 'multipart/form-data',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'multipart' =&gt; [
             [
@@ -1154,7 +1177,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE554.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDEF3.tmp', 'r')
             ],
         ],
     ]
@@ -1169,7 +1192,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE554.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDEF3.tmp', 'rb')
 }
 payload = {
     "phone": 699999999,
@@ -1178,7 +1201,8 @@ payload = {
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'multipart/form-data',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers, files=files, data=payload)
@@ -1226,7 +1250,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-user-update', this);">
     <h3>
@@ -1308,7 +1332,8 @@ response.json()</code></pre></div>
     --get "http://localhost:8000/api/user/me" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1320,6 +1345,7 @@ const headers = {
     "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -1337,6 +1363,7 @@ $response = $client-&gt;get(
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -1352,7 +1379,8 @@ url = 'http://localhost:8000/api/user/me'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -1400,7 +1428,7 @@ response.json()</code></pre></div>
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-user-me', this);">
     <h3>
@@ -1453,7 +1481,8 @@ response.json()</code></pre></div>
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/roles" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1464,6 +1493,7 @@ response.json()</code></pre></div>
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -1480,6 +1510,7 @@ $response = $client-&gt;get(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -1494,7 +1525,8 @@ import json
 url = 'http://localhost:8000/api/roles'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -1536,7 +1568,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-roles', this);">
     <h3>
@@ -1578,8 +1610,9 @@ access-control-allow-origin: *
     "http://localhost:8000/api/roles" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --data "{
-    \"name\": \"aut\"
+    \"name\": \"rerum\"
 }"
 </code></pre></div>
 
@@ -1592,10 +1625,11 @@ access-control-allow-origin: *
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 let body = {
-    "name": "aut"
+    "name": "rerum"
 };
 
 fetch(url, {
@@ -1613,9 +1647,10 @@ $response = $client-&gt;post(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'json' =&gt; [
-            'name' =&gt; 'aut',
+            'name' =&gt; 'rerum',
         ],
     ]
 );
@@ -1629,11 +1664,12 @@ import json
 
 url = 'http://localhost:8000/api/roles'
 payload = {
-    "name": "aut"
+    "name": "rerum"
 }
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers, json=payload)
@@ -1675,7 +1711,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-roles', this);">
     <h3>
@@ -1705,7 +1741,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-roles"
-               value="aut"
+               value="rerum"
                data-component="body" hidden>
     <br>
 
@@ -1725,19 +1761,21 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/roles/consequatur" \
+    --get "http://localhost:8000/api/roles/amet" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/roles/consequatur"
+    "http://localhost:8000/api/roles/amet"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -1749,11 +1787,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/roles/consequatur',
+    'http://localhost:8000/api/roles/amet',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -1765,10 +1804,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/roles/consequatur'
+url = 'http://localhost:8000/api/roles/amet'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -1810,7 +1850,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-roles--id-', this);">
     <h3>
@@ -1840,7 +1880,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-roles--id-"
-               value="consequatur"
+               value="amet"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -1860,27 +1900,29 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/roles/natus" \
+    "http://localhost:8000/api/roles/deleniti" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --data "{
-    \"name\": \"eos\"
+    \"name\": \"earum\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/roles/natus"
+    "http://localhost:8000/api/roles/deleniti"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 let body = {
-    "name": "eos"
+    "name": "earum"
 };
 
 fetch(url, {
@@ -1893,14 +1935,15 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/roles/natus',
+    'http://localhost:8000/api/roles/deleniti',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'json' =&gt; [
-            'name' =&gt; 'eos',
+            'name' =&gt; 'earum',
         ],
     ]
 );
@@ -1912,13 +1955,14 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/roles/natus'
+url = 'http://localhost:8000/api/roles/deleniti'
 payload = {
-    "name": "eos"
+    "name": "earum"
 }
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('PUT', url, headers=headers, json=payload)
@@ -1943,7 +1987,7 @@ response.json()</code></pre></div>
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-roles--id-', this);">
     <h3>
@@ -1977,7 +2021,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="id"
                data-endpoint="PUTapi-roles--id-"
-               value="natus"
+               value="deleniti"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -1988,7 +2032,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-roles--id-"
-               value="eos"
+               value="earum"
                data-component="body" hidden>
     <br>
 
@@ -2008,19 +2052,21 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/roles/mollitia" \
+    "http://localhost:8000/api/roles/quia" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/roles/mollitia"
+    "http://localhost:8000/api/roles/quia"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2032,11 +2078,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/roles/mollitia',
+    'http://localhost:8000/api/roles/quia',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -2048,10 +2095,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/roles/mollitia'
+url = 'http://localhost:8000/api/roles/quia'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('DELETE', url, headers=headers)
@@ -2093,7 +2141,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-roles--id-', this);">
     <h3>
@@ -2123,7 +2171,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-roles--id-"
-               value="mollitia"
+               value="quia"
                data-component="url" hidden>
     <br>
 <p>The ID of the role.</p>
@@ -2145,7 +2193,8 @@ access-control-allow-origin: *
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/permissions" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2156,6 +2205,7 @@ access-control-allow-origin: *
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2172,6 +2222,7 @@ $response = $client-&gt;get(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -2186,7 +2237,8 @@ import json
 url = 'http://localhost:8000/api/permissions'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -2228,7 +2280,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-permissions', this);">
     <h3>
@@ -2270,8 +2322,9 @@ access-control-allow-origin: *
     "http://localhost:8000/api/permissions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --data "{
-    \"name\": \"aut\"
+    \"name\": \"ut\"
 }"
 </code></pre></div>
 
@@ -2284,10 +2337,11 @@ access-control-allow-origin: *
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 let body = {
-    "name": "aut"
+    "name": "ut"
 };
 
 fetch(url, {
@@ -2305,9 +2359,10 @@ $response = $client-&gt;post(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'json' =&gt; [
-            'name' =&gt; 'aut',
+            'name' =&gt; 'ut',
         ],
     ]
 );
@@ -2321,11 +2376,12 @@ import json
 
 url = 'http://localhost:8000/api/permissions'
 payload = {
-    "name": "aut"
+    "name": "ut"
 }
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers, json=payload)
@@ -2367,7 +2423,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-permissions', this);">
     <h3>
@@ -2397,7 +2453,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-permissions"
-               value="aut"
+               value="ut"
                data-component="body" hidden>
     <br>
 
@@ -2417,19 +2473,21 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/permissions/quisquam" \
+    --get "http://localhost:8000/api/permissions/nisi" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/permissions/quisquam"
+    "http://localhost:8000/api/permissions/nisi"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2441,11 +2499,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/permissions/quisquam',
+    'http://localhost:8000/api/permissions/nisi',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -2457,10 +2516,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/permissions/quisquam'
+url = 'http://localhost:8000/api/permissions/nisi'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -2502,7 +2562,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-permissions--id-', this);">
     <h3>
@@ -2532,7 +2592,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-permissions--id-"
-               value="quisquam"
+               value="nisi"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2552,27 +2612,29 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/permissions/fugiat" \
+    "http://localhost:8000/api/permissions/provident" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
     --data "{
-    \"name\": \"officiis\"
+    \"name\": \"minima\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/permissions/fugiat"
+    "http://localhost:8000/api/permissions/provident"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 let body = {
-    "name": "officiis"
+    "name": "minima"
 };
 
 fetch(url, {
@@ -2585,14 +2647,15 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/permissions/fugiat',
+    'http://localhost:8000/api/permissions/provident',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
         'json' =&gt; [
-            'name' =&gt; 'officiis',
+            'name' =&gt; 'minima',
         ],
     ]
 );
@@ -2604,13 +2667,14 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/permissions/fugiat'
+url = 'http://localhost:8000/api/permissions/provident'
 payload = {
-    "name": "officiis"
+    "name": "minima"
 }
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('PUT', url, headers=headers, json=payload)
@@ -2635,7 +2699,7 @@ response.json()</code></pre></div>
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-permissions--id-', this);">
     <h3>
@@ -2669,7 +2733,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="id"
                data-endpoint="PUTapi-permissions--id-"
-               value="fugiat"
+               value="provident"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2680,7 +2744,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="name"
                data-endpoint="PUTapi-permissions--id-"
-               value="officiis"
+               value="minima"
                data-component="body" hidden>
     <br>
 
@@ -2700,19 +2764,21 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/permissions/aut" \
+    "http://localhost:8000/api/permissions/officia" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/permissions/aut"
+    "http://localhost:8000/api/permissions/officia"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2724,11 +2790,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/permissions/aut',
+    'http://localhost:8000/api/permissions/officia',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -2740,10 +2807,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/permissions/aut'
+url = 'http://localhost:8000/api/permissions/officia'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('DELETE', url, headers=headers)
@@ -2785,7 +2853,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-permissions--id-', this);">
     <h3>
@@ -2815,7 +2883,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="DELETEapi-permissions--id-"
-               value="aut"
+               value="officia"
                data-component="url" hidden>
     <br>
 <p>The ID of the permission.</p>
@@ -2837,7 +2905,8 @@ access-control-allow-origin: *
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/admins" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2848,6 +2917,7 @@ access-control-allow-origin: *
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2864,6 +2934,7 @@ $response = $client-&gt;get(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -2878,7 +2949,8 @@ import json
 url = 'http://localhost:8000/api/admins'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -2920,7 +2992,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-admins', this);">
     <h3>
@@ -2961,7 +3033,8 @@ access-control-allow-origin: *
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/admins" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2972,6 +3045,7 @@ access-control-allow-origin: *
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -2988,6 +3062,7 @@ $response = $client-&gt;post(
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -3002,7 +3077,8 @@ import json
 url = 'http://localhost:8000/api/admins'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('POST', url, headers=headers)
@@ -3044,7 +3120,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-admins', this);">
     <h3>
@@ -3083,19 +3159,21 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/admins/13" \
+    --get "http://localhost:8000/api/admins/2" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/admins/13"
+    "http://localhost:8000/api/admins/2"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -3107,11 +3185,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/admins/13',
+    'http://localhost:8000/api/admins/2',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -3123,10 +3202,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/admins/13'
+url = 'http://localhost:8000/api/admins/2'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('GET', url, headers=headers)
@@ -3168,7 +3248,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('GETapi-admins--id-', this);">
     <h3>
@@ -3198,7 +3278,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-admins--id-"
-               value="13"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The ID of the admin.</p>
@@ -3218,19 +3298,21 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/admins/18" \
+    "http://localhost:8000/api/admins/19" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/admins/18"
+    "http://localhost:8000/api/admins/19"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -3242,11 +3324,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/admins/18',
+    'http://localhost:8000/api/admins/19',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -3258,10 +3341,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/admins/18'
+url = 'http://localhost:8000/api/admins/19'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('PUT', url, headers=headers)
@@ -3286,7 +3370,7 @@ response.json()</code></pre></div>
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-admins--id-', this);">
     <h3>
@@ -3320,7 +3404,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-admins--id-"
-               value="18"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the admin.</p>
@@ -3340,19 +3424,21 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/admins/19" \
+    "http://localhost:8000/api/admins/12" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/admins/19"
+    "http://localhost:8000/api/admins/12"
 );
 
 const headers = {
     "Content-Type": "application/json",
     "Accept": "application/json",
+    "X-Authorization": "apiKey",
 };
 
 fetch(url, {
@@ -3364,11 +3450,12 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/admins/19',
+    'http://localhost:8000/api/admins/12',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
         ],
     ]
 );
@@ -3380,10 +3467,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/admins/19'
+url = 'http://localhost:8000/api/admins/12'
 headers = {
   'Content-Type': 'application/json',
-  'Accept': 'application/json'
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
 }
 
 response = requests.request('DELETE', url, headers=headers)
@@ -3425,7 +3513,7 @@ access-control-allow-origin: *
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('DELETEapi-admins--id-', this);">
     <h3>
@@ -3455,7 +3543,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-admins--id-"
-               value="19"
+               value="12"
                data-component="url" hidden>
     <br>
 <p>The ID of the admin.</p>

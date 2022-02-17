@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Admin whereIsSuperAdmin($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Admin whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\User|null $user
  */
 class Admin extends Model
 {

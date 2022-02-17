@@ -15,6 +15,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []
@@ -40,6 +41,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -47,7 +49,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: aut
+        example: rerum
         type: string
         custom: []
     responses:
@@ -72,12 +74,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the role.'
         required: true
-        example: consequatur
+        example: amet
         type: string
         custom: []
     queryParameters: []
@@ -105,12 +108,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the role.'
         required: true
-        example: natus
+        example: deleniti
         type: string
         custom: []
     queryParameters: []
@@ -119,7 +123,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: eos
+        example: earum
         type: string
         custom: []
     responses: []
@@ -136,12 +140,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the role.'
         required: true
-        example: mollitia
+        example: quia
         type: string
         custom: []
     queryParameters: []
@@ -168,6 +173,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []
@@ -193,6 +199,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -200,7 +207,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: aut
+        example: ut
         type: string
         custom: []
     responses:
@@ -225,12 +232,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the permission.'
         required: true
-        example: quisquam
+        example: nisi
         type: string
         custom: []
     queryParameters: []
@@ -258,12 +266,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the permission.'
         required: true
-        example: fugiat
+        example: provident
         type: string
         custom: []
     queryParameters: []
@@ -272,7 +281,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: officiis
+        example: minima
         type: string
         custom: []
     responses: []
@@ -289,12 +298,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the permission.'
         required: true
-        example: aut
+        example: officia
         type: string
         custom: []
     queryParameters: []
@@ -321,6 +331,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []
@@ -346,6 +357,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []
@@ -371,12 +383,13 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the admin.'
         required: true
-        example: 13
+        example: 2
         type: integer
         custom: []
     queryParameters: []
@@ -404,36 +417,38 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the admin.'
-        required: true
-        example: 18
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses: []
-    responseFields: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/admins/{id}'
-    metadata:
-      title: 'Remove the specified resource from storage.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
+      X-Authorization: apiKey
     urlParameters:
       id:
         name: id
         description: 'The ID of the admin.'
         required: true
         example: 19
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admins/{id}'
+    metadata:
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the admin.'
+        required: true
+        example: 12
         type: integer
         custom: []
     queryParameters: []

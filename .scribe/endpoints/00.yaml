@@ -4,6 +4,97 @@ endpoints:
   -
     httpMethods:
       - POST
+    uri: api/auth/password/forgot
+    metadata:
+      title: 'Forgot Password'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'the email of the user.'
+        required: true
+        example: gautier@position.cm
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "data": "",
+              "message": "Un lien de reinitialisation vous a été envoyé par mail."
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/password/reset
+    metadata:
+      title: 'Reset Password'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'the email of the user.'
+        required: true
+        example: gautier@position.cm
+        type: string
+        custom: []
+      token:
+        name: token
+        description: 'token give in mail.'
+        required: true
+        example: aperiam
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'the new password of the user.'
+        required: true
+        example: gautier124
+        type: string
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'the password confirmation of the user.'
+        required: true
+        example: gautier124
+        type: string
+        custom: []
+    responses:
+      -
+        status: 201
+        content: |
+          {
+              "success": true,
+              "data": "",
+              "message": "Password has been successfully changed"
+          }
+        headers: []
+        description: '201'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
     uri: api/auth/register
     metadata:
       title: 'Register a new user.'
@@ -13,6 +104,7 @@ endpoints:
     headers:
       Content-Type: multipart/form-data
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -90,40 +182,6 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/auth/password/forgot
-    metadata:
-      title: 'Forgot Password'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: 'the email of the user.'
-        required: true
-        example: gautier@position.cm
-        type: string
-        custom: []
-    responses:
-      -
-        status: 200
-        content: |
-          {
-              "success": true,
-              "data": "",
-              "message": "Un lien de reinitialisation vous a été envoyé par mail."
-          }
-        headers: []
-        description: '200'
-    responseFields: []
-  -
-    httpMethods:
-      - POST
     uri: api/auth/login
     metadata:
       title: 'Login a new user.'
@@ -133,6 +191,7 @@ endpoints:
     headers:
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -209,6 +268,7 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []
@@ -227,61 +287,6 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/auth/password/reset
-    metadata:
-      title: 'Reset Password'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: 'the email of the user.'
-        required: true
-        example: gautier@position.cm
-        type: string
-        custom: []
-      token:
-        name: token
-        description: 'token give in mail.'
-        required: true
-        example: aut
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'the new password of the user.'
-        required: true
-        example: gautier124
-        type: string
-        custom: []
-      password_confirmation:
-        name: password_confirmation
-        description: 'the password confirmation of the user.'
-        required: true
-        example: gautier124
-        type: string
-        custom: []
-    responses:
-      -
-        status: 201
-        content: |
-          {
-              "success": true,
-              "data": "",
-              "message": "Password has been successfully changed"
-          }
-        headers: []
-        description: '201'
-    responseFields: []
-  -
-    httpMethods:
-      - POST
     uri: api/user/update
     metadata:
       title: 'Update user account.'
@@ -292,6 +297,7 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: multipart/form-data
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
@@ -353,6 +359,7 @@ endpoints:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
+      X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters: []

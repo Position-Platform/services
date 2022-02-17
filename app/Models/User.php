@@ -52,6 +52,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @property-read int|null $roles_count
  * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
+ * @property-read \App\Models\Admin|null $admin
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
