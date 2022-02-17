@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +32,8 @@ Route::middleware('auth.apikey')->group(
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
-            Route::post('user/update', [App\Http\Controllers\Api\UserController::class, 'updateUser']);
+            Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
+            Route::delete('user/delete/{id}', [App\Http\Controllers\Api\UserController::class, 'deleteuser']);
             Route::get('user/me', [App\Http\Controllers\Api\UserController::class, 'getUser']);
 
 

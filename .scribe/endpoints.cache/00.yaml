@@ -40,6 +40,42 @@ endpoints:
     responseFields: []
   -
     httpMethods:
+      - DELETE
+    uri: 'api/user/delete/{id}'
+    metadata:
+      title: 'Delete user account.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the admin.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 201
+        content: |
+          {
+              "success": true,
+              "data": "",
+              "message": "Delete Success"
+          }
+        headers: []
+        description: '201'
+    responseFields: []
+  -
+    httpMethods:
       - POST
     uri: api/auth/password/reset
     metadata:
@@ -65,7 +101,7 @@ endpoints:
         name: token
         description: 'token give in mail.'
         required: true
-        example: aperiam
+        example: et
         type: string
         custom: []
       password:
@@ -288,68 +324,6 @@ endpoints:
     responseFields: []
   -
     httpMethods:
-      - POST
-    uri: api/user/update
-    metadata:
-      title: 'Update user account.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: multipart/form-data
-      Accept: application/json
-      X-Authorization: apiKey
-    urlParameters: []
-    queryParameters: []
-    bodyParameters:
-      phone:
-        name: phone
-        description: 'The phone number of the user.'
-        required: false
-        example: 699999999
-        type: integer
-        custom: []
-      file:
-        name: file
-        description: 'Profile Image.'
-        required: false
-        example: null
-        type: file
-        custom: []
-      name:
-        name: name
-        description: 'the name of the user.'
-        required: false
-        example: Gautier
-        type: string
-        custom: []
-    responses:
-      -
-        status: 201
-        content: |
-          {
-              "success": true,
-              "data": {
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier Boris",
-                      "email": "infos@geo.sm",
-                      "email_verified_at": "2022-02-17T12:16:39.000000Z",
-                      "phone": "699999997",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/users/profils/1645102266_images.jpg",
-                      "created_at": "2022-02-17T12:16:16.000000Z",
-                      "updated_at": "2022-02-17T12:51:06.000000Z"
-                  }
-              },
-              "message": "Utilisateur"
-          }
-        headers: []
-        description: '201'
-    responseFields: []
-  -
-    httpMethods:
       - GET
     uri: api/user/me
     metadata:
@@ -388,4 +362,73 @@ endpoints:
           }
         headers: []
         description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/user/update/{id}'
+    metadata:
+      title: 'Update user account.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the admin.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'the name of the user.'
+        required: false
+        example: Gautier
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: 'The phone number of the user.'
+        required: false
+        example: 699999999
+        type: integer
+        custom: []
+      file:
+        name: file
+        description: 'Profile Image.'
+        required: false
+        example: null
+        type: file
+        custom: []
+    responses:
+      -
+        status: 201
+        content: |
+          {
+              "success": true,
+              "data": {
+                  "user": {
+                      "id": 3,
+                      "name": "Gautier Boris",
+                      "email": "infos@geo.sm",
+                      "email_verified_at": "2022-02-17T12:16:39.000000Z",
+                      "phone": "699999997",
+                      "fcmToken": null,
+                      "imageProfil": "/storage/uploads/users/profils/1645102266_images.jpg",
+                      "created_at": "2022-02-17T12:16:16.000000Z",
+                      "updated_at": "2022-02-17T12:51:06.000000Z"
+                  }
+              },
+              "message": "Utilisateur"
+          }
+        headers: []
+        description: '201'
     responseFields: []

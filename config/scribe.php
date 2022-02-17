@@ -62,7 +62,7 @@ return [
              * The route can be referenced by name or path here. Wildcards are supported.
              */
             'exclude' => [
-                'api/auth/email/verify/{id}', 'api/auth/email/resend'
+                'api/auth/email/verify/{id}', 'api/auth/email/resend', 'api/roles*', 'api/permissions*'
             ],
 
             /*

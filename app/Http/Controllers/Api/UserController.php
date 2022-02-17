@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Password;
 
@@ -135,40 +137,77 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @authenticated
      * @group Account management
+     * @urlParam id int required the id of the admin. Example: 2
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
      * @bodyParam file file Profile Image.
      * @responseFile 201 storage/responses/updateuser.json
      */
-    public function updateUser(Request $request)
+    public function updateuser($id, Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'phone' => 'regex:/^[\+0-9]+$/',
-            'file' => 'mimes:png,jpg,jpeg|max:10000'
-        ]);
-
-        if ($validator->fails()) {
-            return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
-        }
-
         $user = Auth::user();
+        $admin = Admin::where('idUser', $user->id)->first();
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+            $validator = Validator::make($request->all(), [
+                'phone' => 'regex:/^[\+0-9]+$/',
+                'file' => 'mimes:png,jpg,jpeg|max:10000'
+            ]);
 
-        $user->name = $request->name ?? $user->name;
-        $user->phone = $request->phone ?? $user->phone;
+            if ($validator->fails()) {
+                return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
+            }
 
-        if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
-            $user->imageProfil = '/storage/' . $filePath;
-        }
+            $user = Auth::user();
 
-        $save = $user->save();
+            $user->name = $request->name ?? $user->name;
+            $user->phone = $request->phone ?? $user->phone;
 
-        if ($save) {
-            $success["user"] = $user;
-            return $this->sendResponse($success, "Utilisateur", 201);
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->file->getClientOriginalName();
+                $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
+                $user->imageProfil = '/storage/' . $filePath;
+            }
+
+            $save = $user->save();
+
+            if ($save) {
+                $success["user"] = $user;
+                return $this->sendResponse($success, "Utilisateur", 201);
+            } else {
+                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            }
         } else {
-            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+        }
+    }
+
+
+    /**
+     * Delete user account.
+     *
+     * @header Content-Type application/json
+     * @authenticated
+     * @group Account management
+     * @urlParam id int required the id of the admin. Example: 2
+     * @responseFile 201 storage/responses/delete.json
+     */
+    public function deleteuser($id)
+    {
+        $user = Auth::user();
+        $admin = Admin::where('idUser', $user->id)->first();
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+
+            try {
+                DB::beginTransaction();
+                User::destroy($id);
+
+                DB::commit();
+
+                return $this->sendResponse("", "Delete Success", 201);
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+            }
         }
     }
 

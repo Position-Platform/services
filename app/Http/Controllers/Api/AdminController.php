@@ -10,25 +10,41 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * @authenticated
+ * @group Admin management
+ *
+ * APIs for managing Admin
+ */
 class AdminController extends BaseController
 {
     /**
-     * Display a listing of the resource.
+     * Get all Admin.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @responseFile storage/responses/getadmins.json
      */
     public function index()
     {
         $admins = Admin::all();
 
+        foreach ($admins as $key => $admin) {
+            $admin->user->roles;
+        }
+
         return $this->sendResponse($admins, 'Liste des Admins');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Add a new admin.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @bodyParam name string required the name of the admin. Example: Gautier
+     * @bodyParam email string required the email of the admin. Example: gautier@position.cm
+     * @bodyParam password string required the password of the admin. Example: gautier123
+     * @bodyParam phone int required The phone number of the admin. Example:699999999
+     * @bodyParam file file Profile Image.
+     * @responseFile storage/responses/addadmin.json
      */
     public function store(Request $request)
     {
@@ -71,7 +87,7 @@ class AdminController extends BaseController
 
                 $admin = Admin::create($inputAdmin);
 
-                $admin->user;
+                $admin->user->roles;
 
                 DB::commit();
 
@@ -86,25 +102,31 @@ class AdminController extends BaseController
     }
 
     /**
-     * Display the specified resource.
+     * Show Admin by id.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the admin. Example: 2
+     * @responseFile storage/responses/showadmin.json
      */
     public function show($id)
     {
         $admin = Admin::find($id);
-        $admin->user();
+        $admin->user->roles;
 
         return $this->sendResponse($admin, "Admin");
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update admin account.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the admin. Example: 2
+     * @bodyParam name string the name of the user. Example: Gautier
+     * @bodyParam phone int The phone number of the user. Example:699999999
+     * @bodyParam isSuperAdmin bool. Example:true
+     * @bodyParam file file Profile Image.
+     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @responseFile 201 storage/responses/updateadmin.json
      */
     public function update(Request $request, $id)
     {
@@ -124,7 +146,7 @@ class AdminController extends BaseController
 
                 if ($request->file()) {
                     $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/commerciaux/profils', $fileName, 'public');
+                    $filePath = $request->file('file')->storeAs('uploads/admins/profils', $fileName, 'public');
                     $userUpdate->imageProfil = '/storage/' . $filePath;
                 }
                 $userUpdate->save();
@@ -133,6 +155,7 @@ class AdminController extends BaseController
 
                 $admin->isSuperAdmin = $request->isSuperAdmin ?? $admin->isSuperAdmin;
                 $admin->save();
+                $admin->user->roles;
 
                 DB::commit();
 
@@ -147,10 +170,11 @@ class AdminController extends BaseController
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete admin account.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the admin. Example: 2
+     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {
