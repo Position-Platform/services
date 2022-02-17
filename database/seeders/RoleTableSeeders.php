@@ -19,7 +19,7 @@ class RoleTableSeeders extends Seeder
 
             [
                 'name' => 'admin',
-                'guard_name' => 'web',
+                'guard_name' => 'api',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -27,19 +27,19 @@ class RoleTableSeeders extends Seeder
 
             [
                 'name' => 'commercial',
-                'guard_name' => 'web',
+                'guard_name' => 'api',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
                 'name' => 'manager',
-                'guard_name' => 'web',
+                'guard_name' => 'api',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
             [
                 'name' => 'user',
-                'guard_name' => 'web',
+                'guard_name' => 'api',
                 'created_at' => now(),
                 'updated_at' => now()
             ],

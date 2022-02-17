@@ -2,20 +2,27 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Password;
-use Spatie\Permission\Models\Role;
 
 class UserController extends BaseController
 {
     /**
-     * Register api
+     * Register a new user.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @group Account management
+     * @bodyParam name string required the name of the user. Example: Gautier
+     * @bodyParam email string required the email of the user. Example: gautier@position.cm
+     * @bodyParam password string required the password of the user. Example: gautier123
+     * @bodyParam phone int required The phone number of the user. Example:699999999
+     * @bodyParam file file Profile Image.
+     * @responseFile storage/responses/register.json
      */
     public function register(Request $request)
     {
@@ -24,6 +31,7 @@ class UserController extends BaseController
             'email' => 'email|unique:users,email',
             'password' => 'string|between:6,20',
             'phone' => 'regex:/^[\+0-9]+$/',
+            'file' => 'mimes:png,jpg,jpeg|max:10000'
         ]);
 
 
@@ -33,7 +41,15 @@ class UserController extends BaseController
 
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->file->getClientOriginalName();
+            $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
+            $input['imageProfil'] = '/storage/' . $filePath;
+        }
         $user = User::create($input);
+
+
+
         $user->assignRole('user');
         $user->sendEmailVerificationNotification();
         $success['token'] = $user->createToken('Position')->accessToken;
@@ -47,9 +63,14 @@ class UserController extends BaseController
     }
 
     /**
-     * Login api
+     * Login a new user.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @group Account management
+     * @bodyParam email string required if phone not found the email of the user. Example: gautier@position.cm
+     * @bodyParam password string required the password of the user. Example: gautier123
+     * @bodyParam phone int required if email not found The phone number of the user. Example:699999999
+     * @responseFile storage/responses/login.json
      */
     public function login(Request $request)
     {
@@ -57,8 +78,10 @@ class UserController extends BaseController
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
+            $roles = $user->getRoleNames();
             $success['token'] = $user->createToken('Position')->accessToken;
             $success['user'] = $user;
+            $succes['roles'] = $roles;
 
             return $this->sendResponse($success, 'Connexion réussie.');
         } else {
@@ -67,9 +90,12 @@ class UserController extends BaseController
     }
 
     /**
-     * Logout
+     * Logout a user.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @authenticated
+     * @group Account management
+     * @responseFile storage/responses/logout.json
      */
     public function logout()
     {
@@ -85,28 +111,114 @@ class UserController extends BaseController
     }
 
     /**
-     * Get User Connected
+     * get User Account.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @authenticated
+     * @group Account management
+     * @responseFile storage/responses/getuser.json
      */
     public function getUser()
     {
+        $user = Auth::user();
+
+        if ($user) {
+            $success["user"] = $user;
+
+            return $this->sendResponse($success, 'Utilisateur');
+        } else {
+            return $this->sendError('Pas autorisé.', ['error' => 'Unauthorised']);
+        }
     }
 
     /**
-     * Update User
+     * Update user account.
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @authenticated
+     * @group Account management
+     * @urlParam id int required the id of the admin. Example: 2
+     * @bodyParam name string the name of the user. Example: Gautier
+     * @bodyParam phone int The phone number of the user. Example:699999999
+     * @bodyParam file file Profile Image.
+     * @responseFile 201 storage/responses/updateuser.json
      */
-    public function updateUser(Request $request)
+    public function updateuser($id, Request $request)
     {
+        $user = Auth::user();
+        $admin = Admin::where('idUser', $user->id)->first();
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+            $validator = Validator::make($request->all(), [
+                'phone' => 'regex:/^[\+0-9]+$/',
+                'file' => 'mimes:png,jpg,jpeg|max:10000'
+            ]);
+
+            if ($validator->fails()) {
+                return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
+            }
+
+            $user = Auth::user();
+
+            $user->name = $request->name ?? $user->name;
+            $user->phone = $request->phone ?? $user->phone;
+
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->file->getClientOriginalName();
+                $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
+                $user->imageProfil = '/storage/' . $filePath;
+            }
+
+            $save = $user->save();
+
+            if ($save) {
+                $success["user"] = $user;
+                return $this->sendResponse($success, "Utilisateur", 201);
+            } else {
+                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            }
+        } else {
+            return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+        }
+    }
+
+
+    /**
+     * Delete user account.
+     *
+     * @header Content-Type application/json
+     * @authenticated
+     * @group Account management
+     * @urlParam id int required the id of the admin. Example: 2
+     * @responseFile 201 storage/responses/delete.json
+     */
+    public function deleteuser($id)
+    {
+        $user = Auth::user();
+        $admin = Admin::where('idUser', $user->id)->first();
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+
+            try {
+                DB::beginTransaction();
+                User::destroy($id);
+
+                DB::commit();
+
+                return $this->sendResponse("", "Delete Success", 201);
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+            }
+        }
     }
 
 
     /**
      * Forgot Password
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @group Account management
+     * @bodyParam email string required the email of the user. Example: gautier@position.cm
+     * @responseFile storage/responses/forgot.json
      */
     public function forgot()
     {
@@ -114,24 +226,38 @@ class UserController extends BaseController
 
         Password::sendResetLink($credentials);
 
-        return $this->sendResponse("", "Un lien de reinitialisation vous a été envoyé par mail.", 201);
+        return $this->sendResponse("", "Un lien de reinitialisation vous a été envoyé par mail.", 200);
     }
 
     /**
      * Reset Password
      *
-     * @return \Illuminate\Http\Response
+     * @header Content-Type application/json
+     * @group Account management
+     * @bodyParam email string required the email of the user. Example: gautier@position.cm
+     * @bodyParam token string required token give in mail.
+     * @bodyParam password string required the new password of the user. Example: gautier124
+     * @bodyParam password_confirmation string required the password confirmation of the user. Example: gautier124
+     * @responseFile 201 storage/responses/reset.json
      */
-    public function reset()
+    public function reset(Request $request)
     {
-        $credentials = request()->validate([
+
+
+        $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'token' => 'required|string',
             'password' => 'required|string|confirmed'
         ]);
 
+        if ($validator->fails()) {
+            return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
+        }
+
+        $credentials = $request->only(['email', 'token', 'password']);
+
         $reset_password_status = Password::reset($credentials, function ($user, $password) {
-            $user->password = $password;
+            $user->password = bcrypt($password);
             $user->save();
         });
 
