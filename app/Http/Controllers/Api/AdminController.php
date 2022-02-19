@@ -132,7 +132,7 @@ class AdminController extends BaseController
     {
         $user = Auth::user();
         $admin = Admin::where('idUser', $user->id)->first();
-        if ($admin->isSuperAdmin == 1) {
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
             $admin = Admin::find($id);
             $request->validate([
                 'file' => 'mimes:png,jpg,jpeg|max:10000'
@@ -180,13 +180,14 @@ class AdminController extends BaseController
     {
         $user = Auth::user();
         $admin = Admin::where('idUser', $user->id)->first();
-        if ($admin->isSuperAdmin == 1) {
+        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
             $admin = Admin::find($id);
 
             try {
                 DB::beginTransaction();
-                User::destroy($admin->idUser);
-                Admin::destroy($admin->id);
+                $admin->user()->delete();
+
+                $admin->delete();
 
                 DB::commit();
 

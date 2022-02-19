@@ -127,6 +127,28 @@
                     </li>
                                                     </ul>
                             </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="commerciaux-management">
+                    <a href="#commerciaux-management">Commerciaux management</a>
+                </li>
+                                    <ul id="tocify-subheader-commerciaux-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="commerciaux-management-GETapi-commercials--id-">
+                        <a href="#commerciaux-management-GETapi-commercials--id-">Show Commercial by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commerciaux-management-GETapi-commercials">
+                        <a href="#commerciaux-management-GETapi-commercials">Get all Commerciaux.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commerciaux-management-POSTapi-commercials">
+                        <a href="#commerciaux-management-POSTapi-commercials">Add a new Commercial.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commerciaux-management-PUTapi-commercials--id-">
+                        <a href="#commerciaux-management-PUTapi-commercials--id-">Add a new Commercial.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commerciaux-management-DELETEapi-commercials--id-">
+                        <a href="#commerciaux-management-DELETEapi-commercials--id-">Delete commercial account.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
         
                         
             </div>
@@ -137,7 +159,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 17 2022</li>
+        <li>Last updated: February 19 2022</li>
     </ul>
 </div>
 
@@ -476,7 +498,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"et\",
+    \"token\": \"qui\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -496,7 +518,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "et",
+    "token": "qui",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -520,7 +542,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'et',
+            'token' =&gt; 'qui',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -537,7 +559,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "et",
+    "token": "qui",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -620,7 +642,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="et"
+               value="qui"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -668,7 +690,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDE9.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php5FE7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -725,7 +747,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDE9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5FE7.tmp', 'r')
             ],
         ],
     ]
@@ -740,7 +762,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDE9.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php5FE7.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -1394,7 +1416,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE09.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6007.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1443,7 +1465,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE09.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6007.tmp', 'r')
             ],
         ],
     ]
@@ -1458,7 +1480,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE09.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php6007.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -1851,7 +1873,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE1A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6057.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1910,7 +1932,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE1A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6057.tmp', 'r')
             ],
         ],
     ]
@@ -1925,7 +1947,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE1A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php6057.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2288,7 +2310,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE2A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6077.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2347,7 +2369,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE2A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6077.tmp', 'r')
             ],
         ],
     ]
@@ -2362,7 +2384,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE2A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php6077.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2684,6 +2706,1365 @@ response.json()</code></pre></div>
                data-component="url" hidden>
     <br>
 <p>the id of the admin.</p>
+            </p>
+                    </form>
+
+        <h1 id="commerciaux-management">Commerciaux management</h1>
+
+    <p>APIs for managing Admin</p>
+
+            <h2 id="commerciaux-management-GETapi-commercials--id-">Show Commercial by id.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-commercials--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commercials/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commercials/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commercials/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commercials/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commercials--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;idUser&quot;: 3,
+        &quot;numeroCni&quot;: 1256987,
+        &quot;numeroBadge&quot;: 1325,
+        &quot;ville&quot;: &quot;Douala&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;actif&quot;: true,
+        &quot;sexe&quot;: &quot;Masculin&quot;,
+        &quot;whatsapp&quot;: 699999999,
+        &quot;diplome&quot;: &quot;BAC&quot;,
+        &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+        &quot;age&quot;: 25,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;user&quot;: {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Gautier&quot;,
+            &quot;email&quot;: &quot;bt@geo.sm&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;phone&quot;: &quot;699999998&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1645269905_images.jpg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;commercial&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 3,
+                        &quot;role_id&quot;: 2,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        }
+    },
+    &quot;message&quot;: &quot;Commercial&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commercials--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commercials--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commercials--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-commercials--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commercials--id-"></code></pre>
+</span>
+<form id="form-GETapi-commercials--id-" data-method="GET"
+      data-path="api/commercials/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commercials--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commercials--id-"
+                    onclick="tryItOut('GETapi-commercials--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commercials--id-"
+                    onclick="cancelTryOut('GETapi-commercials--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commercials--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commercials/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-commercials--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-commercials--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-commercials--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the commercial.</p>
+            </p>
+                    </form>
+
+            <h2 id="commerciaux-management-GETapi-commercials">Get all Commerciaux.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-commercials">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commercials" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commercials"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commercials',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commercials'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commercials">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;idUser&quot;: 3,
+            &quot;numeroCni&quot;: 1256987,
+            &quot;numeroBadge&quot;: 1325,
+            &quot;ville&quot;: &quot;Douala&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;,
+            &quot;actif&quot;: true,
+            &quot;sexe&quot;: &quot;Masculin&quot;,
+            &quot;whatsapp&quot;: 699999999,
+            &quot;diplome&quot;: &quot;BAC&quot;,
+            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+            &quot;age&quot;: 25,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 3,
+                &quot;name&quot;: &quot;Gautier&quot;,
+                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;phone&quot;: &quot;699999998&quot;,
+                &quot;fcmToken&quot;: null,
+                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1645269905_images.jpg&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+                &quot;roles&quot;: [
+                    {
+                        &quot;id&quot;: 2,
+                        &quot;name&quot;: &quot;commercial&quot;,
+                        &quot;guard_name&quot;: &quot;api&quot;,
+                        &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;model_id&quot;: 3,
+                            &quot;role_id&quot;: 2,
+                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Commerciaux&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commercials" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commercials"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commercials"></code></pre>
+</span>
+<span id="execution-error-GETapi-commercials" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commercials"></code></pre>
+</span>
+<form id="form-GETapi-commercials" data-method="GET"
+      data-path="api/commercials"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commercials', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commercials"
+                    onclick="tryItOut('GETapi-commercials');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commercials"
+                    onclick="cancelTryOut('GETapi-commercials');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commercials" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commercials</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-commercials" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-commercials"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="commerciaux-management-POSTapi-commercials">Add a new Commercial.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-commercials">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/commercials" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "name=Gautier" \
+    --form "email=gautier@position.cm" \
+    --form "phone=699999999" \
+    --form "numeroCni=1256987" \
+    --form "numeroBadge=1234568" \
+    --form "ville=Douala" \
+    --form "quartier=Melen" \
+    --form "sexe=Masculin" \
+    --form "whatsapp=699999999" \
+    --form "diplome=BAC" \
+    --form "tailleTshirt=XXL" \
+    --form "age=25" \
+    --form "password=gautier123" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6088.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commercials"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('name', 'Gautier');
+body.append('email', 'gautier@position.cm');
+body.append('phone', '699999999');
+body.append('numeroCni', '1256987');
+body.append('numeroBadge', '1234568');
+body.append('ville', 'Douala');
+body.append('quartier', 'Melen');
+body.append('sexe', 'Masculin');
+body.append('whatsapp', '699999999');
+body.append('diplome', 'BAC');
+body.append('tailleTshirt', 'XXL');
+body.append('age', '25');
+body.append('password', 'gautier123');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/commercials',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Gautier'
+            ],
+            [
+                'name' =&gt; 'email',
+                'contents' =&gt; 'gautier@position.cm'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'numeroCni',
+                'contents' =&gt; '1256987'
+            ],
+            [
+                'name' =&gt; 'numeroBadge',
+                'contents' =&gt; '1234568'
+            ],
+            [
+                'name' =&gt; 'ville',
+                'contents' =&gt; 'Douala'
+            ],
+            [
+                'name' =&gt; 'quartier',
+                'contents' =&gt; 'Melen'
+            ],
+            [
+                'name' =&gt; 'sexe',
+                'contents' =&gt; 'Masculin'
+            ],
+            [
+                'name' =&gt; 'whatsapp',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'diplome',
+                'contents' =&gt; 'BAC'
+            ],
+            [
+                'name' =&gt; 'tailleTshirt',
+                'contents' =&gt; 'XXL'
+            ],
+            [
+                'name' =&gt; 'age',
+                'contents' =&gt; '25'
+            ],
+            [
+                'name' =&gt; 'password',
+                'contents' =&gt; 'gautier123'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6088.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commercials'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php6088.tmp', 'rb')
+}
+payload = {
+    "name": "Gautier",
+    "email": "gautier@position.cm",
+    "phone": 699999999,
+    "numeroCni": 1256987,
+    "numeroBadge": 1234568,
+    "ville": "Douala",
+    "quartier": "Melen",
+    "sexe": "Masculin",
+    "whatsapp": 699999999,
+    "diplome": "BAC",
+    "tailleTshirt": "XXL",
+    "age": 25,
+    "password": "gautier123"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-commercials">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;numeroCni&quot;: &quot;1256987&quot;,
+        &quot;numeroBadge&quot;: &quot;1325&quot;,
+        &quot;ville&quot;: &quot;Douala&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;sexe&quot;: &quot;Masculin&quot;,
+        &quot;whatsapp&quot;: &quot;699999999&quot;,
+        &quot;diplome&quot;: &quot;BAC&quot;,
+        &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+        &quot;age&quot;: &quot;25&quot;,
+        &quot;idUser&quot;: 3,
+        &quot;updated_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;id&quot;: 1,
+        &quot;user&quot;: {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Gautier&quot;,
+            &quot;email&quot;: &quot;bt@geo.sm&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;phone&quot;: &quot;699999998&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1645269905_images.jpg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;commercial&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 3,
+                        &quot;role_id&quot;: 2,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        }
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation du commercial reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-commercials" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-commercials"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-commercials"></code></pre>
+</span>
+<span id="execution-error-POSTapi-commercials" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-commercials"></code></pre>
+</span>
+<form id="form-POSTapi-commercials" data-method="POST"
+      data-path="api/commercials"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-commercials', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-commercials"
+                    onclick="tryItOut('POSTapi-commercials');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-commercials"
+                    onclick="cancelTryOut('POSTapi-commercials');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-commercials" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/commercials</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-commercials" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-commercials"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-commercials"
+               value="Gautier"
+               data-component="body" hidden>
+    <br>
+<p>the name of the commercial.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-commercials"
+               value="gautier@position.cm"
+               data-component="body" hidden>
+    <br>
+<p>the email of the commercial.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="phone"
+               data-endpoint="POSTapi-commercials"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>The phone number of the commercial.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="POSTapi-commercials"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>Profile Image.</p>
+        </p>
+                <p>
+            <b><code>numeroCni</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="numeroCni"
+               data-endpoint="POSTapi-commercials"
+               value="1256987"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>numeroBadge</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="numeroBadge"
+               data-endpoint="POSTapi-commercials"
+               value="1234568"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>ville</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="ville"
+               data-endpoint="POSTapi-commercials"
+               value="Douala"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>quartier</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="quartier"
+               data-endpoint="POSTapi-commercials"
+               value="Melen"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>sexe</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sexe"
+               data-endpoint="POSTapi-commercials"
+               value="Masculin"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>whatsapp</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="whatsapp"
+               data-endpoint="POSTapi-commercials"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>diplome</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="diplome"
+               data-endpoint="POSTapi-commercials"
+               value="BAC"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>tailleTshirt</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="tailleTshirt"
+               data-endpoint="POSTapi-commercials"
+               value="XXL"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>age</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="age"
+               data-endpoint="POSTapi-commercials"
+               value="25"
+               data-component="body" hidden>
+    <br>
+<p>required.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-commercials"
+               value="gautier123"
+               data-component="body" hidden>
+    <br>
+<p>the password of the commercial.</p>
+        </p>
+        </form>
+
+            <h2 id="commerciaux-management-PUTapi-commercials--id-">Add a new Commercial.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-commercials--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/commercials/6" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "name=Gautier" \
+    --form "phone=699999999" \
+    --form "numeroCni=1256987" \
+    --form "numeroBadge=1234568" \
+    --form "ville=Douala" \
+    --form "quartier=Melen" \
+    --form "sexe=Masculin" \
+    --form "whatsapp=699999999" \
+    --form "diplome=BAC" \
+    --form "tailleTshirt=XXL" \
+    --form "age=25" \
+    --form "_method=PUT" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6046.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commercials/6"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('name', 'Gautier');
+body.append('phone', '699999999');
+body.append('numeroCni', '1256987');
+body.append('numeroBadge', '1234568');
+body.append('ville', 'Douala');
+body.append('quartier', 'Melen');
+body.append('sexe', 'Masculin');
+body.append('whatsapp', '699999999');
+body.append('diplome', 'BAC');
+body.append('tailleTshirt', 'XXL');
+body.append('age', '25');
+body.append('_method', 'PUT');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/commercials/6',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Gautier'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'numeroCni',
+                'contents' =&gt; '1256987'
+            ],
+            [
+                'name' =&gt; 'numeroBadge',
+                'contents' =&gt; '1234568'
+            ],
+            [
+                'name' =&gt; 'ville',
+                'contents' =&gt; 'Douala'
+            ],
+            [
+                'name' =&gt; 'quartier',
+                'contents' =&gt; 'Melen'
+            ],
+            [
+                'name' =&gt; 'sexe',
+                'contents' =&gt; 'Masculin'
+            ],
+            [
+                'name' =&gt; 'whatsapp',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'diplome',
+                'contents' =&gt; 'BAC'
+            ],
+            [
+                'name' =&gt; 'tailleTshirt',
+                'contents' =&gt; 'XXL'
+            ],
+            [
+                'name' =&gt; 'age',
+                'contents' =&gt; '25'
+            ],
+            [
+                'name' =&gt; '_method',
+                'contents' =&gt; 'PUT'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6046.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commercials/6'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php6046.tmp', 'rb')
+}
+payload = {
+    "name": "Gautier",
+    "phone": 699999999,
+    "numeroCni": "1256987",
+    "numeroBadge": "1234568",
+    "ville": "Douala",
+    "quartier": "Melen",
+    "sexe": "Masculin",
+    "whatsapp": "699999999",
+    "diplome": "BAC",
+    "tailleTshirt": "XXL",
+    "age": "25",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-commercials--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;idUser&quot;: 3,
+        &quot;numeroCni&quot;: 1256987,
+        &quot;numeroBadge&quot;: 1325,
+        &quot;ville&quot;: &quot;Douala&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;actif&quot;: true,
+        &quot;sexe&quot;: &quot;Masculin&quot;,
+        &quot;whatsapp&quot;: 699999999,
+        &quot;diplome&quot;: &quot;BAC&quot;,
+        &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+        &quot;age&quot;: 25,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T11:25:11.000000Z&quot;,
+        &quot;user&quot;: {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;Gautier 2000&quot;,
+            &quot;email&quot;: &quot;bt@geo.sm&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;phone&quot;: &quot;699999998&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1645269905_images.jpg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-19T11:25:06.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T19:10:29.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;commercial&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 3,
+                        &quot;role_id&quot;: 2,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-commercials--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-commercials--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-commercials--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-commercials--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-commercials--id-"></code></pre>
+</span>
+<form id="form-PUTapi-commercials--id-" data-method="PUT"
+      data-path="api/commercials/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-commercials--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-commercials--id-"
+                    onclick="tryItOut('PUTapi-commercials--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-commercials--id-"
+                    onclick="cancelTryOut('PUTapi-commercials--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-commercials--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/commercials/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-commercials--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-commercials--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-commercials--id-"
+               value="6"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the commercial.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-commercials--id-"
+               value="Gautier"
+               data-component="body" hidden>
+    <br>
+<p>the name of the commercial.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="phone"
+               data-endpoint="PUTapi-commercials--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>The phone number of the commercial.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="PUTapi-commercials--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>Profile Image.</p>
+        </p>
+                <p>
+            <b><code>numeroCni</code></b>&nbsp;&nbsp;<small>int.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="numeroCni"
+               data-endpoint="PUTapi-commercials--id-"
+               value="1256987"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>numeroBadge</code></b>&nbsp;&nbsp;<small>int.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="numeroBadge"
+               data-endpoint="PUTapi-commercials--id-"
+               value="1234568"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>ville</code></b>&nbsp;&nbsp;<small>string.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="ville"
+               data-endpoint="PUTapi-commercials--id-"
+               value="Douala"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>quartier</code></b>&nbsp;&nbsp;<small>string.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="quartier"
+               data-endpoint="PUTapi-commercials--id-"
+               value="Melen"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>sexe</code></b>&nbsp;&nbsp;<small>string.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sexe"
+               data-endpoint="PUTapi-commercials--id-"
+               value="Masculin"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>whatsapp</code></b>&nbsp;&nbsp;<small>int.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="whatsapp"
+               data-endpoint="PUTapi-commercials--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>diplome</code></b>&nbsp;&nbsp;<small>string.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="diplome"
+               data-endpoint="PUTapi-commercials--id-"
+               value="BAC"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>tailleTshirt</code></b>&nbsp;&nbsp;<small>string.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="tailleTshirt"
+               data-endpoint="PUTapi-commercials--id-"
+               value="XXL"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>age</code></b>&nbsp;&nbsp;<small>int.</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="age"
+               data-endpoint="PUTapi-commercials--id-"
+               value="25"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-commercials--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="commerciaux-management-DELETEapi-commercials--id-">Delete commercial account.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-commercials--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/commercials/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commercials/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/commercials/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commercials/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-commercials--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-commercials--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-commercials--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-commercials--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-commercials--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-commercials--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-commercials--id-" data-method="DELETE"
+      data-path="api/commercials/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-commercials--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-commercials--id-"
+                    onclick="tryItOut('DELETEapi-commercials--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-commercials--id-"
+                    onclick="cancelTryOut('DELETEapi-commercials--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-commercials--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/commercials/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-commercials--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-commercials--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-commercials--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the commercial.</p>
             </p>
                     </form>
 

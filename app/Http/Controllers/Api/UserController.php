@@ -147,7 +147,7 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $admin = Admin::where('idUser', $user->id)->first();
-        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+        if ($admin || $user->id == $id) {
             $validator = Validator::make($request->all(), [
                 'phone' => 'regex:/^[\+0-9]+$/',
                 'file' => 'mimes:png,jpg,jpeg|max:10000'
@@ -195,7 +195,7 @@ class UserController extends BaseController
     {
         $user = Auth::user();
         $admin = Admin::where('idUser', $user->id)->first();
-        if ($admin->isSuperAdmin == 1 || $user->id == $id) {
+        if ($admin || $user->id == $id) {
 
             try {
                 DB::beginTransaction();

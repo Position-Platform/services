@@ -36,11 +36,18 @@ Route::middleware('auth.apikey')->group(
             Route::delete('user/delete/{id}', [App\Http\Controllers\Api\UserController::class, 'deleteuser']);
             Route::get('user/me', [App\Http\Controllers\Api\UserController::class, 'getUser']);
 
+            Route::get('commercials', [App\Http\Controllers\Api\CommercialController::class, 'index']);
+            Route::get('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'show']);
+            Route::put('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'update']);
+
+
 
             Route::group(['middleware' => ['role:admin']], function () {
                 Route::apiResource('roles', App\Http\Controllers\Api\RoleController::class);
                 Route::apiResource('permissions', App\Http\Controllers\Api\PermissionController::class);
                 Route::apiResource('admins', App\Http\Controllers\Api\AdminController::class);
+                Route::post('commercials', [App\Http\Controllers\Api\CommercialController::class, 'store']);
+                Route::delete('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'destroy']);
             });
         });
     }

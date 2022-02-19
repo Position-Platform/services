@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('fcmToken')->nullable();
             $table->string('imageProfil')->nullable();
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
