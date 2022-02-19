@@ -4,7 +4,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 9.0.2.
+ * Generated for Laravel 9.1.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12136,7 +12136,7 @@
          * Create a route group with shared attributes.
          *
          * @param array $attributes
-         * @param \Closure|string $routes
+         * @param \Closure|array|string $routes
          * @return void 
          * @static 
          */ 

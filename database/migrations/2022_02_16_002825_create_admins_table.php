@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->boolean('isSuperAdmin')->default(false);
             $table->integer('idUser');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
