@@ -111,6 +111,18 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new SendResetLinkParams($token, $url));
     }
 
+    /**
+     * Route notifications for the Vonage channel.
+     *
+     * @param  \Illuminate\Notifications\Notification  $notification
+     * @return string
+     */
+    public function routeNotificationForVonage($notification)
+    {
+        $phone = "237" . $this->phone;
+        return $phone;
+    }
+
 
     public function admin()
     {

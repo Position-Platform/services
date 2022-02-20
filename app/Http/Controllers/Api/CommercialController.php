@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Commercial;
 use App\Models\User;
 use App\Notifications\SendEmailParams;
+use App\Notifications\SendParams;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Validator;
  * @authenticated
  * @group Commerciaux management
  *
- * APIs for managing Admin
+ * APIs for managing Commerciaux
  */
 class CommercialController extends BaseController
 {
@@ -96,7 +97,7 @@ class CommercialController extends BaseController
             $user = User::create($input);
             $user->assignRole('commercial');
 
-            $user->notify(new SendEmailParams($user->phone, $password));
+            $user->notify(new SendParams($user->phone, $password));
 
             $inputCommercial['numeroCni'] = $request->numeroCni;
             $inputCommercial['numeroBadge'] = $request->numeroBadge;
