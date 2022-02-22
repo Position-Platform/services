@@ -46,6 +46,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Commercial withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Commercial withoutTrashed()
  * @mixin \Eloquent
+ * @property-read \App\Models\User|null $user
  */
 class Commercial extends Model
 {

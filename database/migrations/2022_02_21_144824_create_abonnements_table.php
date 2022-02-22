@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('managers', function (Blueprint $table) {
+        Schema::create('abonnements', function (Blueprint $table) {
             $table->id();
-            $table->integer("idUser");
-            $table->integer("idAbonnement");
+            $table->string('nom');
+            $table->integer('prix');
+            $table->string('type')->default('year');
+            $table->integer('duree');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('managers');
+        Schema::dropIfExists('abonnements');
     }
 };

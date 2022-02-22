@@ -40,6 +40,8 @@ Route::middleware('auth.apikey')->group(
             Route::get('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'show']);
             Route::put('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'update']);
 
+            Route::apiResource('managers', App\Http\Controllers\Api\ManagerController::class);
+
 
 
             Route::group(['middleware' => ['role:admin']], function () {

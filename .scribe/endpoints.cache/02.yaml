@@ -3,7 +3,7 @@
 name: 'Commerciaux management'
 description: |-
 
-  APIs for managing Admin
+  APIs for managing Commerciaux
 endpoints:
   -
     httpMethods:
@@ -328,7 +328,7 @@ endpoints:
       - PUT
     uri: 'api/commercials/{id}'
     metadata:
-      title: 'Add a new Commercial.'
+      title: 'Update Commercial.'
       description: ''
       authenticated: true
       custom: []
@@ -342,7 +342,7 @@ endpoints:
         name: id
         description: 'The ID of the commercial.'
         required: true
-        example: 6
+        example: 8
         type: integer
         custom: []
     queryParameters: []

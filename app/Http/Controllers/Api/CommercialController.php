@@ -138,7 +138,7 @@ class CommercialController extends BaseController
     }
 
     /**
-     * Add a new Commercial.
+     * Update Commercial.
      *
      * @header Content-Type application/json
      * @bodyParam name string the name of the commercial. Example: Gautier

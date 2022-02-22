@@ -68,7 +68,7 @@ class SendParams extends Notification
     {
         return URL::temporarySignedRoute(
             'verification.verify',
-            now()->addMinutes(config('auth.verification.expire')),
+            now()->addMinutes(60),
             ['user' => $notifiable->email, 'id' => $notifiable->id]
         );
     }
