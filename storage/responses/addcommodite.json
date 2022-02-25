@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "data": {
+        "nom": "Piscine",
+        "idTypeCommodite": 1,
+        "updated_at": "2022-02-25T15:37:37.000000Z",
+        "created_at": "2022-02-25T15:37:37.000000Z",
+        "id": 20,
+        "type_commodite": {
+            "id": 1,
+            "nom": "Luxe ++",
+            "deleted_at": null,
+            "created_at": "2022-02-25T14:02:08.000000Z",
+            "updated_at": "2022-02-25T14:04:49.000000Z"
+        }
+    },
+    "message": "Création de la Commodité reussie"
+}

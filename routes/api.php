@@ -41,6 +41,12 @@ Route::middleware('auth.apikey')->group(
         Route::get('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'index']);
         Route::get('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'show']);
 
+        Route::get('typecommodites', [App\Http\Controllers\Api\TypeCommoditeController::class, 'index']);
+        Route::get('typecommodites/{id}', [App\Http\Controllers\Api\TypeCommoditeController::class, 'show']);
+
+        Route::get('commodites', [App\Http\Controllers\Api\CommoditeController::class, 'index']);
+        Route::get('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'show']);
+
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
@@ -75,6 +81,14 @@ Route::middleware('auth.apikey')->group(
                 Route::post('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'store']);
                 Route::put('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'update']);
                 Route::delete('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'destroy']);
+
+                Route::post('typecommodites', [App\Http\Controllers\Api\TypeCommoditeController::class, 'store']);
+                Route::put('typecommodites/{id}', [App\Http\Controllers\Api\TypeCommoditeController::class, 'update']);
+                Route::delete('typecommodites/{id}', [App\Http\Controllers\Api\TypeCommoditeController::class, 'destroy']);
+
+                Route::post('commodites', [App\Http\Controllers\Api\CommoditeController::class, 'store']);
+                Route::put('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'update']);
+                Route::delete('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'destroy']);
             });
         });
     }

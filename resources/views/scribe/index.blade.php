@@ -75,6 +75,28 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="commodites-management">
+                    <a href="#commodites-management">Commodites management</a>
+                </li>
+                                    <ul id="tocify-subheader-commodites-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="commodites-management-GETapi-commodites">
+                        <a href="#commodites-management-GETapi-commodites">Get all Commodites.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commodites-management-GETapi-commodites--id-">
+                        <a href="#commodites-management-GETapi-commodites--id-">Show Commodite by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commodites-management-POSTapi-commodites">
+                        <a href="#commodites-management-POSTapi-commodites">Add a new Commodite.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commodites-management-PUTapi-commodites--id-">
+                        <a href="#commodites-management-PUTapi-commodites--id-">Update Commodite.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="commodites-management-DELETEapi-commodites--id-">
+                        <a href="#commodites-management-DELETEapi-commodites--id-">Delete Commodite.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="abonnement-management">
                     <a href="#abonnement-management">Abonnement management</a>
                 </li>
@@ -96,7 +118,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="account-management">
                     <a href="#account-management">Account management</a>
                 </li>
@@ -127,7 +149,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
+                    <ul id="tocify-header-5" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="admin-management">
                     <a href="#admin-management">Admin management</a>
                 </li>
@@ -149,7 +171,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-5" class="tocify-header">
+                    <ul id="tocify-header-6" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="category-management">
                     <a href="#category-management">Category management</a>
                 </li>
@@ -171,7 +193,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-6" class="tocify-header">
+                    <ul id="tocify-header-7" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="commerciaux-management">
                     <a href="#commerciaux-management">Commerciaux management</a>
                 </li>
@@ -193,7 +215,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-7" class="tocify-header">
+                    <ul id="tocify-header-8" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="manager-management">
                     <a href="#manager-management">Manager management</a>
                 </li>
@@ -215,7 +237,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-8" class="tocify-header">
+                    <ul id="tocify-header-9" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="subcategory-management">
                     <a href="#subcategory-management">SubCategory management</a>
                 </li>
@@ -234,6 +256,28 @@
                     </li>
                                     <li class="tocify-item level-2" data-unique="subcategory-management-DELETEapi-souscategories--id-">
                         <a href="#subcategory-management-DELETEapi-souscategories--id-">Delete Category.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-10" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="typecommodite-management">
+                    <a href="#typecommodite-management">TypeCommodite management</a>
+                </li>
+                                    <ul id="tocify-subheader-typecommodite-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="typecommodite-management-GETapi-typecommodites">
+                        <a href="#typecommodite-management-GETapi-typecommodites">Get all Type Commodite.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="typecommodite-management-GETapi-typecommodites--id-">
+                        <a href="#typecommodite-management-GETapi-typecommodites--id-">Show Type Commodite by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="typecommodite-management-POSTapi-typecommodites">
+                        <a href="#typecommodite-management-POSTapi-typecommodites">Add a new Type Commodite.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="typecommodite-management-PUTapi-typecommodites--id-">
+                        <a href="#typecommodite-management-PUTapi-typecommodites--id-">Update Type Commodite.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="typecommodite-management-DELETEapi-typecommodites--id-">
+                        <a href="#typecommodite-management-DELETEapi-typecommodites--id-">Delete Category.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -265,9 +309,915 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+
+        <h1 id="commodites-management">Commodites management</h1>
+
+    <p>APIs for managing Commodite</p>
+
+            <h2 id="commodites-management-GETapi-commodites">Get all Commodites.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-commodites">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commodites" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commodites"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commodites',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commodites'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commodites">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 16,
+            &quot;nom&quot;: &quot;Wifi&quot;,
+            &quot;idTypeCommodite&quot;: 1,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+            &quot;type_commodite&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Luxe ++&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+            },
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 2,
+                    &quot;nom&quot;: &quot;Administrations&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCommodite&quot;: 16,
+                        &quot;idCategorie&quot;: 2
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;nom&quot;: &quot;Wifi&quot;,
+            &quot;idTypeCommodite&quot;: 1,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+            &quot;type_commodite&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Luxe ++&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+            },
+            &quot;categories&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;nom&quot;: &quot;Agriculture&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCommodite&quot;: 19,
+                        &quot;idCategorie&quot;: 3
+                    }
+                },
+                {
+                    &quot;id&quot;: 4,
+                    &quot;nom&quot;: &quot;Alimentation&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCommodite&quot;: 19,
+                        &quot;idCategorie&quot;: 4
+                    }
+                }
+            ]
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Commodites&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commodites" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commodites"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commodites"></code></pre>
+</span>
+<span id="execution-error-GETapi-commodites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commodites"></code></pre>
+</span>
+<form id="form-GETapi-commodites" data-method="GET"
+      data-path="api/commodites"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commodites', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commodites"
+                    onclick="tryItOut('GETapi-commodites');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commodites"
+                    onclick="cancelTryOut('GETapi-commodites');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commodites" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commodites</code></b>
+        </p>
+                    </form>
+
+            <h2 id="commodites-management-GETapi-commodites--id-">Show Commodite by id.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-commodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commodites/2" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commodites/2"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commodites/2',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commodites/2'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commodites--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 16,
+        &quot;nom&quot;: &quot;Wifi&quot;,
+        &quot;idTypeCommodite&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+        &quot;type_commodite&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Luxe ++&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+        },
+        &quot;categories&quot;: [
+            {
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Administrations&quot;,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idCommodite&quot;: 16,
+                    &quot;idCategorie&quot;: 2
+                }
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Commodite&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commodites--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-commodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commodites--id-"></code></pre>
+</span>
+<form id="form-GETapi-commodites--id-" data-method="GET"
+      data-path="api/commodites/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commodites--id-"
+                    onclick="tryItOut('GETapi-commodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commodites--id-"
+                    onclick="cancelTryOut('GETapi-commodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commodites/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-commodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id commodite.</p>
+            </p>
+                    </form>
+
+            <h2 id="commodites-management-POSTapi-commodites">Add a new Commodite.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-commodites">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/commodites" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Achat\",
+    \"idTypeCommodite\": 5
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commodites"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Achat",
+    "idTypeCommodite": 5
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/commodites',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Achat',
+            'idTypeCommodite' =&gt; 5,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commodites'
+payload = {
+    "nom": "Achat",
+    "idTypeCommodite": 5
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-commodites">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;Piscine&quot;,
+        &quot;idTypeCommodite&quot;: 1,
+        &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+        &quot;id&quot;: 20,
+        &quot;type_commodite&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Luxe ++&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+        }
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de la Commodit&eacute; reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-commodites" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-commodites"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-commodites"></code></pre>
+</span>
+<span id="execution-error-POSTapi-commodites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-commodites"></code></pre>
+</span>
+<form id="form-POSTapi-commodites" data-method="POST"
+      data-path="api/commodites"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-commodites', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-commodites"
+                    onclick="tryItOut('POSTapi-commodites');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-commodites"
+                    onclick="cancelTryOut('POSTapi-commodites');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-commodites" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/commodites</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-commodites" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-commodites"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="POSTapi-commodites"
+               value="Achat"
+               data-component="body" hidden>
+    <br>
+<p>the name commodite.</p>
+        </p>
+                <p>
+            <b><code>idTypeCommodite</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idTypeCommodite"
+               data-endpoint="POSTapi-commodites"
+               value="5"
+               data-component="body" hidden>
+    <br>
+<p>the id TypeCommodite.</p>
+        </p>
+        </form>
+
+            <h2 id="commodites-management-PUTapi-commodites--id-">Update Commodite.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-commodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/commodites/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Achat\",
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commodites/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Achat",
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/commodites/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Achat',
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commodites/2'
+payload = {
+    "nom": "Achat",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-commodites--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 16,
+        &quot;nom&quot;: &quot;Wifi ++&quot;,
+        &quot;idTypeCommodite&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+        &quot;type_commodite&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Luxe ++&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+        },
+        &quot;categories&quot;: [
+            {
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Administrations&quot;,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idCommodite&quot;: 16,
+                    &quot;idCategorie&quot;: 2
+                }
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-commodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-commodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-commodites--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-commodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-commodites--id-"></code></pre>
+</span>
+<form id="form-PUTapi-commodites--id-" data-method="PUT"
+      data-path="api/commodites/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-commodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-commodites--id-"
+                    onclick="tryItOut('PUTapi-commodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-commodites--id-"
+                    onclick="cancelTryOut('PUTapi-commodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-commodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/commodites/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-commodites--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-commodites--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-commodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id commodite.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="PUTapi-commodites--id-"
+               value="Achat"
+               data-component="body" hidden>
+    <br>
+<p>the name commodite.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-commodites--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="commodites-management-DELETEapi-commodites--id-">Delete Commodite.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-commodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/commodites/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commodites/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/commodites/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commodites/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-commodites--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-commodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-commodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-commodites--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-commodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-commodites--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-commodites--id-" data-method="DELETE"
+      data-path="api/commodites/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-commodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-commodites--id-"
+                    onclick="tryItOut('DELETEapi-commodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-commodites--id-"
+                    onclick="cancelTryOut('DELETEapi-commodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-commodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/commodites/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-commodites--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-commodites--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-commodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id commodite.</p>
+            </p>
+                    </form>
 
         <h1 id="abonnement-management">Abonnement management</h1>
 
@@ -1458,7 +2408,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"ut\",
+    \"token\": \"omnis\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1478,7 +2428,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "ut",
+    "token": "omnis",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1502,7 +2452,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'ut',
+            'token' =&gt; 'omnis',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1519,7 +2469,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "ut",
+    "token": "omnis",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1602,7 +2552,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="ut"
+               value="omnis"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1650,7 +2600,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpD9A7.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEAFE.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1707,7 +2657,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpD9A7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEAFE.tmp', 'r')
             ],
         ],
     ]
@@ -1722,7 +2672,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpD9A7.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEAFE.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2376,7 +3326,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpD9F7.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB5E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2425,7 +3375,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpD9F7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB5E.tmp', 'r')
             ],
         ],
     ]
@@ -2440,7 +3390,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpD9F7.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB5E.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2833,7 +3783,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA29.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB90.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2892,7 +3842,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA29.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB90.tmp', 'r')
             ],
         ],
     ]
@@ -2907,7 +3857,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA29.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB90.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3270,7 +4220,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA3A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBA0.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3329,7 +4279,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA3A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBA0.tmp', 'r')
             ],
         ],
     ]
@@ -3344,7 +4294,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA3A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBA0.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3755,8 +4705,8 @@ response.json()</code></pre></div>
             &quot;nom&quot;: &quot;Achats&quot;,
             &quot;logourl&quot;: null,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
             &quot;sous_categories&quot;: [
                 {
                     &quot;id&quot;: 1,
@@ -3764,8 +4714,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 2,
@@ -3773,8 +4723,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 3,
@@ -3782,8 +4732,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 4,
@@ -3791,8 +4741,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 5,
@@ -3800,8 +4750,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 6,
@@ -3809,8 +4759,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 7,
@@ -3818,8 +4768,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 8,
@@ -3827,8 +4777,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 9,
@@ -3836,8 +4786,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 10,
@@ -3845,8 +4795,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 11,
@@ -3854,8 +4804,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 12,
@@ -3863,8 +4813,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 13,
@@ -3872,8 +4822,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 14,
@@ -3881,8 +4831,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 15,
@@ -3890,8 +4840,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 16,
@@ -3899,8 +4849,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 17,
@@ -3908,8 +4858,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 18,
@@ -3917,8 +4867,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 19,
@@ -3926,8 +4876,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 20,
@@ -3935,8 +4885,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 21,
@@ -3944,8 +4894,8 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
                 },
                 {
                     &quot;id&quot;: 22,
@@ -3953,8 +4903,511 @@ response.json()</code></pre></div>
                     &quot;idcategorie&quot;: 1,
                     &quot;logourl&quot;: null,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 481,
+                    &quot;nom&quot;: &quot;Boutique +++&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T12:41:25.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T12:43:14.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;Administrations&quot;,
+            &quot;logourl&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 23,
+                    &quot;nom&quot;: &quot;Administrations&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 25,
+                    &quot;nom&quot;: &quot;Associations, syndicats&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 26,
+                    &quot;nom&quot;: &quot;Douane, Agences&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 27,
+                    &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 28,
+                    &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 29,
+                    &quot;nom&quot;: &quot;Offices Nationaux&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 30,
+                    &quot;nom&quot;: &quot;Poste&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 31,
+                    &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 32,
+                    &quot;nom&quot;: &quot;Institution publique&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 2,
+                        &quot;idCommodite&quot;: 16
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;nom&quot;: &quot;Agriculture&quot;,
+            &quot;logourl&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 33,
+                    &quot;nom&quot;: &quot;Mat&eacute;riels et Produits agricoles&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 34,
+                    &quot;nom&quot;: &quot;Agricole, Produits Chimiques&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 35,
+                    &quot;nom&quot;: &quot;Agriculture&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 36,
+                    &quot;nom&quot;: &quot;Equipements et Mat&eacute;riel agricoles&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 37,
+                    &quot;nom&quot;: &quot;Agro-Alimentaire&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 38,
+                    &quot;nom&quot;: &quot;Agro-Industrie&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 39,
+                    &quot;nom&quot;: &quot;Elevage&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 40,
+                    &quot;nom&quot;: &quot;Elevage - Consultants&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 3,
+                        &quot;idCommodite&quot;: 19
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;nom&quot;: &quot;Alimentation&quot;,
+            &quot;logourl&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 41,
+                    &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 42,
+                    &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 43,
+                    &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 44,
+                    &quot;nom&quot;: &quot;Industries alimentaires&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 45,
+                    &quot;nom&quot;: &quot;Produits alimentaires&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 46,
+                    &quot;nom&quot;: &quot;Alimentation Animale&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 47,
+                    &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 48,
+                    &quot;nom&quot;: &quot;Boissons&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 49,
+                    &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 50,
+                    &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 51,
+                    &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 52,
+                    &quot;nom&quot;: &quot;Brasseries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 53,
+                    &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 54,
+                    &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 55,
+                    &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 56,
+                    &quot;nom&quot;: &quot;Catering&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 57,
+                    &quot;nom&quot;: &quot;Distilleries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 58,
+                    &quot;nom&quot;: &quot;Environnement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 59,
+                    &quot;nom&quot;: &quot;Gomme Arabique&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 60,
+                    &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 61,
+                    &quot;nom&quot;: &quot;Laiteries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 62,
+                    &quot;nom&quot;: &quot;Minoteries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 63,
+                    &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 64,
+                    &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 65,
+                    &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 66,
+                    &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 67,
+                    &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 68,
+                    &quot;nom&quot;: &quot;Traiteurs&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 4,
+                        &quot;idCommodite&quot;: 19
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
                 }
             ]
         }
@@ -4081,102 +5534,285 @@ response.json()</code></pre></div>
 <code class="language-json">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;nom&quot;: &quot;Administrations&quot;,
+        &quot;id&quot;: 4,
+        &quot;nom&quot;: &quot;Alimentation&quot;,
         &quot;logourl&quot;: null,
         &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
         &quot;sous_categories&quot;: [
             {
-                &quot;id&quot;: 23,
-                &quot;nom&quot;: &quot;Administrations&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 41,
+                &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 24,
-                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 42,
+                &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 25,
-                &quot;nom&quot;: &quot;Associations, syndicats&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 43,
+                &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 26,
-                &quot;nom&quot;: &quot;Douane, Agences&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 44,
+                &quot;nom&quot;: &quot;Industries alimentaires&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 27,
-                &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 45,
+                &quot;nom&quot;: &quot;Produits alimentaires&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 28,
-                &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 46,
+                &quot;nom&quot;: &quot;Alimentation Animale&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 29,
-                &quot;nom&quot;: &quot;Offices Nationaux&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 47,
+                &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 30,
-                &quot;nom&quot;: &quot;Poste&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 48,
+                &quot;nom&quot;: &quot;Boissons&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 31,
-                &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 49,
+                &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
             },
             {
-                &quot;id&quot;: 32,
-                &quot;nom&quot;: &quot;Institution publique&quot;,
-                &quot;idcategorie&quot;: 2,
+                &quot;id&quot;: 50,
+                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
+                &quot;idcategorie&quot;: 4,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 51,
+                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 52,
+                &quot;nom&quot;: &quot;Brasseries&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 53,
+                &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 54,
+                &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 55,
+                &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 56,
+                &quot;nom&quot;: &quot;Catering&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 57,
+                &quot;nom&quot;: &quot;Distilleries&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 58,
+                &quot;nom&quot;: &quot;Environnement&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 59,
+                &quot;nom&quot;: &quot;Gomme Arabique&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 60,
+                &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 61,
+                &quot;nom&quot;: &quot;Laiteries&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 62,
+                &quot;nom&quot;: &quot;Minoteries&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 63,
+                &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 64,
+                &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 65,
+                &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 66,
+                &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 67,
+                &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 68,
+                &quot;nom&quot;: &quot;Traiteurs&quot;,
+                &quot;idcategorie&quot;: 4,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+            }
+        ],
+        &quot;commodites&quot;: [
+            {
+                &quot;id&quot;: 19,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idCategorie&quot;: 4,
+                    &quot;idCommodite&quot;: 19
+                },
+                &quot;type_commodite&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Luxe ++&quot;,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                }
             }
         ]
     },
@@ -4256,7 +5892,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA6A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBD1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4300,7 +5936,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA6A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBD1.tmp', 'r')
             ],
         ],
     ]
@@ -4315,7 +5951,7 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA6A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBD1.tmp', 'rb')
 }
 payload = {
     "nom": "Achat"
@@ -4443,7 +6079,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA6C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBD3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4492,7 +6128,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA6C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBD3.tmp', 'r')
             ],
         ],
     ]
@@ -4507,7 +6143,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA6C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBD3.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -5185,7 +6821,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA4A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5289,7 +6925,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA4A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp', 'r')
             ],
         ],
     ]
@@ -5304,7 +6940,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA4A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5607,7 +7243,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA08.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB7E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5706,7 +7342,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA08.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB7E.tmp', 'r')
             ],
         ],
     ]
@@ -5721,7 +7357,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA08.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB7E.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -6346,7 +7982,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpD9C7.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB0F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6403,7 +8039,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpD9C7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB0F.tmp', 'r')
             ],
         ],
     ]
@@ -6418,7 +8054,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpD9C7.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB0F.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -6910,7 +8546,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/5" \
+    "http://localhost:8000/api/managers/15" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -6918,12 +8554,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA18.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB7F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/5"
+    "http://localhost:8000/api/managers/15"
 );
 
 const headers = {
@@ -6949,7 +8585,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/5',
+    'http://localhost:8000/api/managers/15',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -6972,7 +8608,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA18.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB7F.tmp', 'r')
             ],
         ],
     ]
@@ -6985,9 +8621,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/5'
+url = 'http://localhost:8000/api/managers/15'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA18.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB7F.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -7105,7 +8741,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="5"
+               value="15"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -7235,20 +8871,65 @@ response.json()</code></pre></div>
     &quot;success&quot;: true,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;nom&quot;: &quot;Boutiques&quot;,
-            &quot;idcategorie&quot;: 1,
+            &quot;id&quot;: 23,
+            &quot;nom&quot;: &quot;Administrations&quot;,
+            &quot;idcategorie&quot;: 2,
             &quot;logourl&quot;: null,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:11:05.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
             &quot;categorie&quot;: {
-                &quot;id&quot;: 1,
-                &quot;nom&quot;: &quot;Achats&quot;,
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Administrations&quot;,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;commodites&quot;: [
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Wifi&quot;,
+                        &quot;idTypeCommodite&quot;: 1,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idCategorie&quot;: 2,
+                            &quot;idCommodite&quot;: 16
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+            &quot;idcategorie&quot;: 2,
+            &quot;logourl&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+            &quot;categorie&quot;: {
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Administrations&quot;,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                &quot;commodites&quot;: [
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Wifi&quot;,
+                        &quot;idTypeCommodite&quot;: 1,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idCategorie&quot;: 2,
+                            &quot;idCommodite&quot;: 16
+                        }
+                    }
+                ]
             }
         }
     ],
@@ -7467,7 +9148,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA7D.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBE4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7516,7 +9197,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA7D.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBE4.tmp', 'r')
             ],
         ],
     ]
@@ -7531,7 +9212,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA7D.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBE4.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -7678,7 +9359,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpDA7F.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBE6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7732,7 +9413,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpDA7F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBE6.tmp', 'r')
             ],
         ],
     ]
@@ -7747,7 +9428,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpDA7F.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBE6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -8030,6 +9711,981 @@ response.json()</code></pre></div>
                data-component="url" hidden>
     <br>
 <p>the id of the subcategory.</p>
+            </p>
+                    </form>
+
+        <h1 id="typecommodite-management">TypeCommodite management</h1>
+
+    <p>APIs for managing TypeCommodite</p>
+
+            <h2 id="typecommodite-management-GETapi-typecommodites">Get all Type Commodite.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-typecommodites">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/typecommodites" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/typecommodites"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/typecommodites',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/typecommodites'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-typecommodites">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Luxe ++&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;,
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 6,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;
+                }
+            ]
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Types de Commodit&eacute;s&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-typecommodites" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-typecommodites"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-typecommodites"></code></pre>
+</span>
+<span id="execution-error-GETapi-typecommodites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-typecommodites"></code></pre>
+</span>
+<form id="form-GETapi-typecommodites" data-method="GET"
+      data-path="api/typecommodites"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-typecommodites', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-typecommodites"
+                    onclick="tryItOut('GETapi-typecommodites');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-typecommodites"
+                    onclick="cancelTryOut('GETapi-typecommodites');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-typecommodites" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/typecommodites</code></b>
+        </p>
+                    </form>
+
+            <h2 id="typecommodite-management-GETapi-typecommodites--id-">Show Type Commodite by id.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-typecommodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/typecommodites/2" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/typecommodites/2"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/typecommodites/2',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/typecommodites/2'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-typecommodites--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nom&quot;: &quot;Luxe&quot;,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+        &quot;commodites&quot;: [
+            {
+                &quot;id&quot;: 6,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 7,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 8,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 9,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 10,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 12,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 16,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 19,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Type Commodite&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-typecommodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-typecommodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-typecommodites--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-typecommodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-typecommodites--id-"></code></pre>
+</span>
+<form id="form-GETapi-typecommodites--id-" data-method="GET"
+      data-path="api/typecommodites/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-typecommodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-typecommodites--id-"
+                    onclick="tryItOut('GETapi-typecommodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-typecommodites--id-"
+                    onclick="cancelTryOut('GETapi-typecommodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-typecommodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/typecommodites/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-typecommodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the type commodite.</p>
+            </p>
+                    </form>
+
+            <h2 id="typecommodite-management-POSTapi-typecommodites">Add a new Type Commodite.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-typecommodites">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/typecommodites" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Achat\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/typecommodites"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Achat"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/typecommodites',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Achat',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/typecommodites'
+payload = {
+    "nom": "Achat"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-typecommodites">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;Luxe&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation du type de commodit&eacute; reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-typecommodites" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-typecommodites"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-typecommodites"></code></pre>
+</span>
+<span id="execution-error-POSTapi-typecommodites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-typecommodites"></code></pre>
+</span>
+<form id="form-POSTapi-typecommodites" data-method="POST"
+      data-path="api/typecommodites"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-typecommodites', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-typecommodites"
+                    onclick="tryItOut('POSTapi-typecommodites');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-typecommodites"
+                    onclick="cancelTryOut('POSTapi-typecommodites');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-typecommodites" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/typecommodites</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-typecommodites" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-typecommodites"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="POSTapi-typecommodites"
+               value="Achat"
+               data-component="body" hidden>
+    <br>
+<p>the name of the type commodite.</p>
+        </p>
+        </form>
+
+            <h2 id="typecommodite-management-PUTapi-typecommodites--id-">Update Type Commodite.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-typecommodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/typecommodites/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Achat\",
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/typecommodites/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Achat",
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/typecommodites/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Achat',
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/typecommodites/2'
+payload = {
+    "nom": "Achat",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-typecommodites--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nom&quot;: &quot;Luxe ++&quot;,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;,
+        &quot;commodites&quot;: [
+            {
+                &quot;id&quot;: 6,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:39:42.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 7,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:39:54.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 8,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:40:15.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 9,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:40:35.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 10,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:43:06.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 12,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:45:42.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 16,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;
+            },
+            {
+                &quot;id&quot;: 19,
+                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-typecommodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-typecommodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-typecommodites--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-typecommodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-typecommodites--id-"></code></pre>
+</span>
+<form id="form-PUTapi-typecommodites--id-" data-method="PUT"
+      data-path="api/typecommodites/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-typecommodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-typecommodites--id-"
+                    onclick="tryItOut('PUTapi-typecommodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-typecommodites--id-"
+                    onclick="cancelTryOut('PUTapi-typecommodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-typecommodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/typecommodites/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-typecommodites--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-typecommodites--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-typecommodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the type commodite.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="PUTapi-typecommodites--id-"
+               value="Achat"
+               data-component="body" hidden>
+    <br>
+<p>the name of the type commodite.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-typecommodites--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="typecommodite-management-DELETEapi-typecommodites--id-">Delete Category.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-typecommodites--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/typecommodites/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/typecommodites/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/typecommodites/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/typecommodites/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-typecommodites--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-typecommodites--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-typecommodites--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-typecommodites--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-typecommodites--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-typecommodites--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-typecommodites--id-" data-method="DELETE"
+      data-path="api/typecommodites/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-typecommodites--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-typecommodites--id-"
+                    onclick="tryItOut('DELETEapi-typecommodites--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-typecommodites--id-"
+                    onclick="cancelTryOut('DELETEapi-typecommodites--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-typecommodites--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/typecommodites/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-typecommodites--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-typecommodites--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-typecommodites--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the type commodite.</p>
             </p>
                     </form>
 

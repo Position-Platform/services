@@ -27,7 +27,7 @@ class SousCategorieController extends BaseController
         $souscategories = SousCategorie::all();
 
         foreach ($souscategories as $key => $souscategorie) {
-            $souscategorie->categorie;
+            $souscategorie->categorie->commodites;
         }
 
         return $this->sendResponse($souscategories, 'Liste des Sous-Categories');
@@ -94,7 +94,7 @@ class SousCategorieController extends BaseController
     {
         $souscategorie = SousCategorie::find($id);
 
-        $souscategorie->categorie;
+        $souscategorie->categorie->commodites;
 
 
         return $this->sendResponse($souscategorie, 'SousCategorie');

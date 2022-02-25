@@ -99,7 +99,7 @@ endpoints:
         name: token
         description: 'token give in mail.'
         required: true
-        example: ut
+        example: omnis
         type: string
         custom: []
       password:
