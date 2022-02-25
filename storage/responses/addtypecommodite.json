@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "data": {
+        "nom": "Luxe",
+        "updated_at": "2022-02-25T14:02:08.000000Z",
+        "created_at": "2022-02-25T14:02:08.000000Z",
+        "id": 1
+    },
+    "message": "Création du type de commodité reussie"
+}

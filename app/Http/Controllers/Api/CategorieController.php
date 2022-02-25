@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Categorie;
+use App\Models\TypeCommodite;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -27,6 +28,11 @@ class CategorieController extends BaseController
 
         foreach ($categories as   $categorie) {
             $categorie->sousCategories;
+            $categorie->commodites;
+
+            foreach ($categorie->commodites as $key => $commodite) {
+                $commodite->typeCommodite;
+            }
         }
 
         return $this->sendResponse($categories, 'Liste des Categories');
@@ -92,6 +98,12 @@ class CategorieController extends BaseController
 
         $categorie->sousCategories;
 
+        $categorie->commodites;
+
+        foreach ($categorie->commodites as $key => $commodite) {
+            $commodite->typeCommodite;
+        }
+
         return $this->sendResponse($categorie, 'Categorie');
     }
 
@@ -123,6 +135,10 @@ class CategorieController extends BaseController
             DB::beginTransaction();
 
             $categorie->nom = $request->nom ?? $categorie->nom;
+
+            $categorie->sousCategories;
+
+            $categorie->commodites;
 
             $categorie->save();
 

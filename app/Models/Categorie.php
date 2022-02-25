@@ -32,6 +32,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @mixin \Eloquent
  * @property string|null $logourl
  * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereLogourl($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Commodite[] $commodites
+ * @property-read int|null $commodites_count
  */
 class Categorie extends Model
 {
@@ -45,5 +47,10 @@ class Categorie extends Model
     public function sousCategories()
     {
         return $this->hasMany(SousCategorie::class, "idcategorie");
+    }
+
+    public function commodites()
+    {
+        return $this->belongsToMany(Commodite::class, "commodites_categories", "idCategorie", "idCommodite");
     }
 }

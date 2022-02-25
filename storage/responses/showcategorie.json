@@ -1,102 +1,285 @@
 {
     "success": true,
     "data": {
-        "id": 2,
-        "nom": "Administrations",
+        "id": 4,
+        "nom": "Alimentation",
         "logourl": null,
         "deleted_at": null,
-        "created_at": "2022-02-25T11:09:21.000000Z",
-        "updated_at": "2022-02-25T11:09:21.000000Z",
+        "created_at": "2022-02-25T11:35:29.000000Z",
+        "updated_at": "2022-02-25T11:35:29.000000Z",
         "sous_categories": [
             {
-                "id": 23,
-                "nom": "Administrations",
-                "idcategorie": 2,
+                "id": 41,
+                "nom": "Abattoirs et Viande en Gros",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 24,
-                "nom": "Ambassades et Consulats",
-                "idcategorie": 2,
+                "id": 42,
+                "nom": "Alcools, vins, spiritueux, drogueries",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 25,
-                "nom": "Associations, syndicats",
-                "idcategorie": 2,
+                "id": 43,
+                "nom": "Alimentaire, Distributeurs et Grossistes",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 26,
-                "nom": "Douane, Agences",
-                "idcategorie": 2,
+                "id": 44,
+                "nom": "Industries alimentaires",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 27,
-                "nom": "Minisères",
-                "idcategorie": 2,
+                "id": 45,
+                "nom": "Produits alimentaires",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 28,
-                "nom": "O.N.G & Organisations Internationales",
-                "idcategorie": 2,
+                "id": 46,
+                "nom": "Alimentation Animale",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 29,
-                "nom": "Offices Nationaux",
-                "idcategorie": 2,
+                "id": 47,
+                "nom": "Alimentation Générale",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 30,
-                "nom": "Poste",
-                "idcategorie": 2,
+                "id": 48,
+                "nom": "Boissons",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 31,
-                "nom": "Sécurité Sociale",
-                "idcategorie": 2,
+                "id": 49,
+                "nom": "Boucherie - charcuterie",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
             },
             {
-                "id": 32,
-                "nom": "Institution publique",
-                "idcategorie": 2,
+                "id": 50,
+                "nom": "Boulangeries, Patisseries, Glaces",
+                "idcategorie": 4,
                 "logourl": null,
                 "deleted_at": null,
-                "created_at": "2022-02-25T11:11:05.000000Z",
-                "updated_at": "2022-02-25T11:11:05.000000Z"
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 51,
+                "nom": "Boulangeries, Patisseries, Glaces - matériel & équipement",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 52,
+                "nom": "Brasseries",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 53,
+                "nom": "Brasseries - matériel & équipement",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 54,
+                "nom": "Cacao - Production et Exportation",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 55,
+                "nom": "Café - Production et Exportation",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 56,
+                "nom": "Catering",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 57,
+                "nom": "Distilleries",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 58,
+                "nom": "Environnement",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 59,
+                "nom": "Gomme Arabique",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 60,
+                "nom": "Lait, Yaourt et Fromage",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 61,
+                "nom": "Laiteries",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 62,
+                "nom": "Minoteries",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 63,
+                "nom": "Pêche - Commercialisation et Exportation",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 64,
+                "nom": "Pêche - Congelation",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 65,
+                "nom": "Sucre, Fabrication et Raffinage",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 66,
+                "nom": "Supermarchés",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 67,
+                "nom": "Thé - Production et Commercialisation",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            },
+            {
+                "id": 68,
+                "nom": "Traiteurs",
+                "idcategorie": 4,
+                "logourl": null,
+                "deleted_at": null,
+                "created_at": "2022-02-25T11:35:34.000000Z",
+                "updated_at": "2022-02-25T11:35:34.000000Z"
+            }
+        ],
+        "commodites": [
+            {
+                "id": 19,
+                "nom": "Wifi",
+                "idTypeCommodite": 1,
+                "deleted_at": null,
+                "created_at": "2022-02-25T14:53:31.000000Z",
+                "updated_at": "2022-02-25T14:53:31.000000Z",
+                "pivot": {
+                    "idCategorie": 4,
+                    "idCommodite": 19
+                },
+                "type_commodite": {
+                    "id": 1,
+                    "nom": "Luxe ++",
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T14:02:08.000000Z",
+                    "updated_at": "2022-02-25T14:04:49.000000Z"
+                }
             }
         ]
     },
