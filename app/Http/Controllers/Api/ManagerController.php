@@ -31,6 +31,7 @@ class ManagerController extends BaseController
 
         foreach ($managers as $key => $manager) {
             $manager->user->roles;
+            $manager->abonnement;
         }
 
         return $this->sendResponse($managers, 'Liste des Managers');
@@ -108,6 +109,7 @@ class ManagerController extends BaseController
 
         $manager = Manager::find($id);
         $manager->user->roles;
+        $manager->abonnement;
 
         return $this->sendResponse($manager, "Manager");
     }

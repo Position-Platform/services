@@ -41,6 +41,8 @@ Route::middleware('auth.apikey')->group(
             Route::put('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'update']);
 
             Route::apiResource('managers', App\Http\Controllers\Api\ManagerController::class);
+            Route::get('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'index']);
+            Route::get('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'show']);
 
 
 
@@ -50,6 +52,10 @@ Route::middleware('auth.apikey')->group(
                 Route::apiResource('admins', App\Http\Controllers\Api\AdminController::class);
                 Route::post('commercials', [App\Http\Controllers\Api\CommercialController::class, 'store']);
                 Route::delete('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'destroy']);
+
+                Route::post('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'store']);
+                Route::put('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'update']);
+                Route::delete('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'destroy']);
             });
         });
     }

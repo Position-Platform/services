@@ -1,92 +1,14 @@
-name: 'Commerciaux management'
+name: 'Admin management'
 description: |-
 
-  APIs for managing Commerciaux
+  APIs for managing Admin
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/commercials/{id}'
+    uri: api/admins
     metadata:
-      title: 'Show Commercial by id.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-      X-Authorization: apiKey
-    urlParameters:
-      id:
-        name: id
-        description: 'the id of the commercial.'
-        required: true
-        example: 2
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: |
-          {
-              "success": true,
-              "data": {
-                  "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
-                  "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
-              },
-              "message": "Commercial"
-          }
-        headers: []
-        description: '200'
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/commercials
-    metadata:
-      title: 'Get all Commerciaux.'
+      title: 'Get all Admin.'
       description: ''
       authenticated: true
       custom: []
@@ -107,41 +29,94 @@ endpoints:
               "data": [
                   {
                       "id": 1,
-                      "idUser": 3,
-                      "numeroCni": 1256987,
-                      "numeroBadge": 1325,
-                      "ville": "Douala",
-                      "quartier": "Melen",
-                      "actif": true,
-                      "sexe": "Masculin",
-                      "whatsapp": 699999999,
-                      "diplome": "BAC",
-                      "tailleTshirt": "XXL",
-                      "age": 25,
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:11.000000Z",
-                      "updated_at": "2022-02-19T11:25:11.000000Z",
+                      "isSuperAdmin": true,
+                      "idUser": 1,
+                      "created_at": "2022-02-17T10:38:34.000000Z",
+                      "updated_at": "2022-02-17T10:38:34.000000Z",
                       "user": {
-                          "id": 3,
-                          "name": "Gautier",
-                          "email": "bt@geo.sm",
-                          "email_verified_at": null,
-                          "phone": "699999998",
+                          "id": 1,
+                          "name": "Admin",
+                          "email": "admin@position.cm",
+                          "email_verified_at": "2022-02-17T10:38:34.000000Z",
+                          "phone": "699999999",
                           "fcmToken": null,
-                          "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                          "deleted_at": null,
-                          "created_at": "2022-02-19T11:25:06.000000Z",
-                          "updated_at": "2022-02-19T11:25:06.000000Z",
+                          "imageProfil": null,
+                          "created_at": "2022-02-17T10:38:34.000000Z",
+                          "updated_at": "2022-02-17T10:38:34.000000Z",
                           "roles": [
                               {
-                                  "id": 2,
-                                  "name": "commercial",
+                                  "id": 1,
+                                  "name": "admin",
                                   "guard_name": "api",
-                                  "created_at": "2022-02-18T10:11:34.000000Z",
-                                  "updated_at": "2022-02-18T10:11:34.000000Z",
+                                  "created_at": "2022-02-17T10:38:34.000000Z",
+                                  "updated_at": "2022-02-17T10:38:34.000000Z",
                                   "pivot": {
-                                      "model_id": 3,
-                                      "role_id": 2,
+                                      "model_id": 1,
+                                      "role_id": 1,
+                                      "model_type": "App\\Models\\User"
+                                  }
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "id": 2,
+                      "isSuperAdmin": false,
+                      "idUser": 2,
+                      "created_at": "2022-02-17T10:40:40.000000Z",
+                      "updated_at": "2022-02-17T10:40:40.000000Z",
+                      "user": {
+                          "id": 2,
+                          "name": "Gautier",
+                          "email": "bt@geo.sm",
+                          "email_verified_at": "2022-02-17T10:40:58.000000Z",
+                          "phone": "699999998",
+                          "fcmToken": null,
+                          "imageProfil": "/storage/uploads/admins/profils/1645094432_images.jpg",
+                          "created_at": "2022-02-17T10:40:32.000000Z",
+                          "updated_at": "2022-02-17T10:40:58.000000Z",
+                          "roles": [
+                              {
+                                  "id": 1,
+                                  "name": "admin",
+                                  "guard_name": "api",
+                                  "created_at": "2022-02-17T10:38:34.000000Z",
+                                  "updated_at": "2022-02-17T10:38:34.000000Z",
+                                  "pivot": {
+                                      "model_id": 2,
+                                      "role_id": 1,
+                                      "model_type": "App\\Models\\User"
+                                  }
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "id": 3,
+                      "isSuperAdmin": false,
+                      "idUser": 5,
+                      "created_at": "2022-02-17T16:33:35.000000Z",
+                      "updated_at": "2022-02-17T16:33:35.000000Z",
+                      "user": {
+                          "id": 5,
+                          "name": "Gautier Admin",
+                          "email": "tchoukouahaborris@outlook.fr",
+                          "email_verified_at": null,
+                          "phone": "699999996",
+                          "fcmToken": null,
+                          "imageProfil": "/storage/uploads/admins/profils/1645115599_images.jpg",
+                          "created_at": "2022-02-17T16:33:19.000000Z",
+                          "updated_at": "2022-02-17T16:33:19.000000Z",
+                          "roles": [
+                              {
+                                  "id": 1,
+                                  "name": "admin",
+                                  "guard_name": "api",
+                                  "created_at": "2022-02-17T10:38:34.000000Z",
+                                  "updated_at": "2022-02-17T10:38:34.000000Z",
+                                  "pivot": {
+                                      "model_id": 5,
+                                      "role_id": 1,
                                       "model_type": "App\\Models\\User"
                                   }
                               }
@@ -149,7 +124,7 @@ endpoints:
                       }
                   }
               ],
-              "message": "Liste des Commerciaux"
+              "message": "Liste des Admins"
           }
         headers: []
         description: '200'
@@ -157,9 +132,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/commercials
+    uri: api/admins
     metadata:
-      title: 'Add a new Commercial.'
+      title: 'Add a new admin.'
       description: ''
       authenticated: true
       custom: []
@@ -173,21 +148,28 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'the name of the commercial.'
+        description: 'the name of the admin.'
         required: true
         example: Gautier
         type: string
         custom: []
       email:
         name: email
-        description: 'the email of the commercial.'
+        description: 'the email of the admin.'
         required: true
         example: gautier@position.cm
         type: string
         custom: []
+      password:
+        name: password
+        description: 'the password of the admin.'
+        required: true
+        example: gautier123
+        type: string
+        custom: []
       phone:
         name: phone
-        description: 'The phone number of the commercial.'
+        description: 'The phone number of the admin.'
         required: true
         example: 699999999
         type: integer
@@ -199,76 +181,6 @@ endpoints:
         example: null
         type: file
         custom: []
-      numeroCni:
-        name: numeroCni
-        description: required.
-        required: false
-        example: 1256987
-        type: integer
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: required.
-        required: false
-        example: 1234568
-        type: integer
-        custom: []
-      ville:
-        name: ville
-        description: required.
-        required: false
-        example: Douala
-        type: string
-        custom: []
-      quartier:
-        name: quartier
-        description: required.
-        required: false
-        example: Melen
-        type: string
-        custom: []
-      sexe:
-        name: sexe
-        description: required.
-        required: false
-        example: Masculin
-        type: string
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: required.
-        required: false
-        example: 699999999
-        type: integer
-        custom: []
-      diplome:
-        name: diplome
-        description: required.
-        required: false
-        example: BAC
-        type: string
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: required.
-        required: false
-        example: XXL
-        type: string
-        custom: []
-      age:
-        name: age
-        description: required.
-        required: false
-        example: 25
-        type: integer
-        custom: []
-      password:
-        name: password
-        description: 'the password of the commercial.'
-        required: true
-        example: gautier123
-        type: string
-        custom: []
     responses:
       -
         status: 200
@@ -276,47 +188,104 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "numeroCni": "1256987",
-                  "numeroBadge": "1325",
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "sexe": "Masculin",
-                  "whatsapp": "699999999",
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": "25",
-                  "idUser": 3,
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "id": 1,
+                  "idUser": 5,
+                  "updated_at": "2022-02-17T16:33:35.000000Z",
+                  "created_at": "2022-02-17T16:33:35.000000Z",
+                  "id": 3,
                   "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
+                      "id": 5,
+                      "name": "Gautier Admin",
+                      "email": "tchoukouahaborris@outlook.fr",
                       "email_verified_at": null,
-                      "phone": "699999998",
+                      "phone": "699999996",
                       "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
+                      "imageProfil": "/storage/uploads/admins/profils/1645115599_images.jpg",
+                      "created_at": "2022-02-17T16:33:19.000000Z",
+                      "updated_at": "2022-02-17T16:33:19.000000Z",
                       "roles": [
                           {
-                              "id": 2,
-                              "name": "commercial",
+                              "id": 1,
+                              "name": "admin",
                               "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
+                              "created_at": "2022-02-17T10:38:34.000000Z",
+                              "updated_at": "2022-02-17T10:38:34.000000Z",
                               "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
+                                  "model_id": 1,
+                                  "role_id": 1,
                                   "model_type": "App\\Models\\User"
                               }
                           }
                       ]
                   }
               },
-              "message": "Création du commercial reussie"
+              "message": "Création de l'admin reussie"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admins/{id}'
+    metadata:
+      title: 'Show Admin by id.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the admin.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "data": {
+                  "id": 2,
+                  "isSuperAdmin": false,
+                  "idUser": 2,
+                  "created_at": "2022-02-17T10:40:40.000000Z",
+                  "updated_at": "2022-02-17T10:40:40.000000Z",
+                  "user": {
+                      "id": 2,
+                      "name": "Gautier",
+                      "email": "bt@geo.sm",
+                      "email_verified_at": "2022-02-17T10:40:58.000000Z",
+                      "phone": "699999998",
+                      "fcmToken": null,
+                      "imageProfil": "/storage/uploads/admins/profils/1645094432_images.jpg",
+                      "created_at": "2022-02-17T10:40:32.000000Z",
+                      "updated_at": "2022-02-17T10:40:58.000000Z",
+                      "roles": [
+                          {
+                              "id": 1,
+                              "name": "admin",
+                              "guard_name": "api",
+                              "created_at": "2022-02-17T10:38:34.000000Z",
+                              "updated_at": "2022-02-17T10:38:34.000000Z",
+                              "pivot": {
+                                  "model_id": 2,
+                                  "role_id": 1,
+                                  "model_type": "App\\Models\\User"
+                              }
+                          }
+                      ]
+                  }
+              },
+              "message": "Admin"
           }
         headers: []
         description: '200'
@@ -324,9 +293,10 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/commercials/{id}'
+      - PATCH
+    uri: 'api/admins/{id}'
     metadata:
-      title: 'Update Commercial.'
+      title: 'Update admin account.'
       description: ''
       authenticated: true
       custom: []
@@ -338,26 +308,33 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the commercial.'
+        description: 'the id of the admin.'
         required: true
-        example: 8
+        example: 2
         type: integer
         custom: []
     queryParameters: []
     bodyParameters:
       name:
         name: name
-        description: 'the name of the commercial.'
+        description: 'the name of the user.'
         required: false
         example: Gautier
         type: string
         custom: []
       phone:
         name: phone
-        description: 'The phone number of the commercial.'
+        description: 'The phone number of the user.'
         required: false
         example: 699999999
         type: integer
+        custom: []
+      isSuperAdmin:
+        name: isSuperAdmin
+        description: ''
+        required: false
+        example: 'true'
+        type: bool.
         custom: []
       file:
         name: file
@@ -365,69 +342,6 @@ endpoints:
         required: false
         example: null
         type: file
-        custom: []
-      numeroCni:
-        name: numeroCni
-        description: ''
-        required: false
-        example: '1256987'
-        type: int.
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: ''
-        required: false
-        example: '1234568'
-        type: int.
-        custom: []
-      ville:
-        name: ville
-        description: ''
-        required: false
-        example: Douala
-        type: string.
-        custom: []
-      quartier:
-        name: quartier
-        description: ''
-        required: false
-        example: Melen
-        type: string.
-        custom: []
-      sexe:
-        name: sexe
-        description: ''
-        required: false
-        example: Masculin
-        type: string.
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: ''
-        required: false
-        example: '699999999'
-        type: int.
-        custom: []
-      diplome:
-        name: diplome
-        description: ''
-        required: false
-        example: BAC
-        type: string.
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: ''
-        required: false
-        example: XXL
-        type: string.
-        custom: []
-      age:
-        name: age
-        description: ''
-        required: false
-        example: '25'
-        type: int.
         custom: []
       _method:
         name: _method
@@ -443,42 +357,31 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
-                  "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
+                  "id": 2,
+                  "isSuperAdmin": false,
+                  "idUser": 2,
+                  "created_at": "2022-02-17T10:40:40.000000Z",
+                  "updated_at": "2022-02-17T10:40:40.000000Z",
                   "user": {
-                      "id": 3,
-                      "name": "Gautier 2000",
+                      "id": 2,
+                      "name": "Gautier Admin 10",
                       "email": "bt@geo.sm",
-                      "email_verified_at": null,
+                      "email_verified_at": "2022-02-17T10:40:58.000000Z",
                       "phone": "699999998",
                       "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T19:10:29.000000Z",
+                      "imageProfil": "/storage/uploads/admins/profils/1645118009_Image1.png",
+                      "created_at": "2022-02-17T10:40:32.000000Z",
+                      "updated_at": "2022-02-17T17:13:29.000000Z",
                       "roles": [
                           {
-                              "id": 2,
-                              "name": "commercial",
+                              "id": 1,
+                              "name": "admin",
                               "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
+                              "created_at": "2022-02-17T10:38:34.000000Z",
+                              "updated_at": "2022-02-17T10:38:34.000000Z",
                               "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
+                                  "model_id": 2,
+                                  "role_id": 1,
                                   "model_type": "App\\Models\\User"
                               }
                           }
@@ -493,9 +396,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/commercials/{id}'
+    uri: 'api/admins/{id}'
     metadata:
-      title: 'Delete commercial account.'
+      title: 'Delete admin account.'
       description: ''
       authenticated: true
       custom: []
@@ -507,7 +410,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the commercial.'
+        description: 'the id of the admin.'
         required: true
         example: 2
         type: integer

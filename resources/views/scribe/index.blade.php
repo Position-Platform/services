@@ -75,24 +75,24 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="manager-management">
-                    <a href="#manager-management">Manager management</a>
+                <li class="tocify-item level-1" data-unique="abonnement-management">
+                    <a href="#abonnement-management">Abonnement management</a>
                 </li>
-                                    <ul id="tocify-subheader-manager-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="manager-management-GETapi-managers">
-                        <a href="#manager-management-GETapi-managers">Get all Manager.</a>
+                                    <ul id="tocify-subheader-abonnement-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements">
+                        <a href="#abonnement-management-GETapi-abonnements">Get all Subscription.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="manager-management-POSTapi-managers">
-                        <a href="#manager-management-POSTapi-managers">Add a new Manager.</a>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements--id-">
+                        <a href="#abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="manager-management-GETapi-managers--id-">
-                        <a href="#manager-management-GETapi-managers--id-">Show Manager by id.</a>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-POSTapi-abonnements">
+                        <a href="#abonnement-management-POSTapi-abonnements">Add a new Manager.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="manager-management-PUTapi-managers--id-">
-                        <a href="#manager-management-PUTapi-managers--id-">Update Commercial.</a>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-PUTapi-abonnements--id-">
+                        <a href="#abonnement-management-PUTapi-abonnements--id-">Update Subscription.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="manager-management-DELETEapi-managers--id-">
-                        <a href="#manager-management-DELETEapi-managers--id-">Delete manager account.</a>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-DELETEapi-abonnements--id-">
+                        <a href="#abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -171,6 +171,28 @@
                     </li>
                                                     </ul>
                             </ul>
+                    <ul id="tocify-header-6" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="manager-management">
+                    <a href="#manager-management">Manager management</a>
+                </li>
+                                    <ul id="tocify-subheader-manager-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="manager-management-GETapi-managers">
+                        <a href="#manager-management-GETapi-managers">Get all Manager.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="manager-management-POSTapi-managers">
+                        <a href="#manager-management-POSTapi-managers">Add a new Manager.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="manager-management-GETapi-managers--id-">
+                        <a href="#manager-management-GETapi-managers--id-">Show Manager by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="manager-management-PUTapi-managers--id-">
+                        <a href="#manager-management-PUTapi-managers--id-">Update Commercial.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="manager-management-DELETEapi-managers--id-">
+                        <a href="#manager-management-DELETEapi-managers--id-">Delete manager account.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
         
                         
             </div>
@@ -181,7 +203,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 22 2022</li>
+        <li>Last updated: February 25 2022</li>
     </ul>
 </div>
 
@@ -199,15 +221,15 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
-        <h1 id="manager-management">Manager management</h1>
+        <h1 id="abonnement-management">Abonnement management</h1>
 
-    <p>APIs for managing Managers</p>
+    <p>APIs for managing Abonnements</p>
 
-            <h2 id="manager-management-GETapi-managers">Get all Manager.</h2>
+            <h2 id="abonnement-management-GETapi-abonnements">Get all Subscription.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -215,13 +237,13 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 
 
 
-<span id="example-requests-GETapi-managers">
+<span id="example-requests-GETapi-abonnements">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/managers" \
+    --get "http://localhost:8000/api/abonnements" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -230,7 +252,7 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers"
+    "http://localhost:8000/api/abonnements"
 );
 
 const headers = {
@@ -249,7 +271,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/managers',
+    'http://localhost:8000/api/abonnements',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -267,7 +289,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers'
+url = 'http://localhost:8000/api/abonnements'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -280,7 +302,7 @@ response.json()</code></pre></div>
 
 </span>
 
-<span id="example-responses-GETapi-managers">
+<span id="example-responses-GETapi-abonnements">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -291,93 +313,69 @@ response.json()</code></pre></div>
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;idUser&quot;: 11,
-            &quot;idAbonnement&quot;: 1,
+            &quot;nom&quot;: &quot;free&quot;,
+            &quot;prix&quot;: 0,
+            &quot;type&quot;: &quot;year&quot;,
+            &quot;duree&quot;: 1,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-            &quot;user&quot;: {
-                &quot;id&quot;: 11,
-                &quot;name&quot;: &quot;Gautier Manager&quot;,
-                &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
-                &quot;email_verified_at&quot;: null,
-                &quot;phone&quot;: &quot;675520442&quot;,
-                &quot;fcmToken&quot;: null,
-                &quot;imageProfil&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-                &quot;roles&quot;: [
-                    {
-                        &quot;id&quot;: 3,
-                        &quot;name&quot;: &quot;manager&quot;,
-                        &quot;guard_name&quot;: &quot;api&quot;,
-                        &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                        &quot;pivot&quot;: {
-                            &quot;model_id&quot;: 11,
-                            &quot;role_id&quot;: 3,
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
-                        }
-                    }
-                ]
-            }
+            &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
         }
     ],
-    &quot;message&quot;: &quot;Liste des Managers&quot;
+    &quot;message&quot;: &quot;Liste des Abonnements&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-managers" hidden>
+<span id="execution-results-GETapi-abonnements" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-managers"></span>:
+                id="execution-response-status-GETapi-abonnements"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-managers"></code></pre>
+    <pre class="json"><code id="execution-response-content-GETapi-abonnements"></code></pre>
 </span>
-<span id="execution-error-GETapi-managers" hidden>
+<span id="execution-error-GETapi-abonnements" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-managers"></code></pre>
+    <pre><code id="execution-error-message-GETapi-abonnements"></code></pre>
 </span>
-<form id="form-GETapi-managers" data-method="GET"
-      data-path="api/managers"
+<form id="form-GETapi-abonnements" data-method="GET"
+      data-path="api/abonnements"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-managers', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-managers"
-                    onclick="tryItOut('GETapi-managers');">Try it out ⚡
+                    id="btn-tryout-GETapi-abonnements"
+                    onclick="tryItOut('GETapi-abonnements');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-managers"
-                    onclick="cancelTryOut('GETapi-managers');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-abonnements"
+                    onclick="cancelTryOut('GETapi-abonnements');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-managers" hidden>Send Request 💥
+                    id="btn-executetryout-GETapi-abonnements" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/managers</code></b>
+            <b><code>api/abonnements</code></b>
         </p>
                 <p>
-            <label id="auth-GETapi-managers" hidden>Authorization header:
+            <label id="auth-GETapi-abonnements" hidden>Authorization header:
                 <b><code>Bearer </code></b><input type="text"
                                                                 name="Authorization"
                                                                 data-prefix="Bearer "
-                                                                data-endpoint="GETapi-managers"
+                                                                data-endpoint="GETapi-abonnements"
                                                                 data-component="header"></label>
         </p>
                 </form>
 
-            <h2 id="manager-management-POSTapi-managers">Add a new Manager.</h2>
+            <h2 id="abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -385,275 +383,13 @@ response.json()</code></pre></div>
 
 
 
-<span id="example-requests-POSTapi-managers">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/managers" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: multipart/form-data" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey" \
-    --form "name=Gautier" \
-    --form "email=gautier@position.cm" \
-    --form "phone=699999999" \
-    --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1931.tmp" </code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "multipart/form-data",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-const body = new FormData();
-body.append('name', 'Gautier');
-body.append('email', 'gautier@position.cm');
-body.append('phone', '699999999');
-body.append('password', 'gautier123');
-body.append('file', document.querySelector('input[name="file"]').files[0]);
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/managers',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
-            'Content-Type' =&gt; 'multipart/form-data',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-        'multipart' =&gt; [
-            [
-                'name' =&gt; 'name',
-                'contents' =&gt; 'Gautier'
-            ],
-            [
-                'name' =&gt; 'email',
-                'contents' =&gt; 'gautier@position.cm'
-            ],
-            [
-                'name' =&gt; 'phone',
-                'contents' =&gt; '699999999'
-            ],
-            [
-                'name' =&gt; 'password',
-                'contents' =&gt; 'gautier123'
-            ],
-            [
-                'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1931.tmp', 'r')
-            ],
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/managers'
-files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1931.tmp', 'rb')
-}
-payload = {
-    "name": "Gautier",
-    "email": "gautier@position.cm",
-    "phone": 699999999,
-    "password": "gautier123"
-}
-headers = {
-  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
-  'Content-Type': 'multipart/form-data',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('POST', url, headers=headers, files=files, data=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-managers">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;idAbonnement&quot;: 1,
-        &quot;idUser&quot;: 11,
-        &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;id&quot;: 1,
-        &quot;user&quot;: {
-            &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;Gautier Manager&quot;,
-            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;phone&quot;: &quot;675520442&quot;,
-            &quot;fcmToken&quot;: null,
-            &quot;imageProfil&quot;: null,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-            &quot;roles&quot;: [
-                {
-                    &quot;id&quot;: 3,
-                    &quot;name&quot;: &quot;manager&quot;,
-                    &quot;guard_name&quot;: &quot;api&quot;,
-                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;pivot&quot;: {
-                        &quot;model_id&quot;: 11,
-                        &quot;role_id&quot;: 3,
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
-                    }
-                }
-            ]
-        }
-    },
-    &quot;message&quot;: &quot;Cr&eacute;ation du Manager reussie&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-managers" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-managers"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-managers"></code></pre>
-</span>
-<span id="execution-error-POSTapi-managers" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-managers"></code></pre>
-</span>
-<form id="form-POSTapi-managers" data-method="POST"
-      data-path="api/managers"
-      data-authed="1"
-      data-hasfiles="1"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-managers', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-managers"
-                    onclick="tryItOut('POSTapi-managers');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-managers"
-                    onclick="cancelTryOut('POSTapi-managers');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-managers" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/managers</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-managers" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-managers"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="name"
-               data-endpoint="POSTapi-managers"
-               value="Gautier"
-               data-component="body" hidden>
-    <br>
-<p>the name of the manager.</p>
-        </p>
-                <p>
-            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="email"
-               data-endpoint="POSTapi-managers"
-               value="gautier@position.cm"
-               data-component="body" hidden>
-    <br>
-<p>the email of the manager.</p>
-        </p>
-                <p>
-            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="phone"
-               data-endpoint="POSTapi-managers"
-               value="699999999"
-               data-component="body" hidden>
-    <br>
-<p>The phone number of the manager.</p>
-        </p>
-                <p>
-            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
-                <input type="file"
-               name="file"
-               data-endpoint="POSTapi-managers"
-               value=""
-               data-component="body" hidden>
-    <br>
-<p>Profile Image.</p>
-        </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-managers"
-               value="gautier123"
-               data-component="body" hidden>
-    <br>
-<p>the password of the manager.</p>
-        </p>
-        </form>
-
-            <h2 id="manager-management-GETapi-managers--id-">Show Manager by id.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-GETapi-managers--id-">
+<span id="example-requests-GETapi-abonnements--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/managers/2" \
+    --get "http://localhost:8000/api/abonnements/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -662,7 +398,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/2"
+    "http://localhost:8000/api/abonnements/2"
 );
 
 const headers = {
@@ -681,7 +417,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/managers/2',
+    'http://localhost:8000/api/abonnements/2',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -699,7 +435,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/2'
+url = 'http://localhost:8000/api/abonnements/2'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -712,7 +448,7 @@ response.json()</code></pre></div>
 
 </span>
 
-<span id="example-responses-GETapi-managers--id-">
+<span id="example-responses-GETapi-abonnements--id-">
             <blockquote>
             <p>Example response (200):</p>
         </blockquote>
@@ -722,87 +458,63 @@ response.json()</code></pre></div>
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;idUser&quot;: 11,
-        &quot;idAbonnement&quot;: 1,
+        &quot;nom&quot;: &quot;free&quot;,
+        &quot;prix&quot;: 0,
+        &quot;type&quot;: &quot;year&quot;,
+        &quot;duree&quot;: 1,
         &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;Gautier Manager 10&quot;,
-            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;phone&quot;: &quot;675520442&quot;,
-            &quot;fcmToken&quot;: null,
-            &quot;imageProfil&quot;: null,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-22T19:28:17.000000Z&quot;,
-            &quot;roles&quot;: [
-                {
-                    &quot;id&quot;: 3,
-                    &quot;name&quot;: &quot;manager&quot;,
-                    &quot;guard_name&quot;: &quot;api&quot;,
-                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;pivot&quot;: {
-                        &quot;model_id&quot;: 11,
-                        &quot;role_id&quot;: 3,
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
-                    }
-                }
-            ]
-        }
+        &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
     },
-    &quot;message&quot;: &quot;Manager&quot;
+    &quot;message&quot;: &quot;Abonnement&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-GETapi-managers--id-" hidden>
+<span id="execution-results-GETapi-abonnements--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-GETapi-managers--id-"></span>:
+                id="execution-response-status-GETapi-abonnements--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-managers--id-"></code></pre>
+    <pre class="json"><code id="execution-response-content-GETapi-abonnements--id-"></code></pre>
 </span>
-<span id="execution-error-GETapi-managers--id-" hidden>
+<span id="execution-error-GETapi-abonnements--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-managers--id-"></code></pre>
+    <pre><code id="execution-error-message-GETapi-abonnements--id-"></code></pre>
 </span>
-<form id="form-GETapi-managers--id-" data-method="GET"
-      data-path="api/managers/{id}"
+<form id="form-GETapi-abonnements--id-" data-method="GET"
+      data-path="api/abonnements/{id}"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-managers--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-managers--id-"
-                    onclick="tryItOut('GETapi-managers--id-');">Try it out ⚡
+                    id="btn-tryout-GETapi-abonnements--id-"
+                    onclick="tryItOut('GETapi-abonnements--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-managers--id-"
-                    onclick="cancelTryOut('GETapi-managers--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-GETapi-abonnements--id-"
+                    onclick="cancelTryOut('GETapi-abonnements--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-managers--id-" hidden>Send Request 💥
+                    id="btn-executetryout-GETapi-abonnements--id-" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-green">GET</small>
-            <b><code>api/managers/{id}</code></b>
+            <b><code>api/abonnements/{id}</code></b>
         </p>
                 <p>
-            <label id="auth-GETapi-managers--id-" hidden>Authorization header:
+            <label id="auth-GETapi-abonnements--id-" hidden>Authorization header:
                 <b><code>Bearer </code></b><input type="text"
                                                                 name="Authorization"
                                                                 data-prefix="Bearer "
-                                                                data-endpoint="GETapi-managers--id-"
+                                                                data-endpoint="GETapi-abonnements--id-"
                                                                 data-component="header"></label>
         </p>
                 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
@@ -810,15 +522,15 @@ response.json()</code></pre></div>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
-               data-endpoint="GETapi-managers--id-"
+               data-endpoint="GETapi-abonnements--id-"
                value="2"
                data-component="url" hidden>
     <br>
-<p>the id of the manager.</p>
+<p>the id of the subscription.</p>
             </p>
                     </form>
 
-            <h2 id="manager-management-PUTapi-managers--id-">Update Commercial.</h2>
+            <h2 id="abonnement-management-POSTapi-abonnements">Add a new Manager.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -826,76 +538,68 @@ response.json()</code></pre></div>
 
 
 
-<span id="example-requests-PUTapi-managers--id-">
+<span id="example-requests-POSTapi-abonnements">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/8" \
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/abonnements" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: multipart/form-data" \
+    --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
-    --form "name=Gautier" \
-    --form "phone=699999999" \
-    --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1941.tmp" </code></pre></div>
+    --data "{
+    \"nom\": \"Smart\",
+    \"prix\": 5000,
+    \"duree\": 1,
+    \"type\": \"year\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/8"
+    "http://localhost:8000/api/abonnements"
 );
 
 const headers = {
     "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "multipart/form-data",
+    "Content-Type": "application/json",
     "Accept": "application/json",
     "X-Authorization": "apiKey",
 };
 
-const body = new FormData();
-body.append('name', 'Gautier');
-body.append('phone', '699999999');
-body.append('_method', 'PUT');
-body.append('file', document.querySelector('input[name="file"]').files[0]);
+let body = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year"
+};
 
 fetch(url, {
-    method: "PUT",
+    method: "POST",
     headers,
-    body,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;put(
-    'http://localhost:8000/api/managers/8',
+$response = $client-&gt;post(
+    'http://localhost:8000/api/abonnements',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
-            'Content-Type' =&gt; 'multipart/form-data',
+            'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
             'X-Authorization' =&gt; 'apiKey',
         ],
-        'multipart' =&gt; [
-            [
-                'name' =&gt; 'name',
-                'contents' =&gt; 'Gautier'
-            ],
-            [
-                'name' =&gt; 'phone',
-                'contents' =&gt; '699999999'
-            ],
-            [
-                'name' =&gt; '_method',
-                'contents' =&gt; 'PUT'
-            ],
-            [
-                'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1941.tmp', 'r')
-            ],
+        'json' =&gt; [
+            'nom' =&gt; 'Smart',
+            'prix' =&gt; 5000,
+            'duree' =&gt; 1,
+            'type' =&gt; 'year',
         ],
     ]
 );
@@ -907,28 +611,240 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/8'
-files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1941.tmp', 'rb')
-}
+url = 'http://localhost:8000/api/abonnements'
 payload = {
-    "name": "Gautier",
-    "phone": 699999999,
-    "_method": "PUT"
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
-  'Content-Type': 'multipart/form-data',
+  'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-Authorization': 'apiKey'
 }
 
-response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response = requests.request('POST', url, headers=headers, json=payload)
 response.json()</code></pre></div>
 
 </span>
 
-<span id="example-responses-PUTapi-managers--id-">
+<span id="example-responses-POSTapi-abonnements">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;smart&quot;,
+        &quot;prix&quot;: &quot;10000&quot;,
+        &quot;duree&quot;: &quot;1&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;id&quot;: 2
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l'abonnement reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-abonnements" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-abonnements"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-abonnements"></code></pre>
+</span>
+<span id="execution-error-POSTapi-abonnements" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-abonnements"></code></pre>
+</span>
+<form id="form-POSTapi-abonnements" data-method="POST"
+      data-path="api/abonnements"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-abonnements', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-abonnements"
+                    onclick="tryItOut('POSTapi-abonnements');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-abonnements"
+                    onclick="cancelTryOut('POSTapi-abonnements');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-abonnements" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/abonnements</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-abonnements" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-abonnements"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="POSTapi-abonnements"
+               value="Smart"
+               data-component="body" hidden>
+    <br>
+<p>the name of the subscription.</p>
+        </p>
+                <p>
+            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="prix"
+               data-endpoint="POSTapi-abonnements"
+               value="5000"
+               data-component="body" hidden>
+    <br>
+<p>the price of the subscription.</p>
+        </p>
+                <p>
+            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="duree"
+               data-endpoint="POSTapi-abonnements"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>duration of the subscription.</p>
+        </p>
+                <p>
+            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="type"
+               data-endpoint="POSTapi-abonnements"
+               value="year"
+               data-component="body" hidden>
+    <br>
+<p>Type of subscription(Year by default).</p>
+        </p>
+        </form>
+
+            <h2 id="abonnement-management-PUTapi-abonnements--id-">Update Subscription.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-abonnements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/abonnements/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Smart\",
+    \"prix\": 5000,
+    \"duree\": 1,
+    \"type\": \"year\",
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements/16"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year",
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/abonnements/16',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Smart',
+            'prix' =&gt; 5000,
+            'duree' =&gt; 1,
+            'type' =&gt; 'year',
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements/16'
+payload = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-abonnements--id-">
             <blockquote>
             <p>Example response (201):</p>
         </blockquote>
@@ -937,92 +853,64 @@ response.json()</code></pre></div>
 <code class="language-json">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;idUser&quot;: 11,
-        &quot;idAbonnement&quot;: 1,
+        &quot;id&quot;: 2,
+        &quot;nom&quot;: &quot;smart +&quot;,
+        &quot;prix&quot;: 10000,
+        &quot;type&quot;: &quot;year&quot;,
+        &quot;duree&quot;: 1,
         &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
-        &quot;user&quot;: {
-            &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;Gautier Manager 10&quot;,
-            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
-            &quot;email_verified_at&quot;: null,
-            &quot;phone&quot;: &quot;675520442&quot;,
-            &quot;fcmToken&quot;: null,
-            &quot;imageProfil&quot;: null,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-22T19:28:17.000000Z&quot;,
-            &quot;roles&quot;: [
-                {
-                    &quot;id&quot;: 3,
-                    &quot;name&quot;: &quot;manager&quot;,
-                    &quot;guard_name&quot;: &quot;api&quot;,
-                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
-                    &quot;pivot&quot;: {
-                        &quot;model_id&quot;: 11,
-                        &quot;role_id&quot;: 3,
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
-                    }
-                }
-            ]
-        }
+        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T10:21:05.000000Z&quot;
     },
     &quot;message&quot;: &quot;Update Success&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-PUTapi-managers--id-" hidden>
+<span id="execution-results-PUTapi-abonnements--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-PUTapi-managers--id-"></span>:
+                id="execution-response-status-PUTapi-abonnements--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-managers--id-"></code></pre>
+    <pre class="json"><code id="execution-response-content-PUTapi-abonnements--id-"></code></pre>
 </span>
-<span id="execution-error-PUTapi-managers--id-" hidden>
+<span id="execution-error-PUTapi-abonnements--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-managers--id-"></code></pre>
+    <pre><code id="execution-error-message-PUTapi-abonnements--id-"></code></pre>
 </span>
-<form id="form-PUTapi-managers--id-" data-method="PUT"
-      data-path="api/managers/{id}"
+<form id="form-PUTapi-abonnements--id-" data-method="PUT"
+      data-path="api/abonnements/{id}"
       data-authed="1"
-      data-hasfiles="1"
+      data-hasfiles="0"
       data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-managers--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-abonnements--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-managers--id-"
-                    onclick="tryItOut('PUTapi-managers--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-abonnements--id-"
+                    onclick="tryItOut('PUTapi-abonnements--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-managers--id-"
-                    onclick="cancelTryOut('PUTapi-managers--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-abonnements--id-"
+                    onclick="cancelTryOut('PUTapi-abonnements--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-managers--id-" hidden>Send Request 💥
+                    id="btn-executetryout-PUTapi-abonnements--id-" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/managers/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/managers/{id}</code></b>
+            <b><code>api/abonnements/{id}</code></b>
         </p>
                 <p>
-            <label id="auth-PUTapi-managers--id-" hidden>Authorization header:
+            <label id="auth-PUTapi-abonnements--id-" hidden>Authorization header:
                 <b><code>Bearer </code></b><input type="text"
                                                                 name="Authorization"
                                                                 data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-managers--id-"
+                                                                data-endpoint="PUTapi-abonnements--id-"
                                                                 data-component="header"></label>
         </p>
                 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
@@ -1030,48 +918,58 @@ response.json()</code></pre></div>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
-               data-endpoint="PUTapi-managers--id-"
-               value="8"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="16"
                data-component="url" hidden>
     <br>
-<p>The ID of the manager.</p>
+<p>The ID of the abonnement.</p>
             </p>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <p>
-            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
-               name="name"
-               data-endpoint="PUTapi-managers--id-"
-               value="Gautier"
+               name="nom"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="Smart"
                data-component="body" hidden>
     <br>
-<p>the name of the manager.</p>
+<p>the name of the subscription.</p>
         </p>
                 <p>
-            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
                 <input type="number"
-               name="phone"
-               data-endpoint="PUTapi-managers--id-"
-               value="699999999"
+               name="prix"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="5000"
                data-component="body" hidden>
     <br>
-<p>The phone number of the manager.</p>
+<p>the price of the subscription.</p>
         </p>
                 <p>
-            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
-                <input type="file"
-               name="file"
-               data-endpoint="PUTapi-managers--id-"
-               value=""
+            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="duree"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="1"
                data-component="body" hidden>
     <br>
-<p>Profile Image.</p>
+<p>duration of the subscription.</p>
+        </p>
+                <p>
+            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="type"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="year"
+               data-component="body" hidden>
+    <br>
+<p>Type of subscription(Year by default).</p>
         </p>
                 <p>
             <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="_method"
-               data-endpoint="PUTapi-managers--id-"
+               data-endpoint="PUTapi-abonnements--id-"
                value="PUT"
                data-component="body" hidden>
     <br>
@@ -1079,7 +977,7 @@ response.json()</code></pre></div>
         </p>
         </form>
 
-            <h2 id="manager-management-DELETEapi-managers--id-">Delete manager account.</h2>
+            <h2 id="abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -1087,13 +985,13 @@ response.json()</code></pre></div>
 
 
 
-<span id="example-requests-DELETEapi-managers--id-">
+<span id="example-requests-DELETEapi-abonnements--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/managers/2" \
+    "http://localhost:8000/api/abonnements/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1102,7 +1000,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/2"
+    "http://localhost:8000/api/abonnements/2"
 );
 
 const headers = {
@@ -1121,7 +1019,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/managers/2',
+    'http://localhost:8000/api/abonnements/2',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1139,7 +1037,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/2'
+url = 'http://localhost:8000/api/abonnements/2'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -1152,7 +1050,7 @@ response.json()</code></pre></div>
 
 </span>
 
-<span id="example-responses-DELETEapi-managers--id-">
+<span id="example-responses-DELETEapi-abonnements--id-">
             <blockquote>
             <p>Example response (201):</p>
         </blockquote>
@@ -1165,51 +1063,51 @@ response.json()</code></pre></div>
 }</code>
  </pre>
     </span>
-<span id="execution-results-DELETEapi-managers--id-" hidden>
+<span id="execution-results-DELETEapi-abonnements--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-managers--id-"></span>:
+                id="execution-response-status-DELETEapi-abonnements--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-managers--id-"></code></pre>
+    <pre class="json"><code id="execution-response-content-DELETEapi-abonnements--id-"></code></pre>
 </span>
-<span id="execution-error-DELETEapi-managers--id-" hidden>
+<span id="execution-error-DELETEapi-abonnements--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-managers--id-"></code></pre>
+    <pre><code id="execution-error-message-DELETEapi-abonnements--id-"></code></pre>
 </span>
-<form id="form-DELETEapi-managers--id-" data-method="DELETE"
-      data-path="api/managers/{id}"
+<form id="form-DELETEapi-abonnements--id-" data-method="DELETE"
+      data-path="api/abonnements/{id}"
       data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-managers--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-abonnements--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-managers--id-"
-                    onclick="tryItOut('DELETEapi-managers--id-');">Try it out ⚡
+                    id="btn-tryout-DELETEapi-abonnements--id-"
+                    onclick="tryItOut('DELETEapi-abonnements--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-managers--id-"
-                    onclick="cancelTryOut('DELETEapi-managers--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-DELETEapi-abonnements--id-"
+                    onclick="cancelTryOut('DELETEapi-abonnements--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-managers--id-" hidden>Send Request 💥
+                    id="btn-executetryout-DELETEapi-abonnements--id-" hidden>Send Request 💥
             </button>
             </h3>
             <p>
             <small class="badge badge-red">DELETE</small>
-            <b><code>api/managers/{id}</code></b>
+            <b><code>api/abonnements/{id}</code></b>
         </p>
                 <p>
-            <label id="auth-DELETEapi-managers--id-" hidden>Authorization header:
+            <label id="auth-DELETEapi-abonnements--id-" hidden>Authorization header:
                 <b><code>Bearer </code></b><input type="text"
                                                                 name="Authorization"
                                                                 data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-managers--id-"
+                                                                data-endpoint="DELETEapi-abonnements--id-"
                                                                 data-component="header"></label>
         </p>
                 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
@@ -1217,11 +1115,11 @@ response.json()</code></pre></div>
                 <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
                 <input type="number"
                name="id"
-               data-endpoint="DELETEapi-managers--id-"
+               data-endpoint="DELETEapi-abonnements--id-"
                value="2"
                data-component="url" hidden>
     <br>
-<p>the id of the manager.</p>
+<p>the id of the subscription.</p>
             </p>
                     </form>
 
@@ -1542,7 +1440,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"voluptas\",
+    \"token\": \"architecto\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1562,7 +1460,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "voluptas",
+    "token": "architecto",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1586,7 +1484,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'voluptas',
+            'token' =&gt; 'architecto',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1603,7 +1501,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "voluptas",
+    "token": "architecto",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1686,7 +1584,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="voluptas"
+               value="architecto"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1734,7 +1632,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1815.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php275A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1791,7 +1689,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1815.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php275A.tmp', 'r')
             ],
         ],
     ]
@@ -1806,7 +1704,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1815.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php275A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2460,7 +2358,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php18C1.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2893.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2509,7 +2407,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php18C1.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2893.tmp', 'r')
             ],
         ],
     ]
@@ -2524,7 +2422,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php18C1.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2893.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2917,7 +2815,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1962.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2A9B.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2976,7 +2874,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1962.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2A9B.tmp', 'r')
             ],
         ],
     ]
@@ -2991,7 +2889,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1962.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2A9B.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3354,7 +3252,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1992.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2B09.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3413,7 +3311,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1992.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2B09.tmp', 'r')
             ],
         ],
     ]
@@ -3428,7 +3326,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1992.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2B09.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4156,7 +4054,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php19A2.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2B49.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4260,7 +4158,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php19A2.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2B49.tmp', 'r')
             ],
         ],
     ]
@@ -4275,7 +4173,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php19A2.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2B49.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4561,7 +4459,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/commercials/8" \
+    "http://localhost:8000/api/commercials/9" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -4578,12 +4476,12 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php1901.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2950.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/commercials/8"
+    "http://localhost:8000/api/commercials/9"
 );
 
 const headers = {
@@ -4618,7 +4516,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/commercials/8',
+    'http://localhost:8000/api/commercials/9',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -4677,7 +4575,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php1901.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2950.tmp', 'r')
             ],
         ],
     ]
@@ -4690,9 +4588,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/commercials/8'
+url = 'http://localhost:8000/api/commercials/9'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php1901.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2950.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4828,7 +4726,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-commercials--id-"
-               value="8"
+               value="9"
                data-component="url" hidden>
     <br>
 <p>The ID of the commercial.</p>
@@ -5109,6 +5007,1048 @@ response.json()</code></pre></div>
                data-component="url" hidden>
     <br>
 <p>the id of the commercial.</p>
+            </p>
+                    </form>
+
+        <h1 id="manager-management">Manager management</h1>
+
+    <p>APIs for managing Managers</p>
+
+            <h2 id="manager-management-GETapi-managers">Get all Manager.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-managers">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/managers" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/managers"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/managers',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/managers'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-managers">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;idUser&quot;: 13,
+            &quot;idAbonnement&quot;: 1,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T19:54:32.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T19:54:32.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 13,
+                &quot;name&quot;: &quot;Gautier Manager&quot;,
+                &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                &quot;phone&quot;: &quot;675520442&quot;,
+                &quot;fcmToken&quot;: null,
+                &quot;imageProfil&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-22T19:54:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                &quot;roles&quot;: [
+                    {
+                        &quot;id&quot;: 3,
+                        &quot;name&quot;: &quot;manager&quot;,
+                        &quot;guard_name&quot;: &quot;api&quot;,
+                        &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;model_id&quot;: 13,
+                            &quot;role_id&quot;: 3,
+                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                        }
+                    }
+                ]
+            },
+            &quot;abonnement&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;free&quot;,
+                &quot;prix&quot;: 0,
+                &quot;type&quot;: &quot;year&quot;,
+                &quot;duree&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
+            }
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Managers&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-managers" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-managers"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-managers"></code></pre>
+</span>
+<span id="execution-error-GETapi-managers" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-managers"></code></pre>
+</span>
+<form id="form-GETapi-managers" data-method="GET"
+      data-path="api/managers"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-managers', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-managers"
+                    onclick="tryItOut('GETapi-managers');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-managers"
+                    onclick="cancelTryOut('GETapi-managers');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-managers" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/managers</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-managers" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-managers"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="manager-management-POSTapi-managers">Add a new Manager.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-managers">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/managers" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "name=Gautier" \
+    --form "email=gautier@position.cm" \
+    --form "phone=699999999" \
+    --form "password=gautier123" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php29CE.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/managers"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('name', 'Gautier');
+body.append('email', 'gautier@position.cm');
+body.append('phone', '699999999');
+body.append('password', 'gautier123');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/managers',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Gautier'
+            ],
+            [
+                'name' =&gt; 'email',
+                'contents' =&gt; 'gautier@position.cm'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'password',
+                'contents' =&gt; 'gautier123'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php29CE.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/managers'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php29CE.tmp', 'rb')
+}
+payload = {
+    "name": "Gautier",
+    "email": "gautier@position.cm",
+    "phone": 699999999,
+    "password": "gautier123"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-managers">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;idAbonnement&quot;: 1,
+        &quot;idUser&quot;: 11,
+        &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
+        &quot;id&quot;: 1,
+        &quot;user&quot;: {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;Gautier Manager&quot;,
+            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;phone&quot;: &quot;675520442&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;manager&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 11,
+                        &quot;role_id&quot;: 3,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        }
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation du Manager reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-managers" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-managers"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-managers"></code></pre>
+</span>
+<span id="execution-error-POSTapi-managers" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-managers"></code></pre>
+</span>
+<form id="form-POSTapi-managers" data-method="POST"
+      data-path="api/managers"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-managers', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-managers"
+                    onclick="tryItOut('POSTapi-managers');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-managers"
+                    onclick="cancelTryOut('POSTapi-managers');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-managers" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/managers</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-managers" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-managers"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-managers"
+               value="Gautier"
+               data-component="body" hidden>
+    <br>
+<p>the name of the manager.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-managers"
+               value="gautier@position.cm"
+               data-component="body" hidden>
+    <br>
+<p>the email of the manager.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="phone"
+               data-endpoint="POSTapi-managers"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>The phone number of the manager.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="POSTapi-managers"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>Profile Image.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-managers"
+               value="gautier123"
+               data-component="body" hidden>
+    <br>
+<p>the password of the manager.</p>
+        </p>
+        </form>
+
+            <h2 id="manager-management-GETapi-managers--id-">Show Manager by id.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-managers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/managers/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/managers/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/managers/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/managers/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-managers--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;idUser&quot;: 13,
+        &quot;idAbonnement&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-22T19:54:32.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-22T19:54:32.000000Z&quot;,
+        &quot;user&quot;: {
+            &quot;id&quot;: 13,
+            &quot;name&quot;: &quot;Gautier Manager&quot;,
+            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
+            &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+            &quot;phone&quot;: &quot;675520442&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T19:54:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;manager&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 13,
+                        &quot;role_id&quot;: 3,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        },
+        &quot;abonnement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;free&quot;,
+            &quot;prix&quot;: 0,
+            &quot;type&quot;: &quot;year&quot;,
+            &quot;duree&quot;: 1,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
+        }
+    },
+    &quot;message&quot;: &quot;Manager&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-managers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-managers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-managers--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-managers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-managers--id-"></code></pre>
+</span>
+<form id="form-GETapi-managers--id-" data-method="GET"
+      data-path="api/managers/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-managers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-managers--id-"
+                    onclick="tryItOut('GETapi-managers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-managers--id-"
+                    onclick="cancelTryOut('GETapi-managers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-managers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/managers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-managers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-managers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-managers--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the manager.</p>
+            </p>
+                    </form>
+
+            <h2 id="manager-management-PUTapi-managers--id-">Update Commercial.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-managers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/managers/6" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "name=Gautier" \
+    --form "phone=699999999" \
+    --form "_method=PUT" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php2A0D.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/managers/6"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('name', 'Gautier');
+body.append('phone', '699999999');
+body.append('_method', 'PUT');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/managers/6',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'name',
+                'contents' =&gt; 'Gautier'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; '_method',
+                'contents' =&gt; 'PUT'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php2A0D.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/managers/6'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php2A0D.tmp', 'rb')
+}
+payload = {
+    "name": "Gautier",
+    "phone": 699999999,
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-managers--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;idUser&quot;: 11,
+        &quot;idAbonnement&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-22T19:20:21.000000Z&quot;,
+        &quot;user&quot;: {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;Gautier Manager 10&quot;,
+            &quot;email&quot;: &quot;bt@sogefi.cm&quot;,
+            &quot;email_verified_at&quot;: null,
+            &quot;phone&quot;: &quot;675520442&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T19:20:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T19:28:17.000000Z&quot;,
+            &quot;roles&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;name&quot;: &quot;manager&quot;,
+                    &quot;guard_name&quot;: &quot;api&quot;,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;model_id&quot;: 11,
+                        &quot;role_id&quot;: 3,
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                    }
+                }
+            ]
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-managers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-managers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-managers--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-managers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-managers--id-"></code></pre>
+</span>
+<form id="form-PUTapi-managers--id-" data-method="PUT"
+      data-path="api/managers/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-managers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-managers--id-"
+                    onclick="tryItOut('PUTapi-managers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-managers--id-"
+                    onclick="cancelTryOut('PUTapi-managers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-managers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/managers/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/managers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-managers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-managers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-managers--id-"
+               value="6"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the manager.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="PUTapi-managers--id-"
+               value="Gautier"
+               data-component="body" hidden>
+    <br>
+<p>the name of the manager.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="phone"
+               data-endpoint="PUTapi-managers--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>The phone number of the manager.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="PUTapi-managers--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>Profile Image.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-managers--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="manager-management-DELETEapi-managers--id-">Delete manager account.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-managers--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/managers/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/managers/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/managers/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/managers/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-managers--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-managers--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-managers--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-managers--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-managers--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-managers--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-managers--id-" data-method="DELETE"
+      data-path="api/managers/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-managers--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-managers--id-"
+                    onclick="tryItOut('DELETEapi-managers--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-managers--id-"
+                    onclick="cancelTryOut('DELETEapi-managers--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-managers--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/managers/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-managers--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-managers--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-managers--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the manager.</p>
             </p>
                     </form>
 
