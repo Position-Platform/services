@@ -16139,7 +16139,247 @@
      
 }
 
-        namespace Spatie\LaravelIgnition\Facades { 
+        namespace Illuminate\Notifications\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Vonage {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getRestUrl()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getRestUrl();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getApiUrl()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getApiUrl();
+        }
+                    /**
+         * Set the Http Client to used to make API requests.
+         * 
+         * This allows the default http client to be swapped out for a HTTPlug compatible
+         * replacement.
+         *
+         * @static 
+         */ 
+        public static function setHttpClient($client)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->setHttpClient($client);
+        }
+                    /**
+         * Get the Http Client used to make API requests.
+         *
+         * @static 
+         */ 
+        public static function getHttpClient()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getHttpClient();
+        }
+                    /**
+         * Set the factory used to create API specific clients.
+         *
+         * @static 
+         */ 
+        public static function setFactory($factory)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->setFactory($factory);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getFactory()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getFactory();
+        }
+                    /**
+         * 
+         *
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function signRequest($request, $credentials)
+        {
+                        return \Vonage\Client::signRequest($request, $credentials);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function authRequest($request, $credentials)
+        {
+                        return \Vonage\Client::authRequest($request, $credentials);
+        }
+                    /**
+         * 
+         *
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function generateJwt($claims = [])
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->generateJwt($claims);
+        }
+                    /**
+         * Takes a URL and a key=>value array to generate a GET PSR-7 request object
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function get($url, $params = [])
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->get($url, $params);
+        }
+                    /**
+         * Takes a URL and a key=>value array to generate a POST PSR-7 request object
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function post($url, $params)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->post($url, $params);
+        }
+                    /**
+         * Takes a URL and a key=>value array to generate a POST PSR-7 request object
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function postUrlEncoded($url, $params)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->postUrlEncoded($url, $params);
+        }
+                    /**
+         * Takes a URL and a key=>value array to generate a PUT PSR-7 request object
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function put($url, $params)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->put($url, $params);
+        }
+                    /**
+         * Takes a URL and a key=>value array to generate a DELETE PSR-7 request object
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function delete($url)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->delete($url);
+        }
+                    /**
+         * Wraps the HTTP Client, creates a new PSR-7 request adding authentication, signatures, etc.
+         *
+         * @throws ClientExceptionInterface
+         * @throws ClientException
+         * @static 
+         */ 
+        public static function send($request)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->send($request);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function serialize($entity)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->serialize($entity);
+        }
+                    /**
+         * 
+         *
+         * @param string|\Vonage\Verify\Verification $entity
+         * @deprecated 
+         * @static 
+         */ 
+        public static function unserialize($entity)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->unserialize($entity);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getLogger()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getLogger();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getCredentials()
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->getCredentials();
+        }
+                    /**
+         * 
+         *
+         * @param string|int $level Level of message that we are logging
+         * @param \Vonage\array<mixed> $context Additional information for context
+         * @static 
+         */ 
+        public static function log($level, $message, $context = [])
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->log($level, $message, $context);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setLogger($logger)
+        {
+                        /** @var \Vonage\Client $instance */
+                        return $instance->setLogger($logger);
+        }
+         
+    }
+     
+}
+
+    namespace Spatie\LaravelIgnition\Facades { 
             /**
      * 
      *
@@ -20181,6 +20421,7 @@ namespace  {
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
+            class Vonage extends \Illuminate\Notifications\Facades\Vonage {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}
      
 }

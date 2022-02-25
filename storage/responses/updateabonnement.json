@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "data": {
+        "id": 2,
+        "nom": "smart +",
+        "prix": 10000,
+        "type": "year",
+        "duree": 1,
+        "deleted_at": null,
+        "created_at": "2022-02-25T10:18:16.000000Z",
+        "updated_at": "2022-02-25T10:21:05.000000Z"
+    },
+    "message": "Update Success"
+}

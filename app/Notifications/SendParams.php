@@ -5,9 +5,10 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Messages\VonageMessage;
 use Illuminate\Support\Facades\URL;
 
-class SendEmailParams extends Notification
+class SendParams extends Notification
 {
     use Queueable;
 
@@ -23,7 +24,7 @@ class SendEmailParams extends Notification
 
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'vonage'];
     }
 
 
@@ -39,6 +40,22 @@ class SendEmailParams extends Notification
             ->view('emails.account_settings', compact('phone', 'password', 'url'));
     }
 
+    /**
+     * Get the Vonage / SMS representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\VonageMessage
+     */
+    public function toVonage($notifiable)
+    {
+        $phone = $this->phone;
+        $password = $this->password;
+
+        return (new VonageMessage)
+            ->clientReference((string) $notifiable->id)
+            ->content("Vos Paramètres de connexion à votre compte sont les suivants : \n Phone : $phone \n Password : $password \n \n");
+    }
+
 
     public function toArray($notifiable)
     {
@@ -51,7 +68,7 @@ class SendEmailParams extends Notification
     {
         return URL::temporarySignedRoute(
             'verification.verify',
-            now()->addMinutes(config('auth.verification.expire')),
+            now()->addMinutes(60),
             ['user' => $notifiable->email, 'id' => $notifiable->id]
         );
     }

@@ -1,14 +1,14 @@
-name: 'Abonnement management'
+name: 'SubCategory management'
 description: |-
 
-  APIs for managing Abonnements
+  APIs for managing SubCategory
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/abonnements
+    uri: api/souscategories
     metadata:
-      title: 'Get all Subscription.'
+      title: 'Get all SubCategory.'
       description: ''
       authenticated: false
       custom: []
@@ -28,16 +28,23 @@ endpoints:
               "data": [
                   {
                       "id": 1,
-                      "nom": "free",
-                      "prix": 0,
-                      "type": "year",
-                      "duree": 1,
+                      "nom": "Boutiques",
+                      "idcategorie": 1,
+                      "logourl": null,
                       "deleted_at": null,
-                      "created_at": "2022-02-22T18:45:15.000000Z",
-                      "updated_at": "2022-02-22T18:45:15.000000Z"
+                      "created_at": "2022-02-25T11:11:05.000000Z",
+                      "updated_at": "2022-02-25T11:11:05.000000Z",
+                      "categorie": {
+                          "id": 1,
+                          "nom": "Achats",
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:09:21.000000Z",
+                          "updated_at": "2022-02-25T11:09:21.000000Z"
+                      }
                   }
               ],
-              "message": "Liste des Abonnements"
+              "message": "Liste des Sous-Categories"
           }
         headers: []
         description: '200'
@@ -45,9 +52,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/abonnements/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
-      title: 'Show Subscription by id.'
+      title: 'Show SubCategory by id.'
       description: ''
       authenticated: false
       custom: []
@@ -58,7 +65,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the subscription.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer
@@ -72,16 +79,23 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 1,
-                  "nom": "free",
-                  "prix": 0,
-                  "type": "year",
-                  "duree": 1,
+                  "id": 481,
+                  "nom": "Boutique +",
+                  "idcategorie": 1,
+                  "logourl": null,
                   "deleted_at": null,
-                  "created_at": "2022-02-22T18:45:15.000000Z",
-                  "updated_at": "2022-02-22T18:45:15.000000Z"
+                  "created_at": "2022-02-25T12:41:25.000000Z",
+                  "updated_at": "2022-02-25T12:41:25.000000Z",
+                  "categorie": {
+                      "id": 1,
+                      "nom": "Achats",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z"
+                  }
               },
-              "message": "Abonnement"
+              "message": "SousCategorie"
           }
         headers: []
         description: '200'
@@ -89,15 +103,15 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/abonnements
+    uri: api/souscategories
     metadata:
-      title: 'Add a new Subscription.'
+      title: 'Add a new SubCategory.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters: []
@@ -105,31 +119,24 @@ endpoints:
     bodyParameters:
       nom:
         name: nom
-        description: 'the name of the subscription.'
+        description: 'the name of the subcategory.'
         required: true
-        example: Smart
+        example: Achat
         type: string
         custom: []
-      prix:
-        name: prix
-        description: 'the price of the subscription.'
+      idcategorie:
+        name: idcategorie
+        description: 'the id of the category.'
         required: true
-        example: 5000
+        example: 5
         type: integer
         custom: []
-      duree:
-        name: duree
-        description: 'duration of the subscription.'
+      file:
+        name: file
+        description: 'the picture of the subcategory'
         required: true
-        example: 1
-        type: integer
-        custom: []
-      type:
-        name: type
-        description: 'Type of subscription(Year by default).'
-        required: false
-        example: year
-        type: string
+        example: null
+        type: file
         custom: []
     responses:
       -
@@ -138,14 +145,21 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "nom": "smart",
-                  "prix": "10000",
-                  "duree": "1",
-                  "updated_at": "2022-02-25T10:18:16.000000Z",
-                  "created_at": "2022-02-25T10:18:16.000000Z",
-                  "id": 2
+                  "id": 481,
+                  "nom": "Boutique +",
+                  "idcategorie": 1,
+                  "updated_at": "2022-02-25T12:41:25.000000Z",
+                  "created_at": "2022-02-25T12:41:25.000000Z",
+                  "categorie": {
+                      "id": 1,
+                      "nom": "Achats",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z"
+                  }
               },
-              "message": "Création de l'abonnement reussie"
+              "message": "Création de la Sous catégorie reussie"
           }
         headers: []
         description: '200'
@@ -153,21 +167,21 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/abonnements/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
-      title: 'Update Subscription.'
+      title: 'Update SubCategory.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters:
       id:
         name: id
-        description: 'the id of the subscription.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer
@@ -176,31 +190,24 @@ endpoints:
     bodyParameters:
       nom:
         name: nom
-        description: 'the name of the subscription.'
+        description: 'the name of the subcategory.'
         required: false
-        example: Smart
+        example: Achat
         type: string
         custom: []
-      prix:
-        name: prix
-        description: 'the price of the subscription.'
+      file:
+        name: file
+        description: 'the picture of the subcategory'
         required: false
-        example: 5000
-        type: integer
+        example: null
+        type: file
         custom: []
-      duree:
-        name: duree
-        description: 'duration of the subscription.'
+      idcategorie:
+        name: idcategorie
+        description: 'the id of the category.'
         required: false
-        example: 1
+        example: 5
         type: integer
-        custom: []
-      type:
-        name: type
-        description: 'Type of subscription(Year by default).'
-        required: false
-        example: year
-        type: string
         custom: []
       _method:
         name: _method
@@ -216,14 +223,12 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 2,
-                  "nom": "smart +",
-                  "prix": 10000,
-                  "type": "year",
-                  "duree": 1,
+                  "id": 1,
+                  "nom": "Achats +",
+                  "logourl": null,
                   "deleted_at": null,
-                  "created_at": "2022-02-25T10:18:16.000000Z",
-                  "updated_at": "2022-02-25T10:21:05.000000Z"
+                  "created_at": "2022-02-25T11:09:21.000000Z",
+                  "updated_at": "2022-02-25T11:09:21.000000Z"
               },
               "message": "Update Success"
           }
@@ -233,9 +238,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/abonnements/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
-      title: 'Delete subscription.'
+      title: 'Delete Category.'
       description: ''
       authenticated: true
       custom: []
@@ -247,7 +252,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the subscription.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer

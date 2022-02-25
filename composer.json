@@ -11,11 +11,12 @@
         "php": "^8.0",
         "ejarnutowski/laravel-api-key": "^1.0",
         "fruitcake/laravel-cors": "^2.0.5",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.4",
         "laravel/framework": "^9.0",
         "laravel/passport": "^10.3",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "laravel/vonage-notification-channel": "^3.0",
         "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {

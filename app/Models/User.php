@@ -59,6 +59,8 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static \Illuminate\Database\Query\Builder|User withTrashed()
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
+ * @property-read \App\Models\Commercial|null $commercial
+ * @property-read \App\Models\Manager|null $manager
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -111,6 +113,18 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new SendResetLinkParams($token, $url));
     }
 
+    /**
+     * Route notifications for the Vonage channel.
+     *
+     * @param  \Illuminate\Notifications\Notification  $notification
+     * @return string
+     */
+    public function routeNotificationForVonage($notification)
+    {
+        $phone = "237" . $this->phone;
+        return $phone;
+    }
+
 
     public function admin()
     {
@@ -121,5 +135,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function commercial()
     {
         return $this->hasOne(Commercial::class, 'idUser');
+    }
+
+    public function manager()
+    {
+        return $this->hasOne(Manager::class, 'idUser');
     }
 }
