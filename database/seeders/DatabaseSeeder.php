@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeders::class);
         $this->call(AdminTableSeeders::class);
         $this->call(AbonnementTableSeeders::class);
+        $this->call(CategorieTableSeeders::class);
+        $this->call(SousCategorieTableSeeders::class);
     }
 }

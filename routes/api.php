@@ -29,6 +29,18 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/register', [App\Http\Controllers\Api\UserController::class, 'register']);
         Route::post('auth/login', [App\Http\Controllers\Api\UserController::class, 'login']);
 
+        Route::get('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'show']);
+        Route::post('managers', [App\Http\Controllers\Api\ManagerController::class, 'store']);
+
+        Route::get('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'index']);
+        Route::get('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'show']);
+
+        Route::get('categories', [App\Http\Controllers\Api\CategorieController::class, 'index']);
+        Route::get('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'show']);
+
+        Route::get('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'index']);
+        Route::get('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'show']);
+
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
@@ -40,10 +52,9 @@ Route::middleware('auth.apikey')->group(
             Route::get('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'show']);
             Route::put('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'update']);
 
-            Route::apiResource('managers', App\Http\Controllers\Api\ManagerController::class);
-            Route::get('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'index']);
-            Route::get('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'show']);
-
+            Route::get('managers', [App\Http\Controllers\Api\ManagerController::class, 'index']);
+            Route::put('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'update']);
+            Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
 
             Route::group(['middleware' => ['role:admin']], function () {
@@ -56,6 +67,14 @@ Route::middleware('auth.apikey')->group(
                 Route::post('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'store']);
                 Route::put('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'update']);
                 Route::delete('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'destroy']);
+
+                Route::post('categories', [App\Http\Controllers\Api\CategorieController::class, 'store']);
+                Route::put('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'update']);
+                Route::delete('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'destroy']);
+
+                Route::post('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'store']);
+                Route::put('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'update']);
+                Route::delete('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'destroy']);
             });
         });
     }

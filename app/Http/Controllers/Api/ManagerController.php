@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * @authenticated
  * @group Manager management
  *
  * APIs for managing Managers
@@ -22,6 +21,7 @@ class ManagerController extends BaseController
     /**
      * Get all Manager.
      *
+     * @authenticated
      * @header Content-Type application/json
      * @responseFile storage/responses/getmanagers.json
      */
@@ -115,8 +115,9 @@ class ManagerController extends BaseController
     }
 
     /**
-     * Update Commercial.
+     * Update Manager.
      *
+     * @authenticated
      * @header Content-Type application/json
      * @bodyParam name string the name of the manager. Example: Gautier
      * @bodyParam phone int The phone number of the manager. Example:699999999
@@ -167,6 +168,7 @@ class ManagerController extends BaseController
     /**
      * Delete manager account.
      *
+     * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the manager. Example: 2
      * @responseFile 201 storage/responses/delete.json

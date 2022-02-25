@@ -101,7 +101,7 @@ endpoints:
         name: token
         description: 'token give in mail.'
         required: true
-        example: architecto
+        example: ut
         type: string
         custom: []
       password:

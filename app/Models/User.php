@@ -60,6 +60,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Query\Builder|User withTrashed()
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
  * @property-read \App\Models\Commercial|null $commercial
+ * @property-read \App\Models\Manager|null $manager
  */
 class User extends Authenticatable implements MustVerifyEmail
 {

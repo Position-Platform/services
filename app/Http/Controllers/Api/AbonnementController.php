@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Validator;
 
 /**
- * @authenticated
+ *
  * @group Abonnement management
  *
  * APIs for managing Abonnements
@@ -29,8 +29,9 @@ class AbonnementController extends BaseController
     }
 
     /**
-     * Add a new Manager.
+     * Add a new Subscription.
      *
+     * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the subscription. Example: Smart
      * @bodyParam prix int required the price of the subscription. Example: 5000
@@ -86,7 +87,9 @@ class AbonnementController extends BaseController
     /**
      * Update Subscription.
      *
+     * @authenticated
      * @header Content-Type application/json
+     * @urlParam id int required the id of the subscription. Example: 2
      * @bodyParam nom string the name of the subscription. Example: Smart
      * @bodyParam prix int the price of the subscription. Example: 5000
      * @bodyParam duree int duration of the subscription. Example: 1
@@ -119,6 +122,7 @@ class AbonnementController extends BaseController
     /**
      * Delete subscription.
      *
+     * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the subscription. Example: 2
      * @responseFile 201 storage/responses/delete.json

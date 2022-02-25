@@ -141,6 +141,7 @@ class CommercialController extends BaseController
      * Update Commercial.
      *
      * @header Content-Type application/json
+     * @urlParam id int required the id of the commercial. Example: 2
      * @bodyParam name string the name of the commercial. Example: Gautier
      * @bodyParam phone int The phone number of the commercial. Example:699999999
      * @bodyParam file file Profile Image.

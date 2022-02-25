@@ -12,10 +12,9 @@ endpoints:
     metadata:
       title: 'Get all Subscription.'
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
@@ -52,10 +51,9 @@ endpoints:
     metadata:
       title: 'Show Subscription by id.'
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
@@ -95,7 +93,7 @@ endpoints:
       - POST
     uri: api/abonnements
     metadata:
-      title: 'Add a new Manager.'
+      title: 'Add a new Subscription.'
       description: ''
       authenticated: true
       custom: []
@@ -171,9 +169,9 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the abonnement.'
+        description: 'the id of the subscription.'
         required: true
-        example: 16
+        example: 2
         type: integer
         custom: []
     queryParameters: []
