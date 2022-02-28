@@ -101,7 +101,7 @@ endpoints:
         name: token
         description: 'token give in mail.'
         required: true
-        example: omnis
+        example: in
         type: string
         custom: []
       password:

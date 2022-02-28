@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\Commercial
@@ -47,10 +48,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Commercial withoutTrashed()
  * @mixin \Eloquent
  * @property-read \App\Models\User|null $user
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
+ * @property-read int|null $paiements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
+ * @property-read int|null $batiments_count
  */
 class Commercial extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -68,5 +75,20 @@ class Commercial extends Model
     public function user()
     {
         return $this->belongsTo(User::class, "idUser");
+    }
+
+    public function paiements()
+    {
+        return $this->hasMany(Paiement::class, "idCommercial");
+    }
+
+    public function etablissements()
+    {
+        return $this->hasMany(Etablissement::class, "idCommercial");
+    }
+
+    public function batiments()
+    {
+        return $this->hasMany(Batiment::class, "idCommercial");
     }
 }

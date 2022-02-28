@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('auth/email/verify/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verify'])->name('verification.verify'); // Make sure to keep this as your route name
+Route::get('auth/email/verify/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verify'])->name('verification.verify');
 Route::get('auth/email/resend', [App\Http\Controllers\Api\VerificationController::class, 'resend'])->name('verification.resend');
+Route::get('auth/phone/verify/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verifyByPhone']);
 
 
 
@@ -48,6 +49,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'show']);
 
 
+
+
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
             Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
@@ -61,6 +64,9 @@ Route::middleware('auth.apikey')->group(
             Route::get('managers', [App\Http\Controllers\Api\ManagerController::class, 'index']);
             Route::put('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'update']);
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
+
+
+            Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
 
 
             Route::group(['middleware' => ['role:admin']], function () {

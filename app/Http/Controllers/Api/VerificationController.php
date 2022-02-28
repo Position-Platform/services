@@ -43,4 +43,20 @@ class VerificationController extends BaseController
         $success['user'] = auth()->user();
         return $this->sendResponse($success, 'Email verification link sent on your email id');
     }
+
+    /**
+     * Verify Account
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function verifyByPhone($id)
+    {
+        $user = User::findOrFail($id);
+
+        if (!$user->hasVerifiedEmail()) {
+            $user->markEmailAsVerified();
+        }
+        $success['user'] = $user;
+        return $this->sendResponse($success, 'Vérification Reussie');
+    }
 }

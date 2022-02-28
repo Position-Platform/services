@@ -1,97 +1,18 @@
-name: 'Commerciaux management'
+name: 'Category management'
 description: |-
 
-  APIs for managing Commerciaux
+  APIs for managing Category
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/commercials/{id}'
+    uri: api/categories
     metadata:
-      title: 'Show Commercial by id.'
+      title: 'Get all Category.'
       description: ''
-      authenticated: true
+      authenticated: false
       custom: []
     headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-      X-Authorization: apiKey
-    urlParameters:
-      id:
-        name: id
-        description: 'the id of the commercial.'
-        required: true
-        example: 2
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: |
-          {
-              "success": true,
-              "data": {
-                  "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
-                  "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
-              },
-              "message": "Commercial"
-          }
-        headers: []
-        description: '200'
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/commercials
-    metadata:
-      title: 'Get all Commerciaux.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
@@ -107,49 +28,1034 @@ endpoints:
               "data": [
                   {
                       "id": 1,
-                      "idUser": 3,
-                      "numeroCni": 1256987,
-                      "numeroBadge": 1325,
-                      "ville": "Douala",
-                      "quartier": "Melen",
-                      "actif": true,
-                      "sexe": "Masculin",
-                      "whatsapp": 699999999,
-                      "diplome": "BAC",
-                      "tailleTshirt": "XXL",
-                      "age": 25,
+                      "nom": "Achats",
+                      "logourl": null,
                       "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:11.000000Z",
-                      "updated_at": "2022-02-19T11:25:11.000000Z",
-                      "user": {
-                          "id": 3,
-                          "name": "Gautier",
-                          "email": "bt@geo.sm",
-                          "email_verified_at": null,
-                          "phone": "699999998",
-                          "fcmToken": null,
-                          "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                          "deleted_at": null,
-                          "created_at": "2022-02-19T11:25:06.000000Z",
-                          "updated_at": "2022-02-19T11:25:06.000000Z",
-                          "roles": [
-                              {
-                                  "id": 2,
-                                  "name": "commercial",
-                                  "guard_name": "api",
-                                  "created_at": "2022-02-18T10:11:34.000000Z",
-                                  "updated_at": "2022-02-18T10:11:34.000000Z",
-                                  "pivot": {
-                                      "model_id": 3,
-                                      "role_id": 2,
-                                      "model_type": "App\\Models\\User"
-                                  }
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z",
+                      "sous_categories": [
+                          {
+                              "id": 1,
+                              "nom": "Boutiques",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 2,
+                              "nom": "Brocante",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 3,
+                              "nom": "Supermarché",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 4,
+                              "nom": "Epicerie",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 5,
+                              "nom": "Blanchisseries et Pressings",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 6,
+                              "nom": "Centre Commercial",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 7,
+                              "nom": "Maison et Jardin",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 8,
+                              "nom": "Hifi, téléphonie",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 9,
+                              "nom": "Fleuriste",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 10,
+                              "nom": "Boulangerie, Pâtisserie",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 11,
+                              "nom": "Caviste",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 12,
+                              "nom": "Tabac",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 13,
+                              "nom": "Jouets et jeux",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 14,
+                              "nom": "Magasin de sport",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 15,
+                              "nom": "Ameublement et Mobilier",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 16,
+                              "nom": "Fournitures de Bureaux",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 17,
+                              "nom": "Mobilier de Bureaux",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 18,
+                              "nom": "Mobilier de Jardin",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 19,
+                              "nom": "Vêtements",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 20,
+                              "nom": "Chaussures",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 21,
+                              "nom": "Bijoux et accessoires",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 22,
+                              "nom": "Puériculture",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 481,
+                              "nom": "Boutique +++",
+                              "idcategorie": 1,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T12:41:25.000000Z",
+                              "updated_at": "2022-02-25T12:43:14.000000Z"
+                          }
+                      ],
+                      "commodites": []
+                  },
+                  {
+                      "id": 2,
+                      "nom": "Administrations",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z",
+                      "sous_categories": [
+                          {
+                              "id": 23,
+                              "nom": "Administrations",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 24,
+                              "nom": "Ambassades et Consulats",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 25,
+                              "nom": "Associations, syndicats",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 26,
+                              "nom": "Douane, Agences",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 27,
+                              "nom": "Minisères",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 28,
+                              "nom": "O.N.G & Organisations Internationales",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 29,
+                              "nom": "Offices Nationaux",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 30,
+                              "nom": "Poste",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 31,
+                              "nom": "Sécurité Sociale",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 32,
+                              "nom": "Institution publique",
+                              "idcategorie": 2,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          }
+                      ],
+                      "commodites": [
+                          {
+                              "id": 16,
+                              "nom": "Wifi",
+                              "idTypeCommodite": 1,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T14:48:03.000000Z",
+                              "updated_at": "2022-02-25T14:48:03.000000Z",
+                              "pivot": {
+                                  "idCategorie": 2,
+                                  "idCommodite": 16
                               }
-                          ]
-                      }
+                          }
+                      ]
+                  },
+                  {
+                      "id": 3,
+                      "nom": "Agriculture",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z",
+                      "sous_categories": [
+                          {
+                              "id": 33,
+                              "nom": "Matériels et Produits agricoles",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 34,
+                              "nom": "Agricole, Produits Chimiques",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 35,
+                              "nom": "Agriculture",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 36,
+                              "nom": "Equipements et Matériel agricoles",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 37,
+                              "nom": "Agro-Alimentaire",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 38,
+                              "nom": "Agro-Industrie",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 39,
+                              "nom": "Elevage",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 40,
+                              "nom": "Elevage - Consultants",
+                              "idcategorie": 3,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          }
+                      ],
+                      "commodites": [
+                          {
+                              "id": 19,
+                              "nom": "Wifi",
+                              "idTypeCommodite": 1,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T14:53:31.000000Z",
+                              "updated_at": "2022-02-25T14:53:31.000000Z",
+                              "pivot": {
+                                  "idCategorie": 3,
+                                  "idCommodite": 19
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "id": 4,
+                      "nom": "Alimentation",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z",
+                      "sous_categories": [
+                          {
+                              "id": 41,
+                              "nom": "Abattoirs et Viande en Gros",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 42,
+                              "nom": "Alcools, vins, spiritueux, drogueries",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 43,
+                              "nom": "Alimentaire, Distributeurs et Grossistes",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 44,
+                              "nom": "Industries alimentaires",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 45,
+                              "nom": "Produits alimentaires",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 46,
+                              "nom": "Alimentation Animale",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 47,
+                              "nom": "Alimentation Générale",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 48,
+                              "nom": "Boissons",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 49,
+                              "nom": "Boucherie - charcuterie",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 50,
+                              "nom": "Boulangeries, Patisseries, Glaces",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 51,
+                              "nom": "Boulangeries, Patisseries, Glaces - matériel & équipement",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 52,
+                              "nom": "Brasseries",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 53,
+                              "nom": "Brasseries - matériel & équipement",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 54,
+                              "nom": "Cacao - Production et Exportation",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 55,
+                              "nom": "Café - Production et Exportation",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 56,
+                              "nom": "Catering",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 57,
+                              "nom": "Distilleries",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 58,
+                              "nom": "Environnement",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 59,
+                              "nom": "Gomme Arabique",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 60,
+                              "nom": "Lait, Yaourt et Fromage",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 61,
+                              "nom": "Laiteries",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 62,
+                              "nom": "Minoteries",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 63,
+                              "nom": "Pêche - Commercialisation et Exportation",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 64,
+                              "nom": "Pêche - Congelation",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 65,
+                              "nom": "Sucre, Fabrication et Raffinage",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 66,
+                              "nom": "Supermarchés",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 67,
+                              "nom": "Thé - Production et Commercialisation",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          },
+                          {
+                              "id": 68,
+                              "nom": "Traiteurs",
+                              "idcategorie": 4,
+                              "logourl": null,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T11:35:34.000000Z",
+                              "updated_at": "2022-02-25T11:35:34.000000Z"
+                          }
+                      ],
+                      "commodites": [
+                          {
+                              "id": 19,
+                              "nom": "Wifi",
+                              "idTypeCommodite": 1,
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T14:53:31.000000Z",
+                              "updated_at": "2022-02-25T14:53:31.000000Z",
+                              "pivot": {
+                                  "idCategorie": 4,
+                                  "idCommodite": 19
+                              },
+                              "type_commodite": {
+                                  "id": 1,
+                                  "nom": "Luxe ++",
+                                  "deleted_at": null,
+                                  "created_at": "2022-02-25T14:02:08.000000Z",
+                                  "updated_at": "2022-02-25T14:04:49.000000Z"
+                              }
+                          }
+                      ]
                   }
               ],
-              "message": "Liste des Commerciaux"
+              "message": "Liste des Categories"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/categories/{id}'
+    metadata:
+      title: 'Show Category by id.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the category.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "data": {
+                  "id": 4,
+                  "nom": "Alimentation",
+                  "logourl": null,
+                  "deleted_at": null,
+                  "created_at": "2022-02-25T11:35:29.000000Z",
+                  "updated_at": "2022-02-25T11:35:29.000000Z",
+                  "sous_categories": [
+                      {
+                          "id": 41,
+                          "nom": "Abattoirs et Viande en Gros",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 42,
+                          "nom": "Alcools, vins, spiritueux, drogueries",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 43,
+                          "nom": "Alimentaire, Distributeurs et Grossistes",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 44,
+                          "nom": "Industries alimentaires",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 45,
+                          "nom": "Produits alimentaires",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 46,
+                          "nom": "Alimentation Animale",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 47,
+                          "nom": "Alimentation Générale",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 48,
+                          "nom": "Boissons",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 49,
+                          "nom": "Boucherie - charcuterie",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 50,
+                          "nom": "Boulangeries, Patisseries, Glaces",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 51,
+                          "nom": "Boulangeries, Patisseries, Glaces - matériel & équipement",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 52,
+                          "nom": "Brasseries",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 53,
+                          "nom": "Brasseries - matériel & équipement",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 54,
+                          "nom": "Cacao - Production et Exportation",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 55,
+                          "nom": "Café - Production et Exportation",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 56,
+                          "nom": "Catering",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 57,
+                          "nom": "Distilleries",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 58,
+                          "nom": "Environnement",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 59,
+                          "nom": "Gomme Arabique",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 60,
+                          "nom": "Lait, Yaourt et Fromage",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 61,
+                          "nom": "Laiteries",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 62,
+                          "nom": "Minoteries",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 63,
+                          "nom": "Pêche - Commercialisation et Exportation",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 64,
+                          "nom": "Pêche - Congelation",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 65,
+                          "nom": "Sucre, Fabrication et Raffinage",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 66,
+                          "nom": "Supermarchés",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 67,
+                          "nom": "Thé - Production et Commercialisation",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      },
+                      {
+                          "id": 68,
+                          "nom": "Traiteurs",
+                          "idcategorie": 4,
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:34.000000Z",
+                          "updated_at": "2022-02-25T11:35:34.000000Z"
+                      }
+                  ],
+                  "commodites": [
+                      {
+                          "id": 19,
+                          "nom": "Wifi",
+                          "idTypeCommodite": 1,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T14:53:31.000000Z",
+                          "updated_at": "2022-02-25T14:53:31.000000Z",
+                          "pivot": {
+                              "idCategorie": 4,
+                              "idCommodite": 19
+                          },
+                          "type_commodite": {
+                              "id": 1,
+                              "nom": "Luxe ++",
+                              "deleted_at": null,
+                              "created_at": "2022-02-25T14:02:08.000000Z",
+                              "updated_at": "2022-02-25T14:04:49.000000Z"
+                          }
+                      }
+                  ]
+              },
+              "message": "Categorie"
           }
         headers: []
         description: '200'
@@ -157,9 +1063,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/commercials
+    uri: api/categories
     metadata:
-      title: 'Add a new Commercial.'
+      title: 'Add a new Category.'
       description: ''
       authenticated: true
       custom: []
@@ -171,103 +1077,19 @@ endpoints:
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'the name of the commercial.'
+      nom:
+        name: nom
+        description: 'the name of the category.'
         required: true
-        example: Gautier
+        example: Achat
         type: string
-        custom: []
-      email:
-        name: email
-        description: 'the email of the commercial.'
-        required: true
-        example: gautier@position.cm
-        type: string
-        custom: []
-      phone:
-        name: phone
-        description: 'The phone number of the commercial.'
-        required: true
-        example: 699999999
-        type: integer
         custom: []
       file:
         name: file
-        description: 'Profile Image.'
-        required: false
+        description: 'the picture of the category'
+        required: true
         example: null
         type: file
-        custom: []
-      numeroCni:
-        name: numeroCni
-        description: required.
-        required: false
-        example: 1256987
-        type: integer
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: required.
-        required: false
-        example: 1234568
-        type: integer
-        custom: []
-      ville:
-        name: ville
-        description: required.
-        required: false
-        example: Douala
-        type: string
-        custom: []
-      quartier:
-        name: quartier
-        description: required.
-        required: false
-        example: Melen
-        type: string
-        custom: []
-      sexe:
-        name: sexe
-        description: required.
-        required: false
-        example: Masculin
-        type: string
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: required.
-        required: false
-        example: 699999999
-        type: integer
-        custom: []
-      diplome:
-        name: diplome
-        description: required.
-        required: false
-        example: BAC
-        type: string
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: required.
-        required: false
-        example: XXL
-        type: string
-        custom: []
-      age:
-        name: age
-        description: required.
-        required: false
-        example: 25
-        type: integer
-        custom: []
-      password:
-        name: password
-        description: 'the password of the commercial.'
-        required: true
-        example: gautier123
-        type: string
         custom: []
     responses:
       -
@@ -276,47 +1098,14 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "numeroCni": "1256987",
-                  "numeroBadge": "1325",
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "sexe": "Masculin",
-                  "whatsapp": "699999999",
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": "25",
-                  "idUser": 3,
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "created_at": "2022-02-19T11:25:11.000000Z",
                   "id": 1,
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
+                  "nom": "Achats",
+                  "logourl": null,
+                  "deleted_at": null,
+                  "created_at": "2022-02-25T11:09:21.000000Z",
+                  "updated_at": "2022-02-25T11:09:21.000000Z"
               },
-              "message": "Création du commercial reussie"
+              "message": "Création de la catégorie reussie"
           }
         headers: []
         description: '200'
@@ -324,9 +1113,9 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/commercials/{id}'
+    uri: 'api/categories/{id}'
     metadata:
-      title: 'Update Commercial.'
+      title: 'Update Category.'
       description: ''
       authenticated: true
       custom: []
@@ -338,96 +1127,26 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the commercial.'
+        description: 'the id of the category.'
         required: true
         example: 2
         type: integer
         custom: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'the name of the commercial.'
+      nom:
+        name: nom
+        description: 'the name of the category.'
         required: false
-        example: Gautier
+        example: Achat
         type: string
-        custom: []
-      phone:
-        name: phone
-        description: 'The phone number of the commercial.'
-        required: false
-        example: 699999999
-        type: integer
         custom: []
       file:
         name: file
-        description: 'Profile Image.'
+        description: 'the picture of the category'
         required: false
         example: null
         type: file
-        custom: []
-      numeroCni:
-        name: numeroCni
-        description: ''
-        required: false
-        example: '1256987'
-        type: int.
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: ''
-        required: false
-        example: '1234568'
-        type: int.
-        custom: []
-      ville:
-        name: ville
-        description: ''
-        required: false
-        example: Douala
-        type: string.
-        custom: []
-      quartier:
-        name: quartier
-        description: ''
-        required: false
-        example: Melen
-        type: string.
-        custom: []
-      sexe:
-        name: sexe
-        description: ''
-        required: false
-        example: Masculin
-        type: string.
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: ''
-        required: false
-        example: '699999999'
-        type: int.
-        custom: []
-      diplome:
-        name: diplome
-        description: ''
-        required: false
-        example: BAC
-        type: string.
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: ''
-        required: false
-        example: XXL
-        type: string.
-        custom: []
-      age:
-        name: age
-        description: ''
-        required: false
-        example: '25'
-        type: int.
         custom: []
       _method:
         name: _method
@@ -444,46 +1163,11 @@ endpoints:
               "success": true,
               "data": {
                   "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
+                  "nom": "Achats +",
+                  "logourl": null,
                   "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier 2000",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T19:10:29.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
+                  "created_at": "2022-02-25T11:09:21.000000Z",
+                  "updated_at": "2022-02-25T11:09:21.000000Z"
               },
               "message": "Update Success"
           }
@@ -493,9 +1177,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/commercials/{id}'
+    uri: 'api/categories/{id}'
     metadata:
-      title: 'Delete commercial account.'
+      title: 'Delete Category.'
       description: ''
       authenticated: true
       custom: []
@@ -507,7 +1191,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the commercial.'
+        description: 'the id of the category.'
         required: true
         example: 2
         type: integer

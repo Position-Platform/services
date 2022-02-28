@@ -1,18 +1,97 @@
-name: 'Commodites management'
+name: 'Commerciaux management'
 description: |-
 
-  APIs for managing Commodite
+  APIs for managing Commerciaux
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/commodites
+    uri: 'api/commercials/{id}'
     metadata:
-      title: 'Get all Commodites.'
+      title: 'Show Commercial by id.'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the commercial.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "data": {
+                  "id": 1,
+                  "idUser": 3,
+                  "numeroCni": 1256987,
+                  "numeroBadge": 1325,
+                  "ville": "Douala",
+                  "quartier": "Melen",
+                  "actif": true,
+                  "sexe": "Masculin",
+                  "whatsapp": 699999999,
+                  "diplome": "BAC",
+                  "tailleTshirt": "XXL",
+                  "age": 25,
+                  "deleted_at": null,
+                  "created_at": "2022-02-19T11:25:11.000000Z",
+                  "updated_at": "2022-02-19T11:25:11.000000Z",
+                  "user": {
+                      "id": 3,
+                      "name": "Gautier",
+                      "email": "bt@geo.sm",
+                      "email_verified_at": null,
+                      "phone": "699999998",
+                      "fcmToken": null,
+                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
+                      "deleted_at": null,
+                      "created_at": "2022-02-19T11:25:06.000000Z",
+                      "updated_at": "2022-02-19T11:25:06.000000Z",
+                      "roles": [
+                          {
+                              "id": 2,
+                              "name": "commercial",
+                              "guard_name": "api",
+                              "created_at": "2022-02-18T10:11:34.000000Z",
+                              "updated_at": "2022-02-18T10:11:34.000000Z",
+                              "pivot": {
+                                  "model_id": 3,
+                                  "role_id": 2,
+                                  "model_type": "App\\Models\\User"
+                              }
+                          }
+                      ]
+                  }
+              },
+              "message": "Commercial"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/commercials
+    metadata:
+      title: 'Get all Commerciaux.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
@@ -27,140 +106,50 @@ endpoints:
               "success": true,
               "data": [
                   {
-                      "id": 16,
-                      "nom": "Wifi",
-                      "idTypeCommodite": 1,
+                      "id": 1,
+                      "idUser": 3,
+                      "numeroCni": 1256987,
+                      "numeroBadge": 1325,
+                      "ville": "Douala",
+                      "quartier": "Melen",
+                      "actif": true,
+                      "sexe": "Masculin",
+                      "whatsapp": 699999999,
+                      "diplome": "BAC",
+                      "tailleTshirt": "XXL",
+                      "age": 25,
                       "deleted_at": null,
-                      "created_at": "2022-02-25T14:48:03.000000Z",
-                      "updated_at": "2022-02-25T14:48:03.000000Z",
-                      "type_commodite": {
-                          "id": 1,
-                          "nom": "Luxe ++",
+                      "created_at": "2022-02-19T11:25:11.000000Z",
+                      "updated_at": "2022-02-19T11:25:11.000000Z",
+                      "user": {
+                          "id": 3,
+                          "name": "Gautier",
+                          "email": "bt@geo.sm",
+                          "email_verified_at": null,
+                          "phone": "699999998",
+                          "fcmToken": null,
+                          "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
                           "deleted_at": null,
-                          "created_at": "2022-02-25T14:02:08.000000Z",
-                          "updated_at": "2022-02-25T14:04:49.000000Z"
-                      },
-                      "categories": [
-                          {
-                              "id": 2,
-                              "nom": "Administrations",
-                              "logourl": null,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T11:35:29.000000Z",
-                              "updated_at": "2022-02-25T11:35:29.000000Z",
-                              "pivot": {
-                                  "idCommodite": 16,
-                                  "idCategorie": 2
+                          "created_at": "2022-02-19T11:25:06.000000Z",
+                          "updated_at": "2022-02-19T11:25:06.000000Z",
+                          "roles": [
+                              {
+                                  "id": 2,
+                                  "name": "commercial",
+                                  "guard_name": "api",
+                                  "created_at": "2022-02-18T10:11:34.000000Z",
+                                  "updated_at": "2022-02-18T10:11:34.000000Z",
+                                  "pivot": {
+                                      "model_id": 3,
+                                      "role_id": 2,
+                                      "model_type": "App\\Models\\User"
+                                  }
                               }
-                          }
-                      ]
-                  },
-                  {
-                      "id": 19,
-                      "nom": "Wifi",
-                      "idTypeCommodite": 1,
-                      "deleted_at": null,
-                      "created_at": "2022-02-25T14:53:31.000000Z",
-                      "updated_at": "2022-02-25T14:53:31.000000Z",
-                      "type_commodite": {
-                          "id": 1,
-                          "nom": "Luxe ++",
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:02:08.000000Z",
-                          "updated_at": "2022-02-25T14:04:49.000000Z"
-                      },
-                      "categories": [
-                          {
-                              "id": 3,
-                              "nom": "Agriculture",
-                              "logourl": null,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T11:35:29.000000Z",
-                              "updated_at": "2022-02-25T11:35:29.000000Z",
-                              "pivot": {
-                                  "idCommodite": 19,
-                                  "idCategorie": 3
-                              }
-                          },
-                          {
-                              "id": 4,
-                              "nom": "Alimentation",
-                              "logourl": null,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T11:35:29.000000Z",
-                              "updated_at": "2022-02-25T11:35:29.000000Z",
-                              "pivot": {
-                                  "idCommodite": 19,
-                                  "idCategorie": 4
-                              }
-                          }
-                      ]
+                          ]
+                      }
                   }
               ],
-              "message": "Liste des Commodites"
-          }
-        headers: []
-        description: '200'
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/commodites/{id}'
-    metadata:
-      title: 'Show Commodite by id.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-      X-Authorization: apiKey
-    urlParameters:
-      id:
-        name: id
-        description: 'the id commodite.'
-        required: true
-        example: 2
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: |
-          {
-              "success": true,
-              "data": {
-                  "id": 16,
-                  "nom": "Wifi",
-                  "idTypeCommodite": 1,
-                  "deleted_at": null,
-                  "created_at": "2022-02-25T14:48:03.000000Z",
-                  "updated_at": "2022-02-25T14:48:03.000000Z",
-                  "type_commodite": {
-                      "id": 1,
-                      "nom": "Luxe ++",
-                      "deleted_at": null,
-                      "created_at": "2022-02-25T14:02:08.000000Z",
-                      "updated_at": "2022-02-25T14:04:49.000000Z"
-                  },
-                  "categories": [
-                      {
-                          "id": 2,
-                          "nom": "Administrations",
-                          "logourl": null,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T11:35:29.000000Z",
-                          "updated_at": "2022-02-25T11:35:29.000000Z",
-                          "pivot": {
-                              "idCommodite": 16,
-                              "idCategorie": 2
-                          }
-                      }
-                  ]
-              },
-              "message": "Commodite"
+              "message": "Liste des Commerciaux"
           }
         headers: []
         description: '200'
@@ -168,33 +157,117 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/commodites
+    uri: api/commercials
     metadata:
-      title: 'Add a new Commodite.'
+      title: 'Add a new Commercial.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      nom:
-        name: nom
-        description: 'the name commodite.'
+      name:
+        name: name
+        description: 'the name of the commercial.'
         required: true
-        example: Achat
+        example: Gautier
         type: string
         custom: []
-      idTypeCommodite:
-        name: idTypeCommodite
-        description: 'the id TypeCommodite.'
+      email:
+        name: email
+        description: 'the email of the commercial.'
         required: true
-        example: 5
+        example: gautier@position.cm
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: 'The phone number of the commercial.'
+        required: true
+        example: 699999999
         type: integer
+        custom: []
+      file:
+        name: file
+        description: 'Profile Image.'
+        required: false
+        example: null
+        type: file
+        custom: []
+      numeroCni:
+        name: numeroCni
+        description: required.
+        required: false
+        example: 1256987
+        type: integer
+        custom: []
+      numeroBadge:
+        name: numeroBadge
+        description: required.
+        required: false
+        example: 1234568
+        type: integer
+        custom: []
+      ville:
+        name: ville
+        description: required.
+        required: false
+        example: Douala
+        type: string
+        custom: []
+      quartier:
+        name: quartier
+        description: required.
+        required: false
+        example: Melen
+        type: string
+        custom: []
+      sexe:
+        name: sexe
+        description: required.
+        required: false
+        example: Masculin
+        type: string
+        custom: []
+      whatsapp:
+        name: whatsapp
+        description: required.
+        required: false
+        example: 699999999
+        type: integer
+        custom: []
+      diplome:
+        name: diplome
+        description: required.
+        required: false
+        example: BAC
+        type: string
+        custom: []
+      tailleTshirt:
+        name: tailleTshirt
+        description: required.
+        required: false
+        example: XXL
+        type: string
+        custom: []
+      age:
+        name: age
+        description: required.
+        required: false
+        example: 25
+        type: integer
+        custom: []
+      password:
+        name: password
+        description: 'the password of the commercial.'
+        required: true
+        example: gautier123
+        type: string
         custom: []
     responses:
       -
@@ -203,20 +276,47 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "nom": "Piscine",
-                  "idTypeCommodite": 1,
-                  "updated_at": "2022-02-25T15:37:37.000000Z",
-                  "created_at": "2022-02-25T15:37:37.000000Z",
-                  "id": 20,
-                  "type_commodite": {
-                      "id": 1,
-                      "nom": "Luxe ++",
+                  "numeroCni": "1256987",
+                  "numeroBadge": "1325",
+                  "ville": "Douala",
+                  "quartier": "Melen",
+                  "sexe": "Masculin",
+                  "whatsapp": "699999999",
+                  "diplome": "BAC",
+                  "tailleTshirt": "XXL",
+                  "age": "25",
+                  "idUser": 3,
+                  "updated_at": "2022-02-19T11:25:11.000000Z",
+                  "created_at": "2022-02-19T11:25:11.000000Z",
+                  "id": 1,
+                  "user": {
+                      "id": 3,
+                      "name": "Gautier",
+                      "email": "bt@geo.sm",
+                      "email_verified_at": null,
+                      "phone": "699999998",
+                      "fcmToken": null,
+                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
                       "deleted_at": null,
-                      "created_at": "2022-02-25T14:02:08.000000Z",
-                      "updated_at": "2022-02-25T14:04:49.000000Z"
+                      "created_at": "2022-02-19T11:25:06.000000Z",
+                      "updated_at": "2022-02-19T11:25:06.000000Z",
+                      "roles": [
+                          {
+                              "id": 2,
+                              "name": "commercial",
+                              "guard_name": "api",
+                              "created_at": "2022-02-18T10:11:34.000000Z",
+                              "updated_at": "2022-02-18T10:11:34.000000Z",
+                              "pivot": {
+                                  "model_id": 3,
+                                  "role_id": 2,
+                                  "model_type": "App\\Models\\User"
+                              }
+                          }
+                      ]
                   }
               },
-              "message": "Création de la Commodité reussie"
+              "message": "Création du commercial reussie"
           }
         headers: []
         description: '200'
@@ -224,33 +324,110 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/commodites/{id}'
+    uri: 'api/commercials/{id}'
     metadata:
-      title: 'Update Commodite.'
+      title: 'Update Commercial.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters:
       id:
         name: id
-        description: 'the id commodite.'
+        description: 'the id of the commercial.'
         required: true
         example: 2
         type: integer
         custom: []
     queryParameters: []
     bodyParameters:
-      nom:
-        name: nom
-        description: 'the name commodite.'
+      name:
+        name: name
+        description: 'the name of the commercial.'
         required: false
-        example: Achat
+        example: Gautier
         type: string
+        custom: []
+      phone:
+        name: phone
+        description: 'The phone number of the commercial.'
+        required: false
+        example: 699999999
+        type: integer
+        custom: []
+      file:
+        name: file
+        description: 'Profile Image.'
+        required: false
+        example: null
+        type: file
+        custom: []
+      numeroCni:
+        name: numeroCni
+        description: ''
+        required: false
+        example: '1256987'
+        type: int.
+        custom: []
+      numeroBadge:
+        name: numeroBadge
+        description: ''
+        required: false
+        example: '1234568'
+        type: int.
+        custom: []
+      ville:
+        name: ville
+        description: ''
+        required: false
+        example: Douala
+        type: string.
+        custom: []
+      quartier:
+        name: quartier
+        description: ''
+        required: false
+        example: Melen
+        type: string.
+        custom: []
+      sexe:
+        name: sexe
+        description: ''
+        required: false
+        example: Masculin
+        type: string.
+        custom: []
+      whatsapp:
+        name: whatsapp
+        description: ''
+        required: false
+        example: '699999999'
+        type: int.
+        custom: []
+      diplome:
+        name: diplome
+        description: ''
+        required: false
+        example: BAC
+        type: string.
+        custom: []
+      tailleTshirt:
+        name: tailleTshirt
+        description: ''
+        required: false
+        example: XXL
+        type: string.
+        custom: []
+      age:
+        name: age
+        description: ''
+        required: false
+        example: '25'
+        type: int.
         custom: []
       _method:
         name: _method
@@ -266,33 +443,47 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 16,
-                  "nom": "Wifi ++",
-                  "idTypeCommodite": 1,
+                  "id": 1,
+                  "idUser": 3,
+                  "numeroCni": 1256987,
+                  "numeroBadge": 1325,
+                  "ville": "Douala",
+                  "quartier": "Melen",
+                  "actif": true,
+                  "sexe": "Masculin",
+                  "whatsapp": 699999999,
+                  "diplome": "BAC",
+                  "tailleTshirt": "XXL",
+                  "age": 25,
                   "deleted_at": null,
-                  "created_at": "2022-02-25T14:48:03.000000Z",
-                  "updated_at": "2022-02-25T15:24:26.000000Z",
-                  "type_commodite": {
-                      "id": 1,
-                      "nom": "Luxe ++",
+                  "created_at": "2022-02-19T11:25:11.000000Z",
+                  "updated_at": "2022-02-19T11:25:11.000000Z",
+                  "user": {
+                      "id": 3,
+                      "name": "Gautier 2000",
+                      "email": "bt@geo.sm",
+                      "email_verified_at": null,
+                      "phone": "699999998",
+                      "fcmToken": null,
+                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
                       "deleted_at": null,
-                      "created_at": "2022-02-25T14:02:08.000000Z",
-                      "updated_at": "2022-02-25T14:04:49.000000Z"
-                  },
-                  "categories": [
-                      {
-                          "id": 2,
-                          "nom": "Administrations",
-                          "logourl": null,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T11:35:29.000000Z",
-                          "updated_at": "2022-02-25T11:35:29.000000Z",
-                          "pivot": {
-                              "idCommodite": 16,
-                              "idCategorie": 2
+                      "created_at": "2022-02-19T11:25:06.000000Z",
+                      "updated_at": "2022-02-19T19:10:29.000000Z",
+                      "roles": [
+                          {
+                              "id": 2,
+                              "name": "commercial",
+                              "guard_name": "api",
+                              "created_at": "2022-02-18T10:11:34.000000Z",
+                              "updated_at": "2022-02-18T10:11:34.000000Z",
+                              "pivot": {
+                                  "model_id": 3,
+                                  "role_id": 2,
+                                  "model_type": "App\\Models\\User"
+                              }
                           }
-                      }
-                  ]
+                      ]
+                  }
               },
               "message": "Update Success"
           }
@@ -302,9 +493,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/commodites/{id}'
+    uri: 'api/commercials/{id}'
     metadata:
-      title: 'Delete Commodite.'
+      title: 'Delete commercial account.'
       description: ''
       authenticated: true
       custom: []
@@ -316,7 +507,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id commodite.'
+        description: 'the id of the commercial.'
         required: true
         example: 2
         type: integer

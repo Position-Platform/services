@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\SousCategorie
@@ -34,10 +35,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string|null $logourl
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategorie whereLogourl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategorie whereIdcategorie($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
  */
 class SousCategorie extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
 
     protected $fillable = [
@@ -47,5 +50,10 @@ class SousCategorie extends Model
     public function categorie()
     {
         return $this->belongsTo(Categorie::class, "idcategorie");
+    }
+
+    public function etablissements()
+    {
+        return $this->belongsToMany(Etablissement::class, "sous_categories_etablissements", "idSousCategorie", "idEtablissement");
     }
 }

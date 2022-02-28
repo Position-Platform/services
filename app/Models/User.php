@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
 
 /**
@@ -61,10 +62,14 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
  * @property-read \App\Models\Commercial|null $commercial
  * @property-read \App\Models\Manager|null $manager
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Commentaire[] $commentaires
+ * @property-read int|null $commentaires_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tracking[] $trackings
+ * @property-read int|null $trackings_count
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes, Searchable;
 
     protected $guard_name = 'api';
 
@@ -140,5 +145,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function manager()
     {
         return $this->hasOne(Manager::class, 'idUser');
+    }
+
+    public function commentaires()
+    {
+        return $this->hasMany(Commentaire::class, "idUser");
+    }
+
+    public function trackings()
+    {
+        return $this->hasMany(Tracking::class, 'idUser');
     }
 }
