@@ -53,7 +53,7 @@ class SendParams extends Notification
 
         return (new VonageMessage)
             ->clientReference((string) $notifiable->id)
-            ->content("Vos Paramètres de connexion à votre compte sont les suivants : \n Phone : $phone \n Password : $password \n \n");
+            ->content("Vos Paramètres de connexion à votre compte sont les suivants : \nPhone : $phone \nPassword : $password \n \nSuivez le lien ci-dessous pour activer votre compte: \n \n " . env("APP_URL") . "/api/auth/phone/verify/" . $notifiable->id);
     }
 
 
