@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('batiments', function (Blueprint $table) {
             $table->id();
+            $table->integer("idCommercial");
             $table->string("nom")->nullable();
             $table->string("nombreNiveau");
             $table->string("codeBatiment");

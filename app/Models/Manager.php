@@ -33,6 +33,8 @@ use Laravel\Scout\Searchable;
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
  * @property-read int|null $paiements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
  */
 class Manager extends Model
 {
@@ -61,5 +63,10 @@ class Manager extends Model
     public function paiements()
     {
         return $this->hasMany(Paiement::class, "idManager");
+    }
+
+    public function etablissements()
+    {
+        return $this->hasMany(Etablissement::class, "idManager");
     }
 }

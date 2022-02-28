@@ -49,6 +49,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'show']);
 
 
+
+
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
             Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
@@ -62,6 +64,9 @@ Route::middleware('auth.apikey')->group(
             Route::get('managers', [App\Http\Controllers\Api\ManagerController::class, 'index']);
             Route::put('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'update']);
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
+
+
+            Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
 
 
             Route::group(['middleware' => ['role:admin']], function () {

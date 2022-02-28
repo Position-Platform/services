@@ -78,6 +78,8 @@ use Laravel\Scout\Searchable;
  * @property-read int|null $commodites_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\SousCategorie[] $sousCategories
  * @property-read int|null $sous_categories_count
+ * @property-read \App\Models\Commercial|null $commercial
+ * @property-read \App\Models\Manager|null $manager
  */
 class Etablissement extends Model
 {
@@ -115,5 +117,15 @@ class Etablissement extends Model
     public function commodites()
     {
         return $this->belongsToMany(Commodite::class, "commodites_etablissements",  "idEtablissement", "idCommodite");
+    }
+
+    public function commercial()
+    {
+        return $this->belongsTo(Commercial::class, "idCommercial");
+    }
+
+    public function manager()
+    {
+        return $this->belongsTo(Manager::class, "idManager");
     }
 }

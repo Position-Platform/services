@@ -49,17 +49,25 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Query\Builder|Batiment withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Batiment withoutTrashed()
  * @mixin \Eloquent
+ * @property int $idCommercial
+ * @property-read \App\Models\Commercial|null $commercial
+ * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereIdCommercial($value)
  */
 class Batiment extends Model
 {
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
+        "idCommercial", "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
     ];
 
     public function etablissements()
     {
         return $this->hasMany(Etablissement::class, "idBatiment");
+    }
+
+    public function commercial()
+    {
+        return $this->belongsTo(Commercial::class, "idCommercial");
     }
 }

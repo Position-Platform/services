@@ -50,6 +50,10 @@ use Laravel\Scout\Searchable;
  * @property-read \App\Models\User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
  * @property-read int|null $paiements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
+ * @property-read int|null $batiments_count
  */
 class Commercial extends Model
 {
@@ -76,5 +80,15 @@ class Commercial extends Model
     public function paiements()
     {
         return $this->hasMany(Paiement::class, "idCommercial");
+    }
+
+    public function etablissements()
+    {
+        return $this->hasMany(Etablissement::class, "idCommercial");
+    }
+
+    public function batiments()
+    {
+        return $this->hasMany(Batiment::class, "idCommercial");
     }
 }
