@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\Commodite
@@ -33,10 +34,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Categorie[] $categories
  * @property-read int|null $categories_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
  */
 class Commodite extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
         "nom", "idTypeCommodite"
@@ -50,5 +53,10 @@ class Commodite extends Model
     public function categories()
     {
         return $this->belongsToMany(Categorie::class, "commodites_categories",  "idCommodite", "idCategorie");
+    }
+
+    public function etablissements()
+    {
+        return $this->belongsToMany(Etablissement::class, "commodites_etablissements", "idCommodite", "idEtablissement");
     }
 }

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 /**
  * App\Models\Abonnement
@@ -34,10 +35,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|Abonnement withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Abonnement withoutTrashed()
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
+ * @property-read int|null $paiements_count
  */
 class Abonnement extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -52,5 +55,10 @@ class Abonnement extends Model
     public function managers()
     {
         return $this->hasMany(Abonnement::class, "idAbonnement");
+    }
+
+    public function paiements()
+    {
+        return $this->hasMany(Paiement::class, "idAbonnement");
     }
 }

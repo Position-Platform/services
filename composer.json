@@ -12,11 +12,14 @@
         "ejarnutowski/laravel-api-key": "^1.0",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.4",
+        "http-interop/http-factory-guzzle": "^1.2",
         "laravel/framework": "^9.0",
         "laravel/passport": "^10.3",
         "laravel/sanctum": "^2.14",
+        "laravel/scout": "^9.4",
         "laravel/tinker": "^2.7",
         "laravel/vonage-notification-channel": "^3.0",
+        "meilisearch/meilisearch-php": "^0.22.0",
         "spatie/laravel-permission": "^5.5"
     },
     "require-dev": {
