@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "position/services",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Position Services",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "position"
     ],
     "license": "MIT",
     "require": {
