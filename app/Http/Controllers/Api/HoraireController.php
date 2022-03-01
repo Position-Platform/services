@@ -2,9 +2,21 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Admin;
+use App\Models\Commercial;
+use App\Models\Etablissement;
 use App\Models\Horaire;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
+/**
+ *
+ * @group Schedule management
+ *
+ * APIs for managing Schedule
+ */
 class HoraireController extends BaseController
 {
     /**
@@ -18,14 +30,53 @@ class HoraireController extends BaseController
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Add a new schedule.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @authenticated
+     * @header Content-Type application/json
+     * @bodyParam jour string required  the name of the day. Example: Lundi
+     * @bodyParam idEtablissement int required the id of the Establishment. Example: 2
+     * @bodyParam plageHoraire string required time slot. Example: 10:00-15:00;16:00-18:00
+     * @responseFile storage/responses/addhoraire.json
      */
     public function store(Request $request)
     {
-        //
+        $user = Auth::user();
+        $admin = Admin::where('idUser', $user->id)->first();
+        $commercial = Commercial::where('idUser', $user->id)->first();
+
+        $validator =  Validator::make($request->all(), [
+            'idEtablissement' => 'required',
+            'jour' => 'required',
+            'plageHoraire' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
+        }
+
+        $input['jour'] = $request->jour;
+        $input['plageHoraire'] = $request->plageHoraire;
+
+        if ($admin || $commercial) {
+            try {
+
+
+                DB::beginTransaction();
+
+                $etablissement = Etablissement::find($request->idEtablissement);
+
+                $horaire = $etablissement->horaires()->create($input);
+
+
+                DB::commit();
+
+                return $this->sendResponse($horaire, "Création de l'horaire reussie", 201);
+            } catch (\Exception $ex) {
+                DB::rollBack();
+                return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
+            }
+        }
     }
 
     /**
@@ -39,26 +90,72 @@ class HoraireController extends BaseController
         //
     }
 
+
     /**
-     * Update the specified resource in storage.
+     * Update Schedule.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Horaire  $horaire
-     * @return \Illuminate\Http\Response
+     * @authenticated
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the Schedule. Example: 2
+     * @bodyParam plageHoraire string  time slot. Example: 10:00-15:00;16:00-18:00
+     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @responseFile 201 storage/responses/updateetablissement.json
      */
-    public function update(Request $request, Horaire $horaire)
+    public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user();
+        $horaire = Horaire::find($id);
+        $etablissement = Etablissement::find($horaire->idEtablissement);
+        $admin = Admin::where('idUser', $user->id)->first();
+        $commercial = Commercial::where('idUser', $user->id)->first();
+
+        if ($admin || $commercial->id == $etablissement->idCommercial) {
+            try {
+                DB::beginTransaction();
+
+
+                $horaire->plageHoraire = $request->plageHoraire ?? $horaire->plageHoraire;
+                $horaire->save();
+
+                DB::commit();
+
+                return $this->sendResponse($etablissement, "Update Success", 201);
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            }
+        }
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete Schedule.
      *
-     * @param  \App\Models\Horaire  $horaire
-     * @return \Illuminate\Http\Response
+     * @authenticated
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the Schedule. Example: 2
+     * @responseFile 201 storage/responses/delete.json
      */
-    public function destroy(Horaire $horaire)
+    public function destroy($id)
     {
-        //
+        $user = Auth::user();
+        $horaire = Horaire::find($id);
+        $etablissement = Etablissement::find($horaire->idEtablissement);
+        $admin = Admin::where('idUser', $user->id)->first();
+        $commercial = Commercial::where('idUser', $user->id)->first();
+
+        if ($admin || $commercial->id == $etablissement->idCommercial) {
+            try {
+                DB::beginTransaction();
+
+                Horaire::destroy($id);
+
+                DB::commit();
+
+                return $this->sendResponse("", "Delete Success", 201);
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+            }
+        }
     }
 }

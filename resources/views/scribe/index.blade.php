@@ -238,16 +238,6 @@
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-9" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
-                </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-auth-phone-verify--id-">
-                        <a href="#endpoints-GETapi-auth-phone-verify--id-">Verify Account</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-10" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="manager-management">
                     <a href="#manager-management">Manager management</a>
                 </li>
@@ -269,7 +259,39 @@
                     </li>
                                                     </ul>
                             </ul>
+                    <ul id="tocify-header-10" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="picture-management">
+                    <a href="#picture-management">Picture management</a>
+                </li>
+                                    <ul id="tocify-subheader-picture-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="picture-management-POSTapi-images">
+                        <a href="#picture-management-POSTapi-images">Add a new picture.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="picture-management-PUTapi-images--id-">
+                        <a href="#picture-management-PUTapi-images--id-">Update Picture.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="picture-management-DELETEapi-images--id-">
+                        <a href="#picture-management-DELETEapi-images--id-">Delete Picture.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
                     <ul id="tocify-header-11" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="schedule-management">
+                    <a href="#schedule-management">Schedule management</a>
+                </li>
+                                    <ul id="tocify-subheader-schedule-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="schedule-management-POSTapi-horaires">
+                        <a href="#schedule-management-POSTapi-horaires">Add a new schedule.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="schedule-management-PUTapi-horaires--id-">
+                        <a href="#schedule-management-PUTapi-horaires--id-">Update Schedule.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="schedule-management-DELETEapi-horaires--id-">
+                        <a href="#schedule-management-DELETEapi-horaires--id-">Delete Schedule.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-12" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="subcategory-management">
                     <a href="#subcategory-management">SubCategory management</a>
                 </li>
@@ -291,7 +313,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-12" class="tocify-header">
+                    <ul id="tocify-header-13" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="typecommodite-management">
                     <a href="#typecommodite-management">TypeCommodite management</a>
                 </li>
@@ -313,6 +335,28 @@
                     </li>
                                                     </ul>
                             </ul>
+                    <ul id="tocify-header-14" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="establishment-management">
+                    <a href="#establishment-management">establishment management</a>
+                </li>
+                                    <ul id="tocify-subheader-establishment-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="establishment-management-GETapi-etablissements">
+                        <a href="#establishment-management-GETapi-etablissements">Get all establishment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="establishment-management-POSTapi-etablissements">
+                        <a href="#establishment-management-POSTapi-etablissements">Add a new establishment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="establishment-management-PUTapi-etablissements--id-">
+                        <a href="#establishment-management-PUTapi-etablissements--id-">Update Establishment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="establishment-management-DELETEapi-etablissements--id-">
+                        <a href="#establishment-management-DELETEapi-etablissements--id-">Delete Establishment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="establishment-management-GETapi-etablissements--id-">
+                        <a href="#establishment-management-GETapi-etablissements--id-">Show Establishment by id.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
         
                         
             </div>
@@ -323,7 +367,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 28 2022</li>
+        <li>Last updated: March 1 2022</li>
     </ul>
 </div>
 
@@ -1534,7 +1578,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"in\",
+    \"token\": \"et\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1554,7 +1598,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "in",
+    "token": "et",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1578,7 +1622,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'in',
+            'token' =&gt; 'et',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1595,7 +1639,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "in",
+    "token": "et",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1678,7 +1722,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="in"
+               value="et"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1726,7 +1770,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6D98.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1783,7 +1827,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6D98.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp', 'r')
             ],
         ],
     ]
@@ -1798,7 +1842,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6D98.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2452,7 +2496,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E29.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2501,7 +2545,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E29.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp', 'r')
             ],
         ],
     ]
@@ -2516,7 +2560,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E29.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2909,7 +2953,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E5B.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2968,7 +3012,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E5B.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp', 'r')
             ],
         ],
     ]
@@ -2983,7 +3027,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E5B.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3346,7 +3390,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E6C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3405,7 +3449,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E6C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp', 'r')
             ],
         ],
     ]
@@ -3420,7 +3464,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E6C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3974,7 +4018,181 @@ response.json()</code></pre></div>
         </blockquote>
                 <pre>
 
-<code class="language-json"></code>
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;Sogefi&quot;,
+            &quot;nombreNiveau&quot;: &quot;3&quot;,
+            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+            &quot;longitude&quot;: &quot;13&quot;,
+            &quot;latitude&quot;: &quot;7&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+            &quot;indication&quot;: &quot;Rue de melen&quot;,
+            &quot;rue&quot;: &quot;Rue de Melen&quot;,
+            &quot;ville&quot;: &quot;Yaounde&quot;,
+            &quot;commune&quot;: &quot;Yaounde IV&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+            &quot;idCommercial&quot;: 6,
+            &quot;etablissements&quot;: [
+                {
+                    &quot;id&quot;: 6,
+                    &quot;nom&quot;: &quot;SOGEFI&quot;,
+                    &quot;idBatiment&quot;: &quot;2&quot;,
+                    &quot;indicationAdresse&quot;: null,
+                    &quot;codePostal&quot;: null,
+                    &quot;siteInternet&quot;: null,
+                    &quot;idCommercial&quot;: &quot;6&quot;,
+                    &quot;idManager&quot;: null,
+                    &quot;etage&quot;: &quot;2&quot;,
+                    &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+                    &quot;vues&quot;: &quot;0&quot;,
+                    &quot;phone&quot;: &quot;699999999&quot;,
+                    &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: null,
+                    &quot;osmId&quot;: null,
+                    &quot;updated&quot;: false,
+                    &quot;revoir&quot;: &quot;0&quot;,
+                    &quot;valide&quot;: &quot;0&quot;,
+                    &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;avis&quot;: 0,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+                    &quot;commercial&quot;: {
+                        &quot;id&quot;: 6,
+                        &quot;idUser&quot;: 14,
+                        &quot;numeroCni&quot;: 1256987,
+                        &quot;numeroBadge&quot;: 1325,
+                        &quot;ville&quot;: &quot;Douala&quot;,
+                        &quot;quartier&quot;: &quot;Melen&quot;,
+                        &quot;actif&quot;: true,
+                        &quot;sexe&quot;: &quot;Masculin&quot;,
+                        &quot;whatsapp&quot;: 696652988,
+                        &quot;diplome&quot;: &quot;BAC&quot;,
+                        &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                        &quot;age&quot;: 25,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 14,
+                            &quot;name&quot;: &quot;Gautier&quot;,
+                            &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                            &quot;phone&quot;: &quot;691201946&quot;,
+                            &quot;fcmToken&quot;: null,
+                            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                        }
+                    },
+                    &quot;manager&quot;: null,
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 5,
+                            &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                            &quot;idcategorie&quot;: 1,
+                            &quot;logourl&quot;: null,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                            &quot;pivot&quot;: {
+                                &quot;idEtablissement&quot;: 6,
+                                &quot;idSousCategorie&quot;: 5
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                            }
+                        },
+                        {
+                            &quot;id&quot;: 8,
+                            &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                            &quot;idcategorie&quot;: 1,
+                            &quot;logourl&quot;: null,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                            &quot;pivot&quot;: {
+                                &quot;idEtablissement&quot;: 6,
+                                &quot;idSousCategorie&quot;: 8
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                            }
+                        }
+                    ],
+                    &quot;commodites&quot;: [
+                        {
+                            &quot;id&quot;: 16,
+                            &quot;nom&quot;: &quot;Wifi ++&quot;,
+                            &quot;idTypeCommodite&quot;: 1,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                            &quot;pivot&quot;: {
+                                &quot;idEtablissement&quot;: 6,
+                                &quot;idCommodite&quot;: 16
+                            }
+                        },
+                        {
+                            &quot;id&quot;: 20,
+                            &quot;nom&quot;: &quot;Piscine&quot;,
+                            &quot;idTypeCommodite&quot;: 1,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                            &quot;pivot&quot;: {
+                                &quot;idEtablissement&quot;: 6,
+                                &quot;idCommodite&quot;: 20
+                            }
+                        }
+                    ],
+                    &quot;horaires&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;jour&quot;: &quot;Lundi&quot;,
+                            &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
+                        }
+                    ],
+                    &quot;images&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
+                        }
+                    ],
+                    &quot;commentaires&quot;: []
+                }
+            ]
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Batiments&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-batiments" hidden>
@@ -4047,16 +4265,16 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nombreNiveau=3" \
     --form "codeBatiment=BATIMENT_MELEN_0569" \
-    --form "longitude=qui" \
-    --form "latitude=neque" \
+    --form "longitude=dolore" \
+    --form "latitude=voluptas" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
-    --form "nom=Sogefi" \
     --form "idCommercial=2" \
+    --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E08.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C88.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4074,13 +4292,13 @@ const headers = {
 const body = new FormData();
 body.append('nombreNiveau', '3');
 body.append('codeBatiment', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'qui');
-body.append('latitude', 'neque');
+body.append('longitude', 'dolore');
+body.append('latitude', 'voluptas');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
-body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
+body.append('nom', 'Sogefi');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('file', document.querySelector('input[name="file"]').files[0]);
@@ -4114,11 +4332,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'qui'
+                'contents' =&gt; 'dolore'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'neque'
+                'contents' =&gt; 'voluptas'
             ],
             [
                 'name' =&gt; 'ville',
@@ -4133,12 +4351,12 @@ $response = $client-&gt;post(
                 'contents' =&gt; 'Melen'
             ],
             [
-                'name' =&gt; 'nom',
-                'contents' =&gt; 'Sogefi'
-            ],
-            [
                 'name' =&gt; 'idCommercial',
                 'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'nom',
+                'contents' =&gt; 'Sogefi'
             ],
             [
                 'name' =&gt; 'indication',
@@ -4150,7 +4368,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E08.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C88.tmp', 'r')
             ],
         ],
     ]
@@ -4165,18 +4383,18 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E08.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C88.tmp', 'rb')
 }
 payload = {
     "nombreNiveau": 3,
     "codeBatiment": "BATIMENT_MELEN_0569",
-    "longitude": "qui",
-    "latitude": "neque",
+    "longitude": "dolore",
+    "latitude": "voluptas",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
-    "nom": "Sogefi",
     "idCommercial": 2,
+    "nom": "Sogefi",
     "indication": "Rue de melen",
     "rue": "Rue de Melen"
 }
@@ -4198,7 +4416,27 @@ response.json()</code></pre></div>
         </blockquote>
                 <pre>
 
-<code class="language-json"></code>
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;Sogefi&quot;,
+        &quot;nombreNiveau&quot;: &quot;3&quot;,
+        &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+        &quot;longitude&quot;: &quot;13&quot;,
+        &quot;latitude&quot;: &quot;7&quot;,
+        &quot;indication&quot;: &quot;Rue de melen&quot;,
+        &quot;rue&quot;: &quot;Rue de Melen&quot;,
+        &quot;ville&quot;: &quot;Yaounde&quot;,
+        &quot;commune&quot;: &quot;Yaounde IV&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;idCommercial&quot;: &quot;6&quot;,
+        &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+        &quot;id&quot;: 2
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-POSTapi-batiments" hidden>
@@ -4274,7 +4512,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="POSTapi-batiments"
-               value="qui"
+               value="dolore"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -4284,7 +4522,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="POSTapi-batiments"
-               value="neque"
+               value="voluptas"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -4320,6 +4558,16 @@ response.json()</code></pre></div>
 <p>required.</p>
         </p>
                 <p>
+            <b><code>idCommercial</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idCommercial"
+               data-endpoint="POSTapi-batiments"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the commercial.</p>
+        </p>
+                <p>
             <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
                 <input type="file"
                name="file"
@@ -4338,16 +4586,6 @@ response.json()</code></pre></div>
                data-component="body" hidden>
     <br>
 <p>the name of the Building.</p>
-        </p>
-                <p>
-            <b><code>idCommercial</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="idCommercial"
-               data-endpoint="POSTapi-batiments"
-               value="2"
-               data-component="body" hidden>
-    <br>
-<p>the id of the commercial.</p>
         </p>
                 <p>
             <b><code>indication</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
@@ -4450,7 +4688,179 @@ response.json()</code></pre></div>
         </blockquote>
                 <pre>
 
-<code class="language-json"></code>
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;nom&quot;: &quot;Sogefi&quot;,
+        &quot;nombreNiveau&quot;: &quot;3&quot;,
+        &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+        &quot;longitude&quot;: &quot;13&quot;,
+        &quot;latitude&quot;: &quot;7&quot;,
+        &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;indication&quot;: &quot;Rue de melen&quot;,
+        &quot;rue&quot;: &quot;Rue de Melen&quot;,
+        &quot;ville&quot;: &quot;Yaounde&quot;,
+        &quot;commune&quot;: &quot;Yaounde IV&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+        &quot;idCommercial&quot;: 6,
+        &quot;etablissements&quot;: [
+            {
+                &quot;id&quot;: 6,
+                &quot;nom&quot;: &quot;SOGEFI&quot;,
+                &quot;idBatiment&quot;: &quot;2&quot;,
+                &quot;indicationAdresse&quot;: null,
+                &quot;codePostal&quot;: null,
+                &quot;siteInternet&quot;: null,
+                &quot;idCommercial&quot;: &quot;6&quot;,
+                &quot;idManager&quot;: null,
+                &quot;etage&quot;: &quot;2&quot;,
+                &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+                &quot;vues&quot;: &quot;0&quot;,
+                &quot;phone&quot;: &quot;699999999&quot;,
+                &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                &quot;whatsapp2&quot;: null,
+                &quot;description&quot;: null,
+                &quot;osmId&quot;: null,
+                &quot;updated&quot;: false,
+                &quot;revoir&quot;: &quot;0&quot;,
+                &quot;valide&quot;: &quot;0&quot;,
+                &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+                &quot;ameliorations&quot;: null,
+                &quot;avis&quot;: 0,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+                &quot;commercial&quot;: {
+                    &quot;id&quot;: 6,
+                    &quot;idUser&quot;: 14,
+                    &quot;numeroCni&quot;: 1256987,
+                    &quot;numeroBadge&quot;: 1325,
+                    &quot;ville&quot;: &quot;Douala&quot;,
+                    &quot;quartier&quot;: &quot;Melen&quot;,
+                    &quot;actif&quot;: true,
+                    &quot;sexe&quot;: &quot;Masculin&quot;,
+                    &quot;whatsapp&quot;: 696652988,
+                    &quot;diplome&quot;: &quot;BAC&quot;,
+                    &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                    &quot;age&quot;: 25,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                    &quot;user&quot;: {
+                        &quot;id&quot;: 14,
+                        &quot;name&quot;: &quot;Gautier&quot;,
+                        &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                        &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                        &quot;phone&quot;: &quot;691201946&quot;,
+                        &quot;fcmToken&quot;: null,
+                        &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                    }
+                },
+                &quot;manager&quot;: null,
+                &quot;sous_categories&quot;: [
+                    {
+                        &quot;id&quot;: 5,
+                        &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                        &quot;idcategorie&quot;: 1,
+                        &quot;logourl&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;idSousCategorie&quot;: 5
+                        },
+                        &quot;categorie&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Achats&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        }
+                    },
+                    {
+                        &quot;id&quot;: 8,
+                        &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                        &quot;idcategorie&quot;: 1,
+                        &quot;logourl&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;idSousCategorie&quot;: 8
+                        },
+                        &quot;categorie&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Achats&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        }
+                    }
+                ],
+                &quot;commodites&quot;: [
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Wifi ++&quot;,
+                        &quot;idTypeCommodite&quot;: 1,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;idCommodite&quot;: 16
+                        }
+                    },
+                    {
+                        &quot;id&quot;: 20,
+                        &quot;nom&quot;: &quot;Piscine&quot;,
+                        &quot;idTypeCommodite&quot;: 1,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                        &quot;pivot&quot;: {
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;idCommodite&quot;: 20
+                        }
+                    }
+                ],
+                &quot;horaires&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;jour&quot;: &quot;Lundi&quot;,
+                        &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
+                    }
+                ],
+                &quot;images&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
+                    }
+                ],
+                &quot;commentaires&quot;: []
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Batiment&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-batiments--id-" hidden>
@@ -4535,15 +4945,15 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "idCommercial=2" \
     --form "nombreNiveau=3" \
-    --form "longitude=repudiandae" \
-    --form "latitude=aut" \
+    --form "longitude=cum" \
+    --form "latitude=nulla" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E18.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4562,8 +4972,8 @@ const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
 body.append('nombreNiveau', '3');
-body.append('longitude', 'repudiandae');
-body.append('latitude', 'aut');
+body.append('longitude', 'cum');
+body.append('latitude', 'nulla');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -4605,11 +5015,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'repudiandae'
+                'contents' =&gt; 'cum'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'aut'
+                'contents' =&gt; 'nulla'
             ],
             [
                 'name' =&gt; 'indication',
@@ -4637,7 +5047,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E18.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp', 'r')
             ],
         ],
     ]
@@ -4652,14 +5062,14 @@ import json
 
 url = 'http://localhost:8000/api/batiments/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E18.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "idCommercial": 2,
     "nombreNiveau": 3,
-    "longitude": "repudiandae",
-    "latitude": "aut",
+    "longitude": "cum",
+    "latitude": "nulla",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -4685,7 +5095,28 @@ response.json()</code></pre></div>
         </blockquote>
                 <pre>
 
-<code class="language-json"></code>
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;nom&quot;: &quot;BATIMENT&quot;,
+        &quot;nombreNiveau&quot;: &quot;3&quot;,
+        &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+        &quot;longitude&quot;: &quot;13&quot;,
+        &quot;latitude&quot;: &quot;7&quot;,
+        &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;indication&quot;: &quot;Rue de melen&quot;,
+        &quot;rue&quot;: &quot;Rue de Melen&quot;,
+        &quot;ville&quot;: &quot;Yaounde&quot;,
+        &quot;commune&quot;: &quot;Yaounde IV&quot;,
+        &quot;quartier&quot;: &quot;Melen&quot;,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
+        &quot;idCommercial&quot;: 6
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-PUTapi-batiments--id-" hidden>
@@ -4786,7 +5217,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="repudiandae"
+               value="cum"
                data-component="body" hidden>
     <br>
 
@@ -4796,7 +5227,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="aut"
+               value="nulla"
                data-component="body" hidden>
     <br>
 
@@ -6146,7 +6577,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E9C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6190,7 +6621,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E9C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp', 'r')
             ],
         ],
     ]
@@ -6205,7 +6636,7 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E9C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp', 'rb')
 }
 payload = {
     "nom": "Achat"
@@ -6333,7 +6764,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E9E.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6382,7 +6813,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E9E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp', 'r')
             ],
         ],
     ]
@@ -6397,7 +6828,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E9E.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -7075,7 +7506,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E7C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7179,7 +7610,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E7C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp', 'r')
             ],
         ],
     ]
@@ -7194,7 +7625,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E7C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -7497,7 +7928,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E3A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C19.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7596,7 +8027,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E3A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C19.tmp', 'r')
             ],
         ],
     ]
@@ -7611,7 +8042,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E3A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C19.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -8937,695 +9368,6 @@ response.json()</code></pre></div>
             </p>
                     </form>
 
-        <h1 id="endpoints">Endpoints</h1>
-
-    
-
-            <h2 id="endpoints-GETapi-auth-phone-verify--id-">Verify Account</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-auth-phone-verify--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/auth/phone/verify/ipsa" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/phone/verify/ipsa"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost:8000/api/auth/phone/verify/ipsa',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/auth/phone/verify/ipsa'
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('GET', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-auth-phone-verify--id-">
-            <blockquote>
-            <p>Example response (500):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;message&quot;: &quot;SQLSTATE[22P02]: Invalid text representation: 7 ERREUR:  syntaxe en entr&eacute;e invalide pour le type bigint : &laquo; ipsa &raquo; (SQL: select * from \&quot;users\&quot; where \&quot;users\&quot;.\&quot;id\&quot; = ipsa and \&quot;users\&quot;.\&quot;deleted_at\&quot; is null limit 1)&quot;,
-    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
-    &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-    &quot;line&quot;: 712,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 672,
-            &quot;function&quot;: &quot;runQueryCallback&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 376,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2484,
-            &quot;function&quot;: &quot;select&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2472,
-            &quot;function&quot;: &quot;runSelect&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 3006,
-            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2473,
-            &quot;function&quot;: &quot;onceWithColumns&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 632,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 616,
-            &quot;function&quot;: &quot;getModels&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php&quot;,
-            &quot;line&quot;: 294,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 401,
-            &quot;function&quot;: &quot;first&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 433,
-            &quot;function&quot;: &quot;find&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php&quot;,
-            &quot;line&quot;: 23,
-            &quot;function&quot;: &quot;findOrFail&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php&quot;,
-            &quot;line&quot;: 2131,
-            &quot;function&quot;: &quot;forwardCallTo&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php&quot;,
-            &quot;line&quot;: 2143,
-            &quot;function&quot;: &quot;__call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\app\\Http\\Controllers\\Api\\VerificationController.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;__callStatic&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Model&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;verifyByPhone&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\VerificationController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 261,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 204,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 724,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 726,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 701,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 665,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 654,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 128,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 167,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 103,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 142,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 111,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 89,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 222,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 179,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 117,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 75,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 48,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 653,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 136,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 291,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 121,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 989,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 171,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 129,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;D:\\Users\\Gautier\\Documents\\Projet\\PositionPlatform\\services\\artisan&quot;,
-            &quot;line&quot;: 37,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-auth-phone-verify--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-auth-phone-verify--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-auth-phone-verify--id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-auth-phone-verify--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-auth-phone-verify--id-"></code></pre>
-</span>
-<form id="form-GETapi-auth-phone-verify--id-" data-method="GET"
-      data-path="api/auth/phone/verify/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-auth-phone-verify--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-auth-phone-verify--id-"
-                    onclick="tryItOut('GETapi-auth-phone-verify--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-auth-phone-verify--id-"
-                    onclick="cancelTryOut('GETapi-auth-phone-verify--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-auth-phone-verify--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/auth/phone/verify/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="id"
-               data-endpoint="GETapi-auth-phone-verify--id-"
-               value="ipsa"
-               data-component="url" hidden>
-    <br>
-<p>The ID of the verify.</p>
-            </p>
-                    </form>
-
         <h1 id="manager-management">Manager management</h1>
 
     <p>APIs for managing Managers</p>
@@ -9831,7 +9573,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6DB9.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -9888,7 +9630,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6DB9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp', 'r')
             ],
         ],
     ]
@@ -9903,7 +9645,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6DB9.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -10395,7 +10137,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/19" \
+    "http://localhost:8000/api/managers/11" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -10403,12 +10145,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6E4A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C29.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/19"
+    "http://localhost:8000/api/managers/11"
 );
 
 const headers = {
@@ -10434,7 +10176,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/19',
+    'http://localhost:8000/api/managers/11',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -10457,7 +10199,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6E4A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C29.tmp', 'r')
             ],
         ],
     ]
@@ -10470,9 +10212,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/19'
+url = 'http://localhost:8000/api/managers/11'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6E4A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C29.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -10590,7 +10332,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="19"
+               value="11"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -10637,6 +10379,1088 @@ response.json()</code></pre></div>
 <p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
         </p>
         </form>
+
+        <h1 id="picture-management">Picture management</h1>
+
+    <p>APIs for managing Picture</p>
+
+            <h2 id="picture-management-POSTapi-images">Add a new picture.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-images">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/images" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "idEtablissement=2" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/images"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('idEtablissement', '2');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/images',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'idEtablissement',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/images'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp', 'rb')
+}
+payload = {
+    "idEtablissement": 2
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-images">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+        &quot;idEtablissement&quot;: 6,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l'image reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-images" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-images"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-images"></code></pre>
+</span>
+<span id="execution-error-POSTapi-images" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-images"></code></pre>
+</span>
+<form id="form-POSTapi-images" data-method="POST"
+      data-path="api/images"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-images', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-images"
+                    onclick="tryItOut('POSTapi-images');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-images"
+                    onclick="cancelTryOut('POSTapi-images');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-images" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/images</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-images" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-images"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>idEtablissement</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idEtablissement"
+               data-endpoint="POSTapi-images"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the Establishment.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="POSTapi-images"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>picture.</p>
+        </p>
+        </form>
+
+            <h2 id="picture-management-PUTapi-images--id-">Update Picture.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-images--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/images/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "_method=PUT" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/images/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('_method', 'PUT');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/images/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; '_method',
+                'contents' =&gt; 'PUT'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/images/2'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp', 'rb')
+}
+payload = {
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-images--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+        &quot;idEtablissement&quot;: 6,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-images--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-images--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-images--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-images--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-images--id-"></code></pre>
+</span>
+<form id="form-PUTapi-images--id-" data-method="PUT"
+      data-path="api/images/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-images--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-images--id-"
+                    onclick="tryItOut('PUTapi-images--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-images--id-"
+                    onclick="cancelTryOut('PUTapi-images--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-images--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/images/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-images--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-images--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-images--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Picture.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="PUTapi-images--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>picture.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-images--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="picture-management-DELETEapi-images--id-">Delete Picture.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-images--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/images/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/images/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/images/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/images/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-images--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-images--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-images--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-images--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-images--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-images--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-images--id-" data-method="DELETE"
+      data-path="api/images/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-images--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-images--id-"
+                    onclick="tryItOut('DELETEapi-images--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-images--id-"
+                    onclick="cancelTryOut('DELETEapi-images--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-images--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/images/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-images--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-images--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-images--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Picture.</p>
+            </p>
+                    </form>
+
+        <h1 id="schedule-management">Schedule management</h1>
+
+    <p>APIs for managing Schedule</p>
+
+            <h2 id="schedule-management-POSTapi-horaires">Add a new schedule.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-horaires">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/horaires" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"idEtablissement\": 2,
+    \"jour\": \"Lundi\",
+    \"plageHoraire\": \"10:00-15:00;16:00-18:00\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/horaires"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "idEtablissement": 2,
+    "jour": "Lundi",
+    "plageHoraire": "10:00-15:00;16:00-18:00"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/horaires',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'idEtablissement' =&gt; 2,
+            'jour' =&gt; 'Lundi',
+            'plageHoraire' =&gt; '10:00-15:00;16:00-18:00',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/horaires'
+payload = {
+    "idEtablissement": 2,
+    "jour": "Lundi",
+    "plageHoraire": "10:00-15:00;16:00-18:00"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-horaires">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;jour&quot;: &quot;Lundi&quot;,
+        &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+        &quot;idEtablissement&quot;: 6,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l'horaire reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-horaires" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-horaires"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-horaires"></code></pre>
+</span>
+<span id="execution-error-POSTapi-horaires" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-horaires"></code></pre>
+</span>
+<form id="form-POSTapi-horaires" data-method="POST"
+      data-path="api/horaires"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-horaires', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-horaires"
+                    onclick="tryItOut('POSTapi-horaires');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-horaires"
+                    onclick="cancelTryOut('POSTapi-horaires');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-horaires" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/horaires</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-horaires" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-horaires"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>idEtablissement</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idEtablissement"
+               data-endpoint="POSTapi-horaires"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the Establishment.</p>
+        </p>
+                <p>
+            <b><code>jour</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="jour"
+               data-endpoint="POSTapi-horaires"
+               value="Lundi"
+               data-component="body" hidden>
+    <br>
+<p>the name of the day.</p>
+        </p>
+                <p>
+            <b><code>plageHoraire</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="plageHoraire"
+               data-endpoint="POSTapi-horaires"
+               value="10:00-15:00;16:00-18:00"
+               data-component="body" hidden>
+    <br>
+<p>time slot.</p>
+        </p>
+        </form>
+
+            <h2 id="schedule-management-PUTapi-horaires--id-">Update Schedule.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-horaires--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/horaires/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"plageHoraire\": \"10:00-15:00;16:00-18:00\",
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/horaires/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "plageHoraire": "10:00-15:00;16:00-18:00",
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/horaires/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'plageHoraire' =&gt; '10:00-15:00;16:00-18:00',
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/horaires/2'
+payload = {
+    "plageHoraire": "10:00-15:00;16:00-18:00",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-horaires--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;SOGEFI&quot;,
+        &quot;indicationAdresse&quot;: null,
+        &quot;codePostal&quot;: null,
+        &quot;siteInternet&quot;: null,
+        &quot;etage&quot;: &quot;2&quot;,
+        &quot;phone&quot;: &quot;699999999&quot;,
+        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+        &quot;whatsapp2&quot;: null,
+        &quot;description&quot;: null,
+        &quot;osmId&quot;: null,
+        &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+        &quot;ameliorations&quot;: null,
+        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;idCommercial&quot;: 6,
+        &quot;idBatiment&quot;: 2,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;id&quot;: 6
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-horaires--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-horaires--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-horaires--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-horaires--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-horaires--id-"></code></pre>
+</span>
+<form id="form-PUTapi-horaires--id-" data-method="PUT"
+      data-path="api/horaires/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-horaires--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-horaires--id-"
+                    onclick="tryItOut('PUTapi-horaires--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-horaires--id-"
+                    onclick="cancelTryOut('PUTapi-horaires--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-horaires--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/horaires/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-horaires--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-horaires--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-horaires--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Schedule.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>plageHoraire</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="plageHoraire"
+               data-endpoint="PUTapi-horaires--id-"
+               value="10:00-15:00;16:00-18:00"
+               data-component="body" hidden>
+    <br>
+<p>time slot.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-horaires--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="schedule-management-DELETEapi-horaires--id-">Delete Schedule.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-horaires--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/horaires/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/horaires/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/horaires/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/horaires/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-horaires--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-horaires--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-horaires--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-horaires--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-horaires--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-horaires--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-horaires--id-" data-method="DELETE"
+      data-path="api/horaires/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-horaires--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-horaires--id-"
+                    onclick="tryItOut('DELETEapi-horaires--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-horaires--id-"
+                    onclick="cancelTryOut('DELETEapi-horaires--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-horaires--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/horaires/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-horaires--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-horaires--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-horaires--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Schedule.</p>
+            </p>
+                    </form>
 
         <h1 id="subcategory-management">SubCategory management</h1>
 
@@ -10997,7 +11821,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6EAF.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11046,7 +11870,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6EAF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp', 'r')
             ],
         ],
     ]
@@ -11061,7 +11885,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6EAF.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -11208,7 +12032,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php6EB1.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7E20.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11262,7 +12086,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php6EB1.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7E20.tmp', 'r')
             ],
         ],
     ]
@@ -11277,7 +12101,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php6EB1.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7E20.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -12535,6 +13359,1701 @@ response.json()</code></pre></div>
                data-component="url" hidden>
     <br>
 <p>the id of the type commodite.</p>
+            </p>
+                    </form>
+
+        <h1 id="establishment-management">establishment management</h1>
+
+    <p>APIs for managing establishment</p>
+
+            <h2 id="establishment-management-GETapi-etablissements">Get all establishment.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-etablissements">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/etablissements" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/etablissements',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-etablissements">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 6,
+            &quot;nom&quot;: &quot;SOGEFI&quot;,
+            &quot;idBatiment&quot;: &quot;2&quot;,
+            &quot;indicationAdresse&quot;: null,
+            &quot;codePostal&quot;: null,
+            &quot;siteInternet&quot;: null,
+            &quot;idCommercial&quot;: &quot;6&quot;,
+            &quot;idManager&quot;: null,
+            &quot;etage&quot;: &quot;2&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+            &quot;vues&quot;: &quot;0&quot;,
+            &quot;phone&quot;: &quot;699999999&quot;,
+            &quot;whatsapp1&quot;: &quot;699999999&quot;,
+            &quot;whatsapp2&quot;: null,
+            &quot;description&quot;: null,
+            &quot;osmId&quot;: null,
+            &quot;updated&quot;: false,
+            &quot;revoir&quot;: &quot;0&quot;,
+            &quot;valide&quot;: &quot;0&quot;,
+            &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+            &quot;ameliorations&quot;: null,
+            &quot;avis&quot;: 0,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+            &quot;batiment&quot;: {
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Sogefi&quot;,
+                &quot;nombreNiveau&quot;: &quot;3&quot;,
+                &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+                &quot;longitude&quot;: &quot;13&quot;,
+                &quot;latitude&quot;: &quot;7&quot;,
+                &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+                &quot;indication&quot;: &quot;Rue de melen&quot;,
+                &quot;rue&quot;: &quot;Rue de Melen&quot;,
+                &quot;ville&quot;: &quot;Yaounde&quot;,
+                &quot;commune&quot;: &quot;Yaounde IV&quot;,
+                &quot;quartier&quot;: &quot;Melen&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+                &quot;idCommercial&quot;: 6
+            },
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 5,
+                    &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;idSousCategorie&quot;: 5
+                    },
+                    &quot;categorie&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Achats&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                    }
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;idSousCategorie&quot;: 8
+                    },
+                    &quot;categorie&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Achats&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                    }
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Wifi ++&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;idCommodite&quot;: 16
+                    }
+                },
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Piscine&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;idCommodite&quot;: 20
+                    }
+                }
+            ],
+            &quot;images&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
+                }
+            ],
+            &quot;horaires&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;jour&quot;: &quot;Lundi&quot;,
+                    &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
+                }
+            ],
+            &quot;commentaires&quot;: [],
+            &quot;commercial&quot;: {
+                &quot;id&quot;: 6,
+                &quot;idUser&quot;: 14,
+                &quot;numeroCni&quot;: 1256987,
+                &quot;numeroBadge&quot;: 1325,
+                &quot;ville&quot;: &quot;Douala&quot;,
+                &quot;quartier&quot;: &quot;Melen&quot;,
+                &quot;actif&quot;: true,
+                &quot;sexe&quot;: &quot;Masculin&quot;,
+                &quot;whatsapp&quot;: 696652988,
+                &quot;diplome&quot;: &quot;BAC&quot;,
+                &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                &quot;age&quot;: 25,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                &quot;user&quot;: {
+                    &quot;id&quot;: 14,
+                    &quot;name&quot;: &quot;Gautier&quot;,
+                    &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                    &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                    &quot;phone&quot;: &quot;691201946&quot;,
+                    &quot;fcmToken&quot;: null,
+                    &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                }
+            },
+            &quot;manager&quot;: null
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Etablissements&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-etablissements" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-etablissements"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-etablissements"></code></pre>
+</span>
+<span id="execution-error-GETapi-etablissements" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-etablissements"></code></pre>
+</span>
+<form id="form-GETapi-etablissements" data-method="GET"
+      data-path="api/etablissements"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-etablissements', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-etablissements"
+                    onclick="tryItOut('GETapi-etablissements');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-etablissements"
+                    onclick="cancelTryOut('GETapi-etablissements');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-etablissements" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/etablissements</code></b>
+        </p>
+                    </form>
+
+            <h2 id="establishment-management-POSTapi-etablissements">Add a new establishment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-etablissements">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/etablissements" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "nom=Sogefi" \
+    --form "etage=3" \
+    --form "phone=699999999" \
+    --form "whatsapp1=699999999" \
+    --form "services=OM;MOMO" \
+    --form "idSousCategorie=ex" \
+    --form "idCommodite=non" \
+    --form "idBatiment=2" \
+    --form "indicationAdresse=Rue de Melen" \
+    --form "codePostal=59684" \
+    --form "siteInternet=sogefi.cm." \
+    --form "description=Super etablissement." \
+    --form "whatsapp2=699999999" \
+    --form "osmId=111259658236" \
+    --form "ameliorations=Site internet,videos" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('nom', 'Sogefi');
+body.append('etage', '3');
+body.append('phone', '699999999');
+body.append('whatsapp1', '699999999');
+body.append('services', 'OM;MOMO');
+body.append('idSousCategorie', 'ex');
+body.append('idCommodite', 'non');
+body.append('idBatiment', '2');
+body.append('indicationAdresse', 'Rue de Melen');
+body.append('codePostal', '59684');
+body.append('siteInternet', 'sogefi.cm.');
+body.append('description', 'Super etablissement.');
+body.append('whatsapp2', '699999999');
+body.append('osmId', '111259658236');
+body.append('ameliorations', 'Site internet,videos');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/etablissements',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'nom',
+                'contents' =&gt; 'Sogefi'
+            ],
+            [
+                'name' =&gt; 'etage',
+                'contents' =&gt; '3'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'whatsapp1',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'services',
+                'contents' =&gt; 'OM;MOMO'
+            ],
+            [
+                'name' =&gt; 'idSousCategorie',
+                'contents' =&gt; 'ex'
+            ],
+            [
+                'name' =&gt; 'idCommodite',
+                'contents' =&gt; 'non'
+            ],
+            [
+                'name' =&gt; 'idBatiment',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'indicationAdresse',
+                'contents' =&gt; 'Rue de Melen'
+            ],
+            [
+                'name' =&gt; 'codePostal',
+                'contents' =&gt; '59684'
+            ],
+            [
+                'name' =&gt; 'siteInternet',
+                'contents' =&gt; 'sogefi.cm.'
+            ],
+            [
+                'name' =&gt; 'description',
+                'contents' =&gt; 'Super etablissement.'
+            ],
+            [
+                'name' =&gt; 'whatsapp2',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'osmId',
+                'contents' =&gt; '111259658236'
+            ],
+            [
+                'name' =&gt; 'ameliorations',
+                'contents' =&gt; 'Site internet,videos'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp', 'rb')
+}
+payload = {
+    "nom": "Sogefi",
+    "etage": 3,
+    "phone": "699999999",
+    "whatsapp1": "699999999",
+    "services": "OM;MOMO",
+    "idSousCategorie": "ex",
+    "idCommodite": "non",
+    "idBatiment": 2,
+    "indicationAdresse": "Rue de Melen",
+    "codePostal": "59684",
+    "siteInternet": "sogefi.cm.",
+    "description": "Super etablissement.",
+    "whatsapp2": "699999999",
+    "osmId": "111259658236",
+    "ameliorations": "Site internet,videos"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-etablissements">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;SOGEFI&quot;,
+        &quot;indicationAdresse&quot;: null,
+        &quot;codePostal&quot;: null,
+        &quot;siteInternet&quot;: null,
+        &quot;etage&quot;: &quot;2&quot;,
+        &quot;phone&quot;: &quot;699999999&quot;,
+        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+        &quot;whatsapp2&quot;: null,
+        &quot;description&quot;: null,
+        &quot;osmId&quot;: null,
+        &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+        &quot;ameliorations&quot;: null,
+        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;idCommercial&quot;: 6,
+        &quot;idBatiment&quot;: 2,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;id&quot;: 6
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l'etablissement reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-etablissements" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-etablissements"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-etablissements"></code></pre>
+</span>
+<span id="execution-error-POSTapi-etablissements" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-etablissements"></code></pre>
+</span>
+<form id="form-POSTapi-etablissements" data-method="POST"
+      data-path="api/etablissements"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-etablissements', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-etablissements"
+                    onclick="tryItOut('POSTapi-etablissements');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-etablissements"
+                    onclick="cancelTryOut('POSTapi-etablissements');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-etablissements" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/etablissements</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-etablissements" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-etablissements"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="POSTapi-etablissements"
+               value="Sogefi"
+               data-component="body" hidden>
+    <br>
+<p>the name of the establishment.</p>
+        </p>
+                <p>
+            <b><code>etage</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="etage"
+               data-endpoint="POSTapi-etablissements"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>floor number of the establishment.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="phone"
+               data-endpoint="POSTapi-etablissements"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>Phone Numer.</p>
+        </p>
+                <p>
+            <b><code>whatsapp1</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="whatsapp1"
+               data-endpoint="POSTapi-etablissements"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>whatsapp number.</p>
+        </p>
+                <p>
+            <b><code>services</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="services"
+               data-endpoint="POSTapi-etablissements"
+               value="OM;MOMO"
+               data-component="body" hidden>
+    <br>
+<p>department of the establishment.</p>
+        </p>
+                <p>
+            <b><code>idSousCategorie</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="idSousCategorie"
+               data-endpoint="POSTapi-etablissements"
+               value="ex"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>idCommodite</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="idCommodite"
+               data-endpoint="POSTapi-etablissements"
+               value="non"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+                <p>
+            <b><code>idBatiment</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idBatiment"
+               data-endpoint="POSTapi-etablissements"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the Building.</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="POSTapi-etablissements"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>establishment Image.</p>
+        </p>
+                <p>
+            <b><code>indicationAdresse</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="indicationAdresse"
+               data-endpoint="POSTapi-etablissements"
+               value="Rue de Melen"
+               data-component="body" hidden>
+    <br>
+<p>precise address of the establishment.</p>
+        </p>
+                <p>
+            <b><code>codePostal</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="codePostal"
+               data-endpoint="POSTapi-etablissements"
+               value="59684"
+               data-component="body" hidden>
+    <br>
+<p>postal code.</p>
+        </p>
+                <p>
+            <b><code>siteInternet</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="siteInternet"
+               data-endpoint="POSTapi-etablissements"
+               value="sogefi.cm."
+               data-component="body" hidden>
+    <br>
+<p>website.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="POSTapi-etablissements"
+               value="Super etablissement."
+               data-component="body" hidden>
+    <br>
+<p>establishment description</p>
+        </p>
+                <p>
+            <b><code>whatsapp2</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="whatsapp2"
+               data-endpoint="POSTapi-etablissements"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>other whatsapp number.</p>
+        </p>
+                <p>
+            <b><code>osmId</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="osmId"
+               data-endpoint="POSTapi-etablissements"
+               value="111259658236"
+               data-component="body" hidden>
+    <br>
+<p>OSM Data Id.</p>
+        </p>
+                <p>
+            <b><code>ameliorations</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="ameliorations"
+               data-endpoint="POSTapi-etablissements"
+               value="Site internet,videos"
+               data-component="body" hidden>
+    <br>
+<p>improvements.</p>
+        </p>
+        </form>
+
+            <h2 id="establishment-management-PUTapi-etablissements--id-">Update Establishment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-etablissements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/etablissements/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --form "nom=Sogefi" \
+    --form "idManager=2" \
+    --form "indicationAdresse=Rue de Melen" \
+    --form "codePostal=59684" \
+    --form "siteInternet=sogefi.cm." \
+    --form "description=Super etablissement." \
+    --form "etage=3" \
+    --form "phone=699999999" \
+    --form "whatsapp1=699999999" \
+    --form "whatsapp2=699999999" \
+    --form "osmId=111259658236" \
+    --form "services=OM;MOMO" \
+    --form "ameliorations=Site internet,videos" \
+    --form "vues=15" \
+    --form "avis=3" \
+    --form "revoir=1" \
+    --form "valide=1" \
+    --form "_method=PUT" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+const body = new FormData();
+body.append('nom', 'Sogefi');
+body.append('idManager', '2');
+body.append('indicationAdresse', 'Rue de Melen');
+body.append('codePostal', '59684');
+body.append('siteInternet', 'sogefi.cm.');
+body.append('description', 'Super etablissement.');
+body.append('etage', '3');
+body.append('phone', '699999999');
+body.append('whatsapp1', '699999999');
+body.append('whatsapp2', '699999999');
+body.append('osmId', '111259658236');
+body.append('services', 'OM;MOMO');
+body.append('ameliorations', 'Site internet,videos');
+body.append('vues', '15');
+body.append('avis', '3');
+body.append('revoir', '1');
+body.append('valide', '1');
+body.append('_method', 'PUT');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/etablissements/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; 'nom',
+                'contents' =&gt; 'Sogefi'
+            ],
+            [
+                'name' =&gt; 'idManager',
+                'contents' =&gt; '2'
+            ],
+            [
+                'name' =&gt; 'indicationAdresse',
+                'contents' =&gt; 'Rue de Melen'
+            ],
+            [
+                'name' =&gt; 'codePostal',
+                'contents' =&gt; '59684'
+            ],
+            [
+                'name' =&gt; 'siteInternet',
+                'contents' =&gt; 'sogefi.cm.'
+            ],
+            [
+                'name' =&gt; 'description',
+                'contents' =&gt; 'Super etablissement.'
+            ],
+            [
+                'name' =&gt; 'etage',
+                'contents' =&gt; '3'
+            ],
+            [
+                'name' =&gt; 'phone',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'whatsapp1',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'whatsapp2',
+                'contents' =&gt; '699999999'
+            ],
+            [
+                'name' =&gt; 'osmId',
+                'contents' =&gt; '111259658236'
+            ],
+            [
+                'name' =&gt; 'services',
+                'contents' =&gt; 'OM;MOMO'
+            ],
+            [
+                'name' =&gt; 'ameliorations',
+                'contents' =&gt; 'Site internet,videos'
+            ],
+            [
+                'name' =&gt; 'vues',
+                'contents' =&gt; '15'
+            ],
+            [
+                'name' =&gt; 'avis',
+                'contents' =&gt; '3'
+            ],
+            [
+                'name' =&gt; 'revoir',
+                'contents' =&gt; '1'
+            ],
+            [
+                'name' =&gt; 'valide',
+                'contents' =&gt; '1'
+            ],
+            [
+                'name' =&gt; '_method',
+                'contents' =&gt; 'PUT'
+            ],
+            [
+                'name' =&gt; 'file',
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements/2'
+files = {
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp', 'rb')
+}
+payload = {
+    "nom": "Sogefi",
+    "idManager": 2,
+    "indicationAdresse": "Rue de Melen",
+    "codePostal": "59684",
+    "siteInternet": "sogefi.cm.",
+    "description": "Super etablissement.",
+    "etage": 3,
+    "phone": "699999999",
+    "whatsapp1": "699999999",
+    "whatsapp2": "699999999",
+    "osmId": "111259658236",
+    "services": "OM;MOMO",
+    "ameliorations": "Site internet,videos",
+    "vues": 15,
+    "avis": 3,
+    "revoir": true,
+    "valide": true,
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-etablissements--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;SOGEFI&quot;,
+        &quot;indicationAdresse&quot;: null,
+        &quot;codePostal&quot;: null,
+        &quot;siteInternet&quot;: null,
+        &quot;etage&quot;: &quot;2&quot;,
+        &quot;phone&quot;: &quot;699999999&quot;,
+        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+        &quot;whatsapp2&quot;: null,
+        &quot;description&quot;: null,
+        &quot;osmId&quot;: null,
+        &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+        &quot;ameliorations&quot;: null,
+        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;idCommercial&quot;: 6,
+        &quot;idBatiment&quot;: 2,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;id&quot;: 6
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-etablissements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-etablissements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-etablissements--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-etablissements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-etablissements--id-"></code></pre>
+</span>
+<form id="form-PUTapi-etablissements--id-" data-method="PUT"
+      data-path="api/etablissements/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"multipart\/form-data","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-etablissements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-etablissements--id-"
+                    onclick="tryItOut('PUTapi-etablissements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-etablissements--id-"
+                    onclick="cancelTryOut('PUTapi-etablissements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-etablissements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/etablissements/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-etablissements--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-etablissements--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Establishment.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="Sogefi"
+               data-component="body" hidden>
+    <br>
+<p>the name of the establishment.</p>
+        </p>
+                <p>
+            <b><code>idManager</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="idManager"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the Manager.</p>
+        </p>
+                <p>
+            <b><code>indicationAdresse</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="indicationAdresse"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="Rue de Melen"
+               data-component="body" hidden>
+    <br>
+<p>precise address of the establishment.</p>
+        </p>
+                <p>
+            <b><code>codePostal</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="codePostal"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="59684"
+               data-component="body" hidden>
+    <br>
+<p>postal code.</p>
+        </p>
+                <p>
+            <b><code>siteInternet</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="siteInternet"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="sogefi.cm."
+               data-component="body" hidden>
+    <br>
+<p>website.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="Super etablissement."
+               data-component="body" hidden>
+    <br>
+<p>establishment description</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>     <i>optional</i> &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="PUTapi-etablissements--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>establishment Image.</p>
+        </p>
+                <p>
+            <b><code>etage</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="etage"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>floor number of the establishment.</p>
+        </p>
+                <p>
+            <b><code>phone</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="phone"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>Phone Numer.</p>
+        </p>
+                <p>
+            <b><code>whatsapp1</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="whatsapp1"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>whatsapp number.</p>
+        </p>
+                <p>
+            <b><code>whatsapp2</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="whatsapp2"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="699999999"
+               data-component="body" hidden>
+    <br>
+<p>other whatsapp number.</p>
+        </p>
+                <p>
+            <b><code>osmId</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="osmId"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="111259658236"
+               data-component="body" hidden>
+    <br>
+<p>OSM Data Id.</p>
+        </p>
+                <p>
+            <b><code>services</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="services"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="OM;MOMO"
+               data-component="body" hidden>
+    <br>
+<p>department of the establishment.</p>
+        </p>
+                <p>
+            <b><code>ameliorations</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="ameliorations"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="Site internet,videos"
+               data-component="body" hidden>
+    <br>
+<p>improvements.</p>
+        </p>
+                <p>
+            <b><code>vues</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="vues"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="15"
+               data-component="body" hidden>
+    <br>
+<p>views number of the establishment.</p>
+        </p>
+                <p>
+            <b><code>avis</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="avis"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>overall rating of the institution.</p>
+        </p>
+                <p>
+            <b><code>revoir</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+                <label data-endpoint="PUTapi-etablissements--id-" hidden>
+            <input type="radio" name="revoir"
+                   value="true"
+                   data-endpoint="PUTapi-etablissements--id-"
+                   data-component="body"
+            >
+            <code>true</code>
+        </label>
+        <label data-endpoint="PUTapi-etablissements--id-" hidden>
+            <input type="radio" name="revoir"
+                   value="false"
+                   data-endpoint="PUTapi-etablissements--id-"
+                   data-component="body"
+            >
+            <code>false</code>
+        </label>
+    <br>
+<p>establishment to be reviewed.</p>
+        </p>
+                <p>
+            <b><code>valide</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+                <label data-endpoint="PUTapi-etablissements--id-" hidden>
+            <input type="radio" name="valide"
+                   value="true"
+                   data-endpoint="PUTapi-etablissements--id-"
+                   data-component="body"
+            >
+            <code>true</code>
+        </label>
+        <label data-endpoint="PUTapi-etablissements--id-" hidden>
+            <input type="radio" name="valide"
+                   value="false"
+                   data-endpoint="PUTapi-etablissements--id-"
+                   data-component="body"
+            >
+            <code>false</code>
+        </label>
+    <br>
+<p>valid establishment.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-etablissements--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="establishment-management-DELETEapi-etablissements--id-">Delete Establishment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-etablissements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/etablissements/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/etablissements/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-etablissements--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-etablissements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-etablissements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-etablissements--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-etablissements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-etablissements--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-etablissements--id-" data-method="DELETE"
+      data-path="api/etablissements/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-etablissements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-etablissements--id-"
+                    onclick="tryItOut('DELETEapi-etablissements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-etablissements--id-"
+                    onclick="cancelTryOut('DELETEapi-etablissements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-etablissements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/etablissements/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-etablissements--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-etablissements--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-etablissements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Establishment.</p>
+            </p>
+                    </form>
+
+            <h2 id="establishment-management-GETapi-etablissements--id-">Show Establishment by id.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-etablissements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/etablissements/2" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements/2"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/etablissements/2',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements/2'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-etablissements--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 6,
+        &quot;nom&quot;: &quot;SOGEFI&quot;,
+        &quot;idBatiment&quot;: &quot;2&quot;,
+        &quot;indicationAdresse&quot;: null,
+        &quot;codePostal&quot;: null,
+        &quot;siteInternet&quot;: null,
+        &quot;idCommercial&quot;: &quot;6&quot;,
+        &quot;idManager&quot;: null,
+        &quot;etage&quot;: &quot;2&quot;,
+        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+        &quot;vues&quot;: &quot;0&quot;,
+        &quot;phone&quot;: &quot;699999999&quot;,
+        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+        &quot;whatsapp2&quot;: null,
+        &quot;description&quot;: null,
+        &quot;osmId&quot;: null,
+        &quot;updated&quot;: false,
+        &quot;revoir&quot;: &quot;0&quot;,
+        &quot;valide&quot;: &quot;0&quot;,
+        &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+        &quot;ameliorations&quot;: null,
+        &quot;avis&quot;: 0,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;batiment&quot;: {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;BATIMENT&quot;,
+            &quot;nombreNiveau&quot;: &quot;3&quot;,
+            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
+            &quot;longitude&quot;: &quot;13&quot;,
+            &quot;latitude&quot;: &quot;7&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg&quot;,
+            &quot;indication&quot;: &quot;Rue de melen&quot;,
+            &quot;rue&quot;: &quot;Rue de Melen&quot;,
+            &quot;ville&quot;: &quot;Yaounde&quot;,
+            &quot;commune&quot;: &quot;Yaounde IV&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
+            &quot;idCommercial&quot;: 6
+        },
+        &quot;sous_categories&quot;: [
+            {
+                &quot;id&quot;: 5,
+                &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                &quot;idcategorie&quot;: 1,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;idSousCategorie&quot;: 5
+                },
+                &quot;categorie&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Achats&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                }
+            },
+            {
+                &quot;id&quot;: 8,
+                &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                &quot;idcategorie&quot;: 1,
+                &quot;logourl&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;idSousCategorie&quot;: 8
+                },
+                &quot;categorie&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Achats&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                }
+            }
+        ],
+        &quot;commodites&quot;: [
+            {
+                &quot;id&quot;: 16,
+                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;idCommodite&quot;: 16
+                }
+            },
+            {
+                &quot;id&quot;: 20,
+                &quot;nom&quot;: &quot;Piscine&quot;,
+                &quot;idTypeCommodite&quot;: 1,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;idCommodite&quot;: 20
+                }
+            }
+        ],
+        &quot;images&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;idEtablissement&quot;: 6,
+                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
+            }
+        ],
+        &quot;horaires&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;idEtablissement&quot;: 6,
+                &quot;jour&quot;: &quot;Lundi&quot;,
+                &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
+            }
+        ],
+        &quot;commentaires&quot;: [],
+        &quot;commercial&quot;: {
+            &quot;id&quot;: 6,
+            &quot;idUser&quot;: 14,
+            &quot;numeroCni&quot;: 1256987,
+            &quot;numeroBadge&quot;: 1325,
+            &quot;ville&quot;: &quot;Douala&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;,
+            &quot;actif&quot;: true,
+            &quot;sexe&quot;: &quot;Masculin&quot;,
+            &quot;whatsapp&quot;: 696652988,
+            &quot;diplome&quot;: &quot;BAC&quot;,
+            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+            &quot;age&quot;: 25,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 14,
+                &quot;name&quot;: &quot;Gautier&quot;,
+                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                &quot;phone&quot;: &quot;691201946&quot;,
+                &quot;fcmToken&quot;: null,
+                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+            }
+        },
+        &quot;manager&quot;: null
+    },
+    &quot;message&quot;: &quot;Etablissement&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-etablissements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-etablissements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-etablissements--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-etablissements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-etablissements--id-"></code></pre>
+</span>
+<form id="form-GETapi-etablissements--id-" data-method="GET"
+      data-path="api/etablissements/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-etablissements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-etablissements--id-"
+                    onclick="tryItOut('GETapi-etablissements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-etablissements--id-"
+                    onclick="cancelTryOut('GETapi-etablissements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-etablissements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/etablissements/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-etablissements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the Establishment.</p>
             </p>
                     </form>
 

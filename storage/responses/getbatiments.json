@@ -1,0 +1,175 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 2,
+            "nom": "Sogefi",
+            "nombreNiveau": "3",
+            "codeBatiment": "BATIMENT_MELEN_0569",
+            "longitude": "13",
+            "latitude": "7",
+            "image": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1646081605_Wavy_Bus-39_Single-06.jpg",
+            "indication": "Rue de melen",
+            "rue": "Rue de Melen",
+            "ville": "Yaounde",
+            "commune": "Yaounde IV",
+            "quartier": "Melen",
+            "deleted_at": null,
+            "created_at": "2022-02-28T20:53:25.000000Z",
+            "updated_at": "2022-02-28T20:53:25.000000Z",
+            "idCommercial": 6,
+            "etablissements": [
+                {
+                    "id": 6,
+                    "nom": "SOGEFI",
+                    "idBatiment": "2",
+                    "indicationAdresse": null,
+                    "codePostal": null,
+                    "siteInternet": null,
+                    "idCommercial": "6",
+                    "idManager": null,
+                    "etage": "2",
+                    "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
+                    "vues": "0",
+                    "phone": "699999999",
+                    "whatsapp1": "699999999",
+                    "whatsapp2": null,
+                    "description": null,
+                    "osmId": null,
+                    "updated": false,
+                    "revoir": "0",
+                    "valide": "0",
+                    "services": "PAIN;OM;MOMO",
+                    "ameliorations": null,
+                    "avis": 0,
+                    "deleted_at": null,
+                    "created_at": "2022-03-01T12:39:31.000000Z",
+                    "updated_at": "2022-03-01T12:39:31.000000Z",
+                    "commercial": {
+                        "id": 6,
+                        "idUser": 14,
+                        "numeroCni": 1256987,
+                        "numeroBadge": 1325,
+                        "ville": "Douala",
+                        "quartier": "Melen",
+                        "actif": true,
+                        "sexe": "Masculin",
+                        "whatsapp": 696652988,
+                        "diplome": "BAC",
+                        "tailleTshirt": "XXL",
+                        "age": 25,
+                        "deleted_at": null,
+                        "created_at": "2022-02-28T18:24:53.000000Z",
+                        "updated_at": "2022-02-28T18:24:53.000000Z",
+                        "user": {
+                            "id": 14,
+                            "name": "Gautier",
+                            "email": "bt@geo.sm",
+                            "email_verified_at": "2022-02-28T18:26:29.000000Z",
+                            "phone": "691201946",
+                            "fcmToken": null,
+                            "imageProfil": "/storage/uploads/commerciaux/profils/1646072685_images.jpg",
+                            "deleted_at": null,
+                            "created_at": "2022-02-28T18:24:45.000000Z",
+                            "updated_at": "2022-02-28T18:26:29.000000Z"
+                        }
+                    },
+                    "manager": null,
+                    "sous_categories": [
+                        {
+                            "id": 5,
+                            "nom": "Blanchisseries et Pressings",
+                            "idcategorie": 1,
+                            "logourl": null,
+                            "deleted_at": null,
+                            "created_at": "2022-02-25T11:35:34.000000Z",
+                            "updated_at": "2022-02-25T11:35:34.000000Z",
+                            "pivot": {
+                                "idEtablissement": 6,
+                                "idSousCategorie": 5
+                            },
+                            "categorie": {
+                                "id": 1,
+                                "nom": "Achats",
+                                "logourl": null,
+                                "deleted_at": null,
+                                "created_at": "2022-02-25T11:35:29.000000Z",
+                                "updated_at": "2022-02-25T11:35:29.000000Z"
+                            }
+                        },
+                        {
+                            "id": 8,
+                            "nom": "Hifi, téléphonie",
+                            "idcategorie": 1,
+                            "logourl": null,
+                            "deleted_at": null,
+                            "created_at": "2022-02-25T11:35:34.000000Z",
+                            "updated_at": "2022-02-25T11:35:34.000000Z",
+                            "pivot": {
+                                "idEtablissement": 6,
+                                "idSousCategorie": 8
+                            },
+                            "categorie": {
+                                "id": 1,
+                                "nom": "Achats",
+                                "logourl": null,
+                                "deleted_at": null,
+                                "created_at": "2022-02-25T11:35:29.000000Z",
+                                "updated_at": "2022-02-25T11:35:29.000000Z"
+                            }
+                        }
+                    ],
+                    "commodites": [
+                        {
+                            "id": 16,
+                            "nom": "Wifi ++",
+                            "idTypeCommodite": 1,
+                            "deleted_at": null,
+                            "created_at": "2022-02-25T14:48:03.000000Z",
+                            "updated_at": "2022-02-25T15:24:26.000000Z",
+                            "pivot": {
+                                "idEtablissement": 6,
+                                "idCommodite": 16
+                            }
+                        },
+                        {
+                            "id": 20,
+                            "nom": "Piscine",
+                            "idTypeCommodite": 1,
+                            "deleted_at": null,
+                            "created_at": "2022-02-25T15:37:37.000000Z",
+                            "updated_at": "2022-02-25T15:37:37.000000Z",
+                            "pivot": {
+                                "idEtablissement": 6,
+                                "idCommodite": 20
+                            }
+                        }
+                    ],
+                    "horaires": [
+                        {
+                            "id": 1,
+                            "idEtablissement": 6,
+                            "jour": "Lundi",
+                            "plageHoraire": "07:00-11:00;13:00-17:00",
+                            "deleted_at": null,
+                            "created_at": "2022-03-01T12:45:05.000000Z",
+                            "updated_at": "2022-03-01T12:45:05.000000Z"
+                        }
+                    ],
+                    "images": [
+                        {
+                            "id": 1,
+                            "idEtablissement": 6,
+                            "imageUrl": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png",
+                            "deleted_at": null,
+                            "created_at": "2022-03-01T12:46:29.000000Z",
+                            "updated_at": "2022-03-01T12:46:29.000000Z"
+                        }
+                    ],
+                    "commentaires": []
+                }
+            ]
+        }
+    ],
+    "message": "Liste des Batiments"
+}

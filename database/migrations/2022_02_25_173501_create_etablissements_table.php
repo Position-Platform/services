@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string("nom");
             $table->string("idBatiment");
-            $table->string("indicationAdresse");
-            $table->string("codePostal");
-            $table->string("siteInternet");
+            $table->string("indicationAdresse")->nullable();
+            $table->string("codePostal")->nullable();
+            $table->string("siteInternet")->nullable();
             $table->string("idCommercial");
             $table->string("idManager")->nullable();
             $table->string("etage");

@@ -1,14 +1,14 @@
-name: 'TypeCommodite management'
+name: 'SubCategory management'
 description: |-
 
-  APIs for managing TypeCommodite
+  APIs for managing SubCategory
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/typecommodites
+    uri: api/souscategories
     metadata:
-      title: 'Get all Type Commodite.'
+      title: 'Get all SubCategory.'
       description: ''
       authenticated: false
       custom: []
@@ -27,80 +27,69 @@ endpoints:
               "success": true,
               "data": [
                   {
-                      "id": 1,
-                      "nom": "Luxe ++",
+                      "id": 23,
+                      "nom": "Administrations",
+                      "idcategorie": 2,
+                      "logourl": null,
                       "deleted_at": null,
-                      "created_at": "2022-02-25T14:02:08.000000Z",
-                      "updated_at": "2022-02-25T14:04:49.000000Z",
-                      "commodites": [
-                          {
-                              "id": 6,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:39:42.000000Z",
-                              "updated_at": "2022-02-25T14:39:42.000000Z"
-                          },
-                          {
-                              "id": 7,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:39:54.000000Z",
-                              "updated_at": "2022-02-25T14:39:54.000000Z"
-                          },
-                          {
-                              "id": 8,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:40:15.000000Z",
-                              "updated_at": "2022-02-25T14:40:15.000000Z"
-                          },
-                          {
-                              "id": 9,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:40:35.000000Z",
-                              "updated_at": "2022-02-25T14:40:35.000000Z"
-                          },
-                          {
-                              "id": 10,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:43:06.000000Z",
-                              "updated_at": "2022-02-25T14:43:06.000000Z"
-                          },
-                          {
-                              "id": 12,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:45:42.000000Z",
-                              "updated_at": "2022-02-25T14:45:42.000000Z"
-                          },
-                          {
-                              "id": 16,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:48:03.000000Z",
-                              "updated_at": "2022-02-25T14:48:03.000000Z"
-                          },
-                          {
-                              "id": 19,
-                              "nom": "Wifi",
-                              "idTypeCommodite": 1,
-                              "deleted_at": null,
-                              "created_at": "2022-02-25T14:53:31.000000Z",
-                              "updated_at": "2022-02-25T14:53:31.000000Z"
-                          }
-                      ]
+                      "created_at": "2022-02-25T11:35:34.000000Z",
+                      "updated_at": "2022-02-25T11:35:34.000000Z",
+                      "categorie": {
+                          "id": 2,
+                          "nom": "Administrations",
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:29.000000Z",
+                          "updated_at": "2022-02-25T11:35:29.000000Z",
+                          "commodites": [
+                              {
+                                  "id": 16,
+                                  "nom": "Wifi",
+                                  "idTypeCommodite": 1,
+                                  "deleted_at": null,
+                                  "created_at": "2022-02-25T14:48:03.000000Z",
+                                  "updated_at": "2022-02-25T14:48:03.000000Z",
+                                  "pivot": {
+                                      "idCategorie": 2,
+                                      "idCommodite": 16
+                                  }
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "id": 24,
+                      "nom": "Ambassades et Consulats",
+                      "idcategorie": 2,
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:34.000000Z",
+                      "updated_at": "2022-02-25T11:35:34.000000Z",
+                      "categorie": {
+                          "id": 2,
+                          "nom": "Administrations",
+                          "logourl": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-25T11:35:29.000000Z",
+                          "updated_at": "2022-02-25T11:35:29.000000Z",
+                          "commodites": [
+                              {
+                                  "id": 16,
+                                  "nom": "Wifi",
+                                  "idTypeCommodite": 1,
+                                  "deleted_at": null,
+                                  "created_at": "2022-02-25T14:48:03.000000Z",
+                                  "updated_at": "2022-02-25T14:48:03.000000Z",
+                                  "pivot": {
+                                      "idCategorie": 2,
+                                      "idCommodite": 16
+                                  }
+                              }
+                          ]
+                      }
                   }
               ],
-              "message": "Liste des Types de Commodités"
+              "message": "Liste des Sous-Categories"
           }
         headers: []
         description: '200'
@@ -108,9 +97,9 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/typecommodites/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
-      title: 'Show Type Commodite by id.'
+      title: 'Show SubCategory by id.'
       description: ''
       authenticated: false
       custom: []
@@ -121,7 +110,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the type commodite.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer
@@ -135,79 +124,23 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 1,
-                  "nom": "Luxe",
+                  "id": 481,
+                  "nom": "Boutique +",
+                  "idcategorie": 1,
+                  "logourl": null,
                   "deleted_at": null,
-                  "created_at": "2022-02-25T14:02:08.000000Z",
-                  "updated_at": "2022-02-25T14:02:08.000000Z",
-                  "commodites": [
-                      {
-                          "id": 6,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:39:42.000000Z",
-                          "updated_at": "2022-02-25T14:39:42.000000Z"
-                      },
-                      {
-                          "id": 7,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:39:54.000000Z",
-                          "updated_at": "2022-02-25T14:39:54.000000Z"
-                      },
-                      {
-                          "id": 8,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:40:15.000000Z",
-                          "updated_at": "2022-02-25T14:40:15.000000Z"
-                      },
-                      {
-                          "id": 9,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:40:35.000000Z",
-                          "updated_at": "2022-02-25T14:40:35.000000Z"
-                      },
-                      {
-                          "id": 10,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:43:06.000000Z",
-                          "updated_at": "2022-02-25T14:43:06.000000Z"
-                      },
-                      {
-                          "id": 12,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:45:42.000000Z",
-                          "updated_at": "2022-02-25T14:45:42.000000Z"
-                      },
-                      {
-                          "id": 16,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:48:03.000000Z",
-                          "updated_at": "2022-02-25T14:48:03.000000Z"
-                      },
-                      {
-                          "id": 19,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:53:31.000000Z",
-                          "updated_at": "2022-02-25T14:53:31.000000Z"
-                      }
-                  ]
+                  "created_at": "2022-02-25T12:41:25.000000Z",
+                  "updated_at": "2022-02-25T12:41:25.000000Z",
+                  "categorie": {
+                      "id": 1,
+                      "nom": "Achats",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z"
+                  }
               },
-              "message": "Type Commodite"
+              "message": "SousCategorie"
           }
         headers: []
         description: '200'
@@ -215,15 +148,15 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/typecommodites
+    uri: api/souscategories
     metadata:
-      title: 'Add a new Type Commodite.'
+      title: 'Add a new SubCategory.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters: []
@@ -231,10 +164,24 @@ endpoints:
     bodyParameters:
       nom:
         name: nom
-        description: 'the name of the type commodite.'
+        description: 'the name of the subcategory.'
         required: true
         example: Achat
         type: string
+        custom: []
+      idcategorie:
+        name: idcategorie
+        description: 'the id of the category.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+      file:
+        name: file
+        description: 'the picture of the subcategory'
+        required: true
+        example: null
+        type: file
         custom: []
     responses:
       -
@@ -243,12 +190,21 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "nom": "Luxe",
-                  "updated_at": "2022-02-25T14:02:08.000000Z",
-                  "created_at": "2022-02-25T14:02:08.000000Z",
-                  "id": 1
+                  "id": 481,
+                  "nom": "Boutique +",
+                  "idcategorie": 1,
+                  "updated_at": "2022-02-25T12:41:25.000000Z",
+                  "created_at": "2022-02-25T12:41:25.000000Z",
+                  "categorie": {
+                      "id": 1,
+                      "nom": "Achats",
+                      "logourl": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-25T11:35:29.000000Z",
+                      "updated_at": "2022-02-25T11:35:29.000000Z"
+                  }
               },
-              "message": "Création du type de commodité reussie"
+              "message": "Création de la Sous catégorie reussie"
           }
         headers: []
         description: '200'
@@ -256,21 +212,21 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/typecommodites/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
-      title: 'Update Type Commodite.'
+      title: 'Update SubCategory.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
       X-Authorization: apiKey
     urlParameters:
       id:
         name: id
-        description: 'the id of the type commodite.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer
@@ -279,10 +235,24 @@ endpoints:
     bodyParameters:
       nom:
         name: nom
-        description: 'the name of the type commodite.'
+        description: 'the name of the subcategory.'
         required: false
         example: Achat
         type: string
+        custom: []
+      file:
+        name: file
+        description: 'the picture of the subcategory'
+        required: false
+        example: null
+        type: file
+        custom: []
+      idcategorie:
+        name: idcategorie
+        description: 'the id of the category.'
+        required: false
+        example: 5
+        type: integer
         custom: []
       _method:
         name: _method
@@ -299,76 +269,11 @@ endpoints:
               "success": true,
               "data": {
                   "id": 1,
-                  "nom": "Luxe ++",
+                  "nom": "Achats +",
+                  "logourl": null,
                   "deleted_at": null,
-                  "created_at": "2022-02-25T14:02:08.000000Z",
-                  "updated_at": "2022-02-25T14:04:49.000000Z",
-                  "commodites": [
-                      {
-                          "id": 6,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:39:42.000000Z",
-                          "updated_at": "2022-02-25T14:39:42.000000Z"
-                      },
-                      {
-                          "id": 7,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:39:54.000000Z",
-                          "updated_at": "2022-02-25T14:39:54.000000Z"
-                      },
-                      {
-                          "id": 8,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:40:15.000000Z",
-                          "updated_at": "2022-02-25T14:40:15.000000Z"
-                      },
-                      {
-                          "id": 9,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:40:35.000000Z",
-                          "updated_at": "2022-02-25T14:40:35.000000Z"
-                      },
-                      {
-                          "id": 10,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:43:06.000000Z",
-                          "updated_at": "2022-02-25T14:43:06.000000Z"
-                      },
-                      {
-                          "id": 12,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:45:42.000000Z",
-                          "updated_at": "2022-02-25T14:45:42.000000Z"
-                      },
-                      {
-                          "id": 16,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:48:03.000000Z",
-                          "updated_at": "2022-02-25T14:48:03.000000Z"
-                      },
-                      {
-                          "id": 19,
-                          "nom": "Wifi",
-                          "idTypeCommodite": 1,
-                          "deleted_at": null,
-                          "created_at": "2022-02-25T14:53:31.000000Z",
-                          "updated_at": "2022-02-25T14:53:31.000000Z"
-                      }
-                  ]
+                  "created_at": "2022-02-25T11:09:21.000000Z",
+                  "updated_at": "2022-02-25T11:09:21.000000Z"
               },
               "message": "Update Success"
           }
@@ -378,7 +283,7 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/typecommodites/{id}'
+    uri: 'api/souscategories/{id}'
     metadata:
       title: 'Delete Category.'
       description: ''
@@ -392,7 +297,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the type commodite.'
+        description: 'the id of the subcategory.'
         required: true
         example: 2
         type: integer

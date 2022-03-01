@@ -30,12 +30,29 @@ class BatimentController extends BaseController
         $batiments = Batiment::all();
 
         foreach ($batiments as $batiment) {
-            $batiment->etablissements->commercial;
-            $batiment->etablissements->manager;
-            $batiment->etablissements->commodites;
-            $batiment->etablissements->sousCategories->categorie;
-            $batiment->etablissements->horaires;
-            $batiment->etablissements->images;
+            $batiment->etablissements;
+
+
+            foreach ($batiment->etablissements as $key => $etablissement) {
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+                $etablissement->sousCategories;
+                $etablissement->commodites;
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->horaires;
+                $etablissement->images;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+            }
         }
 
         return $this->sendResponse($batiments, 'Liste des Batiments');
@@ -120,13 +137,29 @@ class BatimentController extends BaseController
     {
         $batiment = Batiment::find($id);
 
-        $batiment->etablissements->commercial;
-        $batiment->etablissements->manager;
-        $batiment->etablissements->commodites;
-        $batiment->etablissements->commentaires;
-        $batiment->etablissements->sousCategories->categorie;
-        $batiment->etablissements->horaires;
-        $batiment->etablissements->images;
+        $batiment->etablissements;
+
+
+        foreach ($batiment->etablissements as $key => $etablissement) {
+            $etablissement->commercial->user;
+            if ($etablissement->manager) {
+                $etablissement->manager->user;
+            }
+
+            $etablissement->sousCategories;
+            $etablissement->commodites;
+            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->horaires;
+            $etablissement->images;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $key => $commentaires) {
+                $commentaires->user;
+            }
+        }
 
         return $this->sendResponse($batiment, "Batiment");
     }
@@ -165,7 +198,7 @@ class BatimentController extends BaseController
             try {
                 DB::beginTransaction();
                 $batiment->nom = $request->nom ?? $batiment->nom;
-                $batiment->nombreNiveaux = $request->nombreNiveaux ?? $batiment->nombreNiveaux;
+                $batiment->nombreNiveau = $request->nombreNiveau ?? $batiment->nombreNiveau;
                 $batiment->longitude = $request->longitude ?? $batiment->longitude;
                 $batiment->latitude = $request->latitude ?? $batiment->latitude;
                 $batiment->indication = $request->indication ?? $batiment->indication;
@@ -188,7 +221,7 @@ class BatimentController extends BaseController
                 return $this->sendResponse($batiment, "Update Success", 201);
             } catch (\Throwable $th) {
                 DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+                return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
             }
         }
     }
@@ -203,7 +236,7 @@ class BatimentController extends BaseController
     public function destroy($id)
     {
         $user = Auth::user();
-        $batiment = Batiment::whereId($id);
+        $batiment = Batiment::find($id);
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
@@ -217,8 +250,14 @@ class BatimentController extends BaseController
                     $etablissement->images()->delete();
                     $etablissement->horaires()->delete();
                     $etablissement->commentaires()->delete();
-                    $etablissement->sousCategories()->delete();
-                    $etablissement->commodites()->delete();
+
+                    foreach ($etablissement->sousCategories as $key => $sousCategorie) {
+                        $etablissement->sousCategories()->detach($sousCategorie->id);
+                    }
+
+                    foreach ($etablissement->commodites as $key => $commodite) {
+                        $etablissement->commodites()->detach($commodite->id);
+                    }
                 }
 
                 $batiment->etablissements()->delete();
