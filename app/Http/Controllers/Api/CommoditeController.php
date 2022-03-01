@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Categorie;
 use App\Models\Commodite;
 use App\Models\TypeCommodite;
 use Illuminate\Http\Request;
@@ -40,6 +41,7 @@ class CommoditeController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required the name commodite. Example: Achat
+     * @bodyParam idCategories string required the id of categories. Example: 2,4
      * @bodyParam idTypeCommodite int required the id TypeCommodite. Example: 5
      * @responseFile storage/responses/addcommodite.json
      */
@@ -48,6 +50,7 @@ class CommoditeController extends BaseController
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
             'idTypeCommodite' => 'required',
+            'idCategories'  => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -58,7 +61,6 @@ class CommoditeController extends BaseController
         $typeCommodite = TypeCommodite::find($request->idTypeCommodite);
 
 
-
         try {
 
             DB::beginTransaction();
@@ -66,9 +68,9 @@ class CommoditeController extends BaseController
             $commodite->typeCommodite;
 
             if ($request->idCategories != null) {
-                $commodite->categories()->attach($request->idCategories);
-            } else {
-                $commodite->categories()->attach([27]);
+                $idCategories = explode(",", $request->idCategories);
+                $categories = Categorie::find($idCategories);
+                $commodite->categories()->attach($categories);
             }
 
             DB::commit();

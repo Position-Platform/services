@@ -75,6 +75,28 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="comment-management">
+                    <a href="#comment-management">Comment management</a>
+                </li>
+                                    <ul id="tocify-subheader-comment-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="comment-management-GETapi-commentaires">
+                        <a href="#comment-management-GETapi-commentaires">Get all Comment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="comment-management-POSTapi-commentaires">
+                        <a href="#comment-management-POSTapi-commentaires">Add a new Comment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="comment-management-GETapi-commentaires--id-">
+                        <a href="#comment-management-GETapi-commentaires--id-">Show Comment by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="comment-management-PUTapi-commentaires--id-">
+                        <a href="#comment-management-PUTapi-commentaires--id-">Update Comment.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="comment-management-DELETEapi-commentaires--id-">
+                        <a href="#comment-management-DELETEapi-commentaires--id-">Delete Comment.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="abonnement-management">
                     <a href="#abonnement-management">Abonnement management</a>
                 </li>
@@ -96,7 +118,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="account-management">
                     <a href="#account-management">Account management</a>
                 </li>
@@ -127,7 +149,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
+                    <ul id="tocify-header-5" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="admin-management">
                     <a href="#admin-management">Admin management</a>
                 </li>
@@ -149,7 +171,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-5" class="tocify-header">
+                    <ul id="tocify-header-6" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="building-management">
                     <a href="#building-management">Building management</a>
                 </li>
@@ -171,7 +193,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-6" class="tocify-header">
+                    <ul id="tocify-header-7" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="category-management">
                     <a href="#category-management">Category management</a>
                 </li>
@@ -193,7 +215,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-7" class="tocify-header">
+                    <ul id="tocify-header-8" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="commerciaux-management">
                     <a href="#commerciaux-management">Commerciaux management</a>
                 </li>
@@ -215,7 +237,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-8" class="tocify-header">
+                    <ul id="tocify-header-9" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="commodites-management">
                     <a href="#commodites-management">Commodites management</a>
                 </li>
@@ -237,7 +259,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-9" class="tocify-header">
+                    <ul id="tocify-header-10" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="manager-management">
                     <a href="#manager-management">Manager management</a>
                 </li>
@@ -259,7 +281,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-10" class="tocify-header">
+                    <ul id="tocify-header-11" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="picture-management">
                     <a href="#picture-management">Picture management</a>
                 </li>
@@ -275,7 +297,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-11" class="tocify-header">
+                    <ul id="tocify-header-12" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="schedule-management">
                     <a href="#schedule-management">Schedule management</a>
                 </li>
@@ -291,7 +313,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-12" class="tocify-header">
+                    <ul id="tocify-header-13" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="subcategory-management">
                     <a href="#subcategory-management">SubCategory management</a>
                 </li>
@@ -313,7 +335,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-13" class="tocify-header">
+                    <ul id="tocify-header-14" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="typecommodite-management">
                     <a href="#typecommodite-management">TypeCommodite management</a>
                 </li>
@@ -335,7 +357,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-14" class="tocify-header">
+                    <ul id="tocify-header-15" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="establishment-management">
                     <a href="#establishment-management">establishment management</a>
                 </li>
@@ -367,7 +389,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 1 2022</li>
+        <li>Last updated: March 2 2022</li>
     </ul>
 </div>
 
@@ -385,9 +407,947 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+
+        <h1 id="comment-management">Comment management</h1>
+
+    
+
+            <h2 id="comment-management-GETapi-commentaires">Get all Comment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-commentaires">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commentaires" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commentaires"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commentaires',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commentaires'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commentaires">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;idUser&quot;: 1,
+            &quot;idEtablissement&quot;: 6,
+            &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+            &quot;rating&quot;: 3,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+            &quot;etablissement&quot;: {
+                &quot;id&quot;: 6,
+                &quot;nom&quot;: &quot;SOGEFI&quot;,
+                &quot;idBatiment&quot;: &quot;2&quot;,
+                &quot;indicationAdresse&quot;: null,
+                &quot;codePostal&quot;: null,
+                &quot;siteInternet&quot;: null,
+                &quot;idCommercial&quot;: &quot;12&quot;,
+                &quot;idManager&quot;: null,
+                &quot;etage&quot;: &quot;2&quot;,
+                &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+                &quot;vues&quot;: &quot;0&quot;,
+                &quot;phone&quot;: &quot;699999999&quot;,
+                &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                &quot;whatsapp2&quot;: null,
+                &quot;description&quot;: null,
+                &quot;osmId&quot;: null,
+                &quot;updated&quot;: false,
+                &quot;revoir&quot;: &quot;0&quot;,
+                &quot;valide&quot;: &quot;0&quot;,
+                &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+                &quot;ameliorations&quot;: null,
+                &quot;avis&quot;: 0,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;
+            },
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Gautier 1996&quot;,
+                &quot;email&quot;: &quot;admin@position.cm&quot;,
+                &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                &quot;phone&quot;: &quot;699999999&quot;,
+                &quot;fcmToken&quot;: null,
+                &quot;imageProfil&quot;: null,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+            }
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Commentaires&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commentaires" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commentaires"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commentaires"></code></pre>
+</span>
+<span id="execution-error-GETapi-commentaires" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commentaires"></code></pre>
+</span>
+<form id="form-GETapi-commentaires" data-method="GET"
+      data-path="api/commentaires"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commentaires', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commentaires"
+                    onclick="tryItOut('GETapi-commentaires');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commentaires"
+                    onclick="cancelTryOut('GETapi-commentaires');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commentaires" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commentaires</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-commentaires" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-commentaires"
+                                                                data-component="header"></label>
+        </p>
+                </form>
+
+            <h2 id="comment-management-POSTapi-commentaires">Add a new Comment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-commentaires">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/commentaires" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"idEtablissement\": 2,
+    \"commentaire\": \"J\'aime ce lieu\",
+    \"rating\": 3
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commentaires"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "idEtablissement": 2,
+    "commentaire": "J'aime ce lieu",
+    "rating": 3
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/commentaires',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'idEtablissement' =&gt; 2,
+            'commentaire' =&gt; 'J\'aime ce lieu',
+            'rating' =&gt; 3,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commentaires'
+payload = {
+    "idEtablissement": 2,
+    "commentaire": "J'aime ce lieu",
+    "rating": 3
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-commentaires">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;idUser&quot;: 1,
+        &quot;idEtablissement&quot;: 6,
+        &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+        &quot;rating&quot;: &quot;3&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation du commentaire reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-commentaires" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-commentaires"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-commentaires"></code></pre>
+</span>
+<span id="execution-error-POSTapi-commentaires" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-commentaires"></code></pre>
+</span>
+<form id="form-POSTapi-commentaires" data-method="POST"
+      data-path="api/commentaires"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-commentaires', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-commentaires"
+                    onclick="tryItOut('POSTapi-commentaires');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-commentaires"
+                    onclick="cancelTryOut('POSTapi-commentaires');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-commentaires" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/commentaires</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-commentaires" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-commentaires"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>idEtablissement</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="idEtablissement"
+               data-endpoint="POSTapi-commentaires"
+               value="2"
+               data-component="body" hidden>
+    <br>
+<p>the id of the Establishment.</p>
+        </p>
+                <p>
+            <b><code>commentaire</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="commentaire"
+               data-endpoint="POSTapi-commentaires"
+               value="J'aime ce lieu"
+               data-component="body" hidden>
+    <br>
+<p>user comment.</p>
+        </p>
+                <p>
+            <b><code>rating</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="rating"
+               data-endpoint="POSTapi-commentaires"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>rating.</p>
+        </p>
+        </form>
+
+            <h2 id="comment-management-GETapi-commentaires--id-">Show Comment by id.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-commentaires--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/commentaires/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commentaires/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/commentaires/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commentaires/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-commentaires--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;idUser&quot;: 1,
+        &quot;idEtablissement&quot;: 6,
+        &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+        &quot;rating&quot;: 3,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;etablissement&quot;: {
+            &quot;id&quot;: 6,
+            &quot;nom&quot;: &quot;SOGEFI&quot;,
+            &quot;idBatiment&quot;: &quot;2&quot;,
+            &quot;indicationAdresse&quot;: null,
+            &quot;codePostal&quot;: null,
+            &quot;siteInternet&quot;: null,
+            &quot;idCommercial&quot;: &quot;12&quot;,
+            &quot;idManager&quot;: null,
+            &quot;etage&quot;: &quot;2&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
+            &quot;vues&quot;: &quot;0&quot;,
+            &quot;phone&quot;: &quot;699999999&quot;,
+            &quot;whatsapp1&quot;: &quot;699999999&quot;,
+            &quot;whatsapp2&quot;: null,
+            &quot;description&quot;: null,
+            &quot;osmId&quot;: null,
+            &quot;updated&quot;: false,
+            &quot;revoir&quot;: &quot;0&quot;,
+            &quot;valide&quot;: &quot;0&quot;,
+            &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
+            &quot;ameliorations&quot;: null,
+            &quot;avis&quot;: 0,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;
+        },
+        &quot;user&quot;: {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Gautier 1996&quot;,
+            &quot;email&quot;: &quot;admin@position.cm&quot;,
+            &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+            &quot;phone&quot;: &quot;699999999&quot;,
+            &quot;fcmToken&quot;: null,
+            &quot;imageProfil&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+        }
+    },
+    &quot;message&quot;: &quot;Commentaire&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-commentaires--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-commentaires--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-commentaires--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-commentaires--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-commentaires--id-"></code></pre>
+</span>
+<form id="form-GETapi-commentaires--id-" data-method="GET"
+      data-path="api/commentaires/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-commentaires--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-commentaires--id-"
+                    onclick="tryItOut('GETapi-commentaires--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-commentaires--id-"
+                    onclick="cancelTryOut('GETapi-commentaires--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-commentaires--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/commentaires/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-commentaires--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-commentaires--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-commentaires--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the comment.</p>
+            </p>
+                    </form>
+
+            <h2 id="comment-management-PUTapi-commentaires--id-">Update Comment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-commentaires--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/commentaires/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"commentaire\": \"J\'aime ce lieu\",
+    \"rating\": 3,
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commentaires/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "commentaire": "J'aime ce lieu",
+    "rating": 3,
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/commentaires/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'commentaire' =&gt; 'J\'aime ce lieu',
+            'rating' =&gt; 3,
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commentaires/2'
+payload = {
+    "commentaire": "J'aime ce lieu",
+    "rating": 3,
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-commentaires--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;idUser&quot;: 1,
+        &quot;idEtablissement&quot;: 6,
+        &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+        &quot;rating&quot;: &quot;3&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-commentaires--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-commentaires--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-commentaires--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-commentaires--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-commentaires--id-"></code></pre>
+</span>
+<form id="form-PUTapi-commentaires--id-" data-method="PUT"
+      data-path="api/commentaires/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-commentaires--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-commentaires--id-"
+                    onclick="tryItOut('PUTapi-commentaires--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-commentaires--id-"
+                    onclick="cancelTryOut('PUTapi-commentaires--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-commentaires--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/commentaires/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/commentaires/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-commentaires--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-commentaires--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-commentaires--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the comment.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>commentaire</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="commentaire"
+               data-endpoint="PUTapi-commentaires--id-"
+               value="J'aime ce lieu"
+               data-component="body" hidden>
+    <br>
+<p>user comment.</p>
+        </p>
+                <p>
+            <b><code>rating</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="rating"
+               data-endpoint="PUTapi-commentaires--id-"
+               value="3"
+               data-component="body" hidden>
+    <br>
+<p>rating.</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-commentaires--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="comment-management-DELETEapi-commentaires--id-">Delete Comment.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-commentaires--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/commentaires/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/commentaires/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/commentaires/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/commentaires/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-commentaires--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-commentaires--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-commentaires--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-commentaires--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-commentaires--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-commentaires--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-commentaires--id-" data-method="DELETE"
+      data-path="api/commentaires/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-commentaires--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-commentaires--id-"
+                    onclick="tryItOut('DELETEapi-commentaires--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-commentaires--id-"
+                    onclick="cancelTryOut('DELETEapi-commentaires--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-commentaires--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/commentaires/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-commentaires--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-commentaires--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-commentaires--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the comment.</p>
+            </p>
+                    </form>
 
         <h1 id="abonnement-management">Abonnement management</h1>
 
@@ -1578,7 +2538,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"et\",
+    \"token\": \"quisquam\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1598,7 +2558,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "et",
+    "token": "quisquam",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1622,7 +2582,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'et',
+            'token' =&gt; 'quisquam',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1639,7 +2599,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "et",
+    "token": "quisquam",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1722,7 +2682,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="et"
+               value="quisquam"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1770,7 +2730,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php37C4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1827,7 +2787,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php37C4.tmp', 'r')
             ],
         ],
     ]
@@ -1842,7 +2802,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7AFC.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php37C4.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2496,7 +3456,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3862.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2545,7 +3505,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3862.tmp', 'r')
             ],
         ],
     ]
@@ -2560,7 +3520,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7BD9.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3862.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2953,7 +3913,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3939.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3012,7 +3972,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3939.tmp', 'r')
             ],
         ],
     ]
@@ -3027,7 +3987,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D7B.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3939.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3390,7 +4350,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php394A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3449,7 +4409,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php394A.tmp', 'r')
             ],
         ],
     ]
@@ -3464,7 +4424,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D8C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php394A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4023,7 +4983,7 @@ response.json()</code></pre></div>
     &quot;data&quot;: [
         {
             &quot;id&quot;: 2,
-            &quot;nom&quot;: &quot;Sogefi&quot;,
+            &quot;nom&quot;: &quot;BATIMENT&quot;,
             &quot;nombreNiveau&quot;: &quot;3&quot;,
             &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
             &quot;longitude&quot;: &quot;13&quot;,
@@ -4036,8 +4996,8 @@ response.json()</code></pre></div>
             &quot;quartier&quot;: &quot;Melen&quot;,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-            &quot;idCommercial&quot;: 6,
+            &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
+            &quot;idCommercial&quot;: 12,
             &quot;etablissements&quot;: [
                 {
                     &quot;id&quot;: 6,
@@ -4046,7 +5006,7 @@ response.json()</code></pre></div>
                     &quot;indicationAdresse&quot;: null,
                     &quot;codePostal&quot;: null,
                     &quot;siteInternet&quot;: null,
-                    &quot;idCommercial&quot;: &quot;6&quot;,
+                    &quot;idCommercial&quot;: &quot;12&quot;,
                     &quot;idManager&quot;: null,
                     &quot;etage&quot;: &quot;2&quot;,
                     &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
@@ -4066,32 +5026,32 @@ response.json()</code></pre></div>
                     &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
                     &quot;commercial&quot;: {
-                        &quot;id&quot;: 6,
-                        &quot;idUser&quot;: 14,
+                        &quot;id&quot;: 12,
+                        &quot;idUser&quot;: 20,
                         &quot;numeroCni&quot;: 1256987,
-                        &quot;numeroBadge&quot;: 1325,
+                        &quot;numeroBadge&quot;: 1234568,
                         &quot;ville&quot;: &quot;Douala&quot;,
                         &quot;quartier&quot;: &quot;Melen&quot;,
                         &quot;actif&quot;: true,
                         &quot;sexe&quot;: &quot;Masculin&quot;,
-                        &quot;whatsapp&quot;: 696652988,
+                        &quot;whatsapp&quot;: 699999999,
                         &quot;diplome&quot;: &quot;BAC&quot;,
                         &quot;tailleTshirt&quot;: &quot;XXL&quot;,
                         &quot;age&quot;: 25,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                        &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
                         &quot;user&quot;: {
-                            &quot;id&quot;: 14,
+                            &quot;id&quot;: 20,
                             &quot;name&quot;: &quot;Gautier&quot;,
                             &quot;email&quot;: &quot;bt@geo.sm&quot;,
-                            &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                            &quot;email_verified_at&quot;: null,
                             &quot;phone&quot;: &quot;691201946&quot;,
                             &quot;fcmToken&quot;: null,
-                            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                            &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
                             &quot;deleted_at&quot;: null,
-                            &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
                         }
                     },
                     &quot;manager&quot;: null,
@@ -4186,7 +5146,30 @@ response.json()</code></pre></div>
                             &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
                         }
                     ],
-                    &quot;commentaires&quot;: []
+                    &quot;commentaires&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;idUser&quot;: 1,
+                            &quot;idEtablissement&quot;: 6,
+                            &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+                            &quot;rating&quot;: 3,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;name&quot;: &quot;Gautier 1996&quot;,
+                                &quot;email&quot;: &quot;admin@position.cm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                                &quot;phone&quot;: &quot;699999999&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+                            }
+                        }
+                    ]
                 }
             ]
         }
@@ -4265,8 +5248,8 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nombreNiveau=3" \
     --form "codeBatiment=BATIMENT_MELEN_0569" \
-    --form "longitude=dolore" \
-    --form "latitude=voluptas" \
+    --form "longitude=aliquam" \
+    --form "latitude=sit" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
@@ -4274,7 +5257,7 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C88.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php38A3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4292,8 +5275,8 @@ const headers = {
 const body = new FormData();
 body.append('nombreNiveau', '3');
 body.append('codeBatiment', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'dolore');
-body.append('latitude', 'voluptas');
+body.append('longitude', 'aliquam');
+body.append('latitude', 'sit');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -4332,11 +5315,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'dolore'
+                'contents' =&gt; 'aliquam'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'voluptas'
+                'contents' =&gt; 'sit'
             ],
             [
                 'name' =&gt; 'ville',
@@ -4368,7 +5351,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C88.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php38A3.tmp', 'r')
             ],
         ],
     ]
@@ -4383,13 +5366,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C88.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php38A3.tmp', 'rb')
 }
 payload = {
     "nombreNiveau": 3,
     "codeBatiment": "BATIMENT_MELEN_0569",
-    "longitude": "dolore",
-    "latitude": "voluptas",
+    "longitude": "aliquam",
+    "latitude": "sit",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -4512,7 +5495,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="POSTapi-batiments"
-               value="dolore"
+               value="aliquam"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -4522,7 +5505,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="POSTapi-batiments"
-               value="voluptas"
+               value="sit"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -4692,7 +5675,7 @@ response.json()</code></pre></div>
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;id&quot;: 2,
-        &quot;nom&quot;: &quot;Sogefi&quot;,
+        &quot;nom&quot;: &quot;BATIMENT&quot;,
         &quot;nombreNiveau&quot;: &quot;3&quot;,
         &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
         &quot;longitude&quot;: &quot;13&quot;,
@@ -4705,8 +5688,8 @@ response.json()</code></pre></div>
         &quot;quartier&quot;: &quot;Melen&quot;,
         &quot;deleted_at&quot;: null,
         &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-        &quot;idCommercial&quot;: 6,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
+        &quot;idCommercial&quot;: 12,
         &quot;etablissements&quot;: [
             {
                 &quot;id&quot;: 6,
@@ -4715,7 +5698,7 @@ response.json()</code></pre></div>
                 &quot;indicationAdresse&quot;: null,
                 &quot;codePostal&quot;: null,
                 &quot;siteInternet&quot;: null,
-                &quot;idCommercial&quot;: &quot;6&quot;,
+                &quot;idCommercial&quot;: &quot;12&quot;,
                 &quot;idManager&quot;: null,
                 &quot;etage&quot;: &quot;2&quot;,
                 &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
@@ -4735,32 +5718,32 @@ response.json()</code></pre></div>
                 &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
                 &quot;commercial&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;idUser&quot;: 14,
+                    &quot;id&quot;: 12,
+                    &quot;idUser&quot;: 20,
                     &quot;numeroCni&quot;: 1256987,
-                    &quot;numeroBadge&quot;: 1325,
+                    &quot;numeroBadge&quot;: 1234568,
                     &quot;ville&quot;: &quot;Douala&quot;,
                     &quot;quartier&quot;: &quot;Melen&quot;,
                     &quot;actif&quot;: true,
                     &quot;sexe&quot;: &quot;Masculin&quot;,
-                    &quot;whatsapp&quot;: 696652988,
+                    &quot;whatsapp&quot;: 699999999,
                     &quot;diplome&quot;: &quot;BAC&quot;,
                     &quot;tailleTshirt&quot;: &quot;XXL&quot;,
                     &quot;age&quot;: 25,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                    &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
                     &quot;user&quot;: {
-                        &quot;id&quot;: 14,
+                        &quot;id&quot;: 20,
                         &quot;name&quot;: &quot;Gautier&quot;,
                         &quot;email&quot;: &quot;bt@geo.sm&quot;,
-                        &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                        &quot;email_verified_at&quot;: null,
                         &quot;phone&quot;: &quot;691201946&quot;,
                         &quot;fcmToken&quot;: null,
-                        &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                        &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
                     }
                 },
                 &quot;manager&quot;: null,
@@ -4855,7 +5838,30 @@ response.json()</code></pre></div>
                         &quot;updated_at&quot;: &quot;2022-03-01T12:46:29.000000Z&quot;
                     }
                 ],
-                &quot;commentaires&quot;: []
+                &quot;commentaires&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;idUser&quot;: 1,
+                        &quot;idEtablissement&quot;: 6,
+                        &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+                        &quot;rating&quot;: 3,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Gautier 1996&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcmToken&quot;: null,
+                            &quot;imageProfil&quot;: null,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -4945,15 +5951,15 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "idCommercial=2" \
     --form "nombreNiveau=3" \
-    --form "longitude=cum" \
-    --form "latitude=nulla" \
+    --form "longitude=corrupti" \
+    --form "latitude=unde" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php38B5.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4972,8 +5978,8 @@ const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
 body.append('nombreNiveau', '3');
-body.append('longitude', 'cum');
-body.append('latitude', 'nulla');
+body.append('longitude', 'corrupti');
+body.append('latitude', 'unde');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -5015,11 +6021,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'cum'
+                'contents' =&gt; 'corrupti'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'nulla'
+                'contents' =&gt; 'unde'
             ],
             [
                 'name' =&gt; 'indication',
@@ -5047,7 +6053,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php38B5.tmp', 'r')
             ],
         ],
     ]
@@ -5062,14 +6068,14 @@ import json
 
 url = 'http://localhost:8000/api/batiments/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CA9.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php38B5.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "idCommercial": 2,
     "nombreNiveau": 3,
-    "longitude": "cum",
-    "latitude": "nulla",
+    "longitude": "corrupti",
+    "latitude": "unde",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -5217,7 +6223,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="cum"
+               value="corrupti"
                data-component="body" hidden>
     <br>
 
@@ -5227,7 +6233,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="nulla"
+               value="unde"
                data-component="body" hidden>
     <br>
 
@@ -6577,7 +7583,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php397A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6621,7 +7627,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php397A.tmp', 'r')
             ],
         ],
     ]
@@ -6636,7 +7642,7 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DEC.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php397A.tmp', 'rb')
 }
 payload = {
     "nom": "Achat"
@@ -6764,7 +7770,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php397C.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6813,7 +7819,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php397C.tmp', 'r')
             ],
         ],
     ]
@@ -6828,7 +7834,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DEE.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php397C.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -7505,8 +8511,7 @@ response.json()</code></pre></div>
     --form "diplome=BAC" \
     --form "tailleTshirt=XXL" \
     --form "age=25" \
-    --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php395A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7534,7 +8539,6 @@ body.append('whatsapp', '699999999');
 body.append('diplome', 'BAC');
 body.append('tailleTshirt', 'XXL');
 body.append('age', '25');
-body.append('password', 'gautier123');
 body.append('file', document.querySelector('input[name="file"]').files[0]);
 
 fetch(url, {
@@ -7605,12 +8609,8 @@ $response = $client-&gt;post(
                 'contents' =&gt; '25'
             ],
             [
-                'name' =&gt; 'password',
-                'contents' =&gt; 'gautier123'
-            ],
-            [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php395A.tmp', 'r')
             ],
         ],
     ]
@@ -7625,7 +8625,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7DAC.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php395A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -7639,8 +8639,7 @@ payload = {
     "whatsapp": 699999999,
     "diplome": "BAC",
     "tailleTshirt": "XXL",
-    "age": 25,
-    "password": "gautier123"
+    "age": 25
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -7885,16 +8884,6 @@ response.json()</code></pre></div>
     <br>
 <p>required.</p>
         </p>
-                <p>
-            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="password"
-               data-endpoint="POSTapi-commercials"
-               value="gautier123"
-               data-component="body" hidden>
-    <br>
-<p>the password of the commercial.</p>
-        </p>
         </form>
 
             <h2 id="commerciaux-management-PUTapi-commercials--id-">Update Commercial.</h2>
@@ -7928,7 +8917,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C19.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3882.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8027,7 +9016,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C19.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3882.tmp', 'r')
             ],
         ],
     ]
@@ -8042,7 +9031,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C19.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3882.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -8841,7 +9830,8 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"nom\": \"Achat\",
-    \"idTypeCommodite\": 5
+    \"idTypeCommodite\": 5,
+    \"idCategories\": \"2,4\"
 }"
 </code></pre></div>
 
@@ -8860,7 +9850,8 @@ const headers = {
 
 let body = {
     "nom": "Achat",
-    "idTypeCommodite": 5
+    "idTypeCommodite": 5,
+    "idCategories": "2,4"
 };
 
 fetch(url, {
@@ -8884,6 +9875,7 @@ $response = $client-&gt;post(
         'json' =&gt; [
             'nom' =&gt; 'Achat',
             'idTypeCommodite' =&gt; 5,
+            'idCategories' =&gt; '2,4',
         ],
     ]
 );
@@ -8898,7 +9890,8 @@ import json
 url = 'http://localhost:8000/api/commodites'
 payload = {
     "nom": "Achat",
-    "idTypeCommodite": 5
+    "idTypeCommodite": 5,
+    "idCategories": "2,4"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -9005,6 +9998,16 @@ response.json()</code></pre></div>
                data-component="body" hidden>
     <br>
 <p>the id TypeCommodite.</p>
+        </p>
+                <p>
+            <b><code>idCategories</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="idCategories"
+               data-endpoint="POSTapi-commodites"
+               value="2,4"
+               data-component="body" hidden>
+    <br>
+<p>the id of categories.</p>
         </p>
         </form>
 
@@ -9573,7 +10576,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php37F3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -9630,7 +10633,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php37F3.tmp', 'r')
             ],
         ],
     ]
@@ -9645,7 +10648,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7B3C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php37F3.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -10137,7 +11140,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/11" \
+    "http://localhost:8000/api/managers/12" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -10145,12 +11148,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7C29.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3883.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/11"
+    "http://localhost:8000/api/managers/12"
 );
 
 const headers = {
@@ -10176,7 +11179,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/11',
+    'http://localhost:8000/api/managers/12',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -10199,7 +11202,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7C29.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3883.tmp', 'r')
             ],
         ],
     ]
@@ -10212,9 +11215,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/11'
+url = 'http://localhost:8000/api/managers/12'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7C29.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3883.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -10332,7 +11335,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="11"
+               value="12"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -10404,7 +11407,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "idEtablissement=2" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3926.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -10448,7 +11451,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3926.tmp', 'r')
             ],
         ],
     ]
@@ -10463,7 +11466,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D4A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3926.tmp', 'rb')
 }
 payload = {
     "idEtablissement": 2
@@ -10589,7 +11592,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php3928.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -10633,7 +11636,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php3928.tmp', 'r')
             ],
         ],
     ]
@@ -10648,7 +11651,7 @@ import json
 
 url = 'http://localhost:8000/api/images/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7D5B.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php3928.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -11212,24 +12215,12 @@ response.json()</code></pre></div>
 <code class="language-json">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;nom&quot;: &quot;SOGEFI&quot;,
-        &quot;indicationAdresse&quot;: null,
-        &quot;codePostal&quot;: null,
-        &quot;siteInternet&quot;: null,
-        &quot;etage&quot;: &quot;2&quot;,
-        &quot;phone&quot;: &quot;699999999&quot;,
-        &quot;whatsapp1&quot;: &quot;699999999&quot;,
-        &quot;whatsapp2&quot;: null,
-        &quot;description&quot;: null,
-        &quot;osmId&quot;: null,
-        &quot;services&quot;: &quot;PAIN;OM;MOMO&quot;,
-        &quot;ameliorations&quot;: null,
-        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
-        &quot;idCommercial&quot;: 6,
-        &quot;idBatiment&quot;: 2,
-        &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
-        &quot;id&quot;: 6
+        &quot;jour&quot;: &quot;Lundi&quot;,
+        &quot;plageHoraire&quot;: &quot;07:00-11:00;13:00-17:00&quot;,
+        &quot;idEtablissement&quot;: 6,
+        &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;,
+        &quot;id&quot;: 1
     },
     &quot;message&quot;: &quot;Update Success&quot;
 }</code>
@@ -11821,7 +12812,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php398D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11870,7 +12861,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php398D.tmp', 'r')
             ],
         ],
     ]
@@ -11885,7 +12876,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7E0E.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php398D.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -12032,7 +13023,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7E20.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php398F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -12086,7 +13077,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7E20.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php398F.tmp', 'r')
             ],
         ],
     ]
@@ -12101,7 +13092,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7E20.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php398F.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -13450,7 +14441,7 @@ response.json()</code></pre></div>
             &quot;indicationAdresse&quot;: null,
             &quot;codePostal&quot;: null,
             &quot;siteInternet&quot;: null,
-            &quot;idCommercial&quot;: &quot;6&quot;,
+            &quot;idCommercial&quot;: &quot;12&quot;,
             &quot;idManager&quot;: null,
             &quot;etage&quot;: &quot;2&quot;,
             &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
@@ -13471,7 +14462,7 @@ response.json()</code></pre></div>
             &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 2,
-                &quot;nom&quot;: &quot;Sogefi&quot;,
+                &quot;nom&quot;: &quot;BATIMENT&quot;,
                 &quot;nombreNiveau&quot;: &quot;3&quot;,
                 &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_0569&quot;,
                 &quot;longitude&quot;: &quot;13&quot;,
@@ -13484,8 +14475,8 @@ response.json()</code></pre></div>
                 &quot;quartier&quot;: &quot;Melen&quot;,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
-                &quot;idCommercial&quot;: 6
+                &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
+                &quot;idCommercial&quot;: 12
             },
             &quot;sous_categories&quot;: [
                 {
@@ -13578,34 +14569,57 @@ response.json()</code></pre></div>
                     &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
                 }
             ],
-            &quot;commentaires&quot;: [],
+            &quot;commentaires&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;idUser&quot;: 1,
+                    &quot;idEtablissement&quot;: 6,
+                    &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+                    &quot;rating&quot;: 3,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                    &quot;user&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;name&quot;: &quot;Gautier 1996&quot;,
+                        &quot;email&quot;: &quot;admin@position.cm&quot;,
+                        &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;fcmToken&quot;: null,
+                        &quot;imageProfil&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+                    }
+                }
+            ],
             &quot;commercial&quot;: {
-                &quot;id&quot;: 6,
-                &quot;idUser&quot;: 14,
+                &quot;id&quot;: 12,
+                &quot;idUser&quot;: 20,
                 &quot;numeroCni&quot;: 1256987,
-                &quot;numeroBadge&quot;: 1325,
+                &quot;numeroBadge&quot;: 1234568,
                 &quot;ville&quot;: &quot;Douala&quot;,
                 &quot;quartier&quot;: &quot;Melen&quot;,
                 &quot;actif&quot;: true,
                 &quot;sexe&quot;: &quot;Masculin&quot;,
-                &quot;whatsapp&quot;: 696652988,
+                &quot;whatsapp&quot;: 699999999,
                 &quot;diplome&quot;: &quot;BAC&quot;,
                 &quot;tailleTshirt&quot;: &quot;XXL&quot;,
                 &quot;age&quot;: 25,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
                 &quot;user&quot;: {
-                    &quot;id&quot;: 14,
+                    &quot;id&quot;: 20,
                     &quot;name&quot;: &quot;Gautier&quot;,
                     &quot;email&quot;: &quot;bt@geo.sm&quot;,
-                    &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                    &quot;email_verified_at&quot;: null,
                     &quot;phone&quot;: &quot;691201946&quot;,
                     &quot;fcmToken&quot;: null,
-                    &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                    &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
                 }
             },
             &quot;manager&quot;: null
@@ -13680,8 +14694,8 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "whatsapp1=699999999" \
     --form "services=OM;MOMO" \
-    --form "idSousCategorie=ex" \
-    --form "idCommodite=non" \
+    --form "idSousCategorie=vel" \
+    --form "idCommodite=ullam" \
     --form "idBatiment=2" \
     --form "indicationAdresse=Rue de Melen" \
     --form "codePostal=59684" \
@@ -13690,7 +14704,7 @@ response.json()</code></pre></div>
     --form "whatsapp2=699999999" \
     --form "osmId=111259658236" \
     --form "ameliorations=Site internet,videos" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php38E5.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -13711,8 +14725,8 @@ body.append('etage', '3');
 body.append('phone', '699999999');
 body.append('whatsapp1', '699999999');
 body.append('services', 'OM;MOMO');
-body.append('idSousCategorie', 'ex');
-body.append('idCommodite', 'non');
+body.append('idSousCategorie', 'vel');
+body.append('idCommodite', 'ullam');
 body.append('idBatiment', '2');
 body.append('indicationAdresse', 'Rue de Melen');
 body.append('codePostal', '59684');
@@ -13764,11 +14778,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'idSousCategorie',
-                'contents' =&gt; 'ex'
+                'contents' =&gt; 'vel'
             ],
             [
                 'name' =&gt; 'idCommodite',
-                'contents' =&gt; 'non'
+                'contents' =&gt; 'ullam'
             ],
             [
                 'name' =&gt; 'idBatiment',
@@ -13804,7 +14818,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php38E5.tmp', 'r')
             ],
         ],
     ]
@@ -13819,7 +14833,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CD9.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php38E5.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -13827,8 +14841,8 @@ payload = {
     "phone": "699999999",
     "whatsapp1": "699999999",
     "services": "OM;MOMO",
-    "idSousCategorie": "ex",
-    "idCommodite": "non",
+    "idSousCategorie": "vel",
+    "idCommodite": "ullam",
     "idBatiment": 2,
     "indicationAdresse": "Rue de Melen",
     "codePostal": "59684",
@@ -13985,7 +14999,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idSousCategorie"
                data-endpoint="POSTapi-etablissements"
-               value="ex"
+               value="vel"
                data-component="body" hidden>
     <br>
 
@@ -13995,7 +15009,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idCommodite"
                data-endpoint="POSTapi-etablissements"
-               value="non"
+               value="ullam"
                data-component="body" hidden>
     <br>
 
@@ -14129,7 +15143,7 @@ response.json()</code></pre></div>
     --form "revoir=1" \
     --form "valide=1" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php38F6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14258,7 +15272,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php38F6.tmp', 'r')
             ],
         ],
     ]
@@ -14273,7 +15287,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7CEB.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php38F6.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -14841,7 +15855,7 @@ response.json()</code></pre></div>
         &quot;indicationAdresse&quot;: null,
         &quot;codePostal&quot;: null,
         &quot;siteInternet&quot;: null,
-        &quot;idCommercial&quot;: &quot;6&quot;,
+        &quot;idCommercial&quot;: &quot;12&quot;,
         &quot;idManager&quot;: null,
         &quot;etage&quot;: &quot;2&quot;,
         &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg&quot;,
@@ -14876,7 +15890,7 @@ response.json()</code></pre></div>
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
-            &quot;idCommercial&quot;: 6
+            &quot;idCommercial&quot;: 12
         },
         &quot;sous_categories&quot;: [
             {
@@ -14969,34 +15983,57 @@ response.json()</code></pre></div>
                 &quot;updated_at&quot;: &quot;2022-03-01T12:45:05.000000Z&quot;
             }
         ],
-        &quot;commentaires&quot;: [],
+        &quot;commentaires&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;idUser&quot;: 1,
+                &quot;idEtablissement&quot;: 6,
+                &quot;commentaire&quot;: &quot;J'aime beaucoup&quot;,
+                &quot;rating&quot;: 3,
+                &quot;deleted_at&quot;: null,
+                &quot;created_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T23:10:41.000000Z&quot;,
+                &quot;user&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Gautier 1996&quot;,
+                    &quot;email&quot;: &quot;admin@position.cm&quot;,
+                    &quot;email_verified_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;phone&quot;: &quot;699999999&quot;,
+                    &quot;fcmToken&quot;: null,
+                    &quot;imageProfil&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-18T10:11:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-19T19:09:00.000000Z&quot;
+                }
+            }
+        ],
         &quot;commercial&quot;: {
-            &quot;id&quot;: 6,
-            &quot;idUser&quot;: 14,
+            &quot;id&quot;: 12,
+            &quot;idUser&quot;: 20,
             &quot;numeroCni&quot;: 1256987,
-            &quot;numeroBadge&quot;: 1325,
+            &quot;numeroBadge&quot;: 1234568,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
             &quot;actif&quot;: true,
             &quot;sexe&quot;: &quot;Masculin&quot;,
-            &quot;whatsapp&quot;: 696652988,
+            &quot;whatsapp&quot;: 699999999,
             &quot;diplome&quot;: &quot;BAC&quot;,
             &quot;tailleTshirt&quot;: &quot;XXL&quot;,
             &quot;age&quot;: 25,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-28T18:24:53.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 14,
+                &quot;id&quot;: 20,
                 &quot;name&quot;: &quot;Gautier&quot;,
                 &quot;email&quot;: &quot;bt@geo.sm&quot;,
-                &quot;email_verified_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;,
+                &quot;email_verified_at&quot;: null,
                 &quot;phone&quot;: &quot;691201946&quot;,
                 &quot;fcmToken&quot;: null,
-                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646072685_images.jpg&quot;,
+                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-28T18:24:45.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-28T18:26:29.000000Z&quot;
+                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
             }
         },
         &quot;manager&quot;: null

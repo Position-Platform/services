@@ -66,6 +66,7 @@ Route::middleware('auth.apikey')->group(
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
+            Route::apiResource('commentaires', App\Http\Controllers\Api\CommentaireController::class);
 
             Route::post('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'store']);
             Route::put('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'update']);
