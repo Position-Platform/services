@@ -270,7 +270,7 @@
                                       <tr style="vertical-align: top">
                                         <td align="left" valign="middle"
                                           style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-                                          <a href="https://twitter.com/Position2021" title="Twitter" target="_blank">
+                                          <a href="https://twitter.com/Position237" title="Twitter" target="_blank">
                                             <img src="https://service.geo.sm/var/www/image-1.png" alt="Twitter" title="Twitter" width="32"
                                               style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                           </a>
@@ -287,7 +287,7 @@
                                       <tr style="vertical-align: top">
                                         <td align="left" valign="middle"
                                           style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
-                                          <a href="https://www.linkedin.com/company/position2021" title="LinkedIn" target="_blank">
+                                          <a href="https://www.linkedin.com/company/position237" title="LinkedIn" target="_blank">
                                             <img src="https://service.geo.sm/var/www/image-3.png" alt="LinkedIn" title="LinkedIn" width="32"
                                               style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                           </a>
@@ -345,7 +345,7 @@
 
                               <h4
                                 style="margin: 0px; line-height: 140%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: arial,helvetica,sans-serif; font-size: 11px;">
-                                &copy; 2021 Position. All rights reserved
+                                &copy; 2022 Position. All rights reserved
                               </h4>
 
                             </td>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Models\Admin;
 use App\Models\Commercial;
 use App\Models\User;
-use App\Notifications\SendEmailParams;
 use App\Notifications\SendParams;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
