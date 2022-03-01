@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "data": {
+        "nom": "SOGEFI",
+        "indicationAdresse": null,
+        "codePostal": null,
+        "siteInternet": null,
+        "etage": "2",
+        "phone": "699999999",
+        "whatsapp1": "699999999",
+        "whatsapp2": null,
+        "description": null,
+        "osmId": null,
+        "services": "PAIN;OM;MOMO",
+        "ameliorations": null,
+        "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
+        "idCommercial": 6,
+        "idBatiment": 2,
+        "updated_at": "2022-03-01T12:39:31.000000Z",
+        "created_at": "2022-03-01T12:39:31.000000Z",
+        "id": 6
+    },
+    "message": "Update Success"
+}

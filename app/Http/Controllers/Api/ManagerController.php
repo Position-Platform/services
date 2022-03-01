@@ -82,13 +82,21 @@ class ManagerController extends BaseController
 
             $user->notify(new SendParams($user->phone, $password));
 
+            $phone = "00237" . $user->phone;
+
+            $sms = $this->sendSms($user, $phone, $password);
+
             $inputManager['idAbonnement'] = 1;
 
             $manager = $user->manager()->create($inputManager);
 
             $manager->user->roles;
 
+            $manager["sms"] = $sms;
+
             DB::commit();
+
+
 
             return $this->sendResponse($manager, "Création du Manager reussie", 201);
         } catch (\Exception $ex) {

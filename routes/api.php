@@ -48,8 +48,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('commodites', [App\Http\Controllers\Api\CommoditeController::class, 'index']);
         Route::get('commodites/{id}', [App\Http\Controllers\Api\CommoditeController::class, 'show']);
 
-
-
+        Route::get('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'index']);
+        Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
@@ -65,8 +65,19 @@ Route::middleware('auth.apikey')->group(
             Route::put('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'update']);
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
-
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
+
+            Route::post('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'store']);
+            Route::put('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'update']);
+            Route::delete('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'destroy']);
+
+            Route::post('horaires', [App\Http\Controllers\Api\HoraireController::class, 'store']);
+            Route::put('horaires/{id}', [App\Http\Controllers\Api\HoraireController::class, 'update']);
+            Route::delete('horaires/{id}', [App\Http\Controllers\Api\HoraireController::class, 'destroy']);
+
+            Route::post('images', [App\Http\Controllers\Api\ImageController::class, 'store']);
+            Route::put('images/{id}', [App\Http\Controllers\Api\ImageController::class, 'update']);
+            Route::delete('images/{id}', [App\Http\Controllers\Api\ImageController::class, 'destroy']);
 
 
             Route::group(['middleware' => ['role:admin']], function () {

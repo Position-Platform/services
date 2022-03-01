@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Models\Admin;
 use App\Models\Commercial;
 use App\Models\User;
-use App\Notifications\SendEmailParams;
 use App\Notifications\SendParams;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,7 +42,6 @@ class CommercialController extends BaseController
      * @header Content-Type application/json
      * @bodyParam name string required the name of the commercial. Example: Gautier
      * @bodyParam email string required the email of the commercial. Example: gautier@position.cm
-     * @bodyParam password string required the password of the commercial. Example: gautier123
      * @bodyParam phone int required The phone number of the commercial. Example:699999999
      * @bodyParam file file Profile Image.
      * @bodyParam numeroCni int required. Example: 1256987
@@ -97,7 +95,13 @@ class CommercialController extends BaseController
             $user = User::create($input);
             $user->assignRole('commercial');
 
+
+
             $user->notify(new SendParams($user->phone, $password));
+
+            $phone = "00237" . $user->phone;
+
+            $sms = $this->sendSms($user, $phone, $password);
 
             $inputCommercial['numeroCni'] = $request->numeroCni;
             $inputCommercial['numeroBadge'] = $request->numeroBadge;
@@ -113,7 +117,10 @@ class CommercialController extends BaseController
 
             $commercial->user->roles;
 
+            $commercial["sms"] = $sms;
+
             DB::commit();
+
 
             return $this->sendResponse($commercial, "Création du commercial reussie", 201);
         } catch (\Exception $ex) {

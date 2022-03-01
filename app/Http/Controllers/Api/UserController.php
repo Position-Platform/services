@@ -85,7 +85,7 @@ class UserController extends BaseController
 
             return $this->sendResponse($success, 'Connexion réussie.');
         } else {
-            return $this->sendError('Pas autorisé.', ['error' => 'Unauthorised']);
+            return $this->sendError('Pas autorisé.', ['error' => 'Login Error']);
         }
     }
 

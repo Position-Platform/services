@@ -24,7 +24,7 @@ class SendParams extends Notification
 
     public function via($notifiable)
     {
-        return ['mail', 'vonage'];
+        return ['mail'];
     }
 
 
