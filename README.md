@@ -20,6 +20,7 @@ $ cp .env.example .env
 DB_DATABASE=database name
 DB_USERNAME=database username
 DB_PASSWORD=database password
+
 MAIL_MAILER=smtp
 MAIL_HOST=your host
 MAIL_PORT=your port
@@ -28,6 +29,13 @@ MAIL_PASSWORD=your password
 MAIL_ENCRYPTION=TLS
 MAIL_FROM_ADDRESS=infos@position.cm
 MAIL_FROM_NAME=Position
+
+SCOUT_DRIVER=meilisearch
+MEILISEARCH_HOST=meilisearch host
+MEILISEARCH_KEY=meilisearch apikey
+
+NEXAH_USERNAME=nexah username
+NEXAH_PASSWORD=nexah password
 ```
 
 ```
