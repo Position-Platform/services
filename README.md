@@ -10,6 +10,8 @@ $ cd services
 ```
 
 ```
+$ docker-compose up -d
+$ docker exec -it api-position bash
 $ composer install
 $ cp .env.example .env
 ```
@@ -38,6 +40,15 @@ NEXAH_USERNAME=nexah username
 NEXAH_PASSWORD=nexah password
 ```
 
+-   edit & add Docker config in .env
+
+```
+APP_PORT=
+APP_PORT_HTTPS=
+FORWARD_DB_PORT=
+PG_PASSWORD=
+```
+
 ```
 $ php artisan key:generate
 $ php artisan migrate
@@ -48,3 +59,27 @@ $ php artisan storage:link
 $ php artisan scout:import "App\Models\SousCategorie"
 $ exit
 ```
+
+-   Add authorization in docker
+
+```
+go to services folder
+$ chown -R www-data:www-data *
+$ docker exec -it position-services-pgsql bash
+```
+
+## Documentation
+
+### Allowed verbs
+
+`GET`, `POST`, `PUT`, `PATCH` ou `DELETE`
+
+### Required in the header of all requests
+
+```
+Content-Type: application/json
+Accept: application/json
+X-Authorization : yourApiKey
+```
+
+-   Documentation Link : https://prrojectUrl/docs
