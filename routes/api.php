@@ -69,6 +69,7 @@ Route::middleware('auth.apikey')->group(
 
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
             Route::apiResource('commentaires', App\Http\Controllers\Api\CommentaireController::class);
+            Route::post('trackings', [App\Http\Controllers\Api\TrackingController::class, 'store']);
 
             Route::post('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'store']);
             Route::put('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'update']);
