@@ -41,6 +41,7 @@ Route::middleware('auth.apikey')->group(
 
         Route::get('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'index']);
         Route::get('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'show']);
+        Route::get('search/souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'search']);
 
         Route::get('typecommodites', [App\Http\Controllers\Api\TypeCommoditeController::class, 'index']);
         Route::get('typecommodites/{id}', [App\Http\Controllers\Api\TypeCommoditeController::class, 'show']);
@@ -50,6 +51,7 @@ Route::middleware('auth.apikey')->group(
 
         Route::get('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'index']);
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
+        Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);

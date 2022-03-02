@@ -294,14 +294,14 @@ endpoints:
         name: longitude
         description: required.
         required: false
-        example: aliquam
+        example: et
         type: string
         custom: []
       latitude:
         name: latitude
         description: required.
         required: false
-        example: sit
+        example: ullam
         type: string
         custom: []
       ville:
@@ -665,14 +665,14 @@ endpoints:
         name: longitude
         description: ''
         required: false
-        example: corrupti
+        example: illo
         type: string.
         custom: []
       latitude:
         name: latitude
         description: ''
         required: false
-        example: unde
+        example: et
         type: string.
         custom: []
       file:

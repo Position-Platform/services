@@ -169,4 +169,23 @@ class SousCategorieController extends BaseController
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
+
+    /**
+     * Search SubCategory.
+     *
+     * @header Content-Type application/json
+     * @queryParam q string required search value. Example: piscine
+     * @responseFile storage/responses/getsouscategories.json
+     */
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $souscategories = SousCategorie::search($q)->get();
+
+        foreach ($souscategories as $key => $souscategorie) {
+            $souscategorie->categorie->commodites;
+        }
+
+        return $this->sendResponse($souscategories, 'Liste des Sous-Categories');
+    }
 }

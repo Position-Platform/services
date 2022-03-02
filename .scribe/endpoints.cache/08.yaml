@@ -307,7 +307,7 @@ endpoints:
         name: id
         description: 'The ID of the manager.'
         required: true
-        example: 12
+        example: 16
         type: integer
         custom: []
     queryParameters: []
