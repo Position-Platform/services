@@ -7,7 +7,7 @@
         "indicationAdresse": null,
         "codePostal": null,
         "siteInternet": null,
-        "idCommercial": "6",
+        "idCommercial": "12",
         "idManager": null,
         "etage": "2",
         "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
@@ -42,7 +42,7 @@
             "deleted_at": null,
             "created_at": "2022-02-28T20:53:25.000000Z",
             "updated_at": "2022-03-01T12:58:06.000000Z",
-            "idCommercial": 6
+            "idCommercial": 12
         },
         "sous_categories": [
             {
@@ -135,34 +135,57 @@
                 "updated_at": "2022-03-01T12:45:05.000000Z"
             }
         ],
-        "commentaires": [],
+        "commentaires": [
+            {
+                "id": 1,
+                "idUser": 1,
+                "idEtablissement": 6,
+                "commentaire": "J'aime beaucoup",
+                "rating": 3,
+                "deleted_at": null,
+                "created_at": "2022-03-01T23:10:41.000000Z",
+                "updated_at": "2022-03-01T23:10:41.000000Z",
+                "user": {
+                    "id": 1,
+                    "name": "Gautier 1996",
+                    "email": "admin@position.cm",
+                    "email_verified_at": "2022-02-18T10:11:34.000000Z",
+                    "phone": "699999999",
+                    "fcmToken": null,
+                    "imageProfil": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-18T10:11:34.000000Z",
+                    "updated_at": "2022-02-19T19:09:00.000000Z"
+                }
+            }
+        ],
         "commercial": {
-            "id": 6,
-            "idUser": 14,
+            "id": 12,
+            "idUser": 20,
             "numeroCni": 1256987,
-            "numeroBadge": 1325,
+            "numeroBadge": 1234568,
             "ville": "Douala",
             "quartier": "Melen",
             "actif": true,
             "sexe": "Masculin",
-            "whatsapp": 696652988,
+            "whatsapp": 699999999,
             "diplome": "BAC",
             "tailleTshirt": "XXL",
             "age": 25,
             "deleted_at": null,
-            "created_at": "2022-02-28T18:24:53.000000Z",
-            "updated_at": "2022-02-28T18:24:53.000000Z",
+            "created_at": "2022-03-01T15:08:58.000000Z",
+            "updated_at": "2022-03-01T15:08:58.000000Z",
             "user": {
-                "id": 14,
+                "id": 20,
                 "name": "Gautier",
                 "email": "bt@geo.sm",
-                "email_verified_at": "2022-02-28T18:26:29.000000Z",
+                "email_verified_at": null,
                 "phone": "691201946",
                 "fcmToken": null,
-                "imageProfil": "/storage/uploads/commerciaux/profils/1646072685_images.jpg",
+                "imageProfil": "/storage/uploads/commerciaux/profils/1646147325_Image1.png",
                 "deleted_at": null,
-                "created_at": "2022-02-28T18:24:45.000000Z",
-                "updated_at": "2022-02-28T18:26:29.000000Z"
+                "created_at": "2022-03-01T15:08:45.000000Z",
+                "updated_at": "2022-03-01T15:08:45.000000Z"
             }
         },
         "manager": null

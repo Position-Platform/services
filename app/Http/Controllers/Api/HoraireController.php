@@ -99,7 +99,7 @@ class HoraireController extends BaseController
      * @urlParam id int required the id of the Schedule. Example: 2
      * @bodyParam plageHoraire string  time slot. Example: 10:00-15:00;16:00-18:00
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateetablissement.json
+     * @responseFile 201 storage/responses/updatehoraire.json
      */
     public function update(Request $request, $id)
     {

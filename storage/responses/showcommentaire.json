@@ -1,0 +1,53 @@
+{
+    "success": true,
+    "data": {
+        "id": 1,
+        "idUser": 1,
+        "idEtablissement": 6,
+        "commentaire": "J'aime beaucoup",
+        "rating": 3,
+        "deleted_at": null,
+        "created_at": "2022-03-01T23:10:41.000000Z",
+        "updated_at": "2022-03-01T23:10:41.000000Z",
+        "etablissement": {
+            "id": 6,
+            "nom": "SOGEFI",
+            "idBatiment": "2",
+            "indicationAdresse": null,
+            "codePostal": null,
+            "siteInternet": null,
+            "idCommercial": "12",
+            "idManager": null,
+            "etage": "2",
+            "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
+            "vues": "0",
+            "phone": "699999999",
+            "whatsapp1": "699999999",
+            "whatsapp2": null,
+            "description": null,
+            "osmId": null,
+            "updated": false,
+            "revoir": "0",
+            "valide": "0",
+            "services": "PAIN;OM;MOMO",
+            "ameliorations": null,
+            "avis": 0,
+            "deleted_at": null,
+            "created_at": "2022-03-01T12:39:31.000000Z",
+            "updated_at": "2022-03-01T12:39:31.000000Z"
+        },
+        "user": {
+            "id": 1,
+            "name": "Gautier 1996",
+            "email": "admin@position.cm",
+            "email_verified_at": "2022-02-18T10:11:34.000000Z",
+            "phone": "699999999",
+            "fcmToken": null,
+            "imageProfil": null,
+            "deleted_at": null,
+            "created_at": "2022-02-18T10:11:34.000000Z",
+            "updated_at": "2022-02-19T19:09:00.000000Z"
+        }
+    },
+    "message": "Commentaire"
+}

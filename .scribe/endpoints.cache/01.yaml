@@ -101,7 +101,7 @@ endpoints:
         name: token
         description: 'token give in mail.'
         required: true
-        example: et
+        example: saepe
         type: string
         custom: []
       password:

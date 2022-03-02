@@ -1,92 +1,12 @@
-name: 'Commerciaux management'
-description: |-
-
-  APIs for managing Commerciaux
+name: 'Comment management'
+description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/commercials/{id}'
+    uri: api/commentaires
     metadata:
-      title: 'Show Commercial by id.'
-      description: ''
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-      X-Authorization: apiKey
-    urlParameters:
-      id:
-        name: id
-        description: 'the id of the commercial.'
-        required: true
-        example: 2
-        type: integer
-        custom: []
-    queryParameters: []
-    bodyParameters: []
-    responses:
-      -
-        status: 200
-        content: |
-          {
-              "success": true,
-              "data": {
-                  "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
-                  "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
-              },
-              "message": "Commercial"
-          }
-        headers: []
-        description: '200'
-    responseFields: []
-  -
-    httpMethods:
-      - GET
-    uri: api/commercials
-    metadata:
-      title: 'Get all Commerciaux.'
+      title: 'Get all Comment.'
       description: ''
       authenticated: true
       custom: []
@@ -107,49 +27,55 @@ endpoints:
               "data": [
                   {
                       "id": 1,
-                      "idUser": 3,
-                      "numeroCni": 1256987,
-                      "numeroBadge": 1325,
-                      "ville": "Douala",
-                      "quartier": "Melen",
-                      "actif": true,
-                      "sexe": "Masculin",
-                      "whatsapp": 699999999,
-                      "diplome": "BAC",
-                      "tailleTshirt": "XXL",
-                      "age": 25,
+                      "idUser": 1,
+                      "idEtablissement": 6,
+                      "commentaire": "J'aime beaucoup",
+                      "rating": 3,
                       "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:11.000000Z",
-                      "updated_at": "2022-02-19T11:25:11.000000Z",
-                      "user": {
-                          "id": 3,
-                          "name": "Gautier",
-                          "email": "bt@geo.sm",
-                          "email_verified_at": null,
-                          "phone": "699999998",
-                          "fcmToken": null,
-                          "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
+                      "created_at": "2022-03-01T23:10:41.000000Z",
+                      "updated_at": "2022-03-01T23:10:41.000000Z",
+                      "etablissement": {
+                          "id": 6,
+                          "nom": "SOGEFI",
+                          "idBatiment": "2",
+                          "indicationAdresse": null,
+                          "codePostal": null,
+                          "siteInternet": null,
+                          "idCommercial": "12",
+                          "idManager": null,
+                          "etage": "2",
+                          "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
+                          "vues": "0",
+                          "phone": "699999999",
+                          "whatsapp1": "699999999",
+                          "whatsapp2": null,
+                          "description": null,
+                          "osmId": null,
+                          "updated": false,
+                          "revoir": "0",
+                          "valide": "0",
+                          "services": "PAIN;OM;MOMO",
+                          "ameliorations": null,
+                          "avis": 0,
                           "deleted_at": null,
-                          "created_at": "2022-02-19T11:25:06.000000Z",
-                          "updated_at": "2022-02-19T11:25:06.000000Z",
-                          "roles": [
-                              {
-                                  "id": 2,
-                                  "name": "commercial",
-                                  "guard_name": "api",
-                                  "created_at": "2022-02-18T10:11:34.000000Z",
-                                  "updated_at": "2022-02-18T10:11:34.000000Z",
-                                  "pivot": {
-                                      "model_id": 3,
-                                      "role_id": 2,
-                                      "model_type": "App\\Models\\User"
-                                  }
-                              }
-                          ]
+                          "created_at": "2022-03-01T12:39:31.000000Z",
+                          "updated_at": "2022-03-01T12:39:31.000000Z"
+                      },
+                      "user": {
+                          "id": 1,
+                          "name": "Gautier 1996",
+                          "email": "admin@position.cm",
+                          "email_verified_at": "2022-02-18T10:11:34.000000Z",
+                          "phone": "699999999",
+                          "fcmToken": null,
+                          "imageProfil": null,
+                          "deleted_at": null,
+                          "created_at": "2022-02-18T10:11:34.000000Z",
+                          "updated_at": "2022-02-19T19:09:00.000000Z"
                       }
                   }
               ],
-              "message": "Liste des Commerciaux"
+              "message": "Liste des Commentaires"
           }
         headers: []
         description: '200'
@@ -157,117 +83,40 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/commercials
+    uri: api/commentaires
     metadata:
-      title: 'Add a new Commercial.'
+      title: 'Add a new Comment.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: multipart/form-data
+      Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
     urlParameters: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'the name of the commercial.'
+      idEtablissement:
+        name: idEtablissement
+        description: 'the id of the Establishment.'
         required: true
-        example: Gautier
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'the email of the commercial.'
-        required: true
-        example: gautier@position.cm
-        type: string
-        custom: []
-      phone:
-        name: phone
-        description: 'The phone number of the commercial.'
-        required: true
-        example: 699999999
+        example: 2
         type: integer
         custom: []
-      file:
-        name: file
-        description: 'Profile Image.'
+      commentaire:
+        name: commentaire
+        description: 'user comment.'
         required: false
-        example: null
-        type: file
+        example: 'J''aime ce lieu'
+        type: string
         custom: []
-      numeroCni:
-        name: numeroCni
-        description: required.
+      rating:
+        name: rating
+        description: rating.
         required: false
-        example: 1256987
+        example: 3
         type: integer
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: required.
-        required: false
-        example: 1234568
-        type: integer
-        custom: []
-      ville:
-        name: ville
-        description: required.
-        required: false
-        example: Douala
-        type: string
-        custom: []
-      quartier:
-        name: quartier
-        description: required.
-        required: false
-        example: Melen
-        type: string
-        custom: []
-      sexe:
-        name: sexe
-        description: required.
-        required: false
-        example: Masculin
-        type: string
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: required.
-        required: false
-        example: 699999999
-        type: integer
-        custom: []
-      diplome:
-        name: diplome
-        description: required.
-        required: false
-        example: BAC
-        type: string
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: required.
-        required: false
-        example: XXL
-        type: string
-        custom: []
-      age:
-        name: age
-        description: required.
-        required: false
-        example: 25
-        type: integer
-        custom: []
-      password:
-        name: password
-        description: 'the password of the commercial.'
-        required: true
-        example: gautier123
-        type: string
         custom: []
     responses:
       -
@@ -276,47 +125,99 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "numeroCni": "1256987",
-                  "numeroBadge": "1325",
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "sexe": "Masculin",
-                  "whatsapp": "699999999",
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": "25",
-                  "idUser": 3,
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "created_at": "2022-02-19T11:25:11.000000Z",
+                  "idUser": 1,
+                  "idEtablissement": 6,
+                  "commentaire": "J'aime beaucoup",
+                  "rating": "3",
+                  "updated_at": "2022-03-01T23:10:41.000000Z",
+                  "created_at": "2022-03-01T23:10:41.000000Z",
+                  "id": 1
+              },
+              "message": "Création du commentaire reussie"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/commentaires/{id}'
+    metadata:
+      title: 'Show Comment by id.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+      X-Authorization: apiKey
+    urlParameters:
+      id:
+        name: id
+        description: 'the id of the comment.'
+        required: true
+        example: 2
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          {
+              "success": true,
+              "data": {
                   "id": 1,
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
+                  "idUser": 1,
+                  "idEtablissement": 6,
+                  "commentaire": "J'aime beaucoup",
+                  "rating": 3,
+                  "deleted_at": null,
+                  "created_at": "2022-03-01T23:10:41.000000Z",
+                  "updated_at": "2022-03-01T23:10:41.000000Z",
+                  "etablissement": {
+                      "id": 6,
+                      "nom": "SOGEFI",
+                      "idBatiment": "2",
+                      "indicationAdresse": null,
+                      "codePostal": null,
+                      "siteInternet": null,
+                      "idCommercial": "12",
+                      "idManager": null,
+                      "etage": "2",
+                      "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
+                      "vues": "0",
+                      "phone": "699999999",
+                      "whatsapp1": "699999999",
+                      "whatsapp2": null,
+                      "description": null,
+                      "osmId": null,
+                      "updated": false,
+                      "revoir": "0",
+                      "valide": "0",
+                      "services": "PAIN;OM;MOMO",
+                      "ameliorations": null,
+                      "avis": 0,
                       "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T11:25:06.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
+                      "created_at": "2022-03-01T12:39:31.000000Z",
+                      "updated_at": "2022-03-01T12:39:31.000000Z"
+                  },
+                  "user": {
+                      "id": 1,
+                      "name": "Gautier 1996",
+                      "email": "admin@position.cm",
+                      "email_verified_at": "2022-02-18T10:11:34.000000Z",
+                      "phone": "699999999",
+                      "fcmToken": null,
+                      "imageProfil": null,
+                      "deleted_at": null,
+                      "created_at": "2022-02-18T10:11:34.000000Z",
+                      "updated_at": "2022-02-19T19:09:00.000000Z"
                   }
               },
-              "message": "Création du commercial reussie"
+              "message": "Commentaire"
           }
         headers: []
         description: '200'
@@ -324,110 +225,41 @@ endpoints:
   -
     httpMethods:
       - PUT
-    uri: 'api/commercials/{id}'
+      - PATCH
+    uri: 'api/commentaires/{id}'
     metadata:
-      title: 'Update Commercial.'
+      title: 'Update Comment.'
       description: ''
       authenticated: true
       custom: []
     headers:
       Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: multipart/form-data
+      Content-Type: application/json
       Accept: application/json
       X-Authorization: apiKey
     urlParameters:
       id:
         name: id
-        description: 'the id of the commercial.'
+        description: 'the id of the comment.'
         required: true
         example: 2
         type: integer
         custom: []
     queryParameters: []
     bodyParameters:
-      name:
-        name: name
-        description: 'the name of the commercial.'
+      commentaire:
+        name: commentaire
+        description: 'user comment.'
         required: false
-        example: Gautier
+        example: 'J''aime ce lieu'
         type: string
         custom: []
-      phone:
-        name: phone
-        description: 'The phone number of the commercial.'
+      rating:
+        name: rating
+        description: rating.
         required: false
-        example: 699999999
+        example: 3
         type: integer
-        custom: []
-      file:
-        name: file
-        description: 'Profile Image.'
-        required: false
-        example: null
-        type: file
-        custom: []
-      numeroCni:
-        name: numeroCni
-        description: ''
-        required: false
-        example: '1256987'
-        type: int.
-        custom: []
-      numeroBadge:
-        name: numeroBadge
-        description: ''
-        required: false
-        example: '1234568'
-        type: int.
-        custom: []
-      ville:
-        name: ville
-        description: ''
-        required: false
-        example: Douala
-        type: string.
-        custom: []
-      quartier:
-        name: quartier
-        description: ''
-        required: false
-        example: Melen
-        type: string.
-        custom: []
-      sexe:
-        name: sexe
-        description: ''
-        required: false
-        example: Masculin
-        type: string.
-        custom: []
-      whatsapp:
-        name: whatsapp
-        description: ''
-        required: false
-        example: '699999999'
-        type: int.
-        custom: []
-      diplome:
-        name: diplome
-        description: ''
-        required: false
-        example: BAC
-        type: string.
-        custom: []
-      tailleTshirt:
-        name: tailleTshirt
-        description: ''
-        required: false
-        example: XXL
-        type: string.
-        custom: []
-      age:
-        name: age
-        description: ''
-        required: false
-        example: '25'
-        type: int.
         custom: []
       _method:
         name: _method
@@ -443,47 +275,13 @@ endpoints:
           {
               "success": true,
               "data": {
-                  "id": 1,
-                  "idUser": 3,
-                  "numeroCni": 1256987,
-                  "numeroBadge": 1325,
-                  "ville": "Douala",
-                  "quartier": "Melen",
-                  "actif": true,
-                  "sexe": "Masculin",
-                  "whatsapp": 699999999,
-                  "diplome": "BAC",
-                  "tailleTshirt": "XXL",
-                  "age": 25,
-                  "deleted_at": null,
-                  "created_at": "2022-02-19T11:25:11.000000Z",
-                  "updated_at": "2022-02-19T11:25:11.000000Z",
-                  "user": {
-                      "id": 3,
-                      "name": "Gautier 2000",
-                      "email": "bt@geo.sm",
-                      "email_verified_at": null,
-                      "phone": "699999998",
-                      "fcmToken": null,
-                      "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
-                      "deleted_at": null,
-                      "created_at": "2022-02-19T11:25:06.000000Z",
-                      "updated_at": "2022-02-19T19:10:29.000000Z",
-                      "roles": [
-                          {
-                              "id": 2,
-                              "name": "commercial",
-                              "guard_name": "api",
-                              "created_at": "2022-02-18T10:11:34.000000Z",
-                              "updated_at": "2022-02-18T10:11:34.000000Z",
-                              "pivot": {
-                                  "model_id": 3,
-                                  "role_id": 2,
-                                  "model_type": "App\\Models\\User"
-                              }
-                          }
-                      ]
-                  }
+                  "idUser": 1,
+                  "idEtablissement": 6,
+                  "commentaire": "J'aime beaucoup",
+                  "rating": "3",
+                  "updated_at": "2022-03-01T23:10:41.000000Z",
+                  "created_at": "2022-03-01T23:10:41.000000Z",
+                  "id": 1
               },
               "message": "Update Success"
           }
@@ -493,9 +291,9 @@ endpoints:
   -
     httpMethods:
       - DELETE
-    uri: 'api/commercials/{id}'
+    uri: 'api/commentaires/{id}'
     metadata:
-      title: 'Delete commercial account.'
+      title: 'Delete Comment.'
       description: ''
       authenticated: true
       custom: []
@@ -507,7 +305,7 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'the id of the commercial.'
+        description: 'the id of the comment.'
         required: true
         example: 2
         type: integer

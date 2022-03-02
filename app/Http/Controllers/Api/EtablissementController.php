@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Validator;
 
 /**
  *
- * @group establishment management
+ * @group Establishment management
  *
- * APIs for managing establishment
+ * APIs for managing Establishment
  */
 class EtablissementController extends BaseController
 {
@@ -324,5 +324,43 @@ class EtablissementController extends BaseController
                 return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
             }
         }
+    }
+
+    /**
+     * Search Establishment.
+     *
+     * @header Content-Type application/json
+     * @queryParam q string required search value. Example: piscine
+     * @responseFile storage/responses/getetablissements.json
+     */
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $etablissements = Etablissement::search($q)->get();
+
+        foreach ($etablissements as $key => $etablissement) {
+            $etablissement->batiment;
+            $etablissement->sousCategories;
+
+            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $key => $commentaires) {
+                $commentaires->user;
+            }
+
+            $etablissement->commercial->user;
+            if ($etablissement->manager) {
+                $etablissement->manager->user;
+            }
+        }
+
+        return $this->sendResponse($etablissements, 'Liste des Etablissements');
     }
 }
