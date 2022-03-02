@@ -9,13 +9,6 @@ $ git clone https://github.com/Position-Platform/services.git
 $ cd services
 ```
 
-```
-$ docker-compose up -d
-$ docker exec -it api-position bash
-$ composer install
-$ cp .env.example .env
-```
-
 -   edit & add DB & Email infos in .env
 
 ```
@@ -50,6 +43,13 @@ PG_PASSWORD=
 ```
 
 ```
+$ cp .env.example .env
+$ docker-compose up -d
+$ docker exec -it position-services bash
+$ composer install
+```
+
+```
 $ php artisan key:generate
 $ php artisan migrate
 $ php artisan passport:install
@@ -65,7 +65,6 @@ $ exit
 ```
 go to services folder
 $ chown -R www-data:www-data *
-$ docker exec -it position-services-pgsql bash
 ```
 
 ## Documentation
