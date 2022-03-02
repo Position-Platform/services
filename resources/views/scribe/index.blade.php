@@ -75,6 +75,38 @@
                                                 </ul>
                     
                     <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="abonnement-management">
+                    <a href="#abonnement-management">Abonnement management</a>
+                </li>
+                                    <ul id="tocify-subheader-abonnement-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements">
+                        <a href="#abonnement-management-GETapi-abonnements">Get all Subscription.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements--id-">
+                        <a href="#abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-POSTapi-abonnements">
+                        <a href="#abonnement-management-POSTapi-abonnements">Add a new Subscription.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-PUTapi-abonnements--id-">
+                        <a href="#abonnement-management-PUTapi-abonnements--id-">Update Subscription.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="abonnement-management-DELETEapi-abonnements--id-">
+                        <a href="#abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="tracking-management">
+                    <a href="#tracking-management">Tracking management</a>
+                </li>
+                                    <ul id="tocify-subheader-tracking-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="tracking-management-POSTapi-trackings">
+                        <a href="#tracking-management-POSTapi-trackings">Add a new Tracking.</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="establishment-management">
                     <a href="#establishment-management">Establishment management</a>
                 </li>
@@ -99,29 +131,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-3" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="abonnement-management">
-                    <a href="#abonnement-management">Abonnement management</a>
-                </li>
-                                    <ul id="tocify-subheader-abonnement-management" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements">
-                        <a href="#abonnement-management-GETapi-abonnements">Get all Subscription.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="abonnement-management-GETapi-abonnements--id-">
-                        <a href="#abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="abonnement-management-POSTapi-abonnements">
-                        <a href="#abonnement-management-POSTapi-abonnements">Add a new Subscription.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="abonnement-management-PUTapi-abonnements--id-">
-                        <a href="#abonnement-management-PUTapi-abonnements--id-">Update Subscription.</a>
-                    </li>
-                                    <li class="tocify-item level-2" data-unique="abonnement-management-DELETEapi-abonnements--id-">
-                        <a href="#abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</a>
-                    </li>
-                                                    </ul>
-                            </ul>
-                    <ul id="tocify-header-4" class="tocify-header">
+                    <ul id="tocify-header-5" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="account-management">
                     <a href="#account-management">Account management</a>
                 </li>
@@ -152,7 +162,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-5" class="tocify-header">
+                    <ul id="tocify-header-6" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="admin-management">
                     <a href="#admin-management">Admin management</a>
                 </li>
@@ -174,7 +184,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-6" class="tocify-header">
+                    <ul id="tocify-header-7" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="building-management">
                     <a href="#building-management">Building management</a>
                 </li>
@@ -196,7 +206,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-7" class="tocify-header">
+                    <ul id="tocify-header-8" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="category-management">
                     <a href="#category-management">Category management</a>
                 </li>
@@ -218,7 +228,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-8" class="tocify-header">
+                    <ul id="tocify-header-9" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="comment-management">
                     <a href="#comment-management">Comment management</a>
                 </li>
@@ -240,7 +250,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-9" class="tocify-header">
+                    <ul id="tocify-header-10" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="commerciaux-management">
                     <a href="#commerciaux-management">Commerciaux management</a>
                 </li>
@@ -262,7 +272,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-10" class="tocify-header">
+                    <ul id="tocify-header-11" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="commodites-management">
                     <a href="#commodites-management">Commodites management</a>
                 </li>
@@ -284,7 +294,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-11" class="tocify-header">
+                    <ul id="tocify-header-12" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="manager-management">
                     <a href="#manager-management">Manager management</a>
                 </li>
@@ -306,7 +316,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-12" class="tocify-header">
+                    <ul id="tocify-header-13" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="picture-management">
                     <a href="#picture-management">Picture management</a>
                 </li>
@@ -322,7 +332,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-13" class="tocify-header">
+                    <ul id="tocify-header-14" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="schedule-management">
                     <a href="#schedule-management">Schedule management</a>
                 </li>
@@ -338,7 +348,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-14" class="tocify-header">
+                    <ul id="tocify-header-15" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="subcategory-management">
                     <a href="#subcategory-management">SubCategory management</a>
                 </li>
@@ -363,7 +373,7 @@
                     </li>
                                                     </ul>
                             </ul>
-                    <ul id="tocify-header-15" class="tocify-header">
+                    <ul id="tocify-header-16" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="typecommodite-management">
                     <a href="#typecommodite-management">TypeCommodite management</a>
                 </li>
@@ -413,9 +423,1067 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
+
+        <h1 id="abonnement-management">Abonnement management</h1>
+
+    <p>APIs for managing Abonnements</p>
+
+            <h2 id="abonnement-management-GETapi-abonnements">Get all Subscription.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-abonnements">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/abonnements" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/abonnements',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-abonnements">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;free&quot;,
+            &quot;prix&quot;: 0,
+            &quot;type&quot;: &quot;year&quot;,
+            &quot;duree&quot;: 1,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Abonnements&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-abonnements" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-abonnements"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-abonnements"></code></pre>
+</span>
+<span id="execution-error-GETapi-abonnements" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-abonnements"></code></pre>
+</span>
+<form id="form-GETapi-abonnements" data-method="GET"
+      data-path="api/abonnements"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-abonnements"
+                    onclick="tryItOut('GETapi-abonnements');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-abonnements"
+                    onclick="cancelTryOut('GETapi-abonnements');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-abonnements" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/abonnements</code></b>
+        </p>
+                    </form>
+
+            <h2 id="abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-abonnements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/abonnements/2" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements/2"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/abonnements/2',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements/2'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-abonnements--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nom&quot;: &quot;free&quot;,
+        &quot;prix&quot;: 0,
+        &quot;type&quot;: &quot;year&quot;,
+        &quot;duree&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
+    },
+    &quot;message&quot;: &quot;Abonnement&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-abonnements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-abonnements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-abonnements--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-abonnements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-abonnements--id-"></code></pre>
+</span>
+<form id="form-GETapi-abonnements--id-" data-method="GET"
+      data-path="api/abonnements/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-abonnements--id-"
+                    onclick="tryItOut('GETapi-abonnements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-abonnements--id-"
+                    onclick="cancelTryOut('GETapi-abonnements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-abonnements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/abonnements/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-abonnements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the subscription.</p>
+            </p>
+                    </form>
+
+            <h2 id="abonnement-management-POSTapi-abonnements">Add a new Subscription.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-abonnements">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/abonnements" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Smart\",
+    \"prix\": 5000,
+    \"duree\": 1,
+    \"type\": \"year\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/abonnements',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Smart',
+            'prix' =&gt; 5000,
+            'duree' =&gt; 1,
+            'type' =&gt; 'year',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements'
+payload = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-abonnements">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;nom&quot;: &quot;smart&quot;,
+        &quot;prix&quot;: &quot;10000&quot;,
+        &quot;duree&quot;: &quot;1&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;id&quot;: 2
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l'abonnement reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-abonnements" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-abonnements"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-abonnements"></code></pre>
+</span>
+<span id="execution-error-POSTapi-abonnements" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-abonnements"></code></pre>
+</span>
+<form id="form-POSTapi-abonnements" data-method="POST"
+      data-path="api/abonnements"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-abonnements', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-abonnements"
+                    onclick="tryItOut('POSTapi-abonnements');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-abonnements"
+                    onclick="cancelTryOut('POSTapi-abonnements');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-abonnements" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/abonnements</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-abonnements" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-abonnements"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="POSTapi-abonnements"
+               value="Smart"
+               data-component="body" hidden>
+    <br>
+<p>the name of the subscription.</p>
+        </p>
+                <p>
+            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="prix"
+               data-endpoint="POSTapi-abonnements"
+               value="5000"
+               data-component="body" hidden>
+    <br>
+<p>the price of the subscription.</p>
+        </p>
+                <p>
+            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="duree"
+               data-endpoint="POSTapi-abonnements"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>duration of the subscription.</p>
+        </p>
+                <p>
+            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="type"
+               data-endpoint="POSTapi-abonnements"
+               value="year"
+               data-component="body" hidden>
+    <br>
+<p>Type of subscription(Year by default).</p>
+        </p>
+        </form>
+
+            <h2 id="abonnement-management-PUTapi-abonnements--id-">Update Subscription.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-abonnements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/abonnements/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"nom\": \"Smart\",
+    \"prix\": 5000,
+    \"duree\": 1,
+    \"type\": \"year\",
+    \"_method\": \"PUT\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year",
+    "_method": "PUT"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/abonnements/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'nom' =&gt; 'Smart',
+            'prix' =&gt; 5000,
+            'duree' =&gt; 1,
+            'type' =&gt; 'year',
+            '_method' =&gt; 'PUT',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements/2'
+payload = {
+    "nom": "Smart",
+    "prix": 5000,
+    "duree": 1,
+    "type": "year",
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-abonnements--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;id&quot;: 2,
+        &quot;nom&quot;: &quot;smart +&quot;,
+        &quot;prix&quot;: 10000,
+        &quot;type&quot;: &quot;year&quot;,
+        &quot;duree&quot;: 1,
+        &quot;deleted_at&quot;: null,
+        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-25T10:21:05.000000Z&quot;
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-abonnements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-abonnements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-abonnements--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-abonnements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-abonnements--id-"></code></pre>
+</span>
+<form id="form-PUTapi-abonnements--id-" data-method="PUT"
+      data-path="api/abonnements/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-abonnements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-abonnements--id-"
+                    onclick="tryItOut('PUTapi-abonnements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-abonnements--id-"
+                    onclick="cancelTryOut('PUTapi-abonnements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-abonnements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/abonnements/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-abonnements--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-abonnements--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the subscription.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="nom"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="Smart"
+               data-component="body" hidden>
+    <br>
+<p>the name of the subscription.</p>
+        </p>
+                <p>
+            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="prix"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="5000"
+               data-component="body" hidden>
+    <br>
+<p>the price of the subscription.</p>
+        </p>
+                <p>
+            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
+                <input type="number"
+               name="duree"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="1"
+               data-component="body" hidden>
+    <br>
+<p>duration of the subscription.</p>
+        </p>
+                <p>
+            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="type"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="year"
+               data-component="body" hidden>
+    <br>
+<p>Type of subscription(Year by default).</p>
+        </p>
+                <p>
+            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="_method"
+               data-endpoint="PUTapi-abonnements--id-"
+               value="PUT"
+               data-component="body" hidden>
+    <br>
+<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
+        </p>
+        </form>
+
+            <h2 id="abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-abonnements--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost:8000/api/abonnements/2" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/abonnements/2"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://localhost:8000/api/abonnements/2',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/abonnements/2'
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-abonnements--id-">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-abonnements--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-abonnements--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-abonnements--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-abonnements--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-abonnements--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-abonnements--id-" data-method="DELETE"
+      data-path="api/abonnements/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-abonnements--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-abonnements--id-"
+                    onclick="tryItOut('DELETEapi-abonnements--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-abonnements--id-"
+                    onclick="cancelTryOut('DELETEapi-abonnements--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-abonnements--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/abonnements/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-abonnements--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="DELETEapi-abonnements--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-abonnements--id-"
+               value="2"
+               data-component="url" hidden>
+    <br>
+<p>the id of the subscription.</p>
+            </p>
+                    </form>
+
+        <h1 id="tracking-management">Tracking management</h1>
+
+    <p>APIs for managing Tracking</p>
+
+            <h2 id="tracking-management-POSTapi-trackings">Add a new Tracking.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-trackings">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/trackings" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey" \
+    --data "{
+    \"longitude\": \"12\",
+    \"latitude\": \"4\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/trackings"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+let body = {
+    "longitude": "12",
+    "latitude": "4"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/trackings',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'json' =&gt; [
+            'longitude' =&gt; '12',
+            'latitude' =&gt; '4',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/trackings'
+payload = {
+    "longitude": "12",
+    "latitude": "4"
+}
+headers = {
+  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('POST', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-trackings">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;idUser&quot;: 1,
+        &quot;longitude&quot;: &quot;13&quot;,
+        &quot;latitude&quot;: &quot;4&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-02T15:16:47.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-02T15:16:47.000000Z&quot;,
+        &quot;id&quot;: 1
+    },
+    &quot;message&quot;: &quot;Ajout de la position reussie&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-trackings" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-trackings"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-trackings"></code></pre>
+</span>
+<span id="execution-error-POSTapi-trackings" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-trackings"></code></pre>
+</span>
+<form id="form-POSTapi-trackings" data-method="POST"
+      data-path="api/trackings"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-trackings', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-trackings"
+                    onclick="tryItOut('POSTapi-trackings');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-trackings"
+                    onclick="cancelTryOut('POSTapi-trackings');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-trackings" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/trackings</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-trackings" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-trackings"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>longitude</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="longitude"
+               data-endpoint="POSTapi-trackings"
+               value="12"
+               data-component="body" hidden>
+    <br>
+<p>longitude.</p>
+        </p>
+                <p>
+            <b><code>latitude</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="latitude"
+               data-endpoint="POSTapi-trackings"
+               value="4"
+               data-component="body" hidden>
+    <br>
+<p>latitude.</p>
+        </p>
+        </form>
 
         <h1 id="establishment-management">Establishment management</h1>
 
@@ -758,8 +1826,8 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "whatsapp1=699999999" \
     --form "services=OM;MOMO" \
-    --form "idSousCategorie=quidem" \
-    --form "idCommodite=molestiae" \
+    --form "idSousCategorie=nam" \
+    --form "idCommodite=odit" \
     --form "idBatiment=2" \
     --form "indicationAdresse=Rue de Melen" \
     --form "codePostal=59684" \
@@ -768,7 +1836,7 @@ response.json()</code></pre></div>
     --form "whatsapp2=699999999" \
     --form "osmId=111259658236" \
     --form "ameliorations=Site internet,videos" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF2C8.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEA21.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -789,8 +1857,8 @@ body.append('etage', '3');
 body.append('phone', '699999999');
 body.append('whatsapp1', '699999999');
 body.append('services', 'OM;MOMO');
-body.append('idSousCategorie', 'quidem');
-body.append('idCommodite', 'molestiae');
+body.append('idSousCategorie', 'nam');
+body.append('idCommodite', 'odit');
 body.append('idBatiment', '2');
 body.append('indicationAdresse', 'Rue de Melen');
 body.append('codePostal', '59684');
@@ -842,11 +1910,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'idSousCategorie',
-                'contents' =&gt; 'quidem'
+                'contents' =&gt; 'nam'
             ],
             [
                 'name' =&gt; 'idCommodite',
-                'contents' =&gt; 'molestiae'
+                'contents' =&gt; 'odit'
             ],
             [
                 'name' =&gt; 'idBatiment',
@@ -882,7 +1950,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF2C8.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEA21.tmp', 'r')
             ],
         ],
     ]
@@ -897,7 +1965,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF2C8.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEA21.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -905,8 +1973,8 @@ payload = {
     "phone": "699999999",
     "whatsapp1": "699999999",
     "services": "OM;MOMO",
-    "idSousCategorie": "quidem",
-    "idCommodite": "molestiae",
+    "idSousCategorie": "nam",
+    "idCommodite": "odit",
     "idBatiment": 2,
     "indicationAdresse": "Rue de Melen",
     "codePostal": "59684",
@@ -1063,7 +2131,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idSousCategorie"
                data-endpoint="POSTapi-etablissements"
-               value="quidem"
+               value="nam"
                data-component="body" hidden>
     <br>
 
@@ -1073,7 +2141,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idCommodite"
                data-endpoint="POSTapi-etablissements"
-               value="molestiae"
+               value="odit"
                data-component="body" hidden>
     <br>
 
@@ -1207,7 +2275,7 @@ response.json()</code></pre></div>
     --form "revoir=1" \
     --form "valide=1" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF2DA.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEA42.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1336,7 +2404,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF2DA.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEA42.tmp', 'r')
             ],
         ],
     ]
@@ -1351,7 +2419,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF2DA.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEA42.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -2494,878 +3562,6 @@ response.json()</code></pre></div>
             </p>
                 </form>
 
-        <h1 id="abonnement-management">Abonnement management</h1>
-
-    <p>APIs for managing Abonnements</p>
-
-            <h2 id="abonnement-management-GETapi-abonnements">Get all Subscription.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-abonnements">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/abonnements" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost:8000/api/abonnements',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/abonnements'
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('GET', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-abonnements">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;nom&quot;: &quot;free&quot;,
-            &quot;prix&quot;: 0,
-            &quot;type&quot;: &quot;year&quot;,
-            &quot;duree&quot;: 1,
-            &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
-        }
-    ],
-    &quot;message&quot;: &quot;Liste des Abonnements&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-abonnements" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-abonnements"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-abonnements"></code></pre>
-</span>
-<span id="execution-error-GETapi-abonnements" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-abonnements"></code></pre>
-</span>
-<form id="form-GETapi-abonnements" data-method="GET"
-      data-path="api/abonnements"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-abonnements"
-                    onclick="tryItOut('GETapi-abonnements');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-abonnements"
-                    onclick="cancelTryOut('GETapi-abonnements');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-abonnements" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/abonnements</code></b>
-        </p>
-                    </form>
-
-            <h2 id="abonnement-management-GETapi-abonnements--id-">Show Subscription by id.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-abonnements--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/abonnements/2" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost:8000/api/abonnements/2',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/abonnements/2'
-headers = {
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('GET', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-abonnements--id-">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;nom&quot;: &quot;free&quot;,
-        &quot;prix&quot;: 0,
-        &quot;type&quot;: &quot;year&quot;,
-        &quot;duree&quot;: 1,
-        &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-22T18:45:15.000000Z&quot;
-    },
-    &quot;message&quot;: &quot;Abonnement&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-abonnements--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-abonnements--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-abonnements--id-"></code></pre>
-</span>
-<span id="execution-error-GETapi-abonnements--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-abonnements--id-"></code></pre>
-</span>
-<form id="form-GETapi-abonnements--id-" data-method="GET"
-      data-path="api/abonnements/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-abonnements--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-abonnements--id-"
-                    onclick="tryItOut('GETapi-abonnements--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-abonnements--id-"
-                    onclick="cancelTryOut('GETapi-abonnements--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-abonnements--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/abonnements/{id}</code></b>
-        </p>
-                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="GETapi-abonnements--id-"
-               value="2"
-               data-component="url" hidden>
-    <br>
-<p>the id of the subscription.</p>
-            </p>
-                    </form>
-
-            <h2 id="abonnement-management-POSTapi-abonnements">Add a new Subscription.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-POSTapi-abonnements">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/abonnements" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey" \
-    --data "{
-    \"nom\": \"Smart\",
-    \"prix\": 5000,
-    \"duree\": 1,
-    \"type\": \"year\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-let body = {
-    "nom": "Smart",
-    "prix": 5000,
-    "duree": 1,
-    "type": "year"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
-    'http://localhost:8000/api/abonnements',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-        'json' =&gt; [
-            'nom' =&gt; 'Smart',
-            'prix' =&gt; 5000,
-            'duree' =&gt; 1,
-            'type' =&gt; 'year',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/abonnements'
-payload = {
-    "nom": "Smart",
-    "prix": 5000,
-    "duree": 1,
-    "type": "year"
-}
-headers = {
-  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('POST', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-abonnements">
-            <blockquote>
-            <p>Example response (200):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;nom&quot;: &quot;smart&quot;,
-        &quot;prix&quot;: &quot;10000&quot;,
-        &quot;duree&quot;: &quot;1&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
-        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
-        &quot;id&quot;: 2
-    },
-    &quot;message&quot;: &quot;Cr&eacute;ation de l'abonnement reussie&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-POSTapi-abonnements" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-abonnements"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-abonnements"></code></pre>
-</span>
-<span id="execution-error-POSTapi-abonnements" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-abonnements"></code></pre>
-</span>
-<form id="form-POSTapi-abonnements" data-method="POST"
-      data-path="api/abonnements"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-abonnements', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-abonnements"
-                    onclick="tryItOut('POSTapi-abonnements');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-abonnements"
-                    onclick="cancelTryOut('POSTapi-abonnements');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-abonnements" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/abonnements</code></b>
-        </p>
-                <p>
-            <label id="auth-POSTapi-abonnements" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="POSTapi-abonnements"
-                                                                data-component="header"></label>
-        </p>
-                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
-               name="nom"
-               data-endpoint="POSTapi-abonnements"
-               value="Smart"
-               data-component="body" hidden>
-    <br>
-<p>the name of the subscription.</p>
-        </p>
-                <p>
-            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="prix"
-               data-endpoint="POSTapi-abonnements"
-               value="5000"
-               data-component="body" hidden>
-    <br>
-<p>the price of the subscription.</p>
-        </p>
-                <p>
-            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="duree"
-               data-endpoint="POSTapi-abonnements"
-               value="1"
-               data-component="body" hidden>
-    <br>
-<p>duration of the subscription.</p>
-        </p>
-                <p>
-            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="type"
-               data-endpoint="POSTapi-abonnements"
-               value="year"
-               data-component="body" hidden>
-    <br>
-<p>Type of subscription(Year by default).</p>
-        </p>
-        </form>
-
-            <h2 id="abonnement-management-PUTapi-abonnements--id-">Update Subscription.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-PUTapi-abonnements--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/abonnements/2" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey" \
-    --data "{
-    \"nom\": \"Smart\",
-    \"prix\": 5000,
-    \"duree\": 1,
-    \"type\": \"year\",
-    \"_method\": \"PUT\"
-}"
-</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-let body = {
-    "nom": "Smart",
-    "prix": 5000,
-    "duree": 1,
-    "type": "year",
-    "_method": "PUT"
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;put(
-    'http://localhost:8000/api/abonnements/2',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-        'json' =&gt; [
-            'nom' =&gt; 'Smart',
-            'prix' =&gt; 5000,
-            'duree' =&gt; 1,
-            'type' =&gt; 'year',
-            '_method' =&gt; 'PUT',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/abonnements/2'
-payload = {
-    "nom": "Smart",
-    "prix": 5000,
-    "duree": 1,
-    "type": "year",
-    "_method": "PUT"
-}
-headers = {
-  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('PUT', url, headers=headers, json=payload)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-abonnements--id-">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;id&quot;: 2,
-        &quot;nom&quot;: &quot;smart +&quot;,
-        &quot;prix&quot;: 10000,
-        &quot;type&quot;: &quot;year&quot;,
-        &quot;duree&quot;: 1,
-        &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-25T10:18:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-25T10:21:05.000000Z&quot;
-    },
-    &quot;message&quot;: &quot;Update Success&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-PUTapi-abonnements--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-abonnements--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-abonnements--id-"></code></pre>
-</span>
-<span id="execution-error-PUTapi-abonnements--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-abonnements--id-"></code></pre>
-</span>
-<form id="form-PUTapi-abonnements--id-" data-method="PUT"
-      data-path="api/abonnements/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-abonnements--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-abonnements--id-"
-                    onclick="tryItOut('PUTapi-abonnements--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-abonnements--id-"
-                    onclick="cancelTryOut('PUTapi-abonnements--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-abonnements--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/abonnements/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-PUTapi-abonnements--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="PUTapi-abonnements--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="2"
-               data-component="url" hidden>
-    <br>
-<p>the id of the subscription.</p>
-            </p>
-                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-        <p>
-            <b><code>nom</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="nom"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="Smart"
-               data-component="body" hidden>
-    <br>
-<p>the name of the subscription.</p>
-        </p>
-                <p>
-            <b><code>prix</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="prix"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="5000"
-               data-component="body" hidden>
-    <br>
-<p>the price of the subscription.</p>
-        </p>
-                <p>
-            <b><code>duree</code></b>&nbsp;&nbsp;<small>integer</small>     <i>optional</i> &nbsp;
-                <input type="number"
-               name="duree"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="1"
-               data-component="body" hidden>
-    <br>
-<p>duration of the subscription.</p>
-        </p>
-                <p>
-            <b><code>type</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="type"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="year"
-               data-component="body" hidden>
-    <br>
-<p>Type of subscription(Year by default).</p>
-        </p>
-                <p>
-            <b><code>_method</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="_method"
-               data-endpoint="PUTapi-abonnements--id-"
-               value="PUT"
-               data-component="body" hidden>
-    <br>
-<p>&quot;required if update image(change the PUT method of the request by the POST method)&quot;</p>
-        </p>
-        </form>
-
-            <h2 id="abonnement-management-DELETEapi-abonnements--id-">Delete subscription.</h2>
-
-<p>
-<small class="badge badge-darkred">requires authentication</small>
-</p>
-
-
-
-<span id="example-requests-DELETEapi-abonnements--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/abonnements/2" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --header "X-Authorization: apiKey"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
-);
-
-const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-    "X-Authorization": "apiKey",
-};
-
-fetch(url, {
-    method: "DELETE",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-
-<div class="php-example">
-    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;delete(
-    'http://localhost:8000/api/abonnements/2',
-    [
-        'headers' =&gt; [
-            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-            'X-Authorization' =&gt; 'apiKey',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre></div>
-
-
-<div class="python-example">
-    <pre><code class="language-python">import requests
-import json
-
-url = 'http://localhost:8000/api/abonnements/2'
-headers = {
-  'Authorization': 'Bearer {YOUR_AUTH_KEY}',
-  'Content-Type': 'application/json',
-  'Accept': 'application/json',
-  'X-Authorization': 'apiKey'
-}
-
-response = requests.request('DELETE', url, headers=headers)
-response.json()</code></pre></div>
-
-</span>
-
-<span id="example-responses-DELETEapi-abonnements--id-">
-            <blockquote>
-            <p>Example response (201):</p>
-        </blockquote>
-                <pre>
-
-<code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;Delete Success&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-DELETEapi-abonnements--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-DELETEapi-abonnements--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-DELETEapi-abonnements--id-"></code></pre>
-</span>
-<span id="execution-error-DELETEapi-abonnements--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-DELETEapi-abonnements--id-"></code></pre>
-</span>
-<form id="form-DELETEapi-abonnements--id-" data-method="DELETE"
-      data-path="api/abonnements/{id}"
-      data-authed="1"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-abonnements--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-DELETEapi-abonnements--id-"
-                    onclick="tryItOut('DELETEapi-abonnements--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-DELETEapi-abonnements--id-"
-                    onclick="cancelTryOut('DELETEapi-abonnements--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-DELETEapi-abonnements--id-" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-red">DELETE</small>
-            <b><code>api/abonnements/{id}</code></b>
-        </p>
-                <p>
-            <label id="auth-DELETEapi-abonnements--id-" hidden>Authorization header:
-                <b><code>Bearer </code></b><input type="text"
-                                                                name="Authorization"
-                                                                data-prefix="Bearer "
-                                                                data-endpoint="DELETEapi-abonnements--id-"
-                                                                data-component="header"></label>
-        </p>
-                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
-                <input type="number"
-               name="id"
-               data-endpoint="DELETEapi-abonnements--id-"
-               value="2"
-               data-component="url" hidden>
-    <br>
-<p>the id of the subscription.</p>
-            </p>
-                    </form>
-
         <h1 id="account-management">Account management</h1>
 
     
@@ -3683,7 +3879,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"saepe\",
+    \"token\": \"aperiam\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -3703,7 +3899,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "saepe",
+    "token": "aperiam",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -3727,7 +3923,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'saepe',
+            'token' =&gt; 'aperiam',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -3744,7 +3940,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "saepe",
+    "token": "aperiam",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -3827,7 +4023,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="saepe"
+               value="aperiam"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -3875,7 +4071,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF1D6.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE68F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3932,7 +4128,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF1D6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE68F.tmp', 'r')
             ],
         ],
     ]
@@ -3947,7 +4143,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF1D6.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE68F.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4601,7 +4797,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF255.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE875.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4650,7 +4846,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF255.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE875.tmp', 'r')
             ],
         ],
     ]
@@ -4665,7 +4861,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF255.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE875.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5058,7 +5254,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF31C.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEAE3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5117,7 +5313,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF31C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEAE3.tmp', 'r')
             ],
         ],
     ]
@@ -5132,7 +5328,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF31C.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEAE3.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5495,7 +5691,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF32D.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB12.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5554,7 +5750,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF32D.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB12.tmp', 'r')
             ],
         ],
     ]
@@ -5569,7 +5765,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF32D.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB12.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -6393,8 +6589,8 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nombreNiveau=3" \
     --form "codeBatiment=BATIMENT_MELEN_0569" \
-    --form "longitude=et" \
-    --form "latitude=ullam" \
+    --form "longitude=porro" \
+    --form "latitude=sit" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
@@ -6402,7 +6598,7 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF296.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE963.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6420,8 +6616,8 @@ const headers = {
 const body = new FormData();
 body.append('nombreNiveau', '3');
 body.append('codeBatiment', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'et');
-body.append('latitude', 'ullam');
+body.append('longitude', 'porro');
+body.append('latitude', 'sit');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -6460,11 +6656,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'et'
+                'contents' =&gt; 'porro'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'ullam'
+                'contents' =&gt; 'sit'
             ],
             [
                 'name' =&gt; 'ville',
@@ -6496,7 +6692,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF296.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE963.tmp', 'r')
             ],
         ],
     ]
@@ -6511,13 +6707,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF296.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE963.tmp', 'rb')
 }
 payload = {
     "nombreNiveau": 3,
     "codeBatiment": "BATIMENT_MELEN_0569",
-    "longitude": "et",
-    "latitude": "ullam",
+    "longitude": "porro",
+    "latitude": "sit",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -6640,7 +6836,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="POSTapi-batiments"
-               value="et"
+               value="porro"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -6650,7 +6846,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="POSTapi-batiments"
-               value="ullam"
+               value="sit"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -7096,15 +7292,15 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "idCommercial=2" \
     --form "nombreNiveau=3" \
-    --form "longitude=illo" \
-    --form "latitude=et" \
+    --form "longitude=omnis" \
+    --form "latitude=tenetur" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF2A8.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE993.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7123,8 +7319,8 @@ const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
 body.append('nombreNiveau', '3');
-body.append('longitude', 'illo');
-body.append('latitude', 'et');
+body.append('longitude', 'omnis');
+body.append('latitude', 'tenetur');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -7166,11 +7362,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'illo'
+                'contents' =&gt; 'omnis'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'et'
+                'contents' =&gt; 'tenetur'
             ],
             [
                 'name' =&gt; 'indication',
@@ -7198,7 +7394,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF2A8.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE993.tmp', 'r')
             ],
         ],
     ]
@@ -7213,14 +7409,14 @@ import json
 
 url = 'http://localhost:8000/api/batiments/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF2A8.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE993.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "idCommercial": 2,
     "nombreNiveau": 3,
-    "longitude": "illo",
-    "latitude": "et",
+    "longitude": "omnis",
+    "latitude": "tenetur",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -7368,7 +7564,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="illo"
+               value="omnis"
                data-component="body" hidden>
     <br>
 
@@ -7378,7 +7574,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="et"
+               value="tenetur"
                data-component="body" hidden>
     <br>
 
@@ -8728,7 +8924,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF35E.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8772,7 +8968,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF35E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp', 'r')
             ],
         ],
     ]
@@ -8787,7 +8983,7 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF35E.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBB1.tmp', 'rb')
 }
 payload = {
     "nom": "Achat"
@@ -8915,7 +9111,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF36F.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBD2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8964,7 +9160,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF36F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBD2.tmp', 'r')
             ],
         ],
     ]
@@ -8979,7 +9175,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF36F.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBD2.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -10594,7 +10790,7 @@ response.json()</code></pre></div>
     --form "diplome=BAC" \
     --form "tailleTshirt=XXL" \
     --form "age=25" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF33D.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEB71.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -10693,7 +10889,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF33D.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEB71.tmp', 'r')
             ],
         ],
     ]
@@ -10708,7 +10904,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF33D.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEB71.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -11000,7 +11196,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF275.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE8F3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11099,7 +11295,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF275.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE8F3.tmp', 'r')
             ],
         ],
     ]
@@ -11114,7 +11310,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF275.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE8F3.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -12659,7 +12855,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF1F6.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE70D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -12716,7 +12912,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF1F6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE70D.tmp', 'r')
             ],
         ],
     ]
@@ -12731,7 +12927,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF1F6.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE70D.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -13223,7 +13419,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/16" \
+    "http://localhost:8000/api/managers/14" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -13231,12 +13427,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF276.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE923.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/16"
+    "http://localhost:8000/api/managers/14"
 );
 
 const headers = {
@@ -13262,7 +13458,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/16',
+    'http://localhost:8000/api/managers/14',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -13285,7 +13481,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF276.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE923.tmp', 'r')
             ],
         ],
     ]
@@ -13298,9 +13494,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/16'
+url = 'http://localhost:8000/api/managers/14'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF276.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE923.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -13418,7 +13614,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="16"
+               value="14"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -13490,7 +13686,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "idEtablissement=2" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF2FA.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEAA1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -13534,7 +13730,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF2FA.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEAA1.tmp', 'r')
             ],
         ],
     ]
@@ -13549,7 +13745,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF2FA.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEAA1.tmp', 'rb')
 }
 payload = {
     "idEtablissement": 2
@@ -13675,7 +13871,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF30B.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEAB3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -13719,7 +13915,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF30B.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEAB3.tmp', 'r')
             ],
         ],
     ]
@@ -13734,7 +13930,7 @@ import json
 
 url = 'http://localhost:8000/api/images/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF30B.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEAB3.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -14895,7 +15091,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF380.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBF2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14944,7 +15140,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF380.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBF2.tmp', 'r')
             ],
         ],
     ]
@@ -14959,7 +15155,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF380.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBF2.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -15106,7 +15302,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpF391.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEC04.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -15160,7 +15356,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpF391.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEC04.tmp', 'r')
             ],
         ],
     ]
@@ -15175,7 +15371,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpF391.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEC04.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
