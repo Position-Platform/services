@@ -56,6 +56,7 @@ $ php artisan passport:install
 $ php artisan db:seed
 $ php artisan apikey:generate app1
 $ php artisan storage:link
+$ php artisan scribe:generate
 $ php artisan scout:import "App\Models\SousCategorie"
 $ exit
 ```
