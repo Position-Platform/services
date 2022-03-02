@@ -7,6 +7,7 @@ New Services Laravel for project Position
 ```sh
 $ git clone https://github.com/Position-Platform/services.git
 $ cd services
+$ cp .env.example .env
 ```
 
 -   edit & add DB & Email infos in .env
@@ -43,7 +44,6 @@ PG_PASSWORD=
 ```
 
 ```
-$ cp .env.example .env
 $ docker-compose up -d
 $ docker exec -it position-services bash
 $ composer install
