@@ -34,9 +34,16 @@ class BatimentController extends BaseController
 
 
             foreach ($batiment->etablissements as $key => $etablissement) {
-                $etablissement->commercial->user;
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
+                }
+
+                if ($etablissement->user) {
+                    $etablissement->user;
+                }
+
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
                 }
 
                 $etablissement->sousCategories;
@@ -63,7 +70,7 @@ class BatimentController extends BaseController
      *
      * @header Content-Type application/json
      * @bodyParam nom string  the name of the Building. Example: Sogefi
-     * @bodyParam idCommercial int required the id of the commercial. Example: 2
+     * @bodyParam idCommercial int the id of the commercial. Example: 2
      * @bodyParam nombreNiveau int required the number of levels in the building. Example: 3
      * @bodyParam codeBatiment string required the building code. Example: BATIMENT_MELEN_0569
      * @bodyParam longitude string required.
@@ -78,6 +85,7 @@ class BatimentController extends BaseController
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         $validator =  Validator::make($request->all(), [
             'nombreNiveau' => 'required',
             'codeBatiment' => 'required',
@@ -105,6 +113,7 @@ class BatimentController extends BaseController
         $input['commune'] = $request->commune;
         $input['quartier'] = $request->quartier;
         $input['idCommercial'] = $request->idCommercial;
+        $input['idUser'] = $user->id;
 
         if ($request->file()) {
             $fileName = time() . '_' . $request->file->getClientOriginalName();
@@ -141,9 +150,16 @@ class BatimentController extends BaseController
 
 
         foreach ($batiment->etablissements as $key => $etablissement) {
-            $etablissement->commercial->user;
             if ($etablissement->manager) {
                 $etablissement->manager->user;
+            }
+
+            if ($etablissement->user) {
+                $etablissement->user;
+            }
+
+            if ($etablissement->commercial) {
+                $etablissement->commercial->user;
             }
 
             $etablissement->sousCategories;

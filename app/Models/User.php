@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Social\SocialFacebookAccount;
+use App\Models\Social\SocialGoogleAccount;
+use App\Models\Social\SocialTwitterAccount;
 use App\Notifications\SendResetLinkParams;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -66,6 +69,13 @@ use Spatie\Permission\Traits\HasRoles;
  * @property-read int|null $commentaires_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tracking[] $trackings
  * @property-read int|null $trackings_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
+ * @property-read int|null $batiments_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
+ * @property-read SocialFacebookAccount|null $facebook
+ * @property-read SocialGoogleAccount|null $google
+ * @property-read SocialTwitterAccount|null $twitter
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -147,6 +157,21 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(Manager::class, 'idUser');
     }
 
+    public function facebook()
+    {
+        return $this->hasOne(SocialFacebookAccount::class);
+    }
+
+    public function twitter()
+    {
+        return $this->hasOne(SocialTwitterAccount::class);
+    }
+
+    public function google()
+    {
+        return $this->hasOne(SocialGoogleAccount::class);
+    }
+
     public function commentaires()
     {
         return $this->hasMany(Commentaire::class, "idUser");
@@ -155,5 +180,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function trackings()
     {
         return $this->hasMany(Tracking::class, 'idUser');
+    }
+
+    public function etablissements()
+    {
+        return $this->hasMany(Etablissement::class, "idUser");
+    }
+
+    public function batiments()
+    {
+        return $this->hasMany(Batiment::class, "idUser");
     }
 }

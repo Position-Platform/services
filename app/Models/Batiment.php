@@ -52,13 +52,16 @@ use Laravel\Scout\Searchable;
  * @property int $idCommercial
  * @property-read \App\Models\Commercial|null $commercial
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereIdCommercial($value)
+ * @property int|null $idUser
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereIdUser($value)
  */
 class Batiment extends Model
 {
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "idCommercial", "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
+        "idCommercial", "idUser", "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
     ];
 
     public function etablissements()
@@ -69,5 +72,10 @@ class Batiment extends Model
     public function commercial()
     {
         return $this->belongsTo(Commercial::class, "idCommercial");
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, "idUser");
     }
 }

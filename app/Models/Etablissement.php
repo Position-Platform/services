@@ -80,13 +80,16 @@ use Laravel\Scout\Searchable;
  * @property-read int|null $sous_categories_count
  * @property-read \App\Models\Commercial|null $commercial
  * @property-read \App\Models\Manager|null $manager
+ * @property int|null $idUser
+ * @property-read \App\Models\User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder|Etablissement whereIdUser($value)
  */
 class Etablissement extends Model
 {
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis"
+        "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "idUser", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis"
     ];
 
     public function batiment()
@@ -127,5 +130,10 @@ class Etablissement extends Model
     public function manager()
     {
         return $this->belongsTo(Manager::class, "idManager");
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, "idUser");
     }
 }
