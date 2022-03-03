@@ -66,6 +66,10 @@ use Spatie\Permission\Traits\HasRoles;
  * @property-read int|null $commentaires_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tracking[] $trackings
  * @property-read int|null $trackings_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
+ * @property-read int|null $batiments_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -155,5 +159,15 @@ class User extends Authenticatable implements MustVerifyEmail
     public function trackings()
     {
         return $this->hasMany(Tracking::class, 'idUser');
+    }
+
+    public function etablissements()
+    {
+        return $this->hasMany(Etablissement::class, "idUser");
+    }
+
+    public function batiments()
+    {
+        return $this->hasMany(Batiment::class, "idUser");
     }
 }

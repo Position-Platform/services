@@ -50,9 +50,17 @@ class EtablissementController extends BaseController
                 $commentaires->user;
             }
 
-            $etablissement->commercial->user;
+
             if ($etablissement->manager) {
                 $etablissement->manager->user;
+            }
+
+            if ($etablissement->user) {
+                $etablissement->user;
+            }
+
+            if ($etablissement->commercial) {
+                $etablissement->commercial->user;
             }
         }
 
@@ -115,6 +123,7 @@ class EtablissementController extends BaseController
         $input['osmId'] = $request->osmId;
         $input['services'] = $request->services;
         $input['ameliorations'] = $request->ameliorations;
+        $input['idUser'] = $user->id;
 
         $batiment = Batiment::find($request->idBatiment);
 
@@ -186,9 +195,16 @@ class EtablissementController extends BaseController
             $commentaires->user;
         }
 
-        $etablissement->commercial->user;
         if ($etablissement->manager) {
             $etablissement->manager->user;
+        }
+
+        if ($etablissement->user) {
+            $etablissement->user;
+        }
+
+        if ($etablissement->commercial) {
+            $etablissement->commercial->user;
         }
 
         return $this->sendResponse($etablissement, "Etablissement");

@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string("indicationAdresse")->nullable();
             $table->string("codePostal")->nullable();
             $table->string("siteInternet")->nullable();
-            $table->string("idCommercial");
+            $table->string("idCommercial")->nullable();
             $table->string("idManager")->nullable();
+            $table->string("idUser")->nullable();
             $table->string("etage");
             $table->string("cover");
             $table->string("vues")->default(0);
