@@ -40,7 +40,7 @@ class SousCategorieController extends BaseController
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the subcategory. Example: Achat
      * @bodyParam idcategorie int required the id of the category. Example: 5
-     * @bodyParam file file required the picture of the subcategory
+     * @bodyParam file file the picture of the subcategory
      * @responseFile storage/responses/addsouscategorie.json
      */
     public function store(Request $request)
@@ -48,7 +48,7 @@ class SousCategorieController extends BaseController
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
             'idcategorie' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:10000',
+            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -68,6 +68,7 @@ class SousCategorieController extends BaseController
             $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $request->nom, $fileName, 'public');
             $input['logourl'] = '/storage/' . $filePath;
         }
+
         try {
 
             DB::beginTransaction();
@@ -107,7 +108,7 @@ class SousCategorieController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the subcategory. Example: 2
      * @bodyParam nom string the name of the subcategory. Example: Achat
-     * @bodyParam file file the picture of the subcategory
+     *  @bodyParam file file the picture of the subcategory
      * @bodyParam idcategorie int the id of the category. Example: 5
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
@@ -117,7 +118,7 @@ class SousCategorieController extends BaseController
         $souscategorie = SousCategorie::find($id);
         $categorie = $souscategorie->categorie;
         $request->validate([
-            'file' => 'mimes:png,jpg,jpeg|max:10000'
+            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($request->file()) {
@@ -125,6 +126,7 @@ class SousCategorieController extends BaseController
             $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $souscategorie->nom, $fileName, 'public');
             $souscategorie->logourl = '/storage/' . $filePath;
         }
+
 
         try {
             DB::beginTransaction();

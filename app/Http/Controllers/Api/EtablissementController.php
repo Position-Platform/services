@@ -86,6 +86,7 @@ class EtablissementController extends BaseController
      * @bodyParam osmId string OSM Data Id. Example: 111259658236
      * @bodyParam services string required department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
+     * @bodyParam logo file required establishment Logo.
      * @responseFile storage/responses/addetablissement.json
      */
     public function store(Request $request)
@@ -104,7 +105,8 @@ class EtablissementController extends BaseController
             'idSousCategorie' => 'required',
             'idCommodite' => 'required',
             'idBatiment' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:20000'
+            'file' => 'mimes:png,jpg,jpeg|max:20000',
+            'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -133,6 +135,12 @@ class EtablissementController extends BaseController
                 $fileName = time() . '_' . $request->file->getClientOriginalName();
                 $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
                 $input['cover'] = '/storage/' . $filePath;
+            }
+
+            if ($request->file('logo')) {
+                $fileName = time() . '_' . $request->file->getClientOriginalName();
+                $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+                $input['logo'] = '/storage/' . $filePathLogo;
             }
 
             try {
@@ -230,10 +238,11 @@ class EtablissementController extends BaseController
      * @bodyParam osmId string OSM Data Id. Example: 111259658236
      * @bodyParam services string department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
-     * @bodyParam vues int views number of the establishment. Example: 15
+     * @bodyParam vues string count view. Example: ok
      * @bodyParam avis int overall rating of the institution. Example: 3.2
      * @bodyParam revoir bool establishment to be reviewed. Example: 3.2
      * @bodyParam valide bool valid establishment. Example: 3.2
+     * @bodyParam logo file establishment Logo.
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateetablissement.json
      */
@@ -246,7 +255,8 @@ class EtablissementController extends BaseController
 
         if ($admin || $commercial->id == $etablissement->idCommercial) {
             $request->validate([
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'file' => 'mimes:png,jpg,jpeg|max:10000',
+                'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
             ]);
 
             try {
@@ -282,6 +292,12 @@ class EtablissementController extends BaseController
                     $fileName = time() . '_' . $request->file->getClientOriginalName();
                     $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
                     $etablissement->cover = '/storage/' . $filePath;
+                }
+
+                if ($request->file('logo')) {
+                    $fileName = time() . '_' . $request->file->getClientOriginalName();
+                    $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                    $etablissement->logo = '/storage/' . $filePathLogo;
                 }
 
 

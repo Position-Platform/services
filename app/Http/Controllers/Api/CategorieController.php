@@ -44,14 +44,15 @@ class CategorieController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the category. Example: Achat
-     * @bodyParam file file required the picture of the category
+     * @bodyParam file file the picture of the category
      * @responseFile storage/responses/addcategorie.json
      */
     public function store(Request $request)
     {
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:10000',
+            'shortname' => 'required',
+            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -71,6 +72,7 @@ class CategorieController extends BaseController
             $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $request->nom, $fileName, 'public');
             $input['logourl'] = '/storage/' . $filePath;
         }
+
         try {
 
             DB::beginTransaction();
@@ -114,6 +116,7 @@ class CategorieController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the category. Example: 2
      * @bodyParam nom string the name of the category. Example: Achat
+     * @bodyParam vues string count view. Example: ok
      * @bodyParam file file the picture of the category
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
@@ -122,7 +125,7 @@ class CategorieController extends BaseController
     {
         $categorie = Categorie::find($id);
         $request->validate([
-            'file' => 'mimes:png,jpg,jpeg|max:10000'
+            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($request->file()) {
@@ -131,10 +134,16 @@ class CategorieController extends BaseController
             $categorie->logourl = '/storage/' . $filePath;
         }
 
+
         try {
             DB::beginTransaction();
 
             $categorie->nom = $request->nom ?? $categorie->nom;
+            $categorie->shortname = $request->shortname ?? $categorie->shortname;
+
+            if ($request->vues) {
+                $categorie->vues =  $categorie->vues + 1;
+            }
 
             $categorie->sousCategories;
 
