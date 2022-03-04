@@ -35,6 +35,10 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereLogourl($value)
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Commodite[] $commodites
  * @property-read int|null $commodites_count
+ * @property string|null $shortname
+ * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereShortname($value)
+ * @property int|null $vues
+ * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereVues($value)
  */
 class Categorie extends Model
 {
@@ -42,7 +46,7 @@ class Categorie extends Model
 
 
     protected $fillable = [
-        "id", "nom", "logourl"
+        "id", "nom", "shortname", "logourl", "vues"
     ];
 
     public function sousCategories()

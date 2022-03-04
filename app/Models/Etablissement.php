@@ -83,13 +83,15 @@ use Laravel\Scout\Searchable;
  * @property int|null $idUser
  * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder|Etablissement whereIdUser($value)
+ * @property string|null $logo
+ * @method static \Illuminate\Database\Eloquent\Builder|Etablissement whereLogo($value)
  */
 class Etablissement extends Model
 {
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "idUser", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis"
+        "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "idUser", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis", "logo"
     ];
 
     public function batiment()

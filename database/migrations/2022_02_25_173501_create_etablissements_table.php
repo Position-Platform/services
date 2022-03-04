@@ -37,6 +37,7 @@ return new class extends Migration
             $table->string("services");
             $table->string("ameliorations")->nullable();
             $table->integer("avis")->default(0);
+            $table->string("logo")->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

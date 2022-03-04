@@ -1,215 +1,242 @@
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (1,
         'Achats',
-        NULL,
+        'Achats',
+        '/images/categories/logo/icon-list-categorie-achats.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (2,
         'Administrations',
-        NULL,
+        'Administration',
+        '/images/categories/logo/icon-list-categorie-administration.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (3,
         'Agriculture',
-        NULL,
+        'Agriculture',
+        '/images/categories/logo/icon-list-categorie-agriculture.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (4,
         'Alimentation',
-        NULL,
+        'Alimentation',
+        '/images/categories/logo/icon-list-categorie-alimentation.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (5,
         'Automobile, Moto, Engins',
-        NULL,
+        'Auto & moto',
+        '/images/categories/logo/icon-list-categorie-automobile.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (6,
         'Banques, finances et assurances',
-        NULL,
+        'Finance',
+        '/images/categories/logo/icon-list-categorie-banques.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (7,
         'Batiments & Constructions',
-        NULL,
+        'Construction',
+        '/images/categories/logo/icon-list-categorie-batiments.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (8,
         'Bien-être',
-        NULL,
+        'Bien-être',
+        '/images/categories/logo/icon-list-categorie-bienetre.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (9,
         'Commerce - Import & Export',
-        NULL,
+        'Commerce',
+        '/images/categories/logo/icon-list-categorie-commerce.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (10,
         'Communication, Journalisme, Audiovisuel',
-        NULL,
+        'Communication',
+        '/images/categories/logo/icon-list-categorie-communication.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (11,
         'Eau',
-        NULL,
+        'Eau',
+        '/images/categories/logo/icon-list-categorie-eau.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (12,
         'Education & Formation',
-        NULL,
+        'Formation',
+        '/images/categories/logo/icon-list-categorie-education.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (13,
         'Energie',
-        NULL,
+        'Energie',
+        '/images/categories/logo/icon-list-categorie-energie.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (14,
         'Hydrocarbures, Pétroliers, Forages',
-        NULL,
+        'Hydrocarbures',
+        '/images/categories/logo/icon-list-categorie-petrole.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (15,
         'Immobilier',
-        NULL,
+        'Immobilier',
+        '/images/categories/logo/icon-list-categorie-immobilier.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (16,
         'Industries',
-        NULL,
+        'Industries',
+        '/images/categories/logo/icon-list-categorie-industrie.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (17,
         'Informatique, Internet, Nouvelles Technologies',
-        NULL,
+        'Technologies',
+        '/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (18,
         'Justice',
-        NULL,
+        'Justice',
+        '/images/categories/logo/icon-list-categorie-justice.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (19,
         'Loisirs',
-        NULL,
+        'Loisirs',
+        '/images/categories/logo/icon-list-categorie-loisirs.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (20,
         'Restos, bars',
-        NULL,
+        'Resto/Bar',
+        '/images/categories/logo/icon-list-categorie-restos&bars.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (21,
         'Santé & Médecine',
-        NULL,
+        'Santé',
+        '/images/categories/logo/icon-list-categorie-santé.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (22,
         'Securite, Gardiennage, Protection Incendie',
-        NULL,
+        'Sécurité',
+        '/images/categories/logo/icon-list-categorie-sécurité.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (23,
         'Télécommunication',
-        NULL,
+        'Telecom',
+        '/images/categories/logo/icon-list-categorie-telecom.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (24,
         'Textiles & Prêt à Porter',
-        NULL,
+        'Textile',
+        '/images/categories/logo/icon-list-categorie-textile.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (25,
         'Tourisme',
-        NULL,
+        'Tourisme',
+        '/images/categories/logo/icon-list-categorie-tourisme.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (26,
         'Transports',
-        NULL,
+        'Transports',
+        '/images/categories/logo/icon-list-categorie-transport.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
 
-INSERT INTO categories(id,nom,logourl,created_at,updated_at)
+INSERT INTO categories(id,nom,shortname,logourl,created_at,updated_at)
 VALUES (27,
         'Autres',
-        NULL,
+        'Autres',
+        '/images/categories/logo/icon-list-categorie-bienetre.svg',
         CURRENT_TIMESTAMP,
         CURRENT_TIMESTAMP);
 
