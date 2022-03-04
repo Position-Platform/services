@@ -4,10 +4,12 @@
         {
             "id": 1,
             "nom": "Achats",
-            "logourl": null,
+            "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
             "deleted_at": null,
-            "created_at": "2022-02-25T11:35:29.000000Z",
-            "updated_at": "2022-02-25T11:35:29.000000Z",
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Achats",
+            "vues": 0,
             "sous_categories": [
                 {
                     "id": 1,
@@ -222,10 +224,12 @@
         {
             "id": 2,
             "nom": "Administrations",
-            "logourl": null,
+            "logourl": "/images/categories/logo/icon-list-categorie-administration.svg",
             "deleted_at": null,
-            "created_at": "2022-02-25T11:35:29.000000Z",
-            "updated_at": "2022-02-25T11:35:29.000000Z",
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Administration",
+            "vues": 0,
             "sous_categories": [
                 {
                     "id": 23,
@@ -321,14 +325,21 @@
             "commodites": [
                 {
                     "id": 16,
-                    "nom": "Wifi",
+                    "nom": "Wifi ++",
                     "idTypeCommodite": 1,
                     "deleted_at": null,
                     "created_at": "2022-02-25T14:48:03.000000Z",
-                    "updated_at": "2022-02-25T14:48:03.000000Z",
+                    "updated_at": "2022-02-25T15:24:26.000000Z",
                     "pivot": {
                         "idCategorie": 2,
                         "idCommodite": 16
+                    },
+                    "type_commodite": {
+                        "id": 1,
+                        "nom": "Luxe ++",
+                        "deleted_at": null,
+                        "created_at": "2022-02-25T14:02:08.000000Z",
+                        "updated_at": "2022-02-25T14:04:49.000000Z"
                     }
                 }
             ]
@@ -336,10 +347,12 @@
         {
             "id": 3,
             "nom": "Agriculture",
-            "logourl": null,
+            "logourl": "/images/categories/logo/icon-list-categorie-agriculture.svg",
             "deleted_at": null,
-            "created_at": "2022-02-25T11:35:29.000000Z",
-            "updated_at": "2022-02-25T11:35:29.000000Z",
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Agriculture",
+            "vues": 0,
             "sous_categories": [
                 {
                     "id": 33,
@@ -425,6 +438,13 @@
                     "pivot": {
                         "idCategorie": 3,
                         "idCommodite": 19
+                    },
+                    "type_commodite": {
+                        "id": 1,
+                        "nom": "Luxe ++",
+                        "deleted_at": null,
+                        "created_at": "2022-02-25T14:02:08.000000Z",
+                        "updated_at": "2022-02-25T14:04:49.000000Z"
                     }
                 }
             ]
@@ -432,10 +452,12 @@
         {
             "id": 4,
             "nom": "Alimentation",
-            "logourl": null,
+            "logourl": "/images/categories/logo/icon-list-categorie-alimentation.svg",
             "deleted_at": null,
-            "created_at": "2022-02-25T11:35:29.000000Z",
-            "updated_at": "2022-02-25T11:35:29.000000Z",
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Alimentation",
+            "vues": 0,
             "sous_categories": [
                 {
                     "id": 41,
@@ -711,6 +733,4053 @@
                     }
                 }
             ]
+        },
+        {
+            "id": 5,
+            "nom": "Automobile, Moto, Engins",
+            "logourl": "/images/categories/logo/icon-list-categorie-automobile.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Auto & moto",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 69,
+                    "nom": "Auto-Ecoles",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 70,
+                    "nom": "Automobiles et Concessionnaires",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 71,
+                    "nom": "Expertises automobiles",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 72,
+                    "nom": "Automobiles - Pièces Détachées et Accessoires",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 73,
+                    "nom": "Voitures d'occasion",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 74,
+                    "nom": "Constructions Mécaniques",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 75,
+                    "nom": "Contrôles Techniques",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 76,
+                    "nom": "Cycles et Motos",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 77,
+                    "nom": "Engins ee Chantier et Matériels",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 78,
+                    "nom": "Garages",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 79,
+                    "nom": "Mécanique Générale",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 80,
+                    "nom": "Mécanique - Industries",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 81,
+                    "nom": "Moteurs et Pompes",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 82,
+                    "nom": "Pneumatiques",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 83,
+                    "nom": "Tracking",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 84,
+                    "nom": "Véhicules Industriels",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 85,
+                    "nom": "Station-service",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 86,
+                    "nom": "Parking",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 87,
+                    "nom": "Garage",
+                    "idcategorie": 5,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 6,
+            "nom": "Banques, finances et assurances",
+            "logourl": "/images/categories/logo/icon-list-categorie-banques.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Finance",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 88,
+                    "nom": "Assurances",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 89,
+                    "nom": "Assurances Vies",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 90,
+                    "nom": "Assurances médicales",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 91,
+                    "nom": "Assureurs - Courtiers Et Conseils",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 92,
+                    "nom": "Banques et Organismes Financiers",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 93,
+                    "nom": "Equipements de Sécurité Bancaire",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 94,
+                    "nom": "Banques - Services Mobiles",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 95,
+                    "nom": "Bureaux de Change et Transferts d'argent",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 96,
+                    "nom": "Bureaux de Contrôle",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 97,
+                    "nom": "Cabinets Comptables",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 98,
+                    "nom": "Centres d'Information",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 99,
+                    "nom": "Crédits et Finances",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 100,
+                    "nom": "Enquêtes, recherches et investigation",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 101,
+                    "nom": "Holdings",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 102,
+                    "nom": "Investissements",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 103,
+                    "nom": "Transports de Fonds",
+                    "idcategorie": 6,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 7,
+            "nom": "Batiments & Constructions",
+            "logourl": "/images/categories/logo/icon-list-categorie-batiments.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Construction",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 104,
+                    "nom": "Adduction d'eau et VRD",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 105,
+                    "nom": "Agencement et Décoration",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 106,
+                    "nom": "Industrie d'aluminium",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 107,
+                    "nom": "Aménagement des Terrains Urbains",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 108,
+                    "nom": "Architecture et Urbanisme",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 109,
+                    "nom": "Ascenseurs",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 110,
+                    "nom": "Assainissement et Canalisations",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 111,
+                    "nom": "Bâches et Stores",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 112,
+                    "nom": "Bâtiments et Travaux Publics",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 113,
+                    "nom": "Bâtiments - Expertises",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 114,
+                    "nom": "Bâtiments - Nettoyage",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 115,
+                    "nom": "Bâtiments - Préfabriqué",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 116,
+                    "nom": "Bâtiments - Ravalement",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 117,
+                    "nom": "Bâtiments - Réhabilitation",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 118,
+                    "nom": "Bâtiments - Second Œuvre",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 119,
+                    "nom": "Bitume",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 120,
+                    "nom": "Bois et Négoce",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 121,
+                    "nom": "Bois - Industries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 122,
+                    "nom": "Bois - Scieries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 123,
+                    "nom": "Bricolage",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 124,
+                    "nom": "Briqueteries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 125,
+                    "nom": "Bureaux d'Etudes et D'Ingénierie",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 126,
+                    "nom": "Câbles",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 127,
+                    "nom": "Caoutchouc",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 128,
+                    "nom": "Carrelages",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 129,
+                    "nom": "Carrières - Exploitations et Exploration",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 130,
+                    "nom": "Chaudronnerie",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 131,
+                    "nom": "Cimenteries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 132,
+                    "nom": "Citernes - Métallique et Plastique",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 133,
+                    "nom": "Climatisation",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 134,
+                    "nom": "Climatisation - Dépannage et Maintenance",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 135,
+                    "nom": "Constructions Industrielles",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 136,
+                    "nom": "Constructions Métalliques",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 137,
+                    "nom": "Développement Rural et Urbain",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 138,
+                    "nom": "Ebenistes",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 139,
+                    "nom": "Echafaudages",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 140,
+                    "nom": "Espaces Verts et Jardins",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 141,
+                    "nom": "Etanchéité",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 142,
+                    "nom": "Faux-Plafonds et Staff",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 143,
+                    "nom": "Fer et Acier",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 144,
+                    "nom": "Forages",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 145,
+                    "nom": "Forages - Maintenance",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 146,
+                    "nom": "Forages - Matériels et Equipements",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 147,
+                    "nom": "Forestiers - Matériels et Equipement",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 148,
+                    "nom": "Génie Civil",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 149,
+                    "nom": "Géologues",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 150,
+                    "nom": "Géomètres - topographes",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 151,
+                    "nom": "Groupes Electrogènes",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 152,
+                    "nom": "Hydraulique",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 153,
+                    "nom": "Hydraulique - Constructions",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 154,
+                    "nom": "Hydraulique - Matériels et Equipements",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 155,
+                    "nom": "Isolation industrielle",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 156,
+                    "nom": "Laboratoires d'Analyses du Bâtiment",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 157,
+                    "nom": "Location d'Engins de Chantier",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 158,
+                    "nom": "Matériaux de Construction",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 159,
+                    "nom": "Menuiseries Aluminium",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 160,
+                    "nom": "Menuiseries Bois",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 161,
+                    "nom": "Menuiseries Industrielles",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 162,
+                    "nom": "Menuiseries Métalliques",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 163,
+                    "nom": "Mines - Exploitations et Exploration",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 164,
+                    "nom": "Mines - Import et Export",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 165,
+                    "nom": "Mines - Matériels et Equipements",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 166,
+                    "nom": "Mines - Recherche",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 167,
+                    "nom": "Miroiteries et Vitreries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 168,
+                    "nom": "Ouvrages d'Art",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 169,
+                    "nom": "Peintres",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 170,
+                    "nom": "Peinture",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 171,
+                    "nom": "Piscines",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 172,
+                    "nom": "Plomberie et Sanitaires",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 173,
+                    "nom": "Portes et Fenêtres",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 174,
+                    "nom": "Propreté urbaine",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 175,
+                    "nom": "Quincailleries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 176,
+                    "nom": "Routes",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 177,
+                    "nom": "Routes - Matériaux",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 178,
+                    "nom": "Routes - Signalisation",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 179,
+                    "nom": "Serrureries",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 180,
+                    "nom": "Toitures - Matériaux",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 181,
+                    "nom": "Tôles",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 182,
+                    "nom": "Topographie",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 183,
+                    "nom": "Travaux Publics et Terrassement",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 184,
+                    "nom": "Travaux Publics et Terrassement - Maintenance",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 185,
+                    "nom": "Tuyauteries et PVC",
+                    "idcategorie": 7,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": [
+                {
+                    "id": 20,
+                    "nom": "Piscine",
+                    "idTypeCommodite": 1,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T15:37:37.000000Z",
+                    "updated_at": "2022-02-25T15:37:37.000000Z",
+                    "pivot": {
+                        "idCategorie": 7,
+                        "idCommodite": 20
+                    },
+                    "type_commodite": {
+                        "id": 1,
+                        "nom": "Luxe ++",
+                        "deleted_at": null,
+                        "created_at": "2022-02-25T14:02:08.000000Z",
+                        "updated_at": "2022-02-25T14:04:49.000000Z"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "nom": "Bien-être",
+            "logourl": "/images/categories/logo/icon-list-categorie-bienetre.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Bien-être",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 186,
+                    "nom": "Coiffeur",
+                    "idcategorie": 8,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 187,
+                    "nom": "Institut de beauté, parfumerie, relaxation",
+                    "idcategorie": 8,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 188,
+                    "nom": "Massages",
+                    "idcategorie": 8,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": [
+                {
+                    "id": 20,
+                    "nom": "Piscine",
+                    "idTypeCommodite": 1,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T15:37:37.000000Z",
+                    "updated_at": "2022-02-25T15:37:37.000000Z",
+                    "pivot": {
+                        "idCategorie": 8,
+                        "idCommodite": 20
+                    },
+                    "type_commodite": {
+                        "id": 1,
+                        "nom": "Luxe ++",
+                        "deleted_at": null,
+                        "created_at": "2022-02-25T14:02:08.000000Z",
+                        "updated_at": "2022-02-25T14:04:49.000000Z"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "nom": "Commerce - Import & Export",
+            "logourl": "/images/categories/logo/icon-list-categorie-commerce.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Commerce",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 189,
+                    "nom": "Centrales d'Achats",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 190,
+                    "nom": "Chambres de Commerce",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 191,
+                    "nom": "Commerce Exterieur - Promotion",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 192,
+                    "nom": "Commerce Général",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 193,
+                    "nom": "E-Commerce",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 194,
+                    "nom": "Groupements D'Entreprises",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 195,
+                    "nom": "Import et Export",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 196,
+                    "nom": "Promotion Commerciale et Etudes",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 197,
+                    "nom": "Recouvrements Commerciaux",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 198,
+                    "nom": "Représentation Commerciale",
+                    "idcategorie": 9,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 10,
+            "nom": "Communication, Journalisme, Audiovisuel",
+            "logourl": "/images/categories/logo/icon-list-categorie-communication.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Communication",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 199,
+                    "nom": "Agences de Mannequins",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 200,
+                    "nom": "Agences de Presse et d'Information",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 201,
+                    "nom": "Agences de Publicité et de Communication",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 202,
+                    "nom": "Audiovisuel - Matériels et Production",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 203,
+                    "nom": "Evénementiel",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 204,
+                    "nom": "Journaux et Presse",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 205,
+                    "nom": "Maison d'édition",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 206,
+                    "nom": "Marketing",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 207,
+                    "nom": "Objets Publicitaires",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 208,
+                    "nom": "Organisations de Conférences",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 209,
+                    "nom": "Radio et Télévision",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 210,
+                    "nom": "Radio-Communication",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 211,
+                    "nom": "Relations Publiques et Organisations",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 212,
+                    "nom": "Ressources Humaines",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 213,
+                    "nom": "Sérigraphie",
+                    "idcategorie": 10,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 11,
+            "nom": "Eau",
+            "logourl": "/images/categories/logo/icon-list-categorie-eau.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Eau",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 214,
+                    "nom": "Eau - Distribution",
+                    "idcategorie": 11,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 215,
+                    "nom": "Eau - Laboratoires d'Analyses",
+                    "idcategorie": 11,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 216,
+                    "nom": "Eau - Traitement",
+                    "idcategorie": 11,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 12,
+            "nom": "Education & Formation",
+            "logourl": "/images/categories/logo/icon-list-categorie-education.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Formation",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 217,
+                    "nom": "Centres de Documentation",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 218,
+                    "nom": "Crèche",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 219,
+                    "nom": "Centre de loisirs d'enfants",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 220,
+                    "nom": "Centre linguistique - enseignement",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 221,
+                    "nom": "Centres de Formation",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 222,
+                    "nom": "Centres de Recherche",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 223,
+                    "nom": "Ecoles et Universités",
+                    "idcategorie": 12,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 13,
+            "nom": "Energie",
+            "logourl": "/images/categories/logo/icon-list-categorie-energie.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Energie",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 224,
+                    "nom": "Automatisme",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 225,
+                    "nom": "Batteries et Piles",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 226,
+                    "nom": "Electricité - Générale et Industrielle",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 227,
+                    "nom": "Electricité - Expertises",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 228,
+                    "nom": "Electricité - Industries",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 229,
+                    "nom": "Electricité - Ingénierie",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 230,
+                    "nom": "Electricité - Materiels et Equipement",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 231,
+                    "nom": "Electrification Rurale Et Urbaine",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 232,
+                    "nom": "Electromécanique",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 233,
+                    "nom": "Energie",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 234,
+                    "nom": "Energie Nouvelle et Renouvelable",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 235,
+                    "nom": "Energie Solaire",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 236,
+                    "nom": "Gaz Domestique Et Industriel",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 237,
+                    "nom": "Géotechnique",
+                    "idcategorie": 13,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 14,
+            "nom": "Hydrocarbures, Pétroliers, Forages",
+            "logourl": "/images/categories/logo/icon-list-categorie-petrole.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Hydrocarbures",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 238,
+                    "nom": "Hydrocarbures - Aviation",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 239,
+                    "nom": "Hydrocarbures - Distribution",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 240,
+                    "nom": "Hydrocarbures - Equipements Et Mater...",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 241,
+                    "nom": "Hydrocarbures - Expertises",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 242,
+                    "nom": "Hydrocarbures - Exploration",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 243,
+                    "nom": "Hydrocarbures - Logistiques",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 244,
+                    "nom": "Hydrocarbures - Lubrifiants",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 245,
+                    "nom": "Hydrocarbures - Maintenance",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 246,
+                    "nom": "Hydrocarbures - Production",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 247,
+                    "nom": "Hydrocarbures - Transports",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 248,
+                    "nom": "Pétroliers, Constructions",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 249,
+                    "nom": "Pétroliers - Matériels et Equipement",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 250,
+                    "nom": "Raffineries",
+                    "idcategorie": 14,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 15,
+            "nom": "Immobilier",
+            "logourl": "/images/categories/logo/icon-list-categorie-immobilier.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Immobilier",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 251,
+                    "nom": "Garde Meubles",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 252,
+                    "nom": "Immobilier - Agences",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 253,
+                    "nom": "Immobilier - Expertises",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 254,
+                    "nom": "Immobilier - Gestion",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 255,
+                    "nom": "Immobilier - Location",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 256,
+                    "nom": "Immobilier - Promoteurs",
+                    "idcategorie": 15,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 16,
+            "nom": "Industries",
+            "logourl": "/images/categories/logo/icon-list-categorie-industrie.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Industries",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 257,
+                    "nom": "Electro-Ménager",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 258,
+                    "nom": "Electronique",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 259,
+                    "nom": "Allumettes et Bougies",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 260,
+                    "nom": "Armes et Munitions",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 261,
+                    "nom": "Assistance Technique",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 262,
+                    "nom": "Cartonneries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 263,
+                    "nom": "Chaussures, Manufactures",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 264,
+                    "nom": "Coton",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 265,
+                    "nom": "Dépannage et Maintenance Industrielle",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 266,
+                    "nom": "Diamant et Or",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 267,
+                    "nom": "Emballage et Conditionnement",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 268,
+                    "nom": "Equipements de Bureaux",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 269,
+                    "nom": "Equipements Industriels",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 270,
+                    "nom": "Fournitures Industrielles",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 271,
+                    "nom": "Froid Industriel",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 272,
+                    "nom": "Location De Matériels",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 273,
+                    "nom": "Machines-Outils, Manufactures",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 274,
+                    "nom": "Manutention Industrielle",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 275,
+                    "nom": "Matelas",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 276,
+                    "nom": "Matelas, Equipements et Materiels",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 277,
+                    "nom": "Mesure et Pesage, Materiels",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 278,
+                    "nom": "Nettoyage Industriel",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 279,
+                    "nom": "Nettoyage, Matériels et Equipements",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 280,
+                    "nom": "Papier - Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 281,
+                    "nom": "Pièces Détachées Industrielles",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 282,
+                    "nom": "Plastique - Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 283,
+                    "nom": "Plastique - Produits",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 284,
+                    "nom": "Savonneries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 285,
+                    "nom": "Soudage, Matériels et Produits",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 286,
+                    "nom": "Tabac, Manufactures et Importateurs",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 287,
+                    "nom": "Travail Temporaire, Interim",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 288,
+                    "nom": "Tuyauteries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 289,
+                    "nom": "Verre - Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 290,
+                    "nom": "Zone Franche Industrielle",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 291,
+                    "nom": "Ameublement et Mobilier, Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 292,
+                    "nom": "Fournitures de Bureaux, Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 293,
+                    "nom": "Mobilier - Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 294,
+                    "nom": "Chimie - Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 295,
+                    "nom": "Chimie - Produits",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 296,
+                    "nom": "Parfum, Industries",
+                    "idcategorie": 16,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 17,
+            "nom": "Informatique, Internet, Nouvelles Technologies",
+            "logourl": "/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Technologies",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 297,
+                    "nom": "Antennes Paraboliques, Equipements",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 298,
+                    "nom": "Archivage Numerique",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 299,
+                    "nom": "Bureautique",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 300,
+                    "nom": "Business Center",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 301,
+                    "nom": "Centres d'Appels",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 302,
+                    "nom": "Courriers Express, Colis Express",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 303,
+                    "nom": "Cyber-Cafes",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 304,
+                    "nom": "Domiciliation de Sociétés",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 305,
+                    "nom": "Editeurs",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 306,
+                    "nom": "Etudes de Marchés",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 307,
+                    "nom": "Imprimeries",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 308,
+                    "nom": "Imprimeries, Matériels et Equipement",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 309,
+                    "nom": "Informatique",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 310,
+                    "nom": "Informatique - Consommables",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 311,
+                    "nom": "Informatique - Constructeurs",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 312,
+                    "nom": "Informatique - Consultants",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 313,
+                    "nom": "Informatique - Environnement",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 314,
+                    "nom": "Informatique - Expertises",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 315,
+                    "nom": "Informatique - Gestion De Maintenance",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 316,
+                    "nom": "Informatique - Ingénierie",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 317,
+                    "nom": "Informatique - Ingénieurs",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 318,
+                    "nom": "Informatique - Maintenance",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 319,
+                    "nom": "Informatique - Reseaux",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 320,
+                    "nom": "Informatique - Securite",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 321,
+                    "nom": "Internet",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 322,
+                    "nom": "Internet - Provider",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 323,
+                    "nom": "Internet - Web Design",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 324,
+                    "nom": "Internet - E-Business & E-Commerce",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 325,
+                    "nom": "Paratonnerre",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 326,
+                    "nom": "Technologies Nouvelles",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 327,
+                    "nom": "Technologies Nouvelles, Consultants",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 328,
+                    "nom": "Traducteurs Et Interpretes",
+                    "idcategorie": 17,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 18,
+            "nom": "Justice",
+            "logourl": "/images/categories/logo/icon-list-categorie-justice.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Justice",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 329,
+                    "nom": "Avocats",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 330,
+                    "nom": "Avocats d'Affaires Internationales",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 331,
+                    "nom": "Cabinets Juridiques et Fiscaux",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 332,
+                    "nom": "Consultants",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 333,
+                    "nom": "Consultants en Immigration",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 334,
+                    "nom": "Consultants Internationaux",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 335,
+                    "nom": "Expertises  Comptables, Audit Et Conseil",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 336,
+                    "nom": "Expertises - Etudes, Communication",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 337,
+                    "nom": "Expertises Judiciaire",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 338,
+                    "nom": "Huissiers De Justice",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 339,
+                    "nom": "Notaires",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 340,
+                    "nom": "Projets et Bureaux D'Appui",
+                    "idcategorie": 18,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 19,
+            "nom": "Loisirs",
+            "logourl": "/images/categories/logo/icon-list-categorie-loisirs.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Loisirs",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 341,
+                    "nom": "Artisanat, Antiquaires et Galeries d'Art",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 342,
+                    "nom": "Cadeaux",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 343,
+                    "nom": "Casino",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 344,
+                    "nom": "Cinéma et vidéothèques",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 345,
+                    "nom": "Centre culturel",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 346,
+                    "nom": "Musée",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 347,
+                    "nom": "Musique",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 348,
+                    "nom": "Théâtre, spectacle",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 349,
+                    "nom": "Cabaret",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 350,
+                    "nom": "Bibliothèque et Centre de Documentation",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 351,
+                    "nom": "Librairie, papeterie",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 352,
+                    "nom": "Sport",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 353,
+                    "nom": "Espaces verts et Jardins",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 354,
+                    "nom": "Salle de spectacles - salle de fêtes",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 355,
+                    "nom": "Loisirs, jeux et entertainment",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 356,
+                    "nom": "Loterie",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 357,
+                    "nom": "Voyance, Medium",
+                    "idcategorie": 19,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 20,
+            "nom": "Restos, bars",
+            "logourl": "/images/categories/logo/icon-list-categorie-restos&bars.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Resto/Bar",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 358,
+                    "nom": "Restaurant",
+                    "idcategorie": 20,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 359,
+                    "nom": "Night Clubs et Discothèques",
+                    "idcategorie": 20,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 360,
+                    "nom": "Restauration rapide",
+                    "idcategorie": 20,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 361,
+                    "nom": "Bar, Café",
+                    "idcategorie": 20,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 362,
+                    "nom": "Salons de Thé et Glaciers",
+                    "idcategorie": 20,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 21,
+            "nom": "Santé & Médecine",
+            "logourl": "/images/categories/logo/icon-list-categorie-santé.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Santé",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 363,
+                    "nom": "Ambulance",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 364,
+                    "nom": "Assistance sociale",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 365,
+                    "nom": "Médecine Générale",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 366,
+                    "nom": "Médecine Spécialisée - dentiste",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 367,
+                    "nom": "Médecine Spécialisée - dermatologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 368,
+                    "nom": "Médecine Spécialisée - cardiologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 369,
+                    "nom": "Médecine Spécialisée - oncologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 370,
+                    "nom": "Médecine Spécialisée - ophtalmologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 371,
+                    "nom": "Médecine Spécialisée - psychologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 372,
+                    "nom": "Médecine Spécialisée - angiologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 373,
+                    "nom": "Médecine Spécialisée - pédicure et podologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 374,
+                    "nom": "Médecine Spécialisée - ostéopathie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 375,
+                    "nom": "Médecine Spécialisée - gynécologie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 376,
+                    "nom": "Médecine Spécialisée - kinésithérapeute",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 377,
+                    "nom": "Médecine naturelle, traditionnelle",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 378,
+                    "nom": "Médecine du travail",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 379,
+                    "nom": "Chirurgie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 380,
+                    "nom": "Chirurgie Esthétique",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 381,
+                    "nom": "Cliniques et Hopitaux",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 382,
+                    "nom": "Cosmétiques - Industries",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 383,
+                    "nom": "Cosmétiques - Produits",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 384,
+                    "nom": "Drogueries",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 385,
+                    "nom": "Laboratoires d'Analyses Médicales",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 386,
+                    "nom": "Laboratoires, Matériels et Equipement",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 387,
+                    "nom": "Laboratoires - Produits",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 388,
+                    "nom": "Medical - Assistance",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 389,
+                    "nom": "Medical - Gaz Medical",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 390,
+                    "nom": "Medical - Industries",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 391,
+                    "nom": "Medical - Materiels Et Equipements",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 392,
+                    "nom": "Medical - Produits",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 393,
+                    "nom": "Opticiens",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 394,
+                    "nom": "Opticiens - Matériels et Equipements",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 395,
+                    "nom": "Para-Pharmacie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 396,
+                    "nom": "Pharmaceutiques - Distributeurs",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 397,
+                    "nom": "Pharmaceutiques - Industries",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 398,
+                    "nom": "Pharmaceutiques - Laboratoires",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 399,
+                    "nom": "Pharmaceutiques - Materiels Et Equipement",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 400,
+                    "nom": "Pharmaceutiques - Produits",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 401,
+                    "nom": "Pharmacies",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 402,
+                    "nom": "Phytosanitaires - Traitements",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 403,
+                    "nom": "Urgences Medicales",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 404,
+                    "nom": "Vétérinaires",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 405,
+                    "nom": "Vétérinaires, Produits et Pharmacie",
+                    "idcategorie": 21,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 22,
+            "nom": "Securite, Gardiennage, Protection Incendie",
+            "logourl": "/images/categories/logo/icon-list-categorie-sécurité.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Sécurité",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 406,
+                    "nom": "Alarmes Et Surveillance, Matériels électroniques",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 407,
+                    "nom": "Badges, Fabrication",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 408,
+                    "nom": "Controles Techniques",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 409,
+                    "nom": "Détectives",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 410,
+                    "nom": "Escorte Véhicules",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 411,
+                    "nom": "Gardiennage et Sécurité",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 412,
+                    "nom": "Gardiennage et Sécurité - Equipements",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 413,
+                    "nom": "Incendie et Protection - Matériels",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 414,
+                    "nom": "Sécurité - Audits et Consultants",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 415,
+                    "nom": "Télé-Surveillance et Vidéo-Surveillance",
+                    "idcategorie": 22,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 23,
+            "nom": "Télécommunication",
+            "logourl": "/images/categories/logo/icon-list-categorie-telecom.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Telecom",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 416,
+                    "nom": "Télécommunications - Transmission de signal",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 417,
+                    "nom": "Télécommunications et Téléphonie",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 418,
+                    "nom": "Télécommunications - Fibres Optique",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 419,
+                    "nom": "Télécommunications - Installation et maintenance",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 420,
+                    "nom": "Télécommunications - Matériels et équipement",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 421,
+                    "nom": "Télécommunications - Mobiles",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 422,
+                    "nom": "Télécommunications - Réseaux",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 423,
+                    "nom": "Télécommunications - Satellite",
+                    "idcategorie": 23,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 24,
+            "nom": "Textiles & Prêt à Porter",
+            "logourl": "/images/categories/logo/icon-list-categorie-textile.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Textile",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 424,
+                    "nom": "Confection, Couture, Broderie",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 425,
+                    "nom": "Equipements et vêtements militaires",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 426,
+                    "nom": "Friperies",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 427,
+                    "nom": "Prêt à Porter - Gros et Détail",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 428,
+                    "nom": "Textile",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 429,
+                    "nom": "Textile, Filature, Tissage, Impression",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 430,
+                    "nom": "Textile, Fournitures",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 431,
+                    "nom": "Textile - Matériels et Equipements",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 432,
+                    "nom": "Vêtements  Manufactures",
+                    "idcategorie": 24,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 25,
+            "nom": "Tourisme",
+            "logourl": "/images/categories/logo/icon-list-categorie-tourisme.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Tourisme",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 433,
+                    "nom": "Agences de Tourisme",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 434,
+                    "nom": "Centres d'Information",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 435,
+                    "nom": "Agences de voyage, tours opérateurs",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 436,
+                    "nom": "Equipements Hôtels et Restaurants",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 437,
+                    "nom": "Hôtel",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 438,
+                    "nom": "Auberge",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 439,
+                    "nom": "Location d'avions",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 440,
+                    "nom": "Location de bateaux",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 441,
+                    "nom": "Location de voitures",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 442,
+                    "nom": "Transport Logistique",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 443,
+                    "nom": "Transports Touristiques",
+                    "idcategorie": 25,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 26,
+            "nom": "Transports",
+            "logourl": "/images/categories/logo/icon-list-categorie-transport.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Transports",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 444,
+                    "nom": "Accastillage",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 445,
+                    "nom": "Acconage",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 446,
+                    "nom": "Aéronautique",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 447,
+                    "nom": "Aéronautique - Centrales D'Achats",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 448,
+                    "nom": "Aéronautique - Maintenance",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 449,
+                    "nom": "Aéroports",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 450,
+                    "nom": "Aéroports - Equipements",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 451,
+                    "nom": "Aéroports -  Maintenance",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 452,
+                    "nom": "Aéroports -  Securite Aerienne",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 453,
+                    "nom": "Aéroports -  Services",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 454,
+                    "nom": "Agences en Douane",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 455,
+                    "nom": "Agences Maritimes",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 456,
+                    "nom": "Aéronautique - Pièces Détachées",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 457,
+                    "nom": "Chantiers Navals",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 458,
+                    "nom": "Chemin de Fer",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 459,
+                    "nom": "Compagnies Aériennes",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 460,
+                    "nom": "Containers, Fabrication et Location",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 461,
+                    "nom": "Déménagements",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 462,
+                    "nom": "Expertises Maritimes et Terrestres",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 463,
+                    "nom": "Fret aérien - maritime & international",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 464,
+                    "nom": "Manutention et Entreposage",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 465,
+                    "nom": "Manutention - Equipements",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 466,
+                    "nom": "Manutention - Portuaire",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 467,
+                    "nom": "Ports",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 468,
+                    "nom": "Ports, Matériels et Equipements",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 469,
+                    "nom": "Shipchandler",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 470,
+                    "nom": "Transit et Consignation",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 471,
+                    "nom": "Transports Aériens",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 472,
+                    "nom": "Transports en Commun",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 473,
+                    "nom": "Transports Ferroviaires",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 474,
+                    "nom": "Transports Internationaux",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 475,
+                    "nom": "Transports Maritimes",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 476,
+                    "nom": "Transports Routiers",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 477,
+                    "nom": "Transports Urbains",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 478,
+                    "nom": "Travaux Maritimes",
+                    "idcategorie": 26,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
+        },
+        {
+            "id": 27,
+            "nom": "Autres",
+            "logourl": "/images/categories/logo/icon-list-categorie-bienetre.svg",
+            "deleted_at": null,
+            "created_at": "2022-03-04T13:30:15.000000Z",
+            "updated_at": "2022-03-04T13:30:15.000000Z",
+            "shortname": "Autres",
+            "vues": 0,
+            "sous_categories": [
+                {
+                    "id": 479,
+                    "nom": "Activités Formelles",
+                    "idcategorie": 27,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                },
+                {
+                    "id": 480,
+                    "nom": "Activités Informelles",
+                    "idcategorie": 27,
+                    "logourl": null,
+                    "deleted_at": null,
+                    "created_at": "2022-02-25T11:35:34.000000Z",
+                    "updated_at": "2022-02-25T11:35:34.000000Z"
+                }
+            ],
+            "commodites": []
         }
     ],
     "message": "Liste des Categories"
