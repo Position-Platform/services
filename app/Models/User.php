@@ -6,6 +6,7 @@ use App\Models\Social\SocialFacebookAccount;
 use App\Models\Social\SocialGoogleAccount;
 use App\Models\Social\SocialTwitterAccount;
 use App\Notifications\SendResetLinkParams;
+use App\Notifications\VerifyEmail;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -126,6 +127,16 @@ class User extends Authenticatable implements MustVerifyEmail
         $url = 'https://services.position.cm/reset-password?token=' . $token;
 
         $this->notify(new SendResetLinkParams($token, $url));
+    }
+
+    /**
+     * Send the email verification notification.
+     *
+     * @return void
+     */
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new VerifyEmail);
     }
 
     /**
