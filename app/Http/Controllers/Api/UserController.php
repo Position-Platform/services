@@ -78,12 +78,16 @@ class UserController extends BaseController
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
-            $roles = $user->getRoleNames();
-            $success['token'] = $user->createToken('Position')->accessToken;
-            $success['user'] = $user;
-            $succes['roles'] = $roles;
+            if ($user->hasVerifiedEmail()) {
+                $roles = $user->getRoleNames();
+                $success['token'] = $user->createToken('Position')->accessToken;
+                $success['user'] = $user;
+                $succes['roles'] = $roles;
 
-            return $this->sendResponse($success, 'Connexion réussie.');
+                return $this->sendResponse($success, 'Connexion réussie.');
+            } else {
+                return $this->sendError("Email not verified.", ['error' => 'Unauthorised'], 400);
+            }
         } else {
             return $this->sendError('Pas autorisé.', ['error' => 'Login Error']);
         }
