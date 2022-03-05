@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone')->unique();
             $table->string('fcmToken')->nullable();
-            $table->string('imageProfil')->nullable();
+            $table->text('imageProfil')->nullable();
             $table->text('token')->nullable();
-            $table->string('tokenSecret')->nullable();
+            $table->text('tokenSecret')->nullable();
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

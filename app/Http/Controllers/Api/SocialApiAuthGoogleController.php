@@ -29,7 +29,7 @@ class SocialApiAuthGoogleController extends BaseController
         $user = $service->createOrGetUser(Socialite::driver('google')->userFromToken($token));
 
         Auth::login($user);
-        $token = $user->createToken('MyEvent')->accessToken;
+        $token = $user->createToken('Position')->accessToken;
         $success['token'] = $token;
         $success['user'] = $user;
         $roles = $user->getRoleNames();
