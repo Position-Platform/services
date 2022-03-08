@@ -187,4 +187,28 @@ class CategorieController extends BaseController
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
+
+    /**
+     * Search Category.
+     *
+     * @header Content-Type application/json
+     * @queryParam q string required search value. Example: piscine
+     * @responseFile storage/responses/getcategories.json
+     */
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        $categories = Categorie::search($q)->get();
+
+        foreach ($categories as   $categorie) {
+            $categorie->sousCategories;
+            $categorie->commodites;
+
+            foreach ($categorie->commodites as $key => $commodite) {
+                $commodite->typeCommodite;
+            }
+        }
+
+        return $this->sendResponse($categories, 'Liste des Categories');
+    }
 }

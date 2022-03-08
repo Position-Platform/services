@@ -42,6 +42,7 @@ Route::middleware('auth.apikey')->group(
 
         Route::get('categories', [App\Http\Controllers\Api\CategorieController::class, 'index']);
         Route::get('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'show']);
+        Route::get('search/categories', [App\Http\Controllers\Api\CategorieController::class, 'search']);
 
         Route::get('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'index']);
         Route::get('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'show']);
