@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string("whatsapp1");
             $table->string("whatsapp2")->nullable();
             $table->string("description")->nullable();
-            $table->string("osmId")->nullable();
+            $table->string("osmId")->unique()->nullable();
             $table->boolean("updated")->default(false);
             $table->string("revoir")->default(false);
             $table->string("valide")->default(false);

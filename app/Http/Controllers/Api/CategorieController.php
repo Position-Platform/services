@@ -24,7 +24,7 @@ class CategorieController extends BaseController
      */
     public function index()
     {
-        $categories = Categorie::all();
+        $categories = Categorie::orderBy('vues', 'DESC')->get();
 
         foreach ($categories as   $categorie) {
             $categorie->sousCategories;
@@ -156,7 +156,7 @@ class CategorieController extends BaseController
             return $this->sendResponse($categorie, "Update Success", 201);
         } catch (\Throwable $th) {
             DB::rollBack();
-            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
     }
 

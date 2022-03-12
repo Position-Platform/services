@@ -200,6 +200,9 @@
                                     <li class="tocify-item level-2" data-unique="category-management-DELETEapi-categories--id-">
                         <a href="#category-management-DELETEapi-categories--id-">Delete Category.</a>
                     </li>
+                                    <li class="tocify-item level-2" data-unique="category-management-GETapi-search-categories">
+                        <a href="#category-management-GETapi-search-categories">Search Category.</a>
+                    </li>
                                                     </ul>
                             </ul>
                     <ul id="tocify-header-7" class="tocify-header">
@@ -414,7 +417,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 4 2022</li>
+        <li>Last updated: March 12 2022</li>
     </ul>
 </div>
 
@@ -432,7 +435,7 @@ Vous pouvez changer la langue utilisée à l'aide des onglets situés en haut à
 <pre><code class="language-yaml">http://localhost:8000</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -1625,7 +1628,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"vel\",
+    \"token\": \"fugiat\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1645,7 +1648,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "vel",
+    "token": "fugiat",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1669,7 +1672,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'vel',
+            'token' =&gt; 'fugiat',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1686,7 +1689,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "vel",
+    "token": "fugiat",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1769,7 +1772,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="vel"
+               value="fugiat"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1817,7 +1820,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEC36.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE482.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1874,7 +1877,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEC36.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE482.tmp', 'r')
             ],
         ],
     ]
@@ -1889,7 +1892,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEC36.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE482.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2543,7 +2546,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpECE4.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE8EA.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2592,7 +2595,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpECE4.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE8EA.tmp', 'r')
             ],
         ],
     ]
@@ -2607,7 +2610,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpECE4.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE8EA.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3530,7 +3533,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDCD.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEE39.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3589,7 +3592,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDCD.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEE39.tmp', 'r')
             ],
         ],
     ]
@@ -3604,7 +3607,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDCD.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEE39.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3967,7 +3970,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDDD.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEE69.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4026,7 +4029,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDDD.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEE69.tmp', 'r')
             ],
         ],
     ]
@@ -4041,7 +4044,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDDD.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEE69.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4865,8 +4868,8 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nombreNiveau=3" \
     --form "codeBatiment=BATIMENT_MELEN_0569" \
-    --form "longitude=animi" \
-    --form "latitude=in" \
+    --form "longitude=facilis" \
+    --form "latitude=veniam" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
@@ -4874,7 +4877,7 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED35.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEA74.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4892,8 +4895,8 @@ const headers = {
 const body = new FormData();
 body.append('nombreNiveau', '3');
 body.append('codeBatiment', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'animi');
-body.append('latitude', 'in');
+body.append('longitude', 'facilis');
+body.append('latitude', 'veniam');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -4932,11 +4935,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'animi'
+                'contents' =&gt; 'facilis'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'in'
+                'contents' =&gt; 'veniam'
             ],
             [
                 'name' =&gt; 'ville',
@@ -4968,7 +4971,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED35.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEA74.tmp', 'r')
             ],
         ],
     ]
@@ -4983,13 +4986,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED35.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEA74.tmp', 'rb')
 }
 payload = {
     "nombreNiveau": 3,
     "codeBatiment": "BATIMENT_MELEN_0569",
-    "longitude": "animi",
-    "latitude": "in",
+    "longitude": "facilis",
+    "latitude": "veniam",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -5112,7 +5115,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="POSTapi-batiments"
-               value="animi"
+               value="facilis"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -5122,7 +5125,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="POSTapi-batiments"
-               value="in"
+               value="veniam"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -5568,15 +5571,15 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "idCommercial=2" \
     --form "nombreNiveau=3" \
-    --form "longitude=provident" \
-    --form "latitude=velit" \
+    --form "longitude=aut" \
+    --form "latitude=rerum" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED37.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEAC4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5595,8 +5598,8 @@ const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
 body.append('nombreNiveau', '3');
-body.append('longitude', 'provident');
-body.append('latitude', 'velit');
+body.append('longitude', 'aut');
+body.append('latitude', 'rerum');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -5638,11 +5641,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'provident'
+                'contents' =&gt; 'aut'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'velit'
+                'contents' =&gt; 'rerum'
             ],
             [
                 'name' =&gt; 'indication',
@@ -5670,7 +5673,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED37.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEAC4.tmp', 'r')
             ],
         ],
     ]
@@ -5685,14 +5688,14 @@ import json
 
 url = 'http://localhost:8000/api/batiments/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED37.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEAC4.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "idCommercial": 2,
     "nombreNiveau": 3,
-    "longitude": "provident",
-    "latitude": "velit",
+    "longitude": "aut",
+    "latitude": "rerum",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -5840,7 +5843,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="provident"
+               value="aut"
                data-component="body" hidden>
     <br>
 
@@ -5850,7 +5853,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="velit"
+               value="rerum"
                data-component="body" hidden>
     <br>
 
@@ -6011,10 +6014,12 @@ response.json()</code></pre></div>
         {
             &quot;id&quot;: 1,
             &quot;nom&quot;: &quot;Achats&quot;,
-            &quot;logourl&quot;: null,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Achats&quot;,
+            &quot;vues&quot;: 0,
             &quot;sous_categories&quot;: [
                 {
                     &quot;id&quot;: 1,
@@ -6229,10 +6234,12 @@ response.json()</code></pre></div>
         {
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Administrations&quot;,
-            &quot;logourl&quot;: null,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Administration&quot;,
+            &quot;vues&quot;: 0,
             &quot;sous_categories&quot;: [
                 {
                     &quot;id&quot;: 23,
@@ -6328,14 +6335,21 @@ response.json()</code></pre></div>
             &quot;commodites&quot;: [
                 {
                     &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;nom&quot;: &quot;Wifi ++&quot;,
                     &quot;idTypeCommodite&quot;: 1,
                     &quot;deleted_at&quot;: null,
                     &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
                     &quot;pivot&quot;: {
                         &quot;idCategorie&quot;: 2,
                         &quot;idCommodite&quot;: 16
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
                     }
                 }
             ]
@@ -6343,10 +6357,12 @@ response.json()</code></pre></div>
         {
             &quot;id&quot;: 3,
             &quot;nom&quot;: &quot;Agriculture&quot;,
-            &quot;logourl&quot;: null,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Agriculture&quot;,
+            &quot;vues&quot;: 0,
             &quot;sous_categories&quot;: [
                 {
                     &quot;id&quot;: 33,
@@ -6432,6 +6448,13 @@ response.json()</code></pre></div>
                     &quot;pivot&quot;: {
                         &quot;idCategorie&quot;: 3,
                         &quot;idCommodite&quot;: 19
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
                     }
                 }
             ]
@@ -6439,10 +6462,12 @@ response.json()</code></pre></div>
         {
             &quot;id&quot;: 4,
             &quot;nom&quot;: &quot;Alimentation&quot;,
-            &quot;logourl&quot;: null,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
             &quot;deleted_at&quot;: null,
-            &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Alimentation&quot;,
+            &quot;vues&quot;: 0,
             &quot;sous_categories&quot;: [
                 {
                     &quot;id&quot;: 41,
@@ -6718,6 +6743,4053 @@ response.json()</code></pre></div>
                     }
                 }
             ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 69,
+                    &quot;nom&quot;: &quot;Auto-Ecoles&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 70,
+                    &quot;nom&quot;: &quot;Automobiles et Concessionnaires&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 71,
+                    &quot;nom&quot;: &quot;Expertises automobiles&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 72,
+                    &quot;nom&quot;: &quot;Automobiles - Pi&egrave;ces D&eacute;tach&eacute;es et Accessoires&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 73,
+                    &quot;nom&quot;: &quot;Voitures d'occasion&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 74,
+                    &quot;nom&quot;: &quot;Constructions M&eacute;caniques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 75,
+                    &quot;nom&quot;: &quot;Contr&ocirc;les Techniques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 76,
+                    &quot;nom&quot;: &quot;Cycles et Motos&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 77,
+                    &quot;nom&quot;: &quot;Engins ee Chantier et Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 78,
+                    &quot;nom&quot;: &quot;Garages&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 79,
+                    &quot;nom&quot;: &quot;M&eacute;canique G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 80,
+                    &quot;nom&quot;: &quot;M&eacute;canique - Industries&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 81,
+                    &quot;nom&quot;: &quot;Moteurs et Pompes&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 82,
+                    &quot;nom&quot;: &quot;Pneumatiques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 83,
+                    &quot;nom&quot;: &quot;Tracking&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 84,
+                    &quot;nom&quot;: &quot;V&eacute;hicules Industriels&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 85,
+                    &quot;nom&quot;: &quot;Station-service&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 86,
+                    &quot;nom&quot;: &quot;Parking&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 87,
+                    &quot;nom&quot;: &quot;Garage&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Finance&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 88,
+                    &quot;nom&quot;: &quot;Assurances&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 89,
+                    &quot;nom&quot;: &quot;Assurances Vies&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 90,
+                    &quot;nom&quot;: &quot;Assurances m&eacute;dicales&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 91,
+                    &quot;nom&quot;: &quot;Assureurs - Courtiers Et Conseils&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 92,
+                    &quot;nom&quot;: &quot;Banques et Organismes Financiers&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 93,
+                    &quot;nom&quot;: &quot;Equipements de S&eacute;curit&eacute; Bancaire&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 94,
+                    &quot;nom&quot;: &quot;Banques - Services Mobiles&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 95,
+                    &quot;nom&quot;: &quot;Bureaux de Change et Transferts d'argent&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 96,
+                    &quot;nom&quot;: &quot;Bureaux de Contr&ocirc;le&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 97,
+                    &quot;nom&quot;: &quot;Cabinets Comptables&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 98,
+                    &quot;nom&quot;: &quot;Centres d'Information&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 99,
+                    &quot;nom&quot;: &quot;Cr&eacute;dits et Finances&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 100,
+                    &quot;nom&quot;: &quot;Enqu&ecirc;tes, recherches et investigation&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 101,
+                    &quot;nom&quot;: &quot;Holdings&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 102,
+                    &quot;nom&quot;: &quot;Investissements&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 103,
+                    &quot;nom&quot;: &quot;Transports de Fonds&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Construction&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 104,
+                    &quot;nom&quot;: &quot;Adduction d'eau et VRD&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 105,
+                    &quot;nom&quot;: &quot;Agencement et D&eacute;coration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 106,
+                    &quot;nom&quot;: &quot;Industrie d'aluminium&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 107,
+                    &quot;nom&quot;: &quot;Am&eacute;nagement des Terrains Urbains&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 108,
+                    &quot;nom&quot;: &quot;Architecture et Urbanisme&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 109,
+                    &quot;nom&quot;: &quot;Ascenseurs&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 110,
+                    &quot;nom&quot;: &quot;Assainissement et Canalisations&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 111,
+                    &quot;nom&quot;: &quot;B&acirc;ches et Stores&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 112,
+                    &quot;nom&quot;: &quot;B&acirc;timents et Travaux Publics&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 113,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Expertises&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 114,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Nettoyage&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 115,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Pr&eacute;fabriqu&eacute;&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 116,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Ravalement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 117,
+                    &quot;nom&quot;: &quot;B&acirc;timents - R&eacute;habilitation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 118,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Second &OElig;uvre&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 119,
+                    &quot;nom&quot;: &quot;Bitume&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 120,
+                    &quot;nom&quot;: &quot;Bois et N&eacute;goce&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 121,
+                    &quot;nom&quot;: &quot;Bois - Industries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 122,
+                    &quot;nom&quot;: &quot;Bois - Scieries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 123,
+                    &quot;nom&quot;: &quot;Bricolage&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 124,
+                    &quot;nom&quot;: &quot;Briqueteries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 125,
+                    &quot;nom&quot;: &quot;Bureaux d'Etudes et D'Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 126,
+                    &quot;nom&quot;: &quot;C&acirc;bles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 127,
+                    &quot;nom&quot;: &quot;Caoutchouc&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 128,
+                    &quot;nom&quot;: &quot;Carrelages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 129,
+                    &quot;nom&quot;: &quot;Carri&egrave;res - Exploitations et Exploration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 130,
+                    &quot;nom&quot;: &quot;Chaudronnerie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 131,
+                    &quot;nom&quot;: &quot;Cimenteries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 132,
+                    &quot;nom&quot;: &quot;Citernes - M&eacute;tallique et Plastique&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 133,
+                    &quot;nom&quot;: &quot;Climatisation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 134,
+                    &quot;nom&quot;: &quot;Climatisation - D&eacute;pannage et Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 135,
+                    &quot;nom&quot;: &quot;Constructions Industrielles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 136,
+                    &quot;nom&quot;: &quot;Constructions M&eacute;talliques&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 137,
+                    &quot;nom&quot;: &quot;D&eacute;veloppement Rural et Urbain&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 138,
+                    &quot;nom&quot;: &quot;Ebenistes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 139,
+                    &quot;nom&quot;: &quot;Echafaudages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 140,
+                    &quot;nom&quot;: &quot;Espaces Verts et Jardins&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 141,
+                    &quot;nom&quot;: &quot;Etanch&eacute;it&eacute;&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 142,
+                    &quot;nom&quot;: &quot;Faux-Plafonds et Staff&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 143,
+                    &quot;nom&quot;: &quot;Fer et Acier&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 144,
+                    &quot;nom&quot;: &quot;Forages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 145,
+                    &quot;nom&quot;: &quot;Forages - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 146,
+                    &quot;nom&quot;: &quot;Forages - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 147,
+                    &quot;nom&quot;: &quot;Forestiers - Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 148,
+                    &quot;nom&quot;: &quot;G&eacute;nie Civil&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 149,
+                    &quot;nom&quot;: &quot;G&eacute;ologues&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 150,
+                    &quot;nom&quot;: &quot;G&eacute;om&egrave;tres - topographes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 151,
+                    &quot;nom&quot;: &quot;Groupes Electrog&egrave;nes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 152,
+                    &quot;nom&quot;: &quot;Hydraulique&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 153,
+                    &quot;nom&quot;: &quot;Hydraulique - Constructions&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 154,
+                    &quot;nom&quot;: &quot;Hydraulique - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 155,
+                    &quot;nom&quot;: &quot;Isolation industrielle&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 156,
+                    &quot;nom&quot;: &quot;Laboratoires d'Analyses du B&acirc;timent&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 157,
+                    &quot;nom&quot;: &quot;Location d'Engins de Chantier&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 158,
+                    &quot;nom&quot;: &quot;Mat&eacute;riaux de Construction&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 159,
+                    &quot;nom&quot;: &quot;Menuiseries Aluminium&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 160,
+                    &quot;nom&quot;: &quot;Menuiseries Bois&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 161,
+                    &quot;nom&quot;: &quot;Menuiseries Industrielles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 162,
+                    &quot;nom&quot;: &quot;Menuiseries M&eacute;talliques&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 163,
+                    &quot;nom&quot;: &quot;Mines - Exploitations et Exploration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 164,
+                    &quot;nom&quot;: &quot;Mines - Import et Export&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 165,
+                    &quot;nom&quot;: &quot;Mines - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 166,
+                    &quot;nom&quot;: &quot;Mines - Recherche&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 167,
+                    &quot;nom&quot;: &quot;Miroiteries et Vitreries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 168,
+                    &quot;nom&quot;: &quot;Ouvrages d'Art&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 169,
+                    &quot;nom&quot;: &quot;Peintres&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 170,
+                    &quot;nom&quot;: &quot;Peinture&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 171,
+                    &quot;nom&quot;: &quot;Piscines&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 172,
+                    &quot;nom&quot;: &quot;Plomberie et Sanitaires&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 173,
+                    &quot;nom&quot;: &quot;Portes et Fen&ecirc;tres&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 174,
+                    &quot;nom&quot;: &quot;Propret&eacute; urbaine&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 175,
+                    &quot;nom&quot;: &quot;Quincailleries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 176,
+                    &quot;nom&quot;: &quot;Routes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 177,
+                    &quot;nom&quot;: &quot;Routes - Mat&eacute;riaux&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 178,
+                    &quot;nom&quot;: &quot;Routes - Signalisation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 179,
+                    &quot;nom&quot;: &quot;Serrureries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 180,
+                    &quot;nom&quot;: &quot;Toitures - Mat&eacute;riaux&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 181,
+                    &quot;nom&quot;: &quot;T&ocirc;les&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 182,
+                    &quot;nom&quot;: &quot;Topographie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 183,
+                    &quot;nom&quot;: &quot;Travaux Publics et Terrassement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 184,
+                    &quot;nom&quot;: &quot;Travaux Publics et Terrassement - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 185,
+                    &quot;nom&quot;: &quot;Tuyauteries et PVC&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Piscine&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 7,
+                        &quot;idCommodite&quot;: 20
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 186,
+                    &quot;nom&quot;: &quot;Coiffeur&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 187,
+                    &quot;nom&quot;: &quot;Institut de beaut&eacute;, parfumerie, relaxation&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 188,
+                    &quot;nom&quot;: &quot;Massages&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Piscine&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 8,
+                        &quot;idCommodite&quot;: 20
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Commerce&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 189,
+                    &quot;nom&quot;: &quot;Centrales d'Achats&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 190,
+                    &quot;nom&quot;: &quot;Chambres de Commerce&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 191,
+                    &quot;nom&quot;: &quot;Commerce Exterieur - Promotion&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 192,
+                    &quot;nom&quot;: &quot;Commerce G&eacute;n&eacute;ral&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 193,
+                    &quot;nom&quot;: &quot;E-Commerce&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 194,
+                    &quot;nom&quot;: &quot;Groupements D'Entreprises&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 195,
+                    &quot;nom&quot;: &quot;Import et Export&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 196,
+                    &quot;nom&quot;: &quot;Promotion Commerciale et Etudes&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 197,
+                    &quot;nom&quot;: &quot;Recouvrements Commerciaux&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 198,
+                    &quot;nom&quot;: &quot;Repr&eacute;sentation Commerciale&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Communication&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 199,
+                    &quot;nom&quot;: &quot;Agences de Mannequins&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 200,
+                    &quot;nom&quot;: &quot;Agences de Presse et d'Information&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 201,
+                    &quot;nom&quot;: &quot;Agences de Publicit&eacute; et de Communication&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 202,
+                    &quot;nom&quot;: &quot;Audiovisuel - Mat&eacute;riels et Production&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 203,
+                    &quot;nom&quot;: &quot;Ev&eacute;nementiel&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 204,
+                    &quot;nom&quot;: &quot;Journaux et Presse&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 205,
+                    &quot;nom&quot;: &quot;Maison d'&eacute;dition&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 206,
+                    &quot;nom&quot;: &quot;Marketing&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 207,
+                    &quot;nom&quot;: &quot;Objets Publicitaires&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 208,
+                    &quot;nom&quot;: &quot;Organisations de Conf&eacute;rences&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 209,
+                    &quot;nom&quot;: &quot;Radio et T&eacute;l&eacute;vision&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 210,
+                    &quot;nom&quot;: &quot;Radio-Communication&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 211,
+                    &quot;nom&quot;: &quot;Relations Publiques et Organisations&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 212,
+                    &quot;nom&quot;: &quot;Ressources Humaines&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 213,
+                    &quot;nom&quot;: &quot;S&eacute;rigraphie&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;nom&quot;: &quot;Eau&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Eau&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 214,
+                    &quot;nom&quot;: &quot;Eau - Distribution&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 215,
+                    &quot;nom&quot;: &quot;Eau - Laboratoires d'Analyses&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 216,
+                    &quot;nom&quot;: &quot;Eau - Traitement&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Formation&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 217,
+                    &quot;nom&quot;: &quot;Centres de Documentation&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 218,
+                    &quot;nom&quot;: &quot;Cr&egrave;che&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 219,
+                    &quot;nom&quot;: &quot;Centre de loisirs d'enfants&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 220,
+                    &quot;nom&quot;: &quot;Centre linguistique - enseignement&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 221,
+                    &quot;nom&quot;: &quot;Centres de Formation&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 222,
+                    &quot;nom&quot;: &quot;Centres de Recherche&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 223,
+                    &quot;nom&quot;: &quot;Ecoles et Universit&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;nom&quot;: &quot;Energie&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Energie&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 224,
+                    &quot;nom&quot;: &quot;Automatisme&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 225,
+                    &quot;nom&quot;: &quot;Batteries et Piles&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 226,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - G&eacute;n&eacute;rale et Industrielle&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 227,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Expertises&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 228,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Industries&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 229,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 230,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Materiels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 231,
+                    &quot;nom&quot;: &quot;Electrification Rurale Et Urbaine&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 232,
+                    &quot;nom&quot;: &quot;Electrom&eacute;canique&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 233,
+                    &quot;nom&quot;: &quot;Energie&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 234,
+                    &quot;nom&quot;: &quot;Energie Nouvelle et Renouvelable&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 235,
+                    &quot;nom&quot;: &quot;Energie Solaire&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 236,
+                    &quot;nom&quot;: &quot;Gaz Domestique Et Industriel&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 237,
+                    &quot;nom&quot;: &quot;G&eacute;otechnique&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 238,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Aviation&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 239,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Distribution&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 240,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Equipements Et Mater...&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 241,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Expertises&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 242,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Exploration&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 243,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Logistiques&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 244,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Lubrifiants&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 245,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 246,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Production&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 247,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Transports&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 248,
+                    &quot;nom&quot;: &quot;P&eacute;troliers, Constructions&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 249,
+                    &quot;nom&quot;: &quot;P&eacute;troliers - Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 250,
+                    &quot;nom&quot;: &quot;Raffineries&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;nom&quot;: &quot;Immobilier&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Immobilier&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 251,
+                    &quot;nom&quot;: &quot;Garde Meubles&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 252,
+                    &quot;nom&quot;: &quot;Immobilier - Agences&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 253,
+                    &quot;nom&quot;: &quot;Immobilier - Expertises&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 254,
+                    &quot;nom&quot;: &quot;Immobilier - Gestion&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 255,
+                    &quot;nom&quot;: &quot;Immobilier - Location&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 256,
+                    &quot;nom&quot;: &quot;Immobilier - Promoteurs&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;nom&quot;: &quot;Industries&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Industries&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 257,
+                    &quot;nom&quot;: &quot;Electro-M&eacute;nager&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 258,
+                    &quot;nom&quot;: &quot;Electronique&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 259,
+                    &quot;nom&quot;: &quot;Allumettes et Bougies&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 260,
+                    &quot;nom&quot;: &quot;Armes et Munitions&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 261,
+                    &quot;nom&quot;: &quot;Assistance Technique&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 262,
+                    &quot;nom&quot;: &quot;Cartonneries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 263,
+                    &quot;nom&quot;: &quot;Chaussures, Manufactures&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 264,
+                    &quot;nom&quot;: &quot;Coton&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 265,
+                    &quot;nom&quot;: &quot;D&eacute;pannage et Maintenance Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 266,
+                    &quot;nom&quot;: &quot;Diamant et Or&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 267,
+                    &quot;nom&quot;: &quot;Emballage et Conditionnement&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 268,
+                    &quot;nom&quot;: &quot;Equipements de Bureaux&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 269,
+                    &quot;nom&quot;: &quot;Equipements Industriels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 270,
+                    &quot;nom&quot;: &quot;Fournitures Industrielles&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 271,
+                    &quot;nom&quot;: &quot;Froid Industriel&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 272,
+                    &quot;nom&quot;: &quot;Location De Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 273,
+                    &quot;nom&quot;: &quot;Machines-Outils, Manufactures&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 274,
+                    &quot;nom&quot;: &quot;Manutention Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 275,
+                    &quot;nom&quot;: &quot;Matelas&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 276,
+                    &quot;nom&quot;: &quot;Matelas, Equipements et Materiels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 277,
+                    &quot;nom&quot;: &quot;Mesure et Pesage, Materiels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 278,
+                    &quot;nom&quot;: &quot;Nettoyage Industriel&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 279,
+                    &quot;nom&quot;: &quot;Nettoyage, Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 280,
+                    &quot;nom&quot;: &quot;Papier - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 281,
+                    &quot;nom&quot;: &quot;Pi&egrave;ces D&eacute;tach&eacute;es Industrielles&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 282,
+                    &quot;nom&quot;: &quot;Plastique - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 283,
+                    &quot;nom&quot;: &quot;Plastique - Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 284,
+                    &quot;nom&quot;: &quot;Savonneries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 285,
+                    &quot;nom&quot;: &quot;Soudage, Mat&eacute;riels et Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 286,
+                    &quot;nom&quot;: &quot;Tabac, Manufactures et Importateurs&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 287,
+                    &quot;nom&quot;: &quot;Travail Temporaire, Interim&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 288,
+                    &quot;nom&quot;: &quot;Tuyauteries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 289,
+                    &quot;nom&quot;: &quot;Verre - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 290,
+                    &quot;nom&quot;: &quot;Zone Franche Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 291,
+                    &quot;nom&quot;: &quot;Ameublement et Mobilier, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 292,
+                    &quot;nom&quot;: &quot;Fournitures de Bureaux, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 293,
+                    &quot;nom&quot;: &quot;Mobilier - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 294,
+                    &quot;nom&quot;: &quot;Chimie - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 295,
+                    &quot;nom&quot;: &quot;Chimie - Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 296,
+                    &quot;nom&quot;: &quot;Parfum, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Technologies&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 297,
+                    &quot;nom&quot;: &quot;Antennes Paraboliques, Equipements&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 298,
+                    &quot;nom&quot;: &quot;Archivage Numerique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 299,
+                    &quot;nom&quot;: &quot;Bureautique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 300,
+                    &quot;nom&quot;: &quot;Business Center&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 301,
+                    &quot;nom&quot;: &quot;Centres d'Appels&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 302,
+                    &quot;nom&quot;: &quot;Courriers Express, Colis Express&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 303,
+                    &quot;nom&quot;: &quot;Cyber-Cafes&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 304,
+                    &quot;nom&quot;: &quot;Domiciliation de Soci&eacute;t&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 305,
+                    &quot;nom&quot;: &quot;Editeurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 306,
+                    &quot;nom&quot;: &quot;Etudes de March&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 307,
+                    &quot;nom&quot;: &quot;Imprimeries&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 308,
+                    &quot;nom&quot;: &quot;Imprimeries, Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 309,
+                    &quot;nom&quot;: &quot;Informatique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 310,
+                    &quot;nom&quot;: &quot;Informatique - Consommables&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 311,
+                    &quot;nom&quot;: &quot;Informatique - Constructeurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 312,
+                    &quot;nom&quot;: &quot;Informatique - Consultants&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 313,
+                    &quot;nom&quot;: &quot;Informatique - Environnement&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 314,
+                    &quot;nom&quot;: &quot;Informatique - Expertises&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 315,
+                    &quot;nom&quot;: &quot;Informatique - Gestion De Maintenance&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 316,
+                    &quot;nom&quot;: &quot;Informatique - Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 317,
+                    &quot;nom&quot;: &quot;Informatique - Ing&eacute;nieurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 318,
+                    &quot;nom&quot;: &quot;Informatique - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 319,
+                    &quot;nom&quot;: &quot;Informatique - Reseaux&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 320,
+                    &quot;nom&quot;: &quot;Informatique - Securite&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 321,
+                    &quot;nom&quot;: &quot;Internet&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 322,
+                    &quot;nom&quot;: &quot;Internet - Provider&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 323,
+                    &quot;nom&quot;: &quot;Internet - Web Design&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 324,
+                    &quot;nom&quot;: &quot;Internet - E-Business &amp; E-Commerce&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 325,
+                    &quot;nom&quot;: &quot;Paratonnerre&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 326,
+                    &quot;nom&quot;: &quot;Technologies Nouvelles&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 327,
+                    &quot;nom&quot;: &quot;Technologies Nouvelles, Consultants&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 328,
+                    &quot;nom&quot;: &quot;Traducteurs Et Interpretes&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;nom&quot;: &quot;Justice&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Justice&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 329,
+                    &quot;nom&quot;: &quot;Avocats&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 330,
+                    &quot;nom&quot;: &quot;Avocats d'Affaires Internationales&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 331,
+                    &quot;nom&quot;: &quot;Cabinets Juridiques et Fiscaux&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 332,
+                    &quot;nom&quot;: &quot;Consultants&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 333,
+                    &quot;nom&quot;: &quot;Consultants en Immigration&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 334,
+                    &quot;nom&quot;: &quot;Consultants Internationaux&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 335,
+                    &quot;nom&quot;: &quot;Expertises  Comptables, Audit Et Conseil&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 336,
+                    &quot;nom&quot;: &quot;Expertises - Etudes, Communication&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 337,
+                    &quot;nom&quot;: &quot;Expertises Judiciaire&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 338,
+                    &quot;nom&quot;: &quot;Huissiers De Justice&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 339,
+                    &quot;nom&quot;: &quot;Notaires&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 340,
+                    &quot;nom&quot;: &quot;Projets et Bureaux D'Appui&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;nom&quot;: &quot;Loisirs&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Loisirs&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 341,
+                    &quot;nom&quot;: &quot;Artisanat, Antiquaires et Galeries d'Art&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 342,
+                    &quot;nom&quot;: &quot;Cadeaux&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 343,
+                    &quot;nom&quot;: &quot;Casino&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 344,
+                    &quot;nom&quot;: &quot;Cin&eacute;ma et vid&eacute;oth&egrave;ques&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 345,
+                    &quot;nom&quot;: &quot;Centre culturel&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 346,
+                    &quot;nom&quot;: &quot;Mus&eacute;e&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 347,
+                    &quot;nom&quot;: &quot;Musique&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 348,
+                    &quot;nom&quot;: &quot;Th&eacute;&acirc;tre, spectacle&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 349,
+                    &quot;nom&quot;: &quot;Cabaret&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 350,
+                    &quot;nom&quot;: &quot;Biblioth&egrave;que et Centre de Documentation&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 351,
+                    &quot;nom&quot;: &quot;Librairie, papeterie&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 352,
+                    &quot;nom&quot;: &quot;Sport&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 353,
+                    &quot;nom&quot;: &quot;Espaces verts et Jardins&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 354,
+                    &quot;nom&quot;: &quot;Salle de spectacles - salle de f&ecirc;tes&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 355,
+                    &quot;nom&quot;: &quot;Loisirs, jeux et entertainment&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 356,
+                    &quot;nom&quot;: &quot;Loterie&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 357,
+                    &quot;nom&quot;: &quot;Voyance, Medium&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;nom&quot;: &quot;Restos, bars&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Resto/Bar&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 358,
+                    &quot;nom&quot;: &quot;Restaurant&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 359,
+                    &quot;nom&quot;: &quot;Night Clubs et Discoth&egrave;ques&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 360,
+                    &quot;nom&quot;: &quot;Restauration rapide&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 361,
+                    &quot;nom&quot;: &quot;Bar, Caf&eacute;&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 362,
+                    &quot;nom&quot;: &quot;Salons de Th&eacute; et Glaciers&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 21,
+            &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 363,
+                    &quot;nom&quot;: &quot;Ambulance&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 364,
+                    &quot;nom&quot;: &quot;Assistance sociale&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 365,
+                    &quot;nom&quot;: &quot;M&eacute;decine G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 366,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dentiste&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 367,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dermatologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 368,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - cardiologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 369,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - oncologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 370,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ophtalmologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 371,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - psychologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 372,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - angiologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 373,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - p&eacute;dicure et podologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 374,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ost&eacute;opathie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 375,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - gyn&eacute;cologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 376,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - kin&eacute;sith&eacute;rapeute&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 377,
+                    &quot;nom&quot;: &quot;M&eacute;decine naturelle, traditionnelle&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 378,
+                    &quot;nom&quot;: &quot;M&eacute;decine du travail&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 379,
+                    &quot;nom&quot;: &quot;Chirurgie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 380,
+                    &quot;nom&quot;: &quot;Chirurgie Esth&eacute;tique&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 381,
+                    &quot;nom&quot;: &quot;Cliniques et Hopitaux&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 382,
+                    &quot;nom&quot;: &quot;Cosm&eacute;tiques - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 383,
+                    &quot;nom&quot;: &quot;Cosm&eacute;tiques - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 384,
+                    &quot;nom&quot;: &quot;Drogueries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 385,
+                    &quot;nom&quot;: &quot;Laboratoires d'Analyses M&eacute;dicales&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 386,
+                    &quot;nom&quot;: &quot;Laboratoires, Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 387,
+                    &quot;nom&quot;: &quot;Laboratoires - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 388,
+                    &quot;nom&quot;: &quot;Medical - Assistance&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 389,
+                    &quot;nom&quot;: &quot;Medical - Gaz Medical&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 390,
+                    &quot;nom&quot;: &quot;Medical - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 391,
+                    &quot;nom&quot;: &quot;Medical - Materiels Et Equipements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 392,
+                    &quot;nom&quot;: &quot;Medical - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 393,
+                    &quot;nom&quot;: &quot;Opticiens&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 394,
+                    &quot;nom&quot;: &quot;Opticiens - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 395,
+                    &quot;nom&quot;: &quot;Para-Pharmacie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 396,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Distributeurs&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 397,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 398,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Laboratoires&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 399,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Materiels Et Equipement&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 400,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 401,
+                    &quot;nom&quot;: &quot;Pharmacies&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 402,
+                    &quot;nom&quot;: &quot;Phytosanitaires - Traitements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 403,
+                    &quot;nom&quot;: &quot;Urgences Medicales&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 404,
+                    &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 405,
+                    &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires, Produits et Pharmacie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 22,
+            &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 406,
+                    &quot;nom&quot;: &quot;Alarmes Et Surveillance, Mat&eacute;riels &eacute;lectroniques&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 407,
+                    &quot;nom&quot;: &quot;Badges, Fabrication&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 408,
+                    &quot;nom&quot;: &quot;Controles Techniques&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 409,
+                    &quot;nom&quot;: &quot;D&eacute;tectives&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 410,
+                    &quot;nom&quot;: &quot;Escorte V&eacute;hicules&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 411,
+                    &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute;&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 412,
+                    &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute; - Equipements&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 413,
+                    &quot;nom&quot;: &quot;Incendie et Protection - Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 414,
+                    &quot;nom&quot;: &quot;S&eacute;curit&eacute; - Audits et Consultants&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 415,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;-Surveillance et Vid&eacute;o-Surveillance&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Telecom&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 416,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Transmission de signal&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 417,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications et T&eacute;l&eacute;phonie&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 418,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Fibres Optique&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 419,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Installation et maintenance&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 420,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mat&eacute;riels et &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 421,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mobiles&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 422,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - R&eacute;seaux&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 423,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Satellite&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Textile&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 424,
+                    &quot;nom&quot;: &quot;Confection, Couture, Broderie&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 425,
+                    &quot;nom&quot;: &quot;Equipements et v&ecirc;tements militaires&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 426,
+                    &quot;nom&quot;: &quot;Friperies&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 427,
+                    &quot;nom&quot;: &quot;Pr&ecirc;t &agrave; Porter - Gros et D&eacute;tail&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 428,
+                    &quot;nom&quot;: &quot;Textile&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 429,
+                    &quot;nom&quot;: &quot;Textile, Filature, Tissage, Impression&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 430,
+                    &quot;nom&quot;: &quot;Textile, Fournitures&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 431,
+                    &quot;nom&quot;: &quot;Textile - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 432,
+                    &quot;nom&quot;: &quot;V&ecirc;tements  Manufactures&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;nom&quot;: &quot;Tourisme&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Tourisme&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 433,
+                    &quot;nom&quot;: &quot;Agences de Tourisme&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 434,
+                    &quot;nom&quot;: &quot;Centres d'Information&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 435,
+                    &quot;nom&quot;: &quot;Agences de voyage, tours op&eacute;rateurs&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 436,
+                    &quot;nom&quot;: &quot;Equipements H&ocirc;tels et Restaurants&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 437,
+                    &quot;nom&quot;: &quot;H&ocirc;tel&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 438,
+                    &quot;nom&quot;: &quot;Auberge&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 439,
+                    &quot;nom&quot;: &quot;Location d'avions&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 440,
+                    &quot;nom&quot;: &quot;Location de bateaux&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 441,
+                    &quot;nom&quot;: &quot;Location de voitures&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 442,
+                    &quot;nom&quot;: &quot;Transport Logistique&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 443,
+                    &quot;nom&quot;: &quot;Transports Touristiques&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 26,
+            &quot;nom&quot;: &quot;Transports&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Transports&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 444,
+                    &quot;nom&quot;: &quot;Accastillage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 445,
+                    &quot;nom&quot;: &quot;Acconage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 446,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 447,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Centrales D'Achats&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 448,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 449,
+                    &quot;nom&quot;: &quot;A&eacute;roports&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 450,
+                    &quot;nom&quot;: &quot;A&eacute;roports - Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 451,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Maintenance&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 452,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Securite Aerienne&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 453,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Services&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 454,
+                    &quot;nom&quot;: &quot;Agences en Douane&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 455,
+                    &quot;nom&quot;: &quot;Agences Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 456,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Pi&egrave;ces D&eacute;tach&eacute;es&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 457,
+                    &quot;nom&quot;: &quot;Chantiers Navals&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 458,
+                    &quot;nom&quot;: &quot;Chemin de Fer&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 459,
+                    &quot;nom&quot;: &quot;Compagnies A&eacute;riennes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 460,
+                    &quot;nom&quot;: &quot;Containers, Fabrication et Location&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 461,
+                    &quot;nom&quot;: &quot;D&eacute;m&eacute;nagements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 462,
+                    &quot;nom&quot;: &quot;Expertises Maritimes et Terrestres&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 463,
+                    &quot;nom&quot;: &quot;Fret a&eacute;rien - maritime &amp; international&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 464,
+                    &quot;nom&quot;: &quot;Manutention et Entreposage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 465,
+                    &quot;nom&quot;: &quot;Manutention - Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 466,
+                    &quot;nom&quot;: &quot;Manutention - Portuaire&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 467,
+                    &quot;nom&quot;: &quot;Ports&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 468,
+                    &quot;nom&quot;: &quot;Ports, Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 469,
+                    &quot;nom&quot;: &quot;Shipchandler&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 470,
+                    &quot;nom&quot;: &quot;Transit et Consignation&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 471,
+                    &quot;nom&quot;: &quot;Transports A&eacute;riens&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 472,
+                    &quot;nom&quot;: &quot;Transports en Commun&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 473,
+                    &quot;nom&quot;: &quot;Transports Ferroviaires&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 474,
+                    &quot;nom&quot;: &quot;Transports Internationaux&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 475,
+                    &quot;nom&quot;: &quot;Transports Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 476,
+                    &quot;nom&quot;: &quot;Transports Routiers&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 477,
+                    &quot;nom&quot;: &quot;Transports Urbains&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 478,
+                    &quot;nom&quot;: &quot;Travaux Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;nom&quot;: &quot;Autres&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Autres&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 479,
+                    &quot;nom&quot;: &quot;Activit&eacute;s Formelles&quot;,
+                    &quot;idcategorie&quot;: 27,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 480,
+                    &quot;nom&quot;: &quot;Activit&eacute;s Informelles&quot;,
+                    &quot;idcategorie&quot;: 27,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
         }
     ],
     &quot;message&quot;: &quot;Liste des Categories&quot;
@@ -6844,10 +10916,12 @@ response.json()</code></pre></div>
     &quot;data&quot;: {
         &quot;id&quot;: 4,
         &quot;nom&quot;: &quot;Alimentation&quot;,
-        &quot;logourl&quot;: null,
+        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
         &quot;deleted_at&quot;: null,
-        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
+        &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+        &quot;shortname&quot;: &quot;Alimentation&quot;,
+        &quot;vues&quot;: 0,
         &quot;sous_categories&quot;: [
             {
                 &quot;id&quot;: 41,
@@ -7200,8 +11274,8 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "shortname=impedit" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDFF.tmp" </code></pre></div>
+    --form "shortname=occaecati" \
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEEF7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7218,7 +11292,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'impedit');
+body.append('shortname', 'occaecati');
 body.append('file', document.querySelector('input[name="file"]').files[0]);
 
 fetch(url, {
@@ -7246,11 +11320,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'impedit'
+                'contents' =&gt; 'occaecati'
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDFF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEEF7.tmp', 'r')
             ],
         ],
     ]
@@ -7265,11 +11339,11 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDFF.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEEF7.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "impedit"
+    "shortname": "occaecati"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -7294,8 +11368,10 @@ response.json()</code></pre></div>
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;nom&quot;: &quot;Achats&quot;,
-        &quot;logourl&quot;: null,
+        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
         &quot;deleted_at&quot;: null,
+        &quot;shortname&quot;: &quot;Achats&quot;,
+        &quot;vues&quot;: 0,
         &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;
     },
@@ -7366,7 +11442,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="shortname"
                data-endpoint="POSTapi-categories"
-               value="impedit"
+               value="occaecati"
                data-component="body" hidden>
     <br>
 
@@ -7405,7 +11481,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "vues=ok" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEE10.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE714.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7459,7 +11535,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEE10.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE714.tmp', 'r')
             ],
         ],
     ]
@@ -7474,7 +11550,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEE10.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE714.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -7504,8 +11580,10 @@ response.json()</code></pre></div>
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;nom&quot;: &quot;Achats +&quot;,
-        &quot;logourl&quot;: null,
+        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
         &quot;deleted_at&quot;: null,
+        &quot;shortname&quot;: &quot;Achats&quot;,
+        &quot;vues&quot;: 0,
         &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;
     },
@@ -7759,6 +11837,4932 @@ response.json()</code></pre></div>
 <p>the id of the category.</p>
             </p>
                     </form>
+
+            <h2 id="category-management-GETapi-search-categories">Search Category.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-search-categories">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/search/categories?q=piscine" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: apiKey"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/search/categories"
+);
+
+const params = {
+    "q": "piscine",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "apiKey",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/search/categories',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'apiKey',
+        ],
+        'query' =&gt; [
+            'q'=&gt; 'piscine',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/search/categories'
+params = {
+  'q': 'piscine',
+}
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'apiKey'
+}
+
+response = requests.request('GET', url, headers=headers, params=params)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-search-categories">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Achats&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Achats&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Boutiques&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 2,
+                    &quot;nom&quot;: &quot;Brocante&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 3,
+                    &quot;nom&quot;: &quot;Supermarch&eacute;&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 4,
+                    &quot;nom&quot;: &quot;Epicerie&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 5,
+                    &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 6,
+                    &quot;nom&quot;: &quot;Centre Commercial&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 7,
+                    &quot;nom&quot;: &quot;Maison et Jardin&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 8,
+                    &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;nom&quot;: &quot;Fleuriste&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;nom&quot;: &quot;Boulangerie, P&acirc;tisserie&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;nom&quot;: &quot;Caviste&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;nom&quot;: &quot;Tabac&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 13,
+                    &quot;nom&quot;: &quot;Jouets et jeux&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;nom&quot;: &quot;Magasin de sport&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 15,
+                    &quot;nom&quot;: &quot;Ameublement et Mobilier&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Fournitures de Bureaux&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 17,
+                    &quot;nom&quot;: &quot;Mobilier de Bureaux&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 18,
+                    &quot;nom&quot;: &quot;Mobilier de Jardin&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;V&ecirc;tements&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Chaussures&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 21,
+                    &quot;nom&quot;: &quot;Bijoux et accessoires&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 22,
+                    &quot;nom&quot;: &quot;Pu&eacute;riculture&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 481,
+                    &quot;nom&quot;: &quot;Boutique +++&quot;,
+                    &quot;idcategorie&quot;: 1,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T12:41:25.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T12:43:14.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;Administrations&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Administration&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 23,
+                    &quot;nom&quot;: &quot;Administrations&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 25,
+                    &quot;nom&quot;: &quot;Associations, syndicats&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 26,
+                    &quot;nom&quot;: &quot;Douane, Agences&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 27,
+                    &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 28,
+                    &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 29,
+                    &quot;nom&quot;: &quot;Offices Nationaux&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 30,
+                    &quot;nom&quot;: &quot;Poste&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 31,
+                    &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 32,
+                    &quot;nom&quot;: &quot;Institution publique&quot;,
+                    &quot;idcategorie&quot;: 2,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Wifi ++&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 2,
+                        &quot;idCommodite&quot;: 16
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;nom&quot;: &quot;Agriculture&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Agriculture&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 33,
+                    &quot;nom&quot;: &quot;Mat&eacute;riels et Produits agricoles&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 34,
+                    &quot;nom&quot;: &quot;Agricole, Produits Chimiques&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 35,
+                    &quot;nom&quot;: &quot;Agriculture&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 36,
+                    &quot;nom&quot;: &quot;Equipements et Mat&eacute;riel agricoles&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 37,
+                    &quot;nom&quot;: &quot;Agro-Alimentaire&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 38,
+                    &quot;nom&quot;: &quot;Agro-Industrie&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 39,
+                    &quot;nom&quot;: &quot;Elevage&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 40,
+                    &quot;nom&quot;: &quot;Elevage - Consultants&quot;,
+                    &quot;idcategorie&quot;: 3,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 3,
+                        &quot;idCommodite&quot;: 19
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;nom&quot;: &quot;Alimentation&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Alimentation&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 41,
+                    &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 42,
+                    &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 43,
+                    &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 44,
+                    &quot;nom&quot;: &quot;Industries alimentaires&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 45,
+                    &quot;nom&quot;: &quot;Produits alimentaires&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 46,
+                    &quot;nom&quot;: &quot;Alimentation Animale&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 47,
+                    &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 48,
+                    &quot;nom&quot;: &quot;Boissons&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 49,
+                    &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 50,
+                    &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 51,
+                    &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 52,
+                    &quot;nom&quot;: &quot;Brasseries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 53,
+                    &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 54,
+                    &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 55,
+                    &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 56,
+                    &quot;nom&quot;: &quot;Catering&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 57,
+                    &quot;nom&quot;: &quot;Distilleries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 58,
+                    &quot;nom&quot;: &quot;Environnement&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 59,
+                    &quot;nom&quot;: &quot;Gomme Arabique&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 60,
+                    &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 61,
+                    &quot;nom&quot;: &quot;Laiteries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 62,
+                    &quot;nom&quot;: &quot;Minoteries&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 63,
+                    &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 64,
+                    &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 65,
+                    &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 66,
+                    &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 67,
+                    &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 68,
+                    &quot;nom&quot;: &quot;Traiteurs&quot;,
+                    &quot;idcategorie&quot;: 4,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Wifi&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 4,
+                        &quot;idCommodite&quot;: 19
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 69,
+                    &quot;nom&quot;: &quot;Auto-Ecoles&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 70,
+                    &quot;nom&quot;: &quot;Automobiles et Concessionnaires&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 71,
+                    &quot;nom&quot;: &quot;Expertises automobiles&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 72,
+                    &quot;nom&quot;: &quot;Automobiles - Pi&egrave;ces D&eacute;tach&eacute;es et Accessoires&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 73,
+                    &quot;nom&quot;: &quot;Voitures d'occasion&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 74,
+                    &quot;nom&quot;: &quot;Constructions M&eacute;caniques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 75,
+                    &quot;nom&quot;: &quot;Contr&ocirc;les Techniques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 76,
+                    &quot;nom&quot;: &quot;Cycles et Motos&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 77,
+                    &quot;nom&quot;: &quot;Engins ee Chantier et Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 78,
+                    &quot;nom&quot;: &quot;Garages&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 79,
+                    &quot;nom&quot;: &quot;M&eacute;canique G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 80,
+                    &quot;nom&quot;: &quot;M&eacute;canique - Industries&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 81,
+                    &quot;nom&quot;: &quot;Moteurs et Pompes&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 82,
+                    &quot;nom&quot;: &quot;Pneumatiques&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 83,
+                    &quot;nom&quot;: &quot;Tracking&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 84,
+                    &quot;nom&quot;: &quot;V&eacute;hicules Industriels&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 85,
+                    &quot;nom&quot;: &quot;Station-service&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 86,
+                    &quot;nom&quot;: &quot;Parking&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 87,
+                    &quot;nom&quot;: &quot;Garage&quot;,
+                    &quot;idcategorie&quot;: 5,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Finance&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 88,
+                    &quot;nom&quot;: &quot;Assurances&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 89,
+                    &quot;nom&quot;: &quot;Assurances Vies&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 90,
+                    &quot;nom&quot;: &quot;Assurances m&eacute;dicales&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 91,
+                    &quot;nom&quot;: &quot;Assureurs - Courtiers Et Conseils&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 92,
+                    &quot;nom&quot;: &quot;Banques et Organismes Financiers&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 93,
+                    &quot;nom&quot;: &quot;Equipements de S&eacute;curit&eacute; Bancaire&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 94,
+                    &quot;nom&quot;: &quot;Banques - Services Mobiles&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 95,
+                    &quot;nom&quot;: &quot;Bureaux de Change et Transferts d'argent&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 96,
+                    &quot;nom&quot;: &quot;Bureaux de Contr&ocirc;le&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 97,
+                    &quot;nom&quot;: &quot;Cabinets Comptables&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 98,
+                    &quot;nom&quot;: &quot;Centres d'Information&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 99,
+                    &quot;nom&quot;: &quot;Cr&eacute;dits et Finances&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 100,
+                    &quot;nom&quot;: &quot;Enqu&ecirc;tes, recherches et investigation&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 101,
+                    &quot;nom&quot;: &quot;Holdings&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 102,
+                    &quot;nom&quot;: &quot;Investissements&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 103,
+                    &quot;nom&quot;: &quot;Transports de Fonds&quot;,
+                    &quot;idcategorie&quot;: 6,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Construction&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 104,
+                    &quot;nom&quot;: &quot;Adduction d'eau et VRD&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 105,
+                    &quot;nom&quot;: &quot;Agencement et D&eacute;coration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 106,
+                    &quot;nom&quot;: &quot;Industrie d'aluminium&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 107,
+                    &quot;nom&quot;: &quot;Am&eacute;nagement des Terrains Urbains&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 108,
+                    &quot;nom&quot;: &quot;Architecture et Urbanisme&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 109,
+                    &quot;nom&quot;: &quot;Ascenseurs&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 110,
+                    &quot;nom&quot;: &quot;Assainissement et Canalisations&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 111,
+                    &quot;nom&quot;: &quot;B&acirc;ches et Stores&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 112,
+                    &quot;nom&quot;: &quot;B&acirc;timents et Travaux Publics&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 113,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Expertises&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 114,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Nettoyage&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 115,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Pr&eacute;fabriqu&eacute;&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 116,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Ravalement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 117,
+                    &quot;nom&quot;: &quot;B&acirc;timents - R&eacute;habilitation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 118,
+                    &quot;nom&quot;: &quot;B&acirc;timents - Second &OElig;uvre&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 119,
+                    &quot;nom&quot;: &quot;Bitume&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 120,
+                    &quot;nom&quot;: &quot;Bois et N&eacute;goce&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 121,
+                    &quot;nom&quot;: &quot;Bois - Industries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 122,
+                    &quot;nom&quot;: &quot;Bois - Scieries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 123,
+                    &quot;nom&quot;: &quot;Bricolage&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 124,
+                    &quot;nom&quot;: &quot;Briqueteries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 125,
+                    &quot;nom&quot;: &quot;Bureaux d'Etudes et D'Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 126,
+                    &quot;nom&quot;: &quot;C&acirc;bles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 127,
+                    &quot;nom&quot;: &quot;Caoutchouc&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 128,
+                    &quot;nom&quot;: &quot;Carrelages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 129,
+                    &quot;nom&quot;: &quot;Carri&egrave;res - Exploitations et Exploration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 130,
+                    &quot;nom&quot;: &quot;Chaudronnerie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 131,
+                    &quot;nom&quot;: &quot;Cimenteries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 132,
+                    &quot;nom&quot;: &quot;Citernes - M&eacute;tallique et Plastique&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 133,
+                    &quot;nom&quot;: &quot;Climatisation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 134,
+                    &quot;nom&quot;: &quot;Climatisation - D&eacute;pannage et Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 135,
+                    &quot;nom&quot;: &quot;Constructions Industrielles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 136,
+                    &quot;nom&quot;: &quot;Constructions M&eacute;talliques&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 137,
+                    &quot;nom&quot;: &quot;D&eacute;veloppement Rural et Urbain&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 138,
+                    &quot;nom&quot;: &quot;Ebenistes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 139,
+                    &quot;nom&quot;: &quot;Echafaudages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 140,
+                    &quot;nom&quot;: &quot;Espaces Verts et Jardins&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 141,
+                    &quot;nom&quot;: &quot;Etanch&eacute;it&eacute;&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 142,
+                    &quot;nom&quot;: &quot;Faux-Plafonds et Staff&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 143,
+                    &quot;nom&quot;: &quot;Fer et Acier&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 144,
+                    &quot;nom&quot;: &quot;Forages&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 145,
+                    &quot;nom&quot;: &quot;Forages - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 146,
+                    &quot;nom&quot;: &quot;Forages - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 147,
+                    &quot;nom&quot;: &quot;Forestiers - Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 148,
+                    &quot;nom&quot;: &quot;G&eacute;nie Civil&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 149,
+                    &quot;nom&quot;: &quot;G&eacute;ologues&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 150,
+                    &quot;nom&quot;: &quot;G&eacute;om&egrave;tres - topographes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 151,
+                    &quot;nom&quot;: &quot;Groupes Electrog&egrave;nes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 152,
+                    &quot;nom&quot;: &quot;Hydraulique&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 153,
+                    &quot;nom&quot;: &quot;Hydraulique - Constructions&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 154,
+                    &quot;nom&quot;: &quot;Hydraulique - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 155,
+                    &quot;nom&quot;: &quot;Isolation industrielle&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 156,
+                    &quot;nom&quot;: &quot;Laboratoires d'Analyses du B&acirc;timent&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 157,
+                    &quot;nom&quot;: &quot;Location d'Engins de Chantier&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 158,
+                    &quot;nom&quot;: &quot;Mat&eacute;riaux de Construction&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 159,
+                    &quot;nom&quot;: &quot;Menuiseries Aluminium&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 160,
+                    &quot;nom&quot;: &quot;Menuiseries Bois&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 161,
+                    &quot;nom&quot;: &quot;Menuiseries Industrielles&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 162,
+                    &quot;nom&quot;: &quot;Menuiseries M&eacute;talliques&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 163,
+                    &quot;nom&quot;: &quot;Mines - Exploitations et Exploration&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 164,
+                    &quot;nom&quot;: &quot;Mines - Import et Export&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 165,
+                    &quot;nom&quot;: &quot;Mines - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 166,
+                    &quot;nom&quot;: &quot;Mines - Recherche&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 167,
+                    &quot;nom&quot;: &quot;Miroiteries et Vitreries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 168,
+                    &quot;nom&quot;: &quot;Ouvrages d'Art&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 169,
+                    &quot;nom&quot;: &quot;Peintres&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 170,
+                    &quot;nom&quot;: &quot;Peinture&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 171,
+                    &quot;nom&quot;: &quot;Piscines&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 172,
+                    &quot;nom&quot;: &quot;Plomberie et Sanitaires&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 173,
+                    &quot;nom&quot;: &quot;Portes et Fen&ecirc;tres&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 174,
+                    &quot;nom&quot;: &quot;Propret&eacute; urbaine&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 175,
+                    &quot;nom&quot;: &quot;Quincailleries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 176,
+                    &quot;nom&quot;: &quot;Routes&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 177,
+                    &quot;nom&quot;: &quot;Routes - Mat&eacute;riaux&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 178,
+                    &quot;nom&quot;: &quot;Routes - Signalisation&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 179,
+                    &quot;nom&quot;: &quot;Serrureries&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 180,
+                    &quot;nom&quot;: &quot;Toitures - Mat&eacute;riaux&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 181,
+                    &quot;nom&quot;: &quot;T&ocirc;les&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 182,
+                    &quot;nom&quot;: &quot;Topographie&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 183,
+                    &quot;nom&quot;: &quot;Travaux Publics et Terrassement&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 184,
+                    &quot;nom&quot;: &quot;Travaux Publics et Terrassement - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 185,
+                    &quot;nom&quot;: &quot;Tuyauteries et PVC&quot;,
+                    &quot;idcategorie&quot;: 7,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Piscine&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 7,
+                        &quot;idCommodite&quot;: 20
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 186,
+                    &quot;nom&quot;: &quot;Coiffeur&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 187,
+                    &quot;nom&quot;: &quot;Institut de beaut&eacute;, parfumerie, relaxation&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 188,
+                    &quot;nom&quot;: &quot;Massages&quot;,
+                    &quot;idcategorie&quot;: 8,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: [
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Piscine&quot;,
+                    &quot;idTypeCommodite&quot;: 1,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T15:37:37.000000Z&quot;,
+                    &quot;pivot&quot;: {
+                        &quot;idCategorie&quot;: 8,
+                        &quot;idCommodite&quot;: 20
+                    },
+                    &quot;type_commodite&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Luxe ++&quot;,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-02-25T14:02:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-02-25T14:04:49.000000Z&quot;
+                    }
+                }
+            ]
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Commerce&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 189,
+                    &quot;nom&quot;: &quot;Centrales d'Achats&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 190,
+                    &quot;nom&quot;: &quot;Chambres de Commerce&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 191,
+                    &quot;nom&quot;: &quot;Commerce Exterieur - Promotion&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 192,
+                    &quot;nom&quot;: &quot;Commerce G&eacute;n&eacute;ral&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 193,
+                    &quot;nom&quot;: &quot;E-Commerce&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 194,
+                    &quot;nom&quot;: &quot;Groupements D'Entreprises&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 195,
+                    &quot;nom&quot;: &quot;Import et Export&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 196,
+                    &quot;nom&quot;: &quot;Promotion Commerciale et Etudes&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 197,
+                    &quot;nom&quot;: &quot;Recouvrements Commerciaux&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 198,
+                    &quot;nom&quot;: &quot;Repr&eacute;sentation Commerciale&quot;,
+                    &quot;idcategorie&quot;: 9,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Communication&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 199,
+                    &quot;nom&quot;: &quot;Agences de Mannequins&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 200,
+                    &quot;nom&quot;: &quot;Agences de Presse et d'Information&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 201,
+                    &quot;nom&quot;: &quot;Agences de Publicit&eacute; et de Communication&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 202,
+                    &quot;nom&quot;: &quot;Audiovisuel - Mat&eacute;riels et Production&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 203,
+                    &quot;nom&quot;: &quot;Ev&eacute;nementiel&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 204,
+                    &quot;nom&quot;: &quot;Journaux et Presse&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 205,
+                    &quot;nom&quot;: &quot;Maison d'&eacute;dition&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 206,
+                    &quot;nom&quot;: &quot;Marketing&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 207,
+                    &quot;nom&quot;: &quot;Objets Publicitaires&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 208,
+                    &quot;nom&quot;: &quot;Organisations de Conf&eacute;rences&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 209,
+                    &quot;nom&quot;: &quot;Radio et T&eacute;l&eacute;vision&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 210,
+                    &quot;nom&quot;: &quot;Radio-Communication&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 211,
+                    &quot;nom&quot;: &quot;Relations Publiques et Organisations&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 212,
+                    &quot;nom&quot;: &quot;Ressources Humaines&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 213,
+                    &quot;nom&quot;: &quot;S&eacute;rigraphie&quot;,
+                    &quot;idcategorie&quot;: 10,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;nom&quot;: &quot;Eau&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Eau&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 214,
+                    &quot;nom&quot;: &quot;Eau - Distribution&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 215,
+                    &quot;nom&quot;: &quot;Eau - Laboratoires d'Analyses&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 216,
+                    &quot;nom&quot;: &quot;Eau - Traitement&quot;,
+                    &quot;idcategorie&quot;: 11,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Formation&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 217,
+                    &quot;nom&quot;: &quot;Centres de Documentation&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 218,
+                    &quot;nom&quot;: &quot;Cr&egrave;che&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 219,
+                    &quot;nom&quot;: &quot;Centre de loisirs d'enfants&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 220,
+                    &quot;nom&quot;: &quot;Centre linguistique - enseignement&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 221,
+                    &quot;nom&quot;: &quot;Centres de Formation&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 222,
+                    &quot;nom&quot;: &quot;Centres de Recherche&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 223,
+                    &quot;nom&quot;: &quot;Ecoles et Universit&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 12,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;nom&quot;: &quot;Energie&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Energie&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 224,
+                    &quot;nom&quot;: &quot;Automatisme&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 225,
+                    &quot;nom&quot;: &quot;Batteries et Piles&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 226,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - G&eacute;n&eacute;rale et Industrielle&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 227,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Expertises&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 228,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Industries&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 229,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 230,
+                    &quot;nom&quot;: &quot;Electricit&eacute; - Materiels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 231,
+                    &quot;nom&quot;: &quot;Electrification Rurale Et Urbaine&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 232,
+                    &quot;nom&quot;: &quot;Electrom&eacute;canique&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 233,
+                    &quot;nom&quot;: &quot;Energie&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 234,
+                    &quot;nom&quot;: &quot;Energie Nouvelle et Renouvelable&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 235,
+                    &quot;nom&quot;: &quot;Energie Solaire&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 236,
+                    &quot;nom&quot;: &quot;Gaz Domestique Et Industriel&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 237,
+                    &quot;nom&quot;: &quot;G&eacute;otechnique&quot;,
+                    &quot;idcategorie&quot;: 13,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 238,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Aviation&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 239,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Distribution&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 240,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Equipements Et Mater...&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 241,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Expertises&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 242,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Exploration&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 243,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Logistiques&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 244,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Lubrifiants&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 245,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 246,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Production&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 247,
+                    &quot;nom&quot;: &quot;Hydrocarbures - Transports&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 248,
+                    &quot;nom&quot;: &quot;P&eacute;troliers, Constructions&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 249,
+                    &quot;nom&quot;: &quot;P&eacute;troliers - Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 250,
+                    &quot;nom&quot;: &quot;Raffineries&quot;,
+                    &quot;idcategorie&quot;: 14,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;nom&quot;: &quot;Immobilier&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Immobilier&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 251,
+                    &quot;nom&quot;: &quot;Garde Meubles&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 252,
+                    &quot;nom&quot;: &quot;Immobilier - Agences&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 253,
+                    &quot;nom&quot;: &quot;Immobilier - Expertises&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 254,
+                    &quot;nom&quot;: &quot;Immobilier - Gestion&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 255,
+                    &quot;nom&quot;: &quot;Immobilier - Location&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 256,
+                    &quot;nom&quot;: &quot;Immobilier - Promoteurs&quot;,
+                    &quot;idcategorie&quot;: 15,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;nom&quot;: &quot;Industries&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Industries&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 257,
+                    &quot;nom&quot;: &quot;Electro-M&eacute;nager&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 258,
+                    &quot;nom&quot;: &quot;Electronique&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 259,
+                    &quot;nom&quot;: &quot;Allumettes et Bougies&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 260,
+                    &quot;nom&quot;: &quot;Armes et Munitions&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 261,
+                    &quot;nom&quot;: &quot;Assistance Technique&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 262,
+                    &quot;nom&quot;: &quot;Cartonneries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 263,
+                    &quot;nom&quot;: &quot;Chaussures, Manufactures&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 264,
+                    &quot;nom&quot;: &quot;Coton&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 265,
+                    &quot;nom&quot;: &quot;D&eacute;pannage et Maintenance Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 266,
+                    &quot;nom&quot;: &quot;Diamant et Or&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 267,
+                    &quot;nom&quot;: &quot;Emballage et Conditionnement&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 268,
+                    &quot;nom&quot;: &quot;Equipements de Bureaux&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 269,
+                    &quot;nom&quot;: &quot;Equipements Industriels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 270,
+                    &quot;nom&quot;: &quot;Fournitures Industrielles&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 271,
+                    &quot;nom&quot;: &quot;Froid Industriel&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 272,
+                    &quot;nom&quot;: &quot;Location De Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 273,
+                    &quot;nom&quot;: &quot;Machines-Outils, Manufactures&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 274,
+                    &quot;nom&quot;: &quot;Manutention Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 275,
+                    &quot;nom&quot;: &quot;Matelas&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 276,
+                    &quot;nom&quot;: &quot;Matelas, Equipements et Materiels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 277,
+                    &quot;nom&quot;: &quot;Mesure et Pesage, Materiels&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 278,
+                    &quot;nom&quot;: &quot;Nettoyage Industriel&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 279,
+                    &quot;nom&quot;: &quot;Nettoyage, Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 280,
+                    &quot;nom&quot;: &quot;Papier - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 281,
+                    &quot;nom&quot;: &quot;Pi&egrave;ces D&eacute;tach&eacute;es Industrielles&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 282,
+                    &quot;nom&quot;: &quot;Plastique - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 283,
+                    &quot;nom&quot;: &quot;Plastique - Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 284,
+                    &quot;nom&quot;: &quot;Savonneries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 285,
+                    &quot;nom&quot;: &quot;Soudage, Mat&eacute;riels et Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 286,
+                    &quot;nom&quot;: &quot;Tabac, Manufactures et Importateurs&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 287,
+                    &quot;nom&quot;: &quot;Travail Temporaire, Interim&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 288,
+                    &quot;nom&quot;: &quot;Tuyauteries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 289,
+                    &quot;nom&quot;: &quot;Verre - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 290,
+                    &quot;nom&quot;: &quot;Zone Franche Industrielle&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 291,
+                    &quot;nom&quot;: &quot;Ameublement et Mobilier, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 292,
+                    &quot;nom&quot;: &quot;Fournitures de Bureaux, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 293,
+                    &quot;nom&quot;: &quot;Mobilier - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 294,
+                    &quot;nom&quot;: &quot;Chimie - Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 295,
+                    &quot;nom&quot;: &quot;Chimie - Produits&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 296,
+                    &quot;nom&quot;: &quot;Parfum, Industries&quot;,
+                    &quot;idcategorie&quot;: 16,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Technologies&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 297,
+                    &quot;nom&quot;: &quot;Antennes Paraboliques, Equipements&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 298,
+                    &quot;nom&quot;: &quot;Archivage Numerique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 299,
+                    &quot;nom&quot;: &quot;Bureautique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 300,
+                    &quot;nom&quot;: &quot;Business Center&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 301,
+                    &quot;nom&quot;: &quot;Centres d'Appels&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 302,
+                    &quot;nom&quot;: &quot;Courriers Express, Colis Express&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 303,
+                    &quot;nom&quot;: &quot;Cyber-Cafes&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 304,
+                    &quot;nom&quot;: &quot;Domiciliation de Soci&eacute;t&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 305,
+                    &quot;nom&quot;: &quot;Editeurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 306,
+                    &quot;nom&quot;: &quot;Etudes de March&eacute;s&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 307,
+                    &quot;nom&quot;: &quot;Imprimeries&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 308,
+                    &quot;nom&quot;: &quot;Imprimeries, Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 309,
+                    &quot;nom&quot;: &quot;Informatique&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 310,
+                    &quot;nom&quot;: &quot;Informatique - Consommables&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 311,
+                    &quot;nom&quot;: &quot;Informatique - Constructeurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 312,
+                    &quot;nom&quot;: &quot;Informatique - Consultants&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 313,
+                    &quot;nom&quot;: &quot;Informatique - Environnement&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 314,
+                    &quot;nom&quot;: &quot;Informatique - Expertises&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 315,
+                    &quot;nom&quot;: &quot;Informatique - Gestion De Maintenance&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 316,
+                    &quot;nom&quot;: &quot;Informatique - Ing&eacute;nierie&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 317,
+                    &quot;nom&quot;: &quot;Informatique - Ing&eacute;nieurs&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 318,
+                    &quot;nom&quot;: &quot;Informatique - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 319,
+                    &quot;nom&quot;: &quot;Informatique - Reseaux&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 320,
+                    &quot;nom&quot;: &quot;Informatique - Securite&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 321,
+                    &quot;nom&quot;: &quot;Internet&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 322,
+                    &quot;nom&quot;: &quot;Internet - Provider&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 323,
+                    &quot;nom&quot;: &quot;Internet - Web Design&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 324,
+                    &quot;nom&quot;: &quot;Internet - E-Business &amp; E-Commerce&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 325,
+                    &quot;nom&quot;: &quot;Paratonnerre&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 326,
+                    &quot;nom&quot;: &quot;Technologies Nouvelles&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 327,
+                    &quot;nom&quot;: &quot;Technologies Nouvelles, Consultants&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 328,
+                    &quot;nom&quot;: &quot;Traducteurs Et Interpretes&quot;,
+                    &quot;idcategorie&quot;: 17,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;nom&quot;: &quot;Justice&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Justice&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 329,
+                    &quot;nom&quot;: &quot;Avocats&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 330,
+                    &quot;nom&quot;: &quot;Avocats d'Affaires Internationales&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 331,
+                    &quot;nom&quot;: &quot;Cabinets Juridiques et Fiscaux&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 332,
+                    &quot;nom&quot;: &quot;Consultants&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 333,
+                    &quot;nom&quot;: &quot;Consultants en Immigration&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 334,
+                    &quot;nom&quot;: &quot;Consultants Internationaux&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 335,
+                    &quot;nom&quot;: &quot;Expertises  Comptables, Audit Et Conseil&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 336,
+                    &quot;nom&quot;: &quot;Expertises - Etudes, Communication&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 337,
+                    &quot;nom&quot;: &quot;Expertises Judiciaire&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 338,
+                    &quot;nom&quot;: &quot;Huissiers De Justice&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 339,
+                    &quot;nom&quot;: &quot;Notaires&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 340,
+                    &quot;nom&quot;: &quot;Projets et Bureaux D'Appui&quot;,
+                    &quot;idcategorie&quot;: 18,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;nom&quot;: &quot;Loisirs&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Loisirs&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 341,
+                    &quot;nom&quot;: &quot;Artisanat, Antiquaires et Galeries d'Art&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 342,
+                    &quot;nom&quot;: &quot;Cadeaux&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 343,
+                    &quot;nom&quot;: &quot;Casino&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 344,
+                    &quot;nom&quot;: &quot;Cin&eacute;ma et vid&eacute;oth&egrave;ques&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 345,
+                    &quot;nom&quot;: &quot;Centre culturel&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 346,
+                    &quot;nom&quot;: &quot;Mus&eacute;e&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 347,
+                    &quot;nom&quot;: &quot;Musique&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 348,
+                    &quot;nom&quot;: &quot;Th&eacute;&acirc;tre, spectacle&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 349,
+                    &quot;nom&quot;: &quot;Cabaret&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 350,
+                    &quot;nom&quot;: &quot;Biblioth&egrave;que et Centre de Documentation&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 351,
+                    &quot;nom&quot;: &quot;Librairie, papeterie&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 352,
+                    &quot;nom&quot;: &quot;Sport&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 353,
+                    &quot;nom&quot;: &quot;Espaces verts et Jardins&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 354,
+                    &quot;nom&quot;: &quot;Salle de spectacles - salle de f&ecirc;tes&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 355,
+                    &quot;nom&quot;: &quot;Loisirs, jeux et entertainment&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 356,
+                    &quot;nom&quot;: &quot;Loterie&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 357,
+                    &quot;nom&quot;: &quot;Voyance, Medium&quot;,
+                    &quot;idcategorie&quot;: 19,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;nom&quot;: &quot;Restos, bars&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Resto/Bar&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 358,
+                    &quot;nom&quot;: &quot;Restaurant&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 359,
+                    &quot;nom&quot;: &quot;Night Clubs et Discoth&egrave;ques&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 360,
+                    &quot;nom&quot;: &quot;Restauration rapide&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 361,
+                    &quot;nom&quot;: &quot;Bar, Caf&eacute;&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 362,
+                    &quot;nom&quot;: &quot;Salons de Th&eacute; et Glaciers&quot;,
+                    &quot;idcategorie&quot;: 20,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 21,
+            &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 363,
+                    &quot;nom&quot;: &quot;Ambulance&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 364,
+                    &quot;nom&quot;: &quot;Assistance sociale&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 365,
+                    &quot;nom&quot;: &quot;M&eacute;decine G&eacute;n&eacute;rale&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 366,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dentiste&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 367,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dermatologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 368,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - cardiologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 369,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - oncologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 370,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ophtalmologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 371,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - psychologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 372,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - angiologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 373,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - p&eacute;dicure et podologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 374,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ost&eacute;opathie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 375,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - gyn&eacute;cologie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 376,
+                    &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - kin&eacute;sith&eacute;rapeute&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 377,
+                    &quot;nom&quot;: &quot;M&eacute;decine naturelle, traditionnelle&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 378,
+                    &quot;nom&quot;: &quot;M&eacute;decine du travail&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 379,
+                    &quot;nom&quot;: &quot;Chirurgie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 380,
+                    &quot;nom&quot;: &quot;Chirurgie Esth&eacute;tique&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 381,
+                    &quot;nom&quot;: &quot;Cliniques et Hopitaux&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 382,
+                    &quot;nom&quot;: &quot;Cosm&eacute;tiques - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 383,
+                    &quot;nom&quot;: &quot;Cosm&eacute;tiques - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 384,
+                    &quot;nom&quot;: &quot;Drogueries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 385,
+                    &quot;nom&quot;: &quot;Laboratoires d'Analyses M&eacute;dicales&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 386,
+                    &quot;nom&quot;: &quot;Laboratoires, Mat&eacute;riels et Equipement&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 387,
+                    &quot;nom&quot;: &quot;Laboratoires - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 388,
+                    &quot;nom&quot;: &quot;Medical - Assistance&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 389,
+                    &quot;nom&quot;: &quot;Medical - Gaz Medical&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 390,
+                    &quot;nom&quot;: &quot;Medical - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 391,
+                    &quot;nom&quot;: &quot;Medical - Materiels Et Equipements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 392,
+                    &quot;nom&quot;: &quot;Medical - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 393,
+                    &quot;nom&quot;: &quot;Opticiens&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 394,
+                    &quot;nom&quot;: &quot;Opticiens - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 395,
+                    &quot;nom&quot;: &quot;Para-Pharmacie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 396,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Distributeurs&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 397,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Industries&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 398,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Laboratoires&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 399,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Materiels Et Equipement&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 400,
+                    &quot;nom&quot;: &quot;Pharmaceutiques - Produits&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 401,
+                    &quot;nom&quot;: &quot;Pharmacies&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 402,
+                    &quot;nom&quot;: &quot;Phytosanitaires - Traitements&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 403,
+                    &quot;nom&quot;: &quot;Urgences Medicales&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 404,
+                    &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 405,
+                    &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires, Produits et Pharmacie&quot;,
+                    &quot;idcategorie&quot;: 21,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 22,
+            &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 406,
+                    &quot;nom&quot;: &quot;Alarmes Et Surveillance, Mat&eacute;riels &eacute;lectroniques&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 407,
+                    &quot;nom&quot;: &quot;Badges, Fabrication&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 408,
+                    &quot;nom&quot;: &quot;Controles Techniques&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 409,
+                    &quot;nom&quot;: &quot;D&eacute;tectives&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 410,
+                    &quot;nom&quot;: &quot;Escorte V&eacute;hicules&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 411,
+                    &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute;&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 412,
+                    &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute; - Equipements&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 413,
+                    &quot;nom&quot;: &quot;Incendie et Protection - Mat&eacute;riels&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 414,
+                    &quot;nom&quot;: &quot;S&eacute;curit&eacute; - Audits et Consultants&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 415,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;-Surveillance et Vid&eacute;o-Surveillance&quot;,
+                    &quot;idcategorie&quot;: 22,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Telecom&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 416,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Transmission de signal&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 417,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications et T&eacute;l&eacute;phonie&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 418,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Fibres Optique&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 419,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Installation et maintenance&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 420,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mat&eacute;riels et &eacute;quipement&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 421,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mobiles&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 422,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - R&eacute;seaux&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 423,
+                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Satellite&quot;,
+                    &quot;idcategorie&quot;: 23,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Textile&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 424,
+                    &quot;nom&quot;: &quot;Confection, Couture, Broderie&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 425,
+                    &quot;nom&quot;: &quot;Equipements et v&ecirc;tements militaires&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 426,
+                    &quot;nom&quot;: &quot;Friperies&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 427,
+                    &quot;nom&quot;: &quot;Pr&ecirc;t &agrave; Porter - Gros et D&eacute;tail&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 428,
+                    &quot;nom&quot;: &quot;Textile&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 429,
+                    &quot;nom&quot;: &quot;Textile, Filature, Tissage, Impression&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 430,
+                    &quot;nom&quot;: &quot;Textile, Fournitures&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 431,
+                    &quot;nom&quot;: &quot;Textile - Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 432,
+                    &quot;nom&quot;: &quot;V&ecirc;tements  Manufactures&quot;,
+                    &quot;idcategorie&quot;: 24,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;nom&quot;: &quot;Tourisme&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Tourisme&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 433,
+                    &quot;nom&quot;: &quot;Agences de Tourisme&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 434,
+                    &quot;nom&quot;: &quot;Centres d'Information&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 435,
+                    &quot;nom&quot;: &quot;Agences de voyage, tours op&eacute;rateurs&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 436,
+                    &quot;nom&quot;: &quot;Equipements H&ocirc;tels et Restaurants&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 437,
+                    &quot;nom&quot;: &quot;H&ocirc;tel&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 438,
+                    &quot;nom&quot;: &quot;Auberge&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 439,
+                    &quot;nom&quot;: &quot;Location d'avions&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 440,
+                    &quot;nom&quot;: &quot;Location de bateaux&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 441,
+                    &quot;nom&quot;: &quot;Location de voitures&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 442,
+                    &quot;nom&quot;: &quot;Transport Logistique&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 443,
+                    &quot;nom&quot;: &quot;Transports Touristiques&quot;,
+                    &quot;idcategorie&quot;: 25,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 26,
+            &quot;nom&quot;: &quot;Transports&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Transports&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 444,
+                    &quot;nom&quot;: &quot;Accastillage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 445,
+                    &quot;nom&quot;: &quot;Acconage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 446,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 447,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Centrales D'Achats&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 448,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Maintenance&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 449,
+                    &quot;nom&quot;: &quot;A&eacute;roports&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 450,
+                    &quot;nom&quot;: &quot;A&eacute;roports - Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 451,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Maintenance&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 452,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Securite Aerienne&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 453,
+                    &quot;nom&quot;: &quot;A&eacute;roports -  Services&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 454,
+                    &quot;nom&quot;: &quot;Agences en Douane&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 455,
+                    &quot;nom&quot;: &quot;Agences Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 456,
+                    &quot;nom&quot;: &quot;A&eacute;ronautique - Pi&egrave;ces D&eacute;tach&eacute;es&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 457,
+                    &quot;nom&quot;: &quot;Chantiers Navals&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 458,
+                    &quot;nom&quot;: &quot;Chemin de Fer&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 459,
+                    &quot;nom&quot;: &quot;Compagnies A&eacute;riennes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 460,
+                    &quot;nom&quot;: &quot;Containers, Fabrication et Location&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 461,
+                    &quot;nom&quot;: &quot;D&eacute;m&eacute;nagements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 462,
+                    &quot;nom&quot;: &quot;Expertises Maritimes et Terrestres&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 463,
+                    &quot;nom&quot;: &quot;Fret a&eacute;rien - maritime &amp; international&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 464,
+                    &quot;nom&quot;: &quot;Manutention et Entreposage&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 465,
+                    &quot;nom&quot;: &quot;Manutention - Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 466,
+                    &quot;nom&quot;: &quot;Manutention - Portuaire&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 467,
+                    &quot;nom&quot;: &quot;Ports&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 468,
+                    &quot;nom&quot;: &quot;Ports, Mat&eacute;riels et Equipements&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 469,
+                    &quot;nom&quot;: &quot;Shipchandler&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 470,
+                    &quot;nom&quot;: &quot;Transit et Consignation&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 471,
+                    &quot;nom&quot;: &quot;Transports A&eacute;riens&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 472,
+                    &quot;nom&quot;: &quot;Transports en Commun&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 473,
+                    &quot;nom&quot;: &quot;Transports Ferroviaires&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 474,
+                    &quot;nom&quot;: &quot;Transports Internationaux&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 475,
+                    &quot;nom&quot;: &quot;Transports Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 476,
+                    &quot;nom&quot;: &quot;Transports Routiers&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 477,
+                    &quot;nom&quot;: &quot;Transports Urbains&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 478,
+                    &quot;nom&quot;: &quot;Travaux Maritimes&quot;,
+                    &quot;idcategorie&quot;: 26,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;nom&quot;: &quot;Autres&quot;,
+            &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+            &quot;shortname&quot;: &quot;Autres&quot;,
+            &quot;vues&quot;: 0,
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 479,
+                    &quot;nom&quot;: &quot;Activit&eacute;s Formelles&quot;,
+                    &quot;idcategorie&quot;: 27,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                },
+                {
+                    &quot;id&quot;: 480,
+                    &quot;nom&quot;: &quot;Activit&eacute;s Informelles&quot;,
+                    &quot;idcategorie&quot;: 27,
+                    &quot;logourl&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                }
+            ],
+            &quot;commodites&quot;: []
+        }
+    ],
+    &quot;message&quot;: &quot;Liste des Categories&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-search-categories" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-search-categories"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-search-categories"></code></pre>
+</span>
+<span id="execution-error-GETapi-search-categories" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-search-categories"></code></pre>
+</span>
+<form id="form-GETapi-search-categories" data-method="GET"
+      data-path="api/search/categories"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","X-Authorization":"apiKey"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-search-categories', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-search-categories"
+                    onclick="tryItOut('GETapi-search-categories');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-search-categories"
+                    onclick="cancelTryOut('GETapi-search-categories');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-search-categories" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/search/categories</code></b>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>q</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="q"
+               data-endpoint="GETapi-search-categories"
+               value="piscine"
+               data-component="query" hidden>
+    <br>
+<p>search value.</p>
+            </p>
+                </form>
 
         <h1 id="comment-management">Comment management</h1>
 
@@ -9100,7 +18104,7 @@ response.json()</code></pre></div>
     --form "diplome=BAC" \
     --form "tailleTshirt=XXL" \
     --form "age=25" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDEE.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEEA8.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -9199,7 +18203,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDEE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEEA8.tmp', 'r')
             ],
         ],
     ]
@@ -9214,7 +18218,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDEE.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEEA8.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -9506,7 +18510,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED04.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE987.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -9605,7 +18609,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED04.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE987.tmp', 'r')
             ],
         ],
     ]
@@ -9620,7 +18624,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED04.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE987.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -11067,6 +20071,8 @@ response.json()</code></pre></div>
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+            &quot;idUser&quot;: null,
+            &quot;logo&quot;: null,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 2,
                 &quot;nom&quot;: &quot;BATIMENT&quot;,
@@ -11083,7 +20089,8 @@ response.json()</code></pre></div>
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
-                &quot;idCommercial&quot;: 12
+                &quot;idCommercial&quot;: 12,
+                &quot;idUser&quot;: null
             },
             &quot;sous_categories&quot;: [
                 {
@@ -11101,10 +20108,12 @@ response.json()</code></pre></div>
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
-                        &quot;logourl&quot;: null,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;vues&quot;: 0
                     }
                 },
                 {
@@ -11122,10 +20131,12 @@ response.json()</code></pre></div>
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
-                        &quot;logourl&quot;: null,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;vues&quot;: 0
                     }
                 }
             ],
@@ -11200,6 +20211,8 @@ response.json()</code></pre></div>
                     }
                 }
             ],
+            &quot;manager&quot;: null,
+            &quot;user&quot;: null,
             &quot;commercial&quot;: {
                 &quot;id&quot;: 12,
                 &quot;idUser&quot;: 20,
@@ -11228,8 +20241,7 @@ response.json()</code></pre></div>
                     &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
                 }
-            },
-            &quot;manager&quot;: null
+            }
         }
     ],
     &quot;message&quot;: &quot;Liste des Etablissements&quot;
@@ -11301,8 +20313,8 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "whatsapp1=699999999" \
     --form "services=OM;MOMO" \
-    --form "idSousCategorie=quia" \
-    --form "idCommodite=esse" \
+    --form "idSousCategorie=odit" \
+    --form "idCommodite=sapiente" \
     --form "idBatiment=2" \
     --form "indicationAdresse=Rue de Melen" \
     --form "codePostal=59684" \
@@ -11311,8 +20323,8 @@ response.json()</code></pre></div>
     --form "whatsapp2=699999999" \
     --form "osmId=111259658236" \
     --form "ameliorations=Site internet,videos" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED86.tmp" \
-    --form "logo=@C:\Users\tchou\AppData\Local\Temp\phpED87.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEBDE.tmp" \
+    --form "logo=@C:\Users\tchou\AppData\Local\Temp\phpEBDF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11333,8 +20345,8 @@ body.append('etage', '3');
 body.append('phone', '699999999');
 body.append('whatsapp1', '699999999');
 body.append('services', 'OM;MOMO');
-body.append('idSousCategorie', 'quia');
-body.append('idCommodite', 'esse');
+body.append('idSousCategorie', 'odit');
+body.append('idCommodite', 'sapiente');
 body.append('idBatiment', '2');
 body.append('indicationAdresse', 'Rue de Melen');
 body.append('codePostal', '59684');
@@ -11387,11 +20399,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'idSousCategorie',
-                'contents' =&gt; 'quia'
+                'contents' =&gt; 'odit'
             ],
             [
                 'name' =&gt; 'idCommodite',
-                'contents' =&gt; 'esse'
+                'contents' =&gt; 'sapiente'
             ],
             [
                 'name' =&gt; 'idBatiment',
@@ -11427,11 +20439,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED86.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBDE.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED87.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEBDF.tmp', 'r')
             ],
         ],
     ]
@@ -11446,8 +20458,8 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED86.tmp', 'rb'),
-  'logo': open('C:\Users\tchou\AppData\Local\Temp\phpED87.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEBDE.tmp', 'rb'),
+  'logo': open('C:\Users\tchou\AppData\Local\Temp\phpEBDF.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -11455,8 +20467,8 @@ payload = {
     "phone": "699999999",
     "whatsapp1": "699999999",
     "services": "OM;MOMO",
-    "idSousCategorie": "quia",
-    "idCommodite": "esse",
+    "idSousCategorie": "odit",
+    "idCommodite": "sapiente",
     "idBatiment": 2,
     "indicationAdresse": "Rue de Melen",
     "codePostal": "59684",
@@ -11613,7 +20625,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idSousCategorie"
                data-endpoint="POSTapi-etablissements"
-               value="quia"
+               value="odit"
                data-component="body" hidden>
     <br>
 
@@ -11623,7 +20635,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idCommodite"
                data-endpoint="POSTapi-etablissements"
-               value="esse"
+               value="sapiente"
                data-component="body" hidden>
     <br>
 
@@ -11767,8 +20779,8 @@ response.json()</code></pre></div>
     --form "revoir=1" \
     --form "valide=1" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED89.tmp" \
-    --form "logo=@C:\Users\tchou\AppData\Local\Temp\phpED8A.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEC01.tmp" \
+    --form "logo=@C:\Users\tchou\AppData\Local\Temp\phpEC12.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11898,11 +20910,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED89.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEC01.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED8A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEC12.tmp', 'r')
             ],
         ],
     ]
@@ -11917,8 +20929,8 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED89.tmp', 'rb'),
-  'logo': open('C:\Users\tchou\AppData\Local\Temp\phpED8A.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEC01.tmp', 'rb'),
+  'logo': open('C:\Users\tchou\AppData\Local\Temp\phpEC12.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -12515,6 +21527,8 @@ response.json()</code></pre></div>
         &quot;deleted_at&quot;: null,
         &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+        &quot;idUser&quot;: null,
+        &quot;logo&quot;: null,
         &quot;batiment&quot;: {
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;BATIMENT&quot;,
@@ -12531,7 +21545,8 @@ response.json()</code></pre></div>
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
-            &quot;idCommercial&quot;: 12
+            &quot;idCommercial&quot;: 12,
+            &quot;idUser&quot;: null
         },
         &quot;sous_categories&quot;: [
             {
@@ -12549,10 +21564,12 @@ response.json()</code></pre></div>
                 &quot;categorie&quot;: {
                     &quot;id&quot;: 1,
                     &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: null,
+                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                    &quot;shortname&quot;: &quot;Achats&quot;,
+                    &quot;vues&quot;: 0
                 }
             },
             {
@@ -12570,10 +21587,12 @@ response.json()</code></pre></div>
                 &quot;categorie&quot;: {
                     &quot;id&quot;: 1,
                     &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: null,
+                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                     &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                    &quot;shortname&quot;: &quot;Achats&quot;,
+                    &quot;vues&quot;: 0
                 }
             }
         ],
@@ -12648,6 +21667,8 @@ response.json()</code></pre></div>
                 }
             }
         ],
+        &quot;manager&quot;: null,
+        &quot;user&quot;: null,
         &quot;commercial&quot;: {
             &quot;id&quot;: 12,
             &quot;idUser&quot;: 20,
@@ -12676,8 +21697,7 @@ response.json()</code></pre></div>
                 &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
             }
-        },
-        &quot;manager&quot;: null
+        }
     },
     &quot;message&quot;: &quot;Etablissement&quot;
 }</code>
@@ -12850,6 +21870,8 @@ response.json()</code></pre></div>
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2022-03-01T12:39:31.000000Z&quot;,
+            &quot;idUser&quot;: null,
+            &quot;logo&quot;: null,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 2,
                 &quot;nom&quot;: &quot;BATIMENT&quot;,
@@ -12866,7 +21888,8 @@ response.json()</code></pre></div>
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-28T20:53:25.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2022-03-01T12:58:06.000000Z&quot;,
-                &quot;idCommercial&quot;: 12
+                &quot;idCommercial&quot;: 12,
+                &quot;idUser&quot;: null
             },
             &quot;sous_categories&quot;: [
                 {
@@ -12884,10 +21907,12 @@ response.json()</code></pre></div>
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
-                        &quot;logourl&quot;: null,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;vues&quot;: 0
                     }
                 },
                 {
@@ -12905,10 +21930,12 @@ response.json()</code></pre></div>
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
-                        &quot;logourl&quot;: null,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
                         &quot;deleted_at&quot;: null,
-                        &quot;created_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2022-02-25T11:35:29.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;vues&quot;: 0
                     }
                 }
             ],
@@ -12983,6 +22010,8 @@ response.json()</code></pre></div>
                     }
                 }
             ],
+            &quot;manager&quot;: null,
+            &quot;user&quot;: null,
             &quot;commercial&quot;: {
                 &quot;id&quot;: 12,
                 &quot;idUser&quot;: 20,
@@ -13011,8 +22040,7 @@ response.json()</code></pre></div>
                     &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;
                 }
-            },
-            &quot;manager&quot;: null
+            }
         }
     ],
     &quot;message&quot;: &quot;Liste des Etablissements&quot;
@@ -13276,7 +22304,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEC76.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE639.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -13333,7 +22361,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEC76.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE639.tmp', 'r')
             ],
         ],
     ]
@@ -13348,7 +22376,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEC76.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE639.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -13840,7 +22868,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/7" \
+    "http://localhost:8000/api/managers/13" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -13848,12 +22876,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpED15.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpE9C7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/7"
+    "http://localhost:8000/api/managers/13"
 );
 
 const headers = {
@@ -13879,7 +22907,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/7',
+    'http://localhost:8000/api/managers/13',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -13902,7 +22930,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpED15.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpE9C7.tmp', 'r')
             ],
         ],
     ]
@@ -13915,9 +22943,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/7'
+url = 'http://localhost:8000/api/managers/13'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpED15.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpE9C7.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -14035,7 +23063,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="7"
+               value="13"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -14107,7 +23135,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "idEtablissement=2" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDAB.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpECA0.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14151,7 +23179,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDAB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpECA0.tmp', 'r')
             ],
         ],
     ]
@@ -14166,7 +23194,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDAB.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpECA0.tmp', 'rb')
 }
 payload = {
     "idEtablissement": 2
@@ -14292,7 +23320,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "_method=PUT" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEDBC.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpECE0.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14336,7 +23364,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEDBC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpECE0.tmp', 'r')
             ],
         ],
     ]
@@ -14351,7 +23379,7 @@ import json
 
 url = 'http://localhost:8000/api/images/2'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEDBC.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpECE0.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -15512,7 +24540,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEE11.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\phpEF18.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -15561,7 +24589,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEE11.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\phpEF18.tmp', 'r')
             ],
         ],
     ]
@@ -15576,7 +24604,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEE11.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\phpEF18.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -15809,8 +24837,10 @@ response.json()</code></pre></div>
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;nom&quot;: &quot;Achats +&quot;,
-        &quot;logourl&quot;: null,
+        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
         &quot;deleted_at&quot;: null,
+        &quot;shortname&quot;: &quot;Achats&quot;,
+        &quot;vues&quot;: 0,
         &quot;created_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2022-02-25T11:09:21.000000Z&quot;
     },
