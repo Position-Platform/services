@@ -44,7 +44,7 @@ class CategorieController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the category. Example: Achat
-     * @bodyParam file file the picture of the category
+     * @bodyParam logourl file the picture of the category
      * @responseFile storage/responses/addcategorie.json
      */
     public function store(Request $request)
@@ -52,7 +52,7 @@ class CategorieController extends BaseController
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
             'shortname' => 'required',
-            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -68,8 +68,8 @@ class CategorieController extends BaseController
 
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $request->nom, $fileName, 'public');
+            $fileName = time() . '_' . $request->logourl->getClientOriginalName();
+            $filePath = $request->file('logourl')->storeAs('uploads/categories/logos/' . $request->nom, $fileName, 'public');
             $input['logourl'] = '/storage/' . $filePath;
         }
 
@@ -117,7 +117,7 @@ class CategorieController extends BaseController
      * @urlParam id int required the id of the category. Example: 2
      * @bodyParam nom string the name of the category. Example: Achat
      * @bodyParam vues string count view. Example: ok
-     * @bodyParam file file the picture of the category
+     * @bodyParam logourl file the picture of the category
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
      */
@@ -125,12 +125,12 @@ class CategorieController extends BaseController
     {
         $categorie = Categorie::find($id);
         $request->validate([
-            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $categorie->nom, $fileName, 'public');
+            $fileName = time() . '_' . $request->logourl->getClientOriginalName();
+            $filePath = $request->file('logourl')->storeAs('uploads/categories/logos/' . $categorie->nom, $fileName, 'public');
             $categorie->logourl = '/storage/' . $filePath;
         }
 

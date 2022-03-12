@@ -75,7 +75,7 @@ class BatimentController extends BaseController
      * @bodyParam codeBatiment string required the building code. Example: BATIMENT_MELEN_0569
      * @bodyParam longitude string required.
      * @bodyParam latitude string required.
-     * @bodyParam file file required Building Image.
+     * @bodyParam image file required Building Image.
      * @bodyParam indication string indication of the location of the building. Example: Rue de melen
      * @bodyParam rue string. Example: Rue de Melen
      * @bodyParam ville string required. Example: Douala
@@ -95,7 +95,7 @@ class BatimentController extends BaseController
             'commune' => 'required',
             'quartier' => 'required',
             'idCommercial' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:20000'
+            'image' => 'mimes:png,jpg,jpeg|max:20000'
         ]);
 
         if ($validator->fails()) {
@@ -116,8 +116,8 @@ class BatimentController extends BaseController
         $input['idUser'] = $user->id;
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $request->codeBatiment, $fileName, 'public');
+            $fileName = time() . '_' . $request->image->getClientOriginalName();
+            $filePath = $request->file('image')->storeAs('uploads/batiments/images/' . $request->codeBatiment, $fileName, 'public');
             $input['image'] = '/storage/' . $filePath;
         }
 
@@ -190,7 +190,7 @@ class BatimentController extends BaseController
      * @bodyParam nombreNiveau int the number of levels in the building. Example: 3
      * @bodyParam longitude string.
      * @bodyParam latitude string.
-     * @bodyParam file file Building Image.
+     * @bodyParam image file Building Image.
      * @bodyParam indication string indication of the location of the building. Example: Rue de melen
      * @bodyParam rue string. Example: Rue de Melen
      * @bodyParam ville string. Example: Douala
@@ -208,7 +208,7 @@ class BatimentController extends BaseController
 
         if ($admin || $commercial->id == $batiment->idCommercial) {
             $request->validate([
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'image' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             try {
@@ -224,8 +224,8 @@ class BatimentController extends BaseController
                 $batiment->quartier = $request->quartier ?? $batiment->quartier;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                    $fileName = time() . '_' . $request->image->getClientOriginalName();
+                    $filePath = $request->file('image')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
                     $batiment->image = '/storage/' . $filePath;
                 }
 

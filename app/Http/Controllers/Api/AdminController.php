@@ -43,7 +43,7 @@ class AdminController extends BaseController
      * @bodyParam email string required the email of the admin. Example: gautier@position.cm
      * @bodyParam password string required the password of the admin. Example: gautier123
      * @bodyParam phone int required The phone number of the admin. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @responseFile storage/responses/addadmin.json
      */
     public function store(Request $request)
@@ -56,7 +56,7 @@ class AdminController extends BaseController
                 'email' => 'required|unique:users,email',
                 'phone' => 'regex:/^[\+0-9]+$/',
                 'password' => 'string|between:6,20',
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             if ($validator->fails()) {
@@ -69,8 +69,8 @@ class AdminController extends BaseController
             $input['password'] = bcrypt($request->password);
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->file->getClientOriginalName();
-                $filePath = $request->file('file')->storeAs('uploads/admins/profils', $fileName, 'public');
+                $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+                $filePath = $request->file('imageProfil')->storeAs('uploads/admins/profils', $fileName, 'public');
                 $input['imageProfil'] = '/storage/' . $filePath;
             }
 
@@ -124,7 +124,7 @@ class AdminController extends BaseController
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
      * @bodyParam isSuperAdmin bool. Example:true
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateadmin.json
      */
@@ -135,7 +135,7 @@ class AdminController extends BaseController
         if ($admin->isSuperAdmin == 1 || $user->id == $id) {
             $admin = Admin::find($id);
             $request->validate([
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             try {
@@ -145,8 +145,8 @@ class AdminController extends BaseController
                 $userUpdate->phone = $request->phone ?? $userUpdate->phone;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/admins/profils', $fileName, 'public');
+                    $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+                    $filePath = $request->file('imageProfil')->storeAs('uploads/admins/profils', $fileName, 'public');
                     $userUpdate->imageProfil = '/storage/' . $filePath;
                 }
                 $userUpdate->save();

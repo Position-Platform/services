@@ -43,7 +43,7 @@ class CommercialController extends BaseController
      * @bodyParam name string required the name of the commercial. Example: Gautier
      * @bodyParam email string required the email of the commercial. Example: gautier@position.cm
      * @bodyParam phone int required The phone number of the commercial. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @bodyParam numeroCni int required. Example: 1256987
      * @bodyParam numeroBadge int required. Example: 1234568
      * @bodyParam ville string required. Example: Douala
@@ -61,7 +61,7 @@ class CommercialController extends BaseController
             'name' => 'required',
             'email' => 'required|unique:users,email',
             'phone' => 'regex:/^[\+0-9]+$/',
-            'file' => 'mimes:png,jpg,jpeg|max:10000',
+            'imageProfil' => 'mimes:png,jpg,jpeg|max:10000',
             'numeroCni' => 'required',
             'numeroBadge' => 'required',
             'ville' => 'required',
@@ -84,8 +84,8 @@ class CommercialController extends BaseController
         $input['password'] = bcrypt($password);
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/commerciaux/profils', $fileName, 'public');
+            $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+            $filePath = $request->file('imageProfil')->storeAs('uploads/commerciaux/profils', $fileName, 'public');
             $input['imageProfil'] = '/storage/' . $filePath;
         }
 
@@ -151,7 +151,7 @@ class CommercialController extends BaseController
      * @urlParam id int required the id of the commercial. Example: 2
      * @bodyParam name string the name of the commercial. Example: Gautier
      * @bodyParam phone int The phone number of the commercial. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @bodyParam numeroCni int. Example: 1256987
      * @bodyParam numeroBadge int. Example: 1234568
      * @bodyParam ville string. Example: Douala
@@ -171,7 +171,7 @@ class CommercialController extends BaseController
         if ($admin || $user->id == $id) {
             $commercial = Commercial::find($id);
             $request->validate([
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             try {
@@ -181,8 +181,8 @@ class CommercialController extends BaseController
                 $userUpdate->phone = $request->phone ?? $userUpdate->phone;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/commerciaux/profils', $fileName, 'public');
+                    $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+                    $filePath = $request->file('imageProfil')->storeAs('uploads/commerciaux/profils', $fileName, 'public');
                     $userUpdate->imageProfil = '/storage/' . $filePath;
                 }
                 $userUpdate->save();

@@ -78,7 +78,7 @@ class EtablissementController extends BaseController
      * @bodyParam codePostal string postal code. Example: 59684
      * @bodyParam siteInternet string website. Example: sogefi.cm.
      * @bodyParam description string establishment description Example: Super etablissement.
-     * @bodyParam file file required establishment Image.
+     * @bodyParam cover file required establishment Image.
      * @bodyParam etage int required floor number of the establishment. Example: 3
      * @bodyParam phone string required Phone Numer. Example: 699999999
      * @bodyParam whatsapp1 string required whatsapp number. Example: 699999999
@@ -105,7 +105,7 @@ class EtablissementController extends BaseController
             'idSousCategorie' => 'required',
             'idCommodite' => 'required',
             'idBatiment' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:20000',
+            'cover' => 'mimes:png,jpg,jpeg|max:20000',
             'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
@@ -132,13 +132,13 @@ class EtablissementController extends BaseController
         if ($admin || $commercial) {
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->file->getClientOriginalName();
-                $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+                $fileName = time() . '_' . $request->cover->getClientOriginalName();
+                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
                 $input['cover'] = '/storage/' . $filePath;
             }
 
             if ($request->file('logo')) {
-                $fileName = time() . '_' . $request->file->getClientOriginalName();
+                $fileName = time() . '_' . $request->logo->getClientOriginalName();
                 $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
                 $input['logo'] = '/storage/' . $filePathLogo;
             }
@@ -230,7 +230,7 @@ class EtablissementController extends BaseController
      * @bodyParam codePostal string postal code. Example: 59684
      * @bodyParam siteInternet string website. Example: sogefi.cm.
      * @bodyParam description string establishment description Example: Super etablissement.
-     * @bodyParam file file establishment Image.
+     * @bodyParam cover file establishment Image.
      * @bodyParam etage int floor number of the establishment. Example: 3
      * @bodyParam phone string Phone Numer. Example: 699999999
      * @bodyParam whatsapp1 string whatsapp number. Example: 699999999
@@ -255,7 +255,7 @@ class EtablissementController extends BaseController
 
         if ($admin || $commercial->id == $etablissement->idCommercial) {
             $request->validate([
-                'file' => 'mimes:png,jpg,jpeg|max:10000',
+                'cover' => 'mimes:png,jpg,jpeg|max:10000',
                 'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
             ]);
 
@@ -289,13 +289,13 @@ class EtablissementController extends BaseController
                 $batiment = $etablissement->batiment;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                    $fileName = time() . '_' . $request->cover->getClientOriginalName();
+                    $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
                     $etablissement->cover = '/storage/' . $filePath;
                 }
 
                 if ($request->file('logo')) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
+                    $fileName = time() . '_' . $request->logo->getClientOriginalName();
                     $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
                     $etablissement->logo = '/storage/' . $filePathLogo;
                 }
