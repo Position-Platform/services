@@ -43,6 +43,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('categories', [App\Http\Controllers\Api\CategorieController::class, 'index']);
         Route::get('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'show']);
         Route::get('search/categories', [App\Http\Controllers\Api\CategorieController::class, 'search']);
+        Route::put('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'update']);
 
         Route::get('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'index']);
         Route::get('souscategories/{id}', [App\Http\Controllers\Api\SousCategorieController::class, 'show']);
@@ -101,7 +102,7 @@ Route::middleware('auth.apikey')->group(
                 Route::delete('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'destroy']);
 
                 Route::post('categories', [App\Http\Controllers\Api\CategorieController::class, 'store']);
-                Route::put('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'update']);
+
                 Route::delete('categories/{id}', [App\Http\Controllers\Api\CategorieController::class, 'destroy']);
 
                 Route::post('souscategories', [App\Http\Controllers\Api\SousCategorieController::class, 'store']);
