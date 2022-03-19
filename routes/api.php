@@ -34,6 +34,8 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
 
+
+
         Route::get('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'show']);
         Route::post('managers', [App\Http\Controllers\Api\ManagerController::class, 'store']);
 
@@ -64,6 +66,8 @@ Route::middleware('auth.apikey')->group(
             Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
             Route::delete('user/delete/{id}', [App\Http\Controllers\Api\UserController::class, 'deleteuser']);
             Route::get('user/me', [App\Http\Controllers\Api\UserController::class, 'getUser']);
+
+            Route::post('tracking', [App\Http\Controllers\Api\TrackingController::class, 'store']);
 
             Route::get('commercials', [App\Http\Controllers\Api\CommercialController::class, 'index']);
             Route::get('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'show']);

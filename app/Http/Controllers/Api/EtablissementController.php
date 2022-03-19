@@ -103,10 +103,7 @@ class EtablissementController extends BaseController
             'whatsapp1' => 'required',
             'services' => 'required',
             'idSousCategorie' => 'required',
-            'idCommodite' => 'required',
             'idBatiment' => 'required',
-            'cover' => 'mimes:png,jpg,jpeg|max:20000',
-            'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -284,6 +281,18 @@ class EtablissementController extends BaseController
                 $etablissement->ameliorations = $request->ameliorations ?? $etablissement->ameliorations;
                 if ($request->avis) {
                     $etablissement->avis =  $etablissement->avis + 1;
+                }
+
+                if ($request->idSousCategorie != null) {
+                    $idSousCategories = explode(",", $request->idSousCategorie);
+                    $sousCategories = SousCategorie::find($idSousCategories);
+                    $etablissement->sousCategories()->attach($sousCategories);
+                }
+
+                if ($request->idCommodite != null) {
+                    $idCommodites = explode(",", $request->idCommodite);
+                    $commodites = Commodite::find($idCommodites);
+                    $etablissement->commodites()->attach($commodites);
                 }
 
                 $batiment = $etablissement->batiment;

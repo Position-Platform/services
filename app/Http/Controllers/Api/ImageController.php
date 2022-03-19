@@ -63,9 +63,6 @@ class ImageController extends BaseController
             $input['imageUrl'] = '/storage/' . $filePath;
         }
 
-        $input['jour'] = $request->jour;
-        $input['plageHoraire'] = $request->plageHoraire;
-
         if ($admin || $commercial) {
             try {
 

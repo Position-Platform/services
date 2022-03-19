@@ -95,7 +95,6 @@ class BatimentController extends BaseController
             'commune' => 'required',
             'quartier' => 'required',
             'idCommercial' => 'required',
-            'image' => 'mimes:png,jpg,jpeg|max:20000'
         ]);
 
         if ($validator->fails()) {
