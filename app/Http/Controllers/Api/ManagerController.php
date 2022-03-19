@@ -46,7 +46,7 @@ class ManagerController extends BaseController
      * @bodyParam email string required the email of the manager. Example: gautier@position.cm
      * @bodyParam password string required the password of the manager. Example: gautier123
      * @bodyParam phone int required The phone number of the manager. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @responseFile storage/responses/addmanager.json
      */
     public function store(Request $request)
@@ -55,7 +55,7 @@ class ManagerController extends BaseController
             'name' => 'required',
             'email' => 'required|unique:users,email',
             'phone' => 'regex:/^[\+0-9]+$/',
-            'file' => 'mimes:png,jpg,jpeg|max:10000',
+            'imageProfil' => 'mimes:png,jpg,jpeg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -69,8 +69,8 @@ class ManagerController extends BaseController
         $input['password'] = bcrypt($password);
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/managers/profils', $fileName, 'public');
+            $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+            $filePath = $request->file('imageProfil')->storeAs('uploads/managers/profils', $fileName, 'public');
             $input['imageProfil'] = '/storage/' . $filePath;
         }
 
@@ -129,7 +129,7 @@ class ManagerController extends BaseController
      * @header Content-Type application/json
      * @bodyParam name string the name of the manager. Example: Gautier
      * @bodyParam phone int The phone number of the manager. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatemanager.json
      */
@@ -150,8 +150,8 @@ class ManagerController extends BaseController
                 $userUpdate->phone = $request->phone ?? $userUpdate->phone;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/managers/profils', $fileName, 'public');
+                    $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+                    $filePath = $request->file('imageProfil')->storeAs('uploads/managers/profils', $fileName, 'public');
                     $userUpdate->imageProfil = '/storage/' . $filePath;
                 }
                 $userUpdate->save();

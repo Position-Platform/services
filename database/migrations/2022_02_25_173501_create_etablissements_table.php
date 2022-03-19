@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string("idManager")->nullable();
             $table->string("idUser")->nullable();
             $table->string("etage");
-            $table->string("cover");
+            $table->string("cover")->nullable();
             $table->string("vues")->default(0);
             $table->string("phone");
             $table->string("whatsapp1");

@@ -21,7 +21,7 @@ class UserController extends BaseController
      * @bodyParam email string required the email of the user. Example: gautier@position.cm
      * @bodyParam password string required the password of the user. Example: gautier123
      * @bodyParam phone int required The phone number of the user. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @responseFile storage/responses/register.json
      */
     public function register(Request $request)
@@ -42,8 +42,8 @@ class UserController extends BaseController
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
+            $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+            $filePath = $request->file('imageProfil')->storeAs('uploads/users/profils', $fileName, 'public');
             $input['imageProfil'] = '/storage/' . $filePath;
         }
         $user = User::create($input);
@@ -82,7 +82,6 @@ class UserController extends BaseController
                 $roles = $user->getRoleNames();
                 $success['token'] = $user->createToken('Position')->accessToken;
                 $success['user'] = $user;
-                $succes['roles'] = $roles;
 
                 return $this->sendResponse($success, 'Connexion réussie.');
             } else {
@@ -127,7 +126,19 @@ class UserController extends BaseController
         $user = Auth::user();
 
         if ($user) {
+            $roles = $user->getRoleNames();
             $success["user"] = $user;
+            $succes['roles'] = $roles;
+
+            if ($user->commercial) {
+                $succes['commercial'] = $user->commercial;
+            }
+            if ($user->manager) {
+                $succes['manager'] = $user->manager;
+            }
+            if ($user->admin) {
+                $succes['admin'] = $user->admin;
+            }
 
             return $this->sendResponse($success, 'Utilisateur');
         } else {
@@ -144,7 +155,7 @@ class UserController extends BaseController
      * @urlParam id int required the id of the admin. Example: 2
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
-     * @bodyParam file file Profile Image.
+     * @bodyParam imageProfil file Profile Image.
      * @responseFile 201 storage/responses/updateuser.json
      */
     public function updateuser($id, Request $request)
@@ -154,7 +165,7 @@ class UserController extends BaseController
         if ($admin || $user->id == $id) {
             $validator = Validator::make($request->all(), [
                 'phone' => 'regex:/^[\+0-9]+$/',
-                'file' => 'mimes:png,jpg,jpeg|max:10000'
+                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             if ($validator->fails()) {
@@ -167,8 +178,8 @@ class UserController extends BaseController
             $user->phone = $request->phone ?? $user->phone;
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->file->getClientOriginalName();
-                $filePath = $request->file('file')->storeAs('uploads/users/profils', $fileName, 'public');
+                $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
+                $filePath = $request->file('imageProfil')->storeAs('uploads/users/profils', $fileName, 'public');
                 $user->imageProfil = '/storage/' . $filePath;
             }
 

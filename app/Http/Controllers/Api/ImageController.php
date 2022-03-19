@@ -34,7 +34,7 @@ class ImageController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam file file required picture.
+     * @bodyParam imageUrl file required picture.
      * @bodyParam idEtablissement int required the id of the Establishment. Example: 2
      * @responseFile storage/responses/addimage.json
      */
@@ -46,7 +46,7 @@ class ImageController extends BaseController
 
         $validator =  Validator::make($request->all(), [
             'idEtablissement' => 'required',
-            'file' => 'mimes:png,jpg,jpeg|max:20000'
+            'imageUrl' => 'mimes:png,jpg,jpeg|max:20000'
         ]);
 
         if ($validator->fails()) {
@@ -58,13 +58,10 @@ class ImageController extends BaseController
         $batiment = $etablissement->batiment;
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
+            $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
+            $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
             $input['imageUrl'] = '/storage/' . $filePath;
         }
-
-        $input['jour'] = $request->jour;
-        $input['plageHoraire'] = $request->plageHoraire;
 
         if ($admin || $commercial) {
             try {
@@ -104,7 +101,7 @@ class ImageController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the Picture. Example: 2
-     * @bodyParam file file picture.
+     * @bodyParam imageUrl file picture.
      * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateimage.json
      */
@@ -117,6 +114,9 @@ class ImageController extends BaseController
         $commercial = Commercial::where('idUser', $user->id)->first();
 
         if ($admin || $commercial->id == $etablissement->idCommercial) {
+            $request->validate([
+                'imageUrl' => 'mimes:png,jpg,jpeg|max:20000',
+            ]);
             try {
                 DB::beginTransaction();
 
@@ -125,8 +125,8 @@ class ImageController extends BaseController
                 $etablissement = $image->etablissement;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->file->getClientOriginalName();
-                    $filePath = $request->file('file')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
+                    $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
+                    $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
                     $image->imageUrl = '/storage/' . $filePath;
                 }
 
