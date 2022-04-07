@@ -61,6 +61,10 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
 
+        Route::get('search/etablissements/distance', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesDistance']);
+        Route::get('search/etablissements/avis', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesAvis']);
+        Route::get('search/etablissements/vues', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesVues']);
+
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
             Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);

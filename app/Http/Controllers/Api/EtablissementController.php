@@ -404,4 +404,180 @@ class EtablissementController extends BaseController
 
         return $this->sendResponse($etablissements, 'Liste des Etablissements');
     }
+
+    /**
+     * Search Establishment by Commodites & Distance.
+     *
+     * @header Content-Type application/json
+     * @queryParam lon string required . Example: 13
+     * @queryParam lat string required . Example: 5
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @responseFile storage/responses/getetablissementsdistance.json
+     *
+     */
+    public function searchByCommoditesDistance(Request $request)
+    {
+        $lon = $request->input('lon');
+        $lat = $request->input('lat');
+
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $distance = $this->getDistance($lat, $lon, $etablissement->batiment->latitude, $etablissement->batiment->longitude);
+                $etablissement["distance"] = $distance;
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['distance'] > $b['distance'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+
+
+
+
+    public function getDistance($lat1, $lon1, $lat2, $lon2)
+    {
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        return (round($miles * 1.609344, 2));
+    }
+
+    /**
+     * Search Establishment by Commodites & Avis.
+     *
+     * @header Content-Type application/json
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @responseFile storage/responses/getetablissements.json
+     *
+     */
+
+    public function searchByCommoditesAvis(Request $request)
+    {
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['avis'] < $b['avis'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+    /**
+     * Search Establishment by Commodites & Vues.
+     *
+     * @header Content-Type application/json
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @responseFile storage/responses/getetablissements.json
+     *
+     */
+
+    public function searchByCommoditesVues(Request $request)
+    {
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['vues'] < $b['vues'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
 }
