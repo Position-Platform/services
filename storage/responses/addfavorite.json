@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "data": {
+        "etablissement_id": "8",
+        "user_id": 1,
+        "id": 3
+    },
+    "message": "Etablissement ajouté aux favoris"
+}
