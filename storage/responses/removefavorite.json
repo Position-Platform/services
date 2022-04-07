@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "data": {
+        "id": 3,
+        "user_id": 1,
+        "etablissement_id": 8
+    },
+    "message": "Etablissement retiré des favoris"
+}

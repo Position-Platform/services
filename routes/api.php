@@ -97,6 +97,10 @@ Route::middleware('auth.apikey')->group(
             Route::put('images/{id}', [App\Http\Controllers\Api\ImageController::class, 'update']);
             Route::delete('images/{id}', [App\Http\Controllers\Api\ImageController::class, 'destroy']);
 
+            Route::get('favoris', [App\Http\Controllers\Api\UserController::class, 'favorites']);
+            Route::post('favoris/add', [App\Http\Controllers\Api\EtablissementController::class, 'addFavorite']);
+            Route::post('favoris/remove', [App\Http\Controllers\Api\EtablissementController::class, 'removeFavorite']);
+
 
             Route::group(['middleware' => ['role:admin']], function () {
                 Route::apiResource('roles', App\Http\Controllers\Api\RoleController::class);
