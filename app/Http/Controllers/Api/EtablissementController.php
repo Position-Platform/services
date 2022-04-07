@@ -8,6 +8,7 @@ use App\Models\Commercial;
 use App\Models\Commodite;
 use App\Models\Etablissement;
 use App\Models\SousCategorie;
+use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -367,11 +368,22 @@ class EtablissementController extends BaseController
         }
     }
 
+    public function checkIfEtablissementInFavoris($etablissement, $user_id)
+    {
+        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
+        if ($userFavoris) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * Search Establishment.
      *
      * @header Content-Type application/json
      * @queryParam q string required search value. Example: piscine
+     * @queryParam user_id string id of user. Example: 1
      * @responseFile storage/responses/getetablissements.json
      */
     public function search(Request $request)
@@ -380,8 +392,18 @@ class EtablissementController extends BaseController
         $etablissements = Etablissement::search($q)->get();
 
         foreach ($etablissements as $key => $etablissement) {
+
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+
+
             $etablissement->batiment;
             $etablissement->sousCategories;
+
+
 
             foreach ($etablissement->sousCategories as $key => $sousCategories) {
                 $sousCategories->categorie;
@@ -403,5 +425,255 @@ class EtablissementController extends BaseController
         }
 
         return $this->sendResponse($etablissements, 'Liste des Etablissements');
+    }
+
+
+    public function getDistance($lat1, $lon1, $lat2, $lon2)
+    {
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        return (round($miles * 1.609344, 2));
+    }
+
+    /**
+     * Search Establishment by Commodites & Distance.
+     *
+     * @header Content-Type application/json
+     * @queryParam lon string required . Example: 13
+     * @queryParam lat string required . Example: 5
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @queryParam user_id string id of user conncted . Example: 10
+     * @responseFile storage/responses/getetablissementsdistance.json
+     *
+     */
+    public function searchByCommoditesDistance(Request $request)
+    {
+        $lon = $request->input('lon');
+        $lat = $request->input('lat');
+
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
+
+
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $distance = $this->getDistance($lat, $lon, $etablissement->batiment->latitude, $etablissement->batiment->longitude);
+                $etablissement["distance"] = $distance;
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['distance'] > $b['distance'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+
+
+
+
+
+    /**
+     * Search Establishment by Commodites & Avis.
+     *
+     * @header Content-Type application/json
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @queryParam user_id string id of user conncted . Example: 10
+     * @responseFile storage/responses/getetablissements.json
+     *
+     */
+
+    public function searchByCommoditesAvis(Request $request)
+    {
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['avis'] < $b['avis'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+    /**
+     * Search Establishment by Commodites & Vues.
+     *
+     * @header Content-Type application/json
+     * @queryParam idCommodites string required . Example: 1,2,3
+     * @queryParam user_id string id of user conncted . Example: 10
+     * @responseFile storage/responses/getetablissements.json
+     *
+     */
+
+    public function searchByCommoditesVues(Request $request)
+    {
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        foreach ($idCommodites as $key => $idCommodite) {
+            $commodite = Commodite::find($idCommodite);
+
+
+            foreach ($commodite->etablissements as $key => $etablissement) {
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
+
+                $etablissement->sousCategories;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                $data[] = $etablissement;
+                usort($data, function ($a, $b) {
+                    return $a['vues'] < $b['vues'];
+                });
+            }
+        }
+
+        return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+    /**
+     * Add Favorite Establishment.
+     *
+     * @authenticated
+     * @bodyParam idEtablissement int required . Example: 1
+     * @responseFile storage/responses/addfavorite.json
+     */
+
+    public function addFavorite(Request $request)
+    {
+        $user = Auth::user();
+        $idEtablissement = $request->idEtablissement;
+
+        $favorite = UserFavoris::where('etablissement_id', $idEtablissement)->where('user_id', $user->id)->first();
+
+        if ($favorite) {
+            return $this->sendError('Etablissement déjà dans vos favoris', [], 200);
+        }
+
+        $favorite = new UserFavoris();
+        $favorite->etablissement_id = $idEtablissement;
+        $favorite->user_id = $user->id;
+        $favorite->save();
+
+        return $this->sendResponse($favorite, 'Etablissement ajouté aux favoris');
+    }
+
+    /**
+     * Remove Favorite Establishment.
+     *
+     * @authenticated
+     * @bodyParam idEtablissement int required . Example: 1
+     * @responseFile storage/responses/removefavorite.json
+     */
+
+    public function removeFavorite(Request $request)
+    {
+        $user = Auth::user();
+        $idEtablissement = $request->idEtablissement;
+
+        $favorite = UserFavoris::where('etablissement_id', $idEtablissement)->where('user_id', $user->id)->first();
+
+        if (!$favorite) {
+            return $this->sendError('Etablissement n\'est pas dans vos favoris', [], 200);
+        }
+
+        $favorite->delete();
+
+        return $this->sendResponse($favorite, 'Etablissement retiré des favoris');
     }
 }

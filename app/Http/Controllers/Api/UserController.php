@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Admin;
+use App\Models\Etablissement;
 use App\Models\User;
+use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -281,5 +283,54 @@ class UserController extends BaseController
         }
 
         return $this->sendResponse("", "Password has been successfully changed", 201);
+    }
+
+    /**
+     * Get Favorites
+     *
+     * @authenticated
+     * @group Account management
+     * @responseFile storage/responses/favorites.json
+     */
+
+    public function favorites()
+    {
+        $user = Auth::user();
+        $favorites = UserFavoris::where('user_id', $user->id)->get();
+
+        $etablissements = Etablissement::whereIn('id', $favorites->pluck('etablissement_id'))->get();
+
+        foreach ($etablissements as $key => $etablissement) {
+            $etablissement->batiment;
+            $etablissement->sousCategories;
+
+            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $key => $commentaires) {
+                $commentaires->user;
+            }
+
+
+            if ($etablissement->manager) {
+                $etablissement->manager->user;
+            }
+
+            if ($etablissement->user) {
+                $etablissement->user;
+            }
+
+            if ($etablissement->commercial) {
+                $etablissement->commercial->user;
+            }
+        }
+
+        return $this->sendResponse($etablissements, 'Favorites');
     }
 }
