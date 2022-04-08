@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Categorie;
 use App\Models\TypeCommodite;
+use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -91,14 +92,50 @@ class CategorieController extends BaseController
      * Show Category by id.
      *
      * @header Content-Type application/json
+     * @queryParam user_id The ID of the Connected User. Example: 1
      * @urlParam id int required the id of the category. Example: 2
      * @responseFile storage/responses/showcategorie.json
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $categorie = Categorie::find($id);
 
         $categorie->sousCategories;
+
+        foreach ($categorie->sousCategories as $key => $sousCategorie) {
+            $sousCategorie->etablissements;
+
+            foreach ($sousCategorie->etablissements as $key => $etablissement) {
+
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
+                $etablissement->batiment;
+                $etablissement->sousCategories;
+
+
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                $etablissement->commercial->user;
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+            }
+        }
 
         $categorie->commodites;
 
@@ -210,5 +247,15 @@ class CategorieController extends BaseController
         }
 
         return $this->sendResponse($categories, 'Liste des Categories');
+    }
+
+    public function checkIfEtablissementInFavoris($etablissement, $user_id)
+    {
+        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
+        if ($userFavoris) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

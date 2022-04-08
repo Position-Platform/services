@@ -438,7 +438,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 7 2022</li>
+        <li>Last updated: April 8 2022</li>
     </ul>
 </div>
 
@@ -1649,7 +1649,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --data "{
     \"email\": \"gautier@position.cm\",
-    \"token\": \"at\",
+    \"token\": \"aut\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1669,7 +1669,7 @@ const headers = {
 
 let body = {
     "email": "gautier@position.cm",
-    "token": "at",
+    "token": "aut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1693,7 +1693,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'gautier@position.cm',
-            'token' =&gt; 'at',
+            'token' =&gt; 'aut',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1710,7 +1710,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "gautier@position.cm",
-    "token": "at",
+    "token": "aut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1793,7 +1793,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-auth-password-reset"
-               value="at"
+               value="aut"
                data-component="body" hidden>
     <br>
 <p>token give in mail.</p>
@@ -1841,8 +1841,8 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "file=tdevyxdmvllrpobyllampnknettzzaknumdbkfpdwpoihqgvqtiwgaakestmxgrskbvkyvqrrwbxghqjya" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php78AB.tmp" </code></pre></div>
+    --form "file=ieoznxxpusqfzipunvuyttlcxdyxuolujfiyirjljopwtkixddbaendibjbpteqxofukbpsuygixmyfmyhjovppizmwsaknfvvwnihuitmscqfkuanjnzyhrzwtpreugfanqtubxqbmaooorsatxhiozhcphyjmwkrpiblejwewncsaulodcfbfvijwyrmdyjgkuuqgupqegjahzqzlabqnjhnmjmekrgofkgiofayymyndrywjjyncmglbjxgtzetaxfllbelcumugqeoeroxxqcsufypflospnwwwyuxtfruoydxzzmhyyixbgvemccknknflpvdxjoyjpdjzitdubvqtrvcefizaqcrempiczecarycxtybcgwslloqthzkjkysukveqgktbrtliezmjpkdedwxwhywyrkpnqslmcqlowgoolxcshskuiptuktdhsoklcsdgxcrttuxbgdgkmmhonpiwdawapbngafotfscsnfeefsggdquzyvnwoofuinjbogalfyklvbbklhanokfnympvkkgilbnwilupsmmvhxluwnphvvmypthzcqlfvjdmmcwrbyawufgkfovpsryhfyxubmournhafosewylkhheaekgkvemxjqdopdnzdfiaysscpxumeywtudyltnsscpsezvbohqdugjzlcjwxltbynfvxgecinwohceezsrongtlsklweqzypvxynekyrnflueyopauqweoxlqfimqqbqvudzsbpicfahfvznotkrxijjawkzpohxyvvrbjzotjmbgooxzqpccjbzlmgkqldevtwaluraprosteesuzvurxnfnchrizrbsijoyfriwmfkkmmbtyotctrhrvoqpkoejifnxqruddgsepkeecvdppglloqihlzdeapnxvpcksuzjhxmddcueoobqjpjobyrqxrntyeeemwnvdddtvxjorbzwsnjotvbohjtgxtwrjomzopswupfaoenrcehsrdupdrdrblktygucjeurbqtphioysxgyuarpzgrycqqacnhyqkowygpkojmzzqugnihxpcfiauqqzohmgklgxyqbgoqsppuejgngtyzhuaprzrxhdssioldrjlwemtplgwfxysdrimndwiscnnkrullrjawnelewbqyoywhbcofumtniwrhrcybeemdxhhyqeobdpfkaahbpdseszrkuzorjvonxaavfutywckwatxeleklhotveuajyzvcjipapwemhxdzfcnqjbkqdllvgrrtwghjehbnczjiuwxbrwppytgqxnrjbowgbydypoadslvwraouudtldvgjpqbcrnpytllvbbqprnowtxaxlfnwcjqcoadppqlvkyhnzbwmsnaqhnjzokqoeyyxopvcixquztutcdvrgusklihjfrngyhmjqpufceudfvhgtkgsflgiumisorqxxiigtktcppoyseotwprlkouudjotlokhrowffojbyggxtfvbywsqtcpskudyeqeprrtwqzeyzqsulnysmkmheqnvlwfbggcajzdbrbprlnkwxffjazzecnrdmdhwrguxxvwtitmwvlibnjixdedthfvlcivtqscxrzggliivmmmmprafesteidaolovllaloyadpffwcwpiybsyntsbbbkptklahmhbtbctebntkxhvornixlucjlqwcqzeakthgudnkvqyhxmozydtufxpflrglpnueieqrieszeyrfugugukhqcyeeuryomuubnblibfwbwzwnivwtizxiqkmqexunwwkfhtdjehrtpyvntftpfsttiirzcggkseagsfucucyuhhderdgxqltyhpyqdldmguavwwlyxtpoxnamsuoqrefbtbhtdyezhwugrkmerinlkefxjtxfqbpdpykwzechpsmgubghjwjorzfjlxvxguwuviejczhlmfkxyaqfwzohmvsickdfwwezkkgfnbmukjetyaehbayliaiirgaijtxhqfwpvdqaoptmssksrqjicquzqmimfvteksnkjahgymmqmeonxjjhdniwsacvztitaqtxmvlvxcqnunvyolnzjunhgkxlslqcawfqahosryftjqcrhpwioyltowhmttqjgbasgismkekjmgzyvvhxycheauxutktbsxvqzopdlqptfdusylmogkagiqwsaklbdmeceeyytafezrnsnxwfohqwixkyhgxyddnjkmqndiaiphfvavbmvwrtbttprbljdxgfczhghlxjgdyuxlyrznxihvclokknldirzrchwokuochjfdbglditvenznqjtcfoshkzbmatwexqrydufk" \
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php596A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1861,7 +1861,7 @@ body.append('name', 'Gautier');
 body.append('email', 'gautier@position.cm');
 body.append('password', 'gautier123');
 body.append('phone', '699999999');
-body.append('file', 'tdevyxdmvllrpobyllampnknettzzaknumdbkfpdwpoihqgvqtiwgaakestmxgrskbvkyvqrrwbxghqjya');
+body.append('file', 'ieoznxxpusqfzipunvuyttlcxdyxuolujfiyirjljopwtkixddbaendibjbpteqxofukbpsuygixmyfmyhjovppizmwsaknfvvwnihuitmscqfkuanjnzyhrzwtpreugfanqtubxqbmaooorsatxhiozhcphyjmwkrpiblejwewncsaulodcfbfvijwyrmdyjgkuuqgupqegjahzqzlabqnjhnmjmekrgofkgiofayymyndrywjjyncmglbjxgtzetaxfllbelcumugqeoeroxxqcsufypflospnwwwyuxtfruoydxzzmhyyixbgvemccknknflpvdxjoyjpdjzitdubvqtrvcefizaqcrempiczecarycxtybcgwslloqthzkjkysukveqgktbrtliezmjpkdedwxwhywyrkpnqslmcqlowgoolxcshskuiptuktdhsoklcsdgxcrttuxbgdgkmmhonpiwdawapbngafotfscsnfeefsggdquzyvnwoofuinjbogalfyklvbbklhanokfnympvkkgilbnwilupsmmvhxluwnphvvmypthzcqlfvjdmmcwrbyawufgkfovpsryhfyxubmournhafosewylkhheaekgkvemxjqdopdnzdfiaysscpxumeywtudyltnsscpsezvbohqdugjzlcjwxltbynfvxgecinwohceezsrongtlsklweqzypvxynekyrnflueyopauqweoxlqfimqqbqvudzsbpicfahfvznotkrxijjawkzpohxyvvrbjzotjmbgooxzqpccjbzlmgkqldevtwaluraprosteesuzvurxnfnchrizrbsijoyfriwmfkkmmbtyotctrhrvoqpkoejifnxqruddgsepkeecvdppglloqihlzdeapnxvpcksuzjhxmddcueoobqjpjobyrqxrntyeeemwnvdddtvxjorbzwsnjotvbohjtgxtwrjomzopswupfaoenrcehsrdupdrdrblktygucjeurbqtphioysxgyuarpzgrycqqacnhyqkowygpkojmzzqugnihxpcfiauqqzohmgklgxyqbgoqsppuejgngtyzhuaprzrxhdssioldrjlwemtplgwfxysdrimndwiscnnkrullrjawnelewbqyoywhbcofumtniwrhrcybeemdxhhyqeobdpfkaahbpdseszrkuzorjvonxaavfutywckwatxeleklhotveuajyzvcjipapwemhxdzfcnqjbkqdllvgrrtwghjehbnczjiuwxbrwppytgqxnrjbowgbydypoadslvwraouudtldvgjpqbcrnpytllvbbqprnowtxaxlfnwcjqcoadppqlvkyhnzbwmsnaqhnjzokqoeyyxopvcixquztutcdvrgusklihjfrngyhmjqpufceudfvhgtkgsflgiumisorqxxiigtktcppoyseotwprlkouudjotlokhrowffojbyggxtfvbywsqtcpskudyeqeprrtwqzeyzqsulnysmkmheqnvlwfbggcajzdbrbprlnkwxffjazzecnrdmdhwrguxxvwtitmwvlibnjixdedthfvlcivtqscxrzggliivmmmmprafesteidaolovllaloyadpffwcwpiybsyntsbbbkptklahmhbtbctebntkxhvornixlucjlqwcqzeakthgudnkvqyhxmozydtufxpflrglpnueieqrieszeyrfugugukhqcyeeuryomuubnblibfwbwzwnivwtizxiqkmqexunwwkfhtdjehrtpyvntftpfsttiirzcggkseagsfucucyuhhderdgxqltyhpyqdldmguavwwlyxtpoxnamsuoqrefbtbhtdyezhwugrkmerinlkefxjtxfqbpdpykwzechpsmgubghjwjorzfjlxvxguwuviejczhlmfkxyaqfwzohmvsickdfwwezkkgfnbmukjetyaehbayliaiirgaijtxhqfwpvdqaoptmssksrqjicquzqmimfvteksnkjahgymmqmeonxjjhdniwsacvztitaqtxmvlvxcqnunvyolnzjunhgkxlslqcawfqahosryftjqcrhpwioyltowhmttqjgbasgismkekjmgzyvvhxycheauxutktbsxvqzopdlqptfdusylmogkagiqwsaklbdmeceeyytafezrnsnxwfohqwixkyhgxyddnjkmqndiaiphfvavbmvwrtbttprbljdxgfczhghlxjgdyuxlyrznxihvclokknldirzrchwokuochjfdbglditvenznqjtcfoshkzbmatwexqrydufk');
 body.append('imageProfil', document.querySelector('input[name="imageProfil"]').files[0]);
 
 fetch(url, {
@@ -1900,11 +1900,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; 'tdevyxdmvllrpobyllampnknettzzaknumdbkfpdwpoihqgvqtiwgaakestmxgrskbvkyvqrrwbxghqjya'
+                'contents' =&gt; 'ieoznxxpusqfzipunvuyttlcxdyxuolujfiyirjljopwtkixddbaendibjbpteqxofukbpsuygixmyfmyhjovppizmwsaknfvvwnihuitmscqfkuanjnzyhrzwtpreugfanqtubxqbmaooorsatxhiozhcphyjmwkrpiblejwewncsaulodcfbfvijwyrmdyjgkuuqgupqegjahzqzlabqnjhnmjmekrgofkgiofayymyndrywjjyncmglbjxgtzetaxfllbelcumugqeoeroxxqcsufypflospnwwwyuxtfruoydxzzmhyyixbgvemccknknflpvdxjoyjpdjzitdubvqtrvcefizaqcrempiczecarycxtybcgwslloqthzkjkysukveqgktbrtliezmjpkdedwxwhywyrkpnqslmcqlowgoolxcshskuiptuktdhsoklcsdgxcrttuxbgdgkmmhonpiwdawapbngafotfscsnfeefsggdquzyvnwoofuinjbogalfyklvbbklhanokfnympvkkgilbnwilupsmmvhxluwnphvvmypthzcqlfvjdmmcwrbyawufgkfovpsryhfyxubmournhafosewylkhheaekgkvemxjqdopdnzdfiaysscpxumeywtudyltnsscpsezvbohqdugjzlcjwxltbynfvxgecinwohceezsrongtlsklweqzypvxynekyrnflueyopauqweoxlqfimqqbqvudzsbpicfahfvznotkrxijjawkzpohxyvvrbjzotjmbgooxzqpccjbzlmgkqldevtwaluraprosteesuzvurxnfnchrizrbsijoyfriwmfkkmmbtyotctrhrvoqpkoejifnxqruddgsepkeecvdppglloqihlzdeapnxvpcksuzjhxmddcueoobqjpjobyrqxrntyeeemwnvdddtvxjorbzwsnjotvbohjtgxtwrjomzopswupfaoenrcehsrdupdrdrblktygucjeurbqtphioysxgyuarpzgrycqqacnhyqkowygpkojmzzqugnihxpcfiauqqzohmgklgxyqbgoqsppuejgngtyzhuaprzrxhdssioldrjlwemtplgwfxysdrimndwiscnnkrullrjawnelewbqyoywhbcofumtniwrhrcybeemdxhhyqeobdpfkaahbpdseszrkuzorjvonxaavfutywckwatxeleklhotveuajyzvcjipapwemhxdzfcnqjbkqdllvgrrtwghjehbnczjiuwxbrwppytgqxnrjbowgbydypoadslvwraouudtldvgjpqbcrnpytllvbbqprnowtxaxlfnwcjqcoadppqlvkyhnzbwmsnaqhnjzokqoeyyxopvcixquztutcdvrgusklihjfrngyhmjqpufceudfvhgtkgsflgiumisorqxxiigtktcppoyseotwprlkouudjotlokhrowffojbyggxtfvbywsqtcpskudyeqeprrtwqzeyzqsulnysmkmheqnvlwfbggcajzdbrbprlnkwxffjazzecnrdmdhwrguxxvwtitmwvlibnjixdedthfvlcivtqscxrzggliivmmmmprafesteidaolovllaloyadpffwcwpiybsyntsbbbkptklahmhbtbctebntkxhvornixlucjlqwcqzeakthgudnkvqyhxmozydtufxpflrglpnueieqrieszeyrfugugukhqcyeeuryomuubnblibfwbwzwnivwtizxiqkmqexunwwkfhtdjehrtpyvntftpfsttiirzcggkseagsfucucyuhhderdgxqltyhpyqdldmguavwwlyxtpoxnamsuoqrefbtbhtdyezhwugrkmerinlkefxjtxfqbpdpykwzechpsmgubghjwjorzfjlxvxguwuviejczhlmfkxyaqfwzohmvsickdfwwezkkgfnbmukjetyaehbayliaiirgaijtxhqfwpvdqaoptmssksrqjicquzqmimfvteksnkjahgymmqmeonxjjhdniwsacvztitaqtxmvlvxcqnunvyolnzjunhgkxlslqcawfqahosryftjqcrhpwioyltowhmttqjgbasgismkekjmgzyvvhxycheauxutktbsxvqzopdlqptfdusylmogkagiqwsaklbdmeceeyytafezrnsnxwfohqwixkyhgxyddnjkmqndiaiphfvavbmvwrtbttprbljdxgfczhghlxjgdyuxlyrznxihvclokknldirzrchwokuochjfdbglditvenznqjtcfoshkzbmatwexqrydufk'
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php78AB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php596A.tmp', 'r')
             ],
         ],
     ]
@@ -1919,14 +1919,14 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php78AB.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php596A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
     "email": "gautier@position.cm",
     "password": "gautier123",
     "phone": 699999999,
-    "file": "tdevyxdmvllrpobyllampnknettzzaknumdbkfpdwpoihqgvqtiwgaakestmxgrskbvkyvqrrwbxghqjya"
+    "file": "ieoznxxpusqfzipunvuyttlcxdyxuolujfiyirjljopwtkixddbaendibjbpteqxofukbpsuygixmyfmyhjovppizmwsaknfvvwnihuitmscqfkuanjnzyhrzwtpreugfanqtubxqbmaooorsatxhiozhcphyjmwkrpiblejwewncsaulodcfbfvijwyrmdyjgkuuqgupqegjahzqzlabqnjhnmjmekrgofkgiofayymyndrywjjyncmglbjxgtzetaxfllbelcumugqeoeroxxqcsufypflospnwwwyuxtfruoydxzzmhyyixbgvemccknknflpvdxjoyjpdjzitdubvqtrvcefizaqcrempiczecarycxtybcgwslloqthzkjkysukveqgktbrtliezmjpkdedwxwhywyrkpnqslmcqlowgoolxcshskuiptuktdhsoklcsdgxcrttuxbgdgkmmhonpiwdawapbngafotfscsnfeefsggdquzyvnwoofuinjbogalfyklvbbklhanokfnympvkkgilbnwilupsmmvhxluwnphvvmypthzcqlfvjdmmcwrbyawufgkfovpsryhfyxubmournhafosewylkhheaekgkvemxjqdopdnzdfiaysscpxumeywtudyltnsscpsezvbohqdugjzlcjwxltbynfvxgecinwohceezsrongtlsklweqzypvxynekyrnflueyopauqweoxlqfimqqbqvudzsbpicfahfvznotkrxijjawkzpohxyvvrbjzotjmbgooxzqpccjbzlmgkqldevtwaluraprosteesuzvurxnfnchrizrbsijoyfriwmfkkmmbtyotctrhrvoqpkoejifnxqruddgsepkeecvdppglloqihlzdeapnxvpcksuzjhxmddcueoobqjpjobyrqxrntyeeemwnvdddtvxjorbzwsnjotvbohjtgxtwrjomzopswupfaoenrcehsrdupdrdrblktygucjeurbqtphioysxgyuarpzgrycqqacnhyqkowygpkojmzzqugnihxpcfiauqqzohmgklgxyqbgoqsppuejgngtyzhuaprzrxhdssioldrjlwemtplgwfxysdrimndwiscnnkrullrjawnelewbqyoywhbcofumtniwrhrcybeemdxhhyqeobdpfkaahbpdseszrkuzorjvonxaavfutywckwatxeleklhotveuajyzvcjipapwemhxdzfcnqjbkqdllvgrrtwghjehbnczjiuwxbrwppytgqxnrjbowgbydypoadslvwraouudtldvgjpqbcrnpytllvbbqprnowtxaxlfnwcjqcoadppqlvkyhnzbwmsnaqhnjzokqoeyyxopvcixquztutcdvrgusklihjfrngyhmjqpufceudfvhgtkgsflgiumisorqxxiigtktcppoyseotwprlkouudjotlokhrowffojbyggxtfvbywsqtcpskudyeqeprrtwqzeyzqsulnysmkmheqnvlwfbggcajzdbrbprlnkwxffjazzecnrdmdhwrguxxvwtitmwvlibnjixdedthfvlcivtqscxrzggliivmmmmprafesteidaolovllaloyadpffwcwpiybsyntsbbbkptklahmhbtbctebntkxhvornixlucjlqwcqzeakthgudnkvqyhxmozydtufxpflrglpnueieqrieszeyrfugugukhqcyeeuryomuubnblibfwbwzwnivwtizxiqkmqexunwwkfhtdjehrtpyvntftpfsttiirzcggkseagsfucucyuhhderdgxqltyhpyqdldmguavwwlyxtpoxnamsuoqrefbtbhtdyezhwugrkmerinlkefxjtxfqbpdpykwzechpsmgubghjwjorzfjlxvxguwuviejczhlmfkxyaqfwzohmvsickdfwwezkkgfnbmukjetyaehbayliaiirgaijtxhqfwpvdqaoptmssksrqjicquzqmimfvteksnkjahgymmqmeonxjjhdniwsacvztitaqtxmvlvxcqnunvyolnzjunhgkxlslqcawfqahosryftjqcrhpwioyltowhmttqjgbasgismkekjmgzyvvhxycheauxutktbsxvqzopdlqptfdusylmogkagiqwsaklbdmeceeyytafezrnsnxwfohqwixkyhgxyddnjkmqndiaiphfvavbmvwrtbttprbljdxgfczhghlxjgdyuxlyrznxihvclokknldirzrchwokuochjfdbglditvenznqjtcfoshkzbmatwexqrydufk"
 }
 headers = {
   'Content-Type': 'multipart/form-data',
@@ -2061,7 +2061,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="file"
                data-endpoint="POSTapi-auth-register"
-               value="tdevyxdmvllrpobyllampnknettzzaknumdbkfpdwpoihqgvqtiwgaakestmxgrskbvkyvqrrwbxghqjya"
+               value="ieoznxxpusqfzipunvuyttlcxdyxuolujfiyirjljopwtkixddbaendibjbpteqxofukbpsuygixmyfmyhjovppizmwsaknfvvwnihuitmscqfkuanjnzyhrzwtpreugfanqtubxqbmaooorsatxhiozhcphyjmwkrpiblejwewncsaulodcfbfvijwyrmdyjgkuuqgupqegjahzqzlabqnjhnmjmekrgofkgiofayymyndrywjjyncmglbjxgtzetaxfllbelcumugqeoeroxxqcsufypflospnwwwyuxtfruoydxzzmhyyixbgvemccknknflpvdxjoyjpdjzitdubvqtrvcefizaqcrempiczecarycxtybcgwslloqthzkjkysukveqgktbrtliezmjpkdedwxwhywyrkpnqslmcqlowgoolxcshskuiptuktdhsoklcsdgxcrttuxbgdgkmmhonpiwdawapbngafotfscsnfeefsggdquzyvnwoofuinjbogalfyklvbbklhanokfnympvkkgilbnwilupsmmvhxluwnphvvmypthzcqlfvjdmmcwrbyawufgkfovpsryhfyxubmournhafosewylkhheaekgkvemxjqdopdnzdfiaysscpxumeywtudyltnsscpsezvbohqdugjzlcjwxltbynfvxgecinwohceezsrongtlsklweqzypvxynekyrnflueyopauqweoxlqfimqqbqvudzsbpicfahfvznotkrxijjawkzpohxyvvrbjzotjmbgooxzqpccjbzlmgkqldevtwaluraprosteesuzvurxnfnchrizrbsijoyfriwmfkkmmbtyotctrhrvoqpkoejifnxqruddgsepkeecvdppglloqihlzdeapnxvpcksuzjhxmddcueoobqjpjobyrqxrntyeeemwnvdddtvxjorbzwsnjotvbohjtgxtwrjomzopswupfaoenrcehsrdupdrdrblktygucjeurbqtphioysxgyuarpzgrycqqacnhyqkowygpkojmzzqugnihxpcfiauqqzohmgklgxyqbgoqsppuejgngtyzhuaprzrxhdssioldrjlwemtplgwfxysdrimndwiscnnkrullrjawnelewbqyoywhbcofumtniwrhrcybeemdxhhyqeobdpfkaahbpdseszrkuzorjvonxaavfutywckwatxeleklhotveuajyzvcjipapwemhxdzfcnqjbkqdllvgrrtwghjehbnczjiuwxbrwppytgqxnrjbowgbydypoadslvwraouudtldvgjpqbcrnpytllvbbqprnowtxaxlfnwcjqcoadppqlvkyhnzbwmsnaqhnjzokqoeyyxopvcixquztutcdvrgusklihjfrngyhmjqpufceudfvhgtkgsflgiumisorqxxiigtktcppoyseotwprlkouudjotlokhrowffojbyggxtfvbywsqtcpskudyeqeprrtwqzeyzqsulnysmkmheqnvlwfbggcajzdbrbprlnkwxffjazzecnrdmdhwrguxxvwtitmwvlibnjixdedthfvlcivtqscxrzggliivmmmmprafesteidaolovllaloyadpffwcwpiybsyntsbbbkptklahmhbtbctebntkxhvornixlucjlqwcqzeakthgudnkvqyhxmozydtufxpflrglpnueieqrieszeyrfugugukhqcyeeuryomuubnblibfwbwzwnivwtizxiqkmqexunwwkfhtdjehrtpyvntftpfsttiirzcggkseagsfucucyuhhderdgxqltyhpyqdldmguavwwlyxtpoxnamsuoqrefbtbhtdyezhwugrkmerinlkefxjtxfqbpdpykwzechpsmgubghjwjorzfjlxvxguwuviejczhlmfkxyaqfwzohmvsickdfwwezkkgfnbmukjetyaehbayliaiirgaijtxhqfwpvdqaoptmssksrqjicquzqmimfvteksnkjahgymmqmeonxjjhdniwsacvztitaqtxmvlvxcqnunvyolnzjunhgkxlslqcawfqahosryftjqcrhpwioyltowhmttqjgbasgismkekjmgzyvvhxycheauxutktbsxvqzopdlqptfdusylmogkagiqwsaklbdmeceeyytafezrnsnxwfohqwixkyhgxyddnjkmqndiaiphfvavbmvwrtbttprbljdxgfczhghlxjgdyuxlyrznxihvclokknldirzrchwokuochjfdbglditvenznqjtcfoshkzbmatwexqrydufk"
                data-component="body" hidden>
     <br>
 <p>validation.max.</p>
@@ -2618,7 +2618,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "name=Gautier" \
     --form "phone=699999999" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php796A.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5B71.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2667,7 +2667,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php796A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5B71.tmp', 'r')
             ],
         ],
     ]
@@ -2682,7 +2682,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/2'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php796A.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5B71.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4117,7 +4117,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php7A63.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5C99.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4176,7 +4176,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A63.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C99.tmp', 'r')
             ],
         ],
     ]
@@ -4191,7 +4191,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php7A63.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5C99.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4554,7 +4554,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php7A64.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5C9A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4613,7 +4613,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A64.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C9A.tmp', 'r')
             ],
         ],
     ]
@@ -4628,7 +4628,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/2'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php7A64.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5C9A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5452,8 +5452,8 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nombreNiveau=3" \
     --form "codeBatiment=BATIMENT_MELEN_0569" \
-    --form "longitude=voluptatem" \
-    --form "latitude=illum" \
+    --form "longitude=repudiandae" \
+    --form "latitude=quisquam" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
@@ -5461,7 +5461,7 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\tchou\AppData\Local\Temp\php79BB.tmp" </code></pre></div>
+    --form "image=@C:\Users\tchou\AppData\Local\Temp\php5BD2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5479,8 +5479,8 @@ const headers = {
 const body = new FormData();
 body.append('nombreNiveau', '3');
 body.append('codeBatiment', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'voluptatem');
-body.append('latitude', 'illum');
+body.append('longitude', 'repudiandae');
+body.append('latitude', 'quisquam');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -5519,11 +5519,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'voluptatem'
+                'contents' =&gt; 'repudiandae'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'illum'
+                'contents' =&gt; 'quisquam'
             ],
             [
                 'name' =&gt; 'ville',
@@ -5555,7 +5555,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php79BB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5BD2.tmp', 'r')
             ],
         ],
     ]
@@ -5570,13 +5570,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\tchou\AppData\Local\Temp\php79BB.tmp', 'rb')
+  'image': open('C:\Users\tchou\AppData\Local\Temp\php5BD2.tmp', 'rb')
 }
 payload = {
     "nombreNiveau": 3,
     "codeBatiment": "BATIMENT_MELEN_0569",
-    "longitude": "voluptatem",
-    "latitude": "illum",
+    "longitude": "repudiandae",
+    "latitude": "quisquam",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -5699,7 +5699,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="POSTapi-batiments"
-               value="voluptatem"
+               value="repudiandae"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -5709,7 +5709,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="POSTapi-batiments"
-               value="illum"
+               value="quisquam"
                data-component="body" hidden>
     <br>
 <p>required.</p>
@@ -6155,15 +6155,15 @@ response.json()</code></pre></div>
     --form "nom=Sogefi" \
     --form "idCommercial=2" \
     --form "nombreNiveau=3" \
-    --form "longitude=fugit" \
-    --form "latitude=magnam" \
+    --form "longitude=odit" \
+    --form "latitude=tempora" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\tchou\AppData\Local\Temp\php79CC.tmp" </code></pre></div>
+    --form "image=@C:\Users\tchou\AppData\Local\Temp\php5BF3.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6182,8 +6182,8 @@ const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('idCommercial', '2');
 body.append('nombreNiveau', '3');
-body.append('longitude', 'fugit');
-body.append('latitude', 'magnam');
+body.append('longitude', 'odit');
+body.append('latitude', 'tempora');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -6225,11 +6225,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'fugit'
+                'contents' =&gt; 'odit'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'magnam'
+                'contents' =&gt; 'tempora'
             ],
             [
                 'name' =&gt; 'indication',
@@ -6257,7 +6257,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php79CC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5BF3.tmp', 'r')
             ],
         ],
     ]
@@ -6272,14 +6272,14 @@ import json
 
 url = 'http://localhost:8000/api/batiments/2'
 files = {
-  'image': open('C:\Users\tchou\AppData\Local\Temp\php79CC.tmp', 'rb')
+  'image': open('C:\Users\tchou\AppData\Local\Temp\php5BF3.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "idCommercial": 2,
     "nombreNiveau": 3,
-    "longitude": "fugit",
-    "latitude": "magnam",
+    "longitude": "odit",
+    "latitude": "tempora",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -6427,7 +6427,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="longitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="fugit"
+               value="odit"
                data-component="body" hidden>
     <br>
 
@@ -6437,7 +6437,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="latitude"
                data-endpoint="PUTapi-batiments--id-"
-               value="magnam"
+               value="tempora"
                data-component="body" hidden>
     <br>
 
@@ -11434,7 +11434,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/categories/2" \
+    --get "http://localhost:8000/api/categories/2?user_id=1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey"</code></pre></div>
@@ -11444,6 +11444,12 @@ response.json()</code></pre></div>
     <pre><code class="language-javascript">const url = new URL(
     "http://localhost:8000/api/categories/2"
 );
+
+const params = {
+    "user_id": "1",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
     "Content-Type": "application/json",
@@ -11467,6 +11473,9 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
             'X-Authorization' =&gt; 'apiKey',
         ],
+        'query' =&gt; [
+            'user_id'=&gt; '1',
+        ],
     ]
 );
 $body = $response-&gt;getBody();
@@ -11478,13 +11487,16 @@ print_r(json_decode((string) $body));</code></pre></div>
 import json
 
 url = 'http://localhost:8000/api/categories/2'
+params = {
+  'user_id': '1',
+}
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
   'X-Authorization': 'apiKey'
 }
 
-response = requests.request('GET', url, headers=headers)
+response = requests.request('GET', url, headers=headers, params=params)
 response.json()</code></pre></div>
 
 </span>
@@ -11498,279 +11510,2018 @@ response.json()</code></pre></div>
 <code class="language-json">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;id&quot;: 4,
-        &quot;nom&quot;: &quot;Alimentation&quot;,
-        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
+        &quot;id&quot;: 2,
+        &quot;nom&quot;: &quot;Administrations&quot;,
+        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
         &quot;deleted_at&quot;: null,
         &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
-        &quot;shortname&quot;: &quot;Alimentation&quot;,
-        &quot;vues&quot;: 0,
+        &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+        &quot;shortname&quot;: &quot;Administration&quot;,
+        &quot;vues&quot;: 10,
         &quot;sous_categories&quot;: [
             {
-                &quot;id&quot;: 41,
-                &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 23,
+                &quot;nom&quot;: &quot;Administrations&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 8,
+                        &quot;nom&quot;: &quot;TEST&quot;,
+                        &quot;idBatiment&quot;: &quot;53&quot;,
+                        &quot;indicationAdresse&quot;: &quot;test&quot;,
+                        &quot;codePostal&quot;: &quot;BP 14500 YDE&quot;,
+                        &quot;siteInternet&quot;: &quot;test.com&quot;,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_304965/1647477248_image_cropper_1647476530219.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;696666666&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;desc&quot;,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T00:34:06.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T00:34:08.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 8
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 53,
+                            &quot;nom&quot;: &quot;BATIMENT&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_304965&quot;,
+                            &quot;longitude&quot;: &quot;-122.07635617311148&quot;,
+                            &quot;latitude&quot;: &quot;37.422903268440734&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_304965/1647476499_image_cropper_1647476488825.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Stierlin Court&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;MELEN&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T00:21:37.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T00:21:39.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 8,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 8,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 9,
+                        &quot;nom&quot;: &quot;melen&quot;,
+                        &quot;idBatiment&quot;: &quot;54&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_323294/1647527250_image_cropper_1647527204118.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;VIANDE&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T14:27:28.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T14:27:30.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 9
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 54,
+                            &quot;nom&quot;: &quot;TEST&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_323294&quot;,
+                            &quot;longitude&quot;: &quot;-122.0714794897258&quot;,
+                            &quot;latitude&quot;: &quot;37.420158359485626&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_323294/1647527128_image_cropper_1647527114077.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Charleston Road&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;MELEN&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T14:25:23.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T14:25:28.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 9,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 9,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 10,
+                        &quot;nom&quot;: &quot;SORENTA&quot;,
+                        &quot;idBatiment&quot;: &quot;55&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;5&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_QUARTIER_111495/1647528918_image_cropper_1647528859945.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;555555555&quot;,
+                        &quot;whatsapp1&quot;: &quot;999999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T14:55:15.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T14:55:18.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 10
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 55,
+                            &quot;nom&quot;: &quot;TATIANA&quot;,
+                            &quot;nombreNiveau&quot;: &quot;6&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_QUARTIER_111495&quot;,
+                            &quot;longitude&quot;: &quot;-122.07868949518456&quot;,
+                            &quot;latitude&quot;: &quot;37.41613665753526&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_QUARTIER_111495/1647528814_image_cropper_1647528796961.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Plymouth Street&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;QUARTIER&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T14:53:32.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T14:53:34.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 10,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 10,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 11,
+                        &quot;nom&quot;: &quot;tati&quot;,
+                        &quot;idBatiment&quot;: &quot;56&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_410600/1647529235_image_cropper_1647529182767.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;so&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T15:00:33.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T15:00:35.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 11
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 56,
+                            &quot;nom&quot;: &quot;TATIANA&quot;,
+                            &quot;nombreNiveau&quot;: &quot;4&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_410600&quot;,
+                            &quot;longitude&quot;: &quot;-122.08117094792978&quot;,
+                            &quot;latitude&quot;: &quot;37.42013363756173&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_410600/1647529145_image_cropper_1647529135415.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Charleston Road&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;MELEN&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T14:59:03.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T14:59:05.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 11,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 11,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 12,
+                        &quot;nom&quot;: &quot;REST&quot;,
+                        &quot;idBatiment&quot;: &quot;58&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_QUARTIER_291357/1647530705_image_cropper_1647530660598.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T15:25:03.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T15:25:05.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 12
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 58,
+                            &quot;nom&quot;: &quot;RESULT&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_QUARTIER_291357&quot;,
+                            &quot;longitude&quot;: &quot;-122.0816233133458&quot;,
+                            &quot;latitude&quot;: &quot;37.421478372128234&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_QUARTIER_291357/1647530619_image_cropper_1647530610799.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Charleston Road&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;QUARTIER&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T15:23:38.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T15:23:40.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 12,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 12,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 15,
+                        &quot;nom&quot;: &quot;BARCA&quot;,
+                        &quot;idBatiment&quot;: &quot;62&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;4&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_FORT_478973/1647572206_image_cropper_1647572166972.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;BUTS&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-18T02:56:44.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-18T02:56:46.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 15
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 62,
+                            &quot;nom&quot;: &quot;PEDRI&quot;,
+                            &quot;nombreNiveau&quot;: &quot;2&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_FORT_478973&quot;,
+                            &quot;longitude&quot;: &quot;-122.08261445439663&quot;,
+                            &quot;latitude&quot;: &quot;37.42239527951986&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_FORT_478973/1647572126_image_cropper_1647572085786.jpg&quot;,
+                            &quot;indication&quot;: &quot;MOMO&quot;,
+                            &quot;rue&quot;: &quot;Amphitheatre Parkway&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;FORT&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-18T02:55:21.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-18T02:55:26.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 15,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 15,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;BUT&quot;,
+                        &quot;idBatiment&quot;: &quot;63&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;2&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_PEDRI_155280/1647573380_image_cropper_1647573342214.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-18T03:16:18.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-18T03:16:20.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 16
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 63,
+                            &quot;nom&quot;: &quot;BARCA&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_PEDRI_155280&quot;,
+                            &quot;longitude&quot;: &quot;-122.08441671581195&quot;,
+                            &quot;latitude&quot;: &quot;37.420158408053794&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_PEDRI_155280/1647573309_image_cropper_1647573299725.jpg&quot;,
+                            &quot;indication&quot;: &quot;AUB&quot;,
+                            &quot;rue&quot;: &quot;Alta Avenue&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;PEDRI&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-18T03:15:07.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-18T03:15:09.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 16,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 16,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 17,
+                        &quot;nom&quot;: &quot;SANTI&quot;,
+                        &quot;idBatiment&quot;: &quot;64&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;5&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_SANT_424607/1647612734_image_cropper_1647612675723.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;888588888&quot;,
+                        &quot;whatsapp1&quot;: &quot;666666666&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-18T14:12:11.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-18T14:12:14.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 17
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 64,
+                            &quot;nom&quot;: &quot;SAN&quot;,
+                            &quot;nombreNiveau&quot;: &quot;5&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_SANT_424607&quot;,
+                            &quot;longitude&quot;: &quot;-122.07102756939453&quot;,
+                            &quot;latitude&quot;: &quot;37.415727709604965&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_SANT_424607/1647612638_image_cropper_1647612625419.jpg&quot;,
+                            &quot;indication&quot;: &quot;SANTI&quot;,
+                            &quot;rue&quot;: &quot;Monte Vista&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;SANT&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-18T14:10:34.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-18T14:10:38.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 17,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 17,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [
+                            {
+                                &quot;id&quot;: 2,
+                                &quot;idEtablissement&quot;: 17,
+                                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_SANT_424607/SANTI/1647696788_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:33:08.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:33:08.000000Z&quot;
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 18,
+                        &quot;nom&quot;: &quot;b&quot;,
+                        &quot;idBatiment&quot;: &quot;65&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;7&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_D_405923/1647695175_image_cropper_1647695116029.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;566666666&quot;,
+                        &quot;whatsapp1&quot;: &quot;699555899&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;test&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-19T13:06:13.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-19T13:06:15.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 18
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 65,
+                            &quot;nom&quot;: &quot;y&quot;,
+                            &quot;nombreNiveau&quot;: &quot;5&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_D_405923&quot;,
+                            &quot;longitude&quot;: &quot;-122.08733458935461&quot;,
+                            &quot;latitude&quot;: &quot;37.416954124657195&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_D_405923/1647695083_image_cropper_1647695066478.jpg&quot;,
+                            &quot;indication&quot;: &quot;k&quot;,
+                            &quot;rue&quot;: &quot;Bayshore Freeway&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;D&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-19T13:04:37.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-19T13:04:43.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 18,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 18,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [
+                            {
+                                &quot;id&quot;: 3,
+                                &quot;idEtablissement&quot;: 18,
+                                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_D_405923/b/1647697153_image_cropper_1647695244383.jpg&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:39:13.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:39:13.000000Z&quot;
+                            }
+                        ],
+                        &quot;horaires&quot;: [
+                            {
+                                &quot;id&quot;: 2,
+                                &quot;idEtablissement&quot;: 18,
+                                &quot;jour&quot;: &quot;Lundi&quot;,
+                                &quot;plageHoraire&quot;: &quot;05:00-20:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:06:43.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:06:43.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 3,
+                                &quot;idEtablissement&quot;: 18,
+                                &quot;jour&quot;: &quot;Mercredi&quot;,
+                                &quot;plageHoraire&quot;: &quot;05:00-20:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:06:44.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:06:44.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 4,
+                                &quot;idEtablissement&quot;: 18,
+                                &quot;jour&quot;: &quot;Jeudi&quot;,
+                                &quot;plageHoraire&quot;: &quot;05:00-20:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:06:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:06:45.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 5,
+                                &quot;idEtablissement&quot;: 18,
+                                &quot;jour&quot;: &quot;Dimanche&quot;,
+                                &quot;plageHoraire&quot;: &quot;09:00-18:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-19T13:06:46.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-19T13:06:46.000000Z&quot;
+                            }
+                        ],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 20,
+                        &quot;nom&quot;: &quot;OUI&quot;,
+                        &quot;idBatiment&quot;: &quot;69&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;2&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_YES_334439/1647784816_image_cropper_1647784572556.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;666666666&quot;,
+                        &quot;whatsapp1&quot;: &quot;888888888&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SPOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-20T14:00:13.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-20T14:00:16.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 20
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 69,
+                            &quot;nom&quot;: &quot;OUI&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_YES_334439&quot;,
+                            &quot;longitude&quot;: &quot;-122.0696547737021&quot;,
+                            &quot;latitude&quot;: &quot;37.428667449936356&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_YES_334439/1647784537_image_cropper_1647784528367.jpg&quot;,
+                            &quot;indication&quot;: &quot;OKAY&quot;,
+                            &quot;rue&quot;: &quot;Crittenden Lane&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;YES&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-20T13:55:35.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-20T13:55:37.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 20,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 20,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [
+                            {
+                                &quot;id&quot;: 5,
+                                &quot;idEtablissement&quot;: 20,
+                                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_YES_334439/OUI/1647784849_image_cropper_1647784841459.jpg&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T14:00:49.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T14:00:49.000000Z&quot;
+                            }
+                        ],
+                        &quot;horaires&quot;: [
+                            {
+                                &quot;id&quot;: 10,
+                                &quot;idEtablissement&quot;: 20,
+                                &quot;jour&quot;: &quot;Samedi&quot;,
+                                &quot;plageHoraire&quot;: &quot;07:00-20:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T14:00:31.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T14:00:31.000000Z&quot;
+                            }
+                        ],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 21,
+                        &quot;nom&quot;: &quot;lkjklnjkb&quot;,
+                        &quot;idBatiment&quot;: &quot;70&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_hbhjhb_481793/1647785285_image_cropper_1647785243056.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;555555556&quot;,
+                        &quot;whatsapp1&quot;: &quot;666666666&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;dfchgjh&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-20T14:08:00.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-20T14:08:05.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 23,
+                            &quot;idEtablissement&quot;: 21
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 70,
+                            &quot;nom&quot;: &quot;hbk&quot;,
+                            &quot;nombreNiveau&quot;: &quot;5&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_hbhjhb_481793&quot;,
+                            &quot;longitude&quot;: &quot;-122.0700206793946&quot;,
+                            &quot;latitude&quot;: &quot;37.424873445873104&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_hbhjhb_481793/1647785199_image_cropper_1647785184386.jpg&quot;,
+                            &quot;indication&quot;: &quot;fjhkhjh&quot;,
+                            &quot;rue&quot;: &quot;Crittenden Lane&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;hbhjhb&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-20T14:06:36.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-20T14:06:39.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 23,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 21,
+                                    &quot;idSousCategorie&quot;: 23
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 21,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [
+                            {
+                                &quot;id&quot;: 6,
+                                &quot;idEtablissement&quot;: 21,
+                                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_hbhjhb_481793/lkjklnjkb/1647785320_image_cropper_1647785311343.jpg&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T14:08:40.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T14:08:40.000000Z&quot;
+                            }
+                        ],
+                        &quot;horaires&quot;: [
+                            {
+                                &quot;id&quot;: 11,
+                                &quot;idEtablissement&quot;: 21,
+                                &quot;jour&quot;: &quot;Dimanche&quot;,
+                                &quot;plageHoraire&quot;: &quot;07:00-23:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T14:08:22.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T14:08:22.000000Z&quot;
+                            }
+                        ],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    }
+                ]
             },
             {
-                &quot;id&quot;: 42,
-                &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 24,
+                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 13,
+                        &quot;nom&quot;: &quot;TEST&quot;,
+                        &quot;idBatiment&quot;: &quot;59&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;2&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_466234/1647538771_image_cropper_1647538722835.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T17:39:30.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T17:39:31.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 24,
+                            &quot;idEtablissement&quot;: 13
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 59,
+                            &quot;nom&quot;: &quot;TEST&quot;,
+                            &quot;nombreNiveau&quot;: &quot;5&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_466234&quot;,
+                            &quot;longitude&quot;: &quot;-122.08630487290253&quot;,
+                            &quot;latitude&quot;: &quot;37.42183144991252&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_466234/1647538685_image_cropper_1647538675117.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Permanente Creek Trail&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;MELEN&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T17:38:03.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T17:38:05.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 24,
+                                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 13,
+                                    &quot;idSousCategorie&quot;: 24
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 13,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 14,
+                        &quot;nom&quot;: &quot;TEST&quot;,
+                        &quot;idBatiment&quot;: &quot;60&quot;,
+                        &quot;indicationAdresse&quot;: null,
+                        &quot;codePostal&quot;: null,
+                        &quot;siteInternet&quot;: null,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;2&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_REGARD_304731/1647540799_image_cropper_1647540764290.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;666666666&quot;,
+                        &quot;whatsapp1&quot;: &quot;666666666&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: null,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;SOYA&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-17T18:13:18.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-17T18:13:19.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: false,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 24,
+                            &quot;idEtablissement&quot;: 14
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 60,
+                            &quot;nom&quot;: &quot;ADD&quot;,
+                            &quot;nombreNiveau&quot;: &quot;3&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_REGARD_304731&quot;,
+                            &quot;longitude&quot;: &quot;-122.07661411665151&quot;,
+                            &quot;latitude&quot;: &quot;37.42685035056364&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_REGARD_304731/1647540728_image_cropper_1647540717545.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;North Shoreline Boulevard&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;REGARD&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-17T18:12:06.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-17T18:12:08.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 24,
+                                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 14,
+                                    &quot;idSousCategorie&quot;: 24
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 14,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 19,
+                        &quot;nom&quot;: &quot;ENTREPRISE&quot;,
+                        &quot;idBatiment&quot;: &quot;68&quot;,
+                        &quot;indicationAdresse&quot;: &quot;TEST&quot;,
+                        &quot;codePostal&quot;: &quot;BP 4567 YDE&quot;,
+                        &quot;siteInternet&quot;: &quot;site.com&quot;,
+                        &quot;idCommercial&quot;: &quot;12&quot;,
+                        &quot;idManager&quot;: null,
+                        &quot;etage&quot;: &quot;3&quot;,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_494028/1647784252_image_cropper_1647784164070.jpg&quot;,
+                        &quot;vues&quot;: &quot;0&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;whatsapp1&quot;: &quot;555555555&quot;,
+                        &quot;whatsapp2&quot;: &quot;777777777&quot;,
+                        &quot;description&quot;: &quot;TEST&quot;,
+                        &quot;osmId&quot;: null,
+                        &quot;updated&quot;: false,
+                        &quot;revoir&quot;: &quot;0&quot;,
+                        &quot;valide&quot;: &quot;0&quot;,
+                        &quot;services&quot;: &quot;VENTE&quot;,
+                        &quot;ameliorations&quot;: &quot;VIDEOS&quot;,
+                        &quot;avis&quot;: 0,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2022-03-20T13:50:50.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2022-03-20T13:50:52.000000Z&quot;,
+                        &quot;idUser&quot;: 20,
+                        &quot;logo&quot;: null,
+                        &quot;isFavoris&quot;: true,
+                        &quot;pivot&quot;: {
+                            &quot;idSousCategorie&quot;: 24,
+                            &quot;idEtablissement&quot;: 19
+                        },
+                        &quot;batiment&quot;: {
+                            &quot;id&quot;: 68,
+                            &quot;nom&quot;: &quot;TEST FINAL&quot;,
+                            &quot;nombreNiveau&quot;: &quot;5&quot;,
+                            &quot;codeBatiment&quot;: &quot;BATIMENT_MELEN_494028&quot;,
+                            &quot;longitude&quot;: &quot;-122.07974287137887&quot;,
+                            &quot;latitude&quot;: &quot;37.418633954877166&quot;,
+                            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_494028/1647784127_image_cropper_1647784065662.jpg&quot;,
+                            &quot;indication&quot;: &quot;RUE&quot;,
+                            &quot;rue&quot;: &quot;Joaquin Road&quot;,
+                            &quot;ville&quot;: &quot;Yaound&eacute;&quot;,
+                            &quot;commune&quot;: &quot;COMMUNE&quot;,
+                            &quot;quartier&quot;: &quot;MELEN&quot;,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-20T13:48:45.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-20T13:48:47.000000Z&quot;,
+                            &quot;idCommercial&quot;: 12,
+                            &quot;idUser&quot;: 20
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 24,
+                                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
+                                &quot;idcategorie&quot;: 2,
+                                &quot;logourl&quot;: null,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 19,
+                                    &quot;idSousCategorie&quot;: 24
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;deleted_at&quot;: null,
+                                    &quot;created_at&quot;: &quot;2022-03-04T13:30:15.000000Z&quot;,
+                                    &quot;updated_at&quot;: &quot;2022-03-16T15:06:23.000000Z&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;vues&quot;: 10
+                                }
+                            }
+                        ],
+                        &quot;commodites&quot;: [
+                            {
+                                &quot;id&quot;: 16,
+                                &quot;nom&quot;: &quot;Wifi ++&quot;,
+                                &quot;idTypeCommodite&quot;: 1,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
+                                &quot;pivot&quot;: {
+                                    &quot;idEtablissement&quot;: 19,
+                                    &quot;idCommodite&quot;: 16
+                                }
+                            }
+                        ],
+                        &quot;images&quot;: [
+                            {
+                                &quot;id&quot;: 4,
+                                &quot;idEtablissement&quot;: 19,
+                                &quot;imageUrl&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_494028/ENTREPRISE/1647784311_image_cropper_1647784298997.jpg&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T13:51:51.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T13:51:51.000000Z&quot;
+                            }
+                        ],
+                        &quot;horaires&quot;: [
+                            {
+                                &quot;id&quot;: 6,
+                                &quot;idEtablissement&quot;: 19,
+                                &quot;jour&quot;: &quot;Mardi&quot;,
+                                &quot;plageHoraire&quot;: &quot;08:00-16:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T13:51:27.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T13:51:27.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 7,
+                                &quot;idEtablissement&quot;: 19,
+                                &quot;jour&quot;: &quot;Mercredi&quot;,
+                                &quot;plageHoraire&quot;: &quot;08:00-16:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T13:51:28.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T13:51:28.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 8,
+                                &quot;idEtablissement&quot;: 19,
+                                &quot;jour&quot;: &quot;Jeudi&quot;,
+                                &quot;plageHoraire&quot;: &quot;08:00-16:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T13:51:29.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T13:51:29.000000Z&quot;
+                            },
+                            {
+                                &quot;id&quot;: 9,
+                                &quot;idEtablissement&quot;: 19,
+                                &quot;jour&quot;: &quot;Samedi&quot;,
+                                &quot;plageHoraire&quot;: &quot;07:00-12:00&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-20T13:51:30.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-20T13:51:30.000000Z&quot;
+                            }
+                        ],
+                        &quot;commentaires&quot;: [],
+                        &quot;commercial&quot;: {
+                            &quot;id&quot;: 12,
+                            &quot;idUser&quot;: 20,
+                            &quot;numeroCni&quot;: 1256987,
+                            &quot;numeroBadge&quot;: 1234568,
+                            &quot;ville&quot;: &quot;Douala&quot;,
+                            &quot;quartier&quot;: &quot;Melen&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;sexe&quot;: &quot;Masculin&quot;,
+                            &quot;whatsapp&quot;: 699999999,
+                            &quot;diplome&quot;: &quot;BAC&quot;,
+                            &quot;tailleTshirt&quot;: &quot;XXL&quot;,
+                            &quot;age&quot;: 25,
+                            &quot;deleted_at&quot;: null,
+                            &quot;created_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;updated_at&quot;: &quot;2022-03-01T15:08:58.000000Z&quot;,
+                            &quot;user&quot;: {
+                                &quot;id&quot;: 20,
+                                &quot;name&quot;: &quot;Gautier&quot;,
+                                &quot;email&quot;: &quot;bt@geo.sm&quot;,
+                                &quot;email_verified_at&quot;: &quot;2022-02-22T19:55:07.000000Z&quot;,
+                                &quot;phone&quot;: &quot;691201946&quot;,
+                                &quot;fcmToken&quot;: null,
+                                &quot;imageProfil&quot;: &quot;/storage/uploads/commerciaux/profils/1646147325_Image1.png&quot;,
+                                &quot;deleted_at&quot;: null,
+                                &quot;created_at&quot;: &quot;2022-03-01T15:08:45.000000Z&quot;,
+                                &quot;updated_at&quot;: &quot;2022-03-12T20:19:30.000000Z&quot;
+                            }
+                        },
+                        &quot;manager&quot;: null
+                    }
+                ]
             },
             {
-                &quot;id&quot;: 43,
-                &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 25,
+                &quot;nom&quot;: &quot;Associations, syndicats&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 44,
-                &quot;nom&quot;: &quot;Industries alimentaires&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 26,
+                &quot;nom&quot;: &quot;Douane, Agences&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 45,
-                &quot;nom&quot;: &quot;Produits alimentaires&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 27,
+                &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 46,
-                &quot;nom&quot;: &quot;Alimentation Animale&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 28,
+                &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 47,
-                &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 29,
+                &quot;nom&quot;: &quot;Offices Nationaux&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 48,
-                &quot;nom&quot;: &quot;Boissons&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 30,
+                &quot;nom&quot;: &quot;Poste&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 49,
-                &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 31,
+                &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             },
             {
-                &quot;id&quot;: 50,
-                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
-                &quot;idcategorie&quot;: 4,
+                &quot;id&quot;: 32,
+                &quot;nom&quot;: &quot;Institution publique&quot;,
+                &quot;idcategorie&quot;: 2,
                 &quot;logourl&quot;: null,
                 &quot;deleted_at&quot;: null,
                 &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 51,
-                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 52,
-                &quot;nom&quot;: &quot;Brasseries&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 53,
-                &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 54,
-                &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 55,
-                &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 56,
-                &quot;nom&quot;: &quot;Catering&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 57,
-                &quot;nom&quot;: &quot;Distilleries&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 58,
-                &quot;nom&quot;: &quot;Environnement&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 59,
-                &quot;nom&quot;: &quot;Gomme Arabique&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 60,
-                &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 61,
-                &quot;nom&quot;: &quot;Laiteries&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 62,
-                &quot;nom&quot;: &quot;Minoteries&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 63,
-                &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 64,
-                &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 65,
-                &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 66,
-                &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 67,
-                &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
-            },
-            {
-                &quot;id&quot;: 68,
-                &quot;nom&quot;: &quot;Traiteurs&quot;,
-                &quot;idcategorie&quot;: 4,
-                &quot;logourl&quot;: null,
-                &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;
+                &quot;updated_at&quot;: &quot;2022-02-25T11:35:34.000000Z&quot;,
+                &quot;etablissements&quot;: []
             }
         ],
         &quot;commodites&quot;: [
             {
-                &quot;id&quot;: 19,
-                &quot;nom&quot;: &quot;Wifi&quot;,
+                &quot;id&quot;: 16,
+                &quot;nom&quot;: &quot;Wifi ++&quot;,
                 &quot;idTypeCommodite&quot;: 1,
                 &quot;deleted_at&quot;: null,
-                &quot;created_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2022-02-25T14:53:31.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2022-02-25T14:48:03.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2022-02-25T15:24:26.000000Z&quot;,
                 &quot;pivot&quot;: {
-                    &quot;idCategorie&quot;: 4,
-                    &quot;idCommodite&quot;: 19
+                    &quot;idCategorie&quot;: 2,
+                    &quot;idCommodite&quot;: 16
                 },
                 &quot;type_commodite&quot;: {
                     &quot;id&quot;: 1,
@@ -11836,7 +13587,18 @@ response.json()</code></pre></div>
     <br>
 <p>the id of the category.</p>
             </p>
-                    </form>
+                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>user_id</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="user_id"
+               data-endpoint="GETapi-categories--id-"
+               value="1"
+               data-component="query" hidden>
+    <br>
+<p>The ID of the Connected User.</p>
+            </p>
+                </form>
 
             <h2 id="category-management-POSTapi-categories">Add a new Category.</h2>
 
@@ -11858,8 +13620,8 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
-    --form "shortname=quisquam" \
-    --form "logourl=@C:\Users\tchou\AppData\Local\Temp\php7A95.tmp" </code></pre></div>
+    --form "shortname=ullam" \
+    --form "logourl=@C:\Users\tchou\AppData\Local\Temp\php5CFA.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -11876,7 +13638,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'quisquam');
+body.append('shortname', 'ullam');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 
 fetch(url, {
@@ -11904,11 +13666,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'quisquam'
+                'contents' =&gt; 'ullam'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A95.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5CFA.tmp', 'r')
             ],
         ],
     ]
@@ -11923,11 +13685,11 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\tchou\AppData\Local\Temp\php7A95.tmp', 'rb')
+  'logourl': open('C:\Users\tchou\AppData\Local\Temp\php5CFA.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "quisquam"
+    "shortname": "ullam"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -12026,7 +13788,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="shortname"
                data-endpoint="POSTapi-categories"
-               value="quisquam"
+               value="ullam"
                data-component="body" hidden>
     <br>
 
@@ -12065,7 +13827,7 @@ response.json()</code></pre></div>
     --form "nom=Achat" \
     --form "vues=ok" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\tchou\AppData\Local\Temp\php78FB.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\tchou\AppData\Local\Temp\php5AC4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -12119,7 +13881,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php78FB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5AC4.tmp', 'r')
             ],
         ],
     ]
@@ -12134,7 +13896,7 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\tchou\AppData\Local\Temp\php78FB.tmp', 'rb')
+  'logourl': open('C:\Users\tchou\AppData\Local\Temp\php5AC4.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
@@ -18688,7 +20450,7 @@ response.json()</code></pre></div>
     --form "diplome=BAC" \
     --form "tailleTshirt=XXL" \
     --form "age=25" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php7A84.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5CBB.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -18787,7 +20549,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A84.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5CBB.tmp', 'r')
             ],
         ],
     ]
@@ -18802,7 +20564,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php7A84.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5CBB.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -19094,7 +20856,7 @@ response.json()</code></pre></div>
     --form "tailleTshirt=XXL" \
     --form "age=25" \
     --form "_method=PUT" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php798A.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5BB1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -19193,7 +20955,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php798A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5BB1.tmp', 'r')
             ],
         ],
     ]
@@ -19208,7 +20970,7 @@ import json
 
 url = 'http://localhost:8000/api/commercials/2'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php798A.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5BB1.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -22992,7 +24754,7 @@ response.json()</code></pre></div>
     --form "phone=699999999" \
     --form "whatsapp1=699999999" \
     --form "services=OM;MOMO" \
-    --form "idSousCategorie=reprehenderit" \
+    --form "idSousCategorie=velit" \
     --form "idBatiment=2" \
     --form "indicationAdresse=Rue de Melen" \
     --form "codePostal=59684" \
@@ -23001,8 +24763,8 @@ response.json()</code></pre></div>
     --form "whatsapp2=699999999" \
     --form "osmId=111259658236" \
     --form "ameliorations=Site internet,videos" \
-    --form "cover=@C:\Users\tchou\AppData\Local\Temp\php79ED.tmp" \
-    --form "logo=@C:\Users\tchou\AppData\Local\Temp\php79FD.tmp" </code></pre></div>
+    --form "cover=@C:\Users\tchou\AppData\Local\Temp\php5C23.tmp" \
+    --form "logo=@C:\Users\tchou\AppData\Local\Temp\php5C24.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -23023,7 +24785,7 @@ body.append('etage', '3');
 body.append('phone', '699999999');
 body.append('whatsapp1', '699999999');
 body.append('services', 'OM;MOMO');
-body.append('idSousCategorie', 'reprehenderit');
+body.append('idSousCategorie', 'velit');
 body.append('idBatiment', '2');
 body.append('indicationAdresse', 'Rue de Melen');
 body.append('codePostal', '59684');
@@ -23076,7 +24838,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'idSousCategorie',
-                'contents' =&gt; 'reprehenderit'
+                'contents' =&gt; 'velit'
             ],
             [
                 'name' =&gt; 'idBatiment',
@@ -23112,11 +24874,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php79ED.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C23.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php79FD.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C24.tmp', 'r')
             ],
         ],
     ]
@@ -23131,8 +24893,8 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\tchou\AppData\Local\Temp\php79ED.tmp', 'rb'),
-  'logo': open('C:\Users\tchou\AppData\Local\Temp\php79FD.tmp', 'rb')
+  'cover': open('C:\Users\tchou\AppData\Local\Temp\php5C23.tmp', 'rb'),
+  'logo': open('C:\Users\tchou\AppData\Local\Temp\php5C24.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -23140,7 +24902,7 @@ payload = {
     "phone": "699999999",
     "whatsapp1": "699999999",
     "services": "OM;MOMO",
-    "idSousCategorie": "reprehenderit",
+    "idSousCategorie": "velit",
     "idBatiment": 2,
     "indicationAdresse": "Rue de Melen",
     "codePostal": "59684",
@@ -23297,7 +25059,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="idSousCategorie"
                data-endpoint="POSTapi-etablissements"
-               value="reprehenderit"
+               value="velit"
                data-component="body" hidden>
     <br>
 
@@ -23441,8 +25203,8 @@ response.json()</code></pre></div>
     --form "revoir=1" \
     --form "valide=1" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\tchou\AppData\Local\Temp\php7A00.tmp" \
-    --form "logo=@C:\Users\tchou\AppData\Local\Temp\php7A01.tmp" </code></pre></div>
+    --form "cover=@C:\Users\tchou\AppData\Local\Temp\php5C27.tmp" \
+    --form "logo=@C:\Users\tchou\AppData\Local\Temp\php5C38.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -23572,11 +25334,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A00.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C27.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A01.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C38.tmp', 'r')
             ],
         ],
     ]
@@ -23591,8 +25353,8 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/2'
 files = {
-  'cover': open('C:\Users\tchou\AppData\Local\Temp\php7A00.tmp', 'rb'),
-  'logo': open('C:\Users\tchou\AppData\Local\Temp\php7A01.tmp', 'rb')
+  'cover': open('C:\Users\tchou\AppData\Local\Temp\php5C27.tmp', 'rb'),
+  'logo': open('C:\Users\tchou\AppData\Local\Temp\php5C38.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -34802,7 +36564,7 @@ response.json()</code></pre></div>
     --form "email=gautier@position.cm" \
     --form "phone=699999999" \
     --form "password=gautier123" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php78DB.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5A27.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -34859,7 +36621,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php78DB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5A27.tmp', 'r')
             ],
         ],
     ]
@@ -34874,7 +36636,7 @@ import json
 
 url = 'http://localhost:8000/api/managers'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php78DB.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5A27.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -35366,7 +37128,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/managers/9" \
+    "http://localhost:8000/api/managers/19" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
@@ -35374,12 +37136,12 @@ response.json()</code></pre></div>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php799A.tmp" </code></pre></div>
+    --form "imageProfil=@C:\Users\tchou\AppData\Local\Temp\php5BC1.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/managers/9"
+    "http://localhost:8000/api/managers/19"
 );
 
 const headers = {
@@ -35405,7 +37167,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/managers/9',
+    'http://localhost:8000/api/managers/19',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -35428,7 +37190,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'imageProfil',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php799A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5BC1.tmp', 'r')
             ],
         ],
     ]
@@ -35441,9 +37203,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/managers/9'
+url = 'http://localhost:8000/api/managers/19'
 files = {
-  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php799A.tmp', 'rb')
+  'imageProfil': open('C:\Users\tchou\AppData\Local\Temp\php5BC1.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -35561,7 +37323,7 @@ response.json()</code></pre></div>
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-managers--id-"
-               value="9"
+               value="19"
                data-component="url" hidden>
     <br>
 <p>The ID of the manager.</p>
@@ -35633,7 +37395,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "idEtablissement=2" \
-    --form "imageUrl=@C:\Users\tchou\AppData\Local\Temp\php7A31.tmp" </code></pre></div>
+    --form "imageUrl=@C:\Users\tchou\AppData\Local\Temp\php5C67.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -35677,7 +37439,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'imageUrl',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A31.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C67.tmp', 'r')
             ],
         ],
     ]
@@ -35692,7 +37454,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'imageUrl': open('C:\Users\tchou\AppData\Local\Temp\php7A31.tmp', 'rb')
+  'imageUrl': open('C:\Users\tchou\AppData\Local\Temp\php5C67.tmp', 'rb')
 }
 payload = {
     "idEtablissement": 2
@@ -35818,7 +37580,7 @@ response.json()</code></pre></div>
     --header "Accept: application/json" \
     --header "X-Authorization: apiKey" \
     --form "_method=PUT" \
-    --form "imageUrl=@C:\Users\tchou\AppData\Local\Temp\php7A43.tmp" </code></pre></div>
+    --form "imageUrl=@C:\Users\tchou\AppData\Local\Temp\php5C69.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -35862,7 +37624,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'imageUrl',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7A43.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5C69.tmp', 'r')
             ],
         ],
     ]
@@ -35877,7 +37639,7 @@ import json
 
 url = 'http://localhost:8000/api/images/2'
 files = {
-  'imageUrl': open('C:\Users\tchou\AppData\Local\Temp\php7A43.tmp', 'rb')
+  'imageUrl': open('C:\Users\tchou\AppData\Local\Temp\php5C69.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -37038,7 +38800,7 @@ response.json()</code></pre></div>
     --header "X-Authorization: apiKey" \
     --form "nom=Achat" \
     --form "idcategorie=5" \
-    --form "file=@C:\Users\tchou\AppData\Local\Temp\php7AA5.tmp" </code></pre></div>
+    --form "file=@C:\Users\tchou\AppData\Local\Temp\php5CFB.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -37087,7 +38849,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'file',
-                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php7AA5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\tchou\AppData\Local\Temp\php5CFB.tmp', 'r')
             ],
         ],
     ]
@@ -37102,7 +38864,7 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'file': open('C:\Users\tchou\AppData\Local\Temp\php7AA5.tmp', 'rb')
+  'file': open('C:\Users\tchou\AppData\Local\Temp\php5CFB.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
