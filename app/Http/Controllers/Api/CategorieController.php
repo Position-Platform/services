@@ -116,6 +116,17 @@ class CategorieController extends BaseController
                 $etablissement->sousCategories;
 
 
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+
 
                 foreach ($etablissement->sousCategories as $key => $sousCategories) {
                     $sousCategories->categorie;
