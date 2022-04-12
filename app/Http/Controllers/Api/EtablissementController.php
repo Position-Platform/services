@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Admin;
 use App\Models\Batiment;
+use App\Models\Commentaire;
 use App\Models\Commercial;
 use App\Models\Commodite;
 use App\Models\Etablissement;
+use App\Models\Horaire;
 use App\Models\SousCategorie;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -400,6 +403,17 @@ class EtablissementController extends BaseController
             }
 
 
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+            $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+
             $etablissement->batiment;
             $etablissement->sousCategories;
 
@@ -446,6 +460,7 @@ class EtablissementController extends BaseController
      * @queryParam lat string required . Example: 5
      * @queryParam idCommodites string required . Example: 1,2,3
      * @queryParam user_id string id of user conncted . Example: 10
+     * @queryParam id_categorie string required id of categorie . Example: 1
      * @responseFile storage/responses/getetablissementsdistance.json
      *
      */
@@ -453,8 +468,11 @@ class EtablissementController extends BaseController
     {
         $lon = $request->input('lon');
         $lat = $request->input('lat');
+        $id_categorie = $request->input('id_categorie');
 
         $idCommodites = explode(",", $request->input('idCommodites'));
+
+        $data = array();
 
         foreach ($idCommodites as $key => $idCommodite) {
             $commodite = Commodite::find($idCommodite);
@@ -467,12 +485,20 @@ class EtablissementController extends BaseController
                     $etablissement->isFavoris = false;
                 }
 
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
 
                 $etablissement->sousCategories;
 
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                }
+
 
                 $etablissement->commodites;
                 $etablissement->images;
@@ -494,14 +520,34 @@ class EtablissementController extends BaseController
 
                 $distance = $this->getDistance($lat, $lon, $etablissement->batiment->latitude, $etablissement->batiment->longitude);
                 $etablissement["distance"] = $distance;
-                $data[] = $etablissement;
-                usort($data, function ($a, $b) {
-                    return $a['distance'] > $b['distance'];
-                });
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                    if ($sousCategories->categorie->id == $id_categorie) {
+                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
+                        if ($bool == false) {
+                            $data[] = $etablissement;
+                        }
+
+                        usort($data, function ($a, $b) {
+                            return $a['distance'] > $b['distance'];
+                        });
+                    }
+                }
             }
         }
 
         return $this->sendResponse($data, 'Liste des Etablissements');
+    }
+
+    public function  checkIfEtablassimentInDataArray($etablissement, $data)
+    {
+        foreach ($data as $key => $value) {
+            if ($value->id == $etablissement->id) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
@@ -515,6 +561,7 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @queryParam idCommodites string required . Example: 1,2,3
      * @queryParam user_id string id of user conncted . Example: 10
+     * @queryParam id_categorie string required id of categorie . Example: 1
      * @responseFile storage/responses/getetablissements.json
      *
      */
@@ -522,7 +569,8 @@ class EtablissementController extends BaseController
     public function searchByCommoditesAvis(Request $request)
     {
         $idCommodites = explode(",", $request->input('idCommodites'));
-
+        $id_categorie = $request->input('id_categorie');
+        $data = array();
         foreach ($idCommodites as $key => $idCommodite) {
             $commodite = Commodite::find($idCommodite);
 
@@ -535,9 +583,17 @@ class EtablissementController extends BaseController
                 }
                 $etablissement->sousCategories;
 
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                }
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+
 
                 $etablissement->commodites;
                 $etablissement->images;
@@ -557,10 +613,18 @@ class EtablissementController extends BaseController
                 $etablissement->batiment->longitude;
                 $etablissement->batiment->latitude;
 
-                $data[] = $etablissement;
-                usort($data, function ($a, $b) {
-                    return $a['avis'] < $b['avis'];
-                });
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                    if ($sousCategories->categorie->id == $id_categorie) {
+                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
+                        if ($bool == false) {
+                            $data[] = $etablissement;
+                        }
+                        usort($data, function ($a, $b) {
+                            return $a['avis'] < $b['avis'];
+                        });
+                    }
+                }
             }
         }
 
@@ -573,6 +637,7 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @queryParam idCommodites string required . Example: 1,2,3
      * @queryParam user_id string id of user conncted . Example: 10
+     * @queryParam id_categorie string required id of categorie . Example: 1
      * @responseFile storage/responses/getetablissements.json
      *
      */
@@ -580,7 +645,8 @@ class EtablissementController extends BaseController
     public function searchByCommoditesVues(Request $request)
     {
         $idCommodites = explode(",", $request->input('idCommodites'));
-
+        $id_categorie = $request->input('id_categorie');
+        $data = array();
         foreach ($idCommodites as $key => $idCommodite) {
             $commodite = Commodite::find($idCommodite);
 
@@ -594,9 +660,15 @@ class EtablissementController extends BaseController
 
                 $etablissement->sousCategories;
 
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                }
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
 
                 $etablissement->commodites;
                 $etablissement->images;
@@ -616,10 +688,18 @@ class EtablissementController extends BaseController
                 $etablissement->batiment->longitude;
                 $etablissement->batiment->latitude;
 
-                $data[] = $etablissement;
-                usort($data, function ($a, $b) {
-                    return $a['vues'] < $b['vues'];
-                });
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                    if ($sousCategories->categorie->id == $id_categorie) {
+                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
+                        if ($bool == false) {
+                            $data[] = $etablissement;
+                        }
+                        usort($data, function ($a, $b) {
+                            return $a['vues'] < $b['vues'];
+                        });
+                    }
+                }
             }
         }
 
