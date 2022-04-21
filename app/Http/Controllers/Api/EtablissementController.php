@@ -434,8 +434,10 @@ class EtablissementController extends BaseController
             foreach ($etablissement->commentaires as $key => $commentaires) {
                 $commentaires->user;
             }
+            if ($etablissement->commercial) {
+                $etablissement->commercial->user;
+            }
 
-            $etablissement->commercial->user;
             if ($etablissement->manager) {
                 $etablissement->manager->user;
             }
@@ -512,7 +514,9 @@ class EtablissementController extends BaseController
                     $commentaires->user;
                 }
 
-                $etablissement->commercial->user;
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
+                }
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
                 }
@@ -552,12 +556,6 @@ class EtablissementController extends BaseController
         }
         return false;
     }
-
-
-
-
-
-
     /**
      * Search Establishment by Commodites & Avis.
      *
@@ -607,7 +605,9 @@ class EtablissementController extends BaseController
                     $commentaires->user;
                 }
 
-                $etablissement->commercial->user;
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
+                }
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
                 }
@@ -682,7 +682,9 @@ class EtablissementController extends BaseController
                     $commentaires->user;
                 }
 
-                $etablissement->commercial->user;
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
+                }
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
                 }
