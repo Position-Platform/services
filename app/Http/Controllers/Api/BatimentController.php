@@ -206,9 +206,7 @@ class BatimentController extends BaseController
         $commercial = Commercial::where('idUser', $user->id)->first();
 
         if ($admin || $commercial->id == $batiment->idCommercial) {
-            $request->validate([
-                'image' => 'mimes:png,jpg,jpeg|max:10000'
-            ]);
+
 
             try {
                 DB::beginTransaction();

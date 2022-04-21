@@ -91,14 +91,14 @@ class EtablissementController extends BaseController
      * @bodyParam services string required department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
      * @bodyParam logo file required establishment Logo.
+     * @bodyParam idSousCategorie string required ids of sous categories. Example: 1,2,3
+     * @bodyParam idCommodite string required ids of commodites. Example: 1,2,3
      * @responseFile storage/responses/addetablissement.json
      */
     public function store(Request $request)
     {
 
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
@@ -108,6 +108,7 @@ class EtablissementController extends BaseController
             'services' => 'required',
             'idSousCategorie' => 'required',
             'idBatiment' => 'required',
+            'idCommodite' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -130,50 +131,55 @@ class EtablissementController extends BaseController
 
         $batiment = Batiment::find($request->idBatiment);
 
-        if ($admin || $commercial) {
 
-            if ($request->file()) {
-                $fileName = time() . '_' . $request->cover->getClientOriginalName();
-                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
-                $input['cover'] = '/storage/' . $filePath;
-            }
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->cover->getClientOriginalName();
+            $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+            $input['cover'] = '/storage/' . $filePath;
+        }
 
-            if ($request->file('logo')) {
-                $fileName = time() . '_' . $request->logo->getClientOriginalName();
-                $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
-                $input['logo'] = '/storage/' . $filePathLogo;
-            }
+        if ($request->file('logo')) {
+            $fileName = time() . '_' . $request->logo->getClientOriginalName();
+            $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+            $input['logo'] = '/storage/' . $filePathLogo;
+        }
+
+        try {
+
+
+            DB::beginTransaction();
 
             try {
 
-
-                DB::beginTransaction();
+                $commercial = Commercial::where('idUser', $user->id)->first();
 
                 $input['idCommercial'] = $commercial->id;
-
-                $etablissement = $batiment->etablissements()->create($input);
-
-
-
-                if ($request->idSousCategorie != null) {
-                    $idSousCategories = explode(",", $request->idSousCategorie);
-                    $sousCategories = SousCategorie::find($idSousCategories);
-                    $etablissement->sousCategories()->attach($sousCategories);
-                }
-
-                if ($request->idCommodite != null) {
-                    $idCommodites = explode(",", $request->idCommodite);
-                    $commodites = Commodite::find($idCommodites);
-                    $etablissement->commodites()->attach($commodites);
-                }
-
-                DB::commit();
-
-                return $this->sendResponse($etablissement, "Création de l'etablissement reussie", 201);
-            } catch (\Exception $ex) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
+            } catch (\Exception $e) {
             }
+
+
+            $etablissement = $batiment->etablissements()->create($input);
+
+
+
+            if ($request->idSousCategorie != null) {
+                $idSousCategories = explode(",", $request->idSousCategorie);
+                $sousCategories = SousCategorie::find($idSousCategories);
+                $etablissement->sousCategories()->attach($sousCategories);
+            }
+
+            if ($request->idCommodite != null) {
+                $idCommodites = explode(",", $request->idCommodite);
+                $commodites = Commodite::find($idCommodites);
+                $etablissement->commodites()->attach($commodites);
+            }
+
+            DB::commit();
+
+            return $this->sendResponse($etablissement, "Création de l'etablissement reussie", 201);
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
 
@@ -255,10 +261,7 @@ class EtablissementController extends BaseController
         $commercial = Commercial::where('idUser', $user->id)->first();
 
         if ($admin || $commercial->id == $etablissement->idCommercial) {
-            $request->validate([
-                'cover' => 'mimes:png,jpg,jpeg|max:10000',
-                'logo' => 'mimes:png,jpg,jpeg,svg|max:10000',
-            ]);
+
 
             try {
                 DB::beginTransaction();
