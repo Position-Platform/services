@@ -374,15 +374,7 @@ class EtablissementController extends BaseController
         }
     }
 
-    public function checkIfEtablissementInFavoris($etablissement, $user_id)
-    {
-        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
-        if ($userFavoris) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
     /**
      * Search Establishment.
