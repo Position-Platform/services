@@ -32,6 +32,53 @@ class ManagerController extends BaseController
         foreach ($managers as $key => $manager) {
             $manager->user->roles;
             $manager->abonnement;
+
+            $etablissements = $manager->etablissements;
+
+            foreach ($etablissements as $key => $etablissement) {
+                if ($manager->user->id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $manager->user->id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
+                $etablissement->sousCategories;
+
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $key => $commentaires) {
+                    $commentaires->user;
+                }
+
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
+                }
+                if ($etablissement->manager) {
+                    $etablissement->manager->user;
+                }
+
+
+                $etablissement->batiment->longitude;
+                $etablissement->batiment->latitude;
+
+                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                    $sousCategories->categorie;
+                }
+            }
         }
 
         return $this->sendResponse($managers, 'Liste des Managers');
@@ -118,6 +165,53 @@ class ManagerController extends BaseController
         $manager = Manager::find($id);
         $manager->user->roles;
         $manager->abonnement;
+
+        $etablissements = $manager->etablissements;
+
+        foreach ($etablissements as $key => $etablissement) {
+            if ($manager->user->id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $manager->user->id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+            $etablissement->sousCategories;
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+            $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+
+
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $key => $commentaires) {
+                $commentaires->user;
+            }
+
+            if ($etablissement->commercial) {
+                $etablissement->commercial->user;
+            }
+            if ($etablissement->manager) {
+                $etablissement->manager->user;
+            }
+
+
+            $etablissement->batiment->longitude;
+            $etablissement->batiment->latitude;
+
+            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                $sousCategories->categorie;
+            }
+        }
 
         return $this->sendResponse($manager, "Manager");
     }

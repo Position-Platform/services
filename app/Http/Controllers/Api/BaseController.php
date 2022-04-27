@@ -7,6 +7,7 @@ use App\Models\Commentaire;
 use App\Models\Etablissement;
 use App\Models\Horaire;
 use App\Models\User;
+use App\Models\UserFavoris;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -207,5 +208,15 @@ class BaseController extends Controller
             }
         }
         return false;
+    }
+
+    public function checkIfEtablissementInFavoris($etablissement, $user_id)
+    {
+        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
+        if ($userFavoris) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
