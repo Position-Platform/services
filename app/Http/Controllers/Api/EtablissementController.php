@@ -440,7 +440,6 @@ class EtablissementController extends BaseController
 
 
 
-
     /**
      * Search Establishment by Commodites & Distance.
      *
@@ -533,7 +532,6 @@ class EtablissementController extends BaseController
         return $this->sendResponse($data, 'Liste des Etablissements');
     }
 
-
     /**
      * Search Establishment by Commodites & Avis.
      *
@@ -555,7 +553,6 @@ class EtablissementController extends BaseController
 
 
             foreach ($commodite->etablissements as $key => $etablissement) {
-
                 if ($request->user_id) {
                     $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
                 } else {
@@ -634,7 +631,6 @@ class EtablissementController extends BaseController
 
 
             foreach ($commodite->etablissements as $key => $etablissement) {
-
                 if ($request->user_id) {
                     $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
                 } else {

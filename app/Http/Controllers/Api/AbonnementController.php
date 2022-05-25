@@ -47,8 +47,6 @@ class AbonnementController extends BaseController
             'duree' => 'required',
         ]);
 
-
-
         if ($validator->fails()) {
             return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
         }
