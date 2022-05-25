@@ -1,0 +1,49 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "idUser": 3,
+            "numeroCni": 1256987,
+            "numeroBadge": 1325,
+            "ville": "Douala",
+            "quartier": "Melen",
+            "actif": true,
+            "sexe": "Masculin",
+            "whatsapp": 699999999,
+            "diplome": "BAC",
+            "tailleTshirt": "XXL",
+            "age": 25,
+            "deleted_at": null,
+            "created_at": "2022-02-19T11:25:11.000000Z",
+            "updated_at": "2022-02-19T11:25:11.000000Z",
+            "user": {
+                "id": 3,
+                "name": "Gautier",
+                "email": "bt@geo.sm",
+                "email_verified_at": null,
+                "phone": "699999998",
+                "fcmToken": null,
+                "imageProfil": "/storage/uploads/commerciaux/profils/1645269905_images.jpg",
+                "deleted_at": null,
+                "created_at": "2022-02-19T11:25:06.000000Z",
+                "updated_at": "2022-02-19T11:25:06.000000Z",
+                "roles": [
+                    {
+                        "id": 2,
+                        "name": "commercial",
+                        "guard_name": "api",
+                        "created_at": "2022-02-18T10:11:34.000000Z",
+                        "updated_at": "2022-02-18T10:11:34.000000Z",
+                        "pivot": {
+                            "model_id": 3,
+                            "role_id": 2,
+                            "model_type": "App\\Models\\User"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "message": "Liste des Commerciaux"
+}

@@ -1,0 +1,42 @@
+version: "3"
+services:
+    position-services:
+        build:
+            context: .
+            dockerfile: .docker/Dockerfile
+        image: position-services
+        container_name: position-services
+        ports:
+            - '${APP_PORT:-80}:80'
+        volumes:
+            - ./:/var/www/html
+        networks:
+            - position-services
+        depends_on:
+            - position-services-pgsql
+
+    position-services-pgsql:
+        restart: always
+        image: 'postgres:13'
+        ports:
+            - '${FORWARD_DB_PORT:-5432}:5432'
+        container_name: position-services-pgsql
+        environment:
+            PGPASSWORD: '${PG_PASSWORD:-secret}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+            POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+        volumes:
+            - 'db-pgsql:/var/lib/postgresql/data'
+        networks:
+            - position-services
+        healthcheck:
+            test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
+            retries: 3
+            timeout: 5s
+networks:
+    position-services:
+        driver: bridge
+volumes:
+    db-pgsql:
+        driver: local
