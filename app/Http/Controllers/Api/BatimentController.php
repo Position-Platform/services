@@ -35,7 +35,7 @@ class BatimentController extends BaseController
             $batiment->etablissements;
 
 
-            foreach ($batiment->etablissements as $key => $etablissement) {
+            foreach ($batiment->etablissements as  $etablissement) {
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
                 }
@@ -50,7 +50,7 @@ class BatimentController extends BaseController
 
                 $etablissement->sousCategories;
                 $etablissement->commodites;
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
+                foreach ($etablissement->sousCategories as  $sousCategories) {
                     $sousCategories->categorie;
                 }
 
@@ -58,7 +58,7 @@ class BatimentController extends BaseController
                 $etablissement->images;
                 $etablissement->commentaires;
 
-                foreach ($etablissement->commentaires as $key => $commentaires) {
+                foreach ($etablissement->commentaires as  $commentaires) {
                     $commentaires->user;
                 }
             }
@@ -150,7 +150,7 @@ class BatimentController extends BaseController
         $batiment->etablissements;
 
 
-        foreach ($batiment->etablissements as $key => $etablissement) {
+        foreach ($batiment->etablissements as $etablissement) {
             if ($etablissement->manager) {
                 $etablissement->manager->user;
             }
@@ -165,7 +165,7 @@ class BatimentController extends BaseController
 
             $etablissement->sousCategories;
             $etablissement->commodites;
-            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+            foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -173,7 +173,7 @@ class BatimentController extends BaseController
             $etablissement->images;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as $key => $commentaires) {
+            foreach ($etablissement->commentaires as  $commentaires) {
                 $commentaires->user;
             }
         }
@@ -261,16 +261,16 @@ class BatimentController extends BaseController
                 DB::beginTransaction();
 
 
-                foreach ($batiment->etablissements as $key => $etablissement) {
+                foreach ($batiment->etablissements as  $etablissement) {
                     $etablissement->images()->delete();
                     $etablissement->horaires()->delete();
                     $etablissement->commentaires()->delete();
 
-                    foreach ($etablissement->sousCategories as $key => $sousCategorie) {
+                    foreach ($etablissement->sousCategories as  $sousCategorie) {
                         $etablissement->sousCategories()->detach($sousCategorie->id);
                     }
 
-                    foreach ($etablissement->commodites as $key => $commodite) {
+                    foreach ($etablissement->commodites as  $commodite) {
                         $etablissement->commodites()->detach($commodite->id);
                     }
                 }
@@ -348,7 +348,7 @@ class BatimentController extends BaseController
 
             $horaires = $etablissement['horaires'];
 
-            foreach ($horaires as $key => $horaire) {
+            foreach ($horaires as  $horaire) {
                 $etabli->horaires()->create($horaire);
             }
 

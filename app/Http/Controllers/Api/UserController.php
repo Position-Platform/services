@@ -81,7 +81,7 @@ class UserController extends BaseController
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
             if ($user->hasVerifiedEmail()) {
-                $roles = $user->getRoleNames();
+                $user->getRoleNames();
                 $success['token'] = $user->createToken('Position')->accessToken;
                 $success['user'] = $user;
 
@@ -300,11 +300,11 @@ class UserController extends BaseController
 
         $etablissements = Etablissement::whereIn('id', $favorites->pluck('etablissement_id'))->get();
 
-        foreach ($etablissements as $key => $etablissement) {
+        foreach ($etablissements as  $etablissement) {
             $etablissement->batiment;
             $etablissement->sousCategories;
 
-            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+            foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -313,7 +313,7 @@ class UserController extends BaseController
             $etablissement->horaires;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as $key => $commentaires) {
+            foreach ($etablissement->commentaires as  $commentaires) {
                 $commentaires->user;
             }
 
