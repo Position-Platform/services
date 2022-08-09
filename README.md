@@ -32,6 +32,8 @@ MEILISEARCH_KEY=meilisearch apikey
 
 NEXAH_USERNAME=nexah username
 NEXAH_PASSWORD=nexah password
+
+MEILI_PORT=
 ```
 
 -   edit & add Docker config in .env
