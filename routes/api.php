@@ -84,6 +84,7 @@ Route::middleware('auth.apikey')->group(
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
+            Route::post('add/batiments', [App\Http\Controllers\Api\BatimentController::class, 'addCompletBatiment']);
             Route::apiResource('commentaires', App\Http\Controllers\Api\CommentaireController::class);
             Route::post('trackings', [App\Http\Controllers\Api\TrackingController::class, 'store']);
 

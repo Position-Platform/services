@@ -58,7 +58,7 @@ use Laravel\Scout\Searchable;
  */
 class Batiment extends Model
 {
-    use HasFactory, SoftDeletes, Searchable;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         "idCommercial", "idUser", "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"

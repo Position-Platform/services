@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Models\Admin;
 use App\Models\Batiment;
 use App\Models\Commercial;
+use App\Models\Commodite;
+use App\Models\SousCategorie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -284,6 +286,89 @@ class BatimentController extends BaseController
                 DB::rollBack();
                 return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
             }
+        }
+    }
+
+    /**
+     * Add Complet Batiment Process.
+     *
+     * @header Content-Type application/json
+     * @responseFile storage/responses/addbatiments.json
+     *
+     */
+
+    public function addCompletBatiment(Request $request)
+    {
+        $user = Auth::user();
+        $validator =  Validator::make($request->all(), [
+            'batiment' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
+        }
+
+        $batiment = $request->batiment;
+
+        try {
+            DB::beginTransaction();
+
+            $bati = Batiment::create([
+                'nom' => $batiment['nom'],
+                'nombreNiveau' => $batiment['nombreNiveau'],
+                'longitude' => $batiment['longitude'],
+                'latitude' => $batiment['latitude'],
+                'indication' => $batiment['indication'],
+                'rue' => $batiment['rue'],
+                'ville' => $batiment['ville'],
+                'commune' => $batiment['commune'],
+                'quartier' => $batiment['quartier'],
+                'idCommercial' => $batiment['idCommercial'],
+                'codeBatiment' => $batiment['codeBatiment'],
+                'idUser' => $user->id,
+            ]);
+
+            $etablissement = $batiment['etablissement'];
+
+
+
+            $etabli = $bati->etablissements()->create($etablissement);
+
+            if ($etablissement['idSousCategorie'] != null) {
+                $idSousCategories = explode(",", $etablissement['idSousCategorie']);
+                $sousCategories = SousCategorie::find($idSousCategories);
+                $etabli->sousCategories()->attach($sousCategories);
+            }
+
+            if ($etablissement['idCommodite'] != null) {
+                $idCommodites = explode(",", $etablissement['idCommodite']);
+                $commodites = Commodite::find($idCommodites);
+                $etabli->commodites()->attach($commodites);
+            }
+
+            $horaires = $etablissement['horaires'];
+
+            foreach ($horaires as $key => $horaire) {
+                $etabli->horaires()->create($horaire);
+            }
+
+
+
+
+
+            $bati['etablissement'] = $etabli;
+
+
+
+
+
+            DB::commit();
+
+
+            return $this->sendResponse($bati, "Création des batiments reussie", 201);
+        } catch (\Exception $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
     }
 }

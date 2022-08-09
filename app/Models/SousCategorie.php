@@ -40,7 +40,7 @@ use Laravel\Scout\Searchable;
  */
 class SousCategorie extends Model
 {
-    use HasFactory, SoftDeletes, Searchable;
+    use HasFactory, SoftDeletes;
 
 
     protected $fillable = [
