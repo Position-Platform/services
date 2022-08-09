@@ -34,9 +34,33 @@ services:
             test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
             retries: 3
             timeout: 5s
+
+    position-services-meilisearch:
+        container_name: position-services-meilisearch
+        image: getmeili/meilisearch:v0.27.2
+        environment:
+            - http_proxy
+            - https_proxy
+            - MEILI_NO_ANALYTICS=${MEILI_NO_ANALYTICS:-true}
+            - MEILI_ENV=${MEILI_ENV:-development}
+            - MEILI_LOG_LEVEL
+            - MEILI_DB_PATH=${MEILI_DB_PATH:-/data.ms}
+        ports:
+            - ${MEILI_PORT:-7700}:7700
+        networks:
+            - position-services
+        volumes:
+            - 'position-meilisearch:/data.ms'
+        restart: unless-stopped
+        healthcheck:
+          test: ["CMD", "wget", "--no-verbose", "--spider",  "http://position-services-meilisearch:7700/health"]
+          retries: 3
+          timeout: 5s
 networks:
     position-services:
         driver: bridge
 volumes:
     db-pgsql:
+        driver: local
+    position-meilisearch:
         driver: local
