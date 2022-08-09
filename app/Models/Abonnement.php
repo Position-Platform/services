@@ -40,7 +40,7 @@ use Laravel\Scout\Searchable;
  */
 class Abonnement extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     /**
      * The attributes that are mass assignable.

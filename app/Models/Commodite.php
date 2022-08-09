@@ -39,7 +39,7 @@ use Laravel\Scout\Searchable;
  */
 class Commodite extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
         "nom", "idTypeCommodite"
