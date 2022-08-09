@@ -93,12 +93,15 @@ class CategorieController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id The ID of the Connected User. Example: 1
+     * @queryParam bbox string required . Example: 13,5,13,5 (latMin,latMax,lonMin,lonMax)
      * @urlParam id int required the id of the category. Example: 2
      * @responseFile storage/responses/showcategorie.json
      */
     public function show(Request $request, $id)
     {
         $categorie = Categorie::find($id);
+
+        $bbox = explode(",", $request->bbox);
 
         $categorie->sousCategories;
 
@@ -141,7 +144,9 @@ class CategorieController extends BaseController
                     $commentaires->user;
                 }
 
-                $etablissement->commercial->user;
+                if ($etablissement->commercial) {
+                    $etablissement->commercial->user;
+                }
                 if ($etablissement->manager) {
                     $etablissement->manager->user;
                 }

@@ -35,7 +35,7 @@ class EtablissementController extends BaseController
      */
     public function index()
     {
-        $etablissements = Etablissement::all();
+        $etablissements = Etablissement::paginate(200);
 
         foreach ($etablissements as $key => $etablissement) {
             $etablissement->batiment;
@@ -439,15 +439,6 @@ class EtablissementController extends BaseController
     }
 
 
-    public function getDistance($lat1, $lon1, $lat2, $lon2)
-    {
-        $theta = $lon1 - $lon2;
-        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-        $dist = acos($dist);
-        $dist = rad2deg($dist);
-        $miles = $dist * 60 * 1.1515;
-        return (round($miles * 1.609344, 2));
-    }
 
     /**
      * Search Establishment by Commodites & Distance.
@@ -476,6 +467,8 @@ class EtablissementController extends BaseController
 
 
             foreach ($commodite->etablissements as $key => $etablissement) {
+
+
                 if ($request->user_id) {
                     $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
                 } else {
@@ -539,15 +532,6 @@ class EtablissementController extends BaseController
         return $this->sendResponse($data, 'Liste des Etablissements');
     }
 
-    public function  checkIfEtablassimentInDataArray($etablissement, $data)
-    {
-        foreach ($data as $key => $value) {
-            if ($value->id == $etablissement->id) {
-                return true;
-            }
-        }
-        return false;
-    }
     /**
      * Search Establishment by Commodites & Avis.
      *
@@ -752,5 +736,22 @@ class EtablissementController extends BaseController
         $favorite->delete();
 
         return $this->sendResponse($favorite, 'Etablissement retiré des favoris');
+    }
+
+    /**
+     * Update vues Establishment.
+     *
+     * @urlParam idEtablissement int required . Example: 1
+     * @responseFile 201 storage/responses/updateetablissement.json
+     */
+    public function updateVues($idEtablissement)
+    {
+
+        $etablissement = Etablissement::find($idEtablissement);
+
+        $etablissement->vues = $etablissement->vues + 1;
+        $etablissement->save();
+
+        return $this->sendResponse($etablissement, 'Vues du Etablissement incrémentées');
     }
 }

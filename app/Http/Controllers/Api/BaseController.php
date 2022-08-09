@@ -219,4 +219,34 @@ class BaseController extends Controller
             return false;
         }
     }
+
+    public function getDistance($lat1, $lon1, $lat2, $lon2)
+    {
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        return (round($miles * 1.609344, 2));
+    }
+
+    public function  checkIfEtablassimentInDataArray($etablissement, $data)
+    {
+        foreach ($data as $key => $value) {
+            if ($value->id == $etablissement->id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function checkIfCoordinatesInBbox($lat, $lng, $latMin, $latMax, $lngMin, $lngMax)
+    {
+        if ($lat >= $latMin && $lat <= $latMax) {
+            if ($lng >= $lngMin && $lng <= $lngMax) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

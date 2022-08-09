@@ -65,6 +65,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('search/etablissements/avis', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesAvis']);
         Route::get('search/etablissements/vues', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesVues']);
 
+        Route::put('etablissements/vues/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateVues']);
+
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
             Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
@@ -82,6 +84,7 @@ Route::middleware('auth.apikey')->group(
             Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
+            Route::post('add/batiments', [App\Http\Controllers\Api\BatimentController::class, 'addCompletBatiment']);
             Route::apiResource('commentaires', App\Http\Controllers\Api\CommentaireController::class);
             Route::post('trackings', [App\Http\Controllers\Api\TrackingController::class, 'store']);
 
