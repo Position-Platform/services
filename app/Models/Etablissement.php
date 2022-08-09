@@ -88,7 +88,7 @@ use Laravel\Scout\Searchable;
  */
 class Etablissement extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
         "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "idUser", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis", "logo"

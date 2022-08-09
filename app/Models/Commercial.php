@@ -57,7 +57,7 @@ use Laravel\Scout\Searchable;
  */
 class Commercial extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     /**
      * The attributes that are mass assignable.
