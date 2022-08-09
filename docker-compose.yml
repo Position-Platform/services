@@ -17,7 +17,7 @@ services:
 
     position-services-pgsql:
         restart: always
-        image: 'postgres:14'
+        image: 'postgres:13'
         ports:
             - '${FORWARD_DB_PORT:-5432}:5432'
         container_name: position-services-pgsql
