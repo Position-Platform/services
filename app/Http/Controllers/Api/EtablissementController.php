@@ -260,72 +260,70 @@ class EtablissementController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
 
 
-            try {
-                DB::beginTransaction();
+        try {
+            DB::beginTransaction();
 
-                $etablissement->nom = $request->nom ?? $etablissement->nom;
-                $etablissement->indicationAdresse = $request->indicationAdresse ?? $etablissement->indicationAdresse;
-                $etablissement->codePostal = $request->codePostal ?? $etablissement->codePostal;
-                $etablissement->siteInternet = $request->siteInternet ?? $etablissement->siteInternet;
-                $etablissement->description = $request->description ?? $etablissement->description;
-                $etablissement->etage = $request->etage ?? $etablissement->etage;
-                $etablissement->services = $request->services ?? $etablissement->services;
-                $etablissement->idManager = $request->idManager ?? $etablissement->idManager;
-                if ($request->vues) {
-                    $etablissement->vues =  $etablissement->vues + 1;
-                }
-
-                $etablissement->revoir = $request->revoir ?? $etablissement->revoir;
-                $etablissement->valide = $request->valide ?? $etablissement->valide;
-                $etablissement->phone = $request->phone ?? $etablissement->phone;
-                $etablissement->whatsapp1 = $request->whatsapp1 ?? $etablissement->whatsapp1;
-                $etablissement->whatsapp2 = $request->whatsapp2 ?? $etablissement->whatsapp2;
-                $etablissement->osmId = $request->osmId ?? $etablissement->osmId;
-                $etablissement->updated = $request->updated ?? $etablissement->updated;
-                $etablissement->ameliorations = $request->ameliorations ?? $etablissement->ameliorations;
-                if ($request->avis) {
-                    $etablissement->avis =  $etablissement->avis + 1;
-                }
-
-                if ($request->idSousCategorie != null) {
-                    $idSousCategories = explode(",", $request->idSousCategorie);
-                    $sousCategories = SousCategorie::find($idSousCategories);
-                    $etablissement->sousCategories()->attach($sousCategories);
-                }
-
-                if ($request->idCommodite != null) {
-                    $idCommodites = explode(",", $request->idCommodite);
-                    $commodites = Commodite::find($idCommodites);
-                    $etablissement->commodites()->attach($commodites);
-                }
-
-                $batiment = $etablissement->batiment;
-
-                if ($request->file()) {
-                    $fileName = time() . '_' . $request->cover->getClientOriginalName();
-                    $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
-                    $etablissement->cover = '/storage/' . $filePath;
-                }
-
-                if ($request->file('logo')) {
-                    $fileName = time() . '_' . $request->logo->getClientOriginalName();
-                    $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
-                    $etablissement->logo = '/storage/' . $filePathLogo;
-                }
-
-
-                $etablissement->save();
-
-                DB::commit();
-
-                return $this->sendResponse($etablissement, "Update Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
+            $etablissement->nom = $request->nom ?? $etablissement->nom;
+            $etablissement->indicationAdresse = $request->indicationAdresse ?? $etablissement->indicationAdresse;
+            $etablissement->codePostal = $request->codePostal ?? $etablissement->codePostal;
+            $etablissement->siteInternet = $request->siteInternet ?? $etablissement->siteInternet;
+            $etablissement->description = $request->description ?? $etablissement->description;
+            $etablissement->etage = $request->etage ?? $etablissement->etage;
+            $etablissement->services = $request->services ?? $etablissement->services;
+            $etablissement->idManager = $request->idManager ?? $etablissement->idManager;
+            if ($request->vues) {
+                $etablissement->vues =  $etablissement->vues + 1;
             }
+
+            $etablissement->revoir = $request->revoir ?? $etablissement->revoir;
+            $etablissement->valide = $request->valide ?? $etablissement->valide;
+            $etablissement->phone = $request->phone ?? $etablissement->phone;
+            $etablissement->whatsapp1 = $request->whatsapp1 ?? $etablissement->whatsapp1;
+            $etablissement->whatsapp2 = $request->whatsapp2 ?? $etablissement->whatsapp2;
+            $etablissement->osmId = $request->osmId ?? $etablissement->osmId;
+            $etablissement->updated = $request->updated ?? $etablissement->updated;
+            $etablissement->ameliorations = $request->ameliorations ?? $etablissement->ameliorations;
+            if ($request->avis) {
+                $etablissement->avis =  $etablissement->avis + 1;
+            }
+
+            if ($request->idSousCategorie != null) {
+                $idSousCategories = explode(",", $request->idSousCategorie);
+                $sousCategories = SousCategorie::find($idSousCategories);
+                $etablissement->sousCategories()->attach($sousCategories);
+            }
+
+            if ($request->idCommodite != null) {
+                $idCommodites = explode(",", $request->idCommodite);
+                $commodites = Commodite::find($idCommodites);
+                $etablissement->commodites()->attach($commodites);
+            }
+
+            $batiment = $etablissement->batiment;
+
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->cover->getClientOriginalName();
+                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                $etablissement->cover = '/storage/' . $filePath;
+            }
+
+            if ($request->file('logo')) {
+                $fileName = time() . '_' . $request->logo->getClientOriginalName();
+                $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                $etablissement->logo = '/storage/' . $filePathLogo;
+            }
+
+
+            $etablissement->save();
+
+            DB::commit();
+
+            return $this->sendResponse($etablissement, "Update Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
     }
 

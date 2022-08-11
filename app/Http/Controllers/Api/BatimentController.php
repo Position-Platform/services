@@ -207,37 +207,35 @@ class BatimentController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $batiment->idCommercial) {
 
 
-            try {
-                DB::beginTransaction();
-                $batiment->nom = $request->nom ?? $batiment->nom;
-                $batiment->nombreNiveau = $request->nombreNiveau ?? $batiment->nombreNiveau;
-                $batiment->longitude = $request->longitude ?? $batiment->longitude;
-                $batiment->latitude = $request->latitude ?? $batiment->latitude;
-                $batiment->indication = $request->indication ?? $batiment->indication;
-                $batiment->rue = $request->rue ?? $batiment->rue;
-                $batiment->ville = $request->ville ?? $batiment->ville;
-                $batiment->commune = $request->commune ?? $batiment->commune;
-                $batiment->quartier = $request->quartier ?? $batiment->quartier;
+        try {
+            DB::beginTransaction();
+            $batiment->nom = $request->nom ?? $batiment->nom;
+            $batiment->nombreNiveau = $request->nombreNiveau ?? $batiment->nombreNiveau;
+            $batiment->longitude = $request->longitude ?? $batiment->longitude;
+            $batiment->latitude = $request->latitude ?? $batiment->latitude;
+            $batiment->indication = $request->indication ?? $batiment->indication;
+            $batiment->rue = $request->rue ?? $batiment->rue;
+            $batiment->ville = $request->ville ?? $batiment->ville;
+            $batiment->commune = $request->commune ?? $batiment->commune;
+            $batiment->quartier = $request->quartier ?? $batiment->quartier;
 
-                if ($request->file()) {
-                    $fileName = time() . '_' . $request->image->getClientOriginalName();
-                    $filePath = $request->file('image')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
-                    $batiment->image = '/storage/' . $filePath;
-                }
-
-
-                $batiment->save();
-
-                DB::commit();
-
-                return $this->sendResponse($batiment, "Update Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->image->getClientOriginalName();
+                $filePath = $request->file('image')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                $batiment->image = '/storage/' . $filePath;
             }
+
+
+            $batiment->save();
+
+            DB::commit();
+
+            return $this->sendResponse($batiment, "Update Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
     }
 
@@ -323,12 +321,13 @@ class BatimentController extends BaseController
                 'ville' => $batiment['ville'],
                 'commune' => $batiment['commune'],
                 'quartier' => $batiment['quartier'],
-                'idCommercial' => $batiment['idCommercial'],
+                'idCommercial' => $batiment['idCommercial'] ?? null,
                 'codeBatiment' => $batiment['codeBatiment'],
                 'idUser' => $user->id,
             ]);
 
             $etablissement = $batiment['etablissement'];
+            $etablissement['idUser'] = $user->id;
 
 
 
