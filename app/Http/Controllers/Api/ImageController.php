@@ -40,9 +40,6 @@ class ImageController extends BaseController
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
         $validator =  Validator::make($request->all(), [
             'idEtablissement' => 'required',
@@ -63,24 +60,22 @@ class ImageController extends BaseController
             $input['imageUrl'] = '/storage/' . $filePath;
         }
 
-        if ($admin || $commercial) {
-            try {
+        try {
 
 
-                DB::beginTransaction();
+            DB::beginTransaction();
 
 
 
-                $image = $etablissement->images()->create($input);
+            $image = $etablissement->images()->create($input);
 
 
-                DB::commit();
+            DB::commit();
 
-                return $this->sendResponse($image, "Création de l'image reussie", 201);
-            } catch (\Exception $ex) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
-            }
+            return $this->sendResponse($image, "Création de l'image reussie", 201);
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
 
@@ -113,32 +108,30 @@ class ImageController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
-            $request->validate([
-                'imageUrl' => 'mimes:png,jpg,jpeg|max:20000',
-            ]);
-            try {
-                DB::beginTransaction();
+        $request->validate([
+            'imageUrl' => 'mimes:png,jpg,jpeg|max:20000',
+        ]);
+        try {
+            DB::beginTransaction();
 
 
-                $batiment = $image->etablissement->batiment;
-                $etablissement = $image->etablissement;
+            $batiment = $image->etablissement->batiment;
+            $etablissement = $image->etablissement;
 
-                if ($request->file()) {
-                    $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
-                    $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
-                    $image->imageUrl = '/storage/' . $filePath;
-                }
-
-                $save = $image->save();
-
-                DB::commit();
-
-                return $this->sendResponse($etablissement, "Update Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
+                $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
+                $image->imageUrl = '/storage/' . $filePath;
             }
+
+            $save = $image->save();
+
+            DB::commit();
+
+            return $this->sendResponse($etablissement, "Update Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
 
@@ -158,19 +151,17 @@ class ImageController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
-            try {
-                DB::beginTransaction();
+        try {
+            DB::beginTransaction();
 
-                Image::destroy($id);
+            Image::destroy($id);
 
-                DB::commit();
+            DB::commit();
 
-                return $this->sendResponse("", "Delete Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
-            }
+            return $this->sendResponse("", "Delete Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
 }

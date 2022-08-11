@@ -41,41 +41,35 @@ class HoraireController extends BaseController
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
         $validator =  Validator::make($request->all(), [
-            'idEtablissement' => 'required',
-            'jour' => 'required',
-            'plageHoraire' => 'required',
+            'horaires' => 'required',
+            'idEtablissement' => 'required|exists:etablissements,id',
         ]);
+
+        $horaires = $request->horaires;
 
         if ($validator->fails()) {
             return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
         }
 
-        $input['jour'] = $request->jour;
-        $input['plageHoraire'] = $request->plageHoraire;
-
-        if ($admin || $commercial) {
-            try {
+        try {
 
 
-                DB::beginTransaction();
+            DB::beginTransaction();
 
-                $etablissement = Etablissement::find($request->idEtablissement);
+            $etablissement = Etablissement::find($request->idEtablissement);
 
-                $horaire = $etablissement->horaires()->create($input);
-
-
-                DB::commit();
-
-                return $this->sendResponse($horaire, "Création de l'horaire reussie", 201);
-            } catch (\Exception $ex) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
+            foreach ($horaires as  $horaire) {
+                $etablissement->horaires()->create($horaire);
             }
+
+            DB::commit();
+
+            return $this->sendResponse("", "Création de l'horaire reussie", 201);
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
 
@@ -109,21 +103,19 @@ class HoraireController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
-            try {
-                DB::beginTransaction();
+        try {
+            DB::beginTransaction();
 
 
-                $horaire->plageHoraire = $request->plageHoraire ?? $horaire->plageHoraire;
-                $horaire->save();
+            $horaire->plageHoraire = $request->plageHoraire ?? $horaire->plageHoraire;
+            $horaire->save();
 
-                DB::commit();
+            DB::commit();
 
-                return $this->sendResponse($etablissement, "Update Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
-            }
+            return $this->sendResponse($etablissement, "Update Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
 
@@ -143,19 +135,17 @@ class HoraireController extends BaseController
         $admin = Admin::where('idUser', $user->id)->first();
         $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
-            try {
-                DB::beginTransaction();
+        try {
+            DB::beginTransaction();
 
-                Horaire::destroy($id);
+            Horaire::destroy($id);
 
-                DB::commit();
+            DB::commit();
 
-                return $this->sendResponse("", "Delete Success", 201);
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
-            }
+            return $this->sendResponse("", "Delete Success", 201);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
 }
