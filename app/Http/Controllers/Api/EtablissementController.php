@@ -36,6 +36,7 @@ class EtablissementController extends BaseController
     public function index()
     {
         $etablissements = Etablissement::paginate(100);
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $key => $etablissement) {
             $etablissement->batiment;
