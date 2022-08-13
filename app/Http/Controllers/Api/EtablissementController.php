@@ -35,7 +35,7 @@ class EtablissementController extends BaseController
      */
     public function index()
     {
-        $etablissements = Etablissement::paginate(200);
+        $etablissements = Etablissement::paginate(100);
 
         foreach ($etablissements as $key => $etablissement) {
             $etablissement->batiment;
