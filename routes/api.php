@@ -66,6 +66,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('search/etablissements/vues', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesVues']);
 
         Route::put('etablissements/vues/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateVues']);
+        Route::get('count/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'countEtablissement']);
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);

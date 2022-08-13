@@ -72,6 +72,12 @@ class EtablissementController extends BaseController
         return $this->sendResponse($etablissements, 'Liste des Etablissements');
     }
 
+    public function countEtablissement()
+    {
+        $etablissements = Etablissement::count();
+        return $this->sendResponse($etablissements, 'Nombre des Etablissements');
+    }
+
     /**
      * Add a new establishment.
      *
