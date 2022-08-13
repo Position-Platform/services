@@ -75,6 +75,8 @@ class EtablissementController extends BaseController
     public function countEtablissement()
     {
         $etablissements = Etablissement::count();
+        $nbre_page = ceil($etablissements / 100);
+        $etablissements['nbre_page'] = $nbre_page;
         return $this->sendResponse($etablissements, 'Nombre des Etablissements');
     }
 
