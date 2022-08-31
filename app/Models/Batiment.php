@@ -61,21 +61,16 @@ class Batiment extends Model
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "idCommercial", "idUser", "nom", "nombreNiveau", "codeBatiment", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
+        "user_id", "nom", "nombre_niveau", "code", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
     ];
 
     public function etablissements()
     {
-        return $this->hasMany(Etablissement::class, "idBatiment");
-    }
-
-    public function commercial()
-    {
-        return $this->belongsTo(Commercial::class, "idCommercial");
+        return $this->hasMany(Etablissement::class, "batiment_id");
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, "idUser");
+        return $this->belongsTo(User::class);
     }
 }

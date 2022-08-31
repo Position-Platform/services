@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('commodites_etablissements', function (Blueprint $table) {
             $table->id();
-            $table->integer("idEtablissement");
-            $table->integer("idCommodite");
+            $table->integer("etablissement_id");
+            $table->integer("commodite_id");
             $table->timestamps();
         });
     }

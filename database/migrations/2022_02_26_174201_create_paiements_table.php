@@ -15,13 +15,12 @@ return new class extends Migration
     {
         Schema::create('paiements', function (Blueprint $table) {
             $table->id();
-            $table->integer("idAbonnement");
-            $table->integer("idManager");
-            $table->integer("idCommercial");
-            $table->date("datePaiement");
-            $table->string("referenceId")->nullable();
-            $table->string("referencePosition")->nullable();
-            $table->string("typePaiement");
+            $table->integer("abonnement_id");
+            $table->integer("user_id");
+            $table->date("date_paiement");
+            $table->string("reference_id")->nullable();
+            $table->string("reference_position")->nullable();
+            $table->string("type_paiement");
             $table->string("statut");
             $table->softDeletes();
             $table->timestamps();

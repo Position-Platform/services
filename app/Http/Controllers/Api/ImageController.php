@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Admin;
-use App\Models\Commercial;
 use App\Models\Etablissement;
 use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -34,47 +31,46 @@ class ImageController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam imageUrl file required picture.
-     * @bodyParam idEtablissement int required the id of the Establishment. Example: 2
+     * @bodyParam image_url file required picture.
+     * @bodyParam etablissement_id int required the id of the Establishment. Example: 2
      * @responseFile storage/responses/addimage.json
      */
     public function store(Request $request)
     {
 
         $validator =  Validator::make($request->all(), [
-            'idEtablissement' => 'required',
-            'imageUrl' => 'mimes:png,jpg,jpeg|max:20000'
+            'etablissement_id' => 'required',
+            'image_url' => 'mimes:png,jpg,jpeg|max:20000'
         ]);
 
         if ($validator->fails()) {
             return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
         }
 
-        $etablissement = Etablissement::find($request->idEtablissement);
+        $etablissement = Etablissement::find($request->etablissement_id);
 
         $batiment = $etablissement->batiment;
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
-            $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
-            $input['imageUrl'] = '/storage/' . $filePath;
+            $fileName = time() . '_' . $request->image_url->getClientOriginalName();
+            $filePath = $request->file('image_url')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $etablissement->nom, $fileName, 'public');
+            $input['image_url'] = '/storage/' . $filePath;
         }
 
         try {
 
 
-            DB::beginTransaction();
 
 
 
             $image = $etablissement->images()->create($input);
 
+            $success['image'] = $image;
 
-            DB::commit();
 
-            return $this->sendResponse($image, "Création de l'image reussie", 201);
+
+            return $this->sendResponse($success, "Création de l'image reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
@@ -96,41 +92,38 @@ class ImageController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the Picture. Example: 2
-     * @bodyParam imageUrl file picture.
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam image_url file picture.
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateimage.json
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::user();
+        Auth::user();
         $image = Image::find($id);
-        $etablissement = Etablissement::find($image->idEtablissement);
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
+        $etablissement = Etablissement::find($image->etablissement_id);
 
         $request->validate([
-            'imageUrl' => 'mimes:png,jpg,jpeg|max:20000',
+            'image_url' => 'mimes:png,jpg,jpeg|max:20000',
         ]);
         try {
-            DB::beginTransaction();
 
 
             $batiment = $image->etablissement->batiment;
             $etablissement = $image->etablissement;
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->imageUrl->getClientOriginalName();
-                $filePath = $request->file('imageUrl')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $etablissement->nom, $fileName, 'public');
-                $image->imageUrl = '/storage/' . $filePath;
+                $fileName = time() . '_' . $request->image_url->getClientOriginalName();
+                $filePath = $request->file('image_url')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $etablissement->nom, $fileName, 'public');
+                $image->image_url = '/storage/' . $filePath;
             }
 
-            $save = $image->save();
+            $image->save();
 
-            DB::commit();
+            $success['image'] = $image;
 
-            return $this->sendResponse($etablissement, "Update Success", 201);
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
@@ -145,22 +138,15 @@ class ImageController extends BaseController
      */
     public function destroy($id)
     {
-        $user = Auth::user();
-        $image = Image::find($id);
-        $etablissement = Etablissement::find($image->idEtablissement);
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
+        Auth::user();
 
         try {
-            DB::beginTransaction();
 
             Image::destroy($id);
 
-            DB::commit();
 
             return $this->sendResponse("", "Delete Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }

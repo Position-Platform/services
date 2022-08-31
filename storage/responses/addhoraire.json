@@ -1,12 +1,5 @@
 {
     "success": true,
-    "data": {
-        "jour": "Lundi",
-        "plageHoraire": "07:00-11:00;13:00-17:00",
-        "idEtablissement": 6,
-        "updated_at": "2022-03-01T12:45:05.000000Z",
-        "created_at": "2022-03-01T12:45:05.000000Z",
-        "id": 1
-    },
+    "data": "",
     "message": "Création de l'horaire reussie"
 }

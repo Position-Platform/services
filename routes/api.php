@@ -35,10 +35,6 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
 
 
-
-        Route::get('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'show']);
-        Route::post('managers', [App\Http\Controllers\Api\ManagerController::class, 'store']);
-
         Route::get('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'index']);
         Route::get('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'show']);
 
@@ -61,9 +57,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
 
-        Route::get('search/etablissements/distance', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesDistance']);
-        Route::get('search/etablissements/avis', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesAvis']);
-        Route::get('search/etablissements/vues', [App\Http\Controllers\Api\EtablissementController::class, 'searchByCommoditesVues']);
+        Route::get('search/etablissements/filter', [App\Http\Controllers\Api\EtablissementController::class, 'filterSearch']);
 
         Route::put('etablissements/vues/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateVues']);
         Route::get('count/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'countEtablissement']);
@@ -76,13 +70,6 @@ Route::middleware('auth.apikey')->group(
 
             Route::post('tracking', [App\Http\Controllers\Api\TrackingController::class, 'store']);
 
-            Route::get('commercials', [App\Http\Controllers\Api\CommercialController::class, 'index']);
-            Route::get('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'show']);
-            Route::put('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'update']);
-
-            Route::get('managers', [App\Http\Controllers\Api\ManagerController::class, 'index']);
-            Route::put('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'update']);
-            Route::delete('managers/{id}', [App\Http\Controllers\Api\ManagerController::class, 'destroy']);
 
             Route::apiResource('batiments', App\Http\Controllers\Api\BatimentController::class);
             Route::post('add/batiments', [App\Http\Controllers\Api\BatimentController::class, 'addCompletBatiment']);
@@ -110,8 +97,6 @@ Route::middleware('auth.apikey')->group(
                 Route::apiResource('roles', App\Http\Controllers\Api\RoleController::class);
                 Route::apiResource('permissions', App\Http\Controllers\Api\PermissionController::class);
                 Route::apiResource('admins', App\Http\Controllers\Api\AdminController::class);
-                Route::post('commercials', [App\Http\Controllers\Api\CommercialController::class, 'store']);
-                Route::delete('commercials/{id}', [App\Http\Controllers\Api\CommercialController::class, 'destroy']);
 
                 Route::post('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'store']);
                 Route::put('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'update']);

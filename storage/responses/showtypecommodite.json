@@ -1,77 +1,23 @@
 {
     "success": true,
     "data": {
-        "id": 1,
-        "nom": "Luxe",
-        "deleted_at": null,
-        "created_at": "2022-02-25T14:02:08.000000Z",
-        "updated_at": "2022-02-25T14:02:08.000000Z",
-        "commodites": [
-            {
-                "id": 6,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:39:42.000000Z",
-                "updated_at": "2022-02-25T14:39:42.000000Z"
-            },
-            {
-                "id": 7,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:39:54.000000Z",
-                "updated_at": "2022-02-25T14:39:54.000000Z"
-            },
-            {
-                "id": 8,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:40:15.000000Z",
-                "updated_at": "2022-02-25T14:40:15.000000Z"
-            },
-            {
-                "id": 9,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:40:35.000000Z",
-                "updated_at": "2022-02-25T14:40:35.000000Z"
-            },
-            {
-                "id": 10,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:43:06.000000Z",
-                "updated_at": "2022-02-25T14:43:06.000000Z"
-            },
-            {
-                "id": 12,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:45:42.000000Z",
-                "updated_at": "2022-02-25T14:45:42.000000Z"
-            },
-            {
-                "id": 16,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:48:03.000000Z",
-                "updated_at": "2022-02-25T14:48:03.000000Z"
-            },
-            {
-                "id": 19,
-                "nom": "Wifi",
-                "idTypeCommodite": 1,
-                "deleted_at": null,
-                "created_at": "2022-02-25T14:53:31.000000Z",
-                "updated_at": "2022-02-25T14:53:31.000000Z"
-            }
-        ]
+        "type_commodite": {
+            "id": 1,
+            "nom": "Bien être",
+            "deleted_at": null,
+            "created_at": "2022-08-31T01:22:35.000000Z",
+            "updated_at": "2022-08-31T01:23:56.000000Z",
+            "commodites": [
+                {
+                    "id": 1,
+                    "nom": "Wifi +",
+                    "type_commodite_id": 1,
+                    "deleted_at": null,
+                    "created_at": "2022-08-31T01:25:19.000000Z",
+                    "updated_at": "2022-08-31T01:28:27.000000Z"
+                }
+            ]
+        }
     },
     "message": "Type Commodite"
 }

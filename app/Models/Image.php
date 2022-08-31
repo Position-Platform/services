@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * App\Models\Image
  *
  * @property int $id
- * @property int $idEtablissement
+ * @property int $etablissement_id
  * @property string $imageUrl
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Image whereIdEtablissement($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Image whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereImageUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|Image withTrashed()
@@ -35,12 +35,12 @@ class Image extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "idEtablissement", "imageUrl"
+        "etablissement_id", "image_url"
     ];
 
 
     public function etablissement()
     {
-        return $this->belongsTo(Etablissement::class, "idEtablissement");
+        return $this->belongsTo(Etablissement::class);
     }
 }

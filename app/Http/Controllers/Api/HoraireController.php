@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Admin;
-use App\Models\Commercial;
 use App\Models\Etablissement;
 use App\Models\Horaire;
 use Illuminate\Http\Request;
@@ -34,9 +32,8 @@ class HoraireController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam jour string required  the name of the day. Example: Lundi
-     * @bodyParam idEtablissement int required the id of the Establishment. Example: 2
-     * @bodyParam plageHoraire string required time slot. Example: 10:00-15:00;16:00-18:00
+     * @bodyParam etablissement_id int required the id of the Establishment. Example: 2
+     * @bodyParam horaires string required horaire object. Example: [{"jour": "lundi","etablissement_id":1,"plage_horaire":"07:00-12:00;13:00-17:00"}]
      * @responseFile storage/responses/addhoraire.json
      */
     public function store(Request $request)
@@ -44,7 +41,7 @@ class HoraireController extends BaseController
 
         $validator =  Validator::make($request->all(), [
             'horaires' => 'required',
-            'idEtablissement' => 'required|exists:etablissements,id',
+            'etablissement_id' => 'required|exists:etablissements,id',
         ]);
 
         $horaires = $request->horaires;
@@ -58,7 +55,7 @@ class HoraireController extends BaseController
 
             DB::beginTransaction();
 
-            $etablissement = Etablissement::find($request->idEtablissement);
+            $etablissement = Etablissement::find($request->etablissement_id);
 
             foreach ($horaires as  $horaire) {
                 $etablissement->horaires()->create($horaire);
@@ -91,30 +88,26 @@ class HoraireController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the Schedule. Example: 2
-     * @bodyParam plageHoraire string  time slot. Example: 10:00-15:00;16:00-18:00
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam plage_horaire string  time slot. Example: 10:00-15:00;16:00-18:00
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatehoraire.json
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::user();
+        Auth::user();
         $horaire = Horaire::find($id);
-        $etablissement = Etablissement::find($horaire->idEtablissement);
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
         try {
-            DB::beginTransaction();
 
 
-            $horaire->plageHoraire = $request->plageHoraire ?? $horaire->plageHoraire;
+            $horaire->plage_horaire = $request->plage_horaire ?? $horaire->plage_horaire;
             $horaire->save();
 
-            DB::commit();
+            $success['horaire'] = $horaire;
 
-            return $this->sendResponse($etablissement, "Update Success", 201);
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
@@ -129,22 +122,15 @@ class HoraireController extends BaseController
      */
     public function destroy($id)
     {
-        $user = Auth::user();
-        $horaire = Horaire::find($id);
-        $etablissement = Etablissement::find($horaire->idEtablissement);
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
+        Auth::user();
 
         try {
-            DB::beginTransaction();
 
             Horaire::destroy($id);
 
-            DB::commit();
 
             return $this->sendResponse("", "Delete Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }

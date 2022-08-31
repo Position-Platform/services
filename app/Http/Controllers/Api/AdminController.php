@@ -28,11 +28,13 @@ class AdminController extends BaseController
     {
         $admins = Admin::all();
 
-        foreach ($admins as $key => $admin) {
+        foreach ($admins as $admin) {
             $admin->user->roles;
         }
 
-        return $this->sendResponse($admins, 'Liste des Admins');
+        $success['admins'] = $admins;
+
+        return $this->sendResponse($success, 'Liste des Admins');
     }
 
     /**
@@ -43,20 +45,20 @@ class AdminController extends BaseController
      * @bodyParam email string required the email of the admin. Example: gautier@position.cm
      * @bodyParam password string required the password of the admin. Example: gautier123
      * @bodyParam phone int required The phone number of the admin. Example:699999999
-     * @bodyParam imageProfil file Profile Image.
+     * @bodyParam image_profil file Profile Image.
      * @responseFile storage/responses/addadmin.json
      */
     public function store(Request $request)
     {
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
         if ($admin->isSuperAdmin == 1) {
             $validator =  Validator::make($request->all(), [
                 'name' => 'required',
                 'email' => 'required|unique:users,email',
                 'phone' => 'regex:/^[\+0-9]+$/',
                 'password' => 'string|between:6,20',
-                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
+                'image_profil' => 'mimes:png,jpg,jpeg|max:20000'
             ]);
 
             if ($validator->fails()) {
@@ -69,9 +71,9 @@ class AdminController extends BaseController
             $input['password'] = bcrypt($request->password);
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
-                $filePath = $request->file('imageProfil')->storeAs('uploads/admins/profils', $fileName, 'public');
-                $input['imageProfil'] = '/storage/' . $filePath;
+                $fileName = time() . '_' . $request->image_profil->getClientOriginalName();
+                $filePath = $request->file('image_profil')->storeAs('uploads/admins/profils', $fileName, 'public');
+                $input['image_profil'] = '/storage/' . $filePath;
             }
 
 
@@ -83,7 +85,7 @@ class AdminController extends BaseController
                 $user->assignRole('admin');
                 $user->sendEmailVerificationNotification();
 
-                $inputAdmin['idUser'] = $user->id;
+                $inputAdmin['user_id'] = $user->id;
 
                 $admin = Admin::create($inputAdmin);
 
@@ -91,7 +93,9 @@ class AdminController extends BaseController
 
                 DB::commit();
 
-                return $this->sendResponse($admin, "Création de l'admin reussie", 201);
+                $success['admin'] = $admin;
+
+                return $this->sendResponse($success, "Création de l'admin reussie", 201);
             } catch (\Exception $ex) {
                 DB::rollBack();
                 return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
@@ -113,7 +117,9 @@ class AdminController extends BaseController
         $admin = Admin::find($id);
         $admin->user->roles;
 
-        return $this->sendResponse($admin, "Admin");
+        $success['admin'] = $admin;
+
+        return $this->sendResponse($success, "Admin");
     }
 
     /**
@@ -124,30 +130,30 @@ class AdminController extends BaseController
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
      * @bodyParam isSuperAdmin bool. Example:true
-     * @bodyParam imageProfil file Profile Image.
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam image_profil file Profile Image.
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateadmin.json
      */
     public function update(Request $request, $id)
     {
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
         if ($admin->isSuperAdmin == 1 || $user->id == $id) {
             $admin = Admin::find($id);
             $request->validate([
-                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
+                'image_profil' => 'mimes:png,jpg,jpeg|max:20000'
             ]);
 
             try {
                 DB::beginTransaction();
-                $userUpdate = User::find($admin->idUser);
+                $userUpdate = User::find($admin->user_id);
                 $userUpdate->name = $request->name ?? $userUpdate->name;
                 $userUpdate->phone = $request->phone ?? $userUpdate->phone;
 
                 if ($request->file()) {
-                    $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
-                    $filePath = $request->file('imageProfil')->storeAs('uploads/admins/profils', $fileName, 'public');
-                    $userUpdate->imageProfil = '/storage/' . $filePath;
+                    $fileName = time() . '_' . $request->image_profil->getClientOriginalName();
+                    $filePath = $request->file('image_profil')->storeAs('uploads/admins/profils', $fileName, 'public');
+                    $userUpdate->image_profil = '/storage/' . $filePath;
                 }
                 $userUpdate->save();
 
@@ -159,10 +165,12 @@ class AdminController extends BaseController
 
                 DB::commit();
 
-                return $this->sendResponse($admin, "Update Success", 201);
+                $success['admin'] = $admin;
+
+                return $this->sendResponse($success, "Update Success", 201);
             } catch (\Throwable $th) {
                 DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+                return $this->sendError('Erreur.', ['Echec de mise à jour' => $th->getMessage()], 400);
             }
         } else {
             return $this->sendError("Pas autorisé.", ['error' => 'Unauthorised']);
@@ -179,7 +187,7 @@ class AdminController extends BaseController
     public function destroy($id)
     {
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
         if ($admin->isSuperAdmin == 1 || $user->id == $id) {
             $admin = Admin::find($id);
 
@@ -194,7 +202,7 @@ class AdminController extends BaseController
                 return $this->sendResponse("", "Delete Success", 201);
             } catch (\Throwable $th) {
                 DB::rollBack();
-                return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+                return $this->sendError('Echec de suppression.', ['error' => $th->getMessage()], 400);
             }
         }
     }

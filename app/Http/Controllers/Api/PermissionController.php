@@ -18,8 +18,10 @@ class PermissionController extends Controller
     {
         $permissions = Permission::all();
 
+        $success['permissions'] = $permissions;
 
-        return $this->sendResponse($permissions, 'Liste des Permissions');
+
+        return $this->sendResponse($success, 'Liste des Permissions');
     }
 
     /**
@@ -40,7 +42,9 @@ class PermissionController extends Controller
 
         $permission = Permission::create(['name' => $request->input('name')]);
 
-        return $this->sendResponse($permission, 'Création de la Permission reussie');
+        $success['permission'] = $permission;
+
+        return $this->sendResponse($success, 'Création de la Permission reussie');
     }
 
     /**
@@ -53,7 +57,9 @@ class PermissionController extends Controller
     {
         $permission = Permission::find($id);
 
-        return $this->sendResponse($permission, 'Permission');
+        $success['permission'] = $permission;
+
+        return $this->sendResponse($success, 'Permission');
     }
 
     /**
@@ -78,7 +84,8 @@ class PermissionController extends Controller
         $savePermission = $permission->save();
 
         if ($savePermission) {
-            return $this->sendResponse($permission, "Update Success", 201);
+            $success['permission'] = $permission;
+            return $this->sendResponse($success, "Update Success", 201);
         } else {
             return $this->sendError("Erreur de Création.", ['error' => 'Echec de Mise à jour']);
         }

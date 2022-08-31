@@ -20,10 +20,11 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone')->unique();
-            $table->string('fcmToken')->nullable();
-            $table->text('imageProfil')->nullable();
+            $table->text('fcm_token')->nullable();
+            $table->text('image_profil')->nullable();
             $table->text('token')->nullable();
-            $table->text('tokenSecret')->nullable();
+            $table->text('token_secret')->nullable();
+            $table->integer("abonnement_id")->default(1);
             $table->rememberToken();
             $table->softDeletes();
             $table->timestamps();

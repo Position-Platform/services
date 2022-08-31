@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('sous_categories_etablissements', function (Blueprint $table) {
             $table->id();
-            $table->integer("idEtablissement");
-            $table->integer("idSousCategorie");
+            $table->integer("etablissement_id");
+            $table->integer("sous_categorie_id");
             $table->timestamps();
         });
     }

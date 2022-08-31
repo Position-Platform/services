@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Models\Tracking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 /**
  *
@@ -39,7 +38,6 @@ class TrackingController extends BaseController
         try {
 
 
-            DB::beginTransaction();
 
             $user = Auth::user();
 
@@ -48,11 +46,10 @@ class TrackingController extends BaseController
             $tracking = $user->trackings()->create($input);
 
 
-            DB::commit();
+            $success['tracking'] = $tracking;
 
-            return $this->sendResponse($tracking, "Ajout de la position reussie", 201);
+            return $this->sendResponse($success, "Ajout de la position reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }

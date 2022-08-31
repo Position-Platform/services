@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('trackings', function (Blueprint $table) {
             $table->id();
-            $table->integer("idUser");
+            $table->integer("user_id");
             $table->string("longitude");
             $table->string("latitude");
             $table->softDeletes();

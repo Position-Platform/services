@@ -1,13 +1,15 @@
 {
     "success": true,
     "data": {
-        "idUser": 1,
-        "idEtablissement": 6,
-        "commentaire": "J'aime beaucoup",
-        "rating": "3",
-        "updated_at": "2022-03-01T23:10:41.000000Z",
-        "created_at": "2022-03-01T23:10:41.000000Z",
-        "id": 1
+        "commentaire": {
+            "user_id": 1,
+            "etablissement_id": 2,
+            "commentaire": "J'aime ce lieu",
+            "rating": 3,
+            "updated_at": "2022-08-31T01:56:13.000000Z",
+            "created_at": "2022-08-31T01:56:13.000000Z",
+            "id": 1
+        }
     },
     "message": "Création du commentaire reussie"
 }

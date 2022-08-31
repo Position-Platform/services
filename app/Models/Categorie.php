@@ -46,16 +46,17 @@ class Categorie extends Model
 
 
     protected $fillable = [
-        "id", "nom", "shortname", "logourl", "vues"
+        "id", "nom", "shortname", "logourl",
+        "logourlmap", "vues"
     ];
 
     public function sousCategories()
     {
-        return $this->hasMany(SousCategorie::class, "idcategorie");
+        return $this->hasMany(SousCategorie::class, "categorie_id");
     }
 
     public function commodites()
     {
-        return $this->belongsToMany(Commodite::class, "commodites_categories", "idCategorie", "idCommodite");
+        return $this->belongsToMany(Commodite::class, "commodites_categories", "categorie_id", "commodite_id");
     }
 }

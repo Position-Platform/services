@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Abonnement;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Validator;
 
 /**
@@ -25,7 +24,9 @@ class AbonnementController extends BaseController
     {
         $abonnements = Abonnement::all();
 
-        return $this->sendResponse($abonnements, 'Liste des Abonnements');
+        $success['abonnements'] = $abonnements;
+
+        return $this->sendResponse($success, 'Liste des Abonnements');
     }
 
     /**
@@ -56,16 +57,13 @@ class AbonnementController extends BaseController
         $input['duree'] = $request->duree;
         try {
 
-            DB::beginTransaction();
             $abonnement = Abonnement::create($input);
 
+            $success['abonnement'] = $abonnement;
 
 
-            DB::commit();
-
-            return $this->sendResponse($abonnement, "Création de l'abonnement reussie", 201);
+            return $this->sendResponse($success, "Création de l'abonnement reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
@@ -81,7 +79,9 @@ class AbonnementController extends BaseController
     {
         $abonnement = Abonnement::find($id);
 
-        return $this->sendResponse($abonnement, "Abonnement");
+        $success['abonnement'] = $abonnement;
+
+        return $this->sendResponse($success, "Abonnement");
     }
 
     /**
@@ -94,13 +94,12 @@ class AbonnementController extends BaseController
      * @bodyParam prix int the price of the subscription. Example: 5000
      * @bodyParam duree int duration of the subscription. Example: 1
      * @bodyParam type string Type of subscription(Year by default). Example:year
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateabonnement.json
      */
     public function update(Request $request, $id)
     {
         try {
-            DB::beginTransaction();
             $abonnement = Abonnement::find($id);
 
             $abonnement->nom = $request->nom ?? $abonnement->nom;
@@ -110,12 +109,12 @@ class AbonnementController extends BaseController
 
             $abonnement->save();
 
-            DB::commit();
+            $success['abonnement'] = $abonnement;
 
-            return $this->sendResponse($abonnement, "Update Success", 201);
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
-            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+            return $this->sendError('Echec de mise à jour', ['error' => $th->getMessage()], 400);
         }
     }
 
@@ -132,16 +131,10 @@ class AbonnementController extends BaseController
         $abonnement = Abonnement::find($id);
 
         try {
-            DB::beginTransaction();
-
             $abonnement->delete();
-
-            DB::commit();
-
-            return $this->sendResponse("", "Delete Success", 201);
+            return $this->sendResponse("", "Delete Success", 200);
         } catch (\Throwable $th) {
-            DB::rollBack();
-            return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
+            return $this->sendError('Erreur de suppression.', ['error' => $th->getMessage()], 400);
         }
     }
 }

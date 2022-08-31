@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Categorie;
-use App\Models\TypeCommodite;
-use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -29,14 +27,11 @@ class CategorieController extends BaseController
 
         foreach ($categories as   $categorie) {
             $categorie->sousCategories;
-            $categorie->commodites;
-
-            foreach ($categorie->commodites as $key => $commodite) {
-                $commodite->typeCommodite;
-            }
         }
 
-        return $this->sendResponse($categories, 'Liste des Categories');
+        $success['categories'] = $categories;
+
+        return $this->sendResponse($success, 'Liste des Categories');
     }
 
     /**
@@ -46,6 +41,7 @@ class CategorieController extends BaseController
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the category. Example: Achat
      * @bodyParam logourl file the picture of the category
+     * @bodyParam logourlmap file the picture of the category
      * @responseFile storage/responses/addcategorie.json
      */
     public function store(Request $request)
@@ -54,6 +50,7 @@ class CategorieController extends BaseController
             'nom' => 'required',
             'shortname' => 'required',
             'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -74,16 +71,21 @@ class CategorieController extends BaseController
             $input['logourl'] = '/storage/' . $filePath;
         }
 
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->logourlmap->getClientOriginalName();
+            $filePathMap = $request->file('logourlmap')->storeAs('uploads/categories/logos/' . $request->nom, $fileName, 'public');
+            $input['logourlmap'] = '/storage/' . $filePathMap;
+        }
+
         try {
 
-            DB::beginTransaction();
             $categorie = Categorie::create($input);
 
-            DB::commit();
+            $success['categorie'] = $categorie;
 
-            return $this->sendResponse($categorie, "Création de la catégorie reussie", 201);
+
+            return $this->sendResponse($success, "Création de la catégorie reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
@@ -92,74 +94,19 @@ class CategorieController extends BaseController
      * Show Category by id.
      *
      * @header Content-Type application/json
-     * @queryParam user_id The ID of the Connected User. Example: 1
-     * @queryParam bbox string required . Example: 13,5,13,5 (latMin,latMax,lonMin,lonMax)
      * @urlParam id int required the id of the category. Example: 2
      * @responseFile storage/responses/showcategorie.json
      */
-    public function show(Request $request, $id)
+    public function show($id)
     {
         $categorie = Categorie::find($id);
 
-        $bbox = explode(",", $request->bbox);
 
         $categorie->sousCategories;
 
-        foreach ($categorie->sousCategories as $key => $sousCategorie) {
-            $sousCategorie->etablissements;
+        $success['categorie'] = $categorie;
 
-            foreach ($sousCategorie->etablissements as $key => $etablissement) {
-
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
-                $etablissement->batiment;
-                $etablissement->sousCategories;
-
-
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-                $etablissement->moyenne = $moyenne;
-
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-
-
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                }
-
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
-
-                foreach ($etablissement->commentaires as $key => $commentaires) {
-                    $commentaires->user;
-                }
-
-                if ($etablissement->commercial) {
-                    $etablissement->commercial->user;
-                }
-                if ($etablissement->manager) {
-                    $etablissement->manager->user;
-                }
-            }
-        }
-
-        $categorie->commodites;
-
-        foreach ($categorie->commodites as $key => $commodite) {
-            $commodite->typeCommodite;
-        }
-
-        return $this->sendResponse($categorie, 'Categorie');
+        return $this->sendResponse($success, 'Categorie');
     }
 
     /**
@@ -169,9 +116,10 @@ class CategorieController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the category. Example: 2
      * @bodyParam nom string the name of the category. Example: Achat
-     * @bodyParam vues string count view. Example: ok
+     * @bodyParam vues string count view. Example: true
      * @bodyParam logourl file the picture of the category
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam logourlmap file the picture of the category
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
      */
     public function update(Request $request, $id)
@@ -179,6 +127,7 @@ class CategorieController extends BaseController
         $categorie = Categorie::find($id);
         $request->validate([
             'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($request->file()) {
@@ -187,9 +136,14 @@ class CategorieController extends BaseController
             $categorie->logourl = '/storage/' . $filePath;
         }
 
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->logourlmap->getClientOriginalName();
+            $filePathMap = $request->file('logourlmap')->storeAs('uploads/categories/logos/' . $categorie->nom, $fileName, 'public');
+            $categorie->logourlmap = '/storage/' . $filePathMap;
+        }
+
 
         try {
-            DB::beginTransaction();
 
             $categorie->nom = $request->nom ?? $categorie->nom;
             $categorie->shortname = $request->shortname ?? $categorie->shortname;
@@ -198,17 +152,16 @@ class CategorieController extends BaseController
                 $categorie->vues =  $categorie->vues + 1;
             }
 
-            $categorie->sousCategories;
 
-            $categorie->commodites;
 
             $categorie->save();
 
-            DB::commit();
 
-            return $this->sendResponse($categorie, "Update Success", 201);
+            $success['categorie'] = $categorie;
+
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
     }
@@ -255,23 +208,11 @@ class CategorieController extends BaseController
 
         foreach ($categories as   $categorie) {
             $categorie->sousCategories;
-            $categorie->commodites;
-
-            foreach ($categorie->commodites as $key => $commodite) {
-                $commodite->typeCommodite;
-            }
         }
 
-        return $this->sendResponse($categories, 'Liste des Categories');
-    }
 
-    public function checkIfEtablissementInFavoris($etablissement, $user_id)
-    {
-        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
-        if ($userFavoris) {
-            return true;
-        } else {
-            return false;
-        }
+        $success['categories'] = $categories;
+
+        return $this->sendResponse($success, 'Liste des Categories');
     }
 }

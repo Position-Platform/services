@@ -15,15 +15,14 @@ return new class extends Migration
     {
         Schema::create('batiments', function (Blueprint $table) {
             $table->id();
-            $table->integer("idCommercial")->nullable();
-            $table->integer("idUser")->nullable();
+            $table->integer("user_id")->nullable();
             $table->string("nom")->nullable();
-            $table->string("nombreNiveau");
-            $table->string("codeBatiment");
+            $table->string("nombre_niveau");
+            $table->string("code");
             $table->string("longitude");
             $table->string("latitude");
-            $table->string("image")->nullable();
-            $table->string("indication")->nullable();
+            $table->text("image")->nullable();
+            $table->text("indication")->nullable();
             $table->string("rue")->nullable();
             $table->string("ville");
             $table->string("commune");

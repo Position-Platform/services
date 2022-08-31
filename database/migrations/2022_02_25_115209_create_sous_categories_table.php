@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('sous_categories', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->integer('idcategorie');
-            $table->string('logourl')->nullable();
+            $table->integer('categorie_id');
+            $table->text('logourl')->nullable();
+            $table->text('logourlmap')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
