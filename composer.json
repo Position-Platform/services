@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.0",
         "ejarnutowski/laravel-api-key": "^1.0",
-        "fruitcake/laravel-cors": "^2.0.5",
+        "fruitcake/laravel-cors": "^3.0.0",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel/framework": "^9.0",
