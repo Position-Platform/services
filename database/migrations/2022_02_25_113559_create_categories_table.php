@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('shortname');
-            $table->string('logourl')->nullable();
+            $table->text('logourl')->nullable();
+            $table->text('logourlmap')->nullable();
             $table->integer('vues')->default(0);
             $table->softDeletes();
             $table->timestamps();

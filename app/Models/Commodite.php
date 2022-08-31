@@ -42,21 +42,16 @@ class Commodite extends Model
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "nom", "idTypeCommodite"
+        "nom", "type_commodite_id"
     ];
 
     public function typeCommodite()
     {
-        return $this->belongsTo(TypeCommodite::class, "idTypeCommodite");
-    }
-
-    public function categories()
-    {
-        return $this->belongsToMany(Categorie::class, "commodites_categories",  "idCommodite", "idCategorie");
+        return $this->belongsTo(TypeCommodite::class);
     }
 
     public function etablissements()
     {
-        return $this->belongsToMany(Etablissement::class, "commodites_etablissements", "idCommodite", "idEtablissement");
+        return $this->belongsToMany(Etablissement::class, "commodites_etablissements", "commodite_id", "etablissement_id");
     }
 }

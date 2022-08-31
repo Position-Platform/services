@@ -4,15 +4,12 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Admin;
 use App\Models\Batiment;
-use App\Models\Commentaire;
-use App\Models\Commercial;
+use App\Models\Categorie;
 use App\Models\Commodite;
 use App\Models\Etablissement;
-use App\Models\Horaire;
 use App\Models\SousCategorie;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -31,18 +28,36 @@ class EtablissementController extends BaseController
      * Get all establishment.
      *
      * @header Content-Type application/json
+     * @queryParam user_id string id of user. Example: 1
      * @responseFile storage/responses/getetablissements.json
      */
-    public function index()
+    public function index(Request $request)
     {
-        $etablissements = Etablissement::paginate(100);
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
+        $etablissements = Etablissement::all();
+        //  $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
-        foreach ($etablissements as $key => $etablissement) {
+        foreach ($etablissements as  $etablissement) {
+
+
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
             $etablissement->batiment;
             $etablissement->sousCategories;
 
-            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+            foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -51,25 +66,16 @@ class EtablissementController extends BaseController
             $etablissement->horaires;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as $key => $commentaires) {
+            foreach ($etablissement->commentaires as  $commentaires) {
                 $commentaires->user;
             }
 
-
-            if ($etablissement->manager) {
-                $etablissement->manager->user;
-            }
-
-            if ($etablissement->user) {
-                $etablissement->user;
-            }
-
-            if ($etablissement->commercial) {
-                $etablissement->commercial->user;
-            }
+            $etablissement->user->abonnement;
         }
 
-        return $this->sendResponse($etablissements, 'Liste des Etablissements');
+        $success['etablissements'] = $etablissements;
+
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
     public function countEtablissement()
@@ -85,20 +91,23 @@ class EtablissementController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required  the name of the establishment. Example: Sogefi
-     * @bodyParam idBatiment int required the id of the Building. Example: 2
-     * @bodyParam indicationAdresse string precise address of the establishment. Example: Rue de Melen
-     * @bodyParam codePostal string postal code. Example: 59684
-     * @bodyParam siteInternet string website. Example: sogefi.cm.
+     * @bodyParam batiment_id int required the id of the Building. Example: 2
+     * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
+     * @bodyParam code_postal string postal code. Example: 59684
+     * @bodyParam site_internet string website. Example: sogefi.cm.
      * @bodyParam description string establishment description Example: Super etablissement.
+     * @bodyParam nom_manager string establishment manager name Example: Nom Manager.
+     * @bodyParam contact_manager string establishment manager contact Example: 699999999.
      * @bodyParam cover file required establishment Image.
      * @bodyParam etage int required floor number of the establishment. Example: 3
      * @bodyParam phone string required Phone Numer. Example: 699999999
      * @bodyParam whatsapp1 string required whatsapp number. Example: 699999999
      * @bodyParam whatsapp2 string other whatsapp number. Example: 699999999
-     * @bodyParam osmId string OSM Data Id. Example: 111259658236
+     * @bodyParam osm_id string OSM Data Id. Example: 111259658236
      * @bodyParam services string required department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
      * @bodyParam logo file required establishment Logo.
+     * @bodyParam logo_map file required establishment Logo in map.
      * @bodyParam idSousCategorie string required ids of sous categories. Example: 1,2,3
      * @bodyParam idCommodite string required ids of commodites. Example: 1,2,3
      * @responseFile storage/responses/addetablissement.json
@@ -115,7 +124,7 @@ class EtablissementController extends BaseController
             'whatsapp1' => 'required',
             'services' => 'required',
             'idSousCategorie' => 'required',
-            'idBatiment' => 'required',
+            'batiment_id' => 'required',
             'idCommodite' => 'required',
         ]);
 
@@ -124,46 +133,46 @@ class EtablissementController extends BaseController
         }
 
         $input['nom'] = $request->nom;
-        $input['indicationAdresse'] = $request->indicationAdresse;
-        $input['codePostal'] = $request->codePostal;
-        $input['siteInternet'] = $request->siteInternet;
+        $input['indication_adresse'] = $request->indication_adresse;
+        $input['code_postal'] = $request->code_postal;
+        $input['site_internet'] = $request->site_internet;
         $input['etage'] = $request->etage;
         $input['phone'] = $request->phone;
         $input['whatsapp1'] = $request->whatsapp1;
         $input['whatsapp2'] = $request->whatsapp2;
         $input['description'] = $request->description;
-        $input['osmId'] = $request->osmId;
+        $input['osm_id'] = $request->osm_id;
         $input['services'] = $request->services;
         $input['ameliorations'] = $request->ameliorations;
-        $input['idUser'] = $user->id;
+        $input['nom_manager'] = $request->nom_manager;
+        $input['contact_manager'] = $request->contact_manager;
+        $input['user_id'] = $user->id;
 
-        $batiment = Batiment::find($request->idBatiment);
+        $batiment = Batiment::find($request->batiment_id);
 
 
         if ($request->file()) {
             $fileName = time() . '_' . $request->cover->getClientOriginalName();
-            $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+            $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $request->nom, $fileName, 'public');
             $input['cover'] = '/storage/' . $filePath;
         }
 
         if ($request->file('logo')) {
             $fileName = time() . '_' . $request->logo->getClientOriginalName();
-            $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment . '/' . $request->nom, $fileName, 'public');
+            $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $request->nom, $fileName, 'public');
             $input['logo'] = '/storage/' . $filePathLogo;
+        }
+
+        if ($request->file('logo_map')) {
+            $fileName = time() . '_' . $request->logo_map->getClientOriginalName();
+            $filePathLogoMap = $request->file('logo_map')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $request->nom, $fileName, 'public');
+            $input['logo_map'] = '/storage/' . $filePathLogoMap;
         }
 
         try {
 
 
             DB::beginTransaction();
-
-            try {
-
-                $commercial = Commercial::where('idUser', $user->id)->first();
-
-                $input['idCommercial'] = $commercial->id;
-            } catch (\Exception $e) {
-            }
 
 
             $etablissement = $batiment->etablissements()->create($input);
@@ -184,7 +193,10 @@ class EtablissementController extends BaseController
 
             DB::commit();
 
-            return $this->sendResponse($etablissement, "Création de l'etablissement reussie", 201);
+
+            $success['etablissement'] = $etablissement;
+
+            return $this->sendResponse($success, "Création de l'etablissement reussie", 201);
         } catch (\Exception $ex) {
             DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
@@ -196,16 +208,33 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the Establishment. Example: 2
+     * @queryParam user_id string id of user. Example: 1
      * @responseFile storage/responses/showetablissement.json
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
         $etablissement = Etablissement::find($id);
+
+
+        if ($request->user_id) {
+            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+        } else {
+            $etablissement->isFavoris = false;
+        }
+
+
+        $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+        $etablissement->moyenne = $moyenne;
+
+        $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+        $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
         $etablissement->batiment;
         $etablissement->sousCategories;
 
-        foreach ($etablissement->sousCategories as $key => $sousCategories) {
+        foreach ($etablissement->sousCategories as  $sousCategories) {
             $sousCategories->categorie;
         }
 
@@ -214,23 +243,17 @@ class EtablissementController extends BaseController
         $etablissement->horaires;
         $etablissement->commentaires;
 
-        foreach ($etablissement->commentaires as $key => $commentaires) {
+        foreach ($etablissement->commentaires as  $commentaires) {
             $commentaires->user;
         }
 
-        if ($etablissement->manager) {
-            $etablissement->manager->user;
-        }
+        $etablissement->user->abonnement;
 
-        if ($etablissement->user) {
-            $etablissement->user;
-        }
 
-        if ($etablissement->commercial) {
-            $etablissement->commercial->user;
-        }
+        $success['etablissement'] = $etablissement;
 
-        return $this->sendResponse($etablissement, "Etablissement");
+
+        return $this->sendResponse($success, "Etablissement");
     }
 
     /**
@@ -240,33 +263,28 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the Establishment. Example: 2
      * @bodyParam nom string  the name of the establishment. Example: Sogefi
-     * @bodyParam idManager int the id of the Manager. Example: 2
-     * @bodyParam indicationAdresse string precise address of the establishment. Example: Rue de Melen
-     * @bodyParam codePostal string postal code. Example: 59684
-     * @bodyParam siteInternet string website. Example: sogefi.cm.
+     * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
+     * @bodyParam code_postal string postal code. Example: 59684
+     * @bodyParam site_internet string website. Example: sogefi.cm.
      * @bodyParam description string establishment description Example: Super etablissement.
      * @bodyParam cover file establishment Image.
      * @bodyParam etage int floor number of the establishment. Example: 3
      * @bodyParam phone string Phone Numer. Example: 699999999
      * @bodyParam whatsapp1 string whatsapp number. Example: 699999999
      * @bodyParam whatsapp2 string other whatsapp number. Example: 699999999
-     * @bodyParam osmId string OSM Data Id. Example: 111259658236
+     * @bodyParam osm_id string OSM Data Id. Example: 111259658236
      * @bodyParam services string department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
-     * @bodyParam vues string count view. Example: ok
-     * @bodyParam avis int overall rating of the institution. Example: 3.2
-     * @bodyParam revoir bool establishment to be reviewed. Example: 3.2
-     * @bodyParam valide bool valid establishment. Example: 3.2
+     * @bodyParam vues string count view. Example: true
      * @bodyParam logo file establishment Logo.
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam logo_map file establishment Logo Map.
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateetablissement.json
      */
     public function update(Request $request, $id)
     {
-        $user = Auth::user();
+        Auth::user();
         $etablissement = Etablissement::find($id);
-        $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
 
 
@@ -274,28 +292,21 @@ class EtablissementController extends BaseController
             DB::beginTransaction();
 
             $etablissement->nom = $request->nom ?? $etablissement->nom;
-            $etablissement->indicationAdresse = $request->indicationAdresse ?? $etablissement->indicationAdresse;
-            $etablissement->codePostal = $request->codePostal ?? $etablissement->codePostal;
-            $etablissement->siteInternet = $request->siteInternet ?? $etablissement->siteInternet;
+            $etablissement->indication_adresse = $request->indication_adresse ?? $etablissement->indication_adresse;
+            $etablissement->code_postal = $request->code_postal ?? $etablissement->code_postal;
+            $etablissement->site_internet = $request->site_internet ?? $etablissement->site_internet;
             $etablissement->description = $request->description ?? $etablissement->description;
             $etablissement->etage = $request->etage ?? $etablissement->etage;
             $etablissement->services = $request->services ?? $etablissement->services;
-            $etablissement->idManager = $request->idManager ?? $etablissement->idManager;
             if ($request->vues) {
                 $etablissement->vues =  $etablissement->vues + 1;
             }
-
-            $etablissement->revoir = $request->revoir ?? $etablissement->revoir;
-            $etablissement->valide = $request->valide ?? $etablissement->valide;
             $etablissement->phone = $request->phone ?? $etablissement->phone;
             $etablissement->whatsapp1 = $request->whatsapp1 ?? $etablissement->whatsapp1;
             $etablissement->whatsapp2 = $request->whatsapp2 ?? $etablissement->whatsapp2;
-            $etablissement->osmId = $request->osmId ?? $etablissement->osmId;
-            $etablissement->updated = $request->updated ?? $etablissement->updated;
+            $etablissement->osm_id = $request->osm_id ?? $etablissement->osm_id;
             $etablissement->ameliorations = $request->ameliorations ?? $etablissement->ameliorations;
-            if ($request->avis) {
-                $etablissement->avis =  $etablissement->avis + 1;
-            }
+
 
             if ($request->idSousCategorie != null) {
                 $idSousCategories = explode(",", $request->idSousCategorie);
@@ -313,14 +324,20 @@ class EtablissementController extends BaseController
 
             if ($request->file()) {
                 $fileName = time() . '_' . $request->cover->getClientOriginalName();
-                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->code, $fileName, 'public');
                 $etablissement->cover = '/storage/' . $filePath;
             }
 
             if ($request->file('logo')) {
                 $fileName = time() . '_' . $request->logo->getClientOriginalName();
-                $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->codeBatiment, $fileName, 'public');
+                $filePathLogo = $request->file('logo')->storeAs('uploads/batiments/images/' . $batiment->code, $fileName, 'public');
                 $etablissement->logo = '/storage/' . $filePathLogo;
+            }
+
+            if ($request->file('logo_map')) {
+                $fileName = time() . '_' . $request->logo_map->getClientOriginalName();
+                $filePathLogoMap = $request->file('logo_map')->storeAs('uploads/batiments/images/' . $batiment->code, $fileName, 'public');
+                $etablissement->logo_map = '/storage/' . $filePathLogoMap;
             }
 
 
@@ -328,7 +345,10 @@ class EtablissementController extends BaseController
 
             DB::commit();
 
-            return $this->sendResponse($etablissement, "Update Success", 201);
+
+            $success['etablissement'] = $etablissement;
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
             DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
@@ -348,9 +368,8 @@ class EtablissementController extends BaseController
         $user = Auth::user();
         $etablissement = Etablissement::find($id);
         $admin = Admin::where('idUser', $user->id)->first();
-        $commercial = Commercial::where('idUser', $user->id)->first();
 
-        if ($admin || $commercial->id == $etablissement->idCommercial) {
+        if ($admin || $user->id == $etablissement->user_id) {
 
             try {
                 DB::beginTransaction();
@@ -360,11 +379,11 @@ class EtablissementController extends BaseController
                 $etablissement->horaires()->delete();
                 $etablissement->commentaires()->delete();
 
-                foreach ($etablissement->sousCategories as $key => $sousCategorie) {
+                foreach ($etablissement->sousCategories as  $sousCategorie) {
                     $etablissement->sousCategories()->detach($sousCategorie->id);
                 }
 
-                foreach ($etablissement->commodites as $key => $commodite) {
+                foreach ($etablissement->commodites as  $commodite) {
                     $etablissement->commodites()->detach($commodite->id);
                 }
 
@@ -395,7 +414,7 @@ class EtablissementController extends BaseController
         $q = $request->input('q');
         $etablissements = Etablissement::search($q)->get();
 
-        foreach ($etablissements as $key => $etablissement) {
+        foreach ($etablissements as  $etablissement) {
 
             if ($request->user_id) {
                 $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
@@ -412,15 +431,13 @@ class EtablissementController extends BaseController
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
-            $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
-
 
             $etablissement->batiment;
             $etablissement->sousCategories;
 
 
 
-            foreach ($etablissement->sousCategories as $key => $sousCategories) {
+            foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -429,117 +446,19 @@ class EtablissementController extends BaseController
             $etablissement->horaires;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as $key => $commentaires) {
+            foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
-            if ($etablissement->commercial) {
-                $etablissement->commercial->user;
-            }
-
-            if ($etablissement->manager) {
-                $etablissement->manager->user;
-            }
         }
 
-        return $this->sendResponse($etablissements, 'Liste des Etablissements');
-    }
 
+        $success['etablissements'] = $etablissements;
 
-
-    /**
-     * Search Establishment by Commodites & Distance.
-     *
-     * @header Content-Type application/json
-     * @queryParam lon string required . Example: 13
-     * @queryParam lat string required . Example: 5
-     * @queryParam idCommodites string required . Example: 1,2,3
-     * @queryParam user_id string id of user conncted . Example: 10
-     * @queryParam id_categorie string required id of categorie . Example: 1
-     * @responseFile storage/responses/getetablissementsdistance.json
-     *
-     */
-    public function searchByCommoditesDistance(Request $request)
-    {
-        $lon = $request->input('lon');
-        $lat = $request->input('lat');
-        $id_categorie = $request->input('id_categorie');
-
-        $idCommodites = explode(",", $request->input('idCommodites'));
-
-        $data = array();
-
-        foreach ($idCommodites as $key => $idCommodite) {
-            $commodite = Commodite::find($idCommodite);
-
-
-            foreach ($commodite->etablissements as $key => $etablissement) {
-
-
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
-
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-                $etablissement->moyenne = $moyenne;
-
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-
-                $etablissement->sousCategories;
-
-
-
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
-
-                foreach ($etablissement->commentaires as $key => $commentaires) {
-                    $commentaires->user;
-                }
-
-                if ($etablissement->commercial) {
-                    $etablissement->commercial->user;
-                }
-                if ($etablissement->manager) {
-                    $etablissement->manager->user;
-                }
-
-
-                $etablissement->batiment->longitude;
-                $etablissement->batiment->latitude;
-
-                $distance = $this->getDistance($lat, $lon, $etablissement->batiment->latitude, $etablissement->batiment->longitude);
-                $etablissement["distance"] = $distance;
-
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                    if ($sousCategories->categorie->id == $id_categorie) {
-                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
-                        if ($bool == false) {
-                            $data[] = $etablissement;
-                        }
-
-                        usort($data, function ($a, $b) {
-                            return $a['distance'] > $b['distance'];
-                        });
-                    }
-                }
-            }
-        }
-
-        return $this->sendResponse($data, 'Liste des Etablissements');
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
     /**
-     * Search Establishment by Commodites & Avis.
+     * Search Establishment by Filter.
      *
      * @header Content-Type application/json
      * @queryParam idCommodites string required . Example: 1,2,3
@@ -548,192 +467,161 @@ class EtablissementController extends BaseController
      * @responseFile storage/responses/getetablissements.json
      *
      */
-
-    public function searchByCommoditesAvis(Request $request)
+    public function filterSearch(Request $request)
     {
-        $idCommodites = explode(",", $request->input('idCommodites'));
+
         $id_categorie = $request->input('id_categorie');
-        $data = array();
-        foreach ($idCommodites as $key => $idCommodite) {
-            $commodite = Commodite::find($idCommodite);
+
+        $idCommodites = explode(",", $request->input('idCommodites'));
+
+        $categorie = Categorie::find($id_categorie);
+
+        $etablissements = array();
 
 
-            foreach ($commodite->etablissements as $key => $etablissement) {
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
-                $etablissement->sousCategories;
+        if ($request->idCommodites) {
+            foreach ($idCommodites as  $idCommodite) {
+                $commodite = Commodite::find($idCommodite);
+                foreach ($commodite->etablissements as  $etablissement) {
 
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-                $etablissement->moyenne = $moyenne;
-
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
+                    foreach ($etablissement->sousCategories as  $sousCategorie) {
+                        $sousCategorie->categorie;
+                        if ($sousCategorie->categorie->id == $id_categorie) {
+                            $bool = $this->checkIfEtablassimentInDataArray($etablissement, $etablissements);
+                            if (!$bool) {
+                                if ($request->user_id) {
+                                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                                } else {
+                                    $etablissement->isFavoris = false;
+                                }
 
 
+                                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
+                                $etablissement->moyenne = $moyenne;
 
-                foreach ($etablissement->commentaires as $key => $commentaires) {
-                    $commentaires->user;
-                }
+                                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
 
-                if ($etablissement->commercial) {
-                    $etablissement->commercial->user;
-                }
-                if ($etablissement->manager) {
-                    $etablissement->manager->user;
-                }
+                                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
-                $etablissement->batiment->longitude;
-                $etablissement->batiment->latitude;
+                                $etablissement->batiment;
+                                $etablissement->sousCategories;
 
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                    if ($sousCategories->categorie->id == $id_categorie) {
-                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
-                        if ($bool == false) {
-                            $data[] = $etablissement;
+
+
+                                foreach ($etablissement->sousCategories as $sousCategories) {
+                                    $sousCategories->categorie;
+                                }
+
+                                $etablissement->commodites;
+                                $etablissement->images;
+                                $etablissement->horaires;
+                                $etablissement->commentaires;
+
+                                foreach ($etablissement->commentaires as $commentaires) {
+                                    $commentaires->user;
+                                }
+                                $etablissements[] = $etablissement;
+                            }
                         }
-                        usort($data, function ($a, $b) {
-                            return $a['avis'] < $b['avis'];
-                        });
                     }
+                }
+            }
+        } else {
+            foreach ($categorie->sousCategories as  $sousCategorie) {
+                foreach ($sousCategorie->etablissements as  $etablissement) {
+                    if ($request->user_id) {
+                        $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                    } else {
+                        $etablissement->isFavoris = false;
+                    }
+
+
+                    $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+                    $etablissement->moyenne = $moyenne;
+
+                    $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                    $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+
+                    $etablissement->batiment;
+                    $etablissement->sousCategories;
+
+
+
+                    foreach ($etablissement->sousCategories as $sousCategories) {
+                        $sousCategories->categorie;
+                    }
+
+                    $etablissement->commodites;
+                    $etablissement->images;
+                    $etablissement->horaires;
+                    $etablissement->commentaires;
+
+                    foreach ($etablissement->commentaires as $commentaires) {
+                        $commentaires->user;
+                    }
+                    $etablissements[] = $etablissement;
                 }
             }
         }
 
-        return $this->sendResponse($data, 'Liste des Etablissements');
+
+        $success['etablissements'] = $etablissements;
+
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
-    /**
-     * Search Establishment by Commodites & Vues.
-     *
-     * @header Content-Type application/json
-     * @queryParam idCommodites string required . Example: 1,2,3
-     * @queryParam user_id string id of user conncted . Example: 10
-     * @queryParam id_categorie string required id of categorie . Example: 1
-     * @responseFile storage/responses/getetablissements.json
-     *
-     */
-
-    public function searchByCommoditesVues(Request $request)
-    {
-        $idCommodites = explode(",", $request->input('idCommodites'));
-        $id_categorie = $request->input('id_categorie');
-        $data = array();
-        foreach ($idCommodites as $key => $idCommodite) {
-            $commodite = Commodite::find($idCommodite);
 
 
-            foreach ($commodite->etablissements as $key => $etablissement) {
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
-
-                $etablissement->sousCategories;
-
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-                $etablissement->moyenne = $moyenne;
-
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-                $etablissement->opennow = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
-
-                foreach ($etablissement->commentaires as $key => $commentaires) {
-                    $commentaires->user;
-                }
-
-                if ($etablissement->commercial) {
-                    $etablissement->commercial->user;
-                }
-                if ($etablissement->manager) {
-                    $etablissement->manager->user;
-                }
-
-
-                $etablissement->batiment->longitude;
-                $etablissement->batiment->latitude;
-
-                foreach ($etablissement->sousCategories as $key => $sousCategories) {
-                    $sousCategories->categorie;
-                    if ($sousCategories->categorie->id == $id_categorie) {
-                        $bool = $this->checkIfEtablassimentInDataArray($etablissement, $data);
-                        if ($bool == false) {
-                            $data[] = $etablissement;
-                        }
-                        usort($data, function ($a, $b) {
-                            return $a['vues'] < $b['vues'];
-                        });
-                    }
-                }
-            }
-        }
-
-        return $this->sendResponse($data, 'Liste des Etablissements');
-    }
 
     /**
      * Add Favorite Establishment.
      *
      * @authenticated
-     * @bodyParam idEtablissement int required . Example: 1
+     * @bodyParam etablissement_id int required . Example: 1
      * @responseFile storage/responses/addfavorite.json
      */
 
     public function addFavorite(Request $request)
     {
         $user = Auth::user();
-        $idEtablissement = $request->idEtablissement;
+        $etablissement_id = $request->etablissement_id;
 
-        $favorite = UserFavoris::where('etablissement_id', $idEtablissement)->where('user_id', $user->id)->first();
+        $favorite = UserFavoris::where('etablissement_id', $etablissement_id)->where('user_id', $user->id)->first();
 
         if ($favorite) {
             return $this->sendError('Etablissement déjà dans vos favoris', [], 200);
         }
 
         $favorite = new UserFavoris();
-        $favorite->etablissement_id = $idEtablissement;
+        $favorite->etablissement_id = $etablissement_id;
         $favorite->user_id = $user->id;
         $favorite->save();
 
-        return $this->sendResponse($favorite, 'Etablissement ajouté aux favoris');
+
+        $success['favorite'] = $favorite;
+
+        return $this->sendResponse($success, 'Etablissement ajouté aux favoris');
     }
 
     /**
      * Remove Favorite Establishment.
      *
      * @authenticated
-     * @bodyParam idEtablissement int required . Example: 1
+     * @bodyParam etablissement_id int required . Example: 1
      * @responseFile storage/responses/removefavorite.json
      */
 
     public function removeFavorite(Request $request)
     {
         $user = Auth::user();
-        $idEtablissement = $request->idEtablissement;
+        $etablissement_id = $request->etablissement_id;
 
-        $favorite = UserFavoris::where('etablissement_id', $idEtablissement)->where('user_id', $user->id)->first();
+        $favorite = UserFavoris::where('etablissement_id', $etablissement_id)->where('user_id', $user->id)->first();
 
         if (!$favorite) {
             return $this->sendError('Etablissement n\'est pas dans vos favoris', [], 200);
@@ -741,23 +629,27 @@ class EtablissementController extends BaseController
 
         $favorite->delete();
 
-        return $this->sendResponse($favorite, 'Etablissement retiré des favoris');
+        $success['favorite'] = $favorite;
+
+        return $this->sendResponse($success, 'Etablissement retiré des favoris');
     }
 
     /**
      * Update vues Establishment.
      *
-     * @urlParam idEtablissement int required . Example: 1
-     * @responseFile 201 storage/responses/updateetablissement.json
+     * @urlParam etablissement_id int required . Example: 1
+     * @responseFile 201 storage/responses/updatevuesetablissement.json
      */
-    public function updateVues($idEtablissement)
+    public function updateVues($etablissement_id)
     {
 
-        $etablissement = Etablissement::find($idEtablissement);
+        $etablissement = Etablissement::find($etablissement_id);
 
         $etablissement->vues = $etablissement->vues + 1;
         $etablissement->save();
 
-        return $this->sendResponse($etablissement, 'Vues du Etablissement incrémentées');
+        $success['etablissement'] = $etablissement;
+
+        return $this->sendResponse($success, 'Vues du Etablissement incrémentées');
     }
 }

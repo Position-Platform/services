@@ -35,11 +35,11 @@ class Admin extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'idUser', 'isSuperAdmin'
+        'user_id', 'isSuperAdmin'
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class, "idUser");
+        return $this->belongsTo(User::class);
     }
 }

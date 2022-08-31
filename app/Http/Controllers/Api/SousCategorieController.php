@@ -26,11 +26,13 @@ class SousCategorieController extends BaseController
     {
         $souscategories = SousCategorie::all();
 
-        foreach ($souscategories as $key => $souscategorie) {
-            $souscategorie->categorie->commodites;
+        foreach ($souscategories as  $souscategorie) {
+            $souscategorie->categorie;
         }
 
-        return $this->sendResponse($souscategories, 'Liste des Sous-Categories');
+        $success['sous_categories'] = $souscategories;
+
+        return $this->sendResponse($success, 'Liste des Sous-Categories');
     }
 
     /**
@@ -39,16 +41,18 @@ class SousCategorieController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required the name of the subcategory. Example: Achat
-     * @bodyParam idcategorie int required the id of the category. Example: 5
-     * @bodyParam file file the picture of the subcategory
+     * @bodyParam categorie_id int required the id of the category. Example: 5
+     * @bodyParam logourl file the picture of the subcategory
+     * @bodyParam logourlmap file the picture of the subcategory
      * @responseFile storage/responses/addsouscategorie.json
      */
     public function store(Request $request)
     {
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
-            'idcategorie' => 'required',
-            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'categorie_id' => 'required',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($validator->fails()) {
@@ -61,25 +65,31 @@ class SousCategorieController extends BaseController
 
         $input['id'] = $log_id;
         $input['nom'] = $request->nom;
-        $categorie = Categorie::find($request->idcategorie);
+        $categorie = Categorie::find($request->categorie_id);
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $request->nom, $fileName, 'public');
+            $fileName = time() . '_' . $request->logourl->getClientOriginalName();
+            $filePath = $request->file('logourl')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $request->nom, $fileName, 'public');
             $input['logourl'] = '/storage/' . $filePath;
+        }
+
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->logourlmap->getClientOriginalName();
+            $filePathMap = $request->file('logourlmap')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $request->nom, $fileName, 'public');
+            $input['logourlmap'] = '/storage/' . $filePathMap;
         }
 
         try {
 
-            DB::beginTransaction();
             $souscategorie = $categorie->sousCategories()->create($input);
             $souscategorie->categorie;
 
-            DB::commit();
 
-            return $this->sendResponse($souscategorie, "Création de la Sous catégorie reussie", 201);
+            $success['sous_categorie'] = $souscategorie;
+
+
+            return $this->sendResponse($success, "Création de la Sous catégorie reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
@@ -95,10 +105,12 @@ class SousCategorieController extends BaseController
     {
         $souscategorie = SousCategorie::find($id);
 
-        $souscategorie->categorie->commodites;
+        $souscategorie->categorie;
 
 
-        return $this->sendResponse($souscategorie, 'SousCategorie');
+        $success['sous_categorie'] = $souscategorie;
+
+        return $this->sendResponse($success, 'SousCategorie');
     }
 
     /**
@@ -108,9 +120,10 @@ class SousCategorieController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the subcategory. Example: 2
      * @bodyParam nom string the name of the subcategory. Example: Achat
-     *  @bodyParam file file the picture of the subcategory
+     * @bodyParam logourl file the picture of the subcategory
+     * @bodyParam logourlmap file the picture of the subcategory
      * @bodyParam idcategorie int the id of the category. Example: 5
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
      */
     public function update(Request $request, $id)
@@ -118,18 +131,24 @@ class SousCategorieController extends BaseController
         $souscategorie = SousCategorie::find($id);
         $categorie = $souscategorie->categorie;
         $request->validate([
-            'file' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
         ]);
 
         if ($request->file()) {
-            $fileName = time() . '_' . $request->file->getClientOriginalName();
-            $filePath = $request->file('file')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $souscategorie->nom, $fileName, 'public');
+            $fileName = time() . '_' . $request->logourl->getClientOriginalName();
+            $filePath = $request->file('logourl')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $souscategorie->nom, $fileName, 'public');
             $souscategorie->logourl = '/storage/' . $filePath;
+        }
+
+        if ($request->file()) {
+            $fileName = time() . '_' . $request->logourlmap->getClientOriginalName();
+            $filePath = $request->file('logourlmap')->storeAs('uploads/categories/logos/' . $categorie->nom . '/' . $souscategorie->nom, $fileName, 'public');
+            $souscategorie->logourlmap = '/storage/' . $filePath;
         }
 
 
         try {
-            DB::beginTransaction();
 
             $souscategorie->nom = $request->nom ?? $souscategorie->nom;
 
@@ -137,11 +156,11 @@ class SousCategorieController extends BaseController
 
             $souscategorie->save();
 
-            DB::commit();
+            $success['sous_categorie'] = $souscategorie;
 
-            return $this->sendResponse($souscategorie, "Update Success", 201);
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
@@ -159,15 +178,12 @@ class SousCategorieController extends BaseController
         $souscategorie = SousCategorie::find($id);
 
         try {
-            DB::beginTransaction();
 
             $souscategorie->delete();
 
-            DB::commit();
 
             return $this->sendResponse("", "Delete Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
@@ -184,10 +200,12 @@ class SousCategorieController extends BaseController
         $q = $request->input('q');
         $souscategories = SousCategorie::search($q)->get();
 
-        foreach ($souscategories as $key => $souscategorie) {
-            $souscategorie->categorie->commodites;
+        foreach ($souscategories as  $souscategorie) {
+            $souscategorie->categorie;
         }
 
-        return $this->sendResponse($souscategories, 'Liste des Sous-Categories');
+        $success['sous_categories'] = $souscategories;
+
+        return $this->sendResponse($success, 'Liste des Sous-Categories');
     }
 }

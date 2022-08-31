@@ -13,14 +13,14 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement query()
  * @mixin \Eloquent
  * @property int $id
- * @property int $idEtablissement
+ * @property int $etablissement_id
  * @property int $idCommodite
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereIdCommodite($value)
- * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereIdEtablissement($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|CommoditesEtablissement whereUpdatedAt($value)
  */
 class CommoditesEtablissement extends Model
@@ -28,6 +28,6 @@ class CommoditesEtablissement extends Model
     use HasFactory;
 
     protected $fillable = [
-        "idCommodite", "idEtablissement"
+        "commodite_id", "etablissement_id"
     ];
 }

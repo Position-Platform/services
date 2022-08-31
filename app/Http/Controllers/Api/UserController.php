@@ -8,7 +8,6 @@ use App\Models\User;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Password;
 
@@ -23,7 +22,7 @@ class UserController extends BaseController
      * @bodyParam email string required the email of the user. Example: gautier@position.cm
      * @bodyParam password string required the password of the user. Example: gautier123
      * @bodyParam phone int required The phone number of the user. Example:699999999
-     * @bodyParam imageProfil file Profile Image.
+     * @bodyParam image_profil file Profile Image.
      * @responseFile storage/responses/register.json
      */
     public function register(Request $request)
@@ -33,7 +32,7 @@ class UserController extends BaseController
             'email' => 'email|unique:users,email',
             'password' => 'string|between:6,20',
             'phone' => 'regex:/^[\+0-9]+$/',
-            'file' => 'mimes:png,jpg,jpeg|max:10000'
+            'image_profil' => 'mimes:png,jpg,jpeg|max:10000'
         ]);
 
 
@@ -44,13 +43,11 @@ class UserController extends BaseController
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
         if ($request->file()) {
-            $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
-            $filePath = $request->file('imageProfil')->storeAs('uploads/users/profils', $fileName, 'public');
-            $input['imageProfil'] = '/storage/' . $filePath;
+            $fileName = time() . '_' . $request->image_profil->getClientOriginalName();
+            $filePath = $request->file('image_profil')->storeAs('uploads/users/profils', $fileName, 'public');
+            $input['image_profil'] = '/storage/' . $filePath;
         }
         $user = User::create($input);
-
-
 
         $user->assignRole('user');
         $user->sendEmailVerificationNotification();
@@ -132,16 +129,6 @@ class UserController extends BaseController
             $success["user"] = $user;
             $succes['roles'] = $roles;
 
-            if ($user->commercial) {
-                $succes['commercial'] = $user->commercial;
-            }
-            if ($user->manager) {
-                $succes['manager'] = $user->manager;
-            }
-            if ($user->admin) {
-                $succes['admin'] = $user->admin;
-            }
-
             return $this->sendResponse($success, 'Utilisateur');
         } else {
             return $this->sendError('Pas autorisé.', ['error' => 'Unauthorised']);
@@ -157,17 +144,18 @@ class UserController extends BaseController
      * @urlParam id int required the id of the admin. Example: 2
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
-     * @bodyParam imageProfil file Profile Image.
+     * @bodyParam image_profil file Profile Image.
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updateuser.json
      */
     public function updateuser($id, Request $request)
     {
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
         if ($admin || $user->id == $id) {
             $validator = Validator::make($request->all(), [
                 'phone' => 'regex:/^[\+0-9]+$/',
-                'imageProfil' => 'mimes:png,jpg,jpeg|max:10000'
+                'image_profil' => 'mimes:png,jpg,jpeg|max:10000'
             ]);
 
             if ($validator->fails()) {
@@ -175,14 +163,13 @@ class UserController extends BaseController
             }
 
             $user = Auth::user();
-
             $user->name = $request->name ?? $user->name;
             $user->phone = $request->phone ?? $user->phone;
 
             if ($request->file()) {
-                $fileName = time() . '_' . $request->imageProfil->getClientOriginalName();
-                $filePath = $request->file('imageProfil')->storeAs('uploads/users/profils', $fileName, 'public');
-                $user->imageProfil = '/storage/' . $filePath;
+                $fileName = time() . '_' . $request->image_profil->getClientOriginalName();
+                $filePath = $request->file('image_profil')->storeAs('uploads/users/profils', $fileName, 'public');
+                $user->image_profil = '/storage/' . $filePath;
             }
 
             $save = $user->save();
@@ -211,18 +198,14 @@ class UserController extends BaseController
     public function deleteuser($id)
     {
         $user = Auth::user();
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
         if ($admin || $user->id == $id) {
 
             try {
-                DB::beginTransaction();
                 User::destroy($id);
 
-                DB::commit();
-
-                return $this->sendResponse("", "Delete Success", 201);
+                return $this->sendResponse("", "Delete Success", 200);
             } catch (\Throwable $th) {
-                DB::rollBack();
                 return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
             }
         }
@@ -317,18 +300,7 @@ class UserController extends BaseController
                 $commentaires->user;
             }
 
-
-            if ($etablissement->manager) {
-                $etablissement->manager->user;
-            }
-
-            if ($etablissement->user) {
-                $etablissement->user;
-            }
-
-            if ($etablissement->commercial) {
-                $etablissement->commercial->user;
-            }
+            $etablissement->user;
         }
 
         return $this->sendResponse($etablissements, 'Favorites');

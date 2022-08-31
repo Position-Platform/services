@@ -29,7 +29,9 @@ class TypeCommoditeController extends BaseController
             $typeCommodite->commodites;
         }
 
-        return $this->sendResponse($typesCommodites, 'Liste des Types de Commodités');
+        $success['types_commodites'] = $typesCommodites;
+
+        return $this->sendResponse($success, 'Liste des Types de Commodités');
     }
 
     /**
@@ -54,14 +56,14 @@ class TypeCommoditeController extends BaseController
 
         try {
 
-            DB::beginTransaction();
             $typeCommodite = TypeCommodite::create($input);
 
-            DB::commit();
 
-            return $this->sendResponse($typeCommodite, "Création du type de commodité reussie", 201);
+            $success['type_commodite'] = $typeCommodite;
+
+
+            return $this->sendResponse($success, "Création du type de commodité reussie", 201);
         } catch (\Exception $ex) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
     }
@@ -79,7 +81,10 @@ class TypeCommoditeController extends BaseController
 
         $typeCommodite->commodites;
 
-        return $this->sendResponse($typeCommodite, 'Type Commodite');
+
+        $success['type_commodite'] = $typeCommodite;
+
+        return $this->sendResponse($success, 'Type Commodite');
     }
 
     /**
@@ -89,7 +94,7 @@ class TypeCommoditeController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the type commodite. Example: 2
      * @bodyParam nom string the name of the type commodite. Example: Achat
-     * @bodyParam _method string "required if update image(change the PUT method of the request by the POST method)" Example: PUT
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatetypecommodite.json
      */
     public function update(Request $request, $id)
@@ -98,18 +103,18 @@ class TypeCommoditeController extends BaseController
 
 
         try {
-            DB::beginTransaction();
 
             $typeCommodite->nom = $request->nom ?? $typeCommodite->nom;
 
             $typeCommodite->commodites;
             $typeCommodite->save();
 
-            DB::commit();
 
-            return $this->sendResponse($typeCommodite, "Update Success", 201);
+            $success['type_commodite'] = $typeCommodite;
+
+
+            return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
-            DB::rollBack();
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }

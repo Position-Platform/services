@@ -2,379 +2,156 @@
     "success": true,
     "data": [
         {
-            "id": 6,
-            "nom": "SOGEFI",
-            "idBatiment": "2",
-            "indicationAdresse": null,
-            "codePostal": null,
-            "siteInternet": null,
-            "idCommercial": "12",
-            "idManager": null,
-            "etage": "2",
-            "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138371_Wavy_Bus-39_Single-06.jpg",
-            "vues": "0",
+            "id": 2,
+            "nom": "BOUTIQUE DE MICAL",
+            "batiment_id": 3,
+            "indication_adresse": "Face station",
+            "code_postal": "BP 4326 Douala",
+            "site_internet": "www.site.com",
+            "nom_manager": "Mical",
+            "contact_manager": "Mical",
+            "user_id": 1,
+            "etage": 1,
+            "cover": "/storage/uploads/batiments/images/BATIMENT_1013434286/1661912359_about2.jpg",
             "phone": "699999999",
             "whatsapp1": "699999999",
-            "whatsapp2": null,
-            "description": null,
-            "osmId": null,
-            "updated": false,
-            "revoir": "0",
-            "valide": "0",
-            "services": "PAIN;OM;MOMO",
-            "ameliorations": null,
-            "avis": 0,
-            "deleted_at": null,
-            "created_at": "2022-03-01T12:39:31.000000Z",
-            "updated_at": "2022-03-01T12:39:31.000000Z",
-            "idUser": null,
+            "whatsapp2": "699999998",
+            "description": "Super etablissement.",
+            "osm_id": null,
+            "services": "OM;MOMO",
+            "ameliorations": "Ajouter des videos",
+            "vues": 2,
             "logo": null,
+            "logo_map": null,
+            "deleted_at": null,
+            "created_at": "2022-08-31T01:32:38.000000Z",
+            "updated_at": "2022-08-31T02:37:33.000000Z",
             "batiment": {
-                "id": 2,
-                "nom": "BATIMENT",
-                "nombreNiveau": "3",
-                "codeBatiment": "BATIMENT_MELEN_0569",
-                "longitude": "13",
-                "latitude": "7",
-                "image": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1647410079_Image1.png",
-                "indication": "Rue de melen",
-                "rue": "Rue de Melen",
-                "ville": "Yaounde",
-                "commune": "Yaounde IV",
-                "quartier": "Melen",
+                "id": 3,
+                "user_id": 1,
+                "nom": "BOUTIQUE DE MICAL",
+                "nombre_niveau": "3",
+                "code": "BATIMENT_1013434286",
+                "longitude": "11.229207",
+                "latitude": "4.078288",
+                "image": null,
+                "indication": "derrierre station",
+                "rue": "Rue de la Mairie",
+                "ville": "Douala",
+                "commune": "Douala 3",
+                "quartier": "Nyalla",
                 "deleted_at": null,
-                "created_at": "2022-02-28T20:53:25.000000Z",
-                "updated_at": "2022-03-16T05:54:40.000000Z",
-                "idCommercial": 12,
-                "idUser": null
+                "created_at": "2022-08-31T01:32:38.000000Z",
+                "updated_at": "2022-08-31T01:32:38.000000Z"
             },
             "sous_categories": [
                 {
-                    "id": 5,
-                    "nom": "Blanchisseries et Pressings",
-                    "idcategorie": 1,
+                    "id": 1,
+                    "nom": "Boutiques",
+                    "categorie_id": 1,
                     "logourl": null,
+                    "logourlmap": null,
                     "deleted_at": null,
-                    "created_at": "2022-02-25T11:35:34.000000Z",
-                    "updated_at": "2022-02-25T11:35:34.000000Z",
+                    "created_at": "2022-08-30T22:14:10.000000Z",
+                    "updated_at": "2022-08-30T22:14:10.000000Z",
                     "pivot": {
-                        "idEtablissement": 6,
-                        "idSousCategorie": 5
+                        "etablissement_id": 2,
+                        "sous_categorie_id": 1
                     },
                     "categorie": {
                         "id": 1,
                         "nom": "Achats",
-                        "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
-                        "deleted_at": null,
-                        "created_at": "2022-03-04T13:30:15.000000Z",
-                        "updated_at": "2022-03-12T18:26:02.000000Z",
                         "shortname": "Achats",
-                        "vues": 7
-                    }
-                },
-                {
-                    "id": 8,
-                    "nom": "Hifi, téléphonie",
-                    "idcategorie": 1,
-                    "logourl": null,
-                    "deleted_at": null,
-                    "created_at": "2022-02-25T11:35:34.000000Z",
-                    "updated_at": "2022-02-25T11:35:34.000000Z",
-                    "pivot": {
-                        "idEtablissement": 6,
-                        "idSousCategorie": 8
-                    },
-                    "categorie": {
-                        "id": 1,
-                        "nom": "Achats",
                         "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
+                        "logourlmap": "/images/categories/logo/icon-list-categorie-achats.svg",
+                        "vues": 0,
                         "deleted_at": null,
-                        "created_at": "2022-03-04T13:30:15.000000Z",
-                        "updated_at": "2022-03-12T18:26:02.000000Z",
-                        "shortname": "Achats",
-                        "vues": 7
+                        "created_at": "2022-08-30T22:14:10.000000Z",
+                        "updated_at": "2022-08-30T22:14:10.000000Z"
                     }
                 }
             ],
             "commodites": [
                 {
-                    "id": 16,
-                    "nom": "Wifi ++",
-                    "idTypeCommodite": 1,
+                    "id": 1,
+                    "nom": "Wifi +",
+                    "type_commodite_id": 1,
                     "deleted_at": null,
-                    "created_at": "2022-02-25T14:48:03.000000Z",
-                    "updated_at": "2022-02-25T15:24:26.000000Z",
+                    "created_at": "2022-08-31T01:25:19.000000Z",
+                    "updated_at": "2022-08-31T01:28:27.000000Z",
                     "pivot": {
-                        "idEtablissement": 6,
-                        "idCommodite": 16
-                    }
-                },
-                {
-                    "id": 20,
-                    "nom": "Piscine",
-                    "idTypeCommodite": 1,
-                    "deleted_at": null,
-                    "created_at": "2022-02-25T15:37:37.000000Z",
-                    "updated_at": "2022-02-25T15:37:37.000000Z",
-                    "pivot": {
-                        "idEtablissement": 6,
-                        "idCommodite": 20
+                        "etablissement_id": 2,
+                        "commodite_id": 1
                     }
                 }
             ],
             "images": [
                 {
                     "id": 1,
-                    "idEtablissement": 6,
-                    "imageUrl": "/storage/uploads/batiments/images/BATIMENT_MELEN_0569/SOGEFI/1646138789_bailleurs.png",
+                    "etablissement_id": 2,
+                    "image_url": "/storage/uploads/batiments/images/BATIMENT_1013434286/BOUTIQUE DE MICAL/1661910783_project.png",
                     "deleted_at": null,
-                    "created_at": "2022-03-01T12:46:29.000000Z",
-                    "updated_at": "2022-03-01T12:46:29.000000Z"
+                    "created_at": "2022-08-31T01:51:11.000000Z",
+                    "updated_at": "2022-08-31T01:53:03.000000Z"
                 }
             ],
             "horaires": [
                 {
-                    "id": 1,
-                    "idEtablissement": 6,
-                    "jour": "Lundi",
-                    "plageHoraire": "07:00-11:00;13:00-17:00",
+                    "id": 3,
+                    "etablissement_id": 2,
+                    "jour": "mardi",
+                    "plage_horaire": "07: 00-12: 00;13: 00-17: 00",
                     "deleted_at": null,
-                    "created_at": "2022-03-01T12:45:05.000000Z",
-                    "updated_at": "2022-03-01T12:45:05.000000Z"
+                    "created_at": "2022-08-31T02:05:59.000000Z",
+                    "updated_at": "2022-08-31T02:05:59.000000Z"
+                },
+                {
+                    "id": 2,
+                    "etablissement_id": 2,
+                    "jour": "lundi",
+                    "plage_horaire": "11:00-15:00;16:00-18:00",
+                    "deleted_at": null,
+                    "created_at": "2022-08-31T01:32:39.000000Z",
+                    "updated_at": "2022-08-31T02:07:39.000000Z"
                 }
             ],
             "commentaires": [
                 {
                     "id": 1,
-                    "idUser": 1,
-                    "idEtablissement": 6,
-                    "commentaire": "J'aime beaucoup",
-                    "rating": 3,
+                    "user_id": 1,
+                    "etablissement_id": 2,
+                    "commentaire": "J'aime ce lieu",
+                    "rating": 4,
                     "deleted_at": null,
-                    "created_at": "2022-03-01T23:10:41.000000Z",
-                    "updated_at": "2022-03-01T23:10:41.000000Z",
+                    "created_at": "2022-08-31T01:56:13.000000Z",
+                    "updated_at": "2022-08-31T01:58:07.000000Z",
                     "user": {
                         "id": 1,
-                        "name": "Gautier 1996",
+                        "name": "Admin",
                         "email": "admin@position.cm",
-                        "email_verified_at": "2022-02-18T10:11:34.000000Z",
+                        "email_verified_at": "2022-08-30T23:14:09.000000Z",
                         "phone": "699999999",
-                        "fcmToken": null,
-                        "imageProfil": null,
+                        "fcm_token": null,
+                        "image_profil": null,
+                        "abonnement_id": 1,
                         "deleted_at": null,
-                        "created_at": "2022-02-18T10:11:34.000000Z",
-                        "updated_at": "2022-02-19T19:09:00.000000Z"
+                        "created_at": "2022-08-30T23:14:09.000000Z",
+                        "updated_at": "2022-08-30T23:14:09.000000Z"
                     }
                 }
             ],
-            "manager": null,
-            "user": null,
-            "commercial": {
-                "id": 12,
-                "idUser": 20,
-                "numeroCni": 1256987,
-                "numeroBadge": 1234568,
-                "ville": "Douala",
-                "quartier": "Melen",
-                "actif": true,
-                "sexe": "Masculin",
-                "whatsapp": 699999999,
-                "diplome": "BAC",
-                "tailleTshirt": "XXL",
-                "age": 25,
-                "deleted_at": null,
-                "created_at": "2022-03-01T15:08:58.000000Z",
-                "updated_at": "2022-03-01T15:08:58.000000Z",
-                "user": {
-                    "id": 20,
-                    "name": "Gautier",
-                    "email": "bt@geo.sm",
-                    "email_verified_at": "2022-02-22T19:55:07.000000Z",
-                    "phone": "691201946",
-                    "fcmToken": null,
-                    "imageProfil": "/storage/uploads/commerciaux/profils/1646147325_Image1.png",
-                    "deleted_at": null,
-                    "created_at": "2022-03-01T15:08:45.000000Z",
-                    "updated_at": "2022-03-12T20:19:30.000000Z"
-                }
-            }
-        },
-        {
-            "id": 19,
-            "nom": "ENTREPRISE",
-            "idBatiment": "68",
-            "indicationAdresse": "TEST",
-            "codePostal": "BP 4567 YDE",
-            "siteInternet": "site.com",
-            "idCommercial": "12",
-            "idManager": null,
-            "etage": "3",
-            "cover": "/storage/uploads/batiments/images/BATIMENT_MELEN_494028/1647784252_image_cropper_1647784164070.jpg",
-            "vues": "0",
-            "phone": "699999999",
-            "whatsapp1": "555555555",
-            "whatsapp2": "777777777",
-            "description": "TEST",
-            "osmId": null,
-            "updated": false,
-            "revoir": "0",
-            "valide": "0",
-            "services": "VENTE",
-            "ameliorations": "VIDEOS",
-            "avis": 0,
-            "deleted_at": null,
-            "created_at": "2022-03-20T13:50:50.000000Z",
-            "updated_at": "2022-03-20T13:50:52.000000Z",
-            "idUser": 20,
-            "logo": null,
-            "batiment": {
-                "id": 68,
-                "nom": "TEST FINAL",
-                "nombreNiveau": "5",
-                "codeBatiment": "BATIMENT_MELEN_494028",
-                "longitude": "-122.07974287137887",
-                "latitude": "37.418633954877166",
-                "image": "/storage/uploads/batiments/images/BATIMENT_MELEN_494028/1647784127_image_cropper_1647784065662.jpg",
-                "indication": "RUE",
-                "rue": "Joaquin Road",
-                "ville": "Yaoundé",
-                "commune": "COMMUNE",
-                "quartier": "MELEN",
-                "deleted_at": null,
-                "created_at": "2022-03-20T13:48:45.000000Z",
-                "updated_at": "2022-03-20T13:48:47.000000Z",
-                "idCommercial": 12,
-                "idUser": 20
-            },
-            "sous_categories": [
-                {
-                    "id": 24,
-                    "nom": "Ambassades et Consulats",
-                    "idcategorie": 2,
-                    "logourl": null,
-                    "deleted_at": null,
-                    "created_at": "2022-02-25T11:35:34.000000Z",
-                    "updated_at": "2022-02-25T11:35:34.000000Z",
-                    "pivot": {
-                        "idEtablissement": 19,
-                        "idSousCategorie": 24
-                    },
-                    "categorie": {
-                        "id": 2,
-                        "nom": "Administrations",
-                        "logourl": "/images/categories/logo/icon-list-categorie-administration.svg",
-                        "deleted_at": null,
-                        "created_at": "2022-03-04T13:30:15.000000Z",
-                        "updated_at": "2022-03-16T15:06:23.000000Z",
-                        "shortname": "Administration",
-                        "vues": 10
-                    }
-                }
-            ],
-            "commodites": [
-                {
-                    "id": 16,
-                    "nom": "Wifi ++",
-                    "idTypeCommodite": 1,
-                    "deleted_at": null,
-                    "created_at": "2022-02-25T14:48:03.000000Z",
-                    "updated_at": "2022-02-25T15:24:26.000000Z",
-                    "pivot": {
-                        "idEtablissement": 19,
-                        "idCommodite": 16
-                    }
-                }
-            ],
-            "images": [
-                {
-                    "id": 4,
-                    "idEtablissement": 19,
-                    "imageUrl": "/storage/uploads/batiments/images/BATIMENT_MELEN_494028/ENTREPRISE/1647784311_image_cropper_1647784298997.jpg",
-                    "deleted_at": null,
-                    "created_at": "2022-03-20T13:51:51.000000Z",
-                    "updated_at": "2022-03-20T13:51:51.000000Z"
-                }
-            ],
-            "horaires": [
-                {
-                    "id": 6,
-                    "idEtablissement": 19,
-                    "jour": "Mardi",
-                    "plageHoraire": "08:00-16:00",
-                    "deleted_at": null,
-                    "created_at": "2022-03-20T13:51:27.000000Z",
-                    "updated_at": "2022-03-20T13:51:27.000000Z"
-                },
-                {
-                    "id": 7,
-                    "idEtablissement": 19,
-                    "jour": "Mercredi",
-                    "plageHoraire": "08:00-16:00",
-                    "deleted_at": null,
-                    "created_at": "2022-03-20T13:51:28.000000Z",
-                    "updated_at": "2022-03-20T13:51:28.000000Z"
-                },
-                {
-                    "id": 8,
-                    "idEtablissement": 19,
-                    "jour": "Jeudi",
-                    "plageHoraire": "08:00-16:00",
-                    "deleted_at": null,
-                    "created_at": "2022-03-20T13:51:29.000000Z",
-                    "updated_at": "2022-03-20T13:51:29.000000Z"
-                },
-                {
-                    "id": 9,
-                    "idEtablissement": 19,
-                    "jour": "Samedi",
-                    "plageHoraire": "07:00-12:00",
-                    "deleted_at": null,
-                    "created_at": "2022-03-20T13:51:30.000000Z",
-                    "updated_at": "2022-03-20T13:51:30.000000Z"
-                }
-            ],
-            "commentaires": [],
-            "manager": null,
             "user": {
-                "id": 20,
-                "name": "Gautier",
-                "email": "bt@geo.sm",
-                "email_verified_at": "2022-02-22T19:55:07.000000Z",
-                "phone": "691201946",
-                "fcmToken": null,
-                "imageProfil": "/storage/uploads/commerciaux/profils/1646147325_Image1.png",
+                "id": 1,
+                "name": "Admin",
+                "email": "admin@position.cm",
+                "email_verified_at": "2022-08-30T23:14:09.000000Z",
+                "phone": "699999999",
+                "fcm_token": null,
+                "image_profil": null,
+                "abonnement_id": 1,
                 "deleted_at": null,
-                "created_at": "2022-03-01T15:08:45.000000Z",
-                "updated_at": "2022-03-12T20:19:30.000000Z"
-            },
-            "commercial": {
-                "id": 12,
-                "idUser": 20,
-                "numeroCni": 1256987,
-                "numeroBadge": 1234568,
-                "ville": "Douala",
-                "quartier": "Melen",
-                "actif": true,
-                "sexe": "Masculin",
-                "whatsapp": 699999999,
-                "diplome": "BAC",
-                "tailleTshirt": "XXL",
-                "age": 25,
-                "deleted_at": null,
-                "created_at": "2022-03-01T15:08:58.000000Z",
-                "updated_at": "2022-03-01T15:08:58.000000Z",
-                "user": {
-                    "id": 20,
-                    "name": "Gautier",
-                    "email": "bt@geo.sm",
-                    "email_verified_at": "2022-02-22T19:55:07.000000Z",
-                    "phone": "691201946",
-                    "fcmToken": null,
-                    "imageProfil": "/storage/uploads/commerciaux/profils/1646147325_Image1.png",
-                    "deleted_at": null,
-                    "created_at": "2022-03-01T15:08:45.000000Z",
-                    "updated_at": "2022-03-12T20:19:30.000000Z"
-                }
+                "created_at": "2022-08-30T23:14:09.000000Z",
+                "updated_at": "2022-08-30T23:14:09.000000Z"
             }
         }
     ],

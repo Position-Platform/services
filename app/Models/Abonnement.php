@@ -52,13 +52,13 @@ class Abonnement extends Model
         'prix', 'type', 'duree'
     ];
 
-    public function managers()
+    public function users()
     {
-        return $this->hasMany(Abonnement::class, "idAbonnement");
+        return $this->hasMany(User::class, "abonnement_id");
     }
 
     public function paiements()
     {
-        return $this->hasMany(Paiement::class, "idAbonnement");
+        return $this->hasMany(Paiement::class, "abonnement_id");
     }
 }

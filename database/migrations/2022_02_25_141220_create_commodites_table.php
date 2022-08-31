@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('commodites', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->integer('idTypeCommodite');
+            $table->integer('type_commodite_id');
             $table->softDeletes();
             $table->timestamps();
         });

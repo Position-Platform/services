@@ -17,7 +17,7 @@ class AdminTableSeeders extends Seeder
 
         DB::table('admins')->insert([
             [
-                'idUser' => 1,
+                'user_id' => 1,
                 'isSuperAdmin' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),

@@ -39,6 +39,6 @@ class TypeCommodite extends Model
 
     public function commodites()
     {
-        return $this->hasMany(Commodite::class, "idTypeCommodite");
+        return $this->hasMany(Commodite::class, "type_commodite_id");
     }
 }

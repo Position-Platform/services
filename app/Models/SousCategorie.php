@@ -44,16 +44,16 @@ class SousCategorie extends Model
 
 
     protected $fillable = [
-        "id", "nom", "idcategorie", "logourl"
+        "id", "nom", "categorie_id", "logourl", "logourlmap"
     ];
 
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class, "idcategorie");
+        return $this->belongsTo(Categorie::class);
     }
 
     public function etablissements()
     {
-        return $this->belongsToMany(Etablissement::class, "sous_categories_etablissements", "idSousCategorie", "idEtablissement");
+        return $this->belongsToMany(Etablissement::class, "sous_categories_etablissements", "sous_categorie_id", "etablissement_id");
     }
 }

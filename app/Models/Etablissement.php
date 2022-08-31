@@ -91,51 +91,42 @@ class Etablissement extends Model
     use HasFactory, SoftDeletes, Searchable;
 
     protected $fillable = [
-        "nom", "idBatiment", "indicationAdresse", "codePostal", "siteInternet", "idCommercial", "idManager", "idUser", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osmId", "updated", "revoir", "valide", "services", "ameliorations", "avis", "logo"
+        "nom", "batiment_id", "indication_adresse", "code_postal", "site_internet", "nom_manager",
+        "contact_manager", "user_id", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osm_id", "services", "ameliorations", "logo", "logo_map"
     ];
 
     public function batiment()
     {
-        return $this->belongsTo(Batiment::class, "idBatiment");
+        return $this->belongsTo(Batiment::class);
     }
 
     public function images()
     {
-        return $this->hasMany(Image::class, "idEtablissement");
+        return $this->hasMany(Image::class, "etablissement_id");
     }
 
     public function horaires()
     {
-        return $this->hasMany(Horaire::class, "idEtablissement");
+        return $this->hasMany(Horaire::class, "etablissement_id");
     }
 
     public function commentaires()
     {
-        return $this->hasMany(Commentaire::class, "idEtablissement");
+        return $this->hasMany(Commentaire::class, "etablissement_id");
     }
 
     public function sousCategories()
     {
-        return $this->belongsToMany(SousCategorie::class, "sous_categories_etablissements",  "idEtablissement", "idSousCategorie");
+        return $this->belongsToMany(SousCategorie::class, "sous_categories_etablissements",  "etablissement_id", "sous_categorie_id");
     }
 
     public function commodites()
     {
-        return $this->belongsToMany(Commodite::class, "commodites_etablissements",  "idEtablissement", "idCommodite");
-    }
-
-    public function commercial()
-    {
-        return $this->belongsTo(Commercial::class, "idCommercial");
-    }
-
-    public function manager()
-    {
-        return $this->belongsTo(Manager::class, "idManager");
+        return $this->belongsToMany(Commodite::class, "commodites_etablissements",  "etablissement_id", "commodite_id");
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, "idUser");
+        return $this->belongsTo(User::class);
     }
 }

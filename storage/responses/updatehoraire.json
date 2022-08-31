@@ -1,12 +1,15 @@
 {
     "success": true,
     "data": {
-        "jour": "Lundi",
-        "plageHoraire": "07:00-11:00;13:00-17:00",
-        "idEtablissement": 6,
-        "updated_at": "2022-03-01T12:45:05.000000Z",
-        "created_at": "2022-03-01T12:45:05.000000Z",
-        "id": 1
+        "horaire": {
+            "id": 2,
+            "etablissement_id": 2,
+            "jour": "lundi",
+            "plage_horaire": "11:00-15:00;16:00-18:00",
+            "deleted_at": null,
+            "created_at": "2022-08-31T01:32:39.000000Z",
+            "updated_at": "2022-08-31T02:07:39.000000Z"
+        }
     },
     "message": "Update Success"
 }

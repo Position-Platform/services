@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('horaires', function (Blueprint $table) {
             $table->id();
-            $table->integer("idEtablissement");
+            $table->integer("etablissement_id");
             $table->string("jour");
-            $table->string("plageHoraire");
+            $table->string("plage_horaire");
             $table->softDeletes();
             $table->timestamps();
         });

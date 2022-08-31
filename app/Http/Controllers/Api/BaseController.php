@@ -4,11 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Commentaire;
-use App\Models\Etablissement;
-use App\Models\Horaire;
 use App\Models\User;
 use App\Models\UserFavoris;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class BaseController extends Controller
@@ -22,7 +19,7 @@ class BaseController extends Controller
     {
         $response = [
             'success' => true,
-            'data'    => $result,
+            'data' => $result,
             'message' => $message,
         ];
 
@@ -34,7 +31,7 @@ class BaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function sendError($error, $errorMessages = [], $code = 401)
+    public function sendError($error, $errorMessages = [], $code = 400)
     {
         $response = [
             'success' => false,
@@ -99,10 +96,10 @@ class BaseController extends Controller
         }
     }
 
-    public function  getMoyenneRatingByEtablissmeent($idEtablissement)
+    public function  getMoyenneRatingByEtablissmeent($etablissement_id)
     {
 
-        $commentaires = Commentaire::where('idEtablissement', $idEtablissement)->get();
+        $commentaires = Commentaire::where('etablissement_id', $etablissement_id)->get();
         $moyenne = 0;
         foreach ($commentaires as $commentaire) {
             $moyenne += $commentaire->rating;
@@ -113,101 +110,19 @@ class BaseController extends Controller
         return $moyenne / count($commentaires);
     }
 
-    public function getCommentNumberByEtablissmeent($idEtablissement)
+    public function getCommentNumberByEtablissmeent($etablissement_id)
     {
-        $commentaires = Commentaire::where('idEtablissement', $idEtablissement)->get();
+        $commentaires = Commentaire::where('etablissement_id', $etablissement_id)->get();
         return count($commentaires);
     }
 
-    public function countOccurenceRatingInCommentTableByEtablissement($idEtablissement)
+    public function countOccurenceRatingInCommentTableByEtablissement($etablissement_id)
     {
-        $count = DB::table('commentaires')
+        return  DB::table('commentaires')
             ->select(DB::raw('count(*) as count, rating'))
-            ->where('idEtablissement', $idEtablissement)
+            ->where('etablissement_id', $etablissement_id)
             ->groupBy('rating')
             ->get();
-
-        return $count;
-    }
-
-    //Convert day string to int day of week
-    public function convertDayToInt($day)
-    {
-        switch ($day) {
-            case 'Lundi':
-                return 1;
-                break;
-            case 'Mardi':
-                return 2;
-                break;
-            case 'Mercredi':
-                return 3;
-                break;
-            case 'Jeudi':
-                return 4;
-                break;
-            case 'Vendredi':
-                return 5;
-                break;
-            case 'Samedi':
-                return 6;
-                break;
-            case 'Dimanche':
-                return 7;
-                break;
-        }
-    }
-
-    //get all Horaires by Etablissement and convert horaire jour to int day of week
-    public function getAllHorairesByEtablissement($idEtablissement)
-    {
-        $horaires = Horaire::where('idEtablissement', $idEtablissement)->get();
-        foreach ($horaires as $key => $horaire) {
-            $horaire->jour = $this->convertDayToInt($horaire->jour);
-        }
-        return $horaires;
-    }
-
-    //Convert plageHoraire example1:07:00-11:00;13:00-17:00 from Horaires to Time and return json response
-
-
-    public function convertPlageHoraireToTime($plageHoraire)
-    {
-        $plageHoraire = explode(";", $plageHoraire);
-        $data = array();
-        foreach ($plageHoraire as $key => $plage) {
-            $plage = explode("-", $plage);
-            $data[] = array(
-                'debut' => $plage[0],
-                'fin' => $plage[1]
-            );
-        }
-        return $data;
-    }
-
-
-
-
-
-
-    //check if Etablissement is open now
-    public function checkIfEtablissementIsOpen($idEtablissement)
-    {
-        $etablissement = Etablissement::find($idEtablissement);
-        $horaires = $this->getAllHorairesByEtablissement($idEtablissement);
-        $now = Carbon::now();
-        $nowH = $now->format('H:i');
-        foreach ($horaires as $key => $horaire) {
-            if ($horaire->jour == $now->dayOfWeek) {
-                $plageHoraire = $this->convertPlageHoraireToTime($horaire->plageHoraire);
-                foreach ($plageHoraire as $key => $plage) {
-                    if ($nowH >= $plage['debut'] && $nowH <= $plage['fin']) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
     }
 
     public function checkIfEtablissementInFavoris($etablissement, $user_id)
@@ -220,30 +135,12 @@ class BaseController extends Controller
         }
     }
 
-    public function getDistance($lat1, $lon1, $lat2, $lon2)
-    {
-        $theta = $lon1 - $lon2;
-        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-        $dist = acos($dist);
-        $dist = rad2deg($dist);
-        $miles = $dist * 60 * 1.1515;
-        return (round($miles * 1.609344, 2));
-    }
+
 
     public function  checkIfEtablassimentInDataArray($etablissement, $data)
     {
-        foreach ($data as $key => $value) {
+        foreach ($data as  $value) {
             if ($value->id == $etablissement->id) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public function checkIfCoordinatesInBbox($lat, $lng, $latMin, $latMax, $lngMin, $lngMax)
-    {
-        if ($lat >= $latMin && $lat <= $latMax) {
-            if ($lng >= $lngMin && $lng <= $lngMax) {
                 return true;
             }
         }

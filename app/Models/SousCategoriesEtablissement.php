@@ -13,13 +13,13 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement query()
  * @mixin \Eloquent
  * @property int $id
- * @property int $idEtablissement
+ * @property int $etablissement_id
  * @property int $idSousCategorie
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereIdEtablissement($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereIdSousCategorie($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategoriesEtablissement whereUpdatedAt($value)
  */
@@ -28,6 +28,6 @@ class SousCategoriesEtablissement extends Model
     use HasFactory;
 
     protected $fillable = [
-        "idSousCategorie", "idEtablissement"
+        "sous_categorie_id", "etablissement_id"
     ];
 }

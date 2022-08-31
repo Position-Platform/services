@@ -37,11 +37,11 @@ class Tracking extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "idUser", "longitude", "latitude"
+        "user_id", "longitude", "latitude"
     ];
 
     public function user()
     {
-        return $this->belongsTo(User::class, "idUser");
+        return $this->belongsTo(User::class);
     }
 }

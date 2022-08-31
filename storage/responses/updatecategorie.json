@@ -1,14 +1,17 @@
 {
     "success": true,
     "data": {
-        "id": 1,
-        "nom": "Achats +",
-        "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
-        "deleted_at": null,
-        "shortname": "Achats",
-        "vues": 0,
-        "created_at": "2022-02-25T11:09:21.000000Z",
-        "updated_at": "2022-02-25T11:09:21.000000Z"
+        "categorie": {
+            "id": 2,
+            "nom": "Administrations",
+            "shortname": "Administration",
+            "logourl": "/images/categories/logo/icon-list-categorie-administration.svg",
+            "logourlmap": "/images/categories/logo/map/pin-administration.svg",
+            "vues": 0,
+            "deleted_at": null,
+            "created_at": "2022-08-30T22:14:10.000000Z",
+            "updated_at": "2022-08-30T22:14:10.000000Z"
+        }
     },
     "message": "Update Success"
 }

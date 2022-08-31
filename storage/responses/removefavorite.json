@@ -1,9 +1,11 @@
 {
     "success": true,
     "data": {
-        "id": 3,
-        "user_id": 1,
-        "etablissement_id": 8
+        "favorite": {
+            "id": 1,
+            "user_id": 1,
+            "etablissement_id": 2
+        }
     },
     "message": "Etablissement retiré des favoris"
 }

@@ -94,7 +94,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'password',
         'phone',
-        'fcmToken', 'imageProfil'
+        'fcm_token', 'image_profil', 'abonnement_id'
     ];
 
     /**
@@ -104,7 +104,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token', 'token', 'token_secret'
     ];
 
     /**
@@ -153,19 +153,9 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function admin()
     {
-        return $this->hasOne(Admin::class, 'idUser');
+        return $this->hasOne(Admin::class, 'user_id');
     }
 
-
-    public function commercial()
-    {
-        return $this->hasOne(Commercial::class, 'idUser');
-    }
-
-    public function manager()
-    {
-        return $this->hasOne(Manager::class, 'idUser');
-    }
 
     public function facebook()
     {
@@ -182,23 +172,28 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(SocialGoogleAccount::class);
     }
 
+    public function abonnement()
+    {
+        return $this->belongsTo(Abonnement::class);
+    }
+
     public function commentaires()
     {
-        return $this->hasMany(Commentaire::class, "idUser");
+        return $this->hasMany(Commentaire::class, "user_id");
     }
 
     public function trackings()
     {
-        return $this->hasMany(Tracking::class, 'idUser');
+        return $this->hasMany(Tracking::class, 'user_id');
     }
 
     public function etablissements()
     {
-        return $this->hasMany(Etablissement::class, "idUser");
+        return $this->hasMany(Etablissement::class, "user_id");
     }
 
     public function batiments()
     {
-        return $this->hasMany(Batiment::class, "idUser");
+        return $this->hasMany(Batiment::class, "user_id");
     }
 }

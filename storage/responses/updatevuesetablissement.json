@@ -1,0 +1,32 @@
+{
+    "success": true,
+    "data": {
+        "etablissement": {
+            "id": 2,
+            "nom": "BOUTIQUE DE MICAL",
+            "batiment_id": 3,
+            "indication_adresse": "Face station",
+            "code_postal": "BP 4326 Douala",
+            "site_internet": "www.site.com",
+            "nom_manager": "Mical",
+            "contact_manager": "Mical",
+            "user_id": 1,
+            "etage": 1,
+            "cover": "/storage/uploads/batiments/images/BATIMENT_1013434286/1661912359_about2.jpg",
+            "phone": "699999999",
+            "whatsapp1": "699999999",
+            "whatsapp2": "699999998",
+            "description": "Super etablissement.",
+            "osm_id": null,
+            "services": "OM;MOMO",
+            "ameliorations": "Ajouter des videos",
+            "vues": 2,
+            "logo": null,
+            "logo_map": null,
+            "deleted_at": null,
+            "created_at": "2022-08-31T01:32:38.000000Z",
+            "updated_at": "2022-08-31T02:37:33.000000Z"
+        }
+    },
+    "message": "Vues du Etablissement incrémentées"
+}

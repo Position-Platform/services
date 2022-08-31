@@ -19,9 +19,11 @@ class RoleController extends Controller
     {
         $roles = Role::all();
 
-        foreach ($roles as $key => $role) {
+        foreach ($roles as $role) {
             $role->permissions;
         }
+
+        $success['roles'] = $roles;
 
         return $this->sendResponse($roles, 'Liste des Roles');
     }
@@ -44,6 +46,8 @@ class RoleController extends Controller
 
         $role = Role::create(['name' => $request->input('name')]);
 
+        $success['role'] = $role;
+
         return $this->sendResponse($role, 'Création du Role reussie');
     }
 
@@ -58,7 +62,9 @@ class RoleController extends Controller
         $role = Role::find($id);
         $role->permissions;
 
-        return $this->sendResponse($role, 'Role');
+        $success['role'] = $role;
+
+        return $this->sendResponse($success, 'Role');
     }
 
 
@@ -84,7 +90,8 @@ class RoleController extends Controller
         $saveRole = $role->save();
 
         if ($saveRole) {
-            return $this->sendResponse($role, "Update Success", 201);
+            $success['role'] = $role;
+            return $this->sendResponse($success, "Update Success", 201);
         } else {
             return $this->sendError("Erreur de Création.", ['error' => 'Echec de Mise à jour']);
         }

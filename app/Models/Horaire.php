@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * App\Models\Horaire
  *
  * @property int $id
- * @property int $idEtablissement
+ * @property int $etablissement_id
  * @property string $jour
  * @property string $plageHoraire
  * @property \Illuminate\Support\Carbon|null $deleted_at
@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereIdEtablissement($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereJour($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire wherePlageHoraire($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereUpdatedAt($value)
@@ -37,13 +37,13 @@ class Horaire extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "idEtablissement", "jour", "plageHoraire"
+        "etablissement_id", "jour", "plage_horaire"
     ];
 
 
 
     public function etablissement()
     {
-        return $this->belongsTo(Etablissement::class, "idEtablissement");
+        return $this->belongsTo(Etablissement::class);
     }
 }

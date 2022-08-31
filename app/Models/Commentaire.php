@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property int $id
  * @property int $idUser
- * @property int $idEtablissement
+ * @property int $etablissement_id
  * @property string|null $commentaire
  * @property int|null $rating
  * @property \Illuminate\Support\Carbon|null $deleted_at
@@ -27,7 +27,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereIdEtablissement($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereIdUser($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereRating($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereUpdatedAt($value)
@@ -40,16 +40,16 @@ class Commentaire extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "idUser", "idEtablissement", "commentaire", "rating"
+        "user_id", "etablissement_id", "commentaire", "rating"
     ];
 
     public function etablissement()
     {
-        return $this->belongsTo(Etablissement::class, "idEtablissement");
+        return $this->belongsTo(Etablissement::class);
     }
 
     public function user()
     {
-        return $this->belongsTo(User::class, "idUser");
+        return $this->belongsTo(User::class);
     }
 }

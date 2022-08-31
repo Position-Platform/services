@@ -49,21 +49,16 @@ class Paiement extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "idAbonnement", "idManager", "idCommercial", "datePaiement", "referenceId", "referencePosition", "typePaiement", "statut"
+        "abonnement_id", "user_id",  "date_paiement", "reference_id", "reference_position", "type_paiement", "statut"
     ];
 
     public function abonnement()
     {
-        return $this->belongsTo(Abonnement::class, "idAbonnement");
+        return $this->belongsTo(Abonnement::class);
     }
 
-    public function manager()
+    public function user()
     {
-        return $this->belongsTo(Manager::class, "idManager");
-    }
-
-    public function commercial()
-    {
-        return $this->belongsTo(Commercial::class, "idCommercial");
+        return $this->belongsTo(User::class);
     }
 }
