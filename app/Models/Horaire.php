@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
 /**
  * App\Models\Horaire
  *
  * @property int $id
  * @property int $etablissement_id
  * @property string $jour
- * @property string $plageHoraire
+ * @property string $plage_horaire
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -23,8 +24,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire query()
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereEtablissementId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereetablissement_id($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereJour($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire wherePlageHoraire($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Horaire whereUpdatedAt($value)

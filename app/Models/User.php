@@ -16,6 +16,7 @@ use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
 
+
 /**
  * App\Models\User
  *
@@ -25,20 +26,48 @@ use Spatie\Permission\Traits\HasRoles;
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
  * @property string $phone
- * @property string|null $fcmToken
- * @property string|null $imageProfil
+ * @property string|null $fcm_token
+ * @property string|null $image_profil
+ * @property string|null $token
+ * @property string|null $token_secret
+ * @property int $abonnement_id
  * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Abonnement|null $abonnement
+ * @property-read \App\Models\Admin|null $admin
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
+ * @property-read int|null $batiments_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Passport\Client[] $clients
+ * @property-read int|null $clients_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Commentaire[] $commentaires
+ * @property-read int|null $commentaires_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
+ * @property-read SocialFacebookAccount|null $facebook
+ * @property-read SocialGoogleAccount|null $google
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
+ * @property-read int|null $roles_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Passport\Token[] $tokens
  * @property-read int|null $tokens_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tracking[] $trackings
+ * @property-read int|null $trackings_count
+ * @property-read SocialTwitterAccount|null $twitter
  * @method static \Database\Factories\UserFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
+ * @method static \Illuminate\Database\Query\Builder|User onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereAbonnementId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereFcmToken($value)
@@ -48,35 +77,12 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|User whereTokenSecret($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- * @mixin \Eloquent
- * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Passport\Client[] $clients
- * @property-read int|null $clients_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
- * @property-read int|null $permissions_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
- * @property-read int|null $roles_count
- * @method static \Illuminate\Database\Eloquent\Builder|User permission($permissions)
- * @method static \Illuminate\Database\Eloquent\Builder|User role($roles, $guard = null)
- * @property-read \App\Models\Admin|null $admin
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @method static \Illuminate\Database\Query\Builder|User onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static \Illuminate\Database\Query\Builder|User withTrashed()
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
- * @property-read \App\Models\Commercial|null $commercial
- * @property-read \App\Models\Manager|null $manager
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Commentaire[] $commentaires
- * @property-read int|null $commentaires_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tracking[] $trackings
- * @property-read int|null $trackings_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Batiment[] $batiments
- * @property-read int|null $batiments_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
- * @property-read int|null $etablissements_count
- * @property-read SocialFacebookAccount|null $facebook
- * @property-read SocialGoogleAccount|null $google
- * @property-read SocialTwitterAccount|null $twitter
+ * @mixin \Eloquent
  */
 class User extends Authenticatable implements MustVerifyEmail
 {

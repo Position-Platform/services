@@ -7,13 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
+
 /**
  * App\Models\Batiment
  *
  * @property int $id
+ * @property int|null $user_id
  * @property string|null $nom
- * @property string $nombreNiveau
- * @property string $codeBatiment
+ * @property string $nombre_niveau
+ * @property string $code
  * @property string $longitude
  * @property string $latitude
  * @property string|null $image
@@ -27,11 +29,12 @@ use Laravel\Scout\Searchable;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
  * @property-read int|null $etablissements_count
+ * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment newQuery()
  * @method static \Illuminate\Database\Query\Builder|Batiment onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment query()
- * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereCodeBatiment($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereCommune($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereDeletedAt($value)
@@ -45,16 +48,11 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereQuartier($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereRue($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereVille($value)
  * @method static \Illuminate\Database\Query\Builder|Batiment withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Batiment withoutTrashed()
  * @mixin \Eloquent
- * @property int $idCommercial
- * @property-read \App\Models\Commercial|null $commercial
- * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereIdCommercial($value)
- * @property int|null $idUser
- * @property-read \App\Models\User|null $user
- * @method static \Illuminate\Database\Eloquent\Builder|Batiment whereIdUser($value)
  */
 class Batiment extends Model
 {

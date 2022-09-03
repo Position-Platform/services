@@ -7,16 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
+
 /**
  * App\Models\Commodite
  *
  * @property int $id
  * @property string $nom
- * @property int $idCategorie
- * @property int $idTypeCommodite
+ * @property int $type_commodite_id
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
+ * @property-read int|null $etablissements_count
  * @property-read \App\Models\TypeCommodite|null $typeCommodite
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite newQuery()
@@ -25,17 +27,12 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereIdCategorie($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereIdTypeCommodite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereNom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereTypeCommoditeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commodite whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|Commodite withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Commodite withoutTrashed()
  * @mixin \Eloquent
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Categorie[] $categories
- * @property-read int|null $categories_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Etablissement[] $etablissements
- * @property-read int|null $etablissements_count
  */
 class Commodite extends Model
 {

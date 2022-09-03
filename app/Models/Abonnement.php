@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
+
 /**
  * App\Models\Abonnement
  *
@@ -18,8 +19,10 @@ use Laravel\Scout\Searchable;
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|Abonnement[] $managers
- * @property-read int|null $managers_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
+ * @property-read int|null $paiements_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
+ * @property-read int|null $users_count
  * @method static \Illuminate\Database\Eloquent\Builder|Abonnement newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Abonnement newQuery()
  * @method static \Illuminate\Database\Query\Builder|Abonnement onlyTrashed()
@@ -35,8 +38,6 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Query\Builder|Abonnement withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Abonnement withoutTrashed()
  * @mixin \Eloquent
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Paiement[] $paiements
- * @property-read int|null $paiements_count
  */
 class Abonnement extends Model
 {
