@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
 /**
  * App\Models\Commentaire
  *
  * @property int $id
- * @property int $idUser
+ * @property int $user_id
  * @property int $etablissement_id
  * @property string|null $commentaire
  * @property int|null $rating
@@ -26,11 +27,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereCommentaire($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereEtablissementId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereetablissement_id($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereIdUser($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereRating($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Commentaire whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|Commentaire withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Commentaire withoutTrashed()
  * @mixin \Eloquent

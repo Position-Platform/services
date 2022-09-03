@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
 /**
  * App\Models\Tracking
  *
  * @property int $id
- * @property int $idUser
+ * @property int $user_id
  * @property string $longitude
  * @property string $latitude
  * @property \Illuminate\Support\Carbon|null $deleted_at
@@ -24,10 +25,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereIdUser($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereLatitude($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereLongitude($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|Tracking withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Tracking withoutTrashed()
  * @mixin \Eloquent
