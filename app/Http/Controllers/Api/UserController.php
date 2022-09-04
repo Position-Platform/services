@@ -126,6 +126,7 @@ class UserController extends BaseController
 
         if ($user) {
             $roles = $user->getRoleNames();
+            $user->abonnement;
             $success["user"] = $user;
             $succes['roles'] = $roles;
 
