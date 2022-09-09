@@ -28,7 +28,7 @@ class SocialFacebookAccountService
                 $user = User::create([
                     'email'    => $providerUser->getEmail(),
                     'name'     => $providerUser->getName(),
-                    'imageProfil'   => $file,
+                    'image_profil'   => $file ? $file : 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($providerUser->getEmail()))),
                     'token' => $providerUser->token,
                     'password' => md5(rand(1, 10000)),
                     'phone' => $this->randomNumber()

@@ -27,7 +27,7 @@ class SocialTwitterAccountService
                 $user = User::create([
                     'email'    => $providerUser->getEmail() ?? "No email",
                     'name'     => $providerUser->getName(),
-                    'imageProfil'   => $file,
+                    'image_profil'   => $file ? $file : 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($providerUser->getEmail()))),
                     'token' => $providerUser->token,
                     'tokenSecret' => $providerUser->tokenSecret,
                     'password' => md5(rand(1, 10000)),

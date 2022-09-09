@@ -42,6 +42,7 @@ class UserController extends BaseController
 
         $input = $request->all();
         $input['password'] = bcrypt($input['password']);
+        $input['image_profil'] = 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($input['email'])));
         if ($request->file()) {
             $fileName = time() . '_' . $request->image_profil->getClientOriginalName();
             $filePath = $request->file('image_profil')->storeAs('uploads/users/profils', $fileName, 'public');
