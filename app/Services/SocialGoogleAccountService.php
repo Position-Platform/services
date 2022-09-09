@@ -26,7 +26,7 @@ class SocialGoogleAccountService
                 $user = User::create([
                     'email'    => $providerUser->getEmail(),
                     'name'     => $providerUser->getName(),
-                    'imageProfil'   => $providerUser->getAvatar(),
+                    'image_profil'   => $providerUser->getAvatar() ? $providerUser->getAvatar() : 'https://www.gravatar.com/avatar/' . md5(strtolower(trim($providerUser->getEmail()))),
                     'token' => $providerUser->token,
                     'password' => md5(rand(1, 10000)),
                     'phone' => $this->randomNumber()
