@@ -13,21 +13,22 @@
                 "contact_manager": "Mical",
                 "user_id": 1,
                 "etage": 1,
-                "cover": null,
+                "cover": "/storage/uploads/batiments/images/BATIMENT_1013434286/1661912359_about2.jpg",
                 "phone": "699999999",
                 "whatsapp1": "699999999",
                 "whatsapp2": "699999998",
-                "description": "bel etablissement",
+                "description": "Super etablissement.",
                 "osm_id": null,
                 "services": "OM;MOMO",
                 "ameliorations": "Ajouter des videos",
-                "vues": 0,
+                "vues": 2,
                 "logo": null,
                 "logo_map": null,
                 "deleted_at": null,
                 "created_at": "2022-08-31T01:32:38.000000Z",
-                "updated_at": "2022-08-31T01:32:38.000000Z",
+                "updated_at": "2022-08-31T02:37:33.000000Z",
                 "isFavoris": false,
+                "isopen": false,
                 "moyenne": 4,
                 "avis": 1,
                 "count": [
@@ -73,7 +74,7 @@
                             "nom": "Achats",
                             "shortname": "Achats",
                             "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
-                            "logourlmap": "/images/categories/logo/icon-list-categorie-achats.svg",
+                            "logourlmap": "/images/categories/logo/icon-list-categorie-achats.png",
                             "vues": 0,
                             "deleted_at": null,
                             "created_at": "2022-08-30T22:14:10.000000Z",
@@ -107,15 +108,6 @@
                 ],
                 "horaires": [
                     {
-                        "id": 3,
-                        "etablissement_id": 2,
-                        "jour": "mardi",
-                        "plage_horaire": "07: 00-12: 00;13: 00-17: 00",
-                        "deleted_at": null,
-                        "created_at": "2022-08-31T02:05:59.000000Z",
-                        "updated_at": "2022-08-31T02:05:59.000000Z"
-                    },
-                    {
                         "id": 2,
                         "etablissement_id": 2,
                         "jour": "lundi",
@@ -123,6 +115,15 @@
                         "deleted_at": null,
                         "created_at": "2022-08-31T01:32:39.000000Z",
                         "updated_at": "2022-08-31T02:07:39.000000Z"
+                    },
+                    {
+                        "id": 3,
+                        "etablissement_id": 2,
+                        "jour": "mardi",
+                        "plage_horaire": "07:00-12:00;13:00-17:00",
+                        "deleted_at": null,
+                        "created_at": "2022-08-31T02:05:59.000000Z",
+                        "updated_at": "2022-08-31T02:05:59.000000Z"
                     }
                 ],
                 "commentaires": [
@@ -142,7 +143,7 @@
                             "email_verified_at": "2022-08-30T23:14:09.000000Z",
                             "phone": "699999999",
                             "fcm_token": null,
-                            "image_profil": null,
+                            "image_profil": "https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&d=mm",
                             "abonnement_id": 1,
                             "deleted_at": null,
                             "created_at": "2022-08-30T23:14:09.000000Z",
@@ -157,7 +158,173 @@
                     "email_verified_at": "2022-08-30T23:14:09.000000Z",
                     "phone": "699999999",
                     "fcm_token": null,
-                    "image_profil": null,
+                    "image_profil": "https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&d=mm",
+                    "abonnement_id": 1,
+                    "deleted_at": null,
+                    "created_at": "2022-08-30T23:14:09.000000Z",
+                    "updated_at": "2022-08-30T23:14:09.000000Z",
+                    "abonnement": {
+                        "id": 1,
+                        "nom": "free",
+                        "prix": 0,
+                        "type": "year",
+                        "duree": 1,
+                        "deleted_at": null,
+                        "created_at": "2022-08-30T23:14:09.000000Z",
+                        "updated_at": "2022-08-30T23:14:09.000000Z"
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "nom": "Sogefi",
+                "batiment_id": 3,
+                "indication_adresse": "Rue de Melen",
+                "code_postal": "59684",
+                "site_internet": "sogefi.cm.",
+                "nom_manager": "Nom Manager.",
+                "contact_manager": "699999999.",
+                "user_id": 1,
+                "etage": 3,
+                "cover": "/storage/uploads/batiments/images/BATIMENT_1013434286/Sogefi/1661912590_google-io.jpg",
+                "phone": "699999999",
+                "whatsapp1": "699999999",
+                "whatsapp2": "699999999",
+                "description": "Super etablissement.",
+                "osm_id": 111259,
+                "services": "OM;MOMO",
+                "ameliorations": "Site internet,videos",
+                "vues": 0,
+                "logo": "/storage/uploads/batiments/images/BATIMENT_1013434286/Sogefi/1661912590_icon-list-alimentation.svg",
+                "logo_map": "/storage/uploads/batiments/images/BATIMENT_1013434286/Sogefi/1661912590_pin-energy.png",
+                "deleted_at": null,
+                "created_at": "2022-08-31T02:23:10.000000Z",
+                "updated_at": "2022-08-31T02:23:10.000000Z",
+                "isFavoris": false,
+                "isopen": false,
+                "moyenne": 0,
+                "avis": 0,
+                "count": [],
+                "batiment": {
+                    "id": 3,
+                    "user_id": 1,
+                    "nom": "BOUTIQUE DE MICAL",
+                    "nombre_niveau": "3",
+                    "code": "BATIMENT_1013434286",
+                    "longitude": "11.229207",
+                    "latitude": "4.078288",
+                    "image": null,
+                    "indication": "derrierre station",
+                    "rue": "Rue de la Mairie",
+                    "ville": "Douala",
+                    "commune": "Douala 3",
+                    "quartier": "Nyalla",
+                    "deleted_at": null,
+                    "created_at": "2022-08-31T01:32:38.000000Z",
+                    "updated_at": "2022-08-31T01:32:38.000000Z"
+                },
+                "sous_categories": [
+                    {
+                        "id": 1,
+                        "nom": "Boutiques",
+                        "categorie_id": 1,
+                        "logourl": null,
+                        "logourlmap": null,
+                        "deleted_at": null,
+                        "created_at": "2022-08-30T22:14:10.000000Z",
+                        "updated_at": "2022-08-30T22:14:10.000000Z",
+                        "pivot": {
+                            "etablissement_id": 3,
+                            "sous_categorie_id": 1
+                        },
+                        "categorie": {
+                            "id": 1,
+                            "nom": "Achats",
+                            "shortname": "Achats",
+                            "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
+                            "logourlmap": "/images/categories/logo/icon-list-categorie-achats.png",
+                            "vues": 0,
+                            "deleted_at": null,
+                            "created_at": "2022-08-30T22:14:10.000000Z",
+                            "updated_at": "2022-08-30T22:14:10.000000Z"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "nom": "Brocante",
+                        "categorie_id": 1,
+                        "logourl": null,
+                        "logourlmap": null,
+                        "deleted_at": null,
+                        "created_at": "2022-08-30T22:14:10.000000Z",
+                        "updated_at": "2022-08-30T22:14:10.000000Z",
+                        "pivot": {
+                            "etablissement_id": 3,
+                            "sous_categorie_id": 2
+                        },
+                        "categorie": {
+                            "id": 1,
+                            "nom": "Achats",
+                            "shortname": "Achats",
+                            "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
+                            "logourlmap": "/images/categories/logo/icon-list-categorie-achats.png",
+                            "vues": 0,
+                            "deleted_at": null,
+                            "created_at": "2022-08-30T22:14:10.000000Z",
+                            "updated_at": "2022-08-30T22:14:10.000000Z"
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "nom": "Supermarché",
+                        "categorie_id": 1,
+                        "logourl": null,
+                        "logourlmap": null,
+                        "deleted_at": null,
+                        "created_at": "2022-08-30T22:14:10.000000Z",
+                        "updated_at": "2022-08-30T22:14:10.000000Z",
+                        "pivot": {
+                            "etablissement_id": 3,
+                            "sous_categorie_id": 3
+                        },
+                        "categorie": {
+                            "id": 1,
+                            "nom": "Achats",
+                            "shortname": "Achats",
+                            "logourl": "/images/categories/logo/icon-list-categorie-achats.svg",
+                            "logourlmap": "/images/categories/logo/icon-list-categorie-achats.png",
+                            "vues": 0,
+                            "deleted_at": null,
+                            "created_at": "2022-08-30T22:14:10.000000Z",
+                            "updated_at": "2022-08-30T22:14:10.000000Z"
+                        }
+                    }
+                ],
+                "commodites": [
+                    {
+                        "id": 1,
+                        "nom": "Wifi +",
+                        "type_commodite_id": 1,
+                        "deleted_at": null,
+                        "created_at": "2022-08-31T01:25:19.000000Z",
+                        "updated_at": "2022-08-31T01:28:27.000000Z",
+                        "pivot": {
+                            "etablissement_id": 3,
+                            "commodite_id": 1
+                        }
+                    }
+                ],
+                "images": [],
+                "horaires": [],
+                "commentaires": [],
+                "user": {
+                    "id": 1,
+                    "name": "Admin",
+                    "email": "admin@position.cm",
+                    "email_verified_at": "2022-08-30T23:14:09.000000Z",
+                    "phone": "699999999",
+                    "fcm_token": null,
+                    "image_profil": "https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&d=mm",
                     "abonnement_id": 1,
                     "deleted_at": null,
                     "created_at": "2022-08-30T23:14:09.000000Z",

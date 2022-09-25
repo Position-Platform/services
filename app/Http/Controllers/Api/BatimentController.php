@@ -42,6 +42,11 @@ class BatimentController extends BaseController
                 }
 
 
+                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+                $etablissement->isopen = $isOpen;
+
+
                 $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
                 $etablissement->moyenne = $moyenne;
@@ -161,6 +166,11 @@ class BatimentController extends BaseController
             } else {
                 $etablissement->isFavoris = false;
             }
+
+
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
 
 
             $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);

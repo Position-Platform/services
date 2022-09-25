@@ -46,6 +46,11 @@ class EtablissementController extends BaseController
             }
 
 
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
+
+
             $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
             $etablissement->moyenne = $moyenne;
@@ -221,6 +226,11 @@ class EtablissementController extends BaseController
         } else {
             $etablissement->isFavoris = false;
         }
+
+
+        $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+        $etablissement->isopen = $isOpen;
 
 
         $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
@@ -425,6 +435,10 @@ class EtablissementController extends BaseController
 
             $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
+
             $etablissement->moyenne = $moyenne;
 
             $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
@@ -496,6 +510,11 @@ class EtablissementController extends BaseController
                                 }
 
 
+                                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+                                $etablissement->isopen = $isOpen;
+
+
                                 $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
                                 $etablissement->moyenne = $moyenne;
@@ -536,6 +555,11 @@ class EtablissementController extends BaseController
                     } else {
                         $etablissement->isFavoris = false;
                     }
+
+
+                    $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+                    $etablissement->isopen = $isOpen;
 
 
                     $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
