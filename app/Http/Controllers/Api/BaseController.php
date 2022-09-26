@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Commentaire;
+use App\Models\Etablissement;
+use App\Models\Horaire;
 use App\Models\User;
 use App\Models\UserFavoris;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 class BaseController extends Controller
@@ -142,6 +145,85 @@ class BaseController extends Controller
         foreach ($data as  $value) {
             if ($value->id == $etablissement->id) {
                 return true;
+            }
+        }
+        return false;
+    }
+
+    //Convert day string to int day of week
+    public function convertDayToInt($day)
+    {
+        switch ($day) {
+            case 'Lundi':
+                return 1;
+                break;
+            case 'Mardi':
+                return 2;
+                break;
+            case 'Mercredi':
+                return 3;
+                break;
+            case 'Jeudi':
+                return 4;
+                break;
+            case 'Vendredi':
+                return 5;
+                break;
+            case 'Samedi':
+                return 6;
+                break;
+            case 'Dimanche':
+                return 7;
+                break;
+        }
+    }
+
+    //get all Horaires by Etablissement and convert horaire jour to int day of week
+    public function getAllHorairesByEtablissement($idEtablissement)
+    {
+        $horaires = Horaire::where('etablissement_id', $idEtablissement)->get();
+        foreach ($horaires as $horaire) {
+            $horaire->jour = $this->convertDayToInt($horaire->jour);
+        }
+        return $horaires;
+    }
+
+    //Convert plageHoraire example1:07:00-11:00;13:00-17:00 from Horaires to Time and return json response
+
+
+    public function convertPlageHoraireToTime($plageHoraire)
+    {
+        $plageHoraire1 = explode(";", $plageHoraire);
+        $data = array();
+        foreach ($plageHoraire1 as  $plage) {
+            $plage1 = explode("-", $plage);
+            $data[] = array(
+                'debut' => $plage1[0],
+                'fin' => $plage1[1]
+            );
+        }
+        return $data;
+    }
+
+
+
+
+
+
+    //check if Etablissement is open now
+    public function checkIfEtablissementIsOpen($idEtablissement)
+    {
+        $horaires = $this->getAllHorairesByEtablissement($idEtablissement);
+        $now = Carbon::now();
+        $nowH = $now->format('H:i');
+        foreach ($horaires as  $horaire) {
+            if ($horaire->jour == $now->dayOfWeek) {
+                $plageHoraire = $this->convertPlageHoraireToTime($horaire->plage_horaire);
+                foreach ($plageHoraire as  $plage) {
+                    if ($nowH >= $plage['debut'] && $nowH <= $plage['fin']) {
+                        return true;
+                    }
+                }
             }
         }
         return false;
