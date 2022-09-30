@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string("whatsapp1");
             $table->string("whatsapp2")->nullable();
             $table->text("description")->nullable();
-            $table->integer("osm_id")->unique()->nullable();
+            $table->string("osm_id")->unique()->nullable();
             $table->text("services");
             $table->text("ameliorations")->nullable();
             $table->integer("vues")->default(0);
