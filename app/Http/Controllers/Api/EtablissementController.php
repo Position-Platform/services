@@ -6,8 +6,10 @@ use App\Models\Admin;
 use App\Models\Batiment;
 use App\Models\Categorie;
 use App\Models\Commodite;
+use App\Models\CommoditesEtablissement;
 use App\Models\Etablissement;
 use App\Models\SousCategorie;
+use App\Models\SousCategoriesEtablissement;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,7 +38,7 @@ class EtablissementController extends BaseController
         $etablissements = Etablissement::all();
         //  $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
-        foreach ($etablissements as  $etablissement) {
+        foreach ($etablissements as $etablissement) {
 
 
             if ($request->user_id) {
@@ -62,7 +64,7 @@ class EtablissementController extends BaseController
             $etablissement->batiment;
             $etablissement->sousCategories;
 
-            foreach ($etablissement->sousCategories as  $sousCategories) {
+            foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -71,7 +73,7 @@ class EtablissementController extends BaseController
             $etablissement->horaires;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as  $commentaires) {
+            foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
 
@@ -244,7 +246,7 @@ class EtablissementController extends BaseController
         $etablissement->batiment;
         $etablissement->sousCategories;
 
-        foreach ($etablissement->sousCategories as  $sousCategories) {
+        foreach ($etablissement->sousCategories as $sousCategories) {
             $sousCategories->categorie;
         }
 
@@ -253,7 +255,7 @@ class EtablissementController extends BaseController
         $etablissement->horaires;
         $etablissement->commentaires;
 
-        foreach ($etablissement->commentaires as  $commentaires) {
+        foreach ($etablissement->commentaires as $commentaires) {
             $commentaires->user;
         }
 
@@ -389,11 +391,11 @@ class EtablissementController extends BaseController
                 $etablissement->horaires()->delete();
                 $etablissement->commentaires()->delete();
 
-                foreach ($etablissement->sousCategories as  $sousCategorie) {
+                foreach ($etablissement->sousCategories as $sousCategorie) {
                     $etablissement->sousCategories()->detach($sousCategorie->id);
                 }
 
-                foreach ($etablissement->commodites as  $commodite) {
+                foreach ($etablissement->commodites as $commodite) {
                     $etablissement->commodites()->detach($commodite->id);
                 }
 
@@ -424,7 +426,7 @@ class EtablissementController extends BaseController
         $q = $request->input('q');
         $etablissements = Etablissement::search($q)->get();
 
-        foreach ($etablissements as  $etablissement) {
+        foreach ($etablissements as $etablissement) {
 
             if ($request->user_id) {
                 $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
@@ -484,111 +486,106 @@ class EtablissementController extends BaseController
     public function filterSearch(Request $request)
     {
 
-        $id_categorie = $request->input('id_categorie');
+        $idcategorie = $request->input('id_categorie');
 
         $idCommodites = explode(",", $request->input('idCommodites'));
 
-        $categorie = Categorie::find($id_categorie);
+        $categorie = Categorie::find($idcategorie);
 
         $etablissements = array();
 
 
         if ($request->idCommodites) {
-            foreach ($idCommodites as  $idCommodite) {
-                $commodite = Commodite::find($idCommodite);
-                foreach ($commodite->etablissements as  $etablissement) {
 
-                    foreach ($etablissement->sousCategories as  $sousCategorie) {
-                        $sousCategorie->categorie;
-                        if ($sousCategorie->categorie->id == $id_categorie) {
-                            $bool = $this->checkIfEtablassimentInDataArray($etablissement, $etablissements);
-                            if (!$bool) {
-                                if ($request->user_id) {
-                                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                                } else {
-                                    $etablissement->isFavoris = false;
-                                }
+            $commoditesEtablissement = CommoditesEtablissement::whereIn('commodite_id', $idCommodites)->pluck('etablissement_id')->toArray();
+            $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
+            $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->whereIn('etablissement_id', $commoditesEtablissement)->pluck('etablissement_id')->toArray();
 
+            $etablissements = Etablissement::find($sousCategoriesEtablissement);
+            foreach ($etablissements as $etablissement) {
 
-                                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-                                $etablissement->isopen = $isOpen;
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
 
 
-                                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
-                                $etablissement->moyenne = $moyenne;
+                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
-                                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+                $etablissement->isopen = $isOpen;
 
-                                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+                $etablissement->moyenne = $moyenne;
+
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
-                                $etablissement->batiment;
-                                $etablissement->sousCategories;
+                $etablissement->batiment;
+                $etablissement->sousCategories;
 
 
 
-                                foreach ($etablissement->sousCategories as $sousCategories) {
-                                    $sousCategories->categorie;
-                                }
+                foreach ($etablissement->sousCategories as $sousCategories) {
+                    $sousCategories->categorie;
+                }
 
-                                $etablissement->commodites;
-                                $etablissement->images;
-                                $etablissement->horaires;
-                                $etablissement->commentaires;
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
 
-                                foreach ($etablissement->commentaires as $commentaires) {
-                                    $commentaires->user;
-                                }
-                                $etablissements[] = $etablissement;
-                            }
-                        }
-                    }
+                foreach ($etablissement->commentaires as $commentaires) {
+                    $commentaires->user;
                 }
             }
         } else {
-            foreach ($categorie->sousCategories as  $sousCategorie) {
-                foreach ($sousCategorie->etablissements as  $etablissement) {
-                    if ($request->user_id) {
-                        $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                    } else {
-                        $etablissement->isFavoris = false;
-                    }
+            $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
+            $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
+
+            $etablissements = Etablissement::find($sousCategoriesEtablissement);
+
+            foreach ($etablissements as $etablissement) {
+
+                if ($request->user_id) {
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                } else {
+                    $etablissement->isFavoris = false;
+                }
 
 
-                    $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
-                    $etablissement->isopen = $isOpen;
+                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
+                $etablissement->isopen = $isOpen;
 
-                    $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+                $etablissement->moyenne = $moyenne;
 
-                    $etablissement->moyenne = $moyenne;
+                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
 
-                    $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                    $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-
-                    $etablissement->batiment;
-                    $etablissement->sousCategories;
+                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
+                $etablissement->batiment;
+                $etablissement->sousCategories;
 
-                    foreach ($etablissement->sousCategories as $sousCategories) {
-                        $sousCategories->categorie;
-                    }
 
-                    $etablissement->commodites;
-                    $etablissement->images;
-                    $etablissement->horaires;
-                    $etablissement->commentaires;
 
-                    foreach ($etablissement->commentaires as $commentaires) {
-                        $commentaires->user;
-                    }
-                    $etablissements[] = $etablissement;
+                foreach ($etablissement->sousCategories as $sousCategories) {
+                    $sousCategories->categorie;
+                }
+
+                $etablissement->commodites;
+                $etablissement->images;
+                $etablissement->horaires;
+                $etablissement->commentaires;
+
+                foreach ($etablissement->commentaires as $commentaires) {
+                    $commentaires->user;
                 }
             }
         }
@@ -598,9 +595,6 @@ class EtablissementController extends BaseController
 
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
-
-
-
 
     /**
      * Add Favorite Establishment.
