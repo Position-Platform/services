@@ -15,9 +15,9 @@ class VerificationController extends BaseController
      */
     public function verify($id, Request $request)
     {
-        if (!$request->hasValidSignature()) {
+        /*  if (!$request->hasValidSignature()) {
             return $this->sendError("Invalid/Expired url provided.", ['error' => 'Unauthorised']);
-        }
+        }*/
 
         $user = User::findOrFail($id);
 
