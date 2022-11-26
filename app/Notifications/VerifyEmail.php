@@ -12,7 +12,7 @@ class VerifyEmail extends NotificationsVerifyEmail
     {
         return URL::temporarySignedRoute(
             'verification.verify',
-            Carbon::now()->addMinute(10),
+            Carbon::now()->addDays(1),
             ['id' => $notifiable->getKey()]
         );  //we use 10 minutes expiry
     }
