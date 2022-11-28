@@ -35,8 +35,8 @@ class EtablissementController extends BaseController
      */
     public function index(Request $request)
     {
-        $etablissements = Etablissement::all();
-        //  $etablissements->setPath(env('APP_URL') . '/api/etablissements');
+        $etablissements = Etablissement::paginate(30);
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
@@ -501,7 +501,7 @@ class EtablissementController extends BaseController
             $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
             $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->whereIn('etablissement_id', $commoditesEtablissement)->pluck('etablissement_id')->toArray();
 
-            $etablissements = Etablissement::find($sousCategoriesEtablissement);
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
             foreach ($etablissements as $etablissement) {
 
                 if ($request->user_id) {
@@ -546,7 +546,7 @@ class EtablissementController extends BaseController
             $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
             $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-            $etablissements = Etablissement::find($sousCategoriesEtablissement);
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
 
             foreach ($etablissements as $etablissement) {
 
