@@ -502,6 +502,7 @@ class EtablissementController extends BaseController
             $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->whereIn('etablissement_id', $commoditesEtablissement)->pluck('etablissement_id')->toArray();
 
             $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
+            $etablissements->setPath(env('APP_URL') . '/api/etablissements');
             foreach ($etablissements as $etablissement) {
 
                 if ($request->user_id) {
@@ -547,6 +548,7 @@ class EtablissementController extends BaseController
             $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
             $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
+            $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
             foreach ($etablissements as $etablissement) {
 
