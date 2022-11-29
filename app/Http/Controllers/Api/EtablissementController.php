@@ -424,7 +424,7 @@ class EtablissementController extends BaseController
     public function search(Request $request)
     {
         $q = $request->input('q');
-        $etablissements = Etablissement::search($q)->get();
+        $etablissements = Etablissement::search($q)->paginate(50);
 
         foreach ($etablissements as $etablissement) {
 
