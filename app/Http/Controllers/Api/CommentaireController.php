@@ -74,6 +74,7 @@ class CommentaireController extends BaseController
             $commentaire = $etablissement->commentaires()->create($input);
 
             $success['commentaire'] = $commentaire;
+            $success['commentaire']['user'] = $user;
 
 
 
