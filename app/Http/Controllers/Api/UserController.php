@@ -285,11 +285,31 @@ class UserController extends BaseController
 
         $etablissements = Etablissement::whereIn('id', $favorites->pluck('etablissement_id'))->get();
 
-        foreach ($etablissements as  $etablissement) {
+        foreach ($etablissements as $etablissement) {
+
+            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $user->id);
+
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+
             $etablissement->batiment;
             $etablissement->sousCategories;
 
-            foreach ($etablissement->sousCategories as  $sousCategories) {
+
+
+            foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
@@ -298,11 +318,9 @@ class UserController extends BaseController
             $etablissement->horaires;
             $etablissement->commentaires;
 
-            foreach ($etablissement->commentaires as  $commentaires) {
+            foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
-
-            $etablissement->user;
         }
 
         return $this->sendResponse($etablissements, 'Favorites');
