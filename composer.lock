@@ -1451,16 +1451,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.42.2",
+            "version": "v9.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "607d7867c93706eae20e28e46679f8a66e2a23ec"
+                "reference": "011f2e1d49a11c22519a7899b46ddf3bc5b0f40b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/607d7867c93706eae20e28e46679f8a66e2a23ec",
-                "reference": "607d7867c93706eae20e28e46679f8a66e2a23ec",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/011f2e1d49a11c22519a7899b46ddf3bc5b0f40b",
+                "reference": "011f2e1d49a11c22519a7899b46ddf3bc5b0f40b",
                 "shasum": ""
             },
             "require": {
@@ -1633,7 +1633,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-11-30T16:23:52+00:00"
+            "time": "2022-12-06T14:26:07+00:00"
         },
         {
             "name": "laravel/passport",
@@ -8519,16 +8519,16 @@
         },
         {
             "name": "knuckleswtf/scribe",
-            "version": "4.8.0",
+            "version": "4.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/knuckleswtf/scribe.git",
-                "reference": "00e7c2716b7e1186f23b44f43ab97d855972eb0e"
+                "reference": "7d2f163bb81b4886ee5cb9ba8645091ae0b915e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knuckleswtf/scribe/zipball/00e7c2716b7e1186f23b44f43ab97d855972eb0e",
-                "reference": "00e7c2716b7e1186f23b44f43ab97d855972eb0e",
+                "url": "https://api.github.com/repos/knuckleswtf/scribe/zipball/7d2f163bb81b4886ee5cb9ba8645091ae0b915e3",
+                "reference": "7d2f163bb81b4886ee5cb9ba8645091ae0b915e3",
                 "shasum": ""
             },
             "require": {
@@ -8602,7 +8602,7 @@
             ],
             "support": {
                 "issues": "https://github.com/knuckleswtf/scribe/issues",
-                "source": "https://github.com/knuckleswtf/scribe/tree/4.8.0"
+                "source": "https://github.com/knuckleswtf/scribe/tree/4.9.0"
             },
             "funding": [
                 {
@@ -8610,7 +8610,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-12-02T18:13:36+00:00"
+            "time": "2022-12-05T21:47:56+00:00"
         },
         {
             "name": "laravel/sail",
