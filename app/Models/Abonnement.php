@@ -53,6 +53,12 @@ class Abonnement extends Model
         'prix', 'type', 'duree'
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function users()
     {
         return $this->hasMany(User::class, "abonnement_id");

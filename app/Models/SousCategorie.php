@@ -47,6 +47,13 @@ class SousCategorie extends Model
         "id", "nom", "categorie_id", "logourl", "logourlmap"
     ];
 
+    protected $hidden = [
+        'categorie_id',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function categorie()
     {
         return $this->belongsTo(Categorie::class);

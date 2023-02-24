@@ -88,6 +88,12 @@ class Etablissement extends Model
         "contact_manager", "user_id", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osm_id", "services", "ameliorations", "logo", "logo_map"
     ];
 
+    protected $hidden = [
+        'batiment_id',
+        'user_id',
+        'created_at',
+    ];
+
     public function batiment()
     {
         return $this->belongsTo(Batiment::class);

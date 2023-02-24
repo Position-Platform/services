@@ -42,6 +42,13 @@ class Commodite extends Model
         "nom", "type_commodite_id"
     ];
 
+    protected $hidden = [
+        'type_commodite_id',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function typeCommodite()
     {
         return $this->belongsTo(TypeCommodite::class);

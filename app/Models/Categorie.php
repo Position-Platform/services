@@ -51,6 +51,12 @@ class Categorie extends Model
         "logourlmap", "vues"
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function sousCategories()
     {
         return $this->hasMany(SousCategorie::class, "categorie_id");

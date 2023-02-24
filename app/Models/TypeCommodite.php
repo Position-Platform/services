@@ -38,6 +38,12 @@ class TypeCommodite extends Model
         "nom"
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function commodites()
     {
         return $this->hasMany(Commodite::class, "type_commodite_id");

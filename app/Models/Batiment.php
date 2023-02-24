@@ -62,6 +62,13 @@ class Batiment extends Model
         "user_id", "nom", "nombre_niveau", "code", "longitude", "latitude", "image", "indication", "rue", "ville", "commune", "quartier"
     ];
 
+    protected $hidden = [
+        'user_id',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
     public function etablissements()
     {
         return $this->hasMany(Etablissement::class, "batiment_id");
