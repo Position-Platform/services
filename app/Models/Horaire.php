@@ -41,7 +41,11 @@ class Horaire extends Model
         "etablissement_id", "jour", "plage_horaire"
     ];
 
-
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
 
     public function etablissement()
     {

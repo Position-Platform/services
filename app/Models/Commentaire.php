@@ -44,6 +44,12 @@ class Commentaire extends Model
         "user_id", "etablissement_id", "commentaire", "rating"
     ];
 
+    protected $hidden = [
+        'etablissement_id',
+        'created_at',
+        'updated_at',
+    ];
+
     public function etablissement()
     {
         return $this->belongsTo(Etablissement::class);

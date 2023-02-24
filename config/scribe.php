@@ -75,7 +75,7 @@ return [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                    'X-Authorization' => 'apiKey'
+                    'X-Authorization' => '6ECUlT2GC5j4dIJ8VfOPB7M5hPZk4fyMIOUXqavUJ8gx35ZxwMu3pYMUOcwsn4cu'
                 ],
 
                 /*
