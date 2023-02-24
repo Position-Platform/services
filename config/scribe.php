@@ -315,7 +315,7 @@ INTRO,
      * - 'logo' => 'img/logo.png' // for `laravel` type
      *
      */
-    'logo' => 'https://service.geo.sm/var/www/logo-nom.png',
+    'logo' => 'https://services.position.cm/images/logo-position-logo-nom.svg',
 
     /*
      * If you would like the package to generate the same example values for parameters on each run,
