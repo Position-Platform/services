@@ -21,7 +21,6 @@ class SocialApiAuthTwitterController extends BaseController
      * @header Content-Type application/json
      * @bodyParam token string required the twitter user token. Example: vnjudioplodikebgfdti2fk
      * @bodyParam secret string required the twitter user secret token. Example: vnjudioplodikebgfdti2fk
-     * @responseFile storage/responses/register.json
      */
     public function twitterConnect(Request $request, SocialTwitterAccountService $service)
     {

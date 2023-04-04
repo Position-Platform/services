@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Models\Admin;
 use App\Models\Batiment;
 use App\Models\Categorie;
-use App\Models\Commodite;
-use App\Models\CommoditesEtablissement;
 use App\Models\Etablissement;
 use App\Models\SousCategorie;
 use App\Models\SousCategoriesEtablissement;
@@ -31,7 +29,6 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
-     * @responseFile storage/responses/getetablissements.json
      */
     public function index(Request $request)
     {
@@ -113,13 +110,12 @@ class EtablissementController extends BaseController
      * @bodyParam whatsapp1 string required whatsapp number. Example: 699999999
      * @bodyParam whatsapp2 string other whatsapp number. Example: 699999999
      * @bodyParam osm_id string OSM Data Id. Example: 111259658236
-     * @bodyParam services string required department of the establishment. Example: OM;MOMO
-     * @bodyParam ameliorations string improvements. Example: Site internet,videos
+     * @bodyParam commodites string required services of the establishment. Example: Wifi;Parking
+     * @bodyParam services string required services of the establishment. Example: OM;MOMO
+     * @bodyParam ameliorations string improvements. Example: Site internet;videos
      * @bodyParam logo file required establishment Logo.
      * @bodyParam logo_map file required establishment Logo in map.
      * @bodyParam idSousCategorie string required ids of sous categories. Example: 1,2,3
-     * @bodyParam idCommodite string required ids of commodites. Example: 1,2,3
-     * @responseFile storage/responses/addetablissement.json
      */
     public function store(Request $request)
     {
@@ -134,7 +130,6 @@ class EtablissementController extends BaseController
             'services' => 'required',
             'idSousCategorie' => 'required',
             'batiment_id' => 'required',
-            'idCommodite' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -152,6 +147,7 @@ class EtablissementController extends BaseController
         $input['description'] = $request->description;
         $input['osm_id'] = $request->osm_id;
         $input['services'] = $request->services;
+        $input['commodites'] = $request->commodites;
         $input['ameliorations'] = $request->ameliorations;
         $input['nom_manager'] = $request->nom_manager;
         $input['contact_manager'] = $request->contact_manager;
@@ -194,11 +190,7 @@ class EtablissementController extends BaseController
                 $etablissement->sousCategories()->attach($sousCategories);
             }
 
-            if ($request->idCommodite != null) {
-                $idCommodites = explode(",", $request->idCommodite);
-                $commodites = Commodite::find($idCommodites);
-                $etablissement->commodites()->attach($commodites);
-            }
+
 
             DB::commit();
 
@@ -218,7 +210,6 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the Establishment. Example: 2
      * @queryParam user_id string id of user. Example: 1
-     * @responseFile storage/responses/showetablissement.json
      */
     public function show($id, Request $request)
     {
@@ -287,13 +278,13 @@ class EtablissementController extends BaseController
      * @bodyParam whatsapp1 string whatsapp number. Example: 699999999
      * @bodyParam whatsapp2 string other whatsapp number. Example: 699999999
      * @bodyParam osm_id string OSM Data Id. Example: 111259658236
+     * @bodyParam commodites string services of the establishment. Example: Wifi;Parking
      * @bodyParam services string department of the establishment. Example: OM;MOMO
      * @bodyParam ameliorations string improvements. Example: Site internet,videos
      * @bodyParam vues string count view. Example: true
      * @bodyParam logo file establishment Logo.
      * @bodyParam logo_map file establishment Logo Map.
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateetablissement.json
      */
     public function update(Request $request, $id)
     {
@@ -312,6 +303,7 @@ class EtablissementController extends BaseController
             $etablissement->description = $request->description ?? $etablissement->description;
             $etablissement->etage = $request->etage ?? $etablissement->etage;
             $etablissement->services = $request->services ?? $etablissement->services;
+            $etablissement->commodites = $request->commodites ?? $etablissement->commodites;
             if ($request->vues) {
                 $etablissement->vues =  $etablissement->vues + 1;
             }
@@ -328,11 +320,6 @@ class EtablissementController extends BaseController
                 $etablissement->sousCategories()->attach($sousCategories);
             }
 
-            if ($request->idCommodite != null) {
-                $idCommodites = explode(",", $request->idCommodite);
-                $commodites = Commodite::find($idCommodites);
-                $etablissement->commodites()->attach($commodites);
-            }
 
             $batiment = $etablissement->batiment;
 
@@ -375,13 +362,12 @@ class EtablissementController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the Establishment. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {
         $user = Auth::user();
         $etablissement = Etablissement::find($id);
-        $admin = Admin::where('idUser', $user->id)->first();
+        $admin = Admin::where('user_id', $user->id)->first();
 
         if ($admin || $user->id == $etablissement->user_id) {
 
@@ -421,7 +407,6 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @queryParam q string required search value. Example: piscine
      * @queryParam user_id string id of user. Example: 1
-     * @responseFile storage/responses/getetablissements.json
      */
     public function search(Request $request)
     {
@@ -479,10 +464,8 @@ class EtablissementController extends BaseController
      * Search Establishment by Filter.
      *
      * @header Content-Type application/json
-     * @queryParam idCommodites string required . Example: 1,2,3
      * @queryParam user_id string id of user conncted . Example: 10
      * @queryParam id_categorie string required id of categorie . Example: 1
-     * @responseFile storage/responses/getetablissements.json
      *
      */
     public function filterSearch(Request $request)
@@ -490,107 +473,55 @@ class EtablissementController extends BaseController
 
         $idcategorie = $request->input('id_categorie');
 
-        $idCommodites = explode(",", $request->input('idCommodites'));
-
         $categorie = Categorie::find($idcategorie);
 
         $etablissements = array();
 
 
-        if ($request->idCommodites) {
+        $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
+        $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-            $commoditesEtablissement = CommoditesEtablissement::whereIn('commodite_id', $idCommodites)->pluck('etablissement_id')->toArray();
-            $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
-            $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->whereIn('etablissement_id', $commoditesEtablissement)->pluck('etablissement_id')->toArray();
+        $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
-            $etablissements->setPath(env('APP_URL') . '/api/etablissements');
-            foreach ($etablissements as $etablissement) {
+        foreach ($etablissements as $etablissement) {
 
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
-
-
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-                $etablissement->isopen = $isOpen;
-
-                $etablissement->moyenne = $moyenne;
-
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-
-                $etablissement->batiment;
-                $etablissement->sousCategories;
-
-
-
-                foreach ($etablissement->sousCategories as $sousCategories) {
-                    $sousCategories->categorie;
-                }
-
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
-
-                foreach ($etablissement->commentaires as $commentaires) {
-                    $commentaires->user;
-                }
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
             }
-        } else {
-            $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
-            $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
-
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
-            $etablissements->setPath(env('APP_URL') . '/api/etablissements');
-
-            foreach ($etablissements as $etablissement) {
-
-                if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-                } else {
-                    $etablissement->isFavoris = false;
-                }
 
 
-                $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
-                $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
-                $etablissement->isopen = $isOpen;
+            $etablissement->isopen = $isOpen;
 
-                $etablissement->moyenne = $moyenne;
+            $etablissement->moyenne = $moyenne;
 
-                $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
 
-                $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
-                $etablissement->batiment;
-                $etablissement->sousCategories;
+            $etablissement->batiment;
+            $etablissement->sousCategories;
 
 
 
-                foreach ($etablissement->sousCategories as $sousCategories) {
-                    $sousCategories->categorie;
-                }
+            foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }
 
-                $etablissement->commodites;
-                $etablissement->images;
-                $etablissement->horaires;
-                $etablissement->commentaires;
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
 
-                foreach ($etablissement->commentaires as $commentaires) {
-                    $commentaires->user;
-                }
+            foreach ($etablissement->commentaires as $commentaires) {
+                $commentaires->user;
             }
         }
 
@@ -605,7 +536,6 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @bodyParam etablissement_id int required . Example: 1
-     * @responseFile storage/responses/addfavorite.json
      */
 
     public function addFavorite(Request $request)
@@ -635,7 +565,6 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @bodyParam etablissement_id int required . Example: 1
-     * @responseFile storage/responses/removefavorite.json
      */
 
     public function removeFavorite(Request $request)
@@ -660,7 +589,6 @@ class EtablissementController extends BaseController
      * Update vues Establishment.
      *
      * @urlParam etablissement_id int required . Example: 1
-     * @responseFile 201 storage/responses/updatevuesetablissement.json
      */
     public function updateVues($etablissement_id)
     {

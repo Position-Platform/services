@@ -85,13 +85,12 @@ class Etablissement extends Model
 
     protected $fillable = [
         "nom", "batiment_id", "indication_adresse", "code_postal", "site_internet", "nom_manager",
-        "contact_manager", "user_id", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osm_id", "services", "ameliorations", "logo", "logo_map"
+        "contact_manager", "user_id", "etage", "cover", "vues", "phone", "whatsapp1", "whatsapp2", "description", "osm_id", "services", "commodites", "ameliorations", "logo", "logo_map"
     ];
 
     protected $hidden = [
         'batiment_id',
         'user_id',
-        'created_at',
     ];
 
     public function batiment()
@@ -117,11 +116,6 @@ class Etablissement extends Model
     public function sousCategories()
     {
         return $this->belongsToMany(SousCategorie::class, "sous_categories_etablissements",  "etablissement_id", "sous_categorie_id");
-    }
-
-    public function commodites()
-    {
-        return $this->belongsToMany(Commodite::class, "commodites_etablissements",  "etablissement_id", "commodite_id");
     }
 
     public function user()

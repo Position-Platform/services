@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('shortname');
             $table->text('logourl')->nullable();
             $table->text('logourlmap')->nullable();
+            $table->string('color')->nullable();
             $table->integer('vues')->default(0);
             $table->softDeletes();
             $table->timestamps();

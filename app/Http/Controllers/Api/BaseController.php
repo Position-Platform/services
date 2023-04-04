@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Commentaire;
-use App\Models\Etablissement;
 use App\Models\Horaire;
 use App\Models\User;
 use App\Models\UserFavoris;

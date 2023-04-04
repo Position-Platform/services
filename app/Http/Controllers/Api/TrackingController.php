@@ -31,7 +31,6 @@ class TrackingController extends BaseController
      * @header Content-Type application/json
      * @bodyParam longitude string required  longitude. Example: 12
      * @bodyParam latitude string required latitude. Example: 4
-     * @responseFile storage/responses/addtracking.json
      */
     public function store(Request $request)
     {

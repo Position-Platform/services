@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer("user_id")->nullable();
             $table->string("nom")->nullable();
-            $table->string("nombre_niveau");
+            $table->integer("nombre_niveau");
             $table->string("code");
             $table->string("longitude");
             $table->string("latitude");

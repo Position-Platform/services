@@ -18,7 +18,6 @@ class AbonnementController extends BaseController
      * Get all Subscription.
      *
      * @header Content-Type application/json
-     * @responseFile storage/responses/getabonnements.json
      */
     public function index()
     {
@@ -38,7 +37,6 @@ class AbonnementController extends BaseController
      * @bodyParam prix int required the price of the subscription. Example: 5000
      * @bodyParam duree int required duration of the subscription. Example: 1
      * @bodyParam type string Type of subscription(Year by default). Example:year
-     * @responseFile storage/responses/addabonnement.json
      */
     public function store(Request $request)
     {
@@ -73,7 +71,6 @@ class AbonnementController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the subscription. Example: 2
-     * @responseFile storage/responses/showabonnement.json
      */
     public function show($id)
     {
@@ -95,7 +92,6 @@ class AbonnementController extends BaseController
      * @bodyParam duree int duration of the subscription. Example: 1
      * @bodyParam type string Type of subscription(Year by default). Example:year
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateabonnement.json
      */
     public function update(Request $request, $id)
     {
@@ -124,7 +120,6 @@ class AbonnementController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the subscription. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {

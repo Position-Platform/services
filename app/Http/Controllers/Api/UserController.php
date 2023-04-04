@@ -23,7 +23,6 @@ class UserController extends BaseController
      * @bodyParam password string required the password of the user. Example: gautier123
      * @bodyParam phone int required The phone number of the user. Example:699999999
      * @bodyParam image_profil file Profile Image.
-     * @responseFile storage/responses/register.json
      */
     public function register(Request $request)
     {
@@ -32,7 +31,7 @@ class UserController extends BaseController
             'email' => 'email|unique:users,email',
             'password' => 'string|between:6,20',
             'phone' => 'regex:/^[\+0-9]+$/',
-            'image_profil' => 'mimes:png,jpg,jpeg|max:10000'
+            'image_profil' => 'mimes:png,jpg,jpeg|max:20000'
         ]);
 
 
@@ -70,7 +69,6 @@ class UserController extends BaseController
      * @bodyParam email string required if phone not found the email of the user. Example: gautier@position.cm
      * @bodyParam password string required the password of the user. Example: gautier123
      * @bodyParam phone int required if email not found The phone number of the user. Example:699999999
-     * @responseFile storage/responses/login.json
      */
     public function login(Request $request)
     {
@@ -98,7 +96,6 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @authenticated
      * @group Account management
-     * @responseFile storage/responses/logout.json
      */
     public function logout()
     {
@@ -119,7 +116,6 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @authenticated
      * @group Account management
-     * @responseFile storage/responses/getuser.json
      */
     public function getUser()
     {
@@ -148,7 +144,6 @@ class UserController extends BaseController
      * @bodyParam phone int The phone number of the user. Example:699999999
      * @bodyParam image_profil file Profile Image.
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateuser.json
      */
     public function updateuser($id, Request $request)
     {
@@ -157,7 +152,7 @@ class UserController extends BaseController
         if ($admin || $user->id == $id) {
             $validator = Validator::make($request->all(), [
                 'phone' => 'regex:/^[\+0-9]+$/',
-                'image_profil' => 'mimes:png,jpg,jpeg|max:10000'
+                'image_profil' => 'mimes:png,jpg,jpeg|max:20000'
             ]);
 
             if ($validator->fails()) {
@@ -195,7 +190,6 @@ class UserController extends BaseController
      * @authenticated
      * @group Account management
      * @urlParam id int required the id of the admin. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function deleteuser($id)
     {
@@ -220,7 +214,6 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @group Account management
      * @bodyParam email string required the email of the user. Example: gautier@position.cm
-     * @responseFile storage/responses/forgot.json
      */
     public function forgot()
     {
@@ -240,7 +233,6 @@ class UserController extends BaseController
      * @bodyParam token string required token give in mail.
      * @bodyParam password string required the new password of the user. Example: gautier124
      * @bodyParam password_confirmation string required the password confirmation of the user. Example: gautier124
-     * @responseFile 201 storage/responses/reset.json
      */
     public function reset(Request $request)
     {
@@ -275,7 +267,6 @@ class UserController extends BaseController
      *
      * @authenticated
      * @group Account management
-     * @responseFile storage/responses/favorites.json
      */
 
     public function favorites()

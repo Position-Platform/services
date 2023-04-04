@@ -33,7 +33,6 @@ class ImageController extends BaseController
      * @header Content-Type application/json
      * @bodyParam image_url file required picture.
      * @bodyParam etablissement_id int required the id of the Establishment. Example: 2
-     * @responseFile storage/responses/addimage.json
      */
     public function store(Request $request)
     {
@@ -58,10 +57,6 @@ class ImageController extends BaseController
         }
 
         try {
-
-
-
-
 
             $image = $etablissement->images()->create($input);
 
@@ -94,7 +89,6 @@ class ImageController extends BaseController
      * @urlParam id int required the id of the Picture. Example: 2
      * @bodyParam image_url file picture.
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateimage.json
      */
     public function update(Request $request, $id)
     {
@@ -134,7 +128,6 @@ class ImageController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the Picture. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {

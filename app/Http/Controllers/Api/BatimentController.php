@@ -25,7 +25,6 @@ class BatimentController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user conncted . Example: 10
-     * @responseFile storage/responses/getbatiments.json
      */
     public function index(Request $request)
     {
@@ -94,7 +93,6 @@ class BatimentController extends BaseController
      * @bodyParam ville string required. Example: Douala
      * @bodyParam quartier string required. Example: Melen
      * @bodyParam commune string required. Example: Yaounde IV
-     * @responseFile storage/responses/addbatiment.json
      */
     public function store(Request $request)
     {
@@ -149,7 +147,6 @@ class BatimentController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the building. Example: 2
      * @queryParam user_id string id of user conncted . Example: 10
-     * @responseFile storage/responses/showbatiment.json
      */
     public function show($id, Request $request)
     {
@@ -220,7 +217,6 @@ class BatimentController extends BaseController
      * @bodyParam quartier string. Example: Melen
      * @bodyParam commune string. Example: Yaounde IV
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updatebatiment.json
      */
     public function update(Request $request, $id)
     {
@@ -260,7 +256,6 @@ class BatimentController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the building. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {
@@ -307,8 +302,6 @@ class BatimentController extends BaseController
      *
      * @header Content-Type application/json
      * @bodyParam batiment required example in  storage/responses/batiment.json
-     * @responseFile storage/responses/addbatiments.json
-     *
      */
 
     public function addCompletBatiment(Request $request)
@@ -354,11 +347,7 @@ class BatimentController extends BaseController
                 $etabli->sousCategories()->attach($sousCategories);
             }
 
-            if ($etablissement['idCommodite'] != null) {
-                $idCommodites = explode(",", $etablissement['idCommodite']);
-                $commodites = Commodite::find($idCommodites);
-                $etabli->commodites()->attach($commodites);
-            }
+
 
             $horaires = $etablissement['horaires'];
 
