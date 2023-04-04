@@ -132,7 +132,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     public function sendPasswordResetNotification($token)
     {
-        $url = 'https://services.position.cm/reset-password?token=' . $token;
+        $url = env("APP_URL") . '/reset-password?token=' . $token;
 
         $this->notify(new SendResetLinkParams($token, $url));
     }

@@ -22,7 +22,6 @@ class AdminController extends BaseController
      * Get all Admin.
      *
      * @header Content-Type application/json
-     * @responseFile storage/responses/getadmins.json
      */
     public function index()
     {
@@ -46,7 +45,6 @@ class AdminController extends BaseController
      * @bodyParam password string required the password of the admin. Example: gautier123
      * @bodyParam phone int required The phone number of the admin. Example:699999999
      * @bodyParam image_profil file Profile Image.
-     * @responseFile storage/responses/addadmin.json
      */
     public function store(Request $request)
     {
@@ -110,7 +108,7 @@ class AdminController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the admin. Example: 2
-     * @responseFile storage/responses/showadmin.json
+    
      */
     public function show($id)
     {
@@ -132,7 +130,7 @@ class AdminController extends BaseController
      * @bodyParam isSuperAdmin bool. Example:true
      * @bodyParam image_profil file Profile Image.
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updateadmin.json
+     
      */
     public function update(Request $request, $id)
     {
@@ -182,7 +180,7 @@ class AdminController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the admin. Example: 2
-     * @responseFile 201 storage/responses/delete.json
+     
      */
     public function destroy($id)
     {

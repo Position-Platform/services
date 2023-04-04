@@ -19,7 +19,6 @@ class CreateApiKeyAccessEventsTable extends Migration
             $table->ipAddress('ip_address');
             $table->text('url');
             $table->timestamps();
-
             $table->index('ip_address');
             $table->foreign('api_key_id')->references('id')->on('api_keys');
         });

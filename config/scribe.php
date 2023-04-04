@@ -75,7 +75,7 @@ return [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                    'X-Authorization' => '6ECUlT2GC5j4dIJ8VfOPB7M5hPZk4fyMIOUXqavUJ8gx35ZxwMu3pYMUOcwsn4cu'
+                    'X-Authorization' => env("API_KEY"),
                 ],
 
                 /*
@@ -235,7 +235,7 @@ return [
          * Placeholder your users will see for the auth parameter in the example requests.
          * Set this to null if you want Scribe to use a random value as placeholder instead.
          */
-        'placeholder' => '{YOUR_AUTH_KEY}',
+        'placeholder' => '{TOKEN}',
 
         /*
          * Any extra authentication-related info for your users. For instance, you can describe how to find or generate their auth credentials.
@@ -315,7 +315,7 @@ INTRO,
      * - 'logo' => 'img/logo.png' // for `laravel` type
      *
      */
-    'logo' => 'https://services.position.cm/images/logo-position-logo-nom.svg',
+    'logo' => env("APP_URL") . '/images/logo-position-logo-nom.svg',
 
     /*
      * If you would like the package to generate the same example values for parameters on each run,

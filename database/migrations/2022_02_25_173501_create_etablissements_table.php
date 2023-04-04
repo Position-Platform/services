@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string("nom");
             $table->integer("batiment_id");
+            $table->integer("user_id")->nullable();
             $table->text("indication_adresse")->nullable();
             $table->string("code_postal")->nullable();
             $table->string("site_internet")->nullable();
             $table->string("nom_manager")->nullable();
             $table->string("contact_manager")->nullable();
-            $table->integer("user_id")->nullable();
-            $table->integer("etage");
+            $table->integer("etage")->default(0);
             $table->text("cover")->nullable();
             $table->string("phone");
             $table->string("whatsapp1");
@@ -31,6 +31,7 @@ return new class extends Migration
             $table->text("description")->nullable();
             $table->string("osm_id")->unique()->nullable();
             $table->text("services");
+            $table->text("commodites")->nullable();
             $table->text("ameliorations")->nullable();
             $table->integer("vues")->default(0);
             $table->text("logo")->nullable();

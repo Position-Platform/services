@@ -22,7 +22,6 @@ class SocialApiAuthFacebookController extends BaseController
      *
      * @header Content-Type application/json
      * @bodyParam token string required the facebook user token. Example: vnjudioplodikebgfdti2fk
-     * @responseFile storage/responses/register.json
      */
     public function facebookConnect(Request $request, SocialFacebookAccountService $service)
     {

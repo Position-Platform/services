@@ -19,7 +19,6 @@ class CategorieController extends BaseController
      * Get all Category.
      *
      * @header Content-Type application/json
-     * @responseFile storage/responses/getcategories.json
      */
     public function index()
     {
@@ -42,15 +41,15 @@ class CategorieController extends BaseController
      * @bodyParam nom string required the name of the category. Example: Achat
      * @bodyParam logourl file the picture of the category
      * @bodyParam logourlmap file the picture of the category
-     * @responseFile storage/responses/addcategorie.json
+     * @bodyParam color string the color of the category
      */
     public function store(Request $request)
     {
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
             'shortname' => 'required',
-            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
-            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:20000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:20000',
         ]);
 
         if ($validator->fails()) {
@@ -63,6 +62,8 @@ class CategorieController extends BaseController
 
         $input['id'] = $log_id;
         $input['nom'] = $request->nom;
+        $input['shortname'] = $request->shortname;
+        $input['color'] = $request->color;
 
 
         if ($request->file()) {
@@ -95,7 +96,6 @@ class CategorieController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the category. Example: 2
-     * @responseFile storage/responses/showcategorie.json
      */
     public function show($id)
     {
@@ -119,15 +119,15 @@ class CategorieController extends BaseController
      * @bodyParam vues string count view. Example: true
      * @bodyParam logourl file the picture of the category
      * @bodyParam logourlmap file the picture of the category
+     * @bodyParam color string the color of the category
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updatecategorie.json
      */
     public function update(Request $request, $id)
     {
         $categorie = Categorie::find($id);
         $request->validate([
-            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
-            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:20000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:20000',
         ]);
 
         if ($request->file()) {
@@ -147,6 +147,7 @@ class CategorieController extends BaseController
 
             $categorie->nom = $request->nom ?? $categorie->nom;
             $categorie->shortname = $request->shortname ?? $categorie->shortname;
+            $categorie->color = $request->color ?? $categorie->color;
 
             if ($request->vues) {
                 $categorie->vues =  $categorie->vues + 1;
@@ -172,7 +173,6 @@ class CategorieController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the category. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {
@@ -199,7 +199,6 @@ class CategorieController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam q string required search value. Example: piscine
-     * @responseFile storage/responses/getcategories.json
      */
     public function search(Request $request)
     {

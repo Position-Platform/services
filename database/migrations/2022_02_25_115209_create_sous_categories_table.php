@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('categorie_id');
             $table->text('logourl')->nullable();
             $table->text('logourlmap')->nullable();
+            $table->string('color')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

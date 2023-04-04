@@ -34,6 +34,8 @@ NEXAH_USERNAME=nexah username
 NEXAH_PASSWORD=nexah password
 
 MEILI_PORT=
+
+API_KEY=
 ```
 
 -   edit & add Docker config in .env

@@ -48,7 +48,7 @@ class Categorie extends Model
 
     protected $fillable = [
         "id", "nom", "shortname", "logourl",
-        "logourlmap", "vues"
+        "logourlmap", "color", "vues"
     ];
 
     protected $hidden = [
@@ -60,10 +60,5 @@ class Categorie extends Model
     public function sousCategories()
     {
         return $this->hasMany(SousCategorie::class, "categorie_id");
-    }
-
-    public function commodites()
-    {
-        return $this->belongsToMany(Commodite::class, "commodites_categories", "categorie_id", "commodite_id");
     }
 }

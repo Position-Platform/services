@@ -44,6 +44,7 @@ class SousCategorieController extends BaseController
      * @bodyParam categorie_id int required the id of the category. Example: 5
      * @bodyParam logourl file the picture of the subcategory
      * @bodyParam logourlmap file the picture of the subcategory
+     * @bodyParam color string the color of the subcategory
      * @responseFile storage/responses/addsouscategorie.json
      */
     public function store(Request $request)
@@ -51,8 +52,8 @@ class SousCategorieController extends BaseController
         $validator =  Validator::make($request->all(), [
             'nom' => 'required',
             'categorie_id' => 'required',
-            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
-            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:20000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:20000',
         ]);
 
         if ($validator->fails()) {
@@ -65,6 +66,7 @@ class SousCategorieController extends BaseController
 
         $input['id'] = $log_id;
         $input['nom'] = $request->nom;
+        $input['color'] = $request->color;
         $categorie = Categorie::find($request->categorie_id);
 
         if ($request->file()) {
@@ -122,6 +124,7 @@ class SousCategorieController extends BaseController
      * @bodyParam nom string the name of the subcategory. Example: Achat
      * @bodyParam logourl file the picture of the subcategory
      * @bodyParam logourlmap file the picture of the subcategory
+     * @bodyParam color string the color of the subcategory
      * @bodyParam idcategorie int the id of the category. Example: 5
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      * @responseFile 201 storage/responses/updatecategorie.json
@@ -131,8 +134,8 @@ class SousCategorieController extends BaseController
         $souscategorie = SousCategorie::find($id);
         $categorie = $souscategorie->categorie;
         $request->validate([
-            'logourl' => 'mimes:png,jpg,jpeg,svg|max:10000',
-            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:10000',
+            'logourl' => 'mimes:png,jpg,jpeg,svg|max:20000',
+            'logourlmap' => 'mimes:png,jpg,jpeg,svg|max:20000',
         ]);
 
         if ($request->file()) {
@@ -151,6 +154,8 @@ class SousCategorieController extends BaseController
         try {
 
             $souscategorie->nom = $request->nom ?? $souscategorie->nom;
+
+            $souscategorie->color = $request->color ?? $souscategorie->color;
 
             $souscategorie->categorie;
 

@@ -44,7 +44,7 @@ class SousCategorie extends Model
 
 
     protected $fillable = [
-        "id", "nom", "categorie_id", "logourl", "logourlmap"
+        "id", "nom", "categorie_id", "logourl", "logourlmap", "color"
     ];
 
     protected $hidden = [

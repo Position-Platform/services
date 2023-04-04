@@ -25,10 +25,10 @@
             "description": "bel etablissement",
             "nom_manager": "Mical",
             "contact_manager": "Mical",
+            "commodites": "Wifi",
             "services": "OM;MOMO",
             "ameliorations": "Ajouter des videos",
             "idSousCategorie": "1",
-            "idCommodite": "1",
             "horaires": [
                 {
                     "jour": "lundi",
