@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     nano \
     git \
+    ping \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-configure gd \
@@ -30,6 +31,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install exif \
     && docker-php-ext-install zip \
     && docker-php-source delete
+
+RUN apt-get update &&\
+    apt-get install -y binutils libproj-dev gdal-bin
 
 RUN apt-get install -y apache2
 

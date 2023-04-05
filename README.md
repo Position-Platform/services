@@ -42,7 +42,6 @@ API_KEY=
 
 ```
 APP_PORT=
-APP_PORT_HTTPS=
 FORWARD_DB_PORT=
 PG_PASSWORD=
 ```
@@ -50,7 +49,7 @@ PG_PASSWORD=
 ```
 $ docker-compose up -d
 $ docker exec -it position-services bash
-$ composer install
+$ composer update
 ```
 
 ```

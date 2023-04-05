@@ -10,15 +10,17 @@ services:
             - "${APP_PORT:-80}:80"
         volumes:
             - ./:/var/www/html
+            - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         networks:
             - position-services
         depends_on:
             - position-services-pgsql
-            - position-services-meilisearch
 
     position-services-pgsql:
         restart: always
-        image: "postgres:14"
+        build:
+            context: .
+            dockerfile: .docker/Dockerfile-db
         ports:
             - "${FORWARD_DB_PORT:-5432}:5432"
         container_name: position-services-pgsql
@@ -27,8 +29,6 @@ services:
             POSTGRES_DB: "${DB_DATABASE}"
             POSTGRES_USER: "${DB_USERNAME}"
             POSTGRES_PASSWORD: "${DB_PASSWORD:-secret}"
-        volumes:
-            - "db-pgsql:/var/lib/postgresql/data"
         networks:
             - position-services
         healthcheck:
@@ -77,7 +77,5 @@ networks:
     position-services:
         driver: bridge
 volumes:
-    db-pgsql:
-        driver: local
     position-meilisearch:
         driver: local
