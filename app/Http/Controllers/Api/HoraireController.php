@@ -32,7 +32,7 @@ class HoraireController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam etablissement_id int required the id of the Establishment. Example: 2
+     * @bodyParam etablissement_id int required the id of the Establishment. Example: 1
      * @bodyParam horaires string required horaire object. Example: [{"jour": "lundi","etablissement_id":1,"plage_horaire":"07:00-12:00;13:00-17:00"}]
      */
     public function store(Request $request)
@@ -86,7 +86,7 @@ class HoraireController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the Schedule. Example: 2
+     * @urlParam id int required the id of the Schedule. Example: 1
      * @bodyParam plage_horaire string  time slot. Example: 10:00-15:00;16:00-18:00
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
      */
@@ -115,7 +115,7 @@ class HoraireController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the Schedule. Example: 2
+     * @urlParam id int required the id of the Schedule. Example: 1
      */
     public function destroy($id)
     {

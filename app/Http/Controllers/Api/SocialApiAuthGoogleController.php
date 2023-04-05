@@ -20,6 +20,7 @@ class SocialApiAuthGoogleController extends BaseController
      *
      * @header Content-Type application/json
      * @bodyParam token string required the google user token. Example: vnjudioplodikebgfdti2fk
+     * @responseFile storage/responses/register.json
      */
     public function googleConnect(Request $request, SocialGoogleAccountService $service)
     {

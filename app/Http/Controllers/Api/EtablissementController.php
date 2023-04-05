@@ -97,7 +97,7 @@ class EtablissementController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required  the name of the establishment. Example: Sogefi
-     * @bodyParam batiment_id int required the id of the Building. Example: 2
+     * @bodyParam batiment_id int required the id of the Building. Example: 1
      * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
      * @bodyParam code_postal string postal code. Example: 59684
      * @bodyParam site_internet string website. Example: sogefi.cm.
@@ -208,7 +208,7 @@ class EtablissementController extends BaseController
      * Show Establishment by id.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the Establishment. Example: 2
+     * @urlParam id int required the id of the Establishment. Example: 1
      * @queryParam user_id string id of user. Example: 1
      */
     public function show($id, Request $request)
@@ -266,7 +266,7 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the Establishment. Example: 2
+     * @urlParam id int required the id of the Establishment. Example: 1
      * @bodyParam nom string  the name of the establishment. Example: Sogefi
      * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
      * @bodyParam code_postal string postal code. Example: 59684
@@ -361,7 +361,7 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the Establishment. Example: 2
+     * @urlParam id int required the id of the Establishment. Example: 1
      */
     public function destroy($id)
     {
@@ -464,7 +464,7 @@ class EtablissementController extends BaseController
      * Search Establishment by Filter.
      *
      * @header Content-Type application/json
-     * @queryParam user_id string id of user conncted . Example: 10
+     * @queryParam user_id string id of user conncted . Example: 1
      * @queryParam id_categorie string required id of categorie . Example: 1
      *
      */

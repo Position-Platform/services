@@ -43,7 +43,7 @@ class CommentaireController extends BaseController
      *
      * @header Content-Type application/json
      * @bodyParam commentaire string user comment. Example: J'aime ce lieu
-     * @bodyParam etablissement_id int required the id of the Establishment. Example: 2
+     * @bodyParam etablissement_id int required the id of the Establishment. Example: 1
      * @bodyParam rating int rating. Example: 3
      */
     public function store(Request $request)
@@ -86,7 +86,7 @@ class CommentaireController extends BaseController
      * Show Comment by id.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the comment. Example: 2
+     * @urlParam id int required the id of the comment. Example: 1
      */
     public function show($id)
     {
@@ -104,7 +104,7 @@ class CommentaireController extends BaseController
      * Update Comment.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the comment. Example: 2
+     * @urlParam id int required the id of the comment. Example: 1
      * @bodyParam commentaire string user comment. Example: J'aime ce lieu
      * @bodyParam rating int rating. Example: 3
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
@@ -135,7 +135,7 @@ class CommentaireController extends BaseController
      * Delete Comment.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the comment. Example: 2
+     * @urlParam id int required the id of the comment. Example: 1
      */
     public function destroy($id)
     {
