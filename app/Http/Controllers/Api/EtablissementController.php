@@ -97,7 +97,7 @@ class EtablissementController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @bodyParam nom string required  the name of the establishment. Example: Sogefi
-     * @bodyParam batiment_id int required the id of the Building. Example: 1
+     * @bodyParam batiment_id int required the id of the Building. Example: 3
      * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
      * @bodyParam code_postal string postal code. Example: 59684
      * @bodyParam site_internet string website. Example: sogefi.cm.
