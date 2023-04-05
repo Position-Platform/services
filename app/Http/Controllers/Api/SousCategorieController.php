@@ -20,7 +20,6 @@ class SousCategorieController extends BaseController
      * Get all SubCategory.
      *
      * @header Content-Type application/json
-     * @responseFile storage/responses/getsouscategories.json
      */
     public function index()
     {
@@ -45,7 +44,6 @@ class SousCategorieController extends BaseController
      * @bodyParam logourl file the picture of the subcategory
      * @bodyParam logourlmap file the picture of the subcategory
      * @bodyParam color string the color of the subcategory
-     * @responseFile storage/responses/addsouscategorie.json
      */
     public function store(Request $request)
     {
@@ -101,7 +99,6 @@ class SousCategorieController extends BaseController
      *
      * @header Content-Type application/json
      * @urlParam id int required the id of the subcategory. Example: 2
-     * @responseFile storage/responses/showsouscategorie.json
      */
     public function show($id)
     {
@@ -127,7 +124,6 @@ class SousCategorieController extends BaseController
      * @bodyParam color string the color of the subcategory
      * @bodyParam idcategorie int the id of the category. Example: 5
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
-     * @responseFile 201 storage/responses/updatecategorie.json
      */
     public function update(Request $request, $id)
     {
@@ -176,7 +172,6 @@ class SousCategorieController extends BaseController
      * @authenticated
      * @header Content-Type application/json
      * @urlParam id int required the id of the subcategory. Example: 2
-     * @responseFile 201 storage/responses/delete.json
      */
     public function destroy($id)
     {
@@ -198,7 +193,6 @@ class SousCategorieController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam q string required search value. Example: piscine
-     * @responseFile storage/responses/getsouscategories.json
      */
     public function search(Request $request)
     {

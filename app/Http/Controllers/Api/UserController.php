@@ -23,6 +23,7 @@ class UserController extends BaseController
      * @bodyParam password string required the password of the user. Example: gautier123
      * @bodyParam phone int required The phone number of the user. Example:699999999
      * @bodyParam image_profil file Profile Image.
+     * @responseFile storage/responses/register.json
      */
     public function register(Request $request)
     {
@@ -66,8 +67,8 @@ class UserController extends BaseController
      *
      * @header Content-Type application/json
      * @group Account management
-     * @bodyParam email string required if phone not found the email of the user. Example: gautier@position.cm
-     * @bodyParam password string required the password of the user. Example: gautier123
+     * @bodyParam email string required if phone not found the email of the user. Example: admin@position.cm
+     * @bodyParam password string required the password of the user. Example: secret
      * @bodyParam phone int required if email not found The phone number of the user. Example:699999999
      */
     public function login(Request $request)
@@ -139,7 +140,7 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @authenticated
      * @group Account management
-     * @urlParam id int required the id of the admin. Example: 2
+     * @urlParam id int required the id of the admin. Example: 1
      * @bodyParam name string the name of the user. Example: Gautier
      * @bodyParam phone int The phone number of the user. Example:699999999
      * @bodyParam image_profil file Profile Image.
@@ -189,7 +190,7 @@ class UserController extends BaseController
      * @header Content-Type application/json
      * @authenticated
      * @group Account management
-     * @urlParam id int required the id of the admin. Example: 2
+     * @urlParam id int required the id of the admin. Example: 1
      */
     public function deleteuser($id)
     {
@@ -213,7 +214,7 @@ class UserController extends BaseController
      *
      * @header Content-Type application/json
      * @group Account management
-     * @bodyParam email string required the email of the user. Example: gautier@position.cm
+     * @bodyParam email string required the email of the user. Example: admin@position.cm
      */
     public function forgot()
     {
@@ -229,7 +230,7 @@ class UserController extends BaseController
      *
      * @header Content-Type application/json
      * @group Account management
-     * @bodyParam email string required the email of the user. Example: gautier@position.cm
+     * @bodyParam email string required the email of the user. Example: admin@position.cm
      * @bodyParam token string required token give in mail.
      * @bodyParam password string required the new password of the user. Example: gautier124
      * @bodyParam password_confirmation string required the password confirmation of the user. Example: gautier124

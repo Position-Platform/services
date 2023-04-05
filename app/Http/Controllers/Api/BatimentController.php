@@ -24,7 +24,7 @@ class BatimentController extends BaseController
      * Get all Building.
      *
      * @header Content-Type application/json
-     * @queryParam user_id string id of user conncted . Example: 10
+     * @queryParam user_id string id of user conncted . Example: 1
      */
     public function index(Request $request)
     {
@@ -145,8 +145,8 @@ class BatimentController extends BaseController
      * Show Building by id.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the building. Example: 2
-     * @queryParam user_id string id of user conncted . Example: 10
+     * @urlParam id int required the id of the building. Example: 1
+     * @queryParam user_id string id of user conncted . Example: 1
      */
     public function show($id, Request $request)
     {
@@ -205,7 +205,7 @@ class BatimentController extends BaseController
      * Update Building.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the building. Example: 2
+     * @urlParam id int required the id of the building. Example: 1
      * @bodyParam nom string  the name of the Building. Example: Sogefi
      * @bodyParam nombre_niveau int the number of levels in the building. Example: 3
      * @bodyParam longitude string.
@@ -255,7 +255,7 @@ class BatimentController extends BaseController
      * Delete Building.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the building. Example: 2
+     * @urlParam id int required the id of the building. Example: 1
      */
     public function destroy($id)
     {
