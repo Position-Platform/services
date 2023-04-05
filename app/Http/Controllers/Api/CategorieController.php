@@ -198,7 +198,7 @@ class CategorieController extends BaseController
      * Search Category.
      *
      * @header Content-Type application/json
-     * @queryParam q string required search value. Example: piscine
+     * @queryParam q string required search value. Example: achats
      */
     public function search(Request $request)
     {

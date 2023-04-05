@@ -58,7 +58,7 @@ Route::middleware('auth.apikey')->group(
 
         Route::middleware('auth:api')->group(function () {
             Route::get('auth/logout', [App\Http\Controllers\Api\UserController::class, 'logout']);
-            Route::post('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
+            Route::put('user/update/{id}', [App\Http\Controllers\Api\UserController::class, 'updateuser']);
             Route::delete('user/delete/{id}', [App\Http\Controllers\Api\UserController::class, 'deleteuser']);
             Route::get('user/me', [App\Http\Controllers\Api\UserController::class, 'getUser']);
 
