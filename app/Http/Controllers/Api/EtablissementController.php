@@ -466,12 +466,14 @@ class EtablissementController extends BaseController
      * @header Content-Type application/json
      * @queryParam user_id string id of user conncted . Example: 1
      * @queryParam id_categorie string required id of categorie . Example: 1
-     *
+     * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
      */
     public function filterSearch(Request $request)
     {
 
         $idcategorie = $request->input('id_categorie');
+
+        $commodites = $request->input('commodites');
 
         $categorie = Categorie::find($idcategorie);
 
@@ -481,7 +483,7 @@ class EtablissementController extends BaseController
         $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-        $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
+        $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->whereIn('commodites', 'like', '%' . $commodites . '%')->paginate(30);
         $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
