@@ -483,7 +483,13 @@ class EtablissementController extends BaseController
         $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-        $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(30);
+        if ($commodites != null) {
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(30);
+        } else {
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
+        }
         $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
