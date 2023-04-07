@@ -46,8 +46,6 @@ class Commentaire extends Model
 
     protected $hidden = [
         'etablissement_id',
-        'created_at',
-        'updated_at',
     ];
 
     public function etablissement()
