@@ -3006,7 +3006,7 @@
         },
         {
             "name": "meilisearch/meilisearch-php",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/meilisearch/meilisearch-php.git",
