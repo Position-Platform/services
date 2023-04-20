@@ -18,6 +18,8 @@ return new class extends Migration
             $table->integer("user_id");
             $table->string("longitude");
             $table->string("latitude");
+            $table->string("speed");
+            $table->string("timestamp");
             $table->softDeletes();
             $table->timestamps();
         });
