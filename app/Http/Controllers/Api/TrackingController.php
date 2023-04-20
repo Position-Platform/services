@@ -31,6 +31,8 @@ class TrackingController extends BaseController
      * @header Content-Type application/json
      * @bodyParam longitude string required  longitude. Example: 12
      * @bodyParam latitude string required latitude. Example: 4
+     * @bodyParam speed string required speed. Example: 30
+     * @bodyParam timestamp string required timestamp. Example: 23456789
      */
     public function store(Request $request)
     {

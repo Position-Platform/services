@@ -38,7 +38,7 @@ class Tracking extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "user_id", "longitude", "latitude"
+        "user_id", "longitude", "latitude", "speed", "timestamp"
     ];
 
     protected $hidden = [
