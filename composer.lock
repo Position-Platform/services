@@ -8683,16 +8683,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.15.1",
+            "version": "2.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "e864ac957acd66e1565f25efda61e37791a5db0b"
+                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/e864ac957acd66e1565f25efda61e37791a5db0b",
-                "reference": "e864ac957acd66e1565f25efda61e37791a5db0b",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
+                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
                 "shasum": ""
             },
             "require": {
@@ -8742,7 +8742,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.15.1"
+                "source": "https://github.com/filp/whoops/tree/2.15.2"
             },
             "funding": [
                 {
@@ -8750,7 +8750,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-06T18:09:13+00:00"
+            "time": "2023-04-12T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -8805,16 +8805,16 @@
         },
         {
             "name": "knuckleswtf/scribe",
-            "version": "4.18.0",
+            "version": "4.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/knuckleswtf/scribe.git",
-                "reference": "53faab8433cd099328965d90b79d05eb176cff58"
+                "reference": "4b806df88437bb4d5ace75d1d76ae7b23ece168d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knuckleswtf/scribe/zipball/53faab8433cd099328965d90b79d05eb176cff58",
-                "reference": "53faab8433cd099328965d90b79d05eb176cff58",
+                "url": "https://api.github.com/repos/knuckleswtf/scribe/zipball/4b806df88437bb4d5ace75d1d76ae7b23ece168d",
+                "reference": "4b806df88437bb4d5ace75d1d76ae7b23ece168d",
                 "shasum": ""
             },
             "require": {
@@ -8888,7 +8888,7 @@
             ],
             "support": {
                 "issues": "https://github.com/knuckleswtf/scribe/issues",
-                "source": "https://github.com/knuckleswtf/scribe/tree/4.18.0"
+                "source": "https://github.com/knuckleswtf/scribe/tree/4.19.0"
             },
             "funding": [
                 {
@@ -8896,7 +8896,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-04-08T13:04:47+00:00"
+            "time": "2023-04-22T18:33:33+00:00"
         },
         {
             "name": "laravel/sail",
@@ -9464,16 +9464,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.0",
+            "version": "1.20.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "10553ab3f0337ff1a71433c3417d7eb2a3eec1fd"
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/10553ab3f0337ff1a71433c3417d7eb2a3eec1fd",
-                "reference": "10553ab3f0337ff1a71433c3417d7eb2a3eec1fd",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/90490bd8fd8530a272043c4950c180b6d0cf5f81",
+                "reference": "90490bd8fd8530a272043c4950c180b6d0cf5f81",
                 "shasum": ""
             },
             "require": {
@@ -9503,9 +9503,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.2"
             },
-            "time": "2023-04-20T11:18:07+00:00"
+            "time": "2023-04-22T12:59:35+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
