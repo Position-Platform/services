@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dabc057ca8cc6454d66be8dde45cef18",
+    "content-hash": "951556d7b51e8eab1c3738decfab523c",
     "packages": [
         {
             "name": "brick/math",
@@ -1463,16 +1463,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.52.6",
+            "version": "v9.52.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "16454f17a2585c4589f721655fc5133270aadf8c"
+                "reference": "675ea868fe36b18c8303e954aac540e6b1caa677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/16454f17a2585c4589f721655fc5133270aadf8c",
-                "reference": "16454f17a2585c4589f721655fc5133270aadf8c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/675ea868fe36b18c8303e954aac540e6b1caa677",
+                "reference": "675ea868fe36b18c8303e954aac540e6b1caa677",
                 "shasum": ""
             },
             "require": {
@@ -1657,50 +1657,51 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-04-18T13:44:55+00:00"
+            "time": "2023-04-25T13:44:05+00:00"
         },
         {
             "name": "laravel/passport",
-            "version": "v10.4.2",
+            "version": "v11.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "4bfdb9610575a0c84a6810701f4fd45fb8ab3888"
+                "reference": "a75f0a92136a6cf91e5c6755374f77bf4b30c411"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/4bfdb9610575a0c84a6810701f4fd45fb8ab3888",
-                "reference": "4bfdb9610575a0c84a6810701f4fd45fb8ab3888",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/a75f0a92136a6cf91e5c6755374f77bf4b30c411",
+                "reference": "a75f0a92136a6cf91e5c6755374f77bf4b30c411",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "firebase/php-jwt": "^6.0",
-                "illuminate/auth": "^8.37|^9.0",
-                "illuminate/console": "^8.37|^9.0",
-                "illuminate/container": "^8.37|^9.0",
-                "illuminate/contracts": "^8.37|^9.0",
-                "illuminate/cookie": "^8.37|^9.0",
-                "illuminate/database": "^8.37|^9.0",
-                "illuminate/encryption": "^8.37|^9.0",
-                "illuminate/http": "^8.37|^9.0",
-                "illuminate/support": "^8.37|^9.0",
-                "lcobucci/jwt": "^3.4|^4.0",
-                "league/oauth2-server": "^8.2",
-                "nyholm/psr7": "^1.3",
-                "php": "^7.3|^8.0",
+                "firebase/php-jwt": "^6.4",
+                "illuminate/auth": "^9.0|^10.0",
+                "illuminate/console": "^9.0|^10.0",
+                "illuminate/container": "^9.0|^10.0",
+                "illuminate/contracts": "^9.0|^10.0",
+                "illuminate/cookie": "^9.0|^10.0",
+                "illuminate/database": "^9.0|^10.0",
+                "illuminate/encryption": "^9.0|^10.0",
+                "illuminate/http": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0",
+                "lcobucci/jwt": "^4.3|^5.0",
+                "league/oauth2-server": "^8.5.1",
+                "nyholm/psr7": "^1.5",
+                "php": "^8.0",
                 "phpseclib/phpseclib": "^2.0|^3.0",
-                "symfony/psr-http-message-bridge": "^2.0"
+                "symfony/psr-http-message-bridge": "^2.1"
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^6.0|^7.0",
+                "orchestra/testbench": "^7.0|^8.0",
+                "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "10.x-dev"
+                    "dev-master": "11.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1734,7 +1735,7 @@
                 "issues": "https://github.com/laravel/passport/issues",
                 "source": "https://github.com/laravel/passport"
             },
-            "time": "2023-02-21T07:47:20+00:00"
+            "time": "2023-04-24T20:05:58+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2143,20 +2144,20 @@
         },
         {
             "name": "lcobucci/clock",
-            "version": "3.1.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/clock.git",
-                "reference": "30a854ceb22bd87d83a7a4563b3f6312453945fc"
+                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/clock/zipball/30a854ceb22bd87d83a7a4563b3f6312453945fc",
-                "reference": "30a854ceb22bd87d83a7a4563b3f6312453945fc",
+                "url": "https://api.github.com/repos/lcobucci/clock/zipball/039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
+                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.2.0",
+                "php": "~8.1.0 || ~8.2.0",
                 "psr/clock": "^1.0"
             },
             "provide": {
@@ -2164,13 +2165,13 @@
             },
             "require-dev": {
                 "infection/infection": "^0.26",
-                "lcobucci/coding-standard": "^10.0.0",
+                "lcobucci/coding-standard": "^9.0",
                 "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.10.7",
-                "phpstan/phpstan-deprecation-rules": "^1.1.3",
-                "phpstan/phpstan-phpunit": "^1.3.10",
-                "phpstan/phpstan-strict-rules": "^1.5.0",
-                "phpunit/phpunit": "^10.0.17"
+                "phpstan/phpstan": "^1.9.4",
+                "phpstan/phpstan-deprecation-rules": "^1.1.1",
+                "phpstan/phpstan-phpunit": "^1.3.2",
+                "phpstan/phpstan-strict-rules": "^1.4.4",
+                "phpunit/phpunit": "^9.5.27"
             },
             "type": "library",
             "autoload": {
@@ -2191,7 +2192,7 @@
             "description": "Yet another clock abstraction",
             "support": {
                 "issues": "https://github.com/lcobucci/clock/issues",
-                "source": "https://github.com/lcobucci/clock/tree/3.1.0"
+                "source": "https://github.com/lcobucci/clock/tree/3.0.0"
             },
             "funding": [
                 {
@@ -2203,7 +2204,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-03-20T19:12:25+00:00"
+            "time": "2022-12-19T15:00:24+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -2742,26 +2743,27 @@
         },
         {
             "name": "league/oauth2-server",
-            "version": "8.4.1",
+            "version": "8.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "eed31d86d8cc8e6e9c9f58fbb2113494f8b41e24"
+                "reference": "43cd4d406906c6be5c8de2cee9bd3ad3753544ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/eed31d86d8cc8e6e9c9f58fbb2113494f8b41e24",
-                "reference": "eed31d86d8cc8e6e9c9f58fbb2113494f8b41e24",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/43cd4d406906c6be5c8de2cee9bd3ad3753544ef",
+                "reference": "43cd4d406906c6be5c8de2cee9bd3ad3753544ef",
                 "shasum": ""
             },
             "require": {
-                "defuse/php-encryption": "^2.2.1",
+                "defuse/php-encryption": "^2.3",
                 "ext-json": "*",
                 "ext-openssl": "*",
-                "lcobucci/jwt": "^3.4.6 || ^4.0.4",
+                "lcobucci/clock": "^2.2 || ^3.0",
+                "lcobucci/jwt": "^4.3 || ^5.0",
                 "league/event": "^2.2",
-                "league/uri": "^6.4",
-                "php": "^7.2 || ^8.0",
+                "league/uri": "^6.7",
+                "php": "^8.0",
                 "psr/http-message": "^1.0.1"
             },
             "replace": {
@@ -2769,10 +2771,10 @@
                 "lncd/oauth2": "*"
             },
             "require-dev": {
-                "laminas/laminas-diactoros": "^2.4.1",
+                "laminas/laminas-diactoros": "^2.24.0",
                 "phpstan/phpstan": "^0.12.57",
                 "phpstan/phpstan-phpunit": "^0.12.16",
-                "phpunit/phpunit": "^8.5.13",
+                "phpunit/phpunit": "^9.6.6",
                 "roave/security-advisories": "dev-master"
             },
             "type": "library",
@@ -2818,7 +2820,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.4.1"
+                "source": "https://github.com/thephpleague/oauth2-server/tree/8.5.1"
             },
             "funding": [
                 {
@@ -2826,7 +2828,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-22T11:47:53+00:00"
+            "time": "2023-04-04T10:20:16+00:00"
         },
         {
             "name": "league/uri",
@@ -3564,38 +3566,39 @@
         },
         {
             "name": "nyholm/psr7",
-            "version": "1.5.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "f734364e38a876a23be4d906a2a089e1315be18a"
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/f734364e38a876a23be4d906a2a089e1315be18a",
-                "reference": "f734364e38a876a23be4d906a2a089e1315be18a",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
+                "php": ">=7.2",
                 "php-http/message-factory": "^1.0",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.1 || ^2.0"
             },
             "provide": {
+                "php-http/message-factory-implementation": "1.0",
                 "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
                 "http-interop/http-factory-tests": "^0.9",
-                "php-http/psr7-integration-tests": "^1.0",
+                "php-http/psr7-integration-tests": "^1.0@dev",
                 "phpunit/phpunit": "^7.5 || 8.5 || 9.4",
                 "symfony/error-handler": "^4.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -3625,7 +3628,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Nyholm/psr7/issues",
-                "source": "https://github.com/Nyholm/psr7/tree/1.5.1"
+                "source": "https://github.com/Nyholm/psr7/tree/1.7.0"
             },
             "funding": [
                 {
@@ -3637,7 +3640,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-22T07:13:36+00:00"
+            "time": "2023-04-20T08:38:48+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -4043,26 +4046,26 @@
         },
         {
             "name": "php-http/message-factory",
-            "version": "v1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/message-factory.git",
-                "reference": "a478cb11f66a6ac48d8954216cfed9aa06a501a1"
+                "reference": "4d8778e1c7d405cbb471574821c1ff5b68cc8f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message-factory/zipball/a478cb11f66a6ac48d8954216cfed9aa06a501a1",
-                "reference": "a478cb11f66a6ac48d8954216cfed9aa06a501a1",
+                "url": "https://api.github.com/repos/php-http/message-factory/zipball/4d8778e1c7d405cbb471574821c1ff5b68cc8f57",
+                "reference": "4d8778e1c7d405cbb471574821c1ff5b68cc8f57",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "autoload": {
@@ -4091,9 +4094,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/message-factory/issues",
-                "source": "https://github.com/php-http/message-factory/tree/master"
+                "source": "https://github.com/php-http/message-factory/tree/1.1.0"
             },
-            "time": "2015-12-19T14:08:53+00:00"
+            "time": "2023-04-14T14:16:17+00:00"
         },
         {
             "name": "php-http/promise",
@@ -6796,32 +6799,32 @@
         },
         {
             "name": "symfony/psr-http-message-bridge",
-            "version": "v2.1.4",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "a125b93ef378c492e274f217874906fb9babdebb"
+                "reference": "28a732c05bbad801304ad5a5c674cf2970508993"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/a125b93ef378c492e274f217874906fb9babdebb",
-                "reference": "a125b93ef378c492e274f217874906fb9babdebb",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/28a732c05bbad801304ad5a5c674cf2970508993",
+                "reference": "28a732c05bbad801304ad5a5c674cf2970508993",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "psr/http-message": "^1.0",
-                "symfony/http-foundation": "^4.4 || ^5.0 || ^6.0"
+                "php": ">=7.2.5",
+                "psr/http-message": "^1.0 || ^2.0",
+                "symfony/http-foundation": "^5.4 || ^6.0"
             },
             "require-dev": {
                 "nyholm/psr7": "^1.1",
                 "psr/log": "^1.1 || ^2 || ^3",
-                "symfony/browser-kit": "^4.4 || ^5.0 || ^6.0",
-                "symfony/config": "^4.4 || ^5.0 || ^6.0",
-                "symfony/event-dispatcher": "^4.4 || ^5.0 || ^6.0",
-                "symfony/framework-bundle": "^4.4 || ^5.0 || ^6.0",
-                "symfony/http-kernel": "^4.4 || ^5.0 || ^6.0",
-                "symfony/phpunit-bridge": "^5.4@dev || ^6.0"
+                "symfony/browser-kit": "^5.4 || ^6.0",
+                "symfony/config": "^5.4 || ^6.0",
+                "symfony/event-dispatcher": "^5.4 || ^6.0",
+                "symfony/framework-bundle": "^5.4 || ^6.0",
+                "symfony/http-kernel": "^5.4 || ^6.0",
+                "symfony/phpunit-bridge": "^6.2"
             },
             "suggest": {
                 "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
@@ -6829,7 +6832,7 @@
             "type": "symfony-bridge",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.1-dev"
+                    "dev-main": "2.2-dev"
                 }
             },
             "autoload": {
@@ -6864,7 +6867,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/psr-http-message-bridge/issues",
-                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v2.1.4"
+                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v2.2.0"
             },
             "funding": [
                 {
@@ -6880,7 +6883,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-28T22:46:34+00:00"
+            "time": "2023-04-21T08:40:19+00:00"
         },
         {
             "name": "symfony/routing",
@@ -9464,16 +9467,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.20.0",
+            "version": "1.20.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "10553ab3f0337ff1a71433c3417d7eb2a3eec1fd"
+                "reference": "6c04009f6cae6eda2f040745b6b846080ef069c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/10553ab3f0337ff1a71433c3417d7eb2a3eec1fd",
-                "reference": "10553ab3f0337ff1a71433c3417d7eb2a3eec1fd",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/6c04009f6cae6eda2f040745b6b846080ef069c2",
+                "reference": "6c04009f6cae6eda2f040745b6b846080ef069c2",
                 "shasum": ""
             },
             "require": {
@@ -9503,9 +9506,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.20.3"
             },
-            "time": "2023-04-20T11:18:07+00:00"
+            "time": "2023-04-25T09:01:03+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
