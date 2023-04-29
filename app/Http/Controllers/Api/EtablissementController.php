@@ -97,7 +97,7 @@ class EtablissementController extends BaseController
         $lat = $request->lat;
         $lon = $request->lat;
 
-        $sqlDistance = DB::raw('( 111.045 * acos( cos( radians(' . $lat . ') ) 
+        $sqlDistance = DB::raw('( 6371 * acos( cos( radians(' . $lat . ') ) 
        * cos( radians( CAST(batiments.latitude as DOUBLE PRECISION) ) ) 
        * cos( radians( CAST(batiments.longitude as DOUBLE PRECISION) ) 
        - radians(' . $lon  . ') ) 
