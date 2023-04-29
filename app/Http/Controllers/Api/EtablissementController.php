@@ -112,7 +112,7 @@ class EtablissementController extends BaseController
                 'etablissements.*'
             )
             ->selectRaw("{$sqlDistance} AS distance")
-            ->orderBy('distance')
+
             ->get();
 
         $success['etablissements'] = $etablissements;
