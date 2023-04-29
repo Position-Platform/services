@@ -11,6 +11,7 @@ use App\Models\Horaire;
 use App\Models\Image;
 use App\Models\SousCategorie;
 use App\Models\SousCategoriesEtablissement;
+use App\Models\User;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -109,6 +110,9 @@ class EtablissementController extends BaseController
 
         $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->select(
+                'etablissements.*'
+            )
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
             ->paginate(30);
@@ -136,12 +140,19 @@ class EtablissementController extends BaseController
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
+            $etablissement->distance;
+
             $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
-            /* $etablissement->sousCategories;
+
+            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
+
+
+
+            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
-            }*/
+            }
 
             $etablissement->commodites;
             $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
@@ -152,7 +163,10 @@ class EtablissementController extends BaseController
                 $commentaires->user;
             }
 
-            //  $etablissement->user->abonnement;
+
+
+            $user = User::where('id', 'user_id')->first();
+            $etablissement->user->abonnement = $user->abonnement;
         }
 
         $success['etablissements'] = $etablissements;
