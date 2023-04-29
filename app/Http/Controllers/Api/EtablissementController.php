@@ -517,7 +517,7 @@ class EtablissementController extends BaseController
         foreach ($etablissements as $etablissement) {
 
             if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
             } else {
                 $etablissement->isFavoris = false;
             }
@@ -604,13 +604,15 @@ class EtablissementController extends BaseController
                 ->paginate(50);
         } else {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->select(
-                    'etablissements.*'
-                )
-                ->selectRaw("{$sqlDistance} AS distance")
-                ->orderBy('distance')
-                ->paginate(50);
+            for ($i = 0; $i < count($sousCategoriesEtablissement); $i++) {
+                $etablissements = Etablissement::where('id', $sousCategoriesEtablissement[$i])->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                    ->select(
+                        'etablissements.*'
+                    )
+                    ->selectRaw("{$sqlDistance} AS distance")
+                    ->orderBy('distance')
+                    ->paginate(50);
+            }
         }
         $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
