@@ -127,9 +127,9 @@ class BaseController extends Controller
             ->get();
     }
 
-    public function checkIfEtablissementInFavoris($etablissement, $user_id)
+    public function checkIfEtablissementInFavoris($id, $user_id)
     {
-        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $etablissement->id)->first();
+        $userFavoris = UserFavoris::where('user_id', $user_id)->where('etablissement_id', $id)->first();
         if ($userFavoris) {
             return true;
         } else {
