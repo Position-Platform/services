@@ -97,12 +97,7 @@ class EtablissementController extends BaseController
         $lat = $request->lat;
         $lon = $request->lat;
 
-        $sqlDistance = DB::raw('( 111.045 * acos( cos( radians(' . $lat . ') ) 
-       * cos( radians( batiments.latitude ) ) 
-       * cos( radians( batiments.longitude ) 
-       - radians(' . $lon  . ') ) 
-       + sin( radians(' . $lat  . ') ) 
-       * sin( radians( batiments.latitude ) ) ) )');
+
 
         $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
@@ -111,7 +106,11 @@ class EtablissementController extends BaseController
                 'batiments.longitude',
                 'etablissements.*'
             )
-            ->selectRaw("{$sqlDistance} AS distance")
+            ->select(DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(batiments.latitude)) 
+                * cos(radians(batiments.longitude) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(batiments.latitude))) AS distance"))
             ->orderBy('distance')
             ->get();
 
