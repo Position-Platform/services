@@ -113,7 +113,7 @@ class EtablissementController extends BaseController
             )
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
-            ->paginate(30);
+            ->get();
 
         $success['etablissements'] = $etablissements;
 
