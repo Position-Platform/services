@@ -97,9 +97,19 @@ class EtablissementController extends BaseController
         $lat = $request->lat;
         $lon = $request->lat;
 
+        $batiments =   Batiment::select(
+            "batiments.id",
+            DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(batiments.latitude)) 
+                * cos(radians(batiments.longitude) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(batiments.latitude))) AS distance")
+        )
+            ->groupBy("batiments.id")
+            ->paginate(30);
 
 
-        $etablissements =  DB::table('etablissements')
+        /*  $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
             ->select(
                 'batiments.latitude',
@@ -112,11 +122,11 @@ class EtablissementController extends BaseController
                 + sin(radians(" . $lat . ")) 
                 * sin(radians(batiments.latitude))) AS distance"))
             ->orderBy('distance')
-            ->get();
+            ->get();*/
 
-        $success['etablissements'] = $etablissements;
+        $success['batiments'] = $batiments;
 
-        return $this->sendResponse($success, 'Liste des Etablissements');
+        return $this->sendResponse($success, 'Liste des Batiments');
     }
 
     /**
