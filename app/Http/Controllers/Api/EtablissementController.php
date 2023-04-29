@@ -512,22 +512,41 @@ class EtablissementController extends BaseController
     public function search(Request $request)
     {
         $q = $request->input('q');
-        $etablissements = Etablissement::search($q)->paginate(50);
+        $lat = $request->lat;
+        $lon = $request->lon;
+
+        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+
+
+
+        $etablissements = Etablissement::search($q)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->select(
+                'etablissements.*'
+            )
+            ->selectRaw("{$sqlDistance} AS distance")
+            ->orderBy('distance')
+            ->paginate(50);
 
         foreach ($etablissements as $etablissement) {
 
+
             if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
             } else {
                 $etablissement->isFavoris = false;
             }
 
 
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
             $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
             $etablissement->isopen = $isOpen;
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
             $etablissement->moyenne = $moyenne;
 
@@ -535,20 +554,24 @@ class EtablissementController extends BaseController
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
+            $etablissement->distance;
 
-            $etablissement->batiment;
-            $etablissement->sousCategories;
+            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
+
+            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
 
 
+
+            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
             $etablissement->commodites;
-            $etablissement->images;
-            $etablissement->horaires;
-            $etablissement->commentaires;
+            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
 
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
