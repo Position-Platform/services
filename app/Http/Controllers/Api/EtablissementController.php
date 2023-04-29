@@ -33,26 +33,8 @@ class EtablissementController extends BaseController
     public function index(Request $request)
     {
 
-        $lat = $request->lat;
-        $lon = $request->lon;
-
-        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
-
-
-        $etablissements =  DB::table('etablissements')
-            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select(
-                'batiments.latitude',
-                'batiments.longitude',
-                'etablissements.*'
-            )
-            ->selectRaw("{$sqlDistance} AS distance")
-            ->orderBy('distance')
-            ->paginate(50);
+        $etablissements = Etablissement::paginate(30);
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
@@ -458,26 +440,7 @@ class EtablissementController extends BaseController
     public function search(Request $request)
     {
         $q = $request->input('q');
-        $lat = $request->lat;
-        $lon = $request->lon;
-
-        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
-
-
-        $etablissements = Etablissement::search($q)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select(
-                'batiments.latitude',
-                'batiments.longitude',
-                'etablissements.*'
-            )
-            ->selectRaw("{$sqlDistance} AS distance")
-            ->orderBy('distance')
-            ->paginate(50);
-
+        $etablissements = Etablissement::search($q)->paginate(50);
 
         foreach ($etablissements as $etablissement) {
 
@@ -541,15 +504,6 @@ class EtablissementController extends BaseController
 
         $commodites = $request->input('commodites');
 
-        $lat = $request->input('lat');
-        $lon = $request->input('lon');
-
-        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
-
         $categorie = Categorie::find($idcategorie);
 
         $etablissements = array();
@@ -560,26 +514,10 @@ class EtablissementController extends BaseController
 
         if ($commodites != null) {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->select(
-                    'batiments.latitude',
-                    'batiments.longitude',
-                    'etablissements.*'
-                )
-                ->selectRaw("{$sqlDistance} AS distance")
-                ->orderBy('distance')
-                ->paginate(50);
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(30);
         } else {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->select(
-                    'batiments.latitude',
-                    'batiments.longitude',
-                    'etablissements.*'
-                )
-                ->selectRaw("{$sqlDistance} AS distance")
-                ->orderBy('distance')
-                ->paginate(50);
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
         }
         $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
