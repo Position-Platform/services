@@ -105,10 +105,7 @@ class EtablissementController extends BaseController
 
 
         $etablissements =  Etablissement::join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select(
-                'batiments.latitude',
-                'batiments.longitude',
-            )
+
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
             ->paginate(30);
