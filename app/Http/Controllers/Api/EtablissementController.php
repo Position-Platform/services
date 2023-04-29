@@ -98,11 +98,11 @@ class EtablissementController extends BaseController
         $lon = $request->lat;
 
         $sqlDistance = DB::raw('( 111.045 * acos( cos( radians(' . $lat . ') ) 
-       * cos( radians( cast(batiments.latitude as double) ) ) 
-       * cos( radians( cast(batiments.longitude as double) ) 
+       * cos( radians( CAST(batiments.latitude as DOUBLE PRECISION) ) ) 
+       * cos( radians( CAST(batiments.longitude as DOUBLE PRECISION) ) 
        - radians(' . $lon  . ') ) 
        + sin( radians(' . $lat  . ') ) 
-       * sin( radians( cast(batiments.latitude as double) ) ) ) )');
+       * sin( radians( CAST(batiments.latitude as DOUBLE PRECISION) ) ) ) )');
 
         $etablissements =  DB::table('etablissements')
             ->join('batiments', 'batiments.id', 'etablissements.batiment_id')
