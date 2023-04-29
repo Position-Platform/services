@@ -165,7 +165,7 @@ class EtablissementController extends BaseController
 
 
 
-            $user = User::where('id', 'user_id')->first();
+            $user = User::where('id', $request->user_id)->first();
             $etablissement->user->abonnement = $user->abonnement;
         }
 
