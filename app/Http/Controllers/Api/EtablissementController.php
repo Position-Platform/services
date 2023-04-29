@@ -106,10 +106,17 @@ class EtablissementController extends BaseController
 
         $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->join('images', 'etablissements.id', '=', 'images.etablissement_id')
+            ->join('horaires', 'etablissements.id', '=', 'horaires.etablissement_id')
+            ->join('commentaires', 'etablissements.id', '=', 'commentaires.etablissement_id')
             ->select(
                 'batiments.latitude',
                 'batiments.longitude',
-                'etablissements.*'
+                'etablissements.*',
+                'batiments.*',
+                'images.*',
+                'horaires.*',
+                'commentaires.*'
             )
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
