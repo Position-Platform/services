@@ -104,13 +104,10 @@ class EtablissementController extends BaseController
                 * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
 
 
-        $etablissements =  DB::table('etablissements')
-            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+        $etablissements =  Etablissement::join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
             ->select(
                 'batiments.latitude',
                 'batiments.longitude',
-                'etablissements.*',
-                'batiments.*'
             )
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
