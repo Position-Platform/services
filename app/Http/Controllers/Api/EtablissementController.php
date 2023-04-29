@@ -162,11 +162,6 @@ class EtablissementController extends BaseController
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
-
-
-
-            $user = User::where('id', $request->user_id)->first();
-            $etablissement->user->abonnement = $user->abonnement;
         }
 
         $success['etablissements'] = $etablissements;
