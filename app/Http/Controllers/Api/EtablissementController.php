@@ -512,8 +512,76 @@ class EtablissementController extends BaseController
     public function search(Request $request)
     {
         $q = $request->input('q');
-        $lat = $request->lat;
-        $lon = $request->lon;
+        $etablissements = Etablissement::search($q)->paginate(50);
+
+        foreach ($etablissements as $etablissement) {
+
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+
+            $etablissement->batiment;
+            $etablissement->sousCategories;
+
+
+
+            foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $commentaires) {
+                $commentaires->user;
+            }
+        }
+
+
+        $success['etablissements'] = $etablissements;
+
+        return $this->sendResponse($success, 'Liste des Etablissements');
+    }
+
+    /**
+     * Search Establishment by Filter.
+     *
+     * @header Content-Type application/json
+     * @queryParam user_id string id of user conncted . Example: 1
+     * @queryParam id_categorie string required id of categorie . Example: 1
+     * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
+     */
+    public function filterSearch(Request $request)
+    {
+
+        $idcategorie = $request->input('id_categorie');
+
+        $commodites = $request->input('commodites');
+
+        $categorie = Categorie::find($idcategorie);
+
+        $etablissements = array();
+
+        $lat = $request->input('lat');
+        $lon = $request->input('lon');
 
         $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
                 * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
@@ -522,14 +590,29 @@ class EtablissementController extends BaseController
                 * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
 
 
+        $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
+        $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-        $etablissements = Etablissement::search($q)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select(
-                'etablissements.*'
-            )
-            ->selectRaw("{$sqlDistance} AS distance")
-            ->orderBy('distance')
-            ->paginate(50);
+        if ($commodites != null) {
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->select(
+                    'etablissements.*'
+                )
+                ->selectRaw("{$sqlDistance} AS distance")
+                ->orderBy('distance')
+                ->paginate(50);
+        } else {
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->select(
+                    'etablissements.*'
+                )
+                ->selectRaw("{$sqlDistance} AS distance")
+                ->orderBy('distance')
+                ->paginate(50);
+        }
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
@@ -572,85 +655,6 @@ class EtablissementController extends BaseController
             $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
             $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
             $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
-
-            foreach ($etablissement->commentaires as $commentaires) {
-                $commentaires->user;
-            }
-        }
-
-
-        $success['etablissements'] = $etablissements;
-
-        return $this->sendResponse($success, 'Liste des Etablissements');
-    }
-
-    /**
-     * Search Establishment by Filter.
-     *
-     * @header Content-Type application/json
-     * @queryParam user_id string id of user conncted . Example: 1
-     * @queryParam id_categorie string required id of categorie . Example: 1
-     * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
-     */
-    public function filterSearch(Request $request)
-    {
-
-        $idcategorie = $request->input('id_categorie');
-
-        $commodites = $request->input('commodites');
-
-        $categorie = Categorie::find($idcategorie);
-
-        $etablissements = array();
-
-
-        $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
-        $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
-
-        if ($commodites != null) {
-
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(30);
-        } else {
-
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(30);
-        }
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
-
-        foreach ($etablissements as $etablissement) {
-
-            if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-            } else {
-                $etablissement->isFavoris = false;
-            }
-
-
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-            $etablissement->isopen = $isOpen;
-
-            $etablissement->moyenne = $moyenne;
-
-            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-
-            $etablissement->batiment;
-            $etablissement->sousCategories;
-
-
-
-            foreach ($etablissement->sousCategories as $sousCategories) {
-                $sousCategories->categorie;
-            }
-
-            $etablissement->commodites;
-            $etablissement->images;
-            $etablissement->horaires;
-            $etablissement->commentaires;
 
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
