@@ -105,14 +105,14 @@ class EtablissementController extends BaseController
        * sin( radians( batiments.latitude ) ) ) )');
 
         $etablissements =  DB::table('etablissements')
-            ->join('batiments', 'batiments.id', 'etablissements.batiment_id')
+            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
             ->select(
                 'batiments.latitude',
                 'batiments.longitude',
                 'etablissements.*'
             )
             ->selectRaw("{$sqlDistance} AS distance")
-
+            ->orderBy('distance')
             ->get();
 
         $success['etablissements'] = $etablissements;
