@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Models\Admin;
 use App\Models\Batiment;
 use App\Models\Categorie;
+use App\Models\Commentaire;
 use App\Models\Etablissement;
+use App\Models\Horaire;
+use App\Models\Image;
 use App\Models\SousCategorie;
 use App\Models\SousCategoriesEtablissement;
 use App\Models\UserFavoris;
@@ -104,11 +107,58 @@ class EtablissementController extends BaseController
                 * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
 
 
-        $etablissements =  Etablissement::join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-
+        $etablissements =  DB::table('etablissements')
+            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->select(
+                'batiments.latitude',
+                'batiments.longitude',
+                'etablissements.*'
+            )
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
             ->paginate(30);
+
+        foreach ($etablissements as $etablissement) {
+
+
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+
+
+            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
+
+            $etablissement->isopen = $isOpen;
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
+            $etablissement->moyenne = $moyenne;
+
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
+            /* $etablissement->sousCategories;
+
+            foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }*/
+
+            $etablissement->commodites;
+            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
+
+            foreach ($etablissement->commentaires as $commentaires) {
+                $commentaires->user;
+            }
+
+            //  $etablissement->user->abonnement;
+        }
 
         $success['etablissements'] = $etablissements;
 
