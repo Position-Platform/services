@@ -106,7 +106,7 @@ class EtablissementController extends BaseController
                 'batiments.longitude',
                 'etablissements.*'
             )
-            ->select(DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+            ->select("etablissements.id", DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
                 * cos(radians(batiments.latitude)) 
                 * cos(radians(batiments.longitude) - radians(" . $lon . ")) 
                 + sin(radians(" . $lat . ")) 
