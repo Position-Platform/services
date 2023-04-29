@@ -37,14 +37,31 @@ class EtablissementController extends BaseController
     public function index(Request $request)
     {
 
-        $etablissements = Etablissement::paginate(30);
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
+        $lat = $request->lat;
+        $lon = $request->lon;
+
+        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+
+
+        $etablissements =  DB::table('etablissements')
+            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->select(
+                'etablissements.*'
+            )
+            ->selectRaw("{$sqlDistance} AS distance")
+            ->orderBy('distance')
+            ->paginate(50);
+
 
         foreach ($etablissements as $etablissement) {
 
 
             if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
             } else {
                 $etablissement->isFavoris = false;
             }
@@ -63,23 +80,28 @@ class EtablissementController extends BaseController
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
-            $etablissement->batiment;
-            $etablissement->sousCategories;
+            $etablissement->distance;
+
+            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
+
+            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
+
+
+
+            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
             $etablissement->commodites;
-            $etablissement->images;
-            $etablissement->horaires;
-            $etablissement->commentaires;
+            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
 
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
-
-            $etablissement->user->abonnement;
         }
 
         $success['etablissements'] = $etablissements;
@@ -116,6 +138,7 @@ class EtablissementController extends BaseController
             ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
             ->paginate(30);
+
 
         foreach ($etablissements as $etablissement) {
 
