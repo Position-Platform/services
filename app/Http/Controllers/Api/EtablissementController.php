@@ -32,59 +32,9 @@ class EtablissementController extends BaseController
      */
     public function index(Request $request)
     {
+
         $etablissements = Etablissement::paginate(30);
         $etablissements->setPath(env('APP_URL') . '/api/etablissements');
-
-        foreach ($etablissements as $etablissement) {
-
-
-            if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
-            } else {
-                $etablissement->isFavoris = false;
-            }
-
-
-            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-            $etablissement->isopen = $isOpen;
-
-
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-            $etablissement->moyenne = $moyenne;
-
-            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-            $etablissement->batiment;
-            $etablissement->sousCategories;
-
-            foreach ($etablissement->sousCategories as $sousCategories) {
-                $sousCategories->categorie;
-            }
-
-            $etablissement->commodites;
-            $etablissement->images;
-            $etablissement->horaires;
-            $etablissement->commentaires;
-
-            foreach ($etablissement->commentaires as $commentaires) {
-                $commentaires->user;
-            }
-
-            $etablissement->user->abonnement;
-        }
-
-        $success['etablissements'] = $etablissements;
-
-        return $this->sendResponse($success, 'Liste des Etablissements');
-    }
-
-    public function all(Request $request)
-    {
-        $etablissements = Etablissement::all();
 
         foreach ($etablissements as $etablissement) {
 
@@ -140,6 +90,34 @@ class EtablissementController extends BaseController
         $success['nbre_etablissements'] = $nbre_etablissements;
         $success['nbre_page'] = $nbre_page;
         return $this->sendResponse($success, 'Nombre des Etablissements');
+    }
+
+    public function getEtablissementByDistance(Request $request)
+    {
+        $lat = $request->lat;
+        $lon = $request->lat;
+
+        $sqlDistance = DB::raw('( 111.045 * acos( cos( radians(' . $lat . ') ) 
+       * cos( radians( batiments.latitude ) ) 
+       * cos( radians( batiments.longitude ) 
+       - radians(' . $lon  . ') ) 
+       + sin( radians(' . $lat  . ') ) 
+       * sin( radians( batiments.latitude ) ) ) )');
+
+        $etablissements =  DB::table('etablissements')
+            ->join('batiments', 'batiments.id', 'etablissements.batiment_id')
+            ->select(
+                'batiments.latitude',
+                'batiments.longitude',
+                'etablissements.*'
+            )
+            ->selectRaw("{$sqlDistance} AS distance")
+            ->orderBy('distance')
+            ->paginate(30);
+
+        $success['etablissements'] = $etablissements;
+
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
     /**
