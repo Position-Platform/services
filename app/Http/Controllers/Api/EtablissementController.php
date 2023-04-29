@@ -95,7 +95,7 @@ class EtablissementController extends BaseController
     public function getEtablissementByDistance(Request $request)
     {
         $lat = $request->lat;
-        $lon = $request->lat;
+        $lon = $request->lon;
 
         $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
                 * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
