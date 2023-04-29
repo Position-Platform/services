@@ -51,7 +51,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
 
-        Route::get('etablissements/distance', [App\Http\Controllers\Api\EtablissementController::class, 'getEtablissementByDistance']);
+        Route::get('distance/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'getEtablissementByDistance']);
 
         Route::get('search/etablissements/filter', [App\Http\Controllers\Api\EtablissementController::class, 'filterSearch']);
 

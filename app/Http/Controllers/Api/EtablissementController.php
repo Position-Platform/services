@@ -97,36 +97,27 @@ class EtablissementController extends BaseController
         $lat = $request->lat;
         $lon = $request->lat;
 
-        $batiments =   Batiment::select(
-            "batiments.id",
-            DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(batiments.latitude)) 
-                * cos(radians(batiments.longitude) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(batiments.latitude))) AS distance")
-        )
-            ->groupBy("batiments.id")
-            ->paginate(30);
+        $sqlDistance = DB::raw('( 111.045 * acos( cos( radians(' . $lat . ') ) 
+       * cos( radians( batiments.latitude ) ) 
+       * cos( radians( batiments.longitude ) 
+       - radians(' . $lon  . ') ) 
+       + sin( radians(' . $lat  . ') ) 
+       * sin( radians( batiments.latitude ) ) ) )');
 
-
-        /*  $etablissements =  DB::table('etablissements')
-            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+        $etablissements =  DB::table('etablissements')
+            ->join('batiments', 'batiments.id', 'etablissements.batiment_id')
             ->select(
                 'batiments.latitude',
                 'batiments.longitude',
                 'etablissements.*'
             )
-            ->select("etablissements.id", DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(batiments.latitude)) 
-                * cos(radians(batiments.longitude) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(batiments.latitude))) AS distance"))
+            ->selectRaw("{$sqlDistance} AS distance")
             ->orderBy('distance')
-            ->get();*/
+            ->paginate(30);
 
-        $success['batiments'] = $batiments;
+        $success['etablissements'] = $etablissements;
 
-        return $this->sendResponse($success, 'Liste des Batiments');
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
     /**
