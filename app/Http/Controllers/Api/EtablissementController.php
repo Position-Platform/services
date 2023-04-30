@@ -585,10 +585,10 @@ class EtablissementController extends BaseController
         $lon = $request->input('lon');
 
         $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                * cos(radians(CAST(latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
                 + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+                * sin(radians(CAST(latitude as DOUBLE PRECISION))))");
 
 
 
@@ -598,7 +598,7 @@ class EtablissementController extends BaseController
         for ($i = 0; $i < count($sousCategoriesEtablissement); $i++) {
 
             $etablissement = Etablissement::select($sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('batiments',  'batiments.id', '=', 'etablissements.batiment_id')
                 ->where('id', $sousCategoriesEtablissement[$i])->first();
 
 
