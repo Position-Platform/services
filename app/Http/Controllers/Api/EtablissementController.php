@@ -596,8 +596,10 @@ class EtablissementController extends BaseController
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
         for ($i = 0; $i < count($sousCategoriesEtablissement); $i++) {
-            $etablissement = Etablissement::find($sousCategoriesEtablissement[$i]);
-            $etablissement->distance = $etablissement->batiment->select($sqlDistance)->first()->distance;
+            $etablissement = Etablissement::find($sousCategoriesEtablissement[$i])->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->select('etablissements.*', 'batiments.latitude', 'batiments.longitude', $sqlDistance . ' AS distance')
+                ->where('etablissements.id', $sousCategoriesEtablissement[$i])
+                ->first();
             array_push($etablissements, $etablissement);
         }
 
