@@ -592,26 +592,36 @@ class EtablissementController extends BaseController
 
 
 
+
         $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
+
+
+
         if ($commodites != null) {
-
-            // Calculer la distance entre le point de recherche et les etablissements trouvés et les classer par ordre croissant en faisant une jointure avec la table batiment
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')->select('etablissements.*', $sqlDistance . ' as distance')->orderBy('distance', 'asc')->paginate(50);
-
-
-            //   $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(50);
-
-
+            $etablissements =  DB::table('etablissements')
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categorie', 'categorie_id', '=', $idcategorie)
+                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
+                ->select(
+                    'etablissements.*'
+                )
+                ->selectRaw("{$sqlDistance} AS distance")
+                ->orderBy('distance')
+                ->paginate(50);
         } else {
-
-            // Calculer la distance entre le point de recherche et les etablissements trouvés et les classer par ordre croissant en faisant une jointure avec la table batiment
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')->select('etablissements.*', $sqlDistance . ' as distance')->orderBy('distance', 'asc')->paginate(50);
-
-            //  $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(50);
+            $etablissements =  DB::table('etablissements')
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categorie', 'categorie_id', '=', $idcategorie)
+                ->select(
+                    'etablissements.*'
+                )
+                ->selectRaw("{$sqlDistance} AS distance")
+                ->orderBy('distance')
+                ->paginate(50);
         }
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
+        // $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
@@ -737,4 +747,7 @@ class EtablissementController extends BaseController
 
         return $this->sendResponse($success, 'Vues du Etablissement incrémentées');
     }
+
+    // ecrire une requete sql pour recuperer tous les etablissements en fonction de l'idcategorie
+
 }
