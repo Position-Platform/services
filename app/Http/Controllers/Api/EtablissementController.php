@@ -591,37 +591,21 @@ class EtablissementController extends BaseController
 
 
 
-
-
         $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-
-
+        for ($i = 0; $i < count($sousCategoriesEtablissement); $i++) {
+            $etablissement = Etablissement::find($sousCategoriesEtablissement[$i]);
+            $etablissement->distance = $etablissement->batiment->select($sqlDistance)->first()->distance;
+            array_push($etablissements, $etablissement);
+        }
 
         if ($commodites != null) {
-            $etablissements =  DB::table('etablissements')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories', 'sous_categories.categorie_id', '=', $idcategorie)
-                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
-                ->select(
-                    'etablissements.*'
-                )
-                ->selectRaw("{$sqlDistance} AS distance")
-                ->orderBy('distance')
-                ->paginate(50);
+            $etablissements = collect($etablissements)->where('commodites', 'like', '%' . $commodites . '%')->sortBy('distance')->values()->all();
         } else {
-            $etablissements =  DB::table('etablissements')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories', 'sous_categories.categorie_id', '=', $idcategorie)
-                ->select(
-                    'etablissements.*'
-                )
-                ->selectRaw("{$sqlDistance} AS distance")
-                ->orderBy('distance')
-                ->paginate(50);
+            $etablissements = collect($etablissements)->sortBy('distance')->values()->all();
         }
-        // $etablissements->setPath(env('APP_URL') . '/api/etablissements');
+
 
         foreach ($etablissements as $etablissement) {
 
@@ -747,7 +731,4 @@ class EtablissementController extends BaseController
 
         return $this->sendResponse($success, 'Vues du Etablissement incrémentées');
     }
-
-    // ecrire une requete sql pour recuperer tous les etablissements en fonction de l'idcategorie
-
 }
