@@ -14,6 +14,7 @@ use App\Models\SousCategoriesEtablissement;
 use App\Models\User;
 use App\Models\UserFavoris;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -605,6 +606,15 @@ class EtablissementController extends BaseController
         } else {
             $etablissements = collect($etablissements)->sortBy('distance')->values()->all();
         }
+
+        // paginate etablissements
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $itemCollection = collect($etablissements);
+        $perPage = 50;
+        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+        $etablissements = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
+
+
 
 
         foreach ($etablissements as $etablissement) {
