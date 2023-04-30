@@ -602,7 +602,7 @@ class EtablissementController extends BaseController
         if ($commodites != null) {
             $etablissements =  DB::table('etablissements')
                 ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categorie', 'categorie_id', '=', $idcategorie)
+                ->join('sous_categories', 'categorie_id', '=', $idcategorie)
                 ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
                 ->select(
                     'etablissements.*'
@@ -613,7 +613,7 @@ class EtablissementController extends BaseController
         } else {
             $etablissements =  DB::table('etablissements')
                 ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categorie', 'categorie_id', '=', $idcategorie)
+                ->join('sous_categories', 'categorie_id', '=', $idcategorie)
                 ->select(
                     'etablissements.*'
                 )
