@@ -573,10 +573,6 @@ class EtablissementController extends BaseController
     public function filterSearch(Request $request)
     {
 
-        $lat = $request->input('lat');
-
-        $lon = $request->input('lon');
-
         $idcategorie = $request->input('id_categorie');
 
         $commodites = $request->input('commodites');
@@ -591,13 +587,12 @@ class EtablissementController extends BaseController
 
         if ($commodites != null) {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->get();
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(100);
         } else {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->get();
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(100);
         }
-
-
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
@@ -616,18 +611,12 @@ class EtablissementController extends BaseController
 
             $etablissement->moyenne = $moyenne;
 
-
             $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
-
             $etablissement->batiment;
-
-
-            $etablissement->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissement->batiment->lat, $etablissement->batiment->lon);
-
             $etablissement->sousCategories;
 
 
@@ -645,17 +634,6 @@ class EtablissementController extends BaseController
                 $commentaires->user;
             }
         }
-
-        //order by distance
-        $etablissements = $etablissements->sortBy('distance');
-
-        //Paginate etablissement
-        $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $itemCollection = collect($etablissements);
-        $perPage = 50;
-        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-        $etablissements = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
 
         $success['etablissements'] = $etablissements;
