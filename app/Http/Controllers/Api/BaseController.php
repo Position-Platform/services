@@ -243,19 +243,18 @@ class BaseController extends Controller
         $longitudeFrom,
         $latitudeTo,
         $longitudeTo,
-        $earthRadius = 6371
     ) {
-        // convert from degrees to radians
-        $latFrom = deg2rad($latitudeFrom);
-        $lonFrom = deg2rad($longitudeFrom);
-        $latTo = deg2rad($latitudeTo);
-        $lonTo = deg2rad($longitudeTo);
-
-        $latDelta = $latTo - $latFrom;
-        $lonDelta = $lonTo - $lonFrom;
-
-        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
-            cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
-        return $angle * $earthRadius;
+        $pi80 = M_PI / 180;
+        $latitudeFrom *= $pi80;
+        $longitudeFrom *= $pi80;
+        $latitudeTo *= $pi80;
+        $longitudeTo *= $pi80;
+        $r = 6372.797; // radius of Earth in km 6371
+        $dlat = $latitudeTo - $latitudeFrom;
+        $dlon = $longitudeTo - $longitudeFrom;
+        $a = sin($dlat / 2) * sin($dlat / 2) + cos($latitudeFrom) * cos($latitudeTo) * sin($dlon / 2) * sin($dlon / 2);
+        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+        $km = $r * $c;
+        return round($km);
     }
 }
