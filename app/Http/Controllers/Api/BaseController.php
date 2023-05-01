@@ -251,12 +251,11 @@ class BaseController extends Controller
         $latTo = deg2rad($latitudeTo);
         $lonTo = deg2rad($longitudeTo);
 
+        $latDelta = $latTo - $latFrom;
         $lonDelta = $lonTo - $lonFrom;
-        $a = pow(cos($latTo) * sin($lonDelta), 2) +
-            pow(cos($latFrom) * sin($latTo) - sin($latFrom) * cos($latTo) * cos($lonDelta), 2);
-        $b = sin($latFrom) * sin($latTo) + cos($latFrom) * cos($latTo) * cos($lonDelta);
 
-        $angle = atan2(sqrt($a), $b);
+        $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
+            cos($latFrom) * cos($latTo) * pow(sin($lonDelta / 2), 2)));
         return $angle * $earthRadius;
     }
 }
