@@ -592,16 +592,9 @@ class EtablissementController extends BaseController
         if ($commodites != null) {
 
             $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->get();
-
-            for ($i = 0; $i < count($etablissements); $i++) {
-                $etablissements[$i]->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissements[$i]->batiment->lat, $etablissements[$i]->batiment->lon);
-            }
         } else {
 
             $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->get();
-            for ($i = 0; $i < count($etablissements); $i++) {
-                $etablissements[$i]->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissements[$i]->batiment->lat, $etablissements[$i]->batiment->lon);
-            }
         }
 
 
@@ -629,7 +622,12 @@ class EtablissementController extends BaseController
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
 
+
             $etablissement->batiment;
+
+
+            $etablissement->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissement->batiment->lat, $etablissement->batiment->lon);
+
             $etablissement->sousCategories;
 
 
@@ -647,6 +645,9 @@ class EtablissementController extends BaseController
                 $commentaires->user;
             }
         }
+
+        //order by distance
+        $etablissements = $etablissements->sortBy('distance');
 
         //Paginate etablissement
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
