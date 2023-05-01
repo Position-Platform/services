@@ -573,6 +573,10 @@ class EtablissementController extends BaseController
     public function filterSearch(Request $request)
     {
 
+        $lat = $request->input('lat');
+
+        $lon = $request->input('lon');
+
         $idcategorie = $request->input('id_categorie');
 
         $commodites = $request->input('commodites');
@@ -581,48 +585,28 @@ class EtablissementController extends BaseController
 
         $etablissements = array();
 
-        $lat = $request->input('lat');
-        $lon = $request->input('lon');
-
-        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
-
-
 
         $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
         $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
 
-        for ($i = 0; $i < count($sousCategoriesEtablissement); $i++) {
-
-            $etablissement = Etablissement::select('etablissements.*', 'batiments.longitude', 'batiments.latitude', $sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->where('id', $sousCategoriesEtablissement[$i])->first();
-
-
-            array_push($etablissements, $etablissement);
-        }
-
         if ($commodites != null) {
-            $etablissements = collect($etablissements)->where('commodites', 'like', '%' . $commodites . '%')->sortBy('distance')->values()->all();
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->get();
+
+            for ($i = 0; $i < count($etablissements); $i++) {
+                $etablissements[$i]->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissements[$i]->batiment->lat, $etablissements[$i]->batiment->lon);
+            }
         } else {
-            $etablissements = collect($etablissements)->sortBy('distance')->values()->all();
+
+            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->get();
+            for ($i = 0; $i < count($etablissements); $i++) {
+                $etablissements[$i]->distance = $this->vincentyGreatCircleDistance($lat, $lon, $etablissements[$i]->batiment->lat, $etablissements[$i]->batiment->lon);
+            }
         }
-
-        // paginate etablissements
-        $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $itemCollection = collect($etablissements);
-        $perPage = 50;
-        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-        $etablissements = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
-
 
 
 
         foreach ($etablissements as $etablissement) {
-
 
             if ($request->user_id) {
                 $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
@@ -631,42 +615,46 @@ class EtablissementController extends BaseController
             }
 
 
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+
             $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
             $etablissement->isopen = $isOpen;
 
-
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
             $etablissement->moyenne = $moyenne;
+
 
             $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
-            $etablissement->distance;
 
-            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
-
-            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
+            $etablissement->batiment;
+            $etablissement->sousCategories;
 
 
-
-            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
             $etablissement->commodites;
-            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
-            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
-            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
 
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
         }
+
+        //Paginate etablissement
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $itemCollection = collect($etablissements);
+        $perPage = 50;
+        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+        $etablissements = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
+        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
 
         $success['etablissements'] = $etablissements;
