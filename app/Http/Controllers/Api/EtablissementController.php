@@ -582,19 +582,21 @@ class EtablissementController extends BaseController
         $lon = $request->input('lon');
 
 
+        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+
+
 
 
 
         if ($commodites != null) {
 
             $etablissements = DB::table('etablissements')
-                ->select('etablissements.*', DB::raw('6371 * acos(
-                cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
-                cos(radians(?)) *
-                cos(radians(?) - radians(CAST(batiments.longitude as DOUBLE PRECISION))) +
-                sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
-                sin(radians(?))
-            ) AS distance', [$lat, $lon, $lat]))
+                ->select('etablissements.*')
+                ->selectRaw($sqlDistance . ' AS distance')
                 ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
                 ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
                 ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
@@ -606,13 +608,8 @@ class EtablissementController extends BaseController
         } else {
 
             $etablissements = DB::table('etablissements')
-                ->select('etablissements.*', DB::raw('6371 * acos(
-                cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
-                cos(radians(?)) *
-                cos(radians(?) - radians(CAST(batiments.longitude as DOUBLE PRECISION))) +
-                sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
-                sin(radians(?))
-            ) AS distance', [$lat, $lon, $lat]))
+                ->select('etablissements.*')
+                ->selectRaw($sqlDistance . ' AS distance')
                 ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
                 ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
                 ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
