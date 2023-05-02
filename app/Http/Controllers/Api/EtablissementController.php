@@ -628,11 +628,12 @@ class EtablissementController extends BaseController
             }
 
 
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
             $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
             $etablissement->isopen = $isOpen;
+
+
+            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
 
             $etablissement->moyenne = $moyenne;
 
@@ -640,20 +641,24 @@ class EtablissementController extends BaseController
 
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
+            $etablissement->distance;
 
-            $etablissement->batiment;
-            $etablissement->sousCategories;
+            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
+
+            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
 
 
+
+            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
             }
 
             $etablissement->commodites;
-            $etablissement->images;
-            $etablissement->horaires;
-            $etablissement->commentaires;
+            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
+            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
 
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
