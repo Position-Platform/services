@@ -577,22 +577,50 @@ class EtablissementController extends BaseController
 
         $commodites = $request->input('commodites');
 
-        $categorie = Categorie::find($idcategorie);
+        $lat = $request->input('lat');
 
-        $etablissements = array();
+        $lon = $request->input('lon');
 
 
-        $sousCategories = SousCategorie::where('categorie_id', $categorie->id)->pluck('id')->toArray();
-        $sousCategoriesEtablissement = SousCategoriesEtablissement::whereIn('sous_categorie_id', $sousCategories)->pluck('etablissement_id')->toArray();
+
+
 
         if ($commodites != null) {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->where('commodites', 'like', '%' . $commodites . '%')->paginate(100);
+            $etablissements = DB::table('etablissements as e')
+                ->select('e.*', DB::raw('6371 * acos(
+                cos(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                cos(radians(?)) *
+                cos(radians(?) - radians(CAST(b.longitude as DOUBLE PRECISION))) +
+                sin(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                sin(radians(?))
+            ) AS distance', [$lat, $lon, $lat]))
+                ->join('batiments as b', 'e.batiment_id', '=', 'b.id')
+                ->join('sous_categories_etablissements as esc', 'e.id', '=', 'esc.etablissement_id')
+                ->join('sous_categories as sc', 'esc.sous_categorie_id', '=', 'sc.id')
+                ->join('categories as c', 'sc.categorie_id', '=', 'c.id')
+                ->where('c.id', '=', $idcategorie)
+                ->where('e.commodites', 'like', '%' . $commodites . '%')
+                ->orderBy('distance', 'ASC')
+                ->paginate(50);
         } else {
 
-            $etablissements = Etablissement::whereIn('id', $sousCategoriesEtablissement)->paginate(100);
+            $etablissements = DB::table('etablissements as e')
+                ->select('e.*', DB::raw('6371 * acos(
+                cos(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                cos(radians(?)) *
+                cos(radians(?) - radians(CAST(b.longitude as DOUBLE PRECISION))) +
+                sin(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                sin(radians(?))
+            ) AS distance', [$lat, $lon, $lat]))
+                ->join('batiments as b', 'e.batiment_id', '=', 'b.id')
+                ->join('sous_categories_etablissements as esc', 'e.id', '=', 'esc.etablissement_id')
+                ->join('sous_categories as sc', 'esc.sous_categorie_id', '=', 'sc.id')
+                ->join('categories as c', 'sc.categorie_id', '=', 'c.id')
+                ->where('c.id', '=', $idcategorie)
+                ->orderBy('distance', 'ASC')
+                ->paginate(50);
         }
-        $etablissements->setPath(env('APP_URL') . '/api/etablissements');
 
         foreach ($etablissements as $etablissement) {
 
