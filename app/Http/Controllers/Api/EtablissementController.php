@@ -587,37 +587,37 @@ class EtablissementController extends BaseController
 
         if ($commodites != null) {
 
-            $etablissements = DB::table('etablissements as e')
-                ->select('e.*', DB::raw('6371 * acos(
-                cos(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+            $etablissements = DB::table('etablissements')
+                ->select('etablissements.*', DB::raw('6371 * acos(
+                cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
                 cos(radians(?)) *
-                cos(radians(?) - radians(CAST(b.longitude as DOUBLE PRECISION))) +
-                sin(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                cos(radians(?) - radians(CAST(batiments.longitude as DOUBLE PRECISION))) +
+                sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
                 sin(radians(?))
             ) AS distance', [$lat, $lon, $lat]))
-                ->join('batiments as b', 'e.batiment_id', '=', 'b.id')
-                ->join('sous_categories_etablissements as esc', 'e.id', '=', 'esc.etablissement_id')
-                ->join('sous_categories as sc', 'esc.sous_categorie_id', '=', 'sc.id')
-                ->join('categories as c', 'sc.categorie_id', '=', 'c.id')
-                ->where('c.id', '=', $idcategorie)
-                ->where('e.commodites', 'like', '%' . $commodites . '%')
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
+                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
+                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+                ->where('categories.id', '=', $idcategorie)
+                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
                 ->orderBy('distance', 'ASC')
                 ->paginate(50);
         } else {
 
-            $etablissements = DB::table('etablissements as e')
-                ->select('e.*', DB::raw('6371 * acos(
-                cos(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+            $etablissements = DB::table('etablissements')
+                ->select('etablissements.*', DB::raw('6371 * acos(
+                cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
                 cos(radians(?)) *
-                cos(radians(?) - radians(CAST(b.longitude as DOUBLE PRECISION))) +
-                sin(radians(CAST(b.latitude as DOUBLE PRECISION))) *
+                cos(radians(?) - radians(CAST(batiments.longitude as DOUBLE PRECISION))) +
+                sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))) *
                 sin(radians(?))
             ) AS distance', [$lat, $lon, $lat]))
-                ->join('batiments as b', 'e.batiment_id', '=', 'b.id')
-                ->join('sous_categories_etablissements as esc', 'e.id', '=', 'esc.etablissement_id')
-                ->join('sous_categories as sc', 'esc.sous_categorie_id', '=', 'sc.id')
-                ->join('categories as c', 'sc.categorie_id', '=', 'c.id')
-                ->where('c.id', '=', $idcategorie)
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
+                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
+                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+                ->where('categories.id', '=', $idcategorie)
                 ->orderBy('distance', 'ASC')
                 ->paginate(50);
         }
