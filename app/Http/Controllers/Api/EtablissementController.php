@@ -339,7 +339,7 @@ class EtablissementController extends BaseController
         $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
 
         $etablissement->batiment;
-        $etablissement->sousCategories;
+        $etablissement['sousCategories'] = $etablissement->sousCategories;
 
         foreach ($etablissement->sousCategories as $sousCategories) {
             $sousCategories->categorie;
@@ -538,7 +538,7 @@ class EtablissementController extends BaseController
 
 
             $etablissement->batiment;
-            $etablissement->sousCategories;
+            $etablissement['sousCategories'] = $etablissement->sousCategories;
 
 
 

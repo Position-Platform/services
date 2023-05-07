@@ -57,7 +57,7 @@ class BatimentController extends BaseController
 
                 $etablissement->user->abonnement;
 
-                $etablissement->sousCategories;
+                $etablissement['sousCategories'] = $etablissement->sousCategories;
                 $etablissement->commodites;
                 foreach ($etablissement->sousCategories as  $sousCategories) {
                     $sousCategories->categorie;
@@ -181,7 +181,7 @@ class BatimentController extends BaseController
             $etablissement->user->abonnement;
 
 
-            $etablissement->sousCategories;
+            $etablissement['sousCategories'] = $etablissement->sousCategories;
             $etablissement->commodites;
             foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
