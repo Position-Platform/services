@@ -7,6 +7,8 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\URL;
+use Kreait\Firebase\DynamicLink\CreateDynamicLink\FailedToCreateDynamicLink;
+use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class SendResetLinkParams extends Notification
 {
@@ -30,12 +32,34 @@ class SendResetLinkParams extends Notification
 
     public function toMail($notifiable)
     {
-        $token = $this->token;
-        $url = $this->url;
+        $dynamicLink = Firebase::dynamicLinks();
 
-        return (new MailMessage)
-            ->subject('Reset Password Link')
-            ->view('emails.reset_link', compact('token', 'url'));
+        $url = 'https://app.position.cm/';
+
+        try {
+            $link = $dynamicLink->createDynamicLink(
+                $url,
+                'https://app.position.cm?resettoken=' . $this->token,
+                [
+                    'ios' => [
+                        'bundleId' => 'cm.geosmfamily.position',
+                    ],
+                    'android' => [
+                        'packageName' => 'cm.geosmfamily.position',
+                    ],
+                ]
+            );
+
+            $this->url = $dynamicLink->createShortLink($url);
+
+            $url = $this->url;
+
+            return (new MailMessage)
+                ->subject('Reset Password Link')
+                ->view('emails.reset_link', compact('url'));
+        } catch (FailedToCreateDynamicLink $e) {
+            echo $e->getMessage();
+        }
     }
 
 
