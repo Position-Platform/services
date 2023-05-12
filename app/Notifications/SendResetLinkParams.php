@@ -7,8 +7,10 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\URL;
+use Kreait\Firebase\DynamicLink\AndroidInfo;
 use Kreait\Firebase\DynamicLink\CreateDynamicLink;
 use Kreait\Firebase\DynamicLink\CreateDynamicLink\FailedToCreateDynamicLink;
+use Kreait\Firebase\DynamicLink\IOSInfo;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class SendResetLinkParams extends Notification
@@ -37,9 +39,22 @@ class SendResetLinkParams extends Notification
 
         $url = 'https://app.position.cm?resettoken=' . $this->token;
 
+        $action = CreateDynamicLink::forUrl($url)
+            ->withDynamicLinkDomain('https://app.position.cm')
+            ->withUnguessableSuffix()
 
-        $link = $dynamicLink->createUnguessableLink($url);
-        $link = $dynamicLink->createDynamicLink($url, CreateDynamicLink::WITH_UNGUESSABLE_SUFFIX);
+            ->withIOSInfo(
+                IOSInfo::new()
+                    ->withBundleId('cm.geosmfamily.position')
+
+            )
+            ->withAndroidInfo(
+                AndroidInfo::new()
+                    ->withPackageName('cm.geosmfamily.position')
+                    ->withMinPackageVersionCode('0')
+            );
+
+        $link = $dynamicLink->createDynamicLink($action);
 
         $url = $link->uri();
 
