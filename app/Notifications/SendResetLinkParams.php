@@ -36,30 +36,27 @@ class SendResetLinkParams extends Notification
 
         $url = 'https://app.position.cm/';
 
-        try {
-            $link = $dynamicLink->createDynamicLink(
-                $url,
-                'https://app.position.cm?resettoken=' . $this->token,
-                [
-                    'ios' => [
-                        'bundleId' => 'cm.geosmfamily.position',
-                    ],
-                    'android' => [
-                        'packageName' => 'cm.geosmfamily.position',
-                    ],
-                ]
-            );
 
-            $this->url = $dynamicLink->createShortLink($url);
+        $link = $dynamicLink->createDynamicLink(
+            $url,
+            'https://app.position.cm?resettoken=' . $this->token,
+            [
+                'ios' => [
+                    'bundleId' => 'cm.geosmfamily.position',
+                ],
+                'android' => [
+                    'packageName' => 'cm.geosmfamily.position',
+                ],
+            ]
+        );
 
-            $url = $this->url;
+        $this->url = $dynamicLink->createShortLink($url);
 
-            return (new MailMessage)
-                ->subject('Reset Password Link')
-                ->view('emails.reset_link', compact('url'));
-        } catch (FailedToCreateDynamicLink $e) {
-            echo $e->getMessage();
-        }
+        $url = $this->url;
+
+        return (new MailMessage)
+            ->subject('Reset Password Link')
+            ->view('emails.reset_link', compact('url'));
     }
 
 
