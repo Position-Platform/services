@@ -257,7 +257,7 @@
                                                                                     <a href="https://www.facebook.com/Position-100928485708010"
                                                                                         title="Facebook"
                                                                                         target="_blank">
-                                                                                        <img src="https://service.geo.sm/var/www/image-4.png"
+                                                                                        <img src="https://services.position.cm/images/facebook.png"
                                                                                             alt="Facebook"
                                                                                             title="Facebook"
                                                                                             width="32"
@@ -281,7 +281,7 @@
                                                                                     <a href="https://twitter.com/Position237"
                                                                                         title="Twitter"
                                                                                         target="_blank">
-                                                                                        <img src="https://service.geo.sm/var/www/image-1.png"
+                                                                                        <img src="https://services.position.cm/images/twitter.png"
                                                                                             alt="Twitter"
                                                                                             title="Twitter"
                                                                                             width="32"
@@ -305,7 +305,7 @@
                                                                                     <a href="https://www.linkedin.com/company/position237"
                                                                                         title="LinkedIn"
                                                                                         target="_blank">
-                                                                                        <img src="https://service.geo.sm/var/www/image-3.png"
+                                                                                        <img src="https://services.position.cm/images/linkedin.png"
                                                                                             alt="LinkedIn"
                                                                                             title="LinkedIn"
                                                                                             width="32"
@@ -365,7 +365,7 @@
 
                                                             <h4
                                                                 style="margin: 0px; line-height: 140%; text-align: center; word-wrap: break-word; font-weight: normal; font-family: arial,helvetica,sans-serif; font-size: 11px;">
-                                                                &copy; 2022 Position. All rights reserved
+                                                                &copy; 2023 Position. All rights reserved
                                                             </h4>
 
                                                         </td>
