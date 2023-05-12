@@ -173,7 +173,7 @@
                                                                 <strong>Hello!</strong>
                                                                 <br>
                                                                 <br>
-                                                                <p> Cliquez sur ce bouton pour reinitialisez votre mot
+                                                                <p> Cliquez sur ce bouton pour reinitialiser votre mot
                                                                     de passe </p>
                                                             </div>
                                                             <br>
