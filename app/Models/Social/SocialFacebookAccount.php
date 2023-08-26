@@ -30,8 +30,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialFacebookAccount whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|SocialFacebookAccount withTrashed()
  * @method static \Illuminate\Database\Query\Builder|SocialFacebookAccount withoutTrashed()
- * @mixin \Eloquent
  * @property-read User|null $user
+ * @mixin \Eloquent
  */
 class SocialFacebookAccount extends Model
 {

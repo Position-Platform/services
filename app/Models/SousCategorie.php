@@ -36,6 +36,8 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|SousCategorie whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|SousCategorie withTrashed()
  * @method static \Illuminate\Database\Query\Builder|SousCategorie withoutTrashed()
+ * @property string|null $color
+ * @method static \Illuminate\Database\Eloquent\Builder|SousCategorie whereColor($value)
  * @mixin \Eloquent
  */
 class SousCategorie extends Model

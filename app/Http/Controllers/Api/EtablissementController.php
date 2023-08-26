@@ -34,6 +34,8 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
+     * @queryParam lat string latitude. Example: 4.056
+     * @queryParam lon string longitude. Example: 8.056
      */
     public function index(Request $request)
     {
@@ -110,6 +112,11 @@ class EtablissementController extends BaseController
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
+      /**
+     * count all establishment.
+     *
+     * @header Content-Type application/json
+     */
     public function countEtablissement()
     {
         $nbre_etablissements = Etablissement::count();
@@ -119,6 +126,14 @@ class EtablissementController extends BaseController
         return $this->sendResponse($success, 'Nombre des Etablissements');
     }
 
+    /**
+     * Get all establishment by distance.
+     *
+     * @header Content-Type application/json
+     * @queryParam user_id string id of user. Example: 1
+     * @queryParam lat string latitude. Example: 4.056
+     * @queryParam lon string longitude. Example: 8.056
+     */
     public function getEtablissementByDistance(Request $request)
     {
         $lat = $request->lat;
@@ -569,6 +584,8 @@ class EtablissementController extends BaseController
      * @queryParam user_id string id of user conncted . Example: 1
      * @queryParam id_categorie string required id of categorie . Example: 1
      * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
+     * @queryParam lat string latitude. Example: 4.056
+     * @queryParam lon string longitude. Example: 8.056
      */
     public function filterSearch(Request $request)
     {

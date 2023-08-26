@@ -77,6 +77,7 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|Etablissement whereWhatsapp2($value)
  * @method static \Illuminate\Database\Query\Builder|Etablissement withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Etablissement withoutTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Etablissement whereCommodites($value)
  * @mixin \Eloquent
  */
 class Etablissement extends Model

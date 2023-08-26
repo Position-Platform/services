@@ -5,7 +5,7 @@
     "keywords": [
         "framework",
         "laravel",
-        "position"
+        "position", "api","services","firebase"
     ],
     "license": "MIT",
     "require": {

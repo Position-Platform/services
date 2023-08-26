@@ -31,7 +31,7 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/login', [App\Http\Controllers\Api\UserController::class, 'login']);
 
         Route::post('auth/register/facebook', [App\Http\Controllers\Api\SocialApiAuthFacebookController::class, 'facebookConnect']);
-        Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
+      //  Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
 
 
