@@ -297,13 +297,6 @@ class BatimentController extends BaseController
         }
     }
 
-    /**
-     * Add Complet Batiment Process.
-     *
-     * @header Content-Type application/json
-     * @bodyParam batiment required JSONObject.
-     */
-
     public function addCompletBatiment(Request $request)
     {
         $user = Auth::user();
