@@ -31,6 +31,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|Tracking withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Tracking withoutTrashed()
+ * @property string|null $speed
+ * @property string|null $timestamp
+ * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereSpeed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tracking whereTimestamp($value)
  * @mixin \Eloquent
  */
 class Tracking extends Model

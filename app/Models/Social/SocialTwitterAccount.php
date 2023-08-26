@@ -30,8 +30,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialTwitterAccount whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|SocialTwitterAccount withTrashed()
  * @method static \Illuminate\Database\Query\Builder|SocialTwitterAccount withoutTrashed()
- * @mixin \Eloquent
  * @property-read User|null $user
+ * @mixin \Eloquent
  */
 class SocialTwitterAccount extends Model
 {

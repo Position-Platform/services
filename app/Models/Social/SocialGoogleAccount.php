@@ -30,8 +30,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|SocialGoogleAccount whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|SocialGoogleAccount withTrashed()
  * @method static \Illuminate\Database\Query\Builder|SocialGoogleAccount withoutTrashed()
- * @mixin \Eloquent
  * @property-read User|null $user
+ * @mixin \Eloquent
  */
 class SocialGoogleAccount extends Model
 {

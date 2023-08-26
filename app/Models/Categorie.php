@@ -39,6 +39,8 @@ use Laravel\Scout\Searchable;
  * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereVues($value)
  * @method static \Illuminate\Database\Query\Builder|Categorie withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Categorie withoutTrashed()
+ * @property string|null $color
+ * @method static \Illuminate\Database\Eloquent\Builder|Categorie whereColor($value)
  * @mixin \Eloquent
  */
 class Categorie extends Model
