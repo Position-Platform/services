@@ -35,7 +35,7 @@ class BatimentController extends BaseController
             foreach ($batiment->etablissements as  $etablissement) {
 
                 if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
                 } else {
                     $etablissement->isFavoris = false;
                 }
@@ -159,7 +159,7 @@ class BatimentController extends BaseController
 
 
             if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
             } else {
                 $etablissement->isFavoris = false;
             }
