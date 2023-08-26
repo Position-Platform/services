@@ -334,7 +334,7 @@ class EtablissementController extends BaseController
 
 
         if ($request->user_id) {
-            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($id, $request->user_id);
         } else {
             $etablissement->isFavoris = false;
         }

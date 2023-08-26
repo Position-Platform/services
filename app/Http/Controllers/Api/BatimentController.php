@@ -35,7 +35,7 @@ class BatimentController extends BaseController
             foreach ($batiment->etablissements as  $etablissement) {
 
                 if ($request->user_id) {
-                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                    $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
                 } else {
                     $etablissement->isFavoris = false;
                 }
@@ -159,7 +159,7 @@ class BatimentController extends BaseController
 
 
             if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement, $request->user_id);
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
             } else {
                 $etablissement->isFavoris = false;
             }
@@ -301,7 +301,7 @@ class BatimentController extends BaseController
      * Add Complet Batiment Process.
      *
      * @header Content-Type application/json
-     * @bodyParam batiment required example in  storage/responses/batiment.json
+     * @bodyParam batiment required example {"batiment":{"nom":"BOUTIQUE DE MICAL","nombre_niveau":"3","code":"BATIMENT_1013434286","longitude":"11.229207","latitude":"4.078288","indication":"derrierre station","rue":"Rue de la Mairie","ville":"Douala","commune":"Douala 3","quartier":"Nyalla","user_id":1,"etablissement":{"id":1,"nom":"BOUTIQUE DE MICAL","indication_adresse":"Face station","code_postal":"BP 4326 Douala","site_internet":"www.site.com","user_id":"1","etage":"1","phone":"699999999","whatsapp1":"699999999","whatsapp2":"699999998","description":"bel etablissement","nom_manager":"Mical","contact_manager":"Mical","commodites":"Wifi","services":"OM;MOMO","ameliorations":"Ajouter des videos","idSousCategorie":"1","horaires":[{"jour":"lundi","plage_horaire":"07:00-12:00;14:00-17:00"}]}}}
      */
 
     public function addCompletBatiment(Request $request)
