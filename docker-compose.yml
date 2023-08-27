@@ -47,7 +47,7 @@ services:
 
     position-services-meilisearch:
         container_name: position-services-meilisearch
-        image: getmeili/meilisearch:v0.27.2
+        image: getmeili/meilisearch
         environment:
             - http_proxy
             - https_proxy
