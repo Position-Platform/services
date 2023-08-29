@@ -586,6 +586,7 @@ class EtablissementController extends BaseController
      * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
      * @queryParam lat string latitude. Example: 4.056
      * @queryParam lon string longitude. Example: 8.056
+     * queryParam ville string ville. Example: Bameka
      */
     public function filterSearch(Request $request)
     {
@@ -597,6 +598,8 @@ class EtablissementController extends BaseController
         $lat = $request->input('lat');
 
         $lon = $request->input('lon');
+
+        $ville = $request->input('ville');
 
 
         $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
@@ -611,7 +614,21 @@ class EtablissementController extends BaseController
 
         if ($commodites != null) {
 
-            $etablissements = DB::table('etablissements')
+            if($ville != null) {
+                 $etablissements = DB::table('etablissements')
+                ->select('etablissements.*')
+                ->selectRaw($sqlDistance . ' AS distance')
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
+                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
+                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+                ->where('categories.id', '=', $idcategorie)
+                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
+                ->where('batiments.ville', '=', $ville)
+                ->orderBy('distance', 'ASC')
+                ->paginate(50);
+            } else {
+                 $etablissements = DB::table('etablissements')
                 ->select('etablissements.*')
                 ->selectRaw($sqlDistance . ' AS distance')
                 ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
@@ -622,8 +639,26 @@ class EtablissementController extends BaseController
                 ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
                 ->orderBy('distance', 'ASC')
                 ->paginate(50);
+            }
+
+           
         } else {
 
+            if($ville != null) {
+                
+            $etablissements = DB::table('etablissements')
+                ->select('etablissements.*')
+                ->selectRaw($sqlDistance . ' AS distance')
+                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
+                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
+                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+                ->where('categories.id', '=', $idcategorie)
+                ->where('batiments.ville', '=', $ville)
+                ->orderBy('distance', 'ASC')
+                ->paginate(50);
+            } else {
+                
             $etablissements = DB::table('etablissements')
                 ->select('etablissements.*')
                 ->selectRaw($sqlDistance . ' AS distance')
@@ -634,6 +669,8 @@ class EtablissementController extends BaseController
                 ->where('categories.id', '=', $idcategorie)
                 ->orderBy('distance', 'ASC')
                 ->paginate(50);
+            }
+
         }
 
         foreach ($etablissements as $etablissement) {
