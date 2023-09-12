@@ -626,6 +626,7 @@ class EtablissementController extends BaseController
                 ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
                 ->where('batiments.ville', '=', $ville)
                 ->orderBy('distance', 'ASC')
+                ->distinct() 
                 ->paginate(50);
             } else {
                  $etablissements = DB::table('etablissements')
@@ -638,6 +639,7 @@ class EtablissementController extends BaseController
                 ->where('categories.id', '=', $idcategorie)
                 ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
                 ->orderBy('distance', 'ASC')
+                ->distinct() 
                 ->paginate(50);
             }
 
@@ -656,6 +658,7 @@ class EtablissementController extends BaseController
                 ->where('categories.id', '=', $idcategorie)
                 ->where('batiments.ville', '=', $ville)
                 ->orderBy('distance', 'ASC')
+                ->distinct() 
                 ->paginate(50);
             } else {
                 
@@ -668,6 +671,7 @@ class EtablissementController extends BaseController
                 ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
                 ->where('categories.id', '=', $idcategorie)
                 ->orderBy('distance', 'ASC')
+                ->distinct() 
                 ->paginate(50);
             }
 
