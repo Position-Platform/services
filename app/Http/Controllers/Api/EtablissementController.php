@@ -630,18 +630,11 @@ class EtablissementController extends BaseController
 
     // Ajout des autres paramètres à la réponse
     foreach ($etablissements as $etablissement) {
-        $etablissement->id_categorie = $idcategorie;
         $etablissement->commodites = $commodites;
-        $etablissement->lat = $lat;
-        $etablissement->lon = $lon;
-        $etablissement->ville = $ville;
+        
 
-        $etablissement->sousCategories = $etablissement->sousCategories->pluck('id');
-        $etablissement->commentaires = $etablissement->commentaires->pluck('id');
         $etablissement->batiment = $etablissement->batiment;
-        foreach ($etablissement->sousCategories as $sousCategories) {
-                $sousCategories->categorie;
-            }
+        
 
         if ($request->user_id) {
             $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
