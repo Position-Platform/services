@@ -623,16 +623,25 @@ class EtablissementController extends BaseController
 
     $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
-
     // Ajout de la distance à la réponse
     foreach ($etablissements as $etablissement) {
         $etablissement->distance = $etablissement->distance;
-        $etablissement->batiment = $etablissement->batiment;
-        $etablissement->sousCategories->categorie = $etablissement->sousCategories->categorie;
-        $etablissement->images = $etablissement->images;
-        $etablissement->horaires = $etablissement->horaires;
-        $etablissement->commentaires->user = $etablissement->commentaires->user;
+    }
 
+    // Ajout des autres paramètres à la réponse
+    foreach ($etablissements as $etablissement) {
+        $etablissement->id_categorie = $idcategorie;
+        $etablissement->commodites = $commodites;
+        $etablissement->lat = $lat;
+        $etablissement->lon = $lon;
+        $etablissement->ville = $ville;
+
+        $etablissement->sousCategories = $etablissement->sousCategories->pluck('id');
+        $etablissement->commentaires = $etablissement->commentaires->pluck('id');
+        $etablissement->batiment = $etablissement->batiment;
+        $etablissement->sousCategories->each(function ($sousCategorie) {
+            $sousCategorie->categorie = $sousCategorie->categorie;
+        });
 
         if ($request->user_id) {
             $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
@@ -650,10 +659,6 @@ class EtablissementController extends BaseController
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
-
-
-
-
 
     /**
      * Add Favorite Establishment.
