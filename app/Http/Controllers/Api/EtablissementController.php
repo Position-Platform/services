@@ -643,7 +643,7 @@ class EtablissementController extends BaseController
         } else {
             $etablissement->isFavoris = false;
         }
-        $etablissement->distance;
+        $etablissement->distance = $etablissement->distance;
         $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
         $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
         $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
