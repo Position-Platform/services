@@ -623,9 +623,32 @@ class EtablissementController extends BaseController
 
     $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
+       // Collectez les ID des établissements pour une requête Eloquent unique
+    $etablissementIds = $etablissements->pluck('id');
+
+    // Utilisez Eloquent pour charger les relations et effectuer d'autres opérations
+    $etablissements = Etablissement::whereIn('id', $etablissementIds)->with([
+        'batiment',
+        'sousCategories.categorie',
+        'images',
+        'horaires',
+        'commentaires.user',
+    ])->get();
+
     // Ajout de la distance à la réponse
     foreach ($etablissements as $etablissement) {
         $etablissement->distance = $etablissement->distance;
+
+        if ($request->user_id) {
+            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
+        } else {
+            $etablissement->isFavoris = false;
+        }
+
+        $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
+        $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+        $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+        $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
     }
 
     $success['etablissements'] = $etablissements;
