@@ -18,6 +18,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\Builder;
 
 /**
  *
@@ -588,7 +589,7 @@ class EtablissementController extends BaseController
      * @queryParam lon string longitude. Example: 8.056
      * queryParam ville string ville. Example: Bameka
      */
- public function filterSearch(Request $request)
+public function filterSearch(Request $request)
 {
     $idcategorie = $request->input('id_categorie');
     $commodites = $request->input('commodites');
@@ -603,24 +604,25 @@ class EtablissementController extends BaseController
         + sin(radians($lat))
         * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
 
-    // Requête Eloquent pour récupérer les établissements avec la distance
-    $etablissements = Etablissement::select('etablissements.*')
-        ->selectRaw($sqlDistance . ' AS distance')
-        ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-        ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
-        ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
-        ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
-        ->where('categories.id', '=', $idcategorie);
+    // Requête Eloquent avec le constructeur de requête
+    $query = Etablissement::query();
+    $query->select('etablissements.*');
+    $query->selectRaw($sqlDistance . ' AS distance');
+    $query->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id');
+    $query->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id');
+    $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
+    $query->join('categories', 'sous_categories.categorie_id', '=', 'categories.id');
+    $query->where('categories.id', '=', $idcategorie);
 
     if ($commodites != null) {
-        $etablissements->where('etablissements.commodites', 'like', '%' . $commodites . '%');
+        $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
     }
 
     if ($ville != null) {
-        $etablissements->where('batiments.ville', '=', $ville);
+        $query->where('batiments.ville', '=', $ville);
     }
 
-    $etablissements->orderBy('distance', 'ASC')->distinct()->paginate(50);
+    $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
     foreach ($etablissements as $etablissement) {
         if ($request->user_id) {
@@ -639,6 +641,7 @@ class EtablissementController extends BaseController
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
+
 
 
 
