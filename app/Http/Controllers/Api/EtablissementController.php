@@ -628,10 +628,10 @@ class EtablissementController extends BaseController
     foreach ($etablissements as $etablissement) {
         $etablissement->distance = $etablissement->distance;
         $etablissement->batiment = $etablissement->batiment;
-        $etablissement->sousCategories = $etablissement->sousCategories;
+        $etablissement->sousCategories->categorie = $etablissement->sousCategories->categorie;
         $etablissement->images = $etablissement->images;
         $etablissement->horaires = $etablissement->horaires;
-        $etablissement->commentaires = $etablissement->commentaires;
+        $etablissement->commentaires->user = $etablissement->commentaires->user;
 
 
         if ($request->user_id) {
