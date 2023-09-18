@@ -605,7 +605,7 @@ class EtablissementController extends BaseController
 
     $query = DB::table('etablissements')
         ->select('etablissements.*')
-        ->selectRaw($sqlDistance)
+        ->selectRaw($sqlDistance. ' AS distance')
         ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
         ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
         ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
@@ -622,22 +622,13 @@ class EtablissementController extends BaseController
 
     $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
-    // Récupérez les résultats de la requête
-    $results = $query->get();
-
-    // Initialisez un tableau pour stocker les établissements avec la distance
-    $etablissements = [];
-
-    foreach ($results as $result) {
-        // Ajoutez la distance à chaque résultat
-        $result->distance = $result->distance;
-
-        // Ajoutez le résultat au tableau des établissements
-        $etablissements[] = $result;
-    }
-
     // Préchargez les relations nécessaires
-    $etablissementIds = collect($etablissements)->pluck('id')->toArray();
+    $etablissements = $query->get();
+
+    // Collectez les ID des établissements pour une requête Eloquent unique
+    $etablissementIds = $etablissements->pluck('id');
+
+    // Utilisez Eloquent pour charger les relations et effectuer d'autres opérations
     $etablissements = Etablissement::whereIn('id', $etablissementIds)->with([
         'batiment',
         'sousCategories.categorie',
@@ -652,7 +643,7 @@ class EtablissementController extends BaseController
         } else {
             $etablissement->isFavoris = false;
         }
-        $etablissement->distance = $etablissement->distance;
+
         $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
         $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
         $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
@@ -663,6 +654,7 @@ class EtablissementController extends BaseController
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
+
 
 
 
