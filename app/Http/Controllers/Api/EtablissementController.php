@@ -589,145 +589,72 @@ class EtablissementController extends BaseController
      * queryParam ville string ville. Example: Bameka
      */
     public function filterSearch(Request $request)
-    {
+{
+    $idcategorie = $request->input('id_categorie');
+    $commodites = $request->input('commodites');
+    $lat = $request->input('lat');
+    $lon = $request->input('lon');
+    $ville = $request->input('ville');
 
-        $idcategorie = $request->input('id_categorie');
+    // Calcul de la distance
+    $sqlDistance = DB::raw("6371 * acos(cos(radians($lat))
+        * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
+        * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
+        + sin(radians($lat))
+        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
-        $commodites = $request->input('commodites');
+    $query = DB::table('etablissements')
+        ->select('etablissements.*')
+        ->selectRaw($sqlDistance)
+        ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+        ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
+        ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
+        ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+        ->where('categories.id', '=', $idcategorie);
 
-        $lat = $request->input('lat');
-
-        $lon = $request->input('lon');
-
-        $ville = $request->input('ville');
-
-
-        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
-                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
-                + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
-
-
-
-
-
-        if ($commodites != null) {
-
-            if($ville != null) {
-                 $etablissements = DB::table('etablissements')
-                ->select('etablissements.*')
-                ->selectRaw($sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
-                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
-                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
-                ->where('categories.id', '=', $idcategorie)
-                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
-                ->where('batiments.ville', '=', $ville)
-                ->orderBy('distance', 'ASC')
-                ->distinct() 
-                ->paginate(50);
-            } else {
-                 $etablissements = DB::table('etablissements')
-                ->select('etablissements.*')
-                ->selectRaw($sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
-                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
-                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
-                ->where('categories.id', '=', $idcategorie)
-                ->where('etablissements.commodites', 'like', '%' . $commodites . '%')
-                ->orderBy('distance', 'ASC')
-                ->distinct() 
-                ->paginate(50);
-            }
-
-           
-        } else {
-
-            if($ville != null) {
-                
-            $etablissements = DB::table('etablissements')
-                ->select('etablissements.*')
-                ->selectRaw($sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
-                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
-                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
-                ->where('categories.id', '=', $idcategorie)
-                ->where('batiments.ville', '=', $ville)
-                ->orderBy('distance', 'ASC')
-                ->distinct() 
-                ->paginate(50);
-            } else {
-                
-            $etablissements = DB::table('etablissements')
-                ->select('etablissements.*')
-                ->selectRaw($sqlDistance . ' AS distance')
-                ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-                ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
-                ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
-                ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
-                ->where('categories.id', '=', $idcategorie)
-                ->orderBy('distance', 'ASC')
-                ->distinct() 
-                ->paginate(50);
-            }
-
-        }
-
-        foreach ($etablissements as $etablissement) {
-
-            if ($request->user_id) {
-                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
-            } else {
-                $etablissement->isFavoris = false;
-            }
-
-
-            $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
-
-            $etablissement->isopen = $isOpen;
-
-
-            $moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-
-            $etablissement->moyenne = $moyenne;
-
-            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-
-            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
-
-            $etablissement->distance;
-
-            $etablissement->batiment = Batiment::where('id', $etablissement->batiment_id)->first();
-
-            $sousCategorieEtablissement = SousCategoriesEtablissement::where('etablissement_id', $etablissement->id)->first();
-
-
-
-            $etablissement->sousCategories = SousCategorie::where('id', $sousCategorieEtablissement->sous_categorie_id)->get();
-
-            foreach ($etablissement->sousCategories as $sousCategories) {
-                $sousCategories->categorie;
-            }
-
-            $etablissement->commodites;
-            $etablissement->images = Image::where('etablissement_id', $etablissement->id)->get();
-            $etablissement->horaires = Horaire::where('etablissement_id', $etablissement->id)->get();
-            $etablissement->commentaires = Commentaire::where('etablissement_id', $etablissement->id)->get();
-
-            foreach ($etablissement->commentaires as $commentaires) {
-                $commentaires->user;
-            }
-        }
-
-
-        $success['etablissements'] = $etablissements;
-
-        return $this->sendResponse($success, 'Liste des Etablissements');
+    if ($commodites != null) {
+        $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
     }
+
+    if ($ville != null) {
+        $query->where('batiments.ville', '=', $ville);
+    }
+
+    $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
+
+    // Préchargez les relations nécessaires
+    $etablissements = $query->get();
+
+    // Collectez les ID des établissements pour une requête Eloquent unique
+    $etablissementIds = $etablissements->pluck('id');
+
+    // Utilisez Eloquent pour charger les relations et effectuer d'autres opérations
+    $etablissements = Etablissement::whereIn('id', $etablissementIds)->with([
+        'batiment',
+        'sousCategories.categorie',
+        'images',
+        'horaires',
+        'commentaires.user',
+    ])->get();
+
+    foreach ($etablissements as $etablissement) {
+        if ($request->user_id) {
+            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
+        } else {
+            $etablissement->isFavoris = false;
+        }
+
+        $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
+        $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+        $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+        $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+    }
+
+    $success['etablissements'] = $etablissements;
+
+    return $this->sendResponse($success, 'Liste des Etablissements');
+}
+
 
     /**
      * Add Favorite Establishment.
