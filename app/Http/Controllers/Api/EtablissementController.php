@@ -18,7 +18,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Builder;
 
 /**
  *
@@ -589,7 +589,7 @@ class EtablissementController extends BaseController
      * @queryParam lon string longitude. Example: 8.056
      * queryParam ville string ville. Example: Bameka
      */
-public function filterSearch(Request $request)
+ public function filterSearch(Request $request)
 {
     $idcategorie = $request->input('id_categorie');
     $commodites = $request->input('commodites');
@@ -602,12 +602,11 @@ public function filterSearch(Request $request)
         * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
         * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
         + sin(radians($lat))
-        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
     // Requête Eloquent avec le constructeur de requête
     $query = Etablissement::query();
-    $query->select('etablissements.*');
-    $query->selectRaw($sqlDistance . ' AS distance');
+    $query->select('etablissements.*', $sqlDistance);
     $query->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id');
     $query->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id');
     $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
@@ -624,24 +623,15 @@ public function filterSearch(Request $request)
 
     $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
+    // Ajout de la distance à la réponse
     foreach ($etablissements as $etablissement) {
-        if ($request->user_id) {
-            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
-        } else {
-            $etablissement->isFavoris = false;
-        }
-
-        $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
-        $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-        $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-        $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+        $etablissement->distance = $etablissement->distance;
     }
 
     $success['etablissements'] = $etablissements;
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
-
 
 
 
