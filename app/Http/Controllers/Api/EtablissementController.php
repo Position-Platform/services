@@ -588,7 +588,7 @@ class EtablissementController extends BaseController
      * @queryParam lon string longitude. Example: 8.056
      * queryParam ville string ville. Example: Bameka
      */
- public function filterSearch(Request $request)
+    public function filterSearch(Request $request)
 {
     $idcategorie = $request->input('id_categorie');
     $commodites = $request->input('commodites');
@@ -622,22 +622,13 @@ class EtablissementController extends BaseController
 
     $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
-    // Récupérez les résultats de la requête
-    $results = $query->get();
-
-    // Initialisez un tableau pour stocker les établissements avec la distance
-    $etablissements = [];
-
-    foreach ($results as $result) {
-        // Ajoutez la distance à chaque résultat
-        $result->distance = $result->distance;
-
-        // Ajoutez le résultat au tableau des établissements
-        $etablissements[] = $result;
-    }
-
     // Préchargez les relations nécessaires
-    $etablissementIds = collect($etablissements)->pluck('id')->toArray();
+    $etablissements = $query->get();
+
+    // Collectez les ID des établissements pour une requête Eloquent unique
+    $etablissementIds = $etablissements->pluck('id');
+
+    // Utilisez Eloquent pour charger les relations et effectuer d'autres opérations
     $etablissements = Etablissement::whereIn('id', $etablissementIds)->with([
         'batiment',
         'sousCategories.categorie',
@@ -652,7 +643,7 @@ class EtablissementController extends BaseController
         } else {
             $etablissement->isFavoris = false;
         }
-
+        $etablissement->distance;
         $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
         $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
         $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
@@ -663,7 +654,6 @@ class EtablissementController extends BaseController
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
-
 
 
     /**
