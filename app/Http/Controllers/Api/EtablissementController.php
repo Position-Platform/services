@@ -601,11 +601,11 @@ class EtablissementController extends BaseController
         * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
         * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
         + sin(radians($lat))
-        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
+        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
 
-    $query = DB::table('etablissements')
-        ->select('etablissements.*')
-        ->selectRaw($sqlDistance. ' AS distance')
+    // Requête Eloquent pour récupérer les établissements avec la distance
+    $etablissements = Etablissement::select('etablissements.*')
+        ->selectRaw($sqlDistance . ' AS distance')
         ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
         ->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id')
         ->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id')
@@ -613,29 +613,14 @@ class EtablissementController extends BaseController
         ->where('categories.id', '=', $idcategorie);
 
     if ($commodites != null) {
-        $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
+        $etablissements->where('etablissements.commodites', 'like', '%' . $commodites . '%');
     }
 
     if ($ville != null) {
-        $query->where('batiments.ville', '=', $ville);
+        $etablissements->where('batiments.ville', '=', $ville);
     }
 
-    $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
-
-    // Préchargez les relations nécessaires
-    $etablissements = $query->get();
-
-    // Collectez les ID des établissements pour une requête Eloquent unique
-    $etablissementIds = $etablissements->pluck('id');
-
-    // Utilisez Eloquent pour charger les relations et effectuer d'autres opérations
-    $etablissements = Etablissement::whereIn('id', $etablissementIds)->with([
-        'batiment',
-        'sousCategories.categorie',
-        'images',
-        'horaires',
-        'commentaires.user',
-    ])->get();
+    $etablissements->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
     foreach ($etablissements as $etablissement) {
         if ($request->user_id) {
@@ -654,6 +639,7 @@ class EtablissementController extends BaseController
 
     return $this->sendResponse($success, 'Liste des Etablissements');
 }
+
 
 
 
