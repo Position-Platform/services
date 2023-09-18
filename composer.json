@@ -5,13 +5,17 @@
     "keywords": [
         "framework",
         "laravel",
-        "position", "api","services","firebase"
+        "position",
+        "api",
+        "services",
+        "firebase"
     ],
     "license": "MIT",
     "require": {
         "php": "^8.0",
         "doctrine/dbal": "^3.6",
         "ejarnutowski/laravel-api-key": "^1.0",
+        "filament/filament": "3.0-stable",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.2",
         "kreait/laravel-firebase": "^5.2",
@@ -50,7 +54,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
