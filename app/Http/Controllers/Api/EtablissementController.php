@@ -639,9 +639,9 @@ class EtablissementController extends BaseController
         $etablissement->sousCategories = $etablissement->sousCategories->pluck('id');
         $etablissement->commentaires = $etablissement->commentaires->pluck('id');
         $etablissement->batiment = $etablissement->batiment;
-        $etablissement->sousCategories->each(function ($sousCategorie) {
-            $sousCategorie->categorie = $sousCategorie->categorie;
-        });
+        foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }
 
         if ($request->user_id) {
             $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
