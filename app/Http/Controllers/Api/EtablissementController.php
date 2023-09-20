@@ -623,14 +623,10 @@ class EtablissementController extends BaseController
 
     $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
-    // Ajout de la distance à la réponse
-    foreach ($etablissements as $etablissement) {
-        $etablissement->distance = $etablissement->distance;
-    }
 
     // Ajout des autres paramètres à la réponse
     foreach ($etablissements as $etablissement) {
-        $etablissement->commodites = $commodites;
+         $etablissement->distance = $etablissement->distance;
         
 
         $etablissement->batiment = $etablissement->batiment;
@@ -642,10 +638,32 @@ class EtablissementController extends BaseController
             $etablissement->isFavoris = false;
         }
 
+        
+
         $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
         $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
         $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
         $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+        $etab = Etablissement::find($etablissement->id);
+        
+        $etablissement['sousCategories'] = $etab->sousCategories;
+
+
+
+            foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->commodites = $etab->commodites;
+            $etablissement->images = $etab->images;
+            $etablissement->horaires = $etab->horaires;
+            $etablissement->commentaires = $etab->commentaires;
+
+            foreach ($etablissement->commentaires as $commentaires) {
+                $commentaires->user;
+            }
+
     }
 
     $success['etablissements'] = $etablissements;
