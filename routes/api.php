@@ -56,6 +56,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('search/etablissements/filter', [App\Http\Controllers\Api\EtablissementController::class, 'filterSearch']);
 
         Route::put('etablissements/vues/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateVues']);
+        Route::post('etablissements/cover/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateCover']);
         Route::get('count/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'countEtablissement']);
 
         Route::middleware('auth:api')->group(function () {
