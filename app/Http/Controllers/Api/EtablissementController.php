@@ -587,7 +587,7 @@ class EtablissementController extends BaseController
      * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
      * @queryParam lat string latitude. Example: 4.056
      * @queryParam lon string longitude. Example: 8.056
-     * queryParam ville string ville. Example: Bameka
+     * @queryParam ville string ville. Example: Bameka
      */
  public function filterSearch(Request $request)
 {
@@ -741,5 +741,44 @@ class EtablissementController extends BaseController
         $success['etablissement'] = $etablissement;
 
         return $this->sendResponse($success, 'Vues du Etablissement incrémentées');
+    }
+
+    /**
+     * Update Etablishment Cover
+     *
+     * @authenticated
+     * @header Content-Type application/json
+     * @urlParam id int required the id of the Picture. Example: 1
+     * @bodyParam cover file picture.
+     * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
+     */
+    public function updateCover(Request $request, $etablissement_id)
+    {
+        Auth::user();
+        $etablissement = Etablissement::find($etablissement_id);
+
+        $request->validate([
+            'cover' => 'mimes:png,jpg,jpeg|max:20000',
+        ]);
+        try {
+
+
+            $batiment = $etablissement->batiment;
+
+            if ($request->file()) {
+                $fileName = time() . '_' . $request->cover->getClientOriginalName();
+                $filePath = $request->file('cover')->storeAs('uploads/batiments/images/' . $batiment->code . '/' . $etablissement->nom, $fileName, 'public');
+                $etablissement->cover = '/storage/' . $filePath;
+            }
+
+            $etablissement->save();
+
+            $success['etablissement'] = $etablissement;
+
+
+            return $this->sendResponse($success, "Update success", 201);
+        } catch (\Throwable $th) {
+            return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
+        }
     }
 }
