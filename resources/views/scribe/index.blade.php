@@ -250,6 +250,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="establishment-management-PUTapi-etablissements-vues--id-">
                                 <a href="#establishment-management-PUTapi-etablissements-vues--id-">Update vues Establishment.</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="establishment-management-POSTapi-etablissements-cover--id-">
+                                <a href="#establishment-management-POSTapi-etablissements-cover--id-">Update Etablishment Cover</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="establishment-management-GETapi-count-etablissements">
                                 <a href="#establishment-management-GETapi-count-etablissements">count all establishment.</a>
                             </li>
@@ -349,7 +352,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 26, 2023</li>
+        <li>Last updated: September 22, 2023</li>
     </ul>
 </div>
 
@@ -864,7 +867,7 @@ vary: Origin
             &quot;nom&quot;: &quot;Smart&quot;,
             &quot;prix&quot;: 5000,
             &quot;duree&quot;: 1,
-            &quot;id&quot;: 4
+            &quot;id&quot;: 5
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;abonnement reussie&quot;
@@ -1567,7 +1570,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-auth-password-forgot">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1581,558 +1584,9 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Failed to create dynamic link: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://oauth2.googleapis.com/token&quot;,
-    &quot;exception&quot;: &quot;Kreait\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLinks.php&quot;,
-    &quot;line&quot;: 82,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Notifications\\SendResetLinkParams.php&quot;,
-            &quot;line&quot;: 57,
-            &quot;function&quot;: &quot;createDynamicLink&quot;,
-            &quot;class&quot;: &quot;Kreait\\Firebase\\DynamicLinks&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\Channels\\MailChannel.php&quot;,
-            &quot;line&quot;: 53,
-            &quot;function&quot;: &quot;toMail&quot;,
-            &quot;class&quot;: &quot;App\\Notifications\\SendResetLinkParams&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 148,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\Channels\\MailChannel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 106,
-            &quot;function&quot;: &quot;sendToNotifiable&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Notifications\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 101,
-            &quot;function&quot;: &quot;withLocale&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 79,
-            &quot;function&quot;: &quot;sendNow&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\ChannelManager.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\RoutesNotifications.php&quot;,
-            &quot;line&quot;: 18,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\ChannelManager&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Models\\User.php&quot;,
-            &quot;line&quot;: 137,
-            &quot;function&quot;: &quot;notify&quot;,
-            &quot;class&quot;: &quot;App\\Models\\User&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBroker.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;sendPasswordResetNotification&quot;,
-            &quot;class&quot;: &quot;App\\Models\\User&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBrokerManager.php&quot;,
-            &quot;line&quot;: 143,
-            &quot;function&quot;: &quot;sendResetLink&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBroker&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php&quot;,
-            &quot;line&quot;: 338,
-            &quot;function&quot;: &quot;__call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBrokerManager&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\UserController.php&quot;,
-            &quot;line&quot;: 228,
-            &quot;function&quot;: &quot;__callStatic&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Support\\Facades\\Facade&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;forgot&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\UserController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 259,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
-            &quot;line&quot;: 28,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Un lien de reinitialisation vous a &eacute;t&eacute; envoy&eacute; par mail.&quot;
 }</code>
  </pre>
     </span>
@@ -2249,7 +1703,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
     \"email\": \"admin@position.cm\",
-    \"token\": \"aut\",
+    \"token\": \"qui\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -2269,7 +1723,7 @@ const headers = {
 
 let body = {
     "email": "admin@position.cm",
-    "token": "aut",
+    "token": "qui",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -2293,7 +1747,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'admin@position.cm',
-            'token' =&gt; 'aut',
+            'token' =&gt; 'qui',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -2310,7 +1764,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "admin@position.cm",
-    "token": "aut",
+    "token": "qui",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -2447,10 +1901,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-auth-password-reset"
-               value="aut"
+               value="qui"
                data-component="body">
     <br>
-<p>token give in mail. Example: <code>aut</code></p>
+<p>token give in mail. Example: <code>qui</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -2497,7 +1951,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php2805.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2554,7 +2008,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2805.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp', 'r')
             ],
         ],
     ]
@@ -2569,7 +2023,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php2805.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2759,7 +2213,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2805.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp</code></p>
         </div>
         </form>
 
@@ -2872,7 +2326,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTE1YTZkNmU5MmJjZDJlZmQ4OWUxNzYyZThhN2FjNTE5ZjdmN2VmODE3NWRhNmY1MTA2NDI4NGQ1ZGI4ZThmOTE5NjlmMzBmZmQzZGI5N2EiLCJpYXQiOjE2OTMwMzYyMTUuNjM5MzE0LCJuYmYiOjE2OTMwMzYyMTUuNjM5MzE2LCJleHAiOjE2OTU2MjgyMTUuNjM4MDY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.GmHN5whK_IiXccTHnEd74TH8Nk_CP0hMO2Oow9k4v4xlaA5yOQp0W1lN3_BkmCJW1LWJN0352N5PtCXE0HRu6bANKhD0YIk9WcOx2a4tsRcjmqh2OvtA-eKRuM9YjMnS2HZcb3x3rw6EBNws8z74ZjU41FbT6Z8Z5b0hrSKron23lTa1E67JgxeP7kteuzaZjaU-cUnABBsrhl9LUEr3lDUpN43ht8-dmLpLJfKjkILt5Gqt1RzzMa4JZEZwCsBFAk3Qyubnw-VdowykSt_DaWn2mKlQjcfAx6oLr7X_h86jvzj4-9yGhJpntE6dh1G066py9aTWWCwm2U7qrQMLA0ya85qpLRRUY-QECTcmTgiJwpLnRDzCaJYhqPEA-MX1gxXcSaz1zPr0P2h6f6yQuwkCdgvZ9vqBfC9f7s9amlIHEK4vQPa5sUSzxT2p6DD1RVEdvdmKu-uqekju2jnEurDVT-x3xNklPi9AUEGQN8MP5ZVeNRphtQRXwlYoaZb3GPTg-OewNmwmxZRA21z0rn0ZBdAXmRFA_VLmTGVhZex_wEVrc7ai38Vaf6nsv5B6KmuDc6AcFvvI19SH6DKI8mpwjhyBRo_-FBfKGb8pWTJlb2Qtj2GWHd7ONtDPitBdzBH7lamG7V7ZBcAHYyTZGyNRQnVAWNCAGh6myVGzllE&quot;,
+        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiN2M5ZjQ1OWNjNTI0Njg3NDdhOTNkZDQyYTk5YjU4NWRkMDRiNWM3YjQ2ZjYyMWQ5OTMxNGY4MzQyZjM1M2EyNjkyNDQ1ZDVlNzA2OGYwYzkiLCJpYXQiOjE2OTUzODA2NzAuODc5OTYxLCJuYmYiOjE2OTUzODA2NzAuODc5OTY0LCJleHAiOjE2OTc5NzI2NzAuODc5MDY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ka6wDmh9zVzsT0NHNhshdhwNSRPWiskyBSj1CMUQvbGsbrtTrh8gpdZbIJKZVDjx7VJbF__6pHDEaEMb7pLV9wAHV0BvT4mP4RcJbjIsQn4w3pfFINkaZdH2BE6EF7Mhh7JDAj1_nttNdXdZKK9rSWtGM59kxGJIjkw5Ea7EkRnWYXmvkUuiwmhwHhe5rSMWp6wGyZetV2kTF79pi98OnBrlft7plA9tbsdZa4JMHx_BsNJmOAWMVecMJ5lJNwOHAkgnQg1-DMhFspjj-g0DpIpxVAGc9CRjgS1lg6SSUxptQFwH22Cd_7VCvS2wQHiB0KD0dntvWxT7bHp7dMgYe7ONZhYPOuL3_bU5bZnqhNtH3FHLx2LZ3rnNRQwLBTbGMED3ysKI4nNdac-F8E9SGIoauV2UG51LWT6MtsIpc5S5PmXmHrmTpSmyEGNpEWQQ_im08aMkX7yTGvVcFReTOmcjXRf5BqxtJ3hqd2--Y0IN9kkw5tZThiTNTyrMrBhAqj_P3SozF5kPHkF2QN3m2AQfrUR3tvvgBt-OJ3HYqWiMmzB2uU_R7d-DPTpMVEhx6gB-ZxCGv4Kv-VYKF-ebnrAbh5olGkb9LMWZcS000RJqS9wIocQ-9NcsEcty6EkVNYlpH9NFyfLOHj1MjeI3DL6xfrkqOWXYdSLgeN2xOUI&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;Admin&quot;,
@@ -3656,7 +3110,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php2F3C.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3710,7 +3164,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F3C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp', 'r')
             ],
         ],
     ]
@@ -3725,7 +3179,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F3C.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3881,7 +3335,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F3C.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -4750,7 +4204,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999998" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php32A7.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4809,7 +4263,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php32A7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp', 'r')
             ],
         ],
     ]
@@ -4824,7 +4278,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php32A7.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4863,15 +4317,15 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;admin&quot;: {
-            &quot;id&quot;: 2,
+            &quot;id&quot;: 3,
             &quot;user&quot;: {
-                &quot;id&quot;: 4,
+                &quot;id&quot;: 5,
                 &quot;name&quot;: &quot;Gautier&quot;,
                 &quot;email&quot;: &quot;gautier@position.cm&quot;,
                 &quot;email_verified_at&quot;: null,
                 &quot;phone&quot;: &quot;699999998&quot;,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1693036218_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1695380673_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -4881,7 +4335,7 @@ vary: Origin
                         &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;pivot&quot;: {
-                            &quot;model_id&quot;: 4,
+                            &quot;model_id&quot;: 5,
                             &quot;role_id&quot;: 1,
                             &quot;model_type&quot;: &quot;App\\Models\\User&quot;
                         }
@@ -5039,7 +4493,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php32A7.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp</code></p>
         </div>
         </form>
 
@@ -5295,7 +4749,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "phone=699999998" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php4AF3.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5354,7 +4808,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4AF3.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp', 'r')
             ],
         ],
     ]
@@ -5369,7 +4823,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php4AF3.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5541,7 +4995,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4AF3.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -5847,7 +5301,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-batiments">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5861,551 +5315,1928 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[22P02]: Invalid text representation: 7 ERREUR:  syntaxe en entr&eacute;e invalide pour le type bigint : &laquo; {\&quot;id\&quot;:1,\&quot;nom\&quot;:\&quot;Boutique de Nkol Poblo\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;1013434286\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;} &raquo;\nCONTEXT:  param&egrave;tre de portail non nomm&eacute; $2 = &#039;...&#039; (SQL: select * from \&quot;user_favoris\&quot; where \&quot;user_id\&quot; = 1 and \&quot;etablissement_id\&quot; = {\&quot;id\&quot;:1,\&quot;nom\&quot;:\&quot;Boutique de Nkol Poblo\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;1013434286\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;} and \&quot;user_favoris\&quot;.\&quot;deleted_at\&quot; is null limit 1)&quot;,
-    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-    &quot;line&quot;: 760,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 720,
-            &quot;function&quot;: &quot;runQueryCallback&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 405,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2705,
-            &quot;function&quot;: &quot;select&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2694,
-            &quot;function&quot;: &quot;runSelect&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 3230,
-            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2693,
-            &quot;function&quot;: &quot;onceWithColumns&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 710,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 694,
-            &quot;function&quot;: &quot;getModels&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php&quot;,
-            &quot;line&quot;: 296,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BaseController.php&quot;,
-            &quot;line&quot;: 132,
-            &quot;function&quot;: &quot;first&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BatimentController.php&quot;,
-            &quot;line&quot;: 38,
-            &quot;function&quot;: &quot;checkIfEtablissementInFavoris&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\BaseController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;index&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\BatimentController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 259,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
-            &quot;line&quot;: 28,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
-            &quot;line&quot;: 44,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;batiments&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
+                &quot;longitude&quot;: &quot;11.2292075&quot;,
+                &quot;latitude&quot;: &quot;4.0782882&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
+                &quot;ville&quot;: &quot;Okala&quot;,
+                &quot;commune&quot;: &quot;undefined&quot;,
+                &quot;quartier&quot;: &quot;undefined&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;undefined&quot;,
+                        &quot;site_internet&quot;: &quot;undefined&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;1013434286&quot;,
+                        &quot;services&quot;: &quot;Aucun service&quot;,
+                        &quot;commodites&quot;: &quot;Wifi;Parking;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 1,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-09-22T10:15:25.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 1,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 1,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 2,
+                &quot;nom&quot;: &quot;Rosine&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1987382969&quot;,
+                &quot;longitude&quot;: &quot;11.5002933&quot;,
+                &quot;latitude&quot;: &quot;3.8502254&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Rue 3.452&quot;,
+                &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+                &quot;commune&quot;: &quot;Yaound&eacute; III&quot;,
+                &quot;quartier&quot;: &quot;Ngoa-&Eacute;k&eacute;l&eacute;&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 2,
+                        &quot;nom&quot;: &quot;Rosine&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;undefined&quot;,
+                        &quot;site_internet&quot;: &quot;undefined&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1987382969/Rosine/1695379003_Capture d&rsquo;&eacute;cran (6).png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;1987382969&quot;,
+                        &quot;services&quot;: &quot;Aucun service&quot;,
+                        &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:55:37.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-09-22T10:36:44.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 2,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 2,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 3,
+                &quot;nom&quot;: &quot;Chez ba&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
+                &quot;longitude&quot;: &quot;11.4934896&quot;,
+                &quot;latitude&quot;: &quot;3.8613938&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Route de Kribi&quot;,
+                &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+                &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
+                &quot;quartier&quot;: &quot;Melen&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 3,
+                        &quot;nom&quot;: &quot;Chez ba&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;undefined&quot;,
+                        &quot;site_internet&quot;: &quot;undefined&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;6771633360&quot;,
+                        &quot;services&quot;: &quot;Aucun service&quot;,
+                        &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 3,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 3,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 4,
+                &quot;nom&quot;: &quot;Betterman&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_6771655256&quot;,
+                &quot;longitude&quot;: &quot;11.4948139&quot;,
+                &quot;latitude&quot;: &quot;3.8636766&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Rue de Melen&quot;,
+                &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+                &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
+                &quot;quartier&quot;: &quot;Melen&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 4,
+                        &quot;nom&quot;: &quot;Betterman&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;undefined&quot;,
+                        &quot;site_internet&quot;: &quot;undefined&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;6771655256&quot;,
+                        &quot;services&quot;: &quot;Aucun service&quot;,
+                        &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:55:40.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:55:40.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 4,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 4,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 5,
+                &quot;nom&quot;: &quot;Lido melen&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_6771660914&quot;,
+                &quot;longitude&quot;: &quot;11.4934024&quot;,
+                &quot;latitude&quot;: &quot;3.8602565&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Route de Kribi&quot;,
+                &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+                &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
+                &quot;quartier&quot;: &quot;Melen&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 5,
+                        &quot;nom&quot;: &quot;Lido melen&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;undefined&quot;,
+                        &quot;site_internet&quot;: &quot;undefined&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;6771660914&quot;,
+                        &quot;services&quot;: &quot;Aucun service&quot;,
+                        &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:55:42.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:55:42.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 5,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 5,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 9,
+                &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_138865.25842101127&quot;,
+                &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 9,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;138865.25842101127&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 9,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 9,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 10,
+                &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_131848.02511418913&quot;,
+                &quot;longitude&quot;: &quot;10.36767906600005&quot;,
+                &quot;latitude&quot;: &quot;5.438824957000065&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 10,
+                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;131848.02511418913&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 10,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Boutiques&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 10,
+                                    &quot;sous_categorie_id&quot;: 1
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 11,
+                &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_940303.0811733146&quot;,
+                &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 11,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;940303.0811733146&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Brocante&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 11,
+                                    &quot;sous_categorie_id&quot;: 2
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Brocante&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 11,
+                                    &quot;sous_categorie_id&quot;: 2
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 1,
+                                    &quot;nom&quot;: &quot;Achats&quot;,
+                                    &quot;shortname&quot;: &quot;Achats&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                    &quot;color&quot;: &quot;#2196F3&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 12,
+                &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_325622.99116268713&quot;,
+                &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 12,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;325622.99116268713&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 32,
+                                &quot;nom&quot;: &quot;Institution publique&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 12,
+                                    &quot;sous_categorie_id&quot;: 32
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                    &quot;color&quot;: &quot;#90A8B5&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 32,
+                                &quot;nom&quot;: &quot;Institution publique&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 12,
+                                    &quot;sous_categorie_id&quot;: 32
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                    &quot;color&quot;: &quot;#90A8B5&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 13,
+                &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_379992.5134296431&quot;,
+                &quot;longitude&quot;: &quot;10.36767906600005&quot;,
+                &quot;latitude&quot;: &quot;5.438824957000065&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 13,
+                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;379992.5134296431&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [
+                            {
+                                &quot;id&quot;: 32,
+                                &quot;nom&quot;: &quot;Institution publique&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 13,
+                                    &quot;sous_categorie_id&quot;: 32
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                    &quot;color&quot;: &quot;#90A8B5&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [
+                            {
+                                &quot;id&quot;: 32,
+                                &quot;nom&quot;: &quot;Institution publique&quot;,
+                                &quot;logourl&quot;: null,
+                                &quot;logourlmap&quot;: null,
+                                &quot;color&quot;: null,
+                                &quot;pivot&quot;: {
+                                    &quot;etablissement_id&quot;: 13,
+                                    &quot;sous_categorie_id&quot;: 32
+                                },
+                                &quot;categorie&quot;: {
+                                    &quot;id&quot;: 2,
+                                    &quot;nom&quot;: &quot;Administrations&quot;,
+                                    &quot;shortname&quot;: &quot;Administration&quot;,
+                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                    &quot;color&quot;: &quot;#90A8B5&quot;,
+                                    &quot;vues&quot;: 0
+                                }
+                            }
+                        ],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 14,
+                &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_380483.0701491861&quot;,
+                &quot;longitude&quot;: &quot;10.34509477587178&quot;,
+                &quot;latitude&quot;: &quot;5.419058299769723&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 14,
+                        &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;380483.0701491861&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 15,
+                &quot;nom&quot;: &quot;EP de Douseh&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_705594.8621159282&quot;,
+                &quot;longitude&quot;: &quot;10.33888121800004&quot;,
+                &quot;latitude&quot;: &quot;5.430227076000051&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 15,
+                        &quot;nom&quot;: &quot;EP de Douseh&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;705594.8621159282&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 16,
+                &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_177026.38757959433&quot;,
+                &quot;longitude&quot;: &quot;10.346784884730033&quot;,
+                &quot;latitude&quot;: &quot;5.416634556325035&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;177026.38757959433&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 17,
+                &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_982835.934692351&quot;,
+                &quot;longitude&quot;: &quot;10.357981197000072&quot;,
+                &quot;latitude&quot;: &quot;5.40838702700006&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 17,
+                        &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;982835.934692351&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 18,
+                &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_175369.1407760527&quot;,
+                &quot;longitude&quot;: &quot;10.346529443000065&quot;,
+                &quot;latitude&quot;: &quot;5.448208539000063&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 18,
+                        &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;175369.1407760527&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 19,
+                &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_366703.81325525313&quot;,
+                &quot;longitude&quot;: &quot;10.344377130000055&quot;,
+                &quot;latitude&quot;: &quot;5.427117209000073&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;D63&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 19,
+                        &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;366703.81325525313&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 20,
+                &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_78960.94266152942&quot;,
+                &quot;longitude&quot;: &quot;10.337177208000071&quot;,
+                &quot;latitude&quot;: &quot;5.428177006000055&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 20,
+                        &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;78960.94266152942&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 21,
+                &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_916230.0393666985&quot;,
+                &quot;longitude&quot;: &quot;10.360454536942518&quot;,
+                &quot;latitude&quot;: &quot;5.431836105423236&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;D63&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 21,
+                        &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;916230.0393666985&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 22,
+                &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_493742.76439874555&quot;,
+                &quot;longitude&quot;: &quot;10.336290552000037&quot;,
+                &quot;latitude&quot;: &quot;5.412744201000066&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;D63&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 22,
+                        &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;493742.76439874555&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 23,
+                &quot;nom&quot;: &quot;EEC de Gouang&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_205870.10697691288&quot;,
+                &quot;longitude&quot;: &quot;10.343244507000065&quot;,
+                &quot;latitude&quot;: &quot;5.448916497000027&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 23,
+                        &quot;nom&quot;: &quot;EEC de Gouang&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;205870.10697691288&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 24,
+                &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_32669.098369635387&quot;,
+                &quot;longitude&quot;: &quot;10.345864779871784&quot;,
+                &quot;latitude&quot;: &quot;5.421234005475265&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 24,
+                        &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;32669.098369635387&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 25,
+                &quot;nom&quot;: &quot;Hopital de Nket&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_572671.3754491961&quot;,
+                &quot;longitude&quot;: &quot;10.348428345154582&quot;,
+                &quot;latitude&quot;: &quot;5.447834027064164&quot;,
+                &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Non Defini&quot;,
+                &quot;ville&quot;: &quot;Bameka&quot;,
+                &quot;commune&quot;: &quot;Non Defini&quot;,
+                &quot;quartier&quot;: &quot;Non Defini&quot;,
+                &quot;etablissements&quot;: [
+                    {
+                        &quot;id&quot;: 25,
+                        &quot;nom&quot;: &quot;Hopital de Nket&quot;,
+                        &quot;indication_adresse&quot;: null,
+                        &quot;code_postal&quot;: &quot;null&quot;,
+                        &quot;site_internet&quot;: &quot;null&quot;,
+                        &quot;nom_manager&quot;: null,
+                        &quot;contact_manager&quot;: null,
+                        &quot;etage&quot;: 0,
+                        &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;phone&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                        &quot;whatsapp2&quot;: null,
+                        &quot;description&quot;: &quot;Aucune Description&quot;,
+                        &quot;osm_id&quot;: &quot;572671.3754491961&quot;,
+                        &quot;services&quot;: &quot;Non Defini&quot;,
+                        &quot;commodites&quot;: &quot;&quot;,
+                        &quot;ameliorations&quot;: null,
+                        &quot;vues&quot;: 0,
+                        &quot;logo&quot;: null,
+                        &quot;logo_map&quot;: null,
+                        &quot;deleted_at&quot;: null,
+                        &quot;created_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
+                        &quot;isFavoris&quot;: false,
+                        &quot;isopen&quot;: false,
+                        &quot;moyenne&quot;: 0,
+                        &quot;avis&quot;: 0,
+                        &quot;count&quot;: [],
+                        &quot;sousCategories&quot;: [],
+                        &quot;user&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;name&quot;: &quot;Admin&quot;,
+                            &quot;email&quot;: &quot;admin@position.cm&quot;,
+                            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                            &quot;phone&quot;: &quot;699999999&quot;,
+                            &quot;fcm_token&quot;: null,
+                            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                            &quot;abonnement_id&quot;: 1,
+                            &quot;abonnement&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;free&quot;,
+                                &quot;prix&quot;: 0,
+                                &quot;type&quot;: &quot;year&quot;,
+                                &quot;duree&quot;: 1
+                            }
+                        },
+                        &quot;sous_categories&quot;: [],
+                        &quot;horaires&quot;: [],
+                        &quot;images&quot;: [],
+                        &quot;commentaires&quot;: []
+                    }
+                ]
+            }
+        ]
+    },
+    &quot;message&quot;: &quot;Liste des Batiments&quot;
 }</code>
  </pre>
     </span>
@@ -6535,15 +7366,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nombre_niveau=3" \
     --form "code=BATIMENT_MELEN_0569" \
-    --form "longitude=veritatis" \
-    --form "latitude=et" \
+    --form "longitude=voluptatem" \
+    --form "latitude=quaerat" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php2FD9.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6561,8 +7392,8 @@ const headers = {
 const body = new FormData();
 body.append('nombre_niveau', '3');
 body.append('code', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'veritatis');
-body.append('latitude', 'et');
+body.append('longitude', 'voluptatem');
+body.append('latitude', 'quaerat');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -6600,11 +7431,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'veritatis'
+                'contents' =&gt; 'voluptatem'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'et'
+                'contents' =&gt; 'quaerat'
             ],
             [
                 'name' =&gt; 'ville',
@@ -6632,7 +7463,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FD9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp', 'r')
             ],
         ],
     ]
@@ -6647,13 +7478,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FD9.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp', 'rb')
 }
 payload = {
     "nombre_niveau": 3,
     "code": "BATIMENT_MELEN_0569",
-    "longitude": "veritatis",
-    "latitude": "et",
+    "longitude": "voluptatem",
+    "latitude": "quaerat",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -6695,15 +7526,15 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_MELEN_0569&quot;,
-            &quot;longitude&quot;: &quot;veritatis&quot;,
-            &quot;latitude&quot;: &quot;et&quot;,
+            &quot;longitude&quot;: &quot;voluptatem&quot;,
+            &quot;latitude&quot;: &quot;quaerat&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;commune&quot;: &quot;Yaounde IV&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1693036217_test.jpg&quot;,
-            &quot;id&quot;: 8
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1695380672_test.jpg&quot;,
+            &quot;id&quot;: 26
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
@@ -6830,10 +7661,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="POSTapi-batiments"
-               value="veritatis"
+               value="voluptatem"
                data-component="body">
     <br>
-<p>required. Example: <code>veritatis</code></p>
+<p>required. Example: <code>voluptatem</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -6841,10 +7672,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="POSTapi-batiments"
-               value="et"
+               value="quaerat"
                data-component="body">
     <br>
-<p>required. Example: <code>et</code></p>
+<p>required. Example: <code>quaerat</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
@@ -6899,7 +7730,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FD9.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -7012,7 +7843,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-batiments--id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -7026,551 +7857,120 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[22P02]: Invalid text representation: 7 ERREUR:  syntaxe en entr&eacute;e invalide pour le type bigint : &laquo; {\&quot;id\&quot;:3,\&quot;nom\&quot;:\&quot;Chez ba\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;6771633360\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:39.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:39.000000Z\&quot;} &raquo;\nCONTEXT:  param&egrave;tre de portail non nomm&eacute; $2 = &#039;...&#039; (SQL: select * from \&quot;user_favoris\&quot; where \&quot;user_id\&quot; = 1 and \&quot;etablissement_id\&quot; = {\&quot;id\&quot;:3,\&quot;nom\&quot;:\&quot;Chez ba\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;6771633360\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:39.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:39.000000Z\&quot;} and \&quot;user_favoris\&quot;.\&quot;deleted_at\&quot; is null limit 1)&quot;,
-    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-    &quot;line&quot;: 760,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 720,
-            &quot;function&quot;: &quot;runQueryCallback&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 405,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2705,
-            &quot;function&quot;: &quot;select&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2694,
-            &quot;function&quot;: &quot;runSelect&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 3230,
-            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2693,
-            &quot;function&quot;: &quot;onceWithColumns&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 710,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 694,
-            &quot;function&quot;: &quot;getModels&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php&quot;,
-            &quot;line&quot;: 296,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BaseController.php&quot;,
-            &quot;line&quot;: 132,
-            &quot;function&quot;: &quot;first&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BatimentController.php&quot;,
-            &quot;line&quot;: 162,
-            &quot;function&quot;: &quot;checkIfEtablissementInFavoris&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\BaseController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;show&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\BatimentController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 259,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
-            &quot;line&quot;: 28,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
-            &quot;line&quot;: 44,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;batiment&quot;: {
+            &quot;id&quot;: 3,
+            &quot;nom&quot;: &quot;Chez ba&quot;,
+            &quot;nombre_niveau&quot;: 0,
+            &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
+            &quot;longitude&quot;: &quot;11.4934896&quot;,
+            &quot;latitude&quot;: &quot;3.8613938&quot;,
+            &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+            &quot;indication&quot;: null,
+            &quot;rue&quot;: &quot;Route de Kribi&quot;,
+            &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+            &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;,
+            &quot;etablissements&quot;: [
+                {
+                    &quot;id&quot;: 3,
+                    &quot;nom&quot;: &quot;Chez ba&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;undefined&quot;,
+                    &quot;site_internet&quot;: &quot;undefined&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;6771633360&quot;,
+                    &quot;services&quot;: &quot;Aucun service&quot;,
+                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 3,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;user&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;name&quot;: &quot;Admin&quot;,
+                        &quot;email&quot;: &quot;admin@position.cm&quot;,
+                        &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                        &quot;phone&quot;: &quot;699999999&quot;,
+                        &quot;fcm_token&quot;: null,
+                        &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                        &quot;abonnement_id&quot;: 1,
+                        &quot;abonnement&quot;: {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;free&quot;,
+                            &quot;prix&quot;: 0,
+                            &quot;type&quot;: &quot;year&quot;,
+                            &quot;duree&quot;: 1
+                        }
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 3,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;horaires&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;commentaires&quot;: []
+                }
+            ]
         }
-    ]
+    },
+    &quot;message&quot;: &quot;Batiment&quot;
 }</code>
  </pre>
     </span>
@@ -7712,15 +8112,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Sogefi" \
     --form "nombre_niveau=3" \
-    --form "longitude=qui" \
-    --form "latitude=ut" \
+    --form "longitude=sunt" \
+    --form "latitude=commodi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php3029.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7738,8 +8138,8 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('nombre_niveau', '3');
-body.append('longitude', 'qui');
-body.append('latitude', 'ut');
+body.append('longitude', 'sunt');
+body.append('latitude', 'commodi');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -7777,11 +8177,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'qui'
+                'contents' =&gt; 'sunt'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'ut'
+                'contents' =&gt; 'commodi'
             ],
             [
                 'name' =&gt; 'indication',
@@ -7809,7 +8209,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php3029.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp', 'r')
             ],
         ],
     ]
@@ -7824,13 +8224,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments/3'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php3029.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "nombre_niveau": 3,
-    "longitude": "qui",
-    "latitude": "ut",
+    "longitude": "sunt",
+    "latitude": "commodi",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -7988,10 +8388,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="PUTapi-batiments--id-"
-               value="qui"
+               value="sunt"
                data-component="body">
     <br>
-<p>Example: <code>qui</code></p>
+<p>Example: <code>sunt</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -7999,10 +8399,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="PUTapi-batiments--id-"
-               value="ut"
+               value="commodi"
                data-component="body">
     <br>
-<p>Example: <code>ut</code></p>
+<p>Example: <code>commodi</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -8013,7 +8413,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php3029.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8305,7 +8705,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
-    \"batiment\": \"enim\"
+    \"batiment\": \"consequatur\"
 }"
 </code></pre></div>
 
@@ -8323,7 +8723,7 @@ const headers = {
 };
 
 let body = {
-    "batiment": "enim"
+    "batiment": "consequatur"
 };
 
 fetch(url, {
@@ -8345,7 +8745,7 @@ $response = $client-&gt;post(
             'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
         ],
         'json' =&gt; [
-            'batiment' =&gt; 'enim',
+            'batiment' =&gt; 'consequatur',
         ],
     ]
 );
@@ -8359,7 +8759,7 @@ import json
 
 url = 'http://localhost:8000/api/add/batiments'
 payload = {
-    "batiment": "enim"
+    "batiment": "consequatur"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -8424,7 +8824,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 799,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8466,21 +8866,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
+            &quot;line&quot;: 159,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;handleRequest&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
+            &quot;line&quot;: 87,
             &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8494,7 +8894,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
-            &quot;line&quot;: 44,
+            &quot;line&quot;: 57,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8515,35 +8915,35 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
+            &quot;line&quot;: 798,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
+            &quot;line&quot;: 777,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
+            &quot;line&quot;: 741,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
+            &quot;line&quot;: 730,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
+            &quot;line&quot;: 200,
             &quot;function&quot;: &quot;dispatch&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8553,6 +8953,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -8613,7 +9027,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
+            &quot;line&quot;: 89,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8626,8 +9040,8 @@ vary: Origin
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8636,7 +9050,7 @@ vary: Origin
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -8662,14 +9076,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8788,14 +9202,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
+            &quot;line&quot;: 662,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
+            &quot;line&quot;: 211,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8809,14 +9223,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
+            &quot;line&quot;: 180,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
+            &quot;line&quot;: 1081,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8836,17 +9250,10 @@ vary: Origin
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -8958,10 +9365,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="batiment"                data-endpoint="POSTapi-add-batiments"
-               value="enim"
+               value="consequatur"
                data-component="body">
     <br>
-<p>example in  storage/responses/batiment.json Example: <code>enim</code></p>
+<p>JSONObject. Example: <code>consequatur</code></p>
         </div>
         </form>
 
@@ -16944,10 +17351,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "vues=true" \
-    --form "color=inventore" \
+    --form "color=recusandae" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php29DB.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php29DC.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -16965,7 +17372,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('vues', 'true');
-body.append('color', 'inventore');
+body.append('color', 'recusandae');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
@@ -16999,7 +17406,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'inventore'
+                'contents' =&gt; 'recusandae'
             ],
             [
                 'name' =&gt; '_method',
@@ -17007,11 +17414,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php29DB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php29DC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp', 'r')
             ],
         ],
     ]
@@ -17026,13 +17433,13 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php29DB.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php29DC.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "vues": "true",
-    "color": "inventore",
+    "color": "recusandae",
     "_method": "PUT"
 }
 headers = {
@@ -17162,7 +17569,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php29DB.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -17173,7 +17580,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php29DC.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -17203,10 +17610,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-categories--id-"
-               value="inventore"
+               value="recusandae"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>inventore</code></p>
+<p>the color of the category Example: <code>recusandae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -17241,10 +17648,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "shortname=distinctio" \
-    --form "color=odio" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php4B62.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php4B63.tmp" </code></pre></div>
+    --form "shortname=aut" \
+    --form "color=porro" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -17261,8 +17668,8 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'distinctio');
-body.append('color', 'odio');
+body.append('shortname', 'aut');
+body.append('color', 'porro');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -17291,19 +17698,19 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'distinctio'
+                'contents' =&gt; 'aut'
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'odio'
+                'contents' =&gt; 'porro'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4B62.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4B63.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp', 'r')
             ],
         ],
     ]
@@ -17318,13 +17725,13 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php4B62.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php4B63.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "distinctio",
-    "color": "odio"
+    "shortname": "aut",
+    "color": "porro"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -17359,10 +17766,10 @@ vary: Origin
         &quot;categorie&quot;: {
             &quot;id&quot;: 28,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;shortname&quot;: &quot;distinctio&quot;,
-            &quot;color&quot;: &quot;odio&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1693036224_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1693036224_test.jpg&quot;
+            &quot;shortname&quot;: &quot;aut&quot;,
+            &quot;color&quot;: &quot;porro&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1695380675_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1695380675_test.jpg&quot;
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de la cat&eacute;gorie reussie&quot;
@@ -17478,10 +17885,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="shortname"                data-endpoint="POSTapi-categories"
-               value="distinctio"
+               value="aut"
                data-component="body">
     <br>
-<p>Example: <code>distinctio</code></p>
+<p>Example: <code>aut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourl</code></b>&nbsp;&nbsp;
@@ -17492,7 +17899,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4B62.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -17503,7 +17910,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4B63.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -17511,10 +17918,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-categories"
-               value="odio"
+               value="porro"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>odio</code></p>
+<p>the color of the category Example: <code>porro</code></p>
         </div>
         </form>
 
@@ -18030,9 +18437,9 @@ vary: Origin
             &quot;user_id&quot;: 1,
             &quot;commentaire&quot;: &quot;J&#039;aime ce lieu&quot;,
             &quot;rating&quot;: 3,
-            &quot;updated_at&quot;: &quot;2023-08-26T07:50:17.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2023-08-26T07:50:17.000000Z&quot;,
-            &quot;id&quot;: 3,
+            &quot;updated_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
+            &quot;id&quot;: 4,
             &quot;user&quot;: {
                 &quot;id&quot;: 1,
                 &quot;name&quot;: &quot;Admin&quot;,
@@ -18293,7 +18700,7 @@ vary: Origin
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php&quot;,
-            &quot;line&quot;: 270,
+            &quot;line&quot;: 254,
             &quot;function&quot;: &quot;handleError&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18335,7 +18742,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 799,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18377,21 +18784,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
+            &quot;line&quot;: 159,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;handleRequest&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
+            &quot;line&quot;: 87,
             &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18405,7 +18812,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
-            &quot;line&quot;: 44,
+            &quot;line&quot;: 57,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18426,35 +18833,35 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
+            &quot;line&quot;: 798,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
+            &quot;line&quot;: 777,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
+            &quot;line&quot;: 741,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
+            &quot;line&quot;: 730,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
+            &quot;line&quot;: 200,
             &quot;function&quot;: &quot;dispatch&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18464,6 +18871,20 @@ vary: Origin
             &quot;line&quot;: 141,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -18524,7 +18945,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
+            &quot;line&quot;: 89,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18537,8 +18958,8 @@ vary: Origin
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18547,7 +18968,7 @@ vary: Origin
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
             &quot;line&quot;: 180,
             &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -18573,14 +18994,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18699,14 +19120,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
+            &quot;line&quot;: 662,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
             &quot;type&quot;: &quot;::&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
+            &quot;line&quot;: 211,
             &quot;function&quot;: &quot;call&quot;,
             &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18720,14 +19141,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
+            &quot;line&quot;: 180,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
+            &quot;line&quot;: 1081,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18747,17 +19168,10 @@ vary: Origin
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
@@ -19409,7 +19823,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-etablissements">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -19423,382 +19837,467 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;etablissements&quot;: {
-            &quot;current_page&quot;: 1,
-            &quot;data&quot;: [
-                {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                    &quot;batiment_id&quot;: 1,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1013434286&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:36&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:36&quot;,
-                    &quot;distance&quot;: &quot;351.9644750340833&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
-                        &quot;longitude&quot;: &quot;11.2292075&quot;,
-                        &quot;latitude&quot;: &quot;4.0782882&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
-                        &quot;ville&quot;: &quot;Okala&quot;,
-                        &quot;commune&quot;: &quot;undefined&quot;,
-                        &quot;quartier&quot;: &quot;undefined&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Lido melen&quot;,
-                    &quot;batiment_id&quot;: 5,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771660914&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:42&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:42&quot;,
-                    &quot;distance&quot;: &quot;381.93025993694465&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 5,
-                        &quot;nom&quot;: &quot;Lido melen&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771660914&quot;,
-                        &quot;longitude&quot;: &quot;11.4934024&quot;,
-                        &quot;latitude&quot;: &quot;3.8602565&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Chez ba&quot;,
-                    &quot;batiment_id&quot;: 3,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771633360&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:39&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:39&quot;,
-                    &quot;distance&quot;: &quot;381.9324720545099&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 3,
-                        &quot;nom&quot;: &quot;Chez ba&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-                        &quot;longitude&quot;: &quot;11.4934896&quot;,
-                        &quot;latitude&quot;: &quot;3.8613938&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Betterman&quot;,
-                    &quot;batiment_id&quot;: 4,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771655256&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:40&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:40&quot;,
-                    &quot;distance&quot;: &quot;382.0643268704286&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 4,
-                        &quot;nom&quot;: &quot;Betterman&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771655256&quot;,
-                        &quot;longitude&quot;: &quot;11.4948139&quot;,
-                        &quot;latitude&quot;: &quot;3.8636766&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue de Melen&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Rosine&quot;,
-                    &quot;batiment_id&quot;: 2,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1987382969&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:37&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:37&quot;,
-                    &quot;distance&quot;: &quot;382.76077185995933&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 2,
-                        &quot;nom&quot;: &quot;Rosine&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1987382969&quot;,
-                        &quot;longitude&quot;: &quot;11.5002933&quot;,
-                        &quot;latitude&quot;: &quot;3.8502254&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue 3.452&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; III&quot;,
-                        &quot;quartier&quot;: &quot;Ngoa-&Eacute;k&eacute;l&eacute;&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                }
-            ],
-            &quot;first_page_url&quot;: &quot;http://localhost:8000/api/etablissements?page=1&quot;,
-            &quot;from&quot;: 1,
-            &quot;last_page&quot;: 1,
-            &quot;last_page_url&quot;: &quot;http://localhost:8000/api/etablissements?page=1&quot;,
-            &quot;links&quot;: [
-                {
-                    &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                    &quot;active&quot;: false
-                },
-                {
-                    &quot;url&quot;: &quot;http://localhost:8000/api/etablissements?page=1&quot;,
-                    &quot;label&quot;: &quot;1&quot;,
-                    &quot;active&quot;: true
-                },
-                {
-                    &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                    &quot;active&quot;: false
-                }
-            ],
-            &quot;next_page_url&quot;: null,
-            &quot;path&quot;: &quot;http://localhost:8000/api/etablissements&quot;,
-            &quot;per_page&quot;: 50,
-            &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 5,
-            &quot;total&quot;: 5
+    &quot;message&quot;: &quot;Object of class Illuminate\\Database\\Query\\Expression could not be converted to string&quot;,
+    &quot;exception&quot;: &quot;Error&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\EtablissementController.php&quot;,
+    &quot;line&quot;: 59,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;index&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\EtablissementController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 43,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 259,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 799,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
+            &quot;line&quot;: 28,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 798,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 777,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 741,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 730,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1081,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 320,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 174,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
         }
-    },
-    &quot;message&quot;: &quot;Liste des Etablissements&quot;
+    ]
 }</code>
  </pre>
     </span>
@@ -20000,7 +20499,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-etablissements--id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -20014,537 +20513,118 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;SQLSTATE[22P02]: Invalid text representation: 7 ERREUR:  syntaxe en entr&eacute;e invalide pour le type bigint : &laquo; {\&quot;id\&quot;:1,\&quot;nom\&quot;:\&quot;Boutique de Nkol Poblo\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;1013434286\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;} &raquo;\nCONTEXT:  param&egrave;tre de portail non nomm&eacute; $2 = &#039;...&#039; (SQL: select * from \&quot;user_favoris\&quot; where \&quot;user_id\&quot; = 1 and \&quot;etablissement_id\&quot; = {\&quot;id\&quot;:1,\&quot;nom\&quot;:\&quot;Boutique de Nkol Poblo\&quot;,\&quot;indication_adresse\&quot;:null,\&quot;code_postal\&quot;:\&quot;undefined\&quot;,\&quot;site_internet\&quot;:\&quot;undefined\&quot;,\&quot;nom_manager\&quot;:null,\&quot;contact_manager\&quot;:null,\&quot;etage\&quot;:0,\&quot;cover\&quot;:\&quot;\\/images\\/logo-nom.jpg\&quot;,\&quot;phone\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp1\&quot;:\&quot;000000000\&quot;,\&quot;whatsapp2\&quot;:null,\&quot;description\&quot;:\&quot;Aucune Description\&quot;,\&quot;osm_id\&quot;:\&quot;1013434286\&quot;,\&quot;services\&quot;:\&quot;Aucun service\&quot;,\&quot;commodites\&quot;:\&quot;Pas de Commodit\\u00e9s\&quot;,\&quot;ameliorations\&quot;:null,\&quot;vues\&quot;:0,\&quot;logo\&quot;:null,\&quot;logo_map\&quot;:null,\&quot;deleted_at\&quot;:null,\&quot;created_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;,\&quot;updated_at\&quot;:\&quot;2023-04-08T13:55:36.000000Z\&quot;} and \&quot;user_favoris\&quot;.\&quot;deleted_at\&quot; is null limit 1)&quot;,
-    &quot;exception&quot;: &quot;Illuminate\\Database\\QueryException&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-    &quot;line&quot;: 760,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 720,
-            &quot;function&quot;: &quot;runQueryCallback&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php&quot;,
-            &quot;line&quot;: 405,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2705,
-            &quot;function&quot;: &quot;select&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Connection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2694,
-            &quot;function&quot;: &quot;runSelect&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 3230,
-            &quot;function&quot;: &quot;Illuminate\\Database\\Query\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php&quot;,
-            &quot;line&quot;: 2693,
-            &quot;function&quot;: &quot;onceWithColumns&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 710,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Query\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php&quot;,
-            &quot;line&quot;: 694,
-            &quot;function&quot;: &quot;getModels&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php&quot;,
-            &quot;line&quot;: 296,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BaseController.php&quot;,
-            &quot;line&quot;: 132,
-            &quot;function&quot;: &quot;first&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Database\\Eloquent\\Builder&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\EtablissementController.php&quot;,
-            &quot;line&quot;: 337,
-            &quot;function&quot;: &quot;checkIfEtablissementInFavoris&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\BaseController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;show&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\EtablissementController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 259,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
-            &quot;line&quot;: 28,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 126,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 797,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 776,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 740,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 729,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 190,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 86,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php&quot;,
-            &quot;line&quot;: 52,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Fruitcake\\Cors\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 165,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 134,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 661,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 152,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1063,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php&quot;,
-            &quot;line&quot;: 102,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 155,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;etablissement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+            &quot;indication_adresse&quot;: null,
+            &quot;code_postal&quot;: &quot;undefined&quot;,
+            &quot;site_internet&quot;: &quot;undefined&quot;,
+            &quot;nom_manager&quot;: null,
+            &quot;contact_manager&quot;: null,
+            &quot;etage&quot;: 0,
+            &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+            &quot;phone&quot;: &quot;000000000&quot;,
+            &quot;whatsapp1&quot;: &quot;000000000&quot;,
+            &quot;whatsapp2&quot;: null,
+            &quot;description&quot;: &quot;Aucune Description&quot;,
+            &quot;osm_id&quot;: &quot;1013434286&quot;,
+            &quot;services&quot;: &quot;Aucun service&quot;,
+            &quot;commodites&quot;: &quot;Wifi;Parking;&quot;,
+            &quot;ameliorations&quot;: null,
+            &quot;vues&quot;: 1,
+            &quot;logo&quot;: null,
+            &quot;logo_map&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2023-09-22T10:15:25.000000Z&quot;,
+            &quot;isFavoris&quot;: false,
+            &quot;isopen&quot;: false,
+            &quot;moyenne&quot;: 0,
+            &quot;avis&quot;: 0,
+            &quot;count&quot;: [],
+            &quot;sousCategories&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Boutiques&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;logourlmap&quot;: null,
+                    &quot;color&quot;: null,
+                    &quot;pivot&quot;: {
+                        &quot;etablissement_id&quot;: 1,
+                        &quot;sous_categorie_id&quot;: 1
+                    },
+                    &quot;categorie&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Achats&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                        &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                        &quot;color&quot;: &quot;#2196F3&quot;,
+                        &quot;vues&quot;: 0
+                    }
+                }
+            ],
+            &quot;batiment&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
+                &quot;longitude&quot;: &quot;11.2292075&quot;,
+                &quot;latitude&quot;: &quot;4.0782882&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
+                &quot;ville&quot;: &quot;Okala&quot;,
+                &quot;commune&quot;: &quot;undefined&quot;,
+                &quot;quartier&quot;: &quot;undefined&quot;
+            },
+            &quot;sous_categories&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;Boutiques&quot;,
+                    &quot;logourl&quot;: null,
+                    &quot;logourlmap&quot;: null,
+                    &quot;color&quot;: null,
+                    &quot;pivot&quot;: {
+                        &quot;etablissement_id&quot;: 1,
+                        &quot;sous_categorie_id&quot;: 1
+                    },
+                    &quot;categorie&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Achats&quot;,
+                        &quot;shortname&quot;: &quot;Achats&quot;,
+                        &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                        &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                        &quot;color&quot;: &quot;#2196F3&quot;,
+                        &quot;vues&quot;: 0
+                    }
+                }
+            ],
+            &quot;images&quot;: [],
+            &quot;horaires&quot;: [],
+            &quot;commentaires&quot;: [],
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;email&quot;: &quot;admin@position.cm&quot;,
+                &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                &quot;phone&quot;: &quot;699999999&quot;,
+                &quot;fcm_token&quot;: null,
+                &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                &quot;abonnement_id&quot;: 1,
+                &quot;abonnement&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;nom&quot;: &quot;free&quot;,
+                    &quot;prix&quot;: 0,
+                    &quot;type&quot;: &quot;year&quot;,
+                    &quot;duree&quot;: 1
+                }
+            }
         }
-    ]
+    },
+    &quot;message&quot;: &quot;Etablissement&quot;
 }</code>
  </pre>
     </span>
@@ -20758,6 +20838,1049 @@ vary: Origin
         &quot;etablissements&quot;: {
             &quot;current_page&quot;: 1,
             &quot;data&quot;: [
+                {
+                    &quot;id&quot;: 25,
+                    &quot;nom&quot;: &quot;Hopital de Nket&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;572671.3754491961&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 25,
+                        &quot;nom&quot;: &quot;Hopital de Nket&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_572671.3754491961&quot;,
+                        &quot;longitude&quot;: &quot;10.348428345154582&quot;,
+                        &quot;latitude&quot;: &quot;5.447834027064164&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 24,
+                    &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;32669.098369635387&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 24,
+                        &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_32669.098369635387&quot;,
+                        &quot;longitude&quot;: &quot;10.345864779871784&quot;,
+                        &quot;latitude&quot;: &quot;5.421234005475265&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 23,
+                    &quot;nom&quot;: &quot;EEC de Gouang&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;205870.10697691288&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 23,
+                        &quot;nom&quot;: &quot;EEC de Gouang&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_205870.10697691288&quot;,
+                        &quot;longitude&quot;: &quot;10.343244507000065&quot;,
+                        &quot;latitude&quot;: &quot;5.448916497000027&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 22,
+                    &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;493742.76439874555&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 22,
+                        &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_493742.76439874555&quot;,
+                        &quot;longitude&quot;: &quot;10.336290552000037&quot;,
+                        &quot;latitude&quot;: &quot;5.412744201000066&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;D63&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 21,
+                    &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;916230.0393666985&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 21,
+                        &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_916230.0393666985&quot;,
+                        &quot;longitude&quot;: &quot;10.360454536942518&quot;,
+                        &quot;latitude&quot;: &quot;5.431836105423236&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;D63&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 20,
+                    &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;78960.94266152942&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 20,
+                        &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_78960.94266152942&quot;,
+                        &quot;longitude&quot;: &quot;10.337177208000071&quot;,
+                        &quot;latitude&quot;: &quot;5.428177006000055&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 19,
+                    &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;366703.81325525313&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 19,
+                        &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_366703.81325525313&quot;,
+                        &quot;longitude&quot;: &quot;10.344377130000055&quot;,
+                        &quot;latitude&quot;: &quot;5.427117209000073&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;D63&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 18,
+                    &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;175369.1407760527&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 18,
+                        &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_175369.1407760527&quot;,
+                        &quot;longitude&quot;: &quot;10.346529443000065&quot;,
+                        &quot;latitude&quot;: &quot;5.448208539000063&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 17,
+                    &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;982835.934692351&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 17,
+                        &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_982835.934692351&quot;,
+                        &quot;longitude&quot;: &quot;10.357981197000072&quot;,
+                        &quot;latitude&quot;: &quot;5.40838702700006&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 16,
+                    &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;177026.38757959433&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_177026.38757959433&quot;,
+                        &quot;longitude&quot;: &quot;10.346784884730033&quot;,
+                        &quot;latitude&quot;: &quot;5.416634556325035&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 15,
+                    &quot;nom&quot;: &quot;EP de Douseh&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;705594.8621159282&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 15,
+                        &quot;nom&quot;: &quot;EP de Douseh&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_705594.8621159282&quot;,
+                        &quot;longitude&quot;: &quot;10.33888121800004&quot;,
+                        &quot;latitude&quot;: &quot;5.430227076000051&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 14,
+                    &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;380483.0701491861&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 14,
+                        &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_380483.0701491861&quot;,
+                        &quot;longitude&quot;: &quot;10.34509477587178&quot;,
+                        &quot;latitude&quot;: &quot;5.419058299769723&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 13,
+                    &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;379992.5134296431&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 32,
+                            &quot;nom&quot;: &quot;Institution publique&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 13,
+                                &quot;sous_categorie_id&quot;: 32
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;shortname&quot;: &quot;Administration&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                &quot;color&quot;: &quot;#90A8B5&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 13,
+                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_379992.5134296431&quot;,
+                        &quot;longitude&quot;: &quot;10.36767906600005&quot;,
+                        &quot;latitude&quot;: &quot;5.438824957000065&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 32,
+                            &quot;nom&quot;: &quot;Institution publique&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 13,
+                                &quot;sous_categorie_id&quot;: 32
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;shortname&quot;: &quot;Administration&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                &quot;color&quot;: &quot;#90A8B5&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 12,
+                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;325622.99116268713&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 32,
+                            &quot;nom&quot;: &quot;Institution publique&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 12,
+                                &quot;sous_categorie_id&quot;: 32
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;shortname&quot;: &quot;Administration&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                &quot;color&quot;: &quot;#90A8B5&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 12,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_325622.99116268713&quot;,
+                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 32,
+                            &quot;nom&quot;: &quot;Institution publique&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 12,
+                                &quot;sous_categorie_id&quot;: 32
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 2,
+                                &quot;nom&quot;: &quot;Administrations&quot;,
+                                &quot;shortname&quot;: &quot;Administration&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
+                                &quot;color&quot;: &quot;#90A8B5&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 11,
+                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;940303.0811733146&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 2,
+                            &quot;nom&quot;: &quot;Brocante&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 11,
+                                &quot;sous_categorie_id&quot;: 2
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 11,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_940303.0811733146&quot;,
+                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 2,
+                            &quot;nom&quot;: &quot;Brocante&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 11,
+                                &quot;sous_categorie_id&quot;: 2
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 10,
+                    &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;131848.02511418913&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 10,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 10,
+                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_131848.02511418913&quot;,
+                        &quot;longitude&quot;: &quot;10.36767906600005&quot;,
+                        &quot;latitude&quot;: &quot;5.438824957000065&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 10,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
+                {
+                    &quot;id&quot;: 9,
+                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                    &quot;indication_adresse&quot;: null,
+                    &quot;code_postal&quot;: &quot;null&quot;,
+                    &quot;site_internet&quot;: &quot;null&quot;,
+                    &quot;nom_manager&quot;: null,
+                    &quot;contact_manager&quot;: null,
+                    &quot;etage&quot;: 0,
+                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
+                    &quot;phone&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
+                    &quot;whatsapp2&quot;: null,
+                    &quot;description&quot;: &quot;Aucune Description&quot;,
+                    &quot;osm_id&quot;: &quot;138865.25842101127&quot;,
+                    &quot;services&quot;: &quot;Non Defini&quot;,
+                    &quot;commodites&quot;: &quot;&quot;,
+                    &quot;ameliorations&quot;: null,
+                    &quot;vues&quot;: 0,
+                    &quot;logo&quot;: null,
+                    &quot;logo_map&quot;: null,
+                    &quot;deleted_at&quot;: null,
+                    &quot;created_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
+                    &quot;isFavoris&quot;: false,
+                    &quot;isopen&quot;: false,
+                    &quot;moyenne&quot;: 0,
+                    &quot;avis&quot;: 0,
+                    &quot;count&quot;: [],
+                    &quot;sousCategories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 9,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;batiment&quot;: {
+                        &quot;id&quot;: 9,
+                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
+                        &quot;nombre_niveau&quot;: 0,
+                        &quot;code&quot;: &quot;BATIMENT_138865.25842101127&quot;,
+                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
+                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
+                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
+                        &quot;indication&quot;: null,
+                        &quot;rue&quot;: &quot;Non Defini&quot;,
+                        &quot;ville&quot;: &quot;Bameka&quot;,
+                        &quot;commune&quot;: &quot;Non Defini&quot;,
+                        &quot;quartier&quot;: &quot;Non Defini&quot;
+                    },
+                    &quot;sous_categories&quot;: [
+                        {
+                            &quot;id&quot;: 1,
+                            &quot;nom&quot;: &quot;Boutiques&quot;,
+                            &quot;logourl&quot;: null,
+                            &quot;logourlmap&quot;: null,
+                            &quot;color&quot;: null,
+                            &quot;pivot&quot;: {
+                                &quot;etablissement_id&quot;: 9,
+                                &quot;sous_categorie_id&quot;: 1
+                            },
+                            &quot;categorie&quot;: {
+                                &quot;id&quot;: 1,
+                                &quot;nom&quot;: &quot;Achats&quot;,
+                                &quot;shortname&quot;: &quot;Achats&quot;,
+                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                                &quot;color&quot;: &quot;#2196F3&quot;,
+                                &quot;vues&quot;: 0
+                            }
+                        }
+                    ],
+                    &quot;images&quot;: [],
+                    &quot;horaires&quot;: [],
+                    &quot;commentaires&quot;: []
+                },
                 {
                     &quot;id&quot;: 5,
                     &quot;nom&quot;: &quot;Lido melen&quot;,
@@ -21040,7 +22163,7 @@ vary: Origin
                     &quot;nom_manager&quot;: null,
                     &quot;contact_manager&quot;: null,
                     &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
+                    &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1987382969/Rosine/1695379003_Capture d&rsquo;&eacute;cran (6).png&quot;,
                     &quot;phone&quot;: &quot;000000000&quot;,
                     &quot;whatsapp1&quot;: &quot;000000000&quot;,
                     &quot;whatsapp2&quot;: null,
@@ -21054,7 +22177,7 @@ vary: Origin
                     &quot;logo_map&quot;: null,
                     &quot;deleted_at&quot;: null,
                     &quot;created_at&quot;: &quot;2023-04-08T13:55:37.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:37.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-09-22T10:36:44.000000Z&quot;,
                     &quot;isFavoris&quot;: false,
                     &quot;isopen&quot;: false,
                     &quot;moyenne&quot;: 0,
@@ -21138,14 +22261,14 @@ vary: Origin
                     &quot;description&quot;: &quot;Aucune Description&quot;,
                     &quot;osm_id&quot;: &quot;1013434286&quot;,
                     &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
+                    &quot;commodites&quot;: &quot;Wifi;Parking;&quot;,
                     &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
+                    &quot;vues&quot;: 1,
                     &quot;logo&quot;: null,
                     &quot;logo_map&quot;: null,
                     &quot;deleted_at&quot;: null,
                     &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2023-09-22T10:15:25.000000Z&quot;,
                     &quot;isFavoris&quot;: false,
                     &quot;isopen&quot;: false,
                     &quot;moyenne&quot;: 0,
@@ -21239,8 +22362,8 @@ vary: Origin
             &quot;path&quot;: &quot;http://localhost:8000/api/search/etablissements&quot;,
             &quot;per_page&quot;: 30,
             &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 5,
-            &quot;total&quot;: 5
+            &quot;to&quot;: 22,
+            &quot;total&quot;: 22
         }
     },
     &quot;message&quot;: &quot;Liste des Etablissements&quot;
@@ -21440,7 +22563,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-GETapi-distance-etablissements">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -21454,382 +22577,467 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;etablissements&quot;: {
-            &quot;current_page&quot;: 1,
-            &quot;data&quot;: [
-                {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                    &quot;batiment_id&quot;: 1,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1013434286&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:36&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:36&quot;,
-                    &quot;distance&quot;: &quot;351.9644750340833&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
-                        &quot;longitude&quot;: &quot;11.2292075&quot;,
-                        &quot;latitude&quot;: &quot;4.0782882&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
-                        &quot;ville&quot;: &quot;Okala&quot;,
-                        &quot;commune&quot;: &quot;undefined&quot;,
-                        &quot;quartier&quot;: &quot;undefined&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Lido melen&quot;,
-                    &quot;batiment_id&quot;: 5,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771660914&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:42&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:42&quot;,
-                    &quot;distance&quot;: &quot;381.93025993694465&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 5,
-                        &quot;nom&quot;: &quot;Lido melen&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771660914&quot;,
-                        &quot;longitude&quot;: &quot;11.4934024&quot;,
-                        &quot;latitude&quot;: &quot;3.8602565&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Chez ba&quot;,
-                    &quot;batiment_id&quot;: 3,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771633360&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:39&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:39&quot;,
-                    &quot;distance&quot;: &quot;381.9324720545099&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 3,
-                        &quot;nom&quot;: &quot;Chez ba&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-                        &quot;longitude&quot;: &quot;11.4934896&quot;,
-                        &quot;latitude&quot;: &quot;3.8613938&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Betterman&quot;,
-                    &quot;batiment_id&quot;: 4,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771655256&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:40&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:40&quot;,
-                    &quot;distance&quot;: &quot;382.0643268704286&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 4,
-                        &quot;nom&quot;: &quot;Betterman&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771655256&quot;,
-                        &quot;longitude&quot;: &quot;11.4948139&quot;,
-                        &quot;latitude&quot;: &quot;3.8636766&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue de Melen&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Rosine&quot;,
-                    &quot;batiment_id&quot;: 2,
-                    &quot;user_id&quot;: 1,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1987382969&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08 14:55:37&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08 14:55:37&quot;,
-                    &quot;distance&quot;: &quot;382.76077185995933&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 2,
-                        &quot;nom&quot;: &quot;Rosine&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1987382969&quot;,
-                        &quot;longitude&quot;: &quot;11.5002933&quot;,
-                        &quot;latitude&quot;: &quot;3.8502254&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue 3.452&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; III&quot;,
-                        &quot;quartier&quot;: &quot;Ngoa-&Eacute;k&eacute;l&eacute;&quot;
-                    },
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                }
-            ],
-            &quot;first_page_url&quot;: &quot;http://localhost:8000/api/distance/etablissements?page=1&quot;,
-            &quot;from&quot;: 1,
-            &quot;last_page&quot;: 1,
-            &quot;last_page_url&quot;: &quot;http://localhost:8000/api/distance/etablissements?page=1&quot;,
-            &quot;links&quot;: [
-                {
-                    &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                    &quot;active&quot;: false
-                },
-                {
-                    &quot;url&quot;: &quot;http://localhost:8000/api/distance/etablissements?page=1&quot;,
-                    &quot;label&quot;: &quot;1&quot;,
-                    &quot;active&quot;: true
-                },
-                {
-                    &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                    &quot;active&quot;: false
-                }
-            ],
-            &quot;next_page_url&quot;: null,
-            &quot;path&quot;: &quot;http://localhost:8000/api/distance/etablissements&quot;,
-            &quot;per_page&quot;: 30,
-            &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 5,
-            &quot;total&quot;: 5
+    &quot;message&quot;: &quot;Object of class Illuminate\\Database\\Query\\Expression could not be converted to string&quot;,
+    &quot;exception&quot;: &quot;Error&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\EtablissementController.php&quot;,
+    &quot;line&quot;: 155,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;getEtablissementByDistance&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\EtablissementController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 43,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 259,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 799,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
+            &quot;line&quot;: 28,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 798,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 777,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 741,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 730,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1081,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 320,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 174,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
         }
-    },
-    &quot;message&quot;: &quot;Liste des Etablissements&quot;
+    ]
 }</code>
  </pre>
     </span>
@@ -21962,7 +23170,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/search/etablissements/filter?user_id=1&amp;id_categorie=1&amp;commodites=Wifi%3BParking&amp;lat=4.056&amp;lon=8.056" \
+    --get "http://localhost:8000/api/search/etablissements/filter?user_id=1&amp;id_categorie=1&amp;commodites=Wifi%3BParking&amp;lat=4.056&amp;lon=8.056&amp;ville=Bameka" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -21979,6 +23187,7 @@ const params = {
     "commodites": "Wifi;Parking",
     "lat": "4.056",
     "lon": "8.056",
+    "ville": "Bameka",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -22011,6 +23220,7 @@ $response = $client-&gt;get(
             'commodites'=&gt; 'Wifi;Parking',
             'lat'=&gt; '4.056',
             'lon'=&gt; '8.056',
+            'ville'=&gt; 'Bameka',
         ],
     ]
 );
@@ -22029,6 +23239,7 @@ params = {
   'commodites': 'Wifi;Parking',
   'lat': '4.056',
   'lon': '8.056',
+  'ville': 'Bameka',
 }
 headers = {
   'Content-Type': 'application/json',
@@ -22231,6 +23442,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>longitude. Example: <code>8.056</code></p>
             </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="ville"                data-endpoint="GETapi-search-etablissements-filter"
+               value="Bameka"
+               data-component="query">
+    <br>
+<p>ville. Example: <code>Bameka</code></p>
+            </div>
                 </form>
 
                     <h2 id="establishment-management-PUTapi-etablissements-vues--id-">Update vues Establishment.</h2>
@@ -22246,7 +23468,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/etablissements/vues/consectetur" \
+    "http://localhost:8000/api/etablissements/vues/sunt" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -22254,7 +23476,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/etablissements/vues/consectetur"
+    "http://localhost:8000/api/etablissements/vues/sunt"
 );
 
 const headers = {
@@ -22272,7 +23494,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/etablissements/vues/consectetur',
+    'http://localhost:8000/api/etablissements/vues/sunt',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -22289,7 +23511,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/etablissements/vues/consectetur'
+url = 'http://localhost:8000/api/etablissements/vues/sunt'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -22390,10 +23612,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-etablissements-vues--id-"
-               value="consectetur"
+               value="sunt"
                data-component="url">
     <br>
-<p>The ID of the vue. Example: <code>consectetur</code></p>
+<p>The ID of the vue. Example: <code>sunt</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -22407,6 +23629,618 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>. Example: <code>1</code></p>
             </div>
                     </form>
+
+                    <h2 id="establishment-management-POSTapi-etablissements-cover--id-">Update Etablishment Cover</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-etablissements-cover--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/etablissements/cover/1" \
+    --header "Authorization: Bearer {TOKEN}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
+    --form "_method=PUT" \
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/etablissements/cover/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {TOKEN}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+    "X-Authorization": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+};
+
+const body = new FormData();
+body.append('_method', 'PUT');
+body.append('cover', document.querySelector('input[name="cover"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://localhost:8000/api/etablissements/cover/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {TOKEN}',
+            'Content-Type' =&gt; 'multipart/form-data',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
+        ],
+        'multipart' =&gt; [
+            [
+                'name' =&gt; '_method',
+                'contents' =&gt; 'PUT'
+            ],
+            [
+                'name' =&gt; 'cover',
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp', 'r')
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/etablissements/cover/1'
+files = {
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp', 'rb')
+}
+payload = {
+    "_method": "PUT"
+}
+headers = {
+  'Authorization': 'Bearer {TOKEN}',
+  'Content-Type': 'multipart/form-data',
+  'Accept': 'application/json',
+  'X-Authorization': 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E'
+}
+
+response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-etablissements-cover--id-">
+            <blockquote>
+            <p>Example response (405):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">allow: POST
+cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;The PUT method is not supported for route api/etablissements/cover/1. Supported methods: POST.&quot;,
+    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
+    &quot;line&quot;: 122,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
+            &quot;line&quot;: 107,
+            &quot;function&quot;: &quot;requestMethodNotAllowed&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;getRouteForMethods&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php&quot;,
+            &quot;line&quot;: 162,
+            &quot;function&quot;: &quot;handleMatchedRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 754,
+            &quot;function&quot;: &quot;match&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\RouteCollection&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 741,
+            &quot;function&quot;: &quot;findRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 730,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 141,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 89,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 116,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 299,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 287,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 92,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 45,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 209,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 124,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 71,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 49,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 51,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1081,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 320,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 174,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-etablissements-cover--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-etablissements-cover--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-etablissements-cover--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-etablissements-cover--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-etablissements-cover--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-etablissements-cover--id-" data-method="POST"
+      data-path="api/etablissements/cover/{id}"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-etablissements-cover--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-etablissements-cover--id-"
+                    onclick="tryItOut('POSTapi-etablissements-cover--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-etablissements-cover--id-"
+                    onclick="cancelTryOut('POSTapi-etablissements-cover--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-etablissements-cover--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/etablissements/cover/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-etablissements-cover--id-"
+               value="Bearer {TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value="multipart/form-data"
+               data-component="header">
+    <br>
+<p>Example: <code>multipart/form-data</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>X-Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="X-Authorization"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
+               data-component="header">
+    <br>
+<p>Example: <code>GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>the id of the Picture. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>cover</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="file" style="display: none"
+                              name="cover"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="_method"                data-endpoint="POSTapi-etablissements-cover--id-"
+               value="PUT"
+               data-component="body">
+    <br>
+<p>&quot;required if update (change the PUT method of the request by the POST method)&quot; Example: <code>PUT</code></p>
+        </div>
+        </form>
 
                     <h2 id="establishment-management-GETapi-count-etablissements">count all establishment.</h2>
 
@@ -22494,7 +24328,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;nbre_etablissements&quot;: 5,
+        &quot;nbre_etablissements&quot;: 22,
         &quot;nbre_page&quot;: 1
     },
     &quot;message&quot;: &quot;Nombre des Etablissements&quot;
@@ -22619,9 +24453,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "osm_id=111259658236" \
     --form "commodites=Wifi;Parking" \
     --form "ameliorations=Site internet;videos" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php3115.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php3116.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php3117.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -22747,15 +24581,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php3115.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php3116.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php3117.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp', 'r')
             ],
         ],
     ]
@@ -22770,9 +24604,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php3115.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php3116.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php3117.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -22839,12 +24673,12 @@ vary: Origin
             &quot;ameliorations&quot;: &quot;Site internet;videos&quot;,
             &quot;nom_manager&quot;: &quot;Nom Manager.&quot;,
             &quot;contact_manager&quot;: &quot;699999999.&quot;,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1693036217_test.jpg&quot;,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1693036217_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1693036217_test.jpg&quot;,
-            &quot;updated_at&quot;: &quot;2023-08-26T07:50:17.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2023-08-26T07:50:17.000000Z&quot;,
-            &quot;id&quot;: 8
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
+            &quot;updated_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
+            &quot;id&quot;: 26
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;etablissement reussie&quot;
@@ -23095,7 +24929,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php3115.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>whatsapp2</code></b>&nbsp;&nbsp;
@@ -23150,7 +24984,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php3116.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -23161,7 +24995,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php3117.tmp</code></p>
+<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp</code></p>
         </div>
         </form>
 
@@ -23199,9 +25033,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "ameliorations=Site internet,videos" \
     --form "vues=true" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php3159.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php315A.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php315B.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -23317,15 +25151,15 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php3159.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php315A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php315B.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp', 'r')
             ],
         ],
     ]
@@ -23340,9 +25174,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php3159.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php315A.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php315B.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -23543,7 +25377,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php3159.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etage</code></b>&nbsp;&nbsp;
@@ -23653,7 +25487,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php315A.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -23664,7 +25498,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php315B.tmp</code></p>
+<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -23990,7 +25824,7 @@ vary: Origin
         &quot;favorite&quot;: {
             &quot;etablissement_id&quot;: 1,
             &quot;user_id&quot;: 1,
-            &quot;id&quot;: 3
+            &quot;id&quot;: 4
         }
     },
     &quot;message&quot;: &quot;Etablissement ajout&eacute; aux favoris&quot;
@@ -24340,7 +26174,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php31BA.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -24384,7 +26218,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php31BA.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp', 'r')
             ],
         ],
     ]
@@ -24399,7 +26233,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php31BA.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1
@@ -24435,9 +26269,9 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;image&quot;: {
-            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1693036217_test.jpg&quot;,
+            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1695380673_test.jpg&quot;,
             &quot;etablissement_id&quot;: 1,
-            &quot;id&quot;: 3
+            &quot;id&quot;: 4
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;image reussie&quot;
@@ -24556,7 +26390,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php31BA.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp</code></p>
         </div>
         </form>
 
@@ -24580,7 +26414,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php31FB.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -24624,7 +26458,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php31FB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp', 'r')
             ],
         ],
     ]
@@ -24639,7 +26473,7 @@ import json
 
 url = 'http://localhost:8000/api/images/1'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php31FB.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -24771,7 +26605,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php31FB.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -41604,9 +43438,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "categorie_id=5" \
-    --form "color=omnis" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php4BB2.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php4BB3.tmp" </code></pre></div>
+    --form "color=dolorem" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -41624,7 +43458,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('categorie_id', '5');
-body.append('color', 'omnis');
+body.append('color', 'dolorem');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -41657,15 +43491,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'omnis'
+                'contents' =&gt; 'dolorem'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4BB2.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4BB3.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp', 'r')
             ],
         ],
     ]
@@ -41680,13 +43514,13 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php4BB2.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php4BB3.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "categorie_id": 5,
-    "color": "omnis"
+    "color": "dolorem"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -41721,9 +43555,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 481,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;color&quot;: &quot;omnis&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1693036224_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1693036224_test.jpg&quot;,
+            &quot;color&quot;: &quot;dolorem&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1695380675_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1695380675_test.jpg&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 5,
                 &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
@@ -41862,7 +43696,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4BB2.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -41873,7 +43707,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4BB3.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -41881,10 +43715,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-souscategories"
-               value="omnis"
+               value="dolorem"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>omnis</code></p>
+<p>the color of the subcategory Example: <code>dolorem</code></p>
         </div>
         </form>
 
@@ -41908,11 +43742,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "color=sapiente" \
+    --form "color=ipsam" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php4C02.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php4C03.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -41929,7 +43763,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('color', 'sapiente');
+body.append('color', 'ipsam');
 body.append('idcategorie', '5');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
@@ -41960,7 +43794,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'sapiente'
+                'contents' =&gt; 'ipsam'
             ],
             [
                 'name' =&gt; 'idcategorie',
@@ -41972,11 +43806,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4C02.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4C03.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp', 'r')
             ],
         ],
     ]
@@ -41991,12 +43825,12 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php4C02.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php4C03.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "color": "sapiente",
+    "color": "ipsam",
     "idcategorie": 5,
     "_method": "PUT"
 }
@@ -42127,7 +43961,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4C02.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -42138,7 +43972,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4C03.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -42157,10 +43991,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-souscategories--id-"
-               value="sapiente"
+               value="ipsam"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>sapiente</code></p>
+<p>the color of the subcategory Example: <code>ipsam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>idcategorie</code></b>&nbsp;&nbsp;
@@ -42509,7 +44343,7 @@ vary: Origin
     &quot;success&quot;: false,
     &quot;message&quot;: &quot;Erreur.&quot;,
     &quot;data&quot;: {
-        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-08-26 08:50:17, 2023-08-26 08:50:17) returning \&quot;id\&quot;)&quot;
+        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (Connection: pgsql, SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-09-22 12:04:32, 2023-09-22 12:04:32) returning \&quot;id\&quot;)&quot;
     }
 }</code>
  </pre>
@@ -42771,7 +44605,7 @@ vary: Origin
     &quot;success&quot;: false,
     &quot;message&quot;: &quot;Erreur.&quot;,
     &quot;data&quot;: {
-        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-08-26 08:50:17, 2023-08-26 08:50:17) returning \&quot;id\&quot;)&quot;
+        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (Connection: pgsql, SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-09-22 12:04:33, 2023-09-22 12:04:33) returning \&quot;id\&quot;)&quot;
     }
 }</code>
  </pre>
