@@ -17,6 +17,11 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Amendozaaguiar\FilamentRouteStatistics\FilamentRouteStatisticsPlugin;
+use Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin;
+use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
+use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
+use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -27,8 +32,18 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+        ->registration()
+        ->passwordReset()
+        ->emailVerification()
+        ->profile()
+        ->authGuard('web')
+            ->plugin(FilamentProgressbarPlugin::make()->color('#05BF95'))
+            ->plugin(FilamentSpatieLaravelBackupPlugin::make())
+            ->plugin(FilamentSpatieLaravelHealthPlugin::make())
+            ->plugin(FilamentSpatieRolesPermissionsPlugin::make())
+            ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Green,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -38,7 +53,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -53,6 +67,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->plugins([
+            FilamentRouteStatisticsPlugin::make(),
+            //...
+        ]);
     }
 }

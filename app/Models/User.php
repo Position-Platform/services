@@ -15,6 +15,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
+use Althinect\FilamentSpatieRolesPermissions\Concerns\HasSuperAdmin;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Panel;
 
 
 /**
@@ -84,9 +87,9 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
  * @mixin \Eloquent
  */
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail,FilamentUser
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes, Searchable;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes, Searchable,HasSuperAdmin;
 
     protected $guard_name = 'api';
 
@@ -203,5 +206,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function batiments()
     {
         return $this->hasMany(Batiment::class, "user_id");
+    }
+
+     public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->hasRole(['admin','user']);
     }
 }
