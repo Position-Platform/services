@@ -9,6 +9,10 @@ use Illuminate\Support\ServiceProvider;
 use Knuckles\Scribe\Scribe;
 use Symfony\Component\HttpFoundation\Request;
 use Knuckles\Camel\Extraction\ExtractedEndpointData;
+use Spatie\Health\Facades\Health;
+use Spatie\Health\Checks\Checks\OptimizedAppCheck;
+use Spatie\Health\Checks\Checks\DebugModeCheck;
+use Spatie\Health\Checks\Checks\EnvironmentCheck;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -41,5 +45,11 @@ class AppServiceProvider extends ServiceProvider
                 $request->headers->add(["Authorization" => "Bearer $token"]);
             });
         }
+
+          Health::checks([
+            OptimizedAppCheck::new(),
+            DebugModeCheck::new(),
+            EnvironmentCheck::new(),
+        ]);
     }
 }

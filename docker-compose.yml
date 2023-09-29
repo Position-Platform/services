@@ -1,36 +1,36 @@
 version: "3"
 services:
-    position-api:
+    position-services:
         build:
             context: .
             dockerfile: .docker/Dockerfile
-        image: position-api
-        container_name: position-api
+        image: position-services
+        container_name: position-services
         ports:
             - "${APP_PORT:-80}:80"
         volumes:
             - ./:/var/www/html
             - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         networks:
-            - position-api
+            - position-services
         depends_on:
-            - position-api-pgsql
+            - position-services-pgsql
 
-    position-api-pgsql:
+    position-services-pgsql:
         restart: always
         build:
             context: .
             dockerfile: .docker/Dockerfile-db
         ports:
             - "${FORWARD_DB_PORT:-5432}:5432"
-        container_name: position-api-pgsql
+        container_name: position-services-pgsql
         environment:
             PGPASSWORD: "${PG_PASSWORD:-secret}"
             POSTGRES_DB: "${DB_DATABASE}"
             POSTGRES_USER: "${DB_USERNAME}"
             POSTGRES_PASSWORD: "${DB_PASSWORD:-secret}"
         networks:
-            - position-api
+            - position-services
         healthcheck:
             test:
                 [
@@ -45,8 +45,8 @@ services:
             retries: 3
             timeout: 5s
 
-    position-api-meilisearch:
-        container_name: position-api-meilisearch
+    position-services-meilisearch:
+        container_name: position-services-meilisearch
         image: getmeili/meilisearch:v1.3
         environment:
             - http_proxy
@@ -58,9 +58,9 @@ services:
         ports:
             - ${MEILI_PORT:-7700}:7700
         networks:
-            - position-api
+            - position-services
         volumes:
-            - "position-api-meilisearch:/data.ms"
+            - "position-meilisearch:/data.ms"
         restart: unless-stopped
         healthcheck:
             test:
@@ -69,13 +69,13 @@ services:
                     "wget",
                     "--no-verbose",
                     "--spider",
-                    "http://position-api-meilisearch:7700/health",
+                    "http://position-services-meilisearch:7700/health",
                 ]
             retries: 3
             timeout: 5s
 networks:
-    position-api:
+    position-services:
         driver: bridge
 volumes:
-    position-api-meilisearch:
+    position-meilisearch:
         driver: local
