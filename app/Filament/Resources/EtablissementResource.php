@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 
 class EtablissementResource extends Resource
 {
@@ -105,6 +106,24 @@ class EtablissementResource extends Resource
                             ->enableDownload(),
                     ])
                     ->columns(1),
+
+                    Forms\Components\Repeater::make('horaires')
+                    ->relationship()
+                    ->schema([
+                         Forms\Components\Select::make('jour')
+                    ->required()
+                    ->options([
+                        'lundi' => 'Lundi',
+                        'mardi' => 'Mardi',
+                        'mercredi' => 'Mercredi',
+                        'jeudi' => 'Jeudi',
+                        'vendredi' => 'Vendredi',
+                        'samedi' => 'Samedi',
+                        'dimanche' => 'Dimanche',
+                    ]),
+                        Forms\Components\TextInput::make('plage_horaire')->required()->placeholder('Exemple: 08h00-12h00;14h00-18h00'),
+                    ])
+                    ->columns(2),
             ]);
     }
 
@@ -152,6 +171,9 @@ class EtablissementResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+            ])
+             ->bulkActions([
+                ExportBulkAction::make()
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
