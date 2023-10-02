@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 
 class BatimentResource extends Resource
 {
@@ -99,6 +100,9 @@ class BatimentResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+            ])
+             ->bulkActions([
+                ExportBulkAction::make()
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
