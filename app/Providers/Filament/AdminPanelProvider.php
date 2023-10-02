@@ -22,6 +22,8 @@ use Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin;
 use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
+use Awcodes\Overlook\OverlookPlugin;
+use Awcodes\Overlook\Widgets\OverlookWidget;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -29,6 +31,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->theme(asset('css/filament/admin/theme.css'))
             ->id('admin')
             ->path('admin')
             ->login()
@@ -41,9 +44,22 @@ class AdminPanelProvider extends PanelProvider
             ->plugin(FilamentSpatieLaravelBackupPlugin::make())
             ->plugin(FilamentSpatieLaravelHealthPlugin::make())
             ->plugin(FilamentSpatieRolesPermissionsPlugin::make())
+             ->plugins([
+            OverlookPlugin::make()
+            ->alphabetical()
+                ->sort(4)
+                ->columns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'md' => 3,
+                    'lg' => 4,
+                    'xl' => 5,
+                    '2xl' => null,
+                ]),
+        ])
             ->login()
             ->colors([
-                'primary' => Color::Green,
+                'primary' => '#05BF95',
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
@@ -53,6 +69,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
+                OverlookWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
