@@ -32,9 +32,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="{{ asset("/vendor/scribe/js/tryitout-4.23.1.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/tryitout-4.29.0.js") }}"></script>
 
-    <script src="{{ asset("/vendor/scribe/js/theme-default-4.23.1.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/theme-default-4.29.0.js") }}"></script>
 
 </head>
 
@@ -352,7 +352,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: September 22, 2023</li>
+        <li>Last updated: January 5, 2024</li>
     </ul>
 </div>
 
@@ -856,7 +856,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 18
+x-ratelimit-remaining: 9
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -867,7 +867,7 @@ vary: Origin
             &quot;nom&quot;: &quot;Smart&quot;,
             &quot;prix&quot;: 5000,
             &quot;duree&quot;: 1,
-            &quot;id&quot;: 5
+            &quot;id&quot;: 6
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;abonnement reussie&quot;
@@ -1117,7 +1117,29 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-abonnements--id-">
-</span>
+            <blockquote>
+            <p>Example response (400):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 8
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Echec de mise &agrave; jour&quot;,
+    &quot;data&quot;: {
+        &quot;error&quot;: &quot;Attempt to assign property \&quot;nom\&quot; on null&quot;
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-abonnements--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-abonnements--id-"></span>:
@@ -1363,7 +1385,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 17
+x-ratelimit-remaining: 7
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1703,7 +1725,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
     \"email\": \"admin@position.cm\",
-    \"token\": \"qui\",
+    \"token\": \"fugit\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1723,7 +1745,7 @@ const headers = {
 
 let body = {
     "email": "admin@position.cm",
-    "token": "qui",
+    "token": "fugit",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1747,7 +1769,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'admin@position.cm',
-            'token' =&gt; 'qui',
+            'token' =&gt; 'fugit',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1764,7 +1786,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "admin@position.cm",
-    "token": "qui",
+    "token": "fugit",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1901,10 +1923,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-auth-password-reset"
-               value="qui"
+               value="fugit"
                data-component="body">
     <br>
-<p>token give in mail. Example: <code>qui</code></p>
+<p>token give in mail. Example: <code>fugit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1951,7 +1973,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2008,7 +2030,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp', 'r')
             ],
         ],
     ]
@@ -2023,7 +2045,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2213,7 +2235,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6CF6.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp</code></p>
         </div>
         </form>
 
@@ -2326,7 +2348,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiN2M5ZjQ1OWNjNTI0Njg3NDdhOTNkZDQyYTk5YjU4NWRkMDRiNWM3YjQ2ZjYyMWQ5OTMxNGY4MzQyZjM1M2EyNjkyNDQ1ZDVlNzA2OGYwYzkiLCJpYXQiOjE2OTUzODA2NzAuODc5OTYxLCJuYmYiOjE2OTUzODA2NzAuODc5OTY0LCJleHAiOjE2OTc5NzI2NzAuODc5MDY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Ka6wDmh9zVzsT0NHNhshdhwNSRPWiskyBSj1CMUQvbGsbrtTrh8gpdZbIJKZVDjx7VJbF__6pHDEaEMb7pLV9wAHV0BvT4mP4RcJbjIsQn4w3pfFINkaZdH2BE6EF7Mhh7JDAj1_nttNdXdZKK9rSWtGM59kxGJIjkw5Ea7EkRnWYXmvkUuiwmhwHhe5rSMWp6wGyZetV2kTF79pi98OnBrlft7plA9tbsdZa4JMHx_BsNJmOAWMVecMJ5lJNwOHAkgnQg1-DMhFspjj-g0DpIpxVAGc9CRjgS1lg6SSUxptQFwH22Cd_7VCvS2wQHiB0KD0dntvWxT7bHp7dMgYe7ONZhYPOuL3_bU5bZnqhNtH3FHLx2LZ3rnNRQwLBTbGMED3ysKI4nNdac-F8E9SGIoauV2UG51LWT6MtsIpc5S5PmXmHrmTpSmyEGNpEWQQ_im08aMkX7yTGvVcFReTOmcjXRf5BqxtJ3hqd2--Y0IN9kkw5tZThiTNTyrMrBhAqj_P3SozF5kPHkF2QN3m2AQfrUR3tvvgBt-OJ3HYqWiMmzB2uU_R7d-DPTpMVEhx6gB-ZxCGv4Kv-VYKF-ebnrAbh5olGkb9LMWZcS000RJqS9wIocQ-9NcsEcty6EkVNYlpH9NFyfLOHj1MjeI3DL6xfrkqOWXYdSLgeN2xOUI&quot;,
+        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZWRlYmI4ZWFiMTIyYjcyNjYxZDc1MjgzNWVjMjg1MjIwZGIwZjNiZmI5NmM3YTM4MDJkOTE2Y2QyNDZlMDkwMjc3YjA5MTFlODg5Y2IwN2EiLCJpYXQiOjE3MDQ0NTE0NzkuMTY3MjU1LCJuYmYiOjE3MDQ0NTE0NzkuMTY3MjU2LCJleHAiOjE3MDcwNDM0NzkuMTY2NTY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F-dKe_2tKrljlm-FSSX7MdEWnVSjNzYGTf29xwpZsz5QeGX695C47exykTxsa7Amq0QXmdttQEsrg8TXCd6PcFqzOxT9GLHmS4o86xK4eb3pYGQ2wSQCrXCbWQ99Exndu6I63ZHAICvZY7P83bIiyIIT-RmBqcvvHckhbv4-jW-4yjqhzRSxP9fFINXzEl4tFRKil5XyA8SQZMdv0UgUoMSXdZKP6iCCs6n31VoDFQwV_XZ8pnOSAemmKjSNH6itKyzRd2ee96apEc4kPVsac_5pxWOGCN5HQaiTjlG-QG7K0xFatR5oQiFO6enawCtEY0Gn1Ll4-_jx1o8p0K_ugPeTYYq2hxRgVg0epA4peOCQmMAO0Zjb7RB1NlkzFIRJsZ6AdvoSj1gPqKFSNRvjTQi_tkfQrGY3l-e0YFbKMP-ZzXoqk0-Dzt9FZ-BY8_Y2Napxz7SYtTv9pwCP3i7clDYm0qnszfVJDAm6VE-ShpmKdY3hHQoHGlJie-31R2omhNzg5VgldwuBgpXLMdJt5UkQ189kD2uh0OHj7KRba1P-eM7gwg3D6gigCMAxMGjqBlGUDf4LYvueS_Q9S0Xc_uIbhIqphzorxtgymt0m29HJKPz7I-kg9Q_Me5g-Fb9VeqmO1axHxd1aE0BgFEmiuqEnEwsTPBVHU_l86sgI_mc&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;Admin&quot;,
@@ -2344,9 +2366,9 @@ vary: Origin
                     &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                     &quot;pivot&quot;: {
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
                         &quot;model_id&quot;: 1,
-                        &quot;role_id&quot;: 1,
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                        &quot;role_id&quot;: 1
                     }
                 }
             ]
@@ -2984,7 +3006,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 45
+x-ratelimit-remaining: 43
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3110,7 +3132,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3164,7 +3186,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp', 'r')
             ],
         ],
     ]
@@ -3179,7 +3201,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3199,7 +3221,38 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-user-update--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 42
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;user&quot;: {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;Gautier&quot;,
+            &quot;email&quot;: &quot;admin@position.cm&quot;,
+            &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+            &quot;phone&quot;: 699999999,
+            &quot;fcm_token&quot;: null,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
+            &quot;abonnement_id&quot;: 1
+        }
+    },
+    &quot;message&quot;: &quot;Utilisateur&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-user-update--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-user-update--id-"></span>:
@@ -3335,7 +3388,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php73FF.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -3434,7 +3487,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 44
+x-ratelimit-remaining: 41
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3634,7 +3687,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
+x-ratelimit-remaining: 40
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3643,12 +3696,12 @@ vary: Origin
     &quot;data&quot;: {
         &quot;user&quot;: {
             &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Admin&quot;,
+            &quot;name&quot;: &quot;Gautier&quot;,
             &quot;email&quot;: &quot;admin@position.cm&quot;,
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-            &quot;phone&quot;: &quot;699999999&quot;,
+            &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1,
             &quot;roles&quot;: [
                 {
@@ -3658,9 +3711,9 @@ vary: Origin
                     &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                     &quot;pivot&quot;: {
+                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
                         &quot;model_id&quot;: 1,
-                        &quot;role_id&quot;: 1,
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                        &quot;role_id&quot;: 1
                     }
                 }
             ],
@@ -3854,7 +3907,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 25
+x-ratelimit-remaining: 17
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4046,7 +4099,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 22
+x-ratelimit-remaining: 14
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4074,9 +4127,9 @@ vary: Origin
                             &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                             &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                             &quot;pivot&quot;: {
+                                &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
                                 &quot;model_id&quot;: 1,
-                                &quot;role_id&quot;: 1,
-                                &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                                &quot;role_id&quot;: 1
                             }
                         }
                     ]
@@ -4204,7 +4257,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999998" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4263,7 +4316,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp', 'r')
             ],
         ],
     ]
@@ -4278,7 +4331,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4300,7 +4353,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-admins">
             <blockquote>
-            <p>Example response (201):</p>
+            <p>Example response (400):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4309,42 +4362,16 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 21
+x-ratelimit-remaining: 13
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Erreur.&quot;,
     &quot;data&quot;: {
-        &quot;admin&quot;: {
-            &quot;id&quot;: 3,
-            &quot;user&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Gautier&quot;,
-                &quot;email&quot;: &quot;gautier@position.cm&quot;,
-                &quot;email_verified_at&quot;: null,
-                &quot;phone&quot;: &quot;699999998&quot;,
-                &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1695380673_test.jpg&quot;,
-                &quot;abonnement_id&quot;: 1,
-                &quot;roles&quot;: [
-                    {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;admin&quot;,
-                        &quot;guard_name&quot;: &quot;api&quot;,
-                        &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;pivot&quot;: {
-                            &quot;model_id&quot;: 5,
-                            &quot;role_id&quot;: 1,
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
-                        }
-                    }
-                ]
-            }
-        }
-    },
-    &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;admin reussie&quot;
+        &quot;error&quot;: &quot;SQLSTATE[23505]: Unique violation: 7 ERREUR:  la valeur d&#039;une cl&eacute; dupliqu&eacute;e rompt la contrainte unique &laquo; users_phone_unique &raquo;\nDETAIL:  La cl&eacute; &laquo; (phone)=(699999998) &raquo; existe d&eacute;j&agrave;. (Connection: pgsql, SQL: insert into \&quot;users\&quot; (\&quot;name\&quot;, \&quot;email\&quot;, \&quot;phone\&quot;, \&quot;password\&quot;, \&quot;image_profil\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (Gautier, gautier@position.cm, 699999998, $2y$10$m6w9ZCaNmBDp4wZMnHNpnuZmhUWx56OvVRMdDAEAKqlqFKcCDVQ3., /storage/uploads/admins/profils/1704451481_test.jpg, 2024-01-05 11:44:41, 2024-01-05 11:44:41) returning \&quot;id\&quot;)&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -4493,7 +4520,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7845.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp</code></p>
         </div>
         </form>
 
@@ -4581,7 +4608,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 20
+x-ratelimit-remaining: 12
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4608,9 +4635,9 @@ vary: Origin
                         &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;pivot&quot;: {
+                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
                             &quot;model_id&quot;: 1,
-                            &quot;role_id&quot;: 1,
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                            &quot;role_id&quot;: 1
                         }
                     }
                 ]
@@ -4749,7 +4776,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "phone=699999998" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4808,7 +4835,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp', 'r')
             ],
         ],
     ]
@@ -4823,7 +4850,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4844,7 +4871,29 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-admins--id-">
-</span>
+            <blockquote>
+            <p>Example response (400):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 11
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Erreur.&quot;,
+    &quot;data&quot;: {
+        &quot;Echec de mise &agrave; jour&quot;: &quot;SQLSTATE[23505]: Unique violation: 7 ERREUR:  la valeur d&#039;une cl&eacute; dupliqu&eacute;e rompt la contrainte unique &laquo; users_phone_unique &raquo;\nDETAIL:  La cl&eacute; &laquo; (phone)=(699999998) &raquo; existe d&eacute;j&agrave;. (Connection: pgsql, SQL: update \&quot;users\&quot; set \&quot;name\&quot; = Gautier, \&quot;phone\&quot; = 699999998, \&quot;image_profil\&quot; = /storage/uploads/admins/profils/1704451481_test.jpg, \&quot;updated_at\&quot; = 2024-01-05 11:44:41 where \&quot;id\&quot; = 1)&quot;
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-admins--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-admins--id-"></span>:
@@ -4995,7 +5044,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7F89.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -5094,7 +5143,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 19
+x-ratelimit-remaining: 10
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5310,7 +5359,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
+x-ratelimit-remaining: 38
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7366,15 +7415,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nombre_niveau=3" \
     --form "code=BATIMENT_MELEN_0569" \
-    --form "longitude=voluptatem" \
-    --form "latitude=quaerat" \
+    --form "longitude=ut" \
+    --form "latitude=id" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7392,8 +7441,8 @@ const headers = {
 const body = new FormData();
 body.append('nombre_niveau', '3');
 body.append('code', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'voluptatem');
-body.append('latitude', 'quaerat');
+body.append('longitude', 'ut');
+body.append('latitude', 'id');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -7431,11 +7480,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'voluptatem'
+                'contents' =&gt; 'ut'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'quaerat'
+                'contents' =&gt; 'id'
             ],
             [
                 'name' =&gt; 'ville',
@@ -7463,7 +7512,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp', 'r')
             ],
         ],
     ]
@@ -7478,13 +7527,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp', 'rb')
 }
 payload = {
     "nombre_niveau": 3,
     "code": "BATIMENT_MELEN_0569",
-    "longitude": "voluptatem",
-    "latitude": "quaerat",
+    "longitude": "ut",
+    "latitude": "id",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -7515,7 +7564,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
+x-ratelimit-remaining: 37
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7526,15 +7575,15 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_MELEN_0569&quot;,
-            &quot;longitude&quot;: &quot;voluptatem&quot;,
-            &quot;latitude&quot;: &quot;quaerat&quot;,
+            &quot;longitude&quot;: &quot;ut&quot;,
+            &quot;latitude&quot;: &quot;id&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;commune&quot;: &quot;Yaounde IV&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1695380672_test.jpg&quot;,
-            &quot;id&quot;: 26
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1704451480_test.jpg&quot;,
+            &quot;id&quot;: 27
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
@@ -7661,10 +7710,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="POSTapi-batiments"
-               value="voluptatem"
+               value="ut"
                data-component="body">
     <br>
-<p>required. Example: <code>voluptatem</code></p>
+<p>required. Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -7672,10 +7721,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="POSTapi-batiments"
-               value="quaerat"
+               value="id"
                data-component="body">
     <br>
-<p>required. Example: <code>quaerat</code></p>
+<p>required. Example: <code>id</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
@@ -7730,7 +7779,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7557.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -7852,7 +7901,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 39
+x-ratelimit-remaining: 36
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8112,15 +8161,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Sogefi" \
     --form "nombre_niveau=3" \
-    --form "longitude=sunt" \
-    --form "latitude=commodi" \
+    --form "longitude=dolores" \
+    --form "latitude=consequatur" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8138,8 +8187,8 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('nombre_niveau', '3');
-body.append('longitude', 'sunt');
-body.append('latitude', 'commodi');
+body.append('longitude', 'dolores');
+body.append('latitude', 'consequatur');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -8177,11 +8226,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'sunt'
+                'contents' =&gt; 'dolores'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'commodi'
+                'contents' =&gt; 'consequatur'
             ],
             [
                 'name' =&gt; 'indication',
@@ -8209,7 +8258,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp', 'r')
             ],
         ],
     ]
@@ -8224,13 +8273,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments/3'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "nombre_niveau": 3,
-    "longitude": "sunt",
-    "latitude": "commodi",
+    "longitude": "dolores",
+    "latitude": "consequatur",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -8251,7 +8300,42 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-batiments--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 35
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;batiment&quot;: {
+            &quot;id&quot;: 3,
+            &quot;nom&quot;: &quot;Sogefi&quot;,
+            &quot;nombre_niveau&quot;: 3,
+            &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
+            &quot;longitude&quot;: &quot;dolores&quot;,
+            &quot;latitude&quot;: &quot;consequatur&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1704451480_test.jpg&quot;,
+            &quot;indication&quot;: &quot;Rue de melen&quot;,
+            &quot;rue&quot;: &quot;Rue de Melen&quot;,
+            &quot;ville&quot;: &quot;Douala&quot;,
+            &quot;commune&quot;: &quot;Yaounde IV&quot;,
+            &quot;quartier&quot;: &quot;Melen&quot;
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-batiments--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-batiments--id-"></span>:
@@ -8388,10 +8472,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="PUTapi-batiments--id-"
-               value="sunt"
+               value="dolores"
                data-component="body">
     <br>
-<p>Example: <code>sunt</code></p>
+<p>Example: <code>dolores</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8399,10 +8483,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="PUTapi-batiments--id-"
-               value="commodi"
+               value="consequatur"
                data-component="body">
     <br>
-<p>Example: <code>commodi</code></p>
+<p>Example: <code>consequatur</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -8413,7 +8497,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php75B7.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8567,7 +8651,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 38
+x-ratelimit-remaining: 34
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8705,7 +8789,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
-    \"batiment\": \"consequatur\"
+    \"batiment\": \"distinctio\"
 }"
 </code></pre></div>
 
@@ -8723,7 +8807,7 @@ const headers = {
 };
 
 let body = {
-    "batiment": "consequatur"
+    "batiment": "distinctio"
 };
 
 fetch(url, {
@@ -8745,7 +8829,7 @@ $response = $client-&gt;post(
             'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
         ],
         'json' =&gt; [
-            'batiment' =&gt; 'consequatur',
+            'batiment' =&gt; 'distinctio',
         ],
     ]
 );
@@ -8759,7 +8843,7 @@ import json
 
 url = 'http://localhost:8000/api/add/batiments'
 payload = {
-    "batiment": "consequatur"
+    "batiment": "distinctio"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -8784,7 +8868,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 33
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8824,14 +8908,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 799,
+            &quot;line&quot;: 806,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8845,7 +8929,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8859,7 +8943,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8887,7 +8971,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8901,42 +8985,42 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 805,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 777,
+            &quot;line&quot;: 784,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 741,
+            &quot;line&quot;: 748,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 730,
+            &quot;line&quot;: 737,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8950,7 +9034,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8964,7 +9048,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -8985,7 +9069,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9006,7 +9090,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9020,21 +9104,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 89,
+            &quot;line&quot;: 99,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9048,7 +9132,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9062,14 +9146,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9090,28 +9188,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
+            &quot;line&quot;: 300,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
+            &quot;line&quot;: 288,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
+            &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9125,7 +9223,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
+            &quot;line&quot;: 236,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9146,28 +9244,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
+            &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
+            &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9230,21 +9328,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1081,
+            &quot;line&quot;: 1096,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
+            &quot;line&quot;: 324,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -9365,10 +9463,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="batiment"                data-endpoint="POSTapi-add-batiments"
-               value="consequatur"
+               value="distinctio"
                data-component="body">
     <br>
-<p>JSONObject. Example: <code>consequatur</code></p>
+<p>JSONObject. Example: <code>distinctio</code></p>
         </div>
         </form>
 
@@ -9463,171 +9561,6 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;categories&quot;: [
-            {
-                &quot;id&quot;: 1,
-                &quot;nom&quot;: &quot;Achats&quot;,
-                &quot;shortname&quot;: &quot;Achats&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                &quot;color&quot;: &quot;#2196F3&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 1,
-                        &quot;nom&quot;: &quot;Boutiques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 2,
-                        &quot;nom&quot;: &quot;Brocante&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 3,
-                        &quot;nom&quot;: &quot;Supermarch&eacute;&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 4,
-                        &quot;nom&quot;: &quot;Epicerie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 5,
-                        &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 6,
-                        &quot;nom&quot;: &quot;Centre Commercial&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 7,
-                        &quot;nom&quot;: &quot;Maison et Jardin&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 8,
-                        &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 9,
-                        &quot;nom&quot;: &quot;Fleuriste&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 10,
-                        &quot;nom&quot;: &quot;Boulangerie, P&acirc;tisserie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 11,
-                        &quot;nom&quot;: &quot;Caviste&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 12,
-                        &quot;nom&quot;: &quot;Tabac&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 13,
-                        &quot;nom&quot;: &quot;Jouets et jeux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 14,
-                        &quot;nom&quot;: &quot;Magasin de sport&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 15,
-                        &quot;nom&quot;: &quot;Ameublement et Mobilier&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 16,
-                        &quot;nom&quot;: &quot;Fournitures de Bureaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 17,
-                        &quot;nom&quot;: &quot;Mobilier de Bureaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 18,
-                        &quot;nom&quot;: &quot;Mobilier de Jardin&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 19,
-                        &quot;nom&quot;: &quot;V&ecirc;tements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 20,
-                        &quot;nom&quot;: &quot;Chaussures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 21,
-                        &quot;nom&quot;: &quot;Bijoux et accessoires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 22,
-                        &quot;nom&quot;: &quot;Pu&eacute;riculture&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
             {
                 &quot;id&quot;: 2,
                 &quot;nom&quot;: &quot;Administrations&quot;,
@@ -13114,6 +13047,171 @@ vary: Origin
                     {
                         &quot;id&quot;: 480,
                         &quot;nom&quot;: &quot;Activit&eacute;s Informelles&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    }
+                ]
+            },
+            {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Achats&quot;,
+                &quot;shortname&quot;: &quot;Achats&quot;,
+                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                &quot;color&quot;: &quot;#2196F3&quot;,
+                &quot;vues&quot;: 0,
+                &quot;sous_categories&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;nom&quot;: &quot;Boutiques&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 2,
+                        &quot;nom&quot;: &quot;Brocante&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 3,
+                        &quot;nom&quot;: &quot;Supermarch&eacute;&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 4,
+                        &quot;nom&quot;: &quot;Epicerie&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 5,
+                        &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 6,
+                        &quot;nom&quot;: &quot;Centre Commercial&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 7,
+                        &quot;nom&quot;: &quot;Maison et Jardin&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 8,
+                        &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 9,
+                        &quot;nom&quot;: &quot;Fleuriste&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 10,
+                        &quot;nom&quot;: &quot;Boulangerie, P&acirc;tisserie&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 11,
+                        &quot;nom&quot;: &quot;Caviste&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 12,
+                        &quot;nom&quot;: &quot;Tabac&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 13,
+                        &quot;nom&quot;: &quot;Jouets et jeux&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 14,
+                        &quot;nom&quot;: &quot;Magasin de sport&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 15,
+                        &quot;nom&quot;: &quot;Ameublement et Mobilier&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 16,
+                        &quot;nom&quot;: &quot;Fournitures de Bureaux&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 17,
+                        &quot;nom&quot;: &quot;Mobilier de Bureaux&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 18,
+                        &quot;nom&quot;: &quot;Mobilier de Jardin&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 19,
+                        &quot;nom&quot;: &quot;V&ecirc;tements&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 20,
+                        &quot;nom&quot;: &quot;Chaussures&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 21,
+                        &quot;nom&quot;: &quot;Bijoux et accessoires&quot;,
+                        &quot;logourl&quot;: null,
+                        &quot;logourlmap&quot;: null,
+                        &quot;color&quot;: null
+                    },
+                    {
+                        &quot;id&quot;: 22,
+                        &quot;nom&quot;: &quot;Pu&eacute;riculture&quot;,
                         &quot;logourl&quot;: null,
                         &quot;logourlmap&quot;: null,
                         &quot;color&quot;: null
@@ -17351,10 +17449,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "vues=true" \
-    --form "color=recusandae" \
+    --form "color=eos" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -17372,7 +17470,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('vues', 'true');
-body.append('color', 'recusandae');
+body.append('color', 'eos');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
@@ -17406,7 +17504,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'recusandae'
+                'contents' =&gt; 'eos'
             ],
             [
                 'name' =&gt; '_method',
@@ -17414,11 +17512,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp', 'r')
             ],
         ],
     ]
@@ -17433,13 +17531,13 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "vues": "true",
-    "color": "recusandae",
+    "color": "eos",
     "_method": "PUT"
 }
 headers = {
@@ -17455,7 +17553,37 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-categories--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 54
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;categorie&quot;: {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;Achat&quot;,
+            &quot;shortname&quot;: &quot;Administration&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1704451479_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1704451479_test.jpg&quot;,
+            &quot;color&quot;: &quot;eos&quot;,
+            &quot;vues&quot;: 1
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-categories--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-categories--id-"></span>:
@@ -17569,7 +17697,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6ECB.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -17580,7 +17708,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6EDC.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -17610,10 +17738,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-categories--id-"
-               value="recusandae"
+               value="eos"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>recusandae</code></p>
+<p>the color of the category Example: <code>eos</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -17648,10 +17776,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "shortname=aut" \
-    --form "color=porro" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp" </code></pre></div>
+    --form "shortname=blanditiis" \
+    --form "color=officia" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -17668,8 +17796,8 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'aut');
-body.append('color', 'porro');
+body.append('shortname', 'blanditiis');
+body.append('color', 'officia');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -17698,19 +17826,19 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'aut'
+                'contents' =&gt; 'blanditiis'
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'porro'
+                'contents' =&gt; 'officia'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp', 'r')
             ],
         ],
     ]
@@ -17725,13 +17853,13 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "aut",
-    "color": "porro"
+    "shortname": "blanditiis",
+    "color": "officia"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -17756,7 +17884,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 16
+x-ratelimit-remaining: 6
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -17766,10 +17894,10 @@ vary: Origin
         &quot;categorie&quot;: {
             &quot;id&quot;: 28,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;shortname&quot;: &quot;aut&quot;,
-            &quot;color&quot;: &quot;porro&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1695380675_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1695380675_test.jpg&quot;
+            &quot;shortname&quot;: &quot;blanditiis&quot;,
+            &quot;color&quot;: &quot;officia&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1704451481_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1704451481_test.jpg&quot;
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de la cat&eacute;gorie reussie&quot;
@@ -17885,10 +18013,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="shortname"                data-endpoint="POSTapi-categories"
-               value="aut"
+               value="blanditiis"
                data-component="body">
     <br>
-<p>Example: <code>aut</code></p>
+<p>Example: <code>blanditiis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourl</code></b>&nbsp;&nbsp;
@@ -17899,7 +18027,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8007.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -17910,7 +18038,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8018.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -17918,10 +18046,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-categories"
-               value="porro"
+               value="officia"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>porro</code></p>
+<p>the color of the category Example: <code>officia</code></p>
         </div>
         </form>
 
@@ -18009,7 +18137,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 15
+x-ratelimit-remaining: 5
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18213,7 +18341,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
+x-ratelimit-remaining: 32
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18426,7 +18554,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 35
+x-ratelimit-remaining: 31
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18437,17 +18565,17 @@ vary: Origin
             &quot;user_id&quot;: 1,
             &quot;commentaire&quot;: &quot;J&#039;aime ce lieu&quot;,
             &quot;rating&quot;: 3,
-            &quot;updated_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
-            &quot;id&quot;: 4,
+            &quot;updated_at&quot;: &quot;2024-01-05T10:44:40.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-01-05T10:44:40.000000Z&quot;,
+            &quot;id&quot;: 5,
             &quot;user&quot;: {
                 &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Admin&quot;,
+                &quot;name&quot;: &quot;Gautier&quot;,
                 &quot;email&quot;: &quot;admin@position.cm&quot;,
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                &quot;phone&quot;: &quot;699999999&quot;,
+                &quot;phone&quot;: 699999999,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;https://www.gravatar.com/avatar/cc7f85717aae3a03e26cbd2a076e0a3d?s=200&amp;d=mm&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -18457,9 +18585,9 @@ vary: Origin
                         &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                         &quot;pivot&quot;: {
+                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
                             &quot;model_id&quot;: 1,
-                            &quot;role_id&quot;: 1,
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;
+                            &quot;role_id&quot;: 1
                         }
                     }
                 ],
@@ -18688,7 +18816,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 34
+x-ratelimit-remaining: 30
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18700,7 +18828,7 @@ vary: Origin
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php&quot;,
-            &quot;line&quot;: 254,
+            &quot;line&quot;: 255,
             &quot;function&quot;: &quot;handleError&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18742,14 +18870,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 799,
+            &quot;line&quot;: 806,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18763,7 +18891,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18777,7 +18905,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18805,7 +18933,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18819,42 +18947,42 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 805,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 777,
+            &quot;line&quot;: 784,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 741,
+            &quot;line&quot;: 748,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 730,
+            &quot;line&quot;: 737,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18868,7 +18996,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18882,7 +19010,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18903,7 +19031,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18924,7 +19052,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18938,21 +19066,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 89,
+            &quot;line&quot;: 99,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18966,7 +19094,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -18980,14 +19108,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19008,28 +19150,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
+            &quot;line&quot;: 300,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
+            &quot;line&quot;: 288,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
+            &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19043,7 +19185,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
+            &quot;line&quot;: 236,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19064,28 +19206,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
+            &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
+            &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19148,21 +19290,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1081,
+            &quot;line&quot;: 1096,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
+            &quot;line&quot;: 324,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19387,7 +19529,29 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-commentaires--id-">
-</span>
+            <blockquote>
+            <p>Example response (400):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 29
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Erreur.&quot;,
+    &quot;data&quot;: {
+        &quot;error&quot;: &quot;Echec de mise &agrave; jour&quot;
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-commentaires--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-commentaires--id-"></span>:
@@ -19615,7 +19779,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 33
+x-ratelimit-remaining: 28
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19832,7 +19996,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
+x-ratelimit-remaining: 50
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19872,14 +20036,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 799,
+            &quot;line&quot;: 806,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19893,7 +20057,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19907,7 +20071,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19935,42 +20099,42 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 805,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 777,
+            &quot;line&quot;: 784,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 741,
+            &quot;line&quot;: 748,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 730,
+            &quot;line&quot;: 737,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19984,7 +20148,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -19998,7 +20162,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20019,7 +20183,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20040,7 +20204,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20054,21 +20218,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 89,
+            &quot;line&quot;: 99,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20082,7 +20246,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20096,14 +20260,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20124,28 +20302,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
+            &quot;line&quot;: 300,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
+            &quot;line&quot;: 288,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
+            &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20159,7 +20337,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
+            &quot;line&quot;: 236,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20180,28 +20358,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
+            &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
+            &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20264,21 +20442,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1081,
+            &quot;line&quot;: 1096,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
+            &quot;line&quot;: 324,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -20508,7 +20686,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
+x-ratelimit-remaining: 49
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -20828,7 +21006,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
+x-ratelimit-remaining: 48
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -22344,7 +22522,7 @@ vary: Origin
             &quot;links&quot;: [
                 {
                     &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                    &quot;label&quot;: &quot;pagination.previous&quot;,
                     &quot;active&quot;: false
                 },
                 {
@@ -22354,7 +22532,7 @@ vary: Origin
                 },
                 {
                     &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                    &quot;label&quot;: &quot;pagination.next&quot;,
                     &quot;active&quot;: false
                 }
             ],
@@ -22572,7 +22750,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 48
+x-ratelimit-remaining: 47
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -22612,14 +22790,14 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 799,
+            &quot;line&quot;: 806,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22633,7 +22811,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22647,7 +22825,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22675,42 +22853,42 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 798,
+            &quot;line&quot;: 805,
             &quot;function&quot;: &quot;then&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 777,
+            &quot;line&quot;: 784,
             &quot;function&quot;: &quot;runRouteWithinStack&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 741,
+            &quot;line&quot;: 748,
             &quot;function&quot;: &quot;runRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 730,
+            &quot;line&quot;: 737,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22724,7 +22902,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22738,7 +22916,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22759,7 +22937,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22780,7 +22958,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22794,21 +22972,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 89,
+            &quot;line&quot;: 99,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22822,7 +23000,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22836,14 +23014,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22864,28 +23056,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
+            &quot;line&quot;: 300,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
+            &quot;line&quot;: 288,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
+            &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22899,7 +23091,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
+            &quot;line&quot;: 236,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -22920,28 +23112,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
+            &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
+            &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23004,21 +23196,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1081,
+            &quot;line&quot;: 1096,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
+            &quot;line&quot;: 324,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23263,7 +23455,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 47
+x-ratelimit-remaining: 46
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -23280,7 +23472,7 @@ vary: Origin
             &quot;links&quot;: [
                 {
                     &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                    &quot;label&quot;: &quot;pagination.previous&quot;,
                     &quot;active&quot;: false
                 },
                 {
@@ -23290,7 +23482,7 @@ vary: Origin
                 },
                 {
                     &quot;url&quot;: null,
-                    &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                    &quot;label&quot;: &quot;pagination.next&quot;,
                     &quot;active&quot;: false
                 }
             ],
@@ -23468,7 +23660,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/etablissements/vues/sunt" \
+    "http://localhost:8000/api/etablissements/vues/cumque" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -23476,7 +23668,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/etablissements/vues/sunt"
+    "http://localhost:8000/api/etablissements/vues/cumque"
 );
 
 const headers = {
@@ -23494,7 +23686,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/etablissements/vues/sunt',
+    'http://localhost:8000/api/etablissements/vues/cumque',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -23511,7 +23703,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/etablissements/vues/sunt'
+url = 'http://localhost:8000/api/etablissements/vues/cumque'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -23612,10 +23804,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-etablissements-vues--id-"
-               value="sunt"
+               value="cumque"
                data-component="url">
     <br>
-<p>The ID of the vue. Example: <code>sunt</code></p>
+<p>The ID of the vue. Example: <code>cumque</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -23650,7 +23842,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -23694,7 +23886,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp', 'r')
             ],
         ],
     ]
@@ -23709,7 +23901,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/cover/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -23769,21 +23961,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 754,
+            &quot;line&quot;: 761,
             &quot;function&quot;: &quot;match&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\RouteCollection&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 741,
+            &quot;line&quot;: 748,
             &quot;function&quot;: &quot;findRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 730,
+            &quot;line&quot;: 737,
             &quot;function&quot;: &quot;dispatchToRoute&quot;,
             &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23797,7 +23989,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 141,
+            &quot;line&quot;: 144,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23811,7 +24003,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23832,7 +24024,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23853,7 +24045,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23867,21 +24059,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 89,
+            &quot;line&quot;: 99,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23895,7 +24087,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23909,14 +24101,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 180,
+            &quot;line&quot;: 183,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 116,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
             &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23937,28 +24143,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 299,
+            &quot;line&quot;: 300,
             &quot;function&quot;: &quot;handle&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 287,
+            &quot;line&quot;: 288,
             &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 92,
+            &quot;line&quot;: 91,
             &quot;function&quot;: &quot;makeApiCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 45,
+            &quot;line&quot;: 44,
             &quot;function&quot;: &quot;makeResponseCall&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23972,7 +24178,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 209,
+            &quot;line&quot;: 236,
             &quot;function&quot;: &quot;__invoke&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -23993,28 +24199,28 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 124,
+            &quot;line&quot;: 125,
             &quot;function&quot;: &quot;processRoute&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 71,
+            &quot;line&quot;: 72,
             &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 49,
+            &quot;line&quot;: 50,
             &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 51,
+            &quot;line&quot;: 53,
             &quot;function&quot;: &quot;get&quot;,
             &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -24077,21 +24283,21 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1081,
+            &quot;line&quot;: 1096,
             &quot;function&quot;: &quot;run&quot;,
             &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 320,
+            &quot;line&quot;: 324,
             &quot;function&quot;: &quot;doRunCommand&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 174,
+            &quot;line&quot;: 175,
             &quot;function&quot;: &quot;doRun&quot;,
             &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -24227,7 +24433,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7390.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -24321,7 +24527,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 46
+x-ratelimit-remaining: 44
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -24453,9 +24659,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "osm_id=111259658236" \
     --form "commodites=Wifi;Parking" \
     --form "ameliorations=Site internet;videos" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -24581,15 +24787,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp', 'r')
             ],
         ],
     ]
@@ -24604,9 +24810,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -24650,7 +24856,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 31
+x-ratelimit-remaining: 26
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -24673,12 +24879,12 @@ vary: Origin
             &quot;ameliorations&quot;: &quot;Site internet;videos&quot;,
             &quot;nom_manager&quot;: &quot;Nom Manager.&quot;,
             &quot;contact_manager&quot;: &quot;699999999.&quot;,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1695380673_test.jpg&quot;,
-            &quot;updated_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2023-09-22T11:04:33.000000Z&quot;,
-            &quot;id&quot;: 26
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
+            &quot;updated_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
+            &quot;id&quot;: 27
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;etablissement reussie&quot;
@@ -24929,7 +25135,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76A2.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>whatsapp2</code></b>&nbsp;&nbsp;
@@ -24984,7 +25190,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76B3.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -24995,7 +25201,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76B4.tmp</code></p>
+<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp</code></p>
         </div>
         </form>
 
@@ -25033,9 +25239,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "ameliorations=Site internet,videos" \
     --form "vues=true" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -25151,15 +25357,15 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp', 'r')
             ],
         ],
     ]
@@ -25174,9 +25380,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -25208,7 +25414,67 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-etablissements--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 25
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;etablissement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Sogefi&quot;,
+            &quot;indication_adresse&quot;: &quot;Rue de Melen&quot;,
+            &quot;code_postal&quot;: &quot;59684&quot;,
+            &quot;site_internet&quot;: &quot;sogefi.cm.&quot;,
+            &quot;nom_manager&quot;: null,
+            &quot;contact_manager&quot;: null,
+            &quot;etage&quot;: 3,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
+            &quot;phone&quot;: &quot;699999999&quot;,
+            &quot;whatsapp1&quot;: &quot;699999999&quot;,
+            &quot;whatsapp2&quot;: &quot;699999999&quot;,
+            &quot;description&quot;: &quot;Super etablissement.&quot;,
+            &quot;osm_id&quot;: &quot;111259658236&quot;,
+            &quot;services&quot;: &quot;OM;MOMO&quot;,
+            &quot;commodites&quot;: &quot;Wifi;Parking&quot;,
+            &quot;ameliorations&quot;: &quot;Site internet,videos&quot;,
+            &quot;vues&quot;: 2,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
+            &quot;batiment&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
+                &quot;longitude&quot;: &quot;11.2292075&quot;,
+                &quot;latitude&quot;: &quot;4.0782882&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
+                &quot;ville&quot;: &quot;Okala&quot;,
+                &quot;commune&quot;: &quot;undefined&quot;,
+                &quot;quartier&quot;: &quot;undefined&quot;
+            }
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-etablissements--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-etablissements--id-"></span>:
@@ -25377,7 +25643,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F7.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etage</code></b>&nbsp;&nbsp;
@@ -25487,7 +25753,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F8.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -25498,7 +25764,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php76F9.tmp</code></p>
+<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -25597,7 +25863,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 30
+x-ratelimit-remaining: 24
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -25814,7 +26080,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 24
+x-ratelimit-remaining: 16
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -25824,7 +26090,7 @@ vary: Origin
         &quot;favorite&quot;: {
             &quot;etablissement_id&quot;: 1,
             &quot;user_id&quot;: 1,
-            &quot;id&quot;: 4
+            &quot;id&quot;: 5
         }
     },
     &quot;message&quot;: &quot;Etablissement ajout&eacute; aux favoris&quot;
@@ -26035,7 +26301,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 23
+x-ratelimit-remaining: 15
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26174,7 +26440,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -26218,7 +26484,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp', 'r')
             ],
         ],
     ]
@@ -26233,7 +26499,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1
@@ -26261,7 +26527,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 27
+x-ratelimit-remaining: 20
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26269,9 +26535,9 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;image&quot;: {
-            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1695380673_test.jpg&quot;,
+            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1704451481_test.jpg&quot;,
             &quot;etablissement_id&quot;: 1,
-            &quot;id&quot;: 4
+            &quot;id&quot;: 5
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;image reussie&quot;
@@ -26390,7 +26656,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7767.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp</code></p>
         </div>
         </form>
 
@@ -26414,7 +26680,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -26458,7 +26724,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp', 'r')
             ],
         ],
     ]
@@ -26473,7 +26739,7 @@ import json
 
 url = 'http://localhost:8000/api/images/1'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -26491,7 +26757,527 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-images--id-">
-</span>
+            <blockquote>
+            <p>Example response (500):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 19
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Attempt to read property \&quot;etablissement_id\&quot; on null&quot;,
+    &quot;exception&quot;: &quot;ErrorException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\ImageController.php&quot;,
+    &quot;line&quot;: 97,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php&quot;,
+            &quot;line&quot;: 255,
+            &quot;function&quot;: &quot;handleError&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\ImageController.php&quot;,
+            &quot;line&quot;: 97,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;update&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\ImageController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 43,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 259,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 806,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
+            &quot;line&quot;: 28,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
+            &quot;line&quot;: 57,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 805,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 784,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 748,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 737,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 99,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 300,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 288,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 91,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 44,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 236,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 72,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 53,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1096,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 324,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-images--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-images--id-"></span>:
@@ -26605,7 +27391,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7798.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -26704,7 +27490,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 26
+x-ratelimit-remaining: 18
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26927,7 +27713,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 29
+x-ratelimit-remaining: 23
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -27149,7 +27935,29 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-horaires--id-">
-</span>
+            <blockquote>
+            <p>Example response (400):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 22
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Erreur.&quot;,
+    &quot;data&quot;: {
+        &quot;error&quot;: &quot;Echec de mise &agrave; jour&quot;
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-horaires--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-horaires--id-"></span>:
@@ -27362,7 +28170,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 28
+x-ratelimit-remaining: 21
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -27561,7 +28369,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 53
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -35416,7 +36224,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 52
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -35629,7 +36437,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 51
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -43438,9 +44246,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "categorie_id=5" \
-    --form "color=dolorem" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp" </code></pre></div>
+    --form "color=ipsam" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -43458,7 +44266,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('categorie_id', '5');
-body.append('color', 'dolorem');
+body.append('color', 'ipsam');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -43491,15 +44299,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'dolorem'
+                'contents' =&gt; 'ipsam'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp', 'r')
             ],
         ],
     ]
@@ -43514,13 +44322,13 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "categorie_id": 5,
-    "color": "dolorem"
+    "color": "ipsam"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -43545,7 +44353,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 14
+x-ratelimit-remaining: 4
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -43555,9 +44363,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 481,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;color&quot;: &quot;dolorem&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1695380675_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1695380675_test.jpg&quot;,
+            &quot;color&quot;: &quot;ipsam&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1704451482_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1704451482_test.jpg&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 5,
                 &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
@@ -43696,7 +44504,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8076.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -43707,7 +44515,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8077.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -43715,10 +44523,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-souscategories"
-               value="dolorem"
+               value="ipsam"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>dolorem</code></p>
+<p>the color of the subcategory Example: <code>ipsam</code></p>
         </div>
         </form>
 
@@ -43742,11 +44550,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "color=ipsam" \
+    --form "color=earum" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -43763,7 +44571,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('color', 'ipsam');
+body.append('color', 'earum');
 body.append('idcategorie', '5');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
@@ -43794,7 +44602,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'ipsam'
+                'contents' =&gt; 'earum'
             ],
             [
                 'name' =&gt; 'idcategorie',
@@ -43806,11 +44614,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp', 'r')
             ],
         ],
     ]
@@ -43825,12 +44633,12 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "color": "ipsam",
+    "color": "earum",
     "idcategorie": 5,
     "_method": "PUT"
 }
@@ -43847,7 +44655,44 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-PUTapi-souscategories--id-">
-</span>
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 3
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;sous_categorie&quot;: {
+            &quot;id&quot;: 2,
+            &quot;nom&quot;: &quot;Achat&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1704451482_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1704451482_test.jpg&quot;,
+            &quot;color&quot;: &quot;earum&quot;,
+            &quot;categorie&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Achats&quot;,
+                &quot;shortname&quot;: &quot;Achats&quot;,
+                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
+                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
+                &quot;color&quot;: &quot;#2196F3&quot;,
+                &quot;vues&quot;: 0
+            }
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-souscategories--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-souscategories--id-"></span>:
@@ -43961,7 +44806,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php80B7.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -43972,7 +44817,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php80B8.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -43991,10 +44836,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-souscategories--id-"
-               value="ipsam"
+               value="earum"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>ipsam</code></p>
+<p>the color of the subcategory Example: <code>earum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>idcategorie</code></b>&nbsp;&nbsp;
@@ -44104,7 +44949,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 13
+x-ratelimit-remaining: 2
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -44325,29 +45170,7 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-POSTapi-tracking">
-            <blockquote>
-            <p>Example response (400):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Erreur.&quot;,
-    &quot;data&quot;: {
-        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (Connection: pgsql, SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-09-22 12:04:32, 2023-09-22 12:04:32) returning \&quot;id\&quot;)&quot;
-    }
-}</code>
- </pre>
-    </span>
+</span>
 <span id="execution-results-POSTapi-tracking" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-tracking"></span>:
@@ -44587,29 +45410,7 @@ response.json()</code></pre></div>
 </span>
 
 <span id="example-responses-POSTapi-trackings">
-            <blockquote>
-            <p>Example response (400):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 32
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Erreur.&quot;,
-    &quot;data&quot;: {
-        &quot;error&quot;: &quot;SQLSTATE[42703]: Undefined column: 7 ERREUR:  la colonne &laquo; speed &raquo; de la relation &laquo; trackings &raquo; n&#039;existe pas\nLINE 1: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;...\n                                                          ^ (Connection: pgsql, SQL: insert into \&quot;trackings\&quot; (\&quot;longitude\&quot;, \&quot;latitude\&quot;, \&quot;speed\&quot;, \&quot;timestamp\&quot;, \&quot;user_id\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (12, 4, 30, 23456789, 1, 2023-09-22 12:04:33, 2023-09-22 12:04:33) returning \&quot;id\&quot;)&quot;
-    }
-}</code>
- </pre>
-    </span>
+</span>
 <span id="execution-results-POSTapi-trackings" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-trackings"></span>:
