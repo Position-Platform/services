@@ -4413,30 +4413,30 @@
         },
         {
             "name": "laravel/vonage-notification-channel",
-            "version": "v3.2.1",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/vonage-notification-channel.git",
-                "reference": "9423dbdfff4a47ed7be5eb4bff9c050a6de4e2f4"
+                "reference": "b553cca2f2955c146f97b7c5684e08b19450940a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/vonage-notification-channel/zipball/9423dbdfff4a47ed7be5eb4bff9c050a6de4e2f4",
-                "reference": "9423dbdfff4a47ed7be5eb4bff9c050a6de4e2f4",
+                "url": "https://api.github.com/repos/laravel/vonage-notification-channel/zipball/b553cca2f2955c146f97b7c5684e08b19450940a",
+                "reference": "b553cca2f2955c146f97b7c5684e08b19450940a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/notifications": "^8.0|^9.0|^10.0",
-                "illuminate/support": "^8.0|^9.0|^10.0",
+                "illuminate/notifications": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
                 "php": "^8.0",
                 "vonage/client-core": "^4.0.4"
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.2",
                 "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
                 "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^9.0"
+                "phpunit/phpunit": "^9.0|^10.4"
             },
             "type": "library",
             "extra": {
@@ -4476,9 +4476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/vonage-notification-channel/issues",
-                "source": "https://github.com/laravel/vonage-notification-channel/tree/v3.2.1"
+                "source": "https://github.com/laravel/vonage-notification-channel/tree/v3.3.0"
             },
-            "time": "2023-05-01T15:47:10+00:00"
+            "time": "2024-01-15T15:48:22+00:00"
         },
         {
             "name": "lcobucci/clock",
@@ -4861,16 +4861,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.23.0",
+            "version": "3.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "d4ad81e2b67396e33dc9d7e54ec74ccf73151dcc"
+                "reference": "199e1aebbe3e62bd39f4d4fc8c61ce0b3786197e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d4ad81e2b67396e33dc9d7e54ec74ccf73151dcc",
-                "reference": "d4ad81e2b67396e33dc9d7e54ec74ccf73151dcc",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/199e1aebbe3e62bd39f4d4fc8c61ce0b3786197e",
+                "reference": "199e1aebbe3e62bd39f4d4fc8c61ce0b3786197e",
                 "shasum": ""
             },
             "require": {
@@ -4935,7 +4935,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.23.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.23.1"
             },
             "funding": [
                 {
@@ -4947,20 +4947,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-04T10:16:17+00:00"
+            "time": "2024-01-26T18:42:03+00:00"
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.23.0",
+            "version": "3.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "5cf046ba5f059460e86a997c504dd781a39a109b"
+                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/5cf046ba5f059460e86a997c504dd781a39a109b",
-                "reference": "5cf046ba5f059460e86a997c504dd781a39a109b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/b884d2bf9b53bb4804a56d2df4902bb51e253f00",
+                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00",
                 "shasum": ""
             },
             "require": {
@@ -4995,7 +4995,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem-local/issues",
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.0"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.1"
             },
             "funding": [
                 {
@@ -5007,7 +5007,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-04T10:14:46+00:00"
+            "time": "2024-01-26T18:25:23+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -12194,16 +12194,16 @@
         },
         {
             "name": "vonage/client-core",
-            "version": "4.6.0",
+            "version": "4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Vonage/vonage-php-sdk-core.git",
-                "reference": "c0cd4762f06e77c401438965e0d4d8ce38930818"
+                "reference": "2b0306eaa7394a22faa9aeec20615d08bd3cd9fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Vonage/vonage-php-sdk-core/zipball/c0cd4762f06e77c401438965e0d4d8ce38930818",
-                "reference": "c0cd4762f06e77c401438965e0d4d8ce38930818",
+                "url": "https://api.github.com/repos/Vonage/vonage-php-sdk-core/zipball/2b0306eaa7394a22faa9aeec20615d08bd3cd9fe",
+                "reference": "2b0306eaa7394a22faa9aeec20615d08bd3cd9fe",
                 "shasum": ""
             },
             "require": {
@@ -12254,24 +12254,24 @@
                 "issues": "https://github.com/Vonage/vonage-php-sdk-core/issues",
                 "source": "https://github.com/Vonage/vonage-php-sdk-core"
             },
-            "time": "2023-12-19T12:06:20+00:00"
+            "time": "2024-01-25T15:06:28+00:00"
         },
         {
             "name": "vonage/jwt",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Vonage/vonage-php-jwt.git",
-                "reference": "d24eebe46e25f13c27f18934136dbee83d3e7090"
+                "reference": "c84adbf1c8d90526dde85a025b011aeeb8bc4c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Vonage/vonage-php-jwt/zipball/d24eebe46e25f13c27f18934136dbee83d3e7090",
-                "reference": "d24eebe46e25f13c27f18934136dbee83d3e7090",
+                "url": "https://api.github.com/repos/Vonage/vonage-php-jwt/zipball/c84adbf1c8d90526dde85a025b011aeeb8bc4c96",
+                "reference": "c84adbf1c8d90526dde85a025b011aeeb8bc4c96",
                 "shasum": ""
             },
             "require": {
-                "lcobucci/jwt": "^4.7.5|^5.0",
+                "lcobucci/jwt": "^4.3.0|^5.0",
                 "php": "~8.1 || ~8.2 || ~8.3",
                 "ramsey/uuid": "^4.7.5"
             },
@@ -12304,9 +12304,9 @@
             ],
             "description": "A standalone package for creating JWTs for Vonage APIs",
             "support": {
-                "source": "https://github.com/Vonage/vonage-php-jwt/tree/0.5.0"
+                "source": "https://github.com/Vonage/vonage-php-jwt/tree/0.5.1"
             },
-            "time": "2023-12-19T11:53:29+00:00"
+            "time": "2024-01-19T11:15:22+00:00"
         },
         {
             "name": "vonage/nexmo-bridge",
