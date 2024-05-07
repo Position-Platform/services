@@ -38,7 +38,7 @@ return [
         'enabled' => true,
 
         'notifications' => [
-            Spatie\Health\Notifications\CheckFailedNotification::class => ['mail'],
+            Spatie\Health\Notifications\CheckFailedNotification::class => ['mail', 'slack'],
         ],
 
         /*
@@ -67,7 +67,7 @@ return [
         ],
 
         'slack' => [
-            'webhook_url' => env('HEALTH_SLACK_WEBHOOK_URL', ''),
+            'webhook_url' => env('HEALTH_SLACK_WEBHOOK_URL', 'https://hooks.slack.com/services/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'),
 
             /*
              * If this is set to null the default channel of the webhook will be used.
