@@ -31,7 +31,7 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/login', [App\Http\Controllers\Api\UserController::class, 'login']);
 
         Route::post('auth/register/facebook', [App\Http\Controllers\Api\SocialApiAuthFacebookController::class, 'facebookConnect']);
-      //  Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
+        //  Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
 
 
@@ -56,7 +56,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('search/etablissements/filter', [App\Http\Controllers\Api\EtablissementController::class, 'filterSearch']);
 
         Route::put('etablissements/vues/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateVues']);
-        Route::post('etablissements/cover/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateCover']);
+        Route::put('etablissements/cover/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'updateCover']);
         Route::get('count/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'countEtablissement']);
 
         Route::middleware('auth:api')->group(function () {

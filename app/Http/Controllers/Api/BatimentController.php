@@ -39,8 +39,6 @@ class BatimentController extends BaseController
                 } else {
                     $etablissement->isFavoris = false;
                 }
-
-
                 $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
                 $etablissement->isopen = $isOpen;
@@ -57,7 +55,7 @@ class BatimentController extends BaseController
 
                 $etablissement->user->abonnement;
 
-                $etablissement['sousCategories'] = $etablissement->sousCategories;
+                //  $etablissement['sousCategories'] = $etablissement->sousCategories;
                 $etablissement->commodites;
                 foreach ($etablissement->sousCategories as  $sousCategories) {
                     $sousCategories->categorie;
@@ -65,7 +63,7 @@ class BatimentController extends BaseController
 
                 $etablissement->horaires;
                 $etablissement->images;
-                $etablissement->commentaires;
+                //  $etablissement->commentaires;
 
                 foreach ($etablissement->commentaires as  $commentaires) {
                     $commentaires->user;
@@ -181,7 +179,7 @@ class BatimentController extends BaseController
             $etablissement->user->abonnement;
 
 
-            $etablissement['sousCategories'] = $etablissement->sousCategories;
+            // $etablissement['sousCategories'] = $etablissement->sousCategories;
             $etablissement->commodites;
             foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
@@ -255,7 +253,7 @@ class BatimentController extends BaseController
      * Delete Building.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the building. Example: 3
+     * @urlParam id int required the id of the building. Example: 1
      */
     public function destroy($id)
     {

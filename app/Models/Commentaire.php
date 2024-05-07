@@ -45,7 +45,7 @@ class Commentaire extends Model
     ];
 
     protected $hidden = [
-        'etablissement_id',
+        'etablissement_id', 'pivot'
     ];
 
     public function etablissement()
