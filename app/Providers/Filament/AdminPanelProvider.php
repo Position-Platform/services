@@ -26,6 +26,8 @@ use App\Filament\Pages\HealthPage;
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
 use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
+use Tapp\FilamentMailLog\FilamentMailLogPlugin;
+use Awcodes\FilamentVersions\VersionsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -58,6 +60,8 @@ class AdminPanelProvider extends PanelProvider
                         'xl' => 5,
                         '2xl' => null,
                     ]),
+                FilamentMailLogPlugin::make(),
+                VersionsPlugin::make(),
             ])
             ->login()
             ->colors([

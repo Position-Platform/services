@@ -15,6 +15,7 @@
         "php": "^8.0",
         "althinect/filament-spatie-roles-permissions": "^2.0",
         "amendozaaguiar/filament-route-statistics": "^1.4",
+        "awcodes/filament-versions": "^2.0",
         "awcodes/overlook": "^2.0",
         "bilfeldt/laravel-route-statistics": "^2.2",
         "doctrine/dbal": "^3.7.2",
@@ -34,11 +35,13 @@
         "njxqlus/filament-progressbar": "^1.0",
         "psr/simple-cache": "2.0",
         "pxlrbt/filament-excel": "^2.1",
+        "saade/filament-laravel-log": "3.0",
         "shuvroroy/filament-spatie-laravel-backup": "^2.0",
         "shuvroroy/filament-spatie-laravel-health": "^2.0",
         "spatie/laravel-backup": "^8.3",
         "spatie/laravel-health": "^1.23",
-        "spatie/laravel-permission": "^5.5"
+        "spatie/laravel-permission": "^5.5",
+        "tapp/filament-maillog": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.12",
