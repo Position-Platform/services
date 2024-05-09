@@ -352,7 +352,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 6, 2024</li>
+        <li>Last updated: May 8, 2024</li>
     </ul>
 </div>
 
@@ -862,7 +862,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 8
+x-ratelimit-remaining: 56
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -873,7 +873,7 @@ vary: Origin
             &quot;nom&quot;: &quot;Smart&quot;,
             &quot;prix&quot;: 5000,
             &quot;duree&quot;: 1,
-            &quot;id&quot;: 12
+            &quot;id&quot;: 18
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;abonnement reussie&quot;
@@ -1133,7 +1133,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 7
+x-ratelimit-remaining: 55
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1397,7 +1397,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 6
+x-ratelimit-remaining: 54
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1616,18 +1616,11 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Your project does not own Dynamic Links domain: https://app.position.cm [https://firebase.google.com/docs/dynamic-links/rest#create_a_short_link_from_parameters]&quot;,
+    &quot;message&quot;: &quot;Failed to create dynamic link: cURL error 56: OpenSSL SSL_read: error:0A000126:SSL routines::unexpected eof while reading, errno 0 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://firebasedynamiclinks.googleapis.com/v1/shortLinks&quot;,
     &quot;exception&quot;: &quot;Kreait\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink.php&quot;,
-    &quot;line&quot;: 28,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLinks.php&quot;,
+    &quot;line&quot;: 82,
     &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLinks.php&quot;,
-            &quot;line&quot;: 89,
-            &quot;function&quot;: &quot;withActionAndResponse&quot;,
-            &quot;class&quot;: &quot;Kreait\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Notifications\\SendResetLinkParams.php&quot;,
             &quot;line&quot;: 57,
@@ -2312,7 +2305,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
     \"email\": \"admin@position.cm\",
-    \"token\": \"eius\",
+    \"token\": \"ut\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -2332,7 +2325,7 @@ const headers = {
 
 let body = {
     "email": "admin@position.cm",
-    "token": "eius",
+    "token": "ut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -2356,7 +2349,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'admin@position.cm',
-            'token' =&gt; 'eius',
+            'token' =&gt; 'ut',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -2373,7 +2366,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "admin@position.cm",
-    "token": "eius",
+    "token": "ut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -2510,10 +2503,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-auth-password-reset"
-               value="eius"
+               value="ut"
                data-component="body">
     <br>
-<p>token give in mail. Example: <code>eius</code></p>
+<p>token give in mail. Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -2560,7 +2553,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php8BBE.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2617,7 +2610,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8BBE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'r')
             ],
         ],
     ]
@@ -2632,7 +2625,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php8BBE.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2822,7 +2815,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8BBE.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp</code></p>
         </div>
         </form>
 
@@ -2935,7 +2928,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMGUwMWNjZjE3MTQyNWE4ZTMyYzEzOTU4NTlhMWIyMWVmZDZhMTI3MTA3M2ZhOGNlOWE0MWU2ZTUzMzU0MTQzNjViNjM5ZDRlNTJhMjRhNTEiLCJpYXQiOjE3MTUwMTQ0NTguMzU3MDYxLCJuYmYiOjE3MTUwMTQ0NTguMzU3MDcxLCJleHAiOjE3MTc2MDY0NTguMzU1Mzk1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.aKYjszqWWTNMDWiIXxQt5HBCfBUJXtOmkMStFT4KBTLyA7Yg9T13ZMk2-IQOmF15Sr0AC_YxXu6l2TWPst56MQNCsmcf-kIATr69fvnxEDjcWww7Ua109GwqOZVFcAzoOaRQBKJ06ZVnNGijpq3JJpJV_knCSd1Nyub-hJ9ryg36Hkl4DnfOqWOtsgahICEmgHCMNvn2hpsACLVZUwSHxTkBbD9uUolt4i_l0jxduqDWo45V52ZgCIRUXHU5jzvngN-Gp75DOEf6VLZD_GYIysQ8tZysItQ71iLxQoAeXPV2eGSr_yL8WsQHBlpaIepByj5Y3IiSn2PrO-vluQmRlFzowfSntGTtKJ4LL31LMbvsntVzeMtUyFl3EGQNMCM2O6q9oNFuxg56pnj369StbFhAJ5bYnwXBQFppzh2VQUG2qWtPP1qC3ccBR0SBw4Vmsd5Q38S5Na606uqY9LHWGj4md5k9vgqB139XUnSKJTzj5vicS8et5Hi5OBGBT1UHhXeUXqLOpQZwjbMKpi4VYEsqSGRvyi7tPRp-5793hYfuCnu-lBIP2t4sC5SmLZI1363_qdaL3S-05HSTTd1MFffw1t7MuLDvGnnsO9VFMGfZII2iaTwWNVSUdC5hydamD0IXxG2T5qpglLQrFNLQwKBcjzjgctkBSSZ-8WMhphk&quot;,
+        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYWNiNmNhMmViZTY1YzY3ODA2ZmJhMDdhMTZiZWEzZjNmMmJhNTgzZGRlYjgxZGEyNzQ5MzM1YWU2MWQ1OTNiZjRiZTdkNTg1ZmM2MzQ4ZTAiLCJpYXQiOjE3MTUyMDg0NjIuMTE0NDQ1LCJuYmYiOjE3MTUyMDg0NjIuMTE0NDQ5LCJleHAiOjE3MTc4MDA0NjIuMTEyMjQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NzJc-CRfYdn7c3vc1drZX4hupPRZWXP2kxVF7OxAmj96TlLnPQnklol3hlYDvL94jtEnGc3dQKOsA6-GD5KpZYpE7bq9PHoNFwmQk5AOcF-Xt9_9v95sAByo2kdst4qm6M3yILe3silbcqVip-xR-t_rmdHDZ5ToDSOFmSTa90FVpyqt0ADb4fBGAzsDMpUIaFc-2jFArB0TFC1uylWRrxrnnEmjRN4ulMYqMz3Y2EYN-d4V6buDMQGMY0X3AF9b8VSuHYtSU1QvtB42hJ3B_2wjKRaV-dyPo5yNq4haUXL5Wi-uvrDvxP6LaG4awp_QGSQXvN9EeAs2uhPcPg6xbzZH9IGWbtaPydYn1fBJbJQo8rJISWueSr-DcDwtsi7LkX_jWD06J8cWWSE0_tapOK6jq1j2-TR8O0ysW5vew2s24qaNvxa2lSTeTIP6-Meu-t8dQONyQa013MCATYwG5TUKUI6GB6MFLBmw_BkXe1RkAKrfK9PoFgHfaMCO4xtn--H8MM6SzUHvHYYL2FXHxXYWr9KVPBUFrXqAmLrqgmR55p9VV87iHm3Ss_FuHHcSHDuvgzso-ZNjLX3TIJljMQmPeiMIQaPsPM6_unuKNLJS_dB_MLN0ruRz-rQ_-zfuCtuUZ0KA6ouh3Ti_UYiymP77J97skiYd0nBFZKsjjuk&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;Admin&quot;,
@@ -3714,7 +3707,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php9548.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3768,7 +3761,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9548.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'r')
             ],
         ],
     ]
@@ -3783,7 +3776,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php9548.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3827,7 +3820,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715014460_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1
         }
     },
@@ -3970,7 +3963,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9548.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -4283,7 +4276,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715014460_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1,
             &quot;roles&quot;: [
                 {
@@ -4829,7 +4822,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999990" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php9F0C.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4888,7 +4881,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9F0C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'r')
             ],
         ],
     ]
@@ -4903,7 +4896,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php9F0C.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4925,7 +4918,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-admins">
             <blockquote>
-            <p>Example response (201):</p>
+            <p>Example response (400):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4934,37 +4927,16 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 12
+x-ratelimit-remaining: 60
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Erreur.&quot;,
     &quot;data&quot;: {
-        &quot;admin&quot;: {
-            &quot;id&quot;: 5,
-            &quot;user&quot;: {
-                &quot;id&quot;: 13,
-                &quot;name&quot;: &quot;Gautier&quot;,
-                &quot;email&quot;: &quot;gautier@position.cm&quot;,
-                &quot;email_verified_at&quot;: null,
-                &quot;phone&quot;: &quot;699999990&quot;,
-                &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715014463_test.jpg&quot;,
-                &quot;abonnement_id&quot;: 1,
-                &quot;roles&quot;: [
-                    {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;admin&quot;,
-                        &quot;guard_name&quot;: &quot;api&quot;,
-                        &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
-                    }
-                ]
-            }
-        }
-    },
-    &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;admin reussie&quot;
+        &quot;error&quot;: &quot;Connection to \&quot;smtp.mailgun.org:25\&quot; timed out.&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -5113,7 +5085,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9F0C.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp</code></p>
         </div>
         </form>
 
@@ -5201,7 +5173,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 11
+x-ratelimit-remaining: 59
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5364,7 +5336,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "phone=699999992" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpB295.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5423,7 +5395,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB295.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'r')
             ],
         ],
     ]
@@ -5438,7 +5410,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB295.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5469,7 +5441,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 10
+x-ratelimit-remaining: 58
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5486,7 +5458,7 @@ vary: Origin
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                 &quot;phone&quot;: &quot;699999992&quot;,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715014468_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715208620_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -5654,7 +5626,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB295.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -5753,7 +5725,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 9
+x-ratelimit-remaining: 57
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7753,15 +7725,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nombre_niveau=3" \
     --form "code=BATIMENT_MELEN_0569" \
-    --form "longitude=id" \
-    --form "latitude=molestiae" \
+    --form "longitude=eum" \
+    --form "latitude=velit" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php9866.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7779,8 +7751,8 @@ const headers = {
 const body = new FormData();
 body.append('nombre_niveau', '3');
 body.append('code', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'id');
-body.append('latitude', 'molestiae');
+body.append('longitude', 'eum');
+body.append('latitude', 'velit');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -7818,11 +7790,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'id'
+                'contents' =&gt; 'eum'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'molestiae'
+                'contents' =&gt; 'velit'
             ],
             [
                 'name' =&gt; 'ville',
@@ -7850,7 +7822,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9866.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'r')
             ],
         ],
     ]
@@ -7865,13 +7837,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php9866.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'rb')
 }
 payload = {
     "nombre_niveau": 3,
     "code": "BATIMENT_MELEN_0569",
-    "longitude": "id",
-    "latitude": "molestiae",
+    "longitude": "eum",
+    "latitude": "velit",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -7913,15 +7885,15 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_MELEN_0569&quot;,
-            &quot;longitude&quot;: &quot;id&quot;,
-            &quot;latitude&quot;: &quot;molestiae&quot;,
+            &quot;longitude&quot;: &quot;eum&quot;,
+            &quot;latitude&quot;: &quot;velit&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;commune&quot;: &quot;Yaounde IV&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1715014461_test.jpg&quot;,
-            &quot;id&quot;: 33
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1715208465_test.jpg&quot;,
+            &quot;id&quot;: 39
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
@@ -8048,10 +8020,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="POSTapi-batiments"
-               value="id"
+               value="eum"
                data-component="body">
     <br>
-<p>required. Example: <code>id</code></p>
+<p>required. Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8059,10 +8031,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="POSTapi-batiments"
-               value="molestiae"
+               value="velit"
                data-component="body">
     <br>
-<p>required. Example: <code>molestiae</code></p>
+<p>required. Example: <code>velit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
@@ -8117,7 +8089,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9866.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8473,15 +8445,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Sogefi" \
     --form "nombre_niveau=3" \
-    --form "longitude=quas" \
-    --form "latitude=harum" \
+    --form "longitude=et" \
+    --form "latitude=voluptates" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php9904.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8499,8 +8471,8 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('nombre_niveau', '3');
-body.append('longitude', 'quas');
-body.append('latitude', 'harum');
+body.append('longitude', 'et');
+body.append('latitude', 'voluptates');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -8538,11 +8510,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'quas'
+                'contents' =&gt; 'et'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'harum'
+                'contents' =&gt; 'voluptates'
             ],
             [
                 'name' =&gt; 'indication',
@@ -8570,7 +8542,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9904.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'r')
             ],
         ],
     ]
@@ -8585,13 +8557,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments/3'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php9904.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "nombre_niveau": 3,
-    "longitude": "quas",
-    "latitude": "harum",
+    "longitude": "et",
+    "latitude": "voluptates",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -8634,9 +8606,9 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-            &quot;longitude&quot;: &quot;quas&quot;,
-            &quot;latitude&quot;: &quot;harum&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1715014461_test.jpg&quot;,
+            &quot;longitude&quot;: &quot;et&quot;,
+            &quot;latitude&quot;: &quot;voluptates&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1715208465_test.jpg&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
@@ -8784,10 +8756,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="PUTapi-batiments--id-"
-               value="quas"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>quas</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8795,10 +8767,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="PUTapi-batiments--id-"
-               value="harum"
+               value="voluptates"
                data-component="body">
     <br>
-<p>Example: <code>harum</code></p>
+<p>Example: <code>voluptates</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -8809,7 +8781,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9904.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -9101,7 +9073,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
-    \"batiment\": \"minima\"
+    \"batiment\": \"aut\"
 }"
 </code></pre></div>
 
@@ -9119,7 +9091,7 @@ const headers = {
 };
 
 let body = {
-    "batiment": "minima"
+    "batiment": "aut"
 };
 
 fetch(url, {
@@ -9141,7 +9113,7 @@ $response = $client-&gt;post(
             'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
         ],
         'json' =&gt; [
-            'batiment' =&gt; 'minima',
+            'batiment' =&gt; 'aut',
         ],
     ]
 );
@@ -9155,7 +9127,7 @@ import json
 
 url = 'http://localhost:8000/api/add/batiments'
 payload = {
-    "batiment": "minima"
+    "batiment": "aut"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -9771,14 +9743,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>batiment</code></b>&nbsp;&nbsp;
-<small>required</small>&nbsp;
+<small>String</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="batiment"                data-endpoint="POSTapi-add-batiments"
-               value="minima"
+               value="aut"
                data-component="body">
     <br>
-<p>JSONObject. Example: <code>minima</code></p>
+<p>required. Example : {&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;nombre_niveau&quot;: &quot;3&quot;,&quot;code&quot;: &quot;BATIMENT_1013434286&quot;,&quot;longitude&quot;: &quot;11.229207&quot;,&quot;latitude&quot;: &quot;4.078288&quot;,&quot;indication&quot;: &quot;derrierre station&quot;,&quot;rue&quot;: &quot;Rue de la Mairie&quot;,&quot;ville&quot;: &quot;Douala&quot;,&quot;commune&quot;: &quot;Douala 3&quot;,&quot;quartier&quot;: &quot;Nyalla&quot;,&quot;user_id&quot;: 1,&quot;etablissement&quot;: {&quot;id&quot;: 1,&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;indication_adresse&quot;: &quot;Face station&quot;,&quot;code_postal&quot;: &quot;BP 4326 Douala&quot;, &quot;site_internet&quot;: &quot;www.site.com&quot;,&quot;user_id&quot;: &quot;1&quot;,&quot;etage&quot;: &quot;1&quot;,&quot;phone&quot;: &quot;699999999&quot;,&quot;whatsapp1&quot;: &quot;699999999&quot;,&quot;whatsapp2&quot;: &quot;699999998&quot;,&quot;description&quot;: &quot;bel etablissement&quot;,&quot;nom_manager&quot;: &quot;Mical&quot;,&quot;contact_manager&quot;: &quot;Mical&quot;,&quot;commodites&quot;: &quot;Wifi&quot;,&quot;services&quot;: &quot;OM;MOMO&quot;,&quot;ameliorations&quot;: &quot;Ajouter des videos&quot;,&quot;idSousCategorie&quot;: &quot;1&quot;,&quot;horaires&quot;: [{&quot;jour&quot;: &quot;lundi&quot;,&quot;plage_horaire&quot;: &quot;07:00-12:00;14:00-17:00&quot;}]}} Example: <code>aut</code></p>
         </div>
         </form>
 
@@ -14269,10 +14241,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "vues=true" \
-    --form "color=nisi" \
+    --form "color=enim" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php8E8E.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php8E8F.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14290,7 +14262,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('vues', 'true');
-body.append('color', 'nisi');
+body.append('color', 'enim');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
@@ -14324,7 +14296,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'nisi'
+                'contents' =&gt; 'enim'
             ],
             [
                 'name' =&gt; '_method',
@@ -14332,11 +14304,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8E8E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php8E8F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'r')
             ],
         ],
     ]
@@ -14351,13 +14323,13 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php8E8E.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php8E8F.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "vues": "true",
-    "color": "nisi",
+    "color": "enim",
     "_method": "PUT"
 }
 headers = {
@@ -14394,9 +14366,9 @@ vary: Origin
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Achat&quot;,
             &quot;shortname&quot;: &quot;Administration&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715014458_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715014458_test.jpg&quot;,
-            &quot;color&quot;: &quot;nisi&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
+            &quot;color&quot;: &quot;enim&quot;,
             &quot;vues&quot;: 1
         }
     },
@@ -14517,7 +14489,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8E8E.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -14528,7 +14500,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php8E8F.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -14558,10 +14530,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-categories--id-"
-               value="nisi"
+               value="enim"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>nisi</code></p>
+<p>the color of the category Example: <code>enim</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -14596,10 +14568,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "shortname=quam" \
-    --form "color=est" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpB3EE.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpB3EF.tmp" </code></pre></div>
+    --form "shortname=molestiae" \
+    --form "color=animi" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14616,8 +14588,8 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'quam');
-body.append('color', 'est');
+body.append('shortname', 'molestiae');
+body.append('color', 'animi');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -14646,19 +14618,19 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'quam'
+                'contents' =&gt; 'molestiae'
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'est'
+                'contents' =&gt; 'animi'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB3EE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB3EF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'r')
             ],
         ],
     ]
@@ -14673,13 +14645,13 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB3EE.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB3EF.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "quam",
-    "color": "est"
+    "shortname": "molestiae",
+    "color": "animi"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -14704,7 +14676,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 5
+x-ratelimit-remaining: 53
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -14714,10 +14686,10 @@ vary: Origin
         &quot;categorie&quot;: {
             &quot;id&quot;: 28,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;shortname&quot;: &quot;quam&quot;,
-            &quot;color&quot;: &quot;est&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1715014468_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1715014468_test.jpg&quot;
+            &quot;shortname&quot;: &quot;molestiae&quot;,
+            &quot;color&quot;: &quot;animi&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de la cat&eacute;gorie reussie&quot;
@@ -14833,10 +14805,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="shortname"                data-endpoint="POSTapi-categories"
-               value="quam"
+               value="molestiae"
                data-component="body">
     <br>
-<p>Example: <code>quam</code></p>
+<p>Example: <code>molestiae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourl</code></b>&nbsp;&nbsp;
@@ -14847,7 +14819,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB3EE.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -14858,7 +14830,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB3EF.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -14866,10 +14838,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-categories"
-               value="est"
+               value="animi"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>est</code></p>
+<p>the color of the category Example: <code>animi</code></p>
         </div>
         </form>
 
@@ -14957,7 +14929,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 4
+x-ratelimit-remaining: 52
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -15385,9 +15357,9 @@ vary: Origin
             &quot;user_id&quot;: 1,
             &quot;commentaire&quot;: &quot;J&#039;aime ce lieu&quot;,
             &quot;rating&quot;: 3,
-            &quot;updated_at&quot;: &quot;2024-05-06T16:54:21.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-05-06T16:54:21.000000Z&quot;,
-            &quot;id&quot;: 11,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;id&quot;: 17,
             &quot;user&quot;: {
                 &quot;id&quot;: 1,
                 &quot;name&quot;: &quot;Gautier&quot;,
@@ -15395,7 +15367,7 @@ vary: Origin
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                 &quot;phone&quot;: 699999999,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715014460_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -18968,7 +18940,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/etablissements/vues/explicabo" \
+    "http://localhost:8000/api/etablissements/vues/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -18976,7 +18948,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/etablissements/vues/explicabo"
+    "http://localhost:8000/api/etablissements/vues/non"
 );
 
 const headers = {
@@ -18994,7 +18966,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/etablissements/vues/explicabo',
+    'http://localhost:8000/api/etablissements/vues/non',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -19011,7 +18983,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/etablissements/vues/explicabo'
+url = 'http://localhost:8000/api/etablissements/vues/non'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -19112,10 +19084,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-etablissements-vues--id-"
-               value="explicabo"
+               value="non"
                data-component="url">
     <br>
-<p>The ID of the vue. Example: <code>explicabo</code></p>
+<p>The ID of the vue. Example: <code>non</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -19150,7 +19122,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php946C.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -19194,7 +19166,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php946C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'r')
             ],
         ],
     ]
@@ -19209,7 +19181,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/cover/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php946C.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -19253,7 +19225,7 @@ vary: Origin
             &quot;nom_manager&quot;: null,
             &quot;contact_manager&quot;: null,
             &quot;etage&quot;: 0,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715014460_test.jpg&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208464_test.jpg&quot;,
             &quot;phone&quot;: &quot;000000000&quot;,
             &quot;whatsapp1&quot;: &quot;000000000&quot;,
             &quot;whatsapp2&quot;: null,
@@ -19267,7 +19239,7 @@ vary: Origin
             &quot;logo_map&quot;: null,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-06T16:54:20.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:44.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
@@ -19401,7 +19373,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php946C.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -19627,9 +19599,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "osm_id=111259658236" \
     --form "commodites=Wifi;Parking" \
     --form "ameliorations=Site internet;videos" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php9B66.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php9B67.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php9B78.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -19755,15 +19727,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9B66.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9B67.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9B78.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'r')
             ],
         ],
     ]
@@ -19778,9 +19750,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php9B66.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php9B67.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php9B78.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -19847,12 +19819,12 @@ vary: Origin
             &quot;ameliorations&quot;: &quot;Site internet;videos&quot;,
             &quot;nom_manager&quot;: &quot;Nom Manager.&quot;,
             &quot;contact_manager&quot;: &quot;699999999.&quot;,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715014462_test.jpg&quot;,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715014462_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715014462_test.jpg&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-06T16:54:22.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-05-06T16:54:22.000000Z&quot;,
-            &quot;id&quot;: 33
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;id&quot;: 39
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;etablissement reussie&quot;
@@ -20103,7 +20075,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9B66.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>whatsapp2</code></b>&nbsp;&nbsp;
@@ -20158,7 +20130,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9B67.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -20169,7 +20141,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9B78.tmp</code></p>
+<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp</code></p>
         </div>
         </form>
 
@@ -20207,9 +20179,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "ameliorations=Site internet,videos" \
     --form "vues=true" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php9C09.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php9C0A.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php9C1A.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -20325,15 +20297,15 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9C09.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9C0A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9C1A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'r')
             ],
         ],
     ]
@@ -20348,9 +20320,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php9C09.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php9C0A.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php9C1A.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -20408,7 +20380,7 @@ vary: Origin
             &quot;nom_manager&quot;: null,
             &quot;contact_manager&quot;: null,
             &quot;etage&quot;: 3,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715014462_test.jpg&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
             &quot;phone&quot;: &quot;699999999&quot;,
             &quot;whatsapp1&quot;: &quot;699999999&quot;,
             &quot;whatsapp2&quot;: &quot;699999999&quot;,
@@ -20418,11 +20390,11 @@ vary: Origin
             &quot;commodites&quot;: &quot;Wifi;Parking&quot;,
             &quot;ameliorations&quot;: &quot;Site internet,videos&quot;,
             &quot;vues&quot;: 2,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715014462_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715014462_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-06T16:54:22.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
@@ -20611,7 +20583,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9C09.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etage</code></b>&nbsp;&nbsp;
@@ -20721,7 +20693,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9C0A.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -20732,7 +20704,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9C1A.tmp</code></p>
+<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -21058,7 +21030,7 @@ vary: Origin
         &quot;favorite&quot;: {
             &quot;etablissement_id&quot;: 1,
             &quot;user_id&quot;: 1,
-            &quot;id&quot;: 11
+            &quot;id&quot;: 17
         }
     },
     &quot;message&quot;: &quot;Etablissement ajout&eacute; aux favoris&quot;
@@ -21408,7 +21380,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php9D54.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -21452,7 +21424,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9D54.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'r')
             ],
         ],
     ]
@@ -21467,7 +21439,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php9D54.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1
@@ -21503,9 +21475,9 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;image&quot;: {
-            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715014462_test.jpg&quot;,
+            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208467_test.jpg&quot;,
             &quot;etablissement_id&quot;: 1,
-            &quot;id&quot;: 11
+            &quot;id&quot;: 17
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;image reussie&quot;
@@ -21624,7 +21596,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9D54.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp</code></p>
         </div>
         </form>
 
@@ -21649,7 +21621,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
     --form "_method=PUT" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php9D94.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -21698,7 +21670,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php9D94.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'r')
             ],
         ],
     ]
@@ -21713,7 +21685,7 @@ import json
 
 url = 'http://localhost:8000/api/images/1'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php9D94.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1,
@@ -22366,7 +22338,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php9D94.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -31568,9 +31540,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "categorie_id=5" \
-    --form "color=dolore" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpB46D.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpB46E.tmp" </code></pre></div>
+    --form "color=recusandae" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -31588,7 +31560,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('categorie_id', '5');
-body.append('color', 'dolore');
+body.append('color', 'recusandae');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -31621,15 +31593,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'dolore'
+                'contents' =&gt; 'recusandae'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB46D.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB46E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'r')
             ],
         ],
     ]
@@ -31644,13 +31616,13 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB46D.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB46E.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "categorie_id": 5,
-    "color": "dolore"
+    "color": "recusandae"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -31675,7 +31647,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 3
+x-ratelimit-remaining: 51
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31685,9 +31657,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 481,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;color&quot;: &quot;dolore&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715014468_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715014468_test.jpg&quot;,
+            &quot;color&quot;: &quot;recusandae&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 5,
                 &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
@@ -31826,7 +31798,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB46D.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -31837,7 +31809,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB46E.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -31845,10 +31817,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-souscategories"
-               value="dolore"
+               value="recusandae"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>dolore</code></p>
+<p>the color of the subcategory Example: <code>recusandae</code></p>
         </div>
         </form>
 
@@ -31872,11 +31844,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "color=enim" \
+    --form "color=praesentium" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpB4BD.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpB4BE.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -31893,7 +31865,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('color', 'enim');
+body.append('color', 'praesentium');
 body.append('idcategorie', '5');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
@@ -31924,7 +31896,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'enim'
+                'contents' =&gt; 'praesentium'
             ],
             [
                 'name' =&gt; 'idcategorie',
@@ -31936,11 +31908,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB4BD.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpB4BE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'r')
             ],
         ],
     ]
@@ -31955,12 +31927,12 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB4BD.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpB4BE.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "color": "enim",
+    "color": "praesentium",
     "idcategorie": 5,
     "_method": "PUT"
 }
@@ -31987,7 +31959,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 2
+x-ratelimit-remaining: 50
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31997,9 +31969,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715014468_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715014468_test.jpg&quot;,
-            &quot;color&quot;: &quot;enim&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
+            &quot;color&quot;: &quot;praesentium&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Achats&quot;,
@@ -32128,7 +32100,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB4BD.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -32139,7 +32111,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpB4BE.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -32158,10 +32130,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-souscategories--id-"
-               value="enim"
+               value="praesentium"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>enim</code></p>
+<p>the color of the subcategory Example: <code>praesentium</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>idcategorie</code></b>&nbsp;&nbsp;
@@ -32271,7 +32243,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 1
+x-ratelimit-remaining: 49
 vary: Origin
  </code></pre></details>         <pre>
 
