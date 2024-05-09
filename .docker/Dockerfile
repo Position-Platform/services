@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install exif \
     && docker-php-ext-install zip \
+    && docker-php-ext-install intl \
     && docker-php-source delete
 
 RUN apt-get update &&\
