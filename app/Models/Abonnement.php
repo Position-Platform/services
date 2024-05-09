@@ -56,7 +56,7 @@ class Abonnement extends Model
     protected $hidden = [
         'created_at',
         'updated_at',
-        'deleted_at',
+        'deleted_at', 'pivot'
     ];
 
     public function users()

@@ -250,8 +250,8 @@
                                                                                 <li class="tocify-item level-2" data-unique="establishment-management-PUTapi-etablissements-vues--id-">
                                 <a href="#establishment-management-PUTapi-etablissements-vues--id-">Update vues Establishment.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="establishment-management-POSTapi-etablissements-cover--id-">
-                                <a href="#establishment-management-POSTapi-etablissements-cover--id-">Update Etablishment Cover</a>
+                                                                                <li class="tocify-item level-2" data-unique="establishment-management-PUTapi-etablissements-cover--id-">
+                                <a href="#establishment-management-PUTapi-etablissements-cover--id-">Update Etablishment Cover</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="establishment-management-GETapi-count-etablissements">
                                 <a href="#establishment-management-GETapi-count-etablissements">count all establishment.</a>
@@ -352,7 +352,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: January 5, 2024</li>
+        <li>Last updated: May 8, 2024</li>
     </ul>
 </div>
 
@@ -572,7 +572,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/abonnements/2" \
+    --get "http://localhost:8000/api/abonnements/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -580,7 +580,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
+    "http://localhost:8000/api/abonnements/1"
 );
 
 const headers = {
@@ -598,7 +598,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost:8000/api/abonnements/2',
+    'http://localhost:8000/api/abonnements/1',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -615,7 +615,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/abonnements/2'
+url = 'http://localhost:8000/api/abonnements/1'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -645,7 +645,13 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;abonnement&quot;: null
+        &quot;abonnement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;free&quot;,
+            &quot;prix&quot;: 0,
+            &quot;type&quot;: &quot;year&quot;,
+            &quot;duree&quot;: 1
+        }
     },
     &quot;message&quot;: &quot;Abonnement&quot;
 }</code>
@@ -738,10 +744,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-abonnements--id-"
-               value="2"
+               value="1"
                data-component="url">
     <br>
-<p>the id of the subscription. Example: <code>2</code></p>
+<p>the id of the subscription. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -856,7 +862,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 9
+x-ratelimit-remaining: 56
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -867,7 +873,7 @@ vary: Origin
             &quot;nom&quot;: &quot;Smart&quot;,
             &quot;prix&quot;: 5000,
             &quot;duree&quot;: 1,
-            &quot;id&quot;: 6
+            &quot;id&quot;: 18
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;abonnement reussie&quot;
@@ -1026,7 +1032,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/abonnements/2" \
+    "http://localhost:8000/api/abonnements/1" \
     --header "Authorization: Bearer {TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1043,7 +1049,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
+    "http://localhost:8000/api/abonnements/1"
 );
 
 const headers = {
@@ -1071,7 +1077,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/abonnements/2',
+    'http://localhost:8000/api/abonnements/1',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {TOKEN}',
@@ -1096,7 +1102,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/abonnements/2'
+url = 'http://localhost:8000/api/abonnements/1'
 payload = {
     "nom": "Smart",
     "prix": 5000,
@@ -1118,7 +1124,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-PUTapi-abonnements--id-">
             <blockquote>
-            <p>Example response (400):</p>
+            <p>Example response (201):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1127,16 +1133,22 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 8
+x-ratelimit-remaining: 55
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Echec de mise &agrave; jour&quot;,
+    &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;error&quot;: &quot;Attempt to assign property \&quot;nom\&quot; on null&quot;
-    }
+        &quot;abonnement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Smart&quot;,
+            &quot;prix&quot;: 5000,
+            &quot;type&quot;: &quot;year&quot;,
+            &quot;duree&quot;: 1
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
 }</code>
  </pre>
     </span>
@@ -1238,10 +1250,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-abonnements--id-"
-               value="2"
+               value="1"
                data-component="url">
     <br>
-<p>the id of the subscription. Example: <code>2</code></p>
+<p>the id of the subscription. Example: <code>1</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1315,7 +1327,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/abonnements/2" \
+    "http://localhost:8000/api/abonnements/1" \
     --header "Authorization: Bearer {TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -1324,7 +1336,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/abonnements/2"
+    "http://localhost:8000/api/abonnements/1"
 );
 
 const headers = {
@@ -1343,7 +1355,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/abonnements/2',
+    'http://localhost:8000/api/abonnements/1',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {TOKEN}',
@@ -1361,7 +1373,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/abonnements/2'
+url = 'http://localhost:8000/api/abonnements/1'
 headers = {
   'Authorization': 'Bearer {TOKEN}',
   'Content-Type': 'application/json',
@@ -1376,7 +1388,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-DELETEapi-abonnements--id-">
             <blockquote>
-            <p>Example response (400):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1385,16 +1397,14 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 7
+x-ratelimit-remaining: 54
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Erreur de suppression.&quot;,
-    &quot;data&quot;: {
-        &quot;error&quot;: &quot;Call to a member function delete() on null&quot;
-    }
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Delete Success&quot;
 }</code>
  </pre>
     </span>
@@ -1496,10 +1506,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-abonnements--id-"
-               value="2"
+               value="1"
                data-component="url">
     <br>
-<p>the id of the subscription. Example: <code>2</code></p>
+<p>the id of the subscription. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -1592,7 +1602,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-auth-password-forgot">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1606,9 +1616,579 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;Un lien de reinitialisation vous a &eacute;t&eacute; envoy&eacute; par mail.&quot;
+    &quot;message&quot;: &quot;Failed to create dynamic link: cURL error 56: OpenSSL SSL_read: error:0A000126:SSL routines::unexpected eof while reading, errno 0 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://firebasedynamiclinks.googleapis.com/v1/shortLinks&quot;,
+    &quot;exception&quot;: &quot;Kreait\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLinks.php&quot;,
+    &quot;line&quot;: 82,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Notifications\\SendResetLinkParams.php&quot;,
+            &quot;line&quot;: 57,
+            &quot;function&quot;: &quot;createDynamicLink&quot;,
+            &quot;class&quot;: &quot;Kreait\\Firebase\\DynamicLinks&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\Channels\\MailChannel.php&quot;,
+            &quot;line&quot;: 55,
+            &quot;function&quot;: &quot;toMail&quot;,
+            &quot;class&quot;: &quot;App\\Notifications\\SendResetLinkParams&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
+            &quot;line&quot;: 148,
+            &quot;function&quot;: &quot;send&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\Channels\\MailChannel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
+            &quot;line&quot;: 106,
+            &quot;function&quot;: &quot;sendToNotifiable&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Notifications\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
+            &quot;line&quot;: 101,
+            &quot;function&quot;: &quot;withLocale&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
+            &quot;line&quot;: 79,
+            &quot;function&quot;: &quot;sendNow&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\ChannelManager.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;send&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\RoutesNotifications.php&quot;,
+            &quot;line&quot;: 18,
+            &quot;function&quot;: &quot;send&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Notifications\\ChannelManager&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Models\\User.php&quot;,
+            &quot;line&quot;: 140,
+            &quot;function&quot;: &quot;notify&quot;,
+            &quot;class&quot;: &quot;App\\Models\\User&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBroker.php&quot;,
+            &quot;line&quot;: 72,
+            &quot;function&quot;: &quot;sendPasswordResetNotification&quot;,
+            &quot;class&quot;: &quot;App\\Models\\User&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBrokerManager.php&quot;,
+            &quot;line&quot;: 143,
+            &quot;function&quot;: &quot;sendResetLink&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBroker&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php&quot;,
+            &quot;line&quot;: 355,
+            &quot;function&quot;: &quot;__call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBrokerManager&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\UserController.php&quot;,
+            &quot;line&quot;: 228,
+            &quot;function&quot;: &quot;__callStatic&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Support\\Facades\\Facade&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
+            &quot;line&quot;: 54,
+            &quot;function&quot;: &quot;forgot&quot;,
+            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\UserController&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
+            &quot;line&quot;: 43,
+            &quot;function&quot;: &quot;callAction&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 259,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
+            &quot;line&quot;: 205,
+            &quot;function&quot;: &quot;runController&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 806,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
+            &quot;line&quot;: 28,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 159,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 805,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 784,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 748,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 737,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 99,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 300,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 288,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 91,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 44,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 236,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 72,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 53,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1096,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 324,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -1725,7 +2305,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
     \"email\": \"admin@position.cm\",
-    \"token\": \"fugit\",
+    \"token\": \"ut\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -1745,7 +2325,7 @@ const headers = {
 
 let body = {
     "email": "admin@position.cm",
-    "token": "fugit",
+    "token": "ut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -1769,7 +2349,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'admin@position.cm',
-            'token' =&gt; 'fugit',
+            'token' =&gt; 'ut',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -1786,7 +2366,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "admin@position.cm",
-    "token": "fugit",
+    "token": "ut",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -1923,10 +2503,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-auth-password-reset"
-               value="fugit"
+               value="ut"
                data-component="body">
     <br>
-<p>token give in mail. Example: <code>fugit</code></p>
+<p>token give in mail. Example: <code>ut</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1973,7 +2553,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2030,7 +2610,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'r')
             ],
         ],
     ]
@@ -2045,7 +2625,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2235,7 +2815,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDD4C.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp</code></p>
         </div>
         </form>
 
@@ -2348,7 +2928,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZWRlYmI4ZWFiMTIyYjcyNjYxZDc1MjgzNWVjMjg1MjIwZGIwZjNiZmI5NmM3YTM4MDJkOTE2Y2QyNDZlMDkwMjc3YjA5MTFlODg5Y2IwN2EiLCJpYXQiOjE3MDQ0NTE0NzkuMTY3MjU1LCJuYmYiOjE3MDQ0NTE0NzkuMTY3MjU2LCJleHAiOjE3MDcwNDM0NzkuMTY2NTY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.F-dKe_2tKrljlm-FSSX7MdEWnVSjNzYGTf29xwpZsz5QeGX695C47exykTxsa7Amq0QXmdttQEsrg8TXCd6PcFqzOxT9GLHmS4o86xK4eb3pYGQ2wSQCrXCbWQ99Exndu6I63ZHAICvZY7P83bIiyIIT-RmBqcvvHckhbv4-jW-4yjqhzRSxP9fFINXzEl4tFRKil5XyA8SQZMdv0UgUoMSXdZKP6iCCs6n31VoDFQwV_XZ8pnOSAemmKjSNH6itKyzRd2ee96apEc4kPVsac_5pxWOGCN5HQaiTjlG-QG7K0xFatR5oQiFO6enawCtEY0Gn1Ll4-_jx1o8p0K_ugPeTYYq2hxRgVg0epA4peOCQmMAO0Zjb7RB1NlkzFIRJsZ6AdvoSj1gPqKFSNRvjTQi_tkfQrGY3l-e0YFbKMP-ZzXoqk0-Dzt9FZ-BY8_Y2Napxz7SYtTv9pwCP3i7clDYm0qnszfVJDAm6VE-ShpmKdY3hHQoHGlJie-31R2omhNzg5VgldwuBgpXLMdJt5UkQ189kD2uh0OHj7KRba1P-eM7gwg3D6gigCMAxMGjqBlGUDf4LYvueS_Q9S0Xc_uIbhIqphzorxtgymt0m29HJKPz7I-kg9Q_Me5g-Fb9VeqmO1axHxd1aE0BgFEmiuqEnEwsTPBVHU_l86sgI_mc&quot;,
+        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYWNiNmNhMmViZTY1YzY3ODA2ZmJhMDdhMTZiZWEzZjNmMmJhNTgzZGRlYjgxZGEyNzQ5MzM1YWU2MWQ1OTNiZjRiZTdkNTg1ZmM2MzQ4ZTAiLCJpYXQiOjE3MTUyMDg0NjIuMTE0NDQ1LCJuYmYiOjE3MTUyMDg0NjIuMTE0NDQ5LCJleHAiOjE3MTc4MDA0NjIuMTEyMjQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NzJc-CRfYdn7c3vc1drZX4hupPRZWXP2kxVF7OxAmj96TlLnPQnklol3hlYDvL94jtEnGc3dQKOsA6-GD5KpZYpE7bq9PHoNFwmQk5AOcF-Xt9_9v95sAByo2kdst4qm6M3yILe3silbcqVip-xR-t_rmdHDZ5ToDSOFmSTa90FVpyqt0ADb4fBGAzsDMpUIaFc-2jFArB0TFC1uylWRrxrnnEmjRN4ulMYqMz3Y2EYN-d4V6buDMQGMY0X3AF9b8VSuHYtSU1QvtB42hJ3B_2wjKRaV-dyPo5yNq4haUXL5Wi-uvrDvxP6LaG4awp_QGSQXvN9EeAs2uhPcPg6xbzZH9IGWbtaPydYn1fBJbJQo8rJISWueSr-DcDwtsi7LkX_jWD06J8cWWSE0_tapOK6jq1j2-TR8O0ysW5vew2s24qaNvxa2lSTeTIP6-Meu-t8dQONyQa013MCATYwG5TUKUI6GB6MFLBmw_BkXe1RkAKrfK9PoFgHfaMCO4xtn--H8MM6SzUHvHYYL2FXHxXYWr9KVPBUFrXqAmLrqgmR55p9VV87iHm3Ss_FuHHcSHDuvgzso-ZNjLX3TIJljMQmPeiMIQaPsPM6_unuKNLJS_dB_MLN0ruRz-rQ_-zfuCtuUZ0KA6ouh3Ti_UYiymP77J97skiYd0nBFZKsjjuk&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;Admin&quot;,
@@ -2364,12 +2944,7 @@ vary: Origin
                     &quot;name&quot;: &quot;admin&quot;,
                     &quot;guard_name&quot;: &quot;api&quot;,
                     &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                    &quot;pivot&quot;: {
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
-                        &quot;model_id&quot;: 1,
-                        &quot;role_id&quot;: 1
-                    }
+                    &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
                 }
             ]
         }
@@ -3006,7 +3581,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
+x-ratelimit-remaining: 42
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3132,7 +3707,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3186,7 +3761,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'r')
             ],
         ],
     ]
@@ -3201,7 +3776,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3231,7 +3806,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
+x-ratelimit-remaining: 41
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3245,7 +3820,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1
         }
     },
@@ -3388,7 +3963,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE2CE.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -3487,7 +4062,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
+x-ratelimit-remaining: 40
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3687,7 +4262,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
+x-ratelimit-remaining: 39
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3701,7 +4276,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1,
             &quot;roles&quot;: [
                 {
@@ -3709,12 +4284,7 @@ vary: Origin
                     &quot;name&quot;: &quot;admin&quot;,
                     &quot;guard_name&quot;: &quot;api&quot;,
                     &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                    &quot;pivot&quot;: {
-                        &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
-                        &quot;model_id&quot;: 1,
-                        &quot;role_id&quot;: 1
-                    }
+                    &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
                 }
             ],
             &quot;abonnement&quot;: {
@@ -3907,7 +4477,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 17
+x-ratelimit-remaining: 16
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4099,7 +4669,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 14
+x-ratelimit-remaining: 13
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4125,12 +4695,7 @@ vary: Origin
                             &quot;name&quot;: &quot;admin&quot;,
                             &quot;guard_name&quot;: &quot;api&quot;,
                             &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                            &quot;pivot&quot;: {
-                                &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
-                                &quot;model_id&quot;: 1,
-                                &quot;role_id&quot;: 1
-                            }
+                            &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
                         }
                     ]
                 }
@@ -4256,8 +4821,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
-    --form "phone=699999998" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp" </code></pre></div>
+    --form "phone=699999990" \
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4276,7 +4841,7 @@ const body = new FormData();
 body.append('name', 'Gautier');
 body.append('email', 'gautier@position.cm');
 body.append('password', 'gautier123');
-body.append('phone', '699999998');
+body.append('phone', '699999990');
 body.append('image_profil', document.querySelector('input[name="image_profil"]').files[0]);
 
 fetch(url, {
@@ -4312,11 +4877,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'phone',
-                'contents' =&gt; '699999998'
+                'contents' =&gt; '699999990'
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'r')
             ],
         ],
     ]
@@ -4331,13 +4896,13 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
     "email": "gautier@position.cm",
     "password": "gautier123",
-    "phone": 699999998
+    "phone": 699999990
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -4362,7 +4927,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 13
+x-ratelimit-remaining: 60
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4370,7 +4935,7 @@ vary: Origin
     &quot;success&quot;: false,
     &quot;message&quot;: &quot;Erreur.&quot;,
     &quot;data&quot;: {
-        &quot;error&quot;: &quot;SQLSTATE[23505]: Unique violation: 7 ERREUR:  la valeur d&#039;une cl&eacute; dupliqu&eacute;e rompt la contrainte unique &laquo; users_phone_unique &raquo;\nDETAIL:  La cl&eacute; &laquo; (phone)=(699999998) &raquo; existe d&eacute;j&agrave;. (Connection: pgsql, SQL: insert into \&quot;users\&quot; (\&quot;name\&quot;, \&quot;email\&quot;, \&quot;phone\&quot;, \&quot;password\&quot;, \&quot;image_profil\&quot;, \&quot;updated_at\&quot;, \&quot;created_at\&quot;) values (Gautier, gautier@position.cm, 699999998, $2y$10$m6w9ZCaNmBDp4wZMnHNpnuZmhUWx56OvVRMdDAEAKqlqFKcCDVQ3., /storage/uploads/admins/profils/1704451481_test.jpg, 2024-01-05 11:44:41, 2024-01-05 11:44:41) returning \&quot;id\&quot;)&quot;
+        &quot;error&quot;: &quot;Connection to \&quot;smtp.mailgun.org:25\&quot; timed out.&quot;
     }
 }</code>
  </pre>
@@ -4506,10 +5071,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="phone"                data-endpoint="POSTapi-admins"
-               value="699999998"
+               value="699999990"
                data-component="body">
     <br>
-<p>The phone number of the admin. Example: <code>699999998</code></p>
+<p>The phone number of the admin. Example: <code>699999990</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image_profil</code></b>&nbsp;&nbsp;
@@ -4520,7 +5085,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE762.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp</code></p>
         </div>
         </form>
 
@@ -4608,7 +5173,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 12
+x-ratelimit-remaining: 59
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4633,12 +5198,7 @@ vary: Origin
                         &quot;name&quot;: &quot;admin&quot;,
                         &quot;guard_name&quot;: &quot;api&quot;,
                         &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;pivot&quot;: {
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
-                            &quot;model_id&quot;: 1,
-                            &quot;role_id&quot;: 1
-                        }
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
                     }
                 ]
             }
@@ -4773,10 +5333,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "name=Gautier" \
-    --form "phone=699999998" \
+    --form "phone=699999992" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4793,7 +5353,7 @@ const headers = {
 
 const body = new FormData();
 body.append('name', 'Gautier');
-body.append('phone', '699999998');
+body.append('phone', '699999992');
 body.append('isSuperAdmin', 'true');
 body.append('_method', 'PUT');
 body.append('image_profil', document.querySelector('input[name="image_profil"]').files[0]);
@@ -4823,7 +5383,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'phone',
-                'contents' =&gt; '699999998'
+                'contents' =&gt; '699999992'
             ],
             [
                 'name' =&gt; 'isSuperAdmin',
@@ -4835,7 +5395,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'r')
             ],
         ],
     ]
@@ -4850,11 +5410,11 @@ import json
 
 url = 'http://localhost:8000/api/admins/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
-    "phone": 699999998,
+    "phone": 699999992,
     "isSuperAdmin": "true",
     "_method": "PUT"
 }
@@ -4872,7 +5432,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-PUTapi-admins--id-">
             <blockquote>
-            <p>Example response (400):</p>
+            <p>Example response (201):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4881,16 +5441,38 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 11
+x-ratelimit-remaining: 58
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Erreur.&quot;,
+    &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;Echec de mise &agrave; jour&quot;: &quot;SQLSTATE[23505]: Unique violation: 7 ERREUR:  la valeur d&#039;une cl&eacute; dupliqu&eacute;e rompt la contrainte unique &laquo; users_phone_unique &raquo;\nDETAIL:  La cl&eacute; &laquo; (phone)=(699999998) &raquo; existe d&eacute;j&agrave;. (Connection: pgsql, SQL: update \&quot;users\&quot; set \&quot;name\&quot; = Gautier, \&quot;phone\&quot; = 699999998, \&quot;image_profil\&quot; = /storage/uploads/admins/profils/1704451481_test.jpg, \&quot;updated_at\&quot; = 2024-01-05 11:44:41 where \&quot;id\&quot; = 1)&quot;
-    }
+        &quot;admin&quot;: {
+            &quot;id&quot;: 1,
+            &quot;isSuperAdmin&quot;: &quot;true&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Gautier&quot;,
+                &quot;email&quot;: &quot;admin@position.cm&quot;,
+                &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                &quot;phone&quot;: &quot;699999992&quot;,
+                &quot;fcm_token&quot;: null,
+                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715208620_test.jpg&quot;,
+                &quot;abonnement_id&quot;: 1,
+                &quot;roles&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;name&quot;: &quot;admin&quot;,
+                        &quot;guard_name&quot;: &quot;api&quot;,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
+                    }
+                ]
+            }
+        }
+    },
+    &quot;message&quot;: &quot;Update Success&quot;
 }</code>
  </pre>
     </span>
@@ -5019,10 +5601,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="phone"                data-endpoint="PUTapi-admins--id-"
-               value="699999998"
+               value="699999992"
                data-component="body">
     <br>
-<p>The phone number of the user. Example: <code>699999998</code></p>
+<p>The phone number of the user. Example: <code>699999992</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>isSuperAdmin</code></b>&nbsp;&nbsp;
@@ -5044,7 +5626,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE7E0.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -5143,7 +5725,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 10
+x-ratelimit-remaining: 57
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5359,7 +5941,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 38
+x-ratelimit-remaining: 37
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5410,28 +5992,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 1,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -5456,10 +6016,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 1,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -5520,28 +6076,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 2,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -5566,10 +6100,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 2,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -5630,28 +6160,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 3,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -5676,10 +6184,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 3,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -5740,28 +6244,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 4,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -5786,10 +6268,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 4,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -5850,28 +6328,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 5,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -5896,10 +6352,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 5,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -5960,28 +6412,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 9,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6006,10 +6436,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 9,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -6070,28 +6496,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Boutiques&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 10,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6116,10 +6520,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 10,
-                                    &quot;sous_categorie_id&quot;: 1
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -6180,28 +6580,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 2,
-                                &quot;nom&quot;: &quot;Brocante&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 11,
-                                    &quot;sous_categorie_id&quot;: 2
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 1,
-                                    &quot;nom&quot;: &quot;Achats&quot;,
-                                    &quot;shortname&quot;: &quot;Achats&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                    &quot;color&quot;: &quot;#2196F3&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6226,10 +6604,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 11,
-                                    &quot;sous_categorie_id&quot;: 2
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 1,
                                     &quot;nom&quot;: &quot;Achats&quot;,
@@ -6290,28 +6664,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 32,
-                                &quot;nom&quot;: &quot;Institution publique&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 12,
-                                    &quot;sous_categorie_id&quot;: 32
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 2,
-                                    &quot;nom&quot;: &quot;Administrations&quot;,
-                                    &quot;shortname&quot;: &quot;Administration&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6336,10 +6688,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 12,
-                                    &quot;sous_categorie_id&quot;: 32
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 2,
                                     &quot;nom&quot;: &quot;Administrations&quot;,
@@ -6400,28 +6748,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [
-                            {
-                                &quot;id&quot;: 32,
-                                &quot;nom&quot;: &quot;Institution publique&quot;,
-                                &quot;logourl&quot;: null,
-                                &quot;logourlmap&quot;: null,
-                                &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 13,
-                                    &quot;sous_categorie_id&quot;: 32
-                                },
-                                &quot;categorie&quot;: {
-                                    &quot;id&quot;: 2,
-                                    &quot;nom&quot;: &quot;Administrations&quot;,
-                                    &quot;shortname&quot;: &quot;Administration&quot;,
-                                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                                    &quot;vues&quot;: 0
-                                }
-                            }
-                        ],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6446,10 +6772,6 @@ vary: Origin
                                 &quot;logourl&quot;: null,
                                 &quot;logourlmap&quot;: null,
                                 &quot;color&quot;: null,
-                                &quot;pivot&quot;: {
-                                    &quot;etablissement_id&quot;: 13,
-                                    &quot;sous_categorie_id&quot;: 32
-                                },
                                 &quot;categorie&quot;: {
                                     &quot;id&quot;: 2,
                                     &quot;nom&quot;: &quot;Administrations&quot;,
@@ -6510,7 +6832,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6578,7 +6899,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6646,7 +6966,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6714,7 +7033,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6782,7 +7100,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6850,7 +7167,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6918,7 +7234,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -6986,7 +7301,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -7054,7 +7368,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -7122,7 +7435,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -7190,7 +7502,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -7258,7 +7569,6 @@ vary: Origin
                         &quot;moyenne&quot;: 0,
                         &quot;avis&quot;: 0,
                         &quot;count&quot;: [],
-                        &quot;sousCategories&quot;: [],
                         &quot;user&quot;: {
                             &quot;id&quot;: 1,
                             &quot;name&quot;: &quot;Admin&quot;,
@@ -7415,15 +7725,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nombre_niveau=3" \
     --form "code=BATIMENT_MELEN_0569" \
-    --form "longitude=ut" \
-    --form "latitude=id" \
+    --form "longitude=eum" \
+    --form "latitude=velit" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7441,8 +7751,8 @@ const headers = {
 const body = new FormData();
 body.append('nombre_niveau', '3');
 body.append('code', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'ut');
-body.append('latitude', 'id');
+body.append('longitude', 'eum');
+body.append('latitude', 'velit');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -7480,11 +7790,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'ut'
+                'contents' =&gt; 'eum'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'id'
+                'contents' =&gt; 'velit'
             ],
             [
                 'name' =&gt; 'ville',
@@ -7512,7 +7822,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'r')
             ],
         ],
     ]
@@ -7527,13 +7837,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'rb')
 }
 payload = {
     "nombre_niveau": 3,
     "code": "BATIMENT_MELEN_0569",
-    "longitude": "ut",
-    "latitude": "id",
+    "longitude": "eum",
+    "latitude": "velit",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -7564,7 +7874,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 36
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7575,15 +7885,15 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_MELEN_0569&quot;,
-            &quot;longitude&quot;: &quot;ut&quot;,
-            &quot;latitude&quot;: &quot;id&quot;,
+            &quot;longitude&quot;: &quot;eum&quot;,
+            &quot;latitude&quot;: &quot;velit&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;commune&quot;: &quot;Yaounde IV&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1704451480_test.jpg&quot;,
-            &quot;id&quot;: 27
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1715208465_test.jpg&quot;,
+            &quot;id&quot;: 39
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
@@ -7710,10 +8020,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="POSTapi-batiments"
-               value="ut"
+               value="eum"
                data-component="body">
     <br>
-<p>required. Example: <code>ut</code></p>
+<p>required. Example: <code>eum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -7721,10 +8031,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="POSTapi-batiments"
-               value="id"
+               value="velit"
                data-component="body">
     <br>
-<p>required. Example: <code>id</code></p>
+<p>required. Example: <code>velit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
@@ -7779,7 +8089,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE408.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -7901,7 +8211,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
+x-ratelimit-remaining: 35
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7951,28 +8261,6 @@ vary: Origin
                     &quot;moyenne&quot;: 0,
                     &quot;avis&quot;: 0,
                     &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 3,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
                     &quot;user&quot;: {
                         &quot;id&quot;: 1,
                         &quot;name&quot;: &quot;Admin&quot;,
@@ -7997,10 +8285,6 @@ vary: Origin
                             &quot;logourl&quot;: null,
                             &quot;logourlmap&quot;: null,
                             &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 3,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
                             &quot;categorie&quot;: {
                                 &quot;id&quot;: 1,
                                 &quot;nom&quot;: &quot;Achats&quot;,
@@ -8161,15 +8445,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Sogefi" \
     --form "nombre_niveau=3" \
-    --form "longitude=dolores" \
-    --form "latitude=consequatur" \
+    --form "longitude=et" \
+    --form "latitude=voluptates" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8187,8 +8471,8 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('nombre_niveau', '3');
-body.append('longitude', 'dolores');
-body.append('latitude', 'consequatur');
+body.append('longitude', 'et');
+body.append('latitude', 'voluptates');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -8226,11 +8510,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'dolores'
+                'contents' =&gt; 'et'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'consequatur'
+                'contents' =&gt; 'voluptates'
             ],
             [
                 'name' =&gt; 'indication',
@@ -8258,7 +8542,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'r')
             ],
         ],
     ]
@@ -8273,13 +8557,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments/3'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "nombre_niveau": 3,
-    "longitude": "dolores",
-    "latitude": "consequatur",
+    "longitude": "et",
+    "latitude": "voluptates",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -8310,7 +8594,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 35
+x-ratelimit-remaining: 34
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8322,9 +8606,9 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-            &quot;longitude&quot;: &quot;dolores&quot;,
-            &quot;latitude&quot;: &quot;consequatur&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1704451480_test.jpg&quot;,
+            &quot;longitude&quot;: &quot;et&quot;,
+            &quot;latitude&quot;: &quot;voluptates&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1715208465_test.jpg&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
@@ -8472,10 +8756,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="PUTapi-batiments--id-"
-               value="dolores"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>dolores</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8483,10 +8767,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="PUTapi-batiments--id-"
-               value="consequatur"
+               value="voluptates"
                data-component="body">
     <br>
-<p>Example: <code>consequatur</code></p>
+<p>Example: <code>voluptates</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -8497,7 +8781,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE458.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8581,7 +8865,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/batiments/3" \
+    "http://localhost:8000/api/batiments/1" \
     --header "Authorization: Bearer {TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -8590,7 +8874,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/batiments/3"
+    "http://localhost:8000/api/batiments/1"
 );
 
 const headers = {
@@ -8609,7 +8893,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;delete(
-    'http://localhost:8000/api/batiments/3',
+    'http://localhost:8000/api/batiments/1',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {TOKEN}',
@@ -8627,7 +8911,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/batiments/3'
+url = 'http://localhost:8000/api/batiments/1'
 headers = {
   'Authorization': 'Bearer {TOKEN}',
   'Content-Type': 'application/json',
@@ -8651,7 +8935,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 34
+x-ratelimit-remaining: 33
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8762,10 +9046,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-batiments--id-"
-               value="3"
+               value="1"
                data-component="url">
     <br>
-<p>the id of the building. Example: <code>3</code></p>
+<p>the id of the building. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -8789,7 +9073,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
-    \"batiment\": \"distinctio\"
+    \"batiment\": \"aut\"
 }"
 </code></pre></div>
 
@@ -8807,7 +9091,7 @@ const headers = {
 };
 
 let body = {
-    "batiment": "distinctio"
+    "batiment": "aut"
 };
 
 fetch(url, {
@@ -8829,7 +9113,7 @@ $response = $client-&gt;post(
             'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
         ],
         'json' =&gt; [
-            'batiment' =&gt; 'distinctio',
+            'batiment' =&gt; 'aut',
         ],
     ]
 );
@@ -8843,7 +9127,7 @@ import json
 
 url = 'http://localhost:8000/api/add/batiments'
 payload = {
-    "batiment": "distinctio"
+    "batiment": "aut"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -8868,7 +9152,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 33
+x-ratelimit-remaining: 32
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8876,7 +9160,7 @@ vary: Origin
     &quot;message&quot;: &quot;Cannot access offset of type string on string&quot;,
     &quot;exception&quot;: &quot;TypeError&quot;,
     &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\BatimentController.php&quot;,
-    &quot;line&quot;: 324,
+    &quot;line&quot;: 322,
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
@@ -9459,14 +9743,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>batiment</code></b>&nbsp;&nbsp;
-<small>required</small>&nbsp;
+<small>String</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="batiment"                data-endpoint="POSTapi-add-batiments"
-               value="distinctio"
+               value="aut"
                data-component="body">
     <br>
-<p>JSONObject. Example: <code>distinctio</code></p>
+<p>required. Example : {&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;nombre_niveau&quot;: &quot;3&quot;,&quot;code&quot;: &quot;BATIMENT_1013434286&quot;,&quot;longitude&quot;: &quot;11.229207&quot;,&quot;latitude&quot;: &quot;4.078288&quot;,&quot;indication&quot;: &quot;derrierre station&quot;,&quot;rue&quot;: &quot;Rue de la Mairie&quot;,&quot;ville&quot;: &quot;Douala&quot;,&quot;commune&quot;: &quot;Douala 3&quot;,&quot;quartier&quot;: &quot;Nyalla&quot;,&quot;user_id&quot;: 1,&quot;etablissement&quot;: {&quot;id&quot;: 1,&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;indication_adresse&quot;: &quot;Face station&quot;,&quot;code_postal&quot;: &quot;BP 4326 Douala&quot;, &quot;site_internet&quot;: &quot;www.site.com&quot;,&quot;user_id&quot;: &quot;1&quot;,&quot;etage&quot;: &quot;1&quot;,&quot;phone&quot;: &quot;699999999&quot;,&quot;whatsapp1&quot;: &quot;699999999&quot;,&quot;whatsapp2&quot;: &quot;699999998&quot;,&quot;description&quot;: &quot;bel etablissement&quot;,&quot;nom_manager&quot;: &quot;Mical&quot;,&quot;contact_manager&quot;: &quot;Mical&quot;,&quot;commodites&quot;: &quot;Wifi&quot;,&quot;services&quot;: &quot;OM;MOMO&quot;,&quot;ameliorations&quot;: &quot;Ajouter des videos&quot;,&quot;idSousCategorie&quot;: &quot;1&quot;,&quot;horaires&quot;: [{&quot;jour&quot;: &quot;lundi&quot;,&quot;plage_horaire&quot;: &quot;07:00-12:00;14:00-17:00&quot;}]}} Example: <code>aut</code></p>
         </div>
         </form>
 
@@ -13672,3498 +13956,6 @@ vary: Origin
     &quot;data&quot;: {
         &quot;categories&quot;: [
             {
-                &quot;id&quot;: 27,
-                &quot;nom&quot;: &quot;Autres&quot;,
-                &quot;shortname&quot;: &quot;Autres&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                &quot;color&quot;: &quot;#7A5FDB&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 479,
-                        &quot;nom&quot;: &quot;Activit&eacute;s Formelles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 480,
-                        &quot;nom&quot;: &quot;Activit&eacute;s Informelles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 26,
-                &quot;nom&quot;: &quot;Transports&quot;,
-                &quot;shortname&quot;: &quot;Transports&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                &quot;color&quot;: &quot;#0D3C61&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 444,
-                        &quot;nom&quot;: &quot;Accastillage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 445,
-                        &quot;nom&quot;: &quot;Acconage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 446,
-                        &quot;nom&quot;: &quot;A&eacute;ronautique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 447,
-                        &quot;nom&quot;: &quot;A&eacute;ronautique - Centrales D&#039;Achats&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 448,
-                        &quot;nom&quot;: &quot;A&eacute;ronautique - Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 449,
-                        &quot;nom&quot;: &quot;A&eacute;roports&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 450,
-                        &quot;nom&quot;: &quot;A&eacute;roports - Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 451,
-                        &quot;nom&quot;: &quot;A&eacute;roports -  Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 452,
-                        &quot;nom&quot;: &quot;A&eacute;roports -  Securite Aerienne&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 453,
-                        &quot;nom&quot;: &quot;A&eacute;roports -  Services&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 454,
-                        &quot;nom&quot;: &quot;Agences en Douane&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 455,
-                        &quot;nom&quot;: &quot;Agences Maritimes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 456,
-                        &quot;nom&quot;: &quot;A&eacute;ronautique - Pi&egrave;ces D&eacute;tach&eacute;es&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 457,
-                        &quot;nom&quot;: &quot;Chantiers Navals&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 458,
-                        &quot;nom&quot;: &quot;Chemin de Fer&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 459,
-                        &quot;nom&quot;: &quot;Compagnies A&eacute;riennes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 460,
-                        &quot;nom&quot;: &quot;Containers, Fabrication et Location&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 461,
-                        &quot;nom&quot;: &quot;D&eacute;m&eacute;nagements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 462,
-                        &quot;nom&quot;: &quot;Expertises Maritimes et Terrestres&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 463,
-                        &quot;nom&quot;: &quot;Fret a&eacute;rien - maritime &amp; international&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 464,
-                        &quot;nom&quot;: &quot;Manutention et Entreposage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 465,
-                        &quot;nom&quot;: &quot;Manutention - Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 466,
-                        &quot;nom&quot;: &quot;Manutention - Portuaire&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 467,
-                        &quot;nom&quot;: &quot;Ports&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 468,
-                        &quot;nom&quot;: &quot;Ports, Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 469,
-                        &quot;nom&quot;: &quot;Shipchandler&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 470,
-                        &quot;nom&quot;: &quot;Transit et Consignation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 471,
-                        &quot;nom&quot;: &quot;Transports A&eacute;riens&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 472,
-                        &quot;nom&quot;: &quot;Transports en Commun&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 473,
-                        &quot;nom&quot;: &quot;Transports Ferroviaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 474,
-                        &quot;nom&quot;: &quot;Transports Internationaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 475,
-                        &quot;nom&quot;: &quot;Transports Maritimes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 476,
-                        &quot;nom&quot;: &quot;Transports Routiers&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 477,
-                        &quot;nom&quot;: &quot;Transports Urbains&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 478,
-                        &quot;nom&quot;: &quot;Travaux Maritimes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 25,
-                &quot;nom&quot;: &quot;Tourisme&quot;,
-                &quot;shortname&quot;: &quot;Tourisme&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                &quot;color&quot;: &quot;#7A5FDB&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 433,
-                        &quot;nom&quot;: &quot;Agences de Tourisme&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 434,
-                        &quot;nom&quot;: &quot;Centres d&#039;Information&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 435,
-                        &quot;nom&quot;: &quot;Agences de voyage, tours op&eacute;rateurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 436,
-                        &quot;nom&quot;: &quot;Equipements H&ocirc;tels et Restaurants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 437,
-                        &quot;nom&quot;: &quot;H&ocirc;tel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 438,
-                        &quot;nom&quot;: &quot;Auberge&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 439,
-                        &quot;nom&quot;: &quot;Location d&#039;avions&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 440,
-                        &quot;nom&quot;: &quot;Location de bateaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 441,
-                        &quot;nom&quot;: &quot;Location de voitures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 442,
-                        &quot;nom&quot;: &quot;Transport Logistique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 443,
-                        &quot;nom&quot;: &quot;Transports Touristiques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 24,
-                &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                &quot;shortname&quot;: &quot;Textile&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                &quot;color&quot;: &quot;#9E6648&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 424,
-                        &quot;nom&quot;: &quot;Confection, Couture, Broderie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 425,
-                        &quot;nom&quot;: &quot;Equipements et v&ecirc;tements militaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 426,
-                        &quot;nom&quot;: &quot;Friperies&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 427,
-                        &quot;nom&quot;: &quot;Pr&ecirc;t &agrave; Porter - Gros et D&eacute;tail&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 428,
-                        &quot;nom&quot;: &quot;Textile&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 429,
-                        &quot;nom&quot;: &quot;Textile, Filature, Tissage, Impression&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 430,
-                        &quot;nom&quot;: &quot;Textile, Fournitures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 431,
-                        &quot;nom&quot;: &quot;Textile - Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 432,
-                        &quot;nom&quot;: &quot;V&ecirc;tements  Manufactures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 23,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                &quot;shortname&quot;: &quot;Telecom&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                &quot;color&quot;: &quot;#3C8694&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 416,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Transmission de signal&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 417,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications et T&eacute;l&eacute;phonie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 418,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Fibres Optique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 419,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Installation et maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 420,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mat&eacute;riels et &eacute;quipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 421,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mobiles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 422,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - R&eacute;seaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 423,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Satellite&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 22,
-                &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                &quot;color&quot;: &quot;#0D3C61&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 406,
-                        &quot;nom&quot;: &quot;Alarmes Et Surveillance, Mat&eacute;riels &eacute;lectroniques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 407,
-                        &quot;nom&quot;: &quot;Badges, Fabrication&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 408,
-                        &quot;nom&quot;: &quot;Controles Techniques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 409,
-                        &quot;nom&quot;: &quot;D&eacute;tectives&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 410,
-                        &quot;nom&quot;: &quot;Escorte V&eacute;hicules&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 411,
-                        &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute;&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 412,
-                        &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute; - Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 413,
-                        &quot;nom&quot;: &quot;Incendie et Protection - Mat&eacute;riels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 414,
-                        &quot;nom&quot;: &quot;S&eacute;curit&eacute; - Audits et Consultants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 415,
-                        &quot;nom&quot;: &quot;T&eacute;l&eacute;-Surveillance et Vid&eacute;o-Surveillance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 21,
-                &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                &quot;color&quot;: &quot;#F44336&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 363,
-                        &quot;nom&quot;: &quot;Ambulance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 364,
-                        &quot;nom&quot;: &quot;Assistance sociale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 365,
-                        &quot;nom&quot;: &quot;M&eacute;decine G&eacute;n&eacute;rale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 366,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dentiste&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 367,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dermatologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 368,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - cardiologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 369,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - oncologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 370,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ophtalmologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 371,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - psychologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 372,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - angiologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 373,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - p&eacute;dicure et podologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 374,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ost&eacute;opathie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 375,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - gyn&eacute;cologie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 376,
-                        &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - kin&eacute;sith&eacute;rapeute&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 377,
-                        &quot;nom&quot;: &quot;M&eacute;decine naturelle, traditionnelle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 378,
-                        &quot;nom&quot;: &quot;M&eacute;decine du travail&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 379,
-                        &quot;nom&quot;: &quot;Chirurgie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 380,
-                        &quot;nom&quot;: &quot;Chirurgie Esth&eacute;tique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 381,
-                        &quot;nom&quot;: &quot;Cliniques et Hopitaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 382,
-                        &quot;nom&quot;: &quot;Cosm&eacute;tiques - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 383,
-                        &quot;nom&quot;: &quot;Cosm&eacute;tiques - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 384,
-                        &quot;nom&quot;: &quot;Drogueries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 385,
-                        &quot;nom&quot;: &quot;Laboratoires d&#039;Analyses M&eacute;dicales&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 386,
-                        &quot;nom&quot;: &quot;Laboratoires, Mat&eacute;riels et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 387,
-                        &quot;nom&quot;: &quot;Laboratoires - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 388,
-                        &quot;nom&quot;: &quot;Medical - Assistance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 389,
-                        &quot;nom&quot;: &quot;Medical - Gaz Medical&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 390,
-                        &quot;nom&quot;: &quot;Medical - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 391,
-                        &quot;nom&quot;: &quot;Medical - Materiels Et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 392,
-                        &quot;nom&quot;: &quot;Medical - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 393,
-                        &quot;nom&quot;: &quot;Opticiens&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 394,
-                        &quot;nom&quot;: &quot;Opticiens - Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 395,
-                        &quot;nom&quot;: &quot;Para-Pharmacie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 396,
-                        &quot;nom&quot;: &quot;Pharmaceutiques - Distributeurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 397,
-                        &quot;nom&quot;: &quot;Pharmaceutiques - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 398,
-                        &quot;nom&quot;: &quot;Pharmaceutiques - Laboratoires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 399,
-                        &quot;nom&quot;: &quot;Pharmaceutiques - Materiels Et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 400,
-                        &quot;nom&quot;: &quot;Pharmaceutiques - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 401,
-                        &quot;nom&quot;: &quot;Pharmacies&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 402,
-                        &quot;nom&quot;: &quot;Phytosanitaires - Traitements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 403,
-                        &quot;nom&quot;: &quot;Urgences Medicales&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 404,
-                        &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 405,
-                        &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires, Produits et Pharmacie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 20,
-                &quot;nom&quot;: &quot;Restos, bars&quot;,
-                &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                &quot;color&quot;: &quot;#F78300&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 358,
-                        &quot;nom&quot;: &quot;Restaurant&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 359,
-                        &quot;nom&quot;: &quot;Night Clubs et Discoth&egrave;ques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 360,
-                        &quot;nom&quot;: &quot;Restauration rapide&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 361,
-                        &quot;nom&quot;: &quot;Bar, Caf&eacute;&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 362,
-                        &quot;nom&quot;: &quot;Salons de Th&eacute; et Glaciers&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 19,
-                &quot;nom&quot;: &quot;Loisirs&quot;,
-                &quot;shortname&quot;: &quot;Loisirs&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                &quot;color&quot;: &quot;#7A5FDB&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 341,
-                        &quot;nom&quot;: &quot;Artisanat, Antiquaires et Galeries d&#039;Art&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 342,
-                        &quot;nom&quot;: &quot;Cadeaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 343,
-                        &quot;nom&quot;: &quot;Casino&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 344,
-                        &quot;nom&quot;: &quot;Cin&eacute;ma et vid&eacute;oth&egrave;ques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 345,
-                        &quot;nom&quot;: &quot;Centre culturel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 346,
-                        &quot;nom&quot;: &quot;Mus&eacute;e&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 347,
-                        &quot;nom&quot;: &quot;Musique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 348,
-                        &quot;nom&quot;: &quot;Th&eacute;&acirc;tre, spectacle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 349,
-                        &quot;nom&quot;: &quot;Cabaret&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 350,
-                        &quot;nom&quot;: &quot;Biblioth&egrave;que et Centre de Documentation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 351,
-                        &quot;nom&quot;: &quot;Librairie, papeterie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 352,
-                        &quot;nom&quot;: &quot;Sport&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 353,
-                        &quot;nom&quot;: &quot;Espaces verts et Jardins&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 354,
-                        &quot;nom&quot;: &quot;Salle de spectacles - salle de f&ecirc;tes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 355,
-                        &quot;nom&quot;: &quot;Loisirs, jeux et entertainment&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 356,
-                        &quot;nom&quot;: &quot;Loterie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 357,
-                        &quot;nom&quot;: &quot;Voyance, Medium&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 18,
-                &quot;nom&quot;: &quot;Justice&quot;,
-                &quot;shortname&quot;: &quot;Justice&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                &quot;color&quot;: &quot;#90A8B5&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 329,
-                        &quot;nom&quot;: &quot;Avocats&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 330,
-                        &quot;nom&quot;: &quot;Avocats d&#039;Affaires Internationales&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 331,
-                        &quot;nom&quot;: &quot;Cabinets Juridiques et Fiscaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 332,
-                        &quot;nom&quot;: &quot;Consultants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 333,
-                        &quot;nom&quot;: &quot;Consultants en Immigration&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 334,
-                        &quot;nom&quot;: &quot;Consultants Internationaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 335,
-                        &quot;nom&quot;: &quot;Expertises  Comptables, Audit Et Conseil&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 336,
-                        &quot;nom&quot;: &quot;Expertises - Etudes, Communication&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 337,
-                        &quot;nom&quot;: &quot;Expertises Judiciaire&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 338,
-                        &quot;nom&quot;: &quot;Huissiers De Justice&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 339,
-                        &quot;nom&quot;: &quot;Notaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 340,
-                        &quot;nom&quot;: &quot;Projets et Bureaux D&#039;Appui&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 17,
-                &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                &quot;shortname&quot;: &quot;Technologies&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                &quot;color&quot;: &quot;#3C8694&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 297,
-                        &quot;nom&quot;: &quot;Antennes Paraboliques, Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 298,
-                        &quot;nom&quot;: &quot;Archivage Numerique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 299,
-                        &quot;nom&quot;: &quot;Bureautique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 300,
-                        &quot;nom&quot;: &quot;Business Center&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 301,
-                        &quot;nom&quot;: &quot;Centres d&#039;Appels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 302,
-                        &quot;nom&quot;: &quot;Courriers Express, Colis Express&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 303,
-                        &quot;nom&quot;: &quot;Cyber-Cafes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 304,
-                        &quot;nom&quot;: &quot;Domiciliation de Soci&eacute;t&eacute;s&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 305,
-                        &quot;nom&quot;: &quot;Editeurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 306,
-                        &quot;nom&quot;: &quot;Etudes de March&eacute;s&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 307,
-                        &quot;nom&quot;: &quot;Imprimeries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 308,
-                        &quot;nom&quot;: &quot;Imprimeries, Mat&eacute;riels et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 309,
-                        &quot;nom&quot;: &quot;Informatique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 310,
-                        &quot;nom&quot;: &quot;Informatique - Consommables&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 311,
-                        &quot;nom&quot;: &quot;Informatique - Constructeurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 312,
-                        &quot;nom&quot;: &quot;Informatique - Consultants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 313,
-                        &quot;nom&quot;: &quot;Informatique - Environnement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 314,
-                        &quot;nom&quot;: &quot;Informatique - Expertises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 315,
-                        &quot;nom&quot;: &quot;Informatique - Gestion De Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 316,
-                        &quot;nom&quot;: &quot;Informatique - Ing&eacute;nierie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 317,
-                        &quot;nom&quot;: &quot;Informatique - Ing&eacute;nieurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 318,
-                        &quot;nom&quot;: &quot;Informatique - Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 319,
-                        &quot;nom&quot;: &quot;Informatique - Reseaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 320,
-                        &quot;nom&quot;: &quot;Informatique - Securite&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 321,
-                        &quot;nom&quot;: &quot;Internet&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 322,
-                        &quot;nom&quot;: &quot;Internet - Provider&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 323,
-                        &quot;nom&quot;: &quot;Internet - Web Design&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 324,
-                        &quot;nom&quot;: &quot;Internet - E-Business &amp; E-Commerce&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 325,
-                        &quot;nom&quot;: &quot;Paratonnerre&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 326,
-                        &quot;nom&quot;: &quot;Technologies Nouvelles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 327,
-                        &quot;nom&quot;: &quot;Technologies Nouvelles, Consultants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 328,
-                        &quot;nom&quot;: &quot;Traducteurs Et Interpretes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 16,
-                &quot;nom&quot;: &quot;Industries&quot;,
-                &quot;shortname&quot;: &quot;Industries&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                &quot;color&quot;: &quot;#9E6648&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 257,
-                        &quot;nom&quot;: &quot;Electro-M&eacute;nager&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 258,
-                        &quot;nom&quot;: &quot;Electronique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 259,
-                        &quot;nom&quot;: &quot;Allumettes et Bougies&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 260,
-                        &quot;nom&quot;: &quot;Armes et Munitions&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 261,
-                        &quot;nom&quot;: &quot;Assistance Technique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 262,
-                        &quot;nom&quot;: &quot;Cartonneries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 263,
-                        &quot;nom&quot;: &quot;Chaussures, Manufactures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 264,
-                        &quot;nom&quot;: &quot;Coton&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 265,
-                        &quot;nom&quot;: &quot;D&eacute;pannage et Maintenance Industrielle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 266,
-                        &quot;nom&quot;: &quot;Diamant et Or&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 267,
-                        &quot;nom&quot;: &quot;Emballage et Conditionnement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 268,
-                        &quot;nom&quot;: &quot;Equipements de Bureaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 269,
-                        &quot;nom&quot;: &quot;Equipements Industriels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 270,
-                        &quot;nom&quot;: &quot;Fournitures Industrielles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 271,
-                        &quot;nom&quot;: &quot;Froid Industriel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 272,
-                        &quot;nom&quot;: &quot;Location De Mat&eacute;riels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 273,
-                        &quot;nom&quot;: &quot;Machines-Outils, Manufactures&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 274,
-                        &quot;nom&quot;: &quot;Manutention Industrielle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 275,
-                        &quot;nom&quot;: &quot;Matelas&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 276,
-                        &quot;nom&quot;: &quot;Matelas, Equipements et Materiels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 277,
-                        &quot;nom&quot;: &quot;Mesure et Pesage, Materiels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 278,
-                        &quot;nom&quot;: &quot;Nettoyage Industriel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 279,
-                        &quot;nom&quot;: &quot;Nettoyage, Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 280,
-                        &quot;nom&quot;: &quot;Papier - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 281,
-                        &quot;nom&quot;: &quot;Pi&egrave;ces D&eacute;tach&eacute;es Industrielles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 282,
-                        &quot;nom&quot;: &quot;Plastique - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 283,
-                        &quot;nom&quot;: &quot;Plastique - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 284,
-                        &quot;nom&quot;: &quot;Savonneries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 285,
-                        &quot;nom&quot;: &quot;Soudage, Mat&eacute;riels et Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 286,
-                        &quot;nom&quot;: &quot;Tabac, Manufactures et Importateurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 287,
-                        &quot;nom&quot;: &quot;Travail Temporaire, Interim&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 288,
-                        &quot;nom&quot;: &quot;Tuyauteries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 289,
-                        &quot;nom&quot;: &quot;Verre - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 290,
-                        &quot;nom&quot;: &quot;Zone Franche Industrielle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 291,
-                        &quot;nom&quot;: &quot;Ameublement et Mobilier, Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 292,
-                        &quot;nom&quot;: &quot;Fournitures de Bureaux, Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 293,
-                        &quot;nom&quot;: &quot;Mobilier - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 294,
-                        &quot;nom&quot;: &quot;Chimie - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 295,
-                        &quot;nom&quot;: &quot;Chimie - Produits&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 296,
-                        &quot;nom&quot;: &quot;Parfum, Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 15,
-                &quot;nom&quot;: &quot;Immobilier&quot;,
-                &quot;shortname&quot;: &quot;Immobilier&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                &quot;color&quot;: &quot;#03B38B&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 251,
-                        &quot;nom&quot;: &quot;Garde Meubles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 252,
-                        &quot;nom&quot;: &quot;Immobilier - Agences&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 253,
-                        &quot;nom&quot;: &quot;Immobilier - Expertises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 254,
-                        &quot;nom&quot;: &quot;Immobilier - Gestion&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 255,
-                        &quot;nom&quot;: &quot;Immobilier - Location&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 256,
-                        &quot;nom&quot;: &quot;Immobilier - Promoteurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 14,
-                &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                &quot;color&quot;: &quot;#005596&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 238,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Aviation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 239,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Distribution&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 240,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Equipements Et Mater...&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 241,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Expertises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 242,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Exploration&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 243,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Logistiques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 244,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Lubrifiants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 245,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 246,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Production&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 247,
-                        &quot;nom&quot;: &quot;Hydrocarbures - Transports&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 248,
-                        &quot;nom&quot;: &quot;P&eacute;troliers, Constructions&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 249,
-                        &quot;nom&quot;: &quot;P&eacute;troliers - Mat&eacute;riels et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 250,
-                        &quot;nom&quot;: &quot;Raffineries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 13,
-                &quot;nom&quot;: &quot;Energie&quot;,
-                &quot;shortname&quot;: &quot;Energie&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                &quot;color&quot;: &quot;#005596&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 224,
-                        &quot;nom&quot;: &quot;Automatisme&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 225,
-                        &quot;nom&quot;: &quot;Batteries et Piles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 226,
-                        &quot;nom&quot;: &quot;Electricit&eacute; - G&eacute;n&eacute;rale et Industrielle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 227,
-                        &quot;nom&quot;: &quot;Electricit&eacute; - Expertises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 228,
-                        &quot;nom&quot;: &quot;Electricit&eacute; - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 229,
-                        &quot;nom&quot;: &quot;Electricit&eacute; - Ing&eacute;nierie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 230,
-                        &quot;nom&quot;: &quot;Electricit&eacute; - Materiels et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 231,
-                        &quot;nom&quot;: &quot;Electrification Rurale Et Urbaine&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 232,
-                        &quot;nom&quot;: &quot;Electrom&eacute;canique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 233,
-                        &quot;nom&quot;: &quot;Energie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 234,
-                        &quot;nom&quot;: &quot;Energie Nouvelle et Renouvelable&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 235,
-                        &quot;nom&quot;: &quot;Energie Solaire&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 236,
-                        &quot;nom&quot;: &quot;Gaz Domestique Et Industriel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 237,
-                        &quot;nom&quot;: &quot;G&eacute;otechnique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 12,
-                &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                &quot;shortname&quot;: &quot;Formation&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                &quot;color&quot;: &quot;#90A8B5&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 217,
-                        &quot;nom&quot;: &quot;Centres de Documentation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 218,
-                        &quot;nom&quot;: &quot;Cr&egrave;che&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 219,
-                        &quot;nom&quot;: &quot;Centre de loisirs d&#039;enfants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 220,
-                        &quot;nom&quot;: &quot;Centre linguistique - enseignement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 221,
-                        &quot;nom&quot;: &quot;Centres de Formation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 222,
-                        &quot;nom&quot;: &quot;Centres de Recherche&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 223,
-                        &quot;nom&quot;: &quot;Ecoles et Universit&eacute;s&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 11,
-                &quot;nom&quot;: &quot;Eau&quot;,
-                &quot;shortname&quot;: &quot;Eau&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-eau.png&quot;,
-                &quot;color&quot;: &quot;#005596&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 214,
-                        &quot;nom&quot;: &quot;Eau - Distribution&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 215,
-                        &quot;nom&quot;: &quot;Eau - Laboratoires d&#039;Analyses&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 216,
-                        &quot;nom&quot;: &quot;Eau - Traitement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 10,
-                &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                &quot;shortname&quot;: &quot;Communication&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                &quot;color&quot;: &quot;#3C8694&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 199,
-                        &quot;nom&quot;: &quot;Agences de Mannequins&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 200,
-                        &quot;nom&quot;: &quot;Agences de Presse et d&#039;Information&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 201,
-                        &quot;nom&quot;: &quot;Agences de Publicit&eacute; et de Communication&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 202,
-                        &quot;nom&quot;: &quot;Audiovisuel - Mat&eacute;riels et Production&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 203,
-                        &quot;nom&quot;: &quot;Ev&eacute;nementiel&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 204,
-                        &quot;nom&quot;: &quot;Journaux et Presse&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 205,
-                        &quot;nom&quot;: &quot;Maison d&#039;&eacute;dition&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 206,
-                        &quot;nom&quot;: &quot;Marketing&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 207,
-                        &quot;nom&quot;: &quot;Objets Publicitaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 208,
-                        &quot;nom&quot;: &quot;Organisations de Conf&eacute;rences&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 209,
-                        &quot;nom&quot;: &quot;Radio et T&eacute;l&eacute;vision&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 210,
-                        &quot;nom&quot;: &quot;Radio-Communication&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 211,
-                        &quot;nom&quot;: &quot;Relations Publiques et Organisations&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 212,
-                        &quot;nom&quot;: &quot;Ressources Humaines&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 213,
-                        &quot;nom&quot;: &quot;S&eacute;rigraphie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 9,
-                &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                &quot;shortname&quot;: &quot;Commerce&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                &quot;color&quot;: &quot;#6D7278&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 189,
-                        &quot;nom&quot;: &quot;Centrales d&#039;Achats&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 190,
-                        &quot;nom&quot;: &quot;Chambres de Commerce&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 191,
-                        &quot;nom&quot;: &quot;Commerce Exterieur - Promotion&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 192,
-                        &quot;nom&quot;: &quot;Commerce G&eacute;n&eacute;ral&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 193,
-                        &quot;nom&quot;: &quot;E-Commerce&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 194,
-                        &quot;nom&quot;: &quot;Groupements D&#039;Entreprises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 195,
-                        &quot;nom&quot;: &quot;Import et Export&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 196,
-                        &quot;nom&quot;: &quot;Promotion Commerciale et Etudes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 197,
-                        &quot;nom&quot;: &quot;Recouvrements Commerciaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 198,
-                        &quot;nom&quot;: &quot;Repr&eacute;sentation Commerciale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 8,
-                &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
-                &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                &quot;color&quot;: &quot;#7A5FDB&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 186,
-                        &quot;nom&quot;: &quot;Coiffeur&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 187,
-                        &quot;nom&quot;: &quot;Institut de beaut&eacute;, parfumerie, relaxation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 188,
-                        &quot;nom&quot;: &quot;Massages&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 7,
-                &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                &quot;shortname&quot;: &quot;Construction&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                &quot;color&quot;: &quot;#03B38B&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 104,
-                        &quot;nom&quot;: &quot;Adduction d&#039;eau et VRD&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 105,
-                        &quot;nom&quot;: &quot;Agencement et D&eacute;coration&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 106,
-                        &quot;nom&quot;: &quot;Industrie d&#039;aluminium&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 107,
-                        &quot;nom&quot;: &quot;Am&eacute;nagement des Terrains Urbains&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 108,
-                        &quot;nom&quot;: &quot;Architecture et Urbanisme&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 109,
-                        &quot;nom&quot;: &quot;Ascenseurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 110,
-                        &quot;nom&quot;: &quot;Assainissement et Canalisations&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 111,
-                        &quot;nom&quot;: &quot;B&acirc;ches et Stores&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 112,
-                        &quot;nom&quot;: &quot;B&acirc;timents et Travaux Publics&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 113,
-                        &quot;nom&quot;: &quot;B&acirc;timents - Expertises&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 114,
-                        &quot;nom&quot;: &quot;B&acirc;timents - Nettoyage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 115,
-                        &quot;nom&quot;: &quot;B&acirc;timents - Pr&eacute;fabriqu&eacute;&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 116,
-                        &quot;nom&quot;: &quot;B&acirc;timents - Ravalement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 117,
-                        &quot;nom&quot;: &quot;B&acirc;timents - R&eacute;habilitation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 118,
-                        &quot;nom&quot;: &quot;B&acirc;timents - Second &OElig;uvre&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 119,
-                        &quot;nom&quot;: &quot;Bitume&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 120,
-                        &quot;nom&quot;: &quot;Bois et N&eacute;goce&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 121,
-                        &quot;nom&quot;: &quot;Bois - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 122,
-                        &quot;nom&quot;: &quot;Bois - Scieries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 123,
-                        &quot;nom&quot;: &quot;Bricolage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 124,
-                        &quot;nom&quot;: &quot;Briqueteries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 125,
-                        &quot;nom&quot;: &quot;Bureaux d&#039;Etudes et D&#039;Ing&eacute;nierie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 126,
-                        &quot;nom&quot;: &quot;C&acirc;bles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 127,
-                        &quot;nom&quot;: &quot;Caoutchouc&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 128,
-                        &quot;nom&quot;: &quot;Carrelages&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 129,
-                        &quot;nom&quot;: &quot;Carri&egrave;res - Exploitations et Exploration&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 130,
-                        &quot;nom&quot;: &quot;Chaudronnerie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 131,
-                        &quot;nom&quot;: &quot;Cimenteries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 132,
-                        &quot;nom&quot;: &quot;Citernes - M&eacute;tallique et Plastique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 133,
-                        &quot;nom&quot;: &quot;Climatisation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 134,
-                        &quot;nom&quot;: &quot;Climatisation - D&eacute;pannage et Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 135,
-                        &quot;nom&quot;: &quot;Constructions Industrielles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 136,
-                        &quot;nom&quot;: &quot;Constructions M&eacute;talliques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 137,
-                        &quot;nom&quot;: &quot;D&eacute;veloppement Rural et Urbain&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 138,
-                        &quot;nom&quot;: &quot;Ebenistes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 139,
-                        &quot;nom&quot;: &quot;Echafaudages&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 140,
-                        &quot;nom&quot;: &quot;Espaces Verts et Jardins&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 141,
-                        &quot;nom&quot;: &quot;Etanch&eacute;it&eacute;&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 142,
-                        &quot;nom&quot;: &quot;Faux-Plafonds et Staff&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 143,
-                        &quot;nom&quot;: &quot;Fer et Acier&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 144,
-                        &quot;nom&quot;: &quot;Forages&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 145,
-                        &quot;nom&quot;: &quot;Forages - Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 146,
-                        &quot;nom&quot;: &quot;Forages - Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 147,
-                        &quot;nom&quot;: &quot;Forestiers - Mat&eacute;riels et Equipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 148,
-                        &quot;nom&quot;: &quot;G&eacute;nie Civil&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 149,
-                        &quot;nom&quot;: &quot;G&eacute;ologues&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 150,
-                        &quot;nom&quot;: &quot;G&eacute;om&egrave;tres - topographes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 151,
-                        &quot;nom&quot;: &quot;Groupes Electrog&egrave;nes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 152,
-                        &quot;nom&quot;: &quot;Hydraulique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 153,
-                        &quot;nom&quot;: &quot;Hydraulique - Constructions&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 154,
-                        &quot;nom&quot;: &quot;Hydraulique - Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 155,
-                        &quot;nom&quot;: &quot;Isolation industrielle&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 156,
-                        &quot;nom&quot;: &quot;Laboratoires d&#039;Analyses du B&acirc;timent&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 157,
-                        &quot;nom&quot;: &quot;Location d&#039;Engins de Chantier&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 158,
-                        &quot;nom&quot;: &quot;Mat&eacute;riaux de Construction&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 159,
-                        &quot;nom&quot;: &quot;Menuiseries Aluminium&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 160,
-                        &quot;nom&quot;: &quot;Menuiseries Bois&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 161,
-                        &quot;nom&quot;: &quot;Menuiseries Industrielles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 162,
-                        &quot;nom&quot;: &quot;Menuiseries M&eacute;talliques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 163,
-                        &quot;nom&quot;: &quot;Mines - Exploitations et Exploration&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 164,
-                        &quot;nom&quot;: &quot;Mines - Import et Export&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 165,
-                        &quot;nom&quot;: &quot;Mines - Mat&eacute;riels et Equipements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 166,
-                        &quot;nom&quot;: &quot;Mines - Recherche&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 167,
-                        &quot;nom&quot;: &quot;Miroiteries et Vitreries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 168,
-                        &quot;nom&quot;: &quot;Ouvrages d&#039;Art&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 169,
-                        &quot;nom&quot;: &quot;Peintres&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 170,
-                        &quot;nom&quot;: &quot;Peinture&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 171,
-                        &quot;nom&quot;: &quot;Piscines&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 172,
-                        &quot;nom&quot;: &quot;Plomberie et Sanitaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 173,
-                        &quot;nom&quot;: &quot;Portes et Fen&ecirc;tres&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 174,
-                        &quot;nom&quot;: &quot;Propret&eacute; urbaine&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 175,
-                        &quot;nom&quot;: &quot;Quincailleries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 176,
-                        &quot;nom&quot;: &quot;Routes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 177,
-                        &quot;nom&quot;: &quot;Routes - Mat&eacute;riaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 178,
-                        &quot;nom&quot;: &quot;Routes - Signalisation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 179,
-                        &quot;nom&quot;: &quot;Serrureries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 180,
-                        &quot;nom&quot;: &quot;Toitures - Mat&eacute;riaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 181,
-                        &quot;nom&quot;: &quot;T&ocirc;les&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 182,
-                        &quot;nom&quot;: &quot;Topographie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 183,
-                        &quot;nom&quot;: &quot;Travaux Publics et Terrassement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 184,
-                        &quot;nom&quot;: &quot;Travaux Publics et Terrassement - Maintenance&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 185,
-                        &quot;nom&quot;: &quot;Tuyauteries et PVC&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 6,
-                &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                &quot;shortname&quot;: &quot;Finance&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                &quot;color&quot;: &quot;#6D7278&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 88,
-                        &quot;nom&quot;: &quot;Assurances&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 89,
-                        &quot;nom&quot;: &quot;Assurances Vies&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 90,
-                        &quot;nom&quot;: &quot;Assurances m&eacute;dicales&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 91,
-                        &quot;nom&quot;: &quot;Assureurs - Courtiers Et Conseils&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 92,
-                        &quot;nom&quot;: &quot;Banques et Organismes Financiers&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 93,
-                        &quot;nom&quot;: &quot;Equipements de S&eacute;curit&eacute; Bancaire&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 94,
-                        &quot;nom&quot;: &quot;Banques - Services Mobiles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 95,
-                        &quot;nom&quot;: &quot;Bureaux de Change et Transferts d&#039;argent&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 96,
-                        &quot;nom&quot;: &quot;Bureaux de Contr&ocirc;le&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 97,
-                        &quot;nom&quot;: &quot;Cabinets Comptables&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 98,
-                        &quot;nom&quot;: &quot;Centres d&#039;Information&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 99,
-                        &quot;nom&quot;: &quot;Cr&eacute;dits et Finances&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 100,
-                        &quot;nom&quot;: &quot;Enqu&ecirc;tes, recherches et investigation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 101,
-                        &quot;nom&quot;: &quot;Holdings&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 102,
-                        &quot;nom&quot;: &quot;Investissements&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 103,
-                        &quot;nom&quot;: &quot;Transports de Fonds&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 5,
-                &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                &quot;color&quot;: &quot;#005596&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 69,
-                        &quot;nom&quot;: &quot;Auto-Ecoles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 70,
-                        &quot;nom&quot;: &quot;Automobiles et Concessionnaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 71,
-                        &quot;nom&quot;: &quot;Expertises automobiles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 72,
-                        &quot;nom&quot;: &quot;Automobiles - Pi&egrave;ces D&eacute;tach&eacute;es et Accessoires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 73,
-                        &quot;nom&quot;: &quot;Voitures d&#039;occasion&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 74,
-                        &quot;nom&quot;: &quot;Constructions M&eacute;caniques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 75,
-                        &quot;nom&quot;: &quot;Contr&ocirc;les Techniques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 76,
-                        &quot;nom&quot;: &quot;Cycles et Motos&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 77,
-                        &quot;nom&quot;: &quot;Engins ee Chantier et Mat&eacute;riels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 78,
-                        &quot;nom&quot;: &quot;Garages&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 79,
-                        &quot;nom&quot;: &quot;M&eacute;canique G&eacute;n&eacute;rale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 80,
-                        &quot;nom&quot;: &quot;M&eacute;canique - Industries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 81,
-                        &quot;nom&quot;: &quot;Moteurs et Pompes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 82,
-                        &quot;nom&quot;: &quot;Pneumatiques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 83,
-                        &quot;nom&quot;: &quot;Tracking&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 84,
-                        &quot;nom&quot;: &quot;V&eacute;hicules Industriels&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 85,
-                        &quot;nom&quot;: &quot;Station-service&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 86,
-                        &quot;nom&quot;: &quot;Parking&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 87,
-                        &quot;nom&quot;: &quot;Garage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 4,
-                &quot;nom&quot;: &quot;Alimentation&quot;,
-                &quot;shortname&quot;: &quot;Alimentation&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                &quot;color&quot;: &quot;#F78300&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 41,
-                        &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 42,
-                        &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 43,
-                        &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 44,
-                        &quot;nom&quot;: &quot;Industries alimentaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 45,
-                        &quot;nom&quot;: &quot;Produits alimentaires&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 46,
-                        &quot;nom&quot;: &quot;Alimentation Animale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 47,
-                        &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 48,
-                        &quot;nom&quot;: &quot;Boissons&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 49,
-                        &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 50,
-                        &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 51,
-                        &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 52,
-                        &quot;nom&quot;: &quot;Brasseries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 53,
-                        &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 54,
-                        &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 55,
-                        &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 56,
-                        &quot;nom&quot;: &quot;Catering&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 57,
-                        &quot;nom&quot;: &quot;Distilleries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 58,
-                        &quot;nom&quot;: &quot;Environnement&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 59,
-                        &quot;nom&quot;: &quot;Gomme Arabique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 60,
-                        &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 61,
-                        &quot;nom&quot;: &quot;Laiteries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 62,
-                        &quot;nom&quot;: &quot;Minoteries&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 63,
-                        &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 64,
-                        &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 65,
-                        &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 66,
-                        &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 67,
-                        &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 68,
-                        &quot;nom&quot;: &quot;Traiteurs&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 3,
-                &quot;nom&quot;: &quot;Agriculture&quot;,
-                &quot;shortname&quot;: &quot;Agriculture&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                &quot;color&quot;: &quot;#FFB74D&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 33,
-                        &quot;nom&quot;: &quot;Mat&eacute;riels et Produits agricoles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 34,
-                        &quot;nom&quot;: &quot;Agricole, Produits Chimiques&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 35,
-                        &quot;nom&quot;: &quot;Agriculture&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 36,
-                        &quot;nom&quot;: &quot;Equipements et Mat&eacute;riel agricoles&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 37,
-                        &quot;nom&quot;: &quot;Agro-Alimentaire&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 38,
-                        &quot;nom&quot;: &quot;Agro-Industrie&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 39,
-                        &quot;nom&quot;: &quot;Elevage&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 40,
-                        &quot;nom&quot;: &quot;Elevage - Consultants&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
-                &quot;id&quot;: 2,
-                &quot;nom&quot;: &quot;Administrations&quot;,
-                &quot;shortname&quot;: &quot;Administration&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                &quot;color&quot;: &quot;#90A8B5&quot;,
-                &quot;vues&quot;: 0,
-                &quot;sous_categories&quot;: [
-                    {
-                        &quot;id&quot;: 23,
-                        &quot;nom&quot;: &quot;Administrations&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 24,
-                        &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 25,
-                        &quot;nom&quot;: &quot;Associations, syndicats&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 26,
-                        &quot;nom&quot;: &quot;Douane, Agences&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 27,
-                        &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 28,
-                        &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 29,
-                        &quot;nom&quot;: &quot;Offices Nationaux&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 30,
-                        &quot;nom&quot;: &quot;Poste&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 31,
-                        &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    },
-                    {
-                        &quot;id&quot;: 32,
-                        &quot;nom&quot;: &quot;Institution publique&quot;,
-                        &quot;logourl&quot;: null,
-                        &quot;logourlmap&quot;: null,
-                        &quot;color&quot;: null
-                    }
-                ]
-            },
-            {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Achats&quot;,
                 &quot;shortname&quot;: &quot;Achats&quot;,
@@ -17449,10 +14241,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "vues=true" \
-    --form "color=eos" \
+    --form "color=enim" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -17470,7 +14262,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('vues', 'true');
-body.append('color', 'eos');
+body.append('color', 'enim');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
@@ -17504,7 +14296,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'eos'
+                'contents' =&gt; 'enim'
             ],
             [
                 'name' =&gt; '_method',
@@ -17512,11 +14304,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'r')
             ],
         ],
     ]
@@ -17531,13 +14323,13 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "vues": "true",
-    "color": "eos",
+    "color": "enim",
     "_method": "PUT"
 }
 headers = {
@@ -17574,9 +14366,9 @@ vary: Origin
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Achat&quot;,
             &quot;shortname&quot;: &quot;Administration&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1704451479_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1704451479_test.jpg&quot;,
-            &quot;color&quot;: &quot;eos&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
+            &quot;color&quot;: &quot;enim&quot;,
             &quot;vues&quot;: 1
         }
     },
@@ -17697,7 +14489,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDEA5.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -17708,7 +14500,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpDEA6.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -17738,10 +14530,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-categories--id-"
-               value="eos"
+               value="enim"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>eos</code></p>
+<p>the color of the category Example: <code>enim</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -17776,10 +14568,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "shortname=blanditiis" \
-    --form "color=officia" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp" </code></pre></div>
+    --form "shortname=molestiae" \
+    --form "color=animi" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -17796,8 +14588,8 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'blanditiis');
-body.append('color', 'officia');
+body.append('shortname', 'molestiae');
+body.append('color', 'animi');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -17826,19 +14618,19 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'blanditiis'
+                'contents' =&gt; 'molestiae'
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'officia'
+                'contents' =&gt; 'animi'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'r')
             ],
         ],
     ]
@@ -17853,13 +14645,13 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "blanditiis",
-    "color": "officia"
+    "shortname": "molestiae",
+    "color": "animi"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -17884,7 +14676,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 6
+x-ratelimit-remaining: 53
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -17894,10 +14686,10 @@ vary: Origin
         &quot;categorie&quot;: {
             &quot;id&quot;: 28,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;shortname&quot;: &quot;blanditiis&quot;,
-            &quot;color&quot;: &quot;officia&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1704451481_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1704451481_test.jpg&quot;
+            &quot;shortname&quot;: &quot;molestiae&quot;,
+            &quot;color&quot;: &quot;animi&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de la cat&eacute;gorie reussie&quot;
@@ -18013,10 +14805,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="shortname"                data-endpoint="POSTapi-categories"
-               value="blanditiis"
+               value="molestiae"
                data-component="body">
     <br>
-<p>Example: <code>blanditiis</code></p>
+<p>Example: <code>molestiae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourl</code></b>&nbsp;&nbsp;
@@ -18027,7 +14819,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE87E.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -18038,7 +14830,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE88E.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -18046,10 +14838,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-categories"
-               value="officia"
+               value="animi"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>officia</code></p>
+<p>the color of the category Example: <code>animi</code></p>
         </div>
         </form>
 
@@ -18137,7 +14929,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 5
+x-ratelimit-remaining: 52
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18341,7 +15133,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 32
+x-ratelimit-remaining: 31
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18554,7 +15346,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 31
+x-ratelimit-remaining: 30
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18565,9 +15357,9 @@ vary: Origin
             &quot;user_id&quot;: 1,
             &quot;commentaire&quot;: &quot;J&#039;aime ce lieu&quot;,
             &quot;rating&quot;: 3,
-            &quot;updated_at&quot;: &quot;2024-01-05T10:44:40.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-01-05T10:44:40.000000Z&quot;,
-            &quot;id&quot;: 5,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;id&quot;: 17,
             &quot;user&quot;: {
                 &quot;id&quot;: 1,
                 &quot;name&quot;: &quot;Gautier&quot;,
@@ -18575,7 +15367,7 @@ vary: Origin
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                 &quot;phone&quot;: 699999999,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1704451480_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -18583,12 +15375,7 @@ vary: Origin
                         &quot;name&quot;: &quot;admin&quot;,
                         &quot;guard_name&quot;: &quot;api&quot;,
                         &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
-                        &quot;pivot&quot;: {
-                            &quot;model_type&quot;: &quot;App\\Models\\User&quot;,
-                            &quot;model_id&quot;: 1,
-                            &quot;role_id&quot;: 1
-                        }
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
                     }
                 ],
                 &quot;abonnement&quot;: {
@@ -18816,7 +15603,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 30
+x-ratelimit-remaining: 29
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19539,7 +16326,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 29
+x-ratelimit-remaining: 28
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19779,7 +16566,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 28
+x-ratelimit-remaining: 27
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19912,7 +16699,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/etablissements?user_id=1&amp;lat=4.056&amp;lon=8.056" \
+    --get "http://localhost:8000/api/etablissements?user_id=1&amp;lat=%224.056%22&amp;lon=%228.056%22" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -19925,8 +16712,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 const params = {
     "user_id": "1",
-    "lat": "4.056",
-    "lon": "8.056",
+    "lat": ""4.056"",
+    "lon": ""8.056"",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -19955,8 +16742,8 @@ $response = $client-&gt;get(
         ],
         'query' =&gt; [
             'user_id'=&gt; '1',
-            'lat'=&gt; '4.056',
-            'lon'=&gt; '8.056',
+            'lat'=&gt; '"4.056"',
+            'lon'=&gt; '"8.056"',
         ],
     ]
 );
@@ -19971,8 +16758,8 @@ import json
 url = 'http://localhost:8000/api/etablissements'
 params = {
   'user_id': '1',
-  'lat': '4.056',
-  'lon': '8.056',
+  'lat': '"4.056"',
+  'lon': '"8.056"',
 }
 headers = {
   'Content-Type': 'application/json',
@@ -20577,10 +17364,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="lat"                data-endpoint="GETapi-etablissements"
-               value="4.056"
+               value=""4.056""
                data-component="query">
     <br>
-<p>latitude. Example: <code>4.056</code></p>
+<p>latitude. Example: <code>"4.056"</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>lon</code></b>&nbsp;&nbsp;
@@ -20588,10 +17375,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="lon"                data-endpoint="GETapi-etablissements"
-               value="8.056"
+               value=""8.056""
                data-component="query">
     <br>
-<p>longitude. Example: <code>8.056</code></p>
+<p>longitude. Example: <code>"8.056"</code></p>
             </div>
                 </form>
 
@@ -20729,10 +17516,6 @@ vary: Origin
                     &quot;logourl&quot;: null,
                     &quot;logourlmap&quot;: null,
                     &quot;color&quot;: null,
-                    &quot;pivot&quot;: {
-                        &quot;etablissement_id&quot;: 1,
-                        &quot;sous_categorie_id&quot;: 1
-                    },
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
@@ -20765,10 +17548,6 @@ vary: Origin
                     &quot;logourl&quot;: null,
                     &quot;logourlmap&quot;: null,
                     &quot;color&quot;: null,
-                    &quot;pivot&quot;: {
-                        &quot;etablissement_id&quot;: 1,
-                        &quot;sous_categorie_id&quot;: 1
-                    },
                     &quot;categorie&quot;: {
                         &quot;id&quot;: 1,
                         &quot;nom&quot;: &quot;Achats&quot;,
@@ -21015,1508 +17794,9 @@ vary: Origin
     &quot;data&quot;: {
         &quot;etablissements&quot;: {
             &quot;current_page&quot;: 1,
-            &quot;data&quot;: [
-                {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Hopital de Nket&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;572671.3754491961&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:22.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 25,
-                        &quot;nom&quot;: &quot;Hopital de Nket&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_572671.3754491961&quot;,
-                        &quot;longitude&quot;: &quot;10.348428345154582&quot;,
-                        &quot;latitude&quot;: &quot;5.447834027064164&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;32669.098369635387&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 24,
-                        &quot;nom&quot;: &quot;Hopital de District de Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_32669.098369635387&quot;,
-                        &quot;longitude&quot;: &quot;10.345864779871784&quot;,
-                        &quot;latitude&quot;: &quot;5.421234005475265&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;EEC de Gouang&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;205870.10697691288&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:20.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 23,
-                        &quot;nom&quot;: &quot;EEC de Gouang&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_205870.10697691288&quot;,
-                        &quot;longitude&quot;: &quot;10.343244507000065&quot;,
-                        &quot;latitude&quot;: &quot;5.448916497000027&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;493742.76439874555&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:17.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 22,
-                        &quot;nom&quot;: &quot;Eglise Catholique de Konve&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_493742.76439874555&quot;,
-                        &quot;longitude&quot;: &quot;10.336290552000037&quot;,
-                        &quot;latitude&quot;: &quot;5.412744201000066&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;D63&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;916230.0393666985&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:16.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 21,
-                        &quot;nom&quot;: &quot;Paroisse St Philippe&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_916230.0393666985&quot;,
-                        &quot;longitude&quot;: &quot;10.360454536942518&quot;,
-                        &quot;latitude&quot;: &quot;5.431836105423236&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;D63&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;78960.94266152942&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:14.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 20,
-                        &quot;nom&quot;: &quot;Lyc&eacute;e Bilingue de Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_78960.94266152942&quot;,
-                        &quot;longitude&quot;: &quot;10.337177208000071&quot;,
-                        &quot;latitude&quot;: &quot;5.428177006000055&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;366703.81325525313&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:13.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 19,
-                        &quot;nom&quot;: &quot;Lyc&eacute;e Technique de Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_366703.81325525313&quot;,
-                        &quot;longitude&quot;: &quot;10.344377130000055&quot;,
-                        &quot;latitude&quot;: &quot;5.427117209000073&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;D63&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;175369.1407760527&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:11.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 18,
-                        &quot;nom&quot;: &quot;Ecole Publique de Nket&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_175369.1407760527&quot;,
-                        &quot;longitude&quot;: &quot;10.346529443000065&quot;,
-                        &quot;latitude&quot;: &quot;5.448208539000063&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;982835.934692351&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:10.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 17,
-                        &quot;nom&quot;: &quot;Ecole Publique de Sangmet&egrave;&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_982835.934692351&quot;,
-                        &quot;longitude&quot;: &quot;10.357981197000072&quot;,
-                        &quot;latitude&quot;: &quot;5.40838702700006&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;177026.38757959433&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:08.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 16,
-                        &quot;nom&quot;: &quot;Ecole Publique de Bam&eacute;ka Centre&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_177026.38757959433&quot;,
-                        &quot;longitude&quot;: &quot;10.346784884730033&quot;,
-                        &quot;latitude&quot;: &quot;5.416634556325035&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;EP de Douseh&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;705594.8621159282&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:07.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 15,
-                        &quot;nom&quot;: &quot;EP de Douseh&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_705594.8621159282&quot;,
-                        &quot;longitude&quot;: &quot;10.33888121800004&quot;,
-                        &quot;latitude&quot;: &quot;5.430227076000051&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;380483.0701491861&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:05.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 14,
-                        &quot;nom&quot;: &quot;March&eacute; de Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_380483.0701491861&quot;,
-                        &quot;longitude&quot;: &quot;10.34509477587178&quot;,
-                        &quot;latitude&quot;: &quot;5.419058299769723&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;379992.5134296431&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:04.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 32,
-                            &quot;nom&quot;: &quot;Institution publique&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 13,
-                                &quot;sous_categorie_id&quot;: 32
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 2,
-                                &quot;nom&quot;: &quot;Administrations&quot;,
-                                &quot;shortname&quot;: &quot;Administration&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                &quot;color&quot;: &quot;#90A8B5&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 13,
-                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_379992.5134296431&quot;,
-                        &quot;longitude&quot;: &quot;10.36767906600005&quot;,
-                        &quot;latitude&quot;: &quot;5.438824957000065&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 32,
-                            &quot;nom&quot;: &quot;Institution publique&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 13,
-                                &quot;sous_categorie_id&quot;: 32
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 2,
-                                &quot;nom&quot;: &quot;Administrations&quot;,
-                                &quot;shortname&quot;: &quot;Administration&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                &quot;color&quot;: &quot;#90A8B5&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;325622.99116268713&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:19:02.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 32,
-                            &quot;nom&quot;: &quot;Institution publique&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 12,
-                                &quot;sous_categorie_id&quot;: 32
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 2,
-                                &quot;nom&quot;: &quot;Administrations&quot;,
-                                &quot;shortname&quot;: &quot;Administration&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                &quot;color&quot;: &quot;#90A8B5&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 12,
-                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_325622.99116268713&quot;,
-                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
-                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 32,
-                            &quot;nom&quot;: &quot;Institution publique&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 12,
-                                &quot;sous_categorie_id&quot;: 32
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 2,
-                                &quot;nom&quot;: &quot;Administrations&quot;,
-                                &quot;shortname&quot;: &quot;Administration&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                                &quot;color&quot;: &quot;#90A8B5&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 11,
-                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;940303.0811733146&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:40.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 2,
-                            &quot;nom&quot;: &quot;Brocante&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 11,
-                                &quot;sous_categorie_id&quot;: 2
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 11,
-                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_940303.0811733146&quot;,
-                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
-                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 2,
-                            &quot;nom&quot;: &quot;Brocante&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 11,
-                                &quot;sous_categorie_id&quot;: 2
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;131848.02511418913&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:39.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 10,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 10,
-                        &quot;nom&quot;: &quot;Chefferie Bapeng&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_131848.02511418913&quot;,
-                        &quot;longitude&quot;: &quot;10.36767906600005&quot;,
-                        &quot;latitude&quot;: &quot;5.438824957000065&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 10,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;null&quot;,
-                    &quot;site_internet&quot;: &quot;null&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/notfound.png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;138865.25842101127&quot;,
-                    &quot;services&quot;: &quot;Non Defini&quot;,
-                    &quot;commodites&quot;: &quot;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-08-29T14:18:38.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 9,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 9,
-                        &quot;nom&quot;: &quot;Chefferie Bam&eacute;ka&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_138865.25842101127&quot;,
-                        &quot;longitude&quot;: &quot;10.339729178000027&quot;,
-                        &quot;latitude&quot;: &quot;5.426262783000027&quot;,
-                        &quot;image&quot;: &quot;/images/notfound.png&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Non Defini&quot;,
-                        &quot;ville&quot;: &quot;Bameka&quot;,
-                        &quot;commune&quot;: &quot;Non Defini&quot;,
-                        &quot;quartier&quot;: &quot;Non Defini&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 9,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Lido melen&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771660914&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08T13:55:42.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:42.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 5,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 5,
-                        &quot;nom&quot;: &quot;Lido melen&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771660914&quot;,
-                        &quot;longitude&quot;: &quot;11.4934024&quot;,
-                        &quot;latitude&quot;: &quot;3.8602565&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 5,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Betterman&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771655256&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08T13:55:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:40.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 4,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 4,
-                        &quot;nom&quot;: &quot;Betterman&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771655256&quot;,
-                        &quot;longitude&quot;: &quot;11.4948139&quot;,
-                        &quot;latitude&quot;: &quot;3.8636766&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue de Melen&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 4,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Chez ba&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;6771633360&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-04-08T13:55:39.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 3,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 3,
-                        &quot;nom&quot;: &quot;Chez ba&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-                        &quot;longitude&quot;: &quot;11.4934896&quot;,
-                        &quot;latitude&quot;: &quot;3.8613938&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Route de Kribi&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; VI&quot;,
-                        &quot;quartier&quot;: &quot;Melen&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 3,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Rosine&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1987382969/Rosine/1695379003_Capture d&rsquo;&eacute;cran (6).png&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1987382969&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Pas de Commodit&eacute;s&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 0,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08T13:55:37.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-09-22T10:36:44.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 2,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 2,
-                        &quot;nom&quot;: &quot;Rosine&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1987382969&quot;,
-                        &quot;longitude&quot;: &quot;11.5002933&quot;,
-                        &quot;latitude&quot;: &quot;3.8502254&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Rue 3.452&quot;,
-                        &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
-                        &quot;commune&quot;: &quot;Yaound&eacute; III&quot;,
-                        &quot;quartier&quot;: &quot;Ngoa-&Eacute;k&eacute;l&eacute;&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 2,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                },
-                {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                    &quot;indication_adresse&quot;: null,
-                    &quot;code_postal&quot;: &quot;undefined&quot;,
-                    &quot;site_internet&quot;: &quot;undefined&quot;,
-                    &quot;nom_manager&quot;: null,
-                    &quot;contact_manager&quot;: null,
-                    &quot;etage&quot;: 0,
-                    &quot;cover&quot;: &quot;/images/logo-nom.jpg&quot;,
-                    &quot;phone&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp1&quot;: &quot;000000000&quot;,
-                    &quot;whatsapp2&quot;: null,
-                    &quot;description&quot;: &quot;Aucune Description&quot;,
-                    &quot;osm_id&quot;: &quot;1013434286&quot;,
-                    &quot;services&quot;: &quot;Aucun service&quot;,
-                    &quot;commodites&quot;: &quot;Wifi;Parking;&quot;,
-                    &quot;ameliorations&quot;: null,
-                    &quot;vues&quot;: 1,
-                    &quot;logo&quot;: null,
-                    &quot;logo_map&quot;: null,
-                    &quot;deleted_at&quot;: null,
-                    &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2023-09-22T10:15:25.000000Z&quot;,
-                    &quot;isFavoris&quot;: false,
-                    &quot;isopen&quot;: false,
-                    &quot;moyenne&quot;: 0,
-                    &quot;avis&quot;: 0,
-                    &quot;count&quot;: [],
-                    &quot;sousCategories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 1,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;batiment&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
-                        &quot;nombre_niveau&quot;: 0,
-                        &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
-                        &quot;longitude&quot;: &quot;11.2292075&quot;,
-                        &quot;latitude&quot;: &quot;4.0782882&quot;,
-                        &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
-                        &quot;indication&quot;: null,
-                        &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
-                        &quot;ville&quot;: &quot;Okala&quot;,
-                        &quot;commune&quot;: &quot;undefined&quot;,
-                        &quot;quartier&quot;: &quot;undefined&quot;
-                    },
-                    &quot;sous_categories&quot;: [
-                        {
-                            &quot;id&quot;: 1,
-                            &quot;nom&quot;: &quot;Boutiques&quot;,
-                            &quot;logourl&quot;: null,
-                            &quot;logourlmap&quot;: null,
-                            &quot;color&quot;: null,
-                            &quot;pivot&quot;: {
-                                &quot;etablissement_id&quot;: 1,
-                                &quot;sous_categorie_id&quot;: 1
-                            },
-                            &quot;categorie&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;nom&quot;: &quot;Achats&quot;,
-                                &quot;shortname&quot;: &quot;Achats&quot;,
-                                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                                &quot;color&quot;: &quot;#2196F3&quot;,
-                                &quot;vues&quot;: 0
-                            }
-                        }
-                    ],
-                    &quot;images&quot;: [],
-                    &quot;horaires&quot;: [],
-                    &quot;commentaires&quot;: []
-                }
-            ],
+            &quot;data&quot;: [],
             &quot;first_page_url&quot;: &quot;http://localhost:8000/api/search/etablissements?query=piscine&amp;page=1&quot;,
-            &quot;from&quot;: 1,
+            &quot;from&quot;: null,
             &quot;last_page&quot;: 1,
             &quot;last_page_url&quot;: &quot;http://localhost:8000/api/search/etablissements?query=piscine&amp;page=1&quot;,
             &quot;links&quot;: [
@@ -22540,8 +17820,8 @@ vary: Origin
             &quot;path&quot;: &quot;http://localhost:8000/api/search/etablissements&quot;,
             &quot;per_page&quot;: 30,
             &quot;prev_page_url&quot;: null,
-            &quot;to&quot;: 22,
-            &quot;total&quot;: 22
+            &quot;to&quot;: null,
+            &quot;total&quot;: 0
         }
     },
     &quot;message&quot;: &quot;Liste des Etablissements&quot;
@@ -22666,7 +17946,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/distance/etablissements?user_id=1&amp;lat=4.056&amp;lon=8.056" \
+    --get "http://localhost:8000/api/distance/etablissements?user_id=1&amp;lat=%224.056%22&amp;lon=%228.056%22" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -22679,8 +17959,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 const params = {
     "user_id": "1",
-    "lat": "4.056",
-    "lon": "8.056",
+    "lat": ""4.056"",
+    "lon": ""8.056"",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -22709,8 +17989,8 @@ $response = $client-&gt;get(
         ],
         'query' =&gt; [
             'user_id'=&gt; '1',
-            'lat'=&gt; '4.056',
-            'lon'=&gt; '8.056',
+            'lat'=&gt; '"4.056"',
+            'lon'=&gt; '"8.056"',
         ],
     ]
 );
@@ -22725,8 +18005,8 @@ import json
 url = 'http://localhost:8000/api/distance/etablissements'
 params = {
   'user_id': '1',
-  'lat': '4.056',
-  'lon': '8.056',
+  'lat': '"4.056"',
+  'lon': '"8.056"',
 }
 headers = {
   'Content-Type': 'application/json',
@@ -23331,10 +18611,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="lat"                data-endpoint="GETapi-distance-etablissements"
-               value="4.056"
+               value=""4.056""
                data-component="query">
     <br>
-<p>latitude. Example: <code>4.056</code></p>
+<p>latitude. Example: <code>"4.056"</code></p>
             </div>
                                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>lon</code></b>&nbsp;&nbsp;
@@ -23342,10 +18622,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="lon"                data-endpoint="GETapi-distance-etablissements"
-               value="8.056"
+               value=""8.056""
                data-component="query">
     <br>
-<p>longitude. Example: <code>8.056</code></p>
+<p>longitude. Example: <code>"8.056"</code></p>
             </div>
                 </form>
 
@@ -23660,7 +18940,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/etablissements/vues/cumque" \
+    "http://localhost:8000/api/etablissements/vues/non" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -23668,7 +18948,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/etablissements/vues/cumque"
+    "http://localhost:8000/api/etablissements/vues/non"
 );
 
 const headers = {
@@ -23686,7 +18966,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/etablissements/vues/cumque',
+    'http://localhost:8000/api/etablissements/vues/non',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -23703,7 +18983,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/etablissements/vues/cumque'
+url = 'http://localhost:8000/api/etablissements/vues/non'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -23804,10 +19084,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-etablissements-vues--id-"
-               value="cumque"
+               value="non"
                data-component="url">
     <br>
-<p>The ID of the vue. Example: <code>cumque</code></p>
+<p>The ID of the vue. Example: <code>non</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -23822,7 +19102,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="establishment-management-POSTapi-etablissements-cover--id-">Update Etablishment Cover</h2>
+                    <h2 id="establishment-management-PUTapi-etablissements-cover--id-">Update Etablishment Cover</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -23830,19 +19110,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 
 
-<span id="example-requests-POSTapi-etablissements-cover--id-">
+<span id="example-requests-PUTapi-etablissements-cover--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
+    <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/etablissements/cover/1" \
     --header "Authorization: Bearer {TOKEN}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -23862,7 +19142,7 @@ body.append('_method', 'PUT');
 body.append('cover', document.querySelector('input[name="cover"]').files[0]);
 
 fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers,
     body,
 }).then(response =&gt; response.json());</code></pre></div>
@@ -23870,7 +19150,7 @@ fetch(url, {
 
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$response = $client-&gt;post(
+$response = $client-&gt;put(
     'http://localhost:8000/api/etablissements/cover/1',
     [
         'headers' =&gt; [
@@ -23886,7 +19166,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'r')
             ],
         ],
     ]
@@ -23901,7 +19181,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/cover/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -23913,457 +19193,117 @@ headers = {
   'X-Authorization': 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E'
 }
 
-response = requests.request('POST', url, headers=headers, files=files, data=payload)
+response = requests.request('PUT', url, headers=headers, files=files, data=payload)
 response.json()</code></pre></div>
 
 </span>
 
-<span id="example-responses-POSTapi-etablissements-cover--id-">
+<span id="example-responses-PUTapi-etablissements-cover--id-">
             <blockquote>
-            <p>Example response (405):</p>
+            <p>Example response (201):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">allow: POST
-cache-control: no-cache, private
+            <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 44
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;The PUT method is not supported for route api/etablissements/cover/1. Supported methods: POST.&quot;,
-    &quot;exception&quot;: &quot;Symfony\\Component\\HttpKernel\\Exception\\MethodNotAllowedHttpException&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
-    &quot;line&quot;: 122,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
-            &quot;line&quot;: 107,
-            &quot;function&quot;: &quot;requestMethodNotAllowed&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\AbstractRouteCollection.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;getRouteForMethods&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteCollection.php&quot;,
-            &quot;line&quot;: 162,
-            &quot;function&quot;: &quot;handleMatchedRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\AbstractRouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 761,
-            &quot;function&quot;: &quot;match&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\RouteCollection&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 748,
-            &quot;function&quot;: &quot;findRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 737,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 99,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
-            &quot;line&quot;: 62,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
-            &quot;line&quot;: 22,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 119,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 300,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 288,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 91,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 44,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 236,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 125,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 72,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 53,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 211,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1096,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 324,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 201,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;etablissement&quot;: {
+            &quot;id&quot;: 1,
+            &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+            &quot;indication_adresse&quot;: null,
+            &quot;code_postal&quot;: &quot;undefined&quot;,
+            &quot;site_internet&quot;: &quot;undefined&quot;,
+            &quot;nom_manager&quot;: null,
+            &quot;contact_manager&quot;: null,
+            &quot;etage&quot;: 0,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208464_test.jpg&quot;,
+            &quot;phone&quot;: &quot;000000000&quot;,
+            &quot;whatsapp1&quot;: &quot;000000000&quot;,
+            &quot;whatsapp2&quot;: null,
+            &quot;description&quot;: &quot;Aucune Description&quot;,
+            &quot;osm_id&quot;: &quot;1013434286&quot;,
+            &quot;services&quot;: &quot;Aucun service&quot;,
+            &quot;commodites&quot;: &quot;Wifi;Parking;&quot;,
+            &quot;ameliorations&quot;: null,
+            &quot;vues&quot;: 1,
+            &quot;logo&quot;: null,
+            &quot;logo_map&quot;: null,
+            &quot;deleted_at&quot;: null,
+            &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:44.000000Z&quot;,
+            &quot;batiment&quot;: {
+                &quot;id&quot;: 1,
+                &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
+                &quot;longitude&quot;: &quot;11.2292075&quot;,
+                &quot;latitude&quot;: &quot;4.0782882&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
+                &quot;ville&quot;: &quot;Okala&quot;,
+                &quot;commune&quot;: &quot;undefined&quot;,
+                &quot;quartier&quot;: &quot;undefined&quot;
+            }
         }
-    ]
+    },
+    &quot;message&quot;: &quot;Update success&quot;
 }</code>
  </pre>
     </span>
-<span id="execution-results-POSTapi-etablissements-cover--id-" hidden>
+<span id="execution-results-PUTapi-etablissements-cover--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-POSTapi-etablissements-cover--id-"></span>:
+                id="execution-response-status-PUTapi-etablissements-cover--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-etablissements-cover--id-"
+    <pre class="json"><code id="execution-response-content-PUTapi-etablissements-cover--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-POSTapi-etablissements-cover--id-" hidden>
+<span id="execution-error-PUTapi-etablissements-cover--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-etablissements-cover--id-">
+    <pre><code id="execution-error-message-PUTapi-etablissements-cover--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-POSTapi-etablissements-cover--id-" data-method="POST"
+<form id="form-PUTapi-etablissements-cover--id-" data-method="PUT"
       data-path="api/etablissements/cover/{id}"
       data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-etablissements-cover--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-etablissements-cover--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-etablissements-cover--id-"
-                    onclick="tryItOut('POSTapi-etablissements-cover--id-');">Try it out ⚡
+                    id="btn-tryout-PUTapi-etablissements-cover--id-"
+                    onclick="tryItOut('PUTapi-etablissements-cover--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-etablissements-cover--id-"
-                    onclick="cancelTryOut('POSTapi-etablissements-cover--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-PUTapi-etablissements-cover--id-"
+                    onclick="cancelTryOut('PUTapi-etablissements-cover--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-etablissements-cover--id-"
+                    id="btn-executetryout-PUTapi-etablissements-cover--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-black">POST</small>
+            <small class="badge badge-darkblue">PUT</small>
             <b><code>api/etablissements/cover/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
@@ -24372,7 +19312,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-etablissements-cover--id-"
                value="Bearer {TOKEN}"
                data-component="header">
     <br>
@@ -24383,7 +19323,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="Content-Type"                data-endpoint="PUTapi-etablissements-cover--id-"
                value="multipart/form-data"
                data-component="header">
     <br>
@@ -24394,7 +19334,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="Accept"                data-endpoint="PUTapi-etablissements-cover--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -24405,7 +19345,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="X-Authorization"                data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="X-Authorization"                data-endpoint="PUTapi-etablissements-cover--id-"
                value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
                data-component="header">
     <br>
@@ -24417,7 +19357,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="POSTapi-etablissements-cover--id-"
+               step="any"               name="id"                data-endpoint="PUTapi-etablissements-cover--id-"
                value="1"
                data-component="url">
     <br>
@@ -24429,18 +19369,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>file</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="file" style="display: none"
-                              name="cover"                data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="cover"                data-endpoint="PUTapi-etablissements-cover--id-"
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE26F.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
-                              name="_method"                data-endpoint="POSTapi-etablissements-cover--id-"
+                              name="_method"                data-endpoint="PUTapi-etablissements-cover--id-"
                value="PUT"
                data-component="body">
     <br>
@@ -24527,7 +19467,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 44
+x-ratelimit-remaining: 43
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -24659,9 +19599,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "osm_id=111259658236" \
     --form "commodites=Wifi;Parking" \
     --form "ameliorations=Site internet;videos" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -24787,15 +19727,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'r')
             ],
         ],
     ]
@@ -24810,9 +19750,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -24856,7 +19796,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 26
+x-ratelimit-remaining: 25
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -24879,12 +19819,12 @@ vary: Origin
             &quot;ameliorations&quot;: &quot;Site internet;videos&quot;,
             &quot;nom_manager&quot;: &quot;Nom Manager.&quot;,
             &quot;contact_manager&quot;: &quot;699999999.&quot;,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1704451481_test.jpg&quot;,
-            &quot;updated_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
-            &quot;id&quot;: 27
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;id&quot;: 39
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;etablissement reussie&quot;
@@ -25135,7 +20075,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE562.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>whatsapp2</code></b>&nbsp;&nbsp;
@@ -25190,7 +20130,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE563.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -25201,7 +20141,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE564.tmp</code></p>
+<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp</code></p>
         </div>
         </form>
 
@@ -25239,9 +20179,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "ameliorations=Site internet,videos" \
     --form "vues=true" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -25357,15 +20297,15 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'r')
             ],
         ],
     ]
@@ -25380,9 +20320,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -25424,7 +20364,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 25
+x-ratelimit-remaining: 24
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -25440,7 +20380,7 @@ vary: Origin
             &quot;nom_manager&quot;: null,
             &quot;contact_manager&quot;: null,
             &quot;etage&quot;: 3,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
             &quot;phone&quot;: &quot;699999999&quot;,
             &quot;whatsapp1&quot;: &quot;699999999&quot;,
             &quot;whatsapp2&quot;: &quot;699999999&quot;,
@@ -25450,11 +20390,11 @@ vary: Origin
             &quot;commodites&quot;: &quot;Wifi;Parking&quot;,
             &quot;ameliorations&quot;: &quot;Site internet,videos&quot;,
             &quot;vues&quot;: 2,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1704451481_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-01-05T10:44:41.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
@@ -25643,7 +20583,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B7.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etage</code></b>&nbsp;&nbsp;
@@ -25753,7 +20693,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B8.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -25764,7 +20704,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE5B9.tmp</code></p>
+<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -25863,7 +20803,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 24
+x-ratelimit-remaining: 23
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26080,7 +21020,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 16
+x-ratelimit-remaining: 15
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26090,7 +21030,7 @@ vary: Origin
         &quot;favorite&quot;: {
             &quot;etablissement_id&quot;: 1,
             &quot;user_id&quot;: 1,
-            &quot;id&quot;: 5
+            &quot;id&quot;: 17
         }
     },
     &quot;message&quot;: &quot;Etablissement ajout&eacute; aux favoris&quot;
@@ -26301,7 +21241,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 15
+x-ratelimit-remaining: 14
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26440,7 +21380,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -26484,7 +21424,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'r')
             ],
         ],
     ]
@@ -26499,7 +21439,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1
@@ -26527,7 +21467,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 20
+x-ratelimit-remaining: 19
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26535,9 +21475,9 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;image&quot;: {
-            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1704451481_test.jpg&quot;,
+            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208467_test.jpg&quot;,
             &quot;etablissement_id&quot;: 1,
-            &quot;id&quot;: 5
+            &quot;id&quot;: 17
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;image reussie&quot;
@@ -26656,7 +21596,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE665.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp</code></p>
         </div>
         </form>
 
@@ -26679,8 +21619,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
+    --form "etablissement_id=1" \
     --form "_method=PUT" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -26696,6 +21637,7 @@ const headers = {
 };
 
 const body = new FormData();
+body.append('etablissement_id', '1');
 body.append('_method', 'PUT');
 body.append('image_url', document.querySelector('input[name="image_url"]').files[0]);
 
@@ -26719,12 +21661,16 @@ $response = $client-&gt;put(
         ],
         'multipart' =&gt; [
             [
+                'name' =&gt; 'etablissement_id',
+                'contents' =&gt; '1'
+            ],
+            [
                 'name' =&gt; '_method',
                 'contents' =&gt; 'PUT'
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'r')
             ],
         ],
     ]
@@ -26739,9 +21685,10 @@ import json
 
 url = 'http://localhost:8000/api/images/1'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'rb')
 }
 payload = {
+    "etablissement_id": 1,
     "_method": "PUT"
 }
 headers = {
@@ -26767,7 +21714,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 19
+x-ratelimit-remaining: 18
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -26775,7 +21722,7 @@ vary: Origin
     &quot;message&quot;: &quot;Attempt to read property \&quot;etablissement_id\&quot; on null&quot;,
     &quot;exception&quot;: &quot;ErrorException&quot;,
     &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\ImageController.php&quot;,
-    &quot;line&quot;: 97,
+    &quot;line&quot;: 98,
     &quot;trace&quot;: [
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php&quot;,
@@ -26786,7 +21733,7 @@ vary: Origin
         },
         {
             &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\ImageController.php&quot;,
-            &quot;line&quot;: 97,
+            &quot;line&quot;: 98,
             &quot;function&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\{closure}&quot;,
             &quot;class&quot;: &quot;Illuminate\\Foundation\\Bootstrap\\HandleExceptions&quot;,
             &quot;type&quot;: &quot;-&gt;&quot;
@@ -27391,7 +22338,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE696.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="etablissement_id"                data-endpoint="PUTapi-images--id-"
+               value="1"
+               data-component="body">
+    <br>
+<p>the id of the Establishment. Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -27490,7 +22448,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 18
+x-ratelimit-remaining: 17
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -27713,7 +22671,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 23
+x-ratelimit-remaining: 22
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -27945,7 +22903,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 22
+x-ratelimit-remaining: 21
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -28170,7 +23128,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 21
+x-ratelimit-remaining: 20
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -36446,4950 +31404,6 @@ vary: Origin
     &quot;data&quot;: {
         &quot;sous_categories&quot;: [
             {
-                &quot;id&quot;: 480,
-                &quot;nom&quot;: &quot;Activit&eacute;s Informelles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 27,
-                    &quot;nom&quot;: &quot;Autres&quot;,
-                    &quot;shortname&quot;: &quot;Autres&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 479,
-                &quot;nom&quot;: &quot;Activit&eacute;s Formelles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 27,
-                    &quot;nom&quot;: &quot;Autres&quot;,
-                    &quot;shortname&quot;: &quot;Autres&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 478,
-                &quot;nom&quot;: &quot;Travaux Maritimes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 477,
-                &quot;nom&quot;: &quot;Transports Urbains&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 476,
-                &quot;nom&quot;: &quot;Transports Routiers&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 475,
-                &quot;nom&quot;: &quot;Transports Maritimes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 474,
-                &quot;nom&quot;: &quot;Transports Internationaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 473,
-                &quot;nom&quot;: &quot;Transports Ferroviaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 472,
-                &quot;nom&quot;: &quot;Transports en Commun&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 471,
-                &quot;nom&quot;: &quot;Transports A&eacute;riens&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 470,
-                &quot;nom&quot;: &quot;Transit et Consignation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 469,
-                &quot;nom&quot;: &quot;Shipchandler&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 468,
-                &quot;nom&quot;: &quot;Ports, Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 467,
-                &quot;nom&quot;: &quot;Ports&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 466,
-                &quot;nom&quot;: &quot;Manutention - Portuaire&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 465,
-                &quot;nom&quot;: &quot;Manutention - Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 464,
-                &quot;nom&quot;: &quot;Manutention et Entreposage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 463,
-                &quot;nom&quot;: &quot;Fret a&eacute;rien - maritime &amp; international&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 462,
-                &quot;nom&quot;: &quot;Expertises Maritimes et Terrestres&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 461,
-                &quot;nom&quot;: &quot;D&eacute;m&eacute;nagements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 460,
-                &quot;nom&quot;: &quot;Containers, Fabrication et Location&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 459,
-                &quot;nom&quot;: &quot;Compagnies A&eacute;riennes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 458,
-                &quot;nom&quot;: &quot;Chemin de Fer&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 457,
-                &quot;nom&quot;: &quot;Chantiers Navals&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 456,
-                &quot;nom&quot;: &quot;A&eacute;ronautique - Pi&egrave;ces D&eacute;tach&eacute;es&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 455,
-                &quot;nom&quot;: &quot;Agences Maritimes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 454,
-                &quot;nom&quot;: &quot;Agences en Douane&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 453,
-                &quot;nom&quot;: &quot;A&eacute;roports -  Services&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 452,
-                &quot;nom&quot;: &quot;A&eacute;roports -  Securite Aerienne&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 451,
-                &quot;nom&quot;: &quot;A&eacute;roports -  Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 450,
-                &quot;nom&quot;: &quot;A&eacute;roports - Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 449,
-                &quot;nom&quot;: &quot;A&eacute;roports&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 448,
-                &quot;nom&quot;: &quot;A&eacute;ronautique - Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 447,
-                &quot;nom&quot;: &quot;A&eacute;ronautique - Centrales D&#039;Achats&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 446,
-                &quot;nom&quot;: &quot;A&eacute;ronautique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 445,
-                &quot;nom&quot;: &quot;Acconage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 444,
-                &quot;nom&quot;: &quot;Accastillage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 26,
-                    &quot;nom&quot;: &quot;Transports&quot;,
-                    &quot;shortname&quot;: &quot;Transports&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-transport.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-transports.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 443,
-                &quot;nom&quot;: &quot;Transports Touristiques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 442,
-                &quot;nom&quot;: &quot;Transport Logistique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 441,
-                &quot;nom&quot;: &quot;Location de voitures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 440,
-                &quot;nom&quot;: &quot;Location de bateaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 439,
-                &quot;nom&quot;: &quot;Location d&#039;avions&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 438,
-                &quot;nom&quot;: &quot;Auberge&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 437,
-                &quot;nom&quot;: &quot;H&ocirc;tel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 436,
-                &quot;nom&quot;: &quot;Equipements H&ocirc;tels et Restaurants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 435,
-                &quot;nom&quot;: &quot;Agences de voyage, tours op&eacute;rateurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 434,
-                &quot;nom&quot;: &quot;Centres d&#039;Information&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 433,
-                &quot;nom&quot;: &quot;Agences de Tourisme&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 25,
-                    &quot;nom&quot;: &quot;Tourisme&quot;,
-                    &quot;shortname&quot;: &quot;Tourisme&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-tourisme.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-tourism.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 432,
-                &quot;nom&quot;: &quot;V&ecirc;tements  Manufactures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 431,
-                &quot;nom&quot;: &quot;Textile - Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 430,
-                &quot;nom&quot;: &quot;Textile, Fournitures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 429,
-                &quot;nom&quot;: &quot;Textile, Filature, Tissage, Impression&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 428,
-                &quot;nom&quot;: &quot;Textile&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 427,
-                &quot;nom&quot;: &quot;Pr&ecirc;t &agrave; Porter - Gros et D&eacute;tail&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 426,
-                &quot;nom&quot;: &quot;Friperies&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 425,
-                &quot;nom&quot;: &quot;Equipements et v&ecirc;tements militaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 424,
-                &quot;nom&quot;: &quot;Confection, Couture, Broderie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 24,
-                    &quot;nom&quot;: &quot;Textiles &amp; Pr&ecirc;t &agrave; Porter&quot;,
-                    &quot;shortname&quot;: &quot;Textile&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-textile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-textile.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 423,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Satellite&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 422,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - R&eacute;seaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 421,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mobiles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 420,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Mat&eacute;riels et &eacute;quipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 419,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Installation et maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 418,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Fibres Optique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 417,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications et T&eacute;l&eacute;phonie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 416,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;communications - Transmission de signal&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 23,
-                    &quot;nom&quot;: &quot;T&eacute;l&eacute;communication&quot;,
-                    &quot;shortname&quot;: &quot;Telecom&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-telecom.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-telecom.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 415,
-                &quot;nom&quot;: &quot;T&eacute;l&eacute;-Surveillance et Vid&eacute;o-Surveillance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 414,
-                &quot;nom&quot;: &quot;S&eacute;curit&eacute; - Audits et Consultants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 413,
-                &quot;nom&quot;: &quot;Incendie et Protection - Mat&eacute;riels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 412,
-                &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute; - Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 411,
-                &quot;nom&quot;: &quot;Gardiennage et S&eacute;curit&eacute;&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 410,
-                &quot;nom&quot;: &quot;Escorte V&eacute;hicules&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 409,
-                &quot;nom&quot;: &quot;D&eacute;tectives&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 408,
-                &quot;nom&quot;: &quot;Controles Techniques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 407,
-                &quot;nom&quot;: &quot;Badges, Fabrication&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 406,
-                &quot;nom&quot;: &quot;Alarmes Et Surveillance, Mat&eacute;riels &eacute;lectroniques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 22,
-                    &quot;nom&quot;: &quot;Securite, Gardiennage, Protection Incendie&quot;,
-                    &quot;shortname&quot;: &quot;S&eacute;curit&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-s&eacute;curit&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-securit&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#0D3C61&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 405,
-                &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires, Produits et Pharmacie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 404,
-                &quot;nom&quot;: &quot;V&eacute;t&eacute;rinaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 403,
-                &quot;nom&quot;: &quot;Urgences Medicales&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 402,
-                &quot;nom&quot;: &quot;Phytosanitaires - Traitements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 401,
-                &quot;nom&quot;: &quot;Pharmacies&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 400,
-                &quot;nom&quot;: &quot;Pharmaceutiques - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 399,
-                &quot;nom&quot;: &quot;Pharmaceutiques - Materiels Et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 398,
-                &quot;nom&quot;: &quot;Pharmaceutiques - Laboratoires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 397,
-                &quot;nom&quot;: &quot;Pharmaceutiques - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 396,
-                &quot;nom&quot;: &quot;Pharmaceutiques - Distributeurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 395,
-                &quot;nom&quot;: &quot;Para-Pharmacie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 394,
-                &quot;nom&quot;: &quot;Opticiens - Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 393,
-                &quot;nom&quot;: &quot;Opticiens&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 392,
-                &quot;nom&quot;: &quot;Medical - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 391,
-                &quot;nom&quot;: &quot;Medical - Materiels Et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 390,
-                &quot;nom&quot;: &quot;Medical - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 389,
-                &quot;nom&quot;: &quot;Medical - Gaz Medical&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 388,
-                &quot;nom&quot;: &quot;Medical - Assistance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 387,
-                &quot;nom&quot;: &quot;Laboratoires - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 386,
-                &quot;nom&quot;: &quot;Laboratoires, Mat&eacute;riels et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 385,
-                &quot;nom&quot;: &quot;Laboratoires d&#039;Analyses M&eacute;dicales&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 384,
-                &quot;nom&quot;: &quot;Drogueries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 383,
-                &quot;nom&quot;: &quot;Cosm&eacute;tiques - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 382,
-                &quot;nom&quot;: &quot;Cosm&eacute;tiques - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 381,
-                &quot;nom&quot;: &quot;Cliniques et Hopitaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 380,
-                &quot;nom&quot;: &quot;Chirurgie Esth&eacute;tique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 379,
-                &quot;nom&quot;: &quot;Chirurgie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 378,
-                &quot;nom&quot;: &quot;M&eacute;decine du travail&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 377,
-                &quot;nom&quot;: &quot;M&eacute;decine naturelle, traditionnelle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 376,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - kin&eacute;sith&eacute;rapeute&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 375,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - gyn&eacute;cologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 374,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ost&eacute;opathie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 373,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - p&eacute;dicure et podologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 372,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - angiologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 371,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - psychologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 370,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - ophtalmologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 369,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - oncologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 368,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - cardiologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 367,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dermatologie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 366,
-                &quot;nom&quot;: &quot;M&eacute;decine Sp&eacute;cialis&eacute;e - dentiste&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 365,
-                &quot;nom&quot;: &quot;M&eacute;decine G&eacute;n&eacute;rale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 364,
-                &quot;nom&quot;: &quot;Assistance sociale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 363,
-                &quot;nom&quot;: &quot;Ambulance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 21,
-                    &quot;nom&quot;: &quot;Sant&eacute; &amp; M&eacute;decine&quot;,
-                    &quot;shortname&quot;: &quot;Sant&eacute;&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-sant&eacute;.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-sant&eacute;.png&quot;,
-                    &quot;color&quot;: &quot;#F44336&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 362,
-                &quot;nom&quot;: &quot;Salons de Th&eacute; et Glaciers&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Restos, bars&quot;,
-                    &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 361,
-                &quot;nom&quot;: &quot;Bar, Caf&eacute;&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Restos, bars&quot;,
-                    &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 360,
-                &quot;nom&quot;: &quot;Restauration rapide&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Restos, bars&quot;,
-                    &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 359,
-                &quot;nom&quot;: &quot;Night Clubs et Discoth&egrave;ques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Restos, bars&quot;,
-                    &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 358,
-                &quot;nom&quot;: &quot;Restaurant&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 20,
-                    &quot;nom&quot;: &quot;Restos, bars&quot;,
-                    &quot;shortname&quot;: &quot;Resto/Bar&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-restos&amp;bars.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-restos&amp;bars.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 357,
-                &quot;nom&quot;: &quot;Voyance, Medium&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 356,
-                &quot;nom&quot;: &quot;Loterie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 355,
-                &quot;nom&quot;: &quot;Loisirs, jeux et entertainment&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 354,
-                &quot;nom&quot;: &quot;Salle de spectacles - salle de f&ecirc;tes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 353,
-                &quot;nom&quot;: &quot;Espaces verts et Jardins&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 352,
-                &quot;nom&quot;: &quot;Sport&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 351,
-                &quot;nom&quot;: &quot;Librairie, papeterie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 350,
-                &quot;nom&quot;: &quot;Biblioth&egrave;que et Centre de Documentation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 349,
-                &quot;nom&quot;: &quot;Cabaret&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 348,
-                &quot;nom&quot;: &quot;Th&eacute;&acirc;tre, spectacle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 347,
-                &quot;nom&quot;: &quot;Musique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 346,
-                &quot;nom&quot;: &quot;Mus&eacute;e&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 345,
-                &quot;nom&quot;: &quot;Centre culturel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 344,
-                &quot;nom&quot;: &quot;Cin&eacute;ma et vid&eacute;oth&egrave;ques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 343,
-                &quot;nom&quot;: &quot;Casino&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 342,
-                &quot;nom&quot;: &quot;Cadeaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 341,
-                &quot;nom&quot;: &quot;Artisanat, Antiquaires et Galeries d&#039;Art&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 19,
-                    &quot;nom&quot;: &quot;Loisirs&quot;,
-                    &quot;shortname&quot;: &quot;Loisirs&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-loisirs.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-loisirs.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 340,
-                &quot;nom&quot;: &quot;Projets et Bureaux D&#039;Appui&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 339,
-                &quot;nom&quot;: &quot;Notaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 338,
-                &quot;nom&quot;: &quot;Huissiers De Justice&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 337,
-                &quot;nom&quot;: &quot;Expertises Judiciaire&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 336,
-                &quot;nom&quot;: &quot;Expertises - Etudes, Communication&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 335,
-                &quot;nom&quot;: &quot;Expertises  Comptables, Audit Et Conseil&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 334,
-                &quot;nom&quot;: &quot;Consultants Internationaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 333,
-                &quot;nom&quot;: &quot;Consultants en Immigration&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 332,
-                &quot;nom&quot;: &quot;Consultants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 331,
-                &quot;nom&quot;: &quot;Cabinets Juridiques et Fiscaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 330,
-                &quot;nom&quot;: &quot;Avocats d&#039;Affaires Internationales&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 329,
-                &quot;nom&quot;: &quot;Avocats&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 18,
-                    &quot;nom&quot;: &quot;Justice&quot;,
-                    &quot;shortname&quot;: &quot;Justice&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-justice.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-justice.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 328,
-                &quot;nom&quot;: &quot;Traducteurs Et Interpretes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 327,
-                &quot;nom&quot;: &quot;Technologies Nouvelles, Consultants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 326,
-                &quot;nom&quot;: &quot;Technologies Nouvelles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 325,
-                &quot;nom&quot;: &quot;Paratonnerre&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 324,
-                &quot;nom&quot;: &quot;Internet - E-Business &amp; E-Commerce&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 323,
-                &quot;nom&quot;: &quot;Internet - Web Design&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 322,
-                &quot;nom&quot;: &quot;Internet - Provider&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 321,
-                &quot;nom&quot;: &quot;Internet&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 320,
-                &quot;nom&quot;: &quot;Informatique - Securite&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 319,
-                &quot;nom&quot;: &quot;Informatique - Reseaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 318,
-                &quot;nom&quot;: &quot;Informatique - Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 317,
-                &quot;nom&quot;: &quot;Informatique - Ing&eacute;nieurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 316,
-                &quot;nom&quot;: &quot;Informatique - Ing&eacute;nierie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 315,
-                &quot;nom&quot;: &quot;Informatique - Gestion De Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 314,
-                &quot;nom&quot;: &quot;Informatique - Expertises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 313,
-                &quot;nom&quot;: &quot;Informatique - Environnement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 312,
-                &quot;nom&quot;: &quot;Informatique - Consultants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 311,
-                &quot;nom&quot;: &quot;Informatique - Constructeurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 310,
-                &quot;nom&quot;: &quot;Informatique - Consommables&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 309,
-                &quot;nom&quot;: &quot;Informatique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 308,
-                &quot;nom&quot;: &quot;Imprimeries, Mat&eacute;riels et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 307,
-                &quot;nom&quot;: &quot;Imprimeries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 306,
-                &quot;nom&quot;: &quot;Etudes de March&eacute;s&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 305,
-                &quot;nom&quot;: &quot;Editeurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 304,
-                &quot;nom&quot;: &quot;Domiciliation de Soci&eacute;t&eacute;s&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 303,
-                &quot;nom&quot;: &quot;Cyber-Cafes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 302,
-                &quot;nom&quot;: &quot;Courriers Express, Colis Express&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 301,
-                &quot;nom&quot;: &quot;Centres d&#039;Appels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 300,
-                &quot;nom&quot;: &quot;Business Center&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 299,
-                &quot;nom&quot;: &quot;Bureautique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 298,
-                &quot;nom&quot;: &quot;Archivage Numerique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 297,
-                &quot;nom&quot;: &quot;Antennes Paraboliques, Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 17,
-                    &quot;nom&quot;: &quot;Informatique, Internet, Nouvelles Technologies&quot;,
-                    &quot;shortname&quot;: &quot;Technologies&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-nouvellestechnologies.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-technologies.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 296,
-                &quot;nom&quot;: &quot;Parfum, Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 295,
-                &quot;nom&quot;: &quot;Chimie - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 294,
-                &quot;nom&quot;: &quot;Chimie - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 293,
-                &quot;nom&quot;: &quot;Mobilier - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 292,
-                &quot;nom&quot;: &quot;Fournitures de Bureaux, Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 291,
-                &quot;nom&quot;: &quot;Ameublement et Mobilier, Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 290,
-                &quot;nom&quot;: &quot;Zone Franche Industrielle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 289,
-                &quot;nom&quot;: &quot;Verre - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 288,
-                &quot;nom&quot;: &quot;Tuyauteries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 287,
-                &quot;nom&quot;: &quot;Travail Temporaire, Interim&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 286,
-                &quot;nom&quot;: &quot;Tabac, Manufactures et Importateurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 285,
-                &quot;nom&quot;: &quot;Soudage, Mat&eacute;riels et Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 284,
-                &quot;nom&quot;: &quot;Savonneries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 283,
-                &quot;nom&quot;: &quot;Plastique - Produits&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 282,
-                &quot;nom&quot;: &quot;Plastique - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 281,
-                &quot;nom&quot;: &quot;Pi&egrave;ces D&eacute;tach&eacute;es Industrielles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 280,
-                &quot;nom&quot;: &quot;Papier - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 279,
-                &quot;nom&quot;: &quot;Nettoyage, Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 278,
-                &quot;nom&quot;: &quot;Nettoyage Industriel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 277,
-                &quot;nom&quot;: &quot;Mesure et Pesage, Materiels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 276,
-                &quot;nom&quot;: &quot;Matelas, Equipements et Materiels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 275,
-                &quot;nom&quot;: &quot;Matelas&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 274,
-                &quot;nom&quot;: &quot;Manutention Industrielle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 273,
-                &quot;nom&quot;: &quot;Machines-Outils, Manufactures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 272,
-                &quot;nom&quot;: &quot;Location De Mat&eacute;riels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 271,
-                &quot;nom&quot;: &quot;Froid Industriel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 270,
-                &quot;nom&quot;: &quot;Fournitures Industrielles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 269,
-                &quot;nom&quot;: &quot;Equipements Industriels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 268,
-                &quot;nom&quot;: &quot;Equipements de Bureaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 267,
-                &quot;nom&quot;: &quot;Emballage et Conditionnement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 266,
-                &quot;nom&quot;: &quot;Diamant et Or&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 265,
-                &quot;nom&quot;: &quot;D&eacute;pannage et Maintenance Industrielle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 264,
-                &quot;nom&quot;: &quot;Coton&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 263,
-                &quot;nom&quot;: &quot;Chaussures, Manufactures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 262,
-                &quot;nom&quot;: &quot;Cartonneries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 261,
-                &quot;nom&quot;: &quot;Assistance Technique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 260,
-                &quot;nom&quot;: &quot;Armes et Munitions&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 259,
-                &quot;nom&quot;: &quot;Allumettes et Bougies&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 258,
-                &quot;nom&quot;: &quot;Electronique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 257,
-                &quot;nom&quot;: &quot;Electro-M&eacute;nager&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 16,
-                    &quot;nom&quot;: &quot;Industries&quot;,
-                    &quot;shortname&quot;: &quot;Industries&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-industrie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-industrie.png&quot;,
-                    &quot;color&quot;: &quot;#9E6648&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 256,
-                &quot;nom&quot;: &quot;Immobilier - Promoteurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 255,
-                &quot;nom&quot;: &quot;Immobilier - Location&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 254,
-                &quot;nom&quot;: &quot;Immobilier - Gestion&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 253,
-                &quot;nom&quot;: &quot;Immobilier - Expertises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 252,
-                &quot;nom&quot;: &quot;Immobilier - Agences&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 251,
-                &quot;nom&quot;: &quot;Garde Meubles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 15,
-                    &quot;nom&quot;: &quot;Immobilier&quot;,
-                    &quot;shortname&quot;: &quot;Immobilier&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-immobilier.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-immobilier.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 250,
-                &quot;nom&quot;: &quot;Raffineries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 249,
-                &quot;nom&quot;: &quot;P&eacute;troliers - Mat&eacute;riels et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 248,
-                &quot;nom&quot;: &quot;P&eacute;troliers, Constructions&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 247,
-                &quot;nom&quot;: &quot;Hydrocarbures - Transports&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 246,
-                &quot;nom&quot;: &quot;Hydrocarbures - Production&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 245,
-                &quot;nom&quot;: &quot;Hydrocarbures - Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 244,
-                &quot;nom&quot;: &quot;Hydrocarbures - Lubrifiants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 243,
-                &quot;nom&quot;: &quot;Hydrocarbures - Logistiques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 242,
-                &quot;nom&quot;: &quot;Hydrocarbures - Exploration&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 241,
-                &quot;nom&quot;: &quot;Hydrocarbures - Expertises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 240,
-                &quot;nom&quot;: &quot;Hydrocarbures - Equipements Et Mater...&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 239,
-                &quot;nom&quot;: &quot;Hydrocarbures - Distribution&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 238,
-                &quot;nom&quot;: &quot;Hydrocarbures - Aviation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 14,
-                    &quot;nom&quot;: &quot;Hydrocarbures, P&eacute;troliers, Forages&quot;,
-                    &quot;shortname&quot;: &quot;Hydrocarbures&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-petrole.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-petrole.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 237,
-                &quot;nom&quot;: &quot;G&eacute;otechnique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 236,
-                &quot;nom&quot;: &quot;Gaz Domestique Et Industriel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 235,
-                &quot;nom&quot;: &quot;Energie Solaire&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 234,
-                &quot;nom&quot;: &quot;Energie Nouvelle et Renouvelable&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 233,
-                &quot;nom&quot;: &quot;Energie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 232,
-                &quot;nom&quot;: &quot;Electrom&eacute;canique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 231,
-                &quot;nom&quot;: &quot;Electrification Rurale Et Urbaine&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 230,
-                &quot;nom&quot;: &quot;Electricit&eacute; - Materiels et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 229,
-                &quot;nom&quot;: &quot;Electricit&eacute; - Ing&eacute;nierie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 228,
-                &quot;nom&quot;: &quot;Electricit&eacute; - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 227,
-                &quot;nom&quot;: &quot;Electricit&eacute; - Expertises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 226,
-                &quot;nom&quot;: &quot;Electricit&eacute; - G&eacute;n&eacute;rale et Industrielle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 225,
-                &quot;nom&quot;: &quot;Batteries et Piles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 224,
-                &quot;nom&quot;: &quot;Automatisme&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 13,
-                    &quot;nom&quot;: &quot;Energie&quot;,
-                    &quot;shortname&quot;: &quot;Energie&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-energie.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-energy.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 223,
-                &quot;nom&quot;: &quot;Ecoles et Universit&eacute;s&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 222,
-                &quot;nom&quot;: &quot;Centres de Recherche&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 221,
-                &quot;nom&quot;: &quot;Centres de Formation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 220,
-                &quot;nom&quot;: &quot;Centre linguistique - enseignement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 219,
-                &quot;nom&quot;: &quot;Centre de loisirs d&#039;enfants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 218,
-                &quot;nom&quot;: &quot;Cr&egrave;che&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 217,
-                &quot;nom&quot;: &quot;Centres de Documentation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 12,
-                    &quot;nom&quot;: &quot;Education &amp; Formation&quot;,
-                    &quot;shortname&quot;: &quot;Formation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-education.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-education.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 216,
-                &quot;nom&quot;: &quot;Eau - Traitement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 11,
-                    &quot;nom&quot;: &quot;Eau&quot;,
-                    &quot;shortname&quot;: &quot;Eau&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-eau.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 215,
-                &quot;nom&quot;: &quot;Eau - Laboratoires d&#039;Analyses&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 11,
-                    &quot;nom&quot;: &quot;Eau&quot;,
-                    &quot;shortname&quot;: &quot;Eau&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-eau.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 214,
-                &quot;nom&quot;: &quot;Eau - Distribution&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 11,
-                    &quot;nom&quot;: &quot;Eau&quot;,
-                    &quot;shortname&quot;: &quot;Eau&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-eau.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-eau.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 213,
-                &quot;nom&quot;: &quot;S&eacute;rigraphie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 212,
-                &quot;nom&quot;: &quot;Ressources Humaines&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 211,
-                &quot;nom&quot;: &quot;Relations Publiques et Organisations&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 210,
-                &quot;nom&quot;: &quot;Radio-Communication&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 209,
-                &quot;nom&quot;: &quot;Radio et T&eacute;l&eacute;vision&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 208,
-                &quot;nom&quot;: &quot;Organisations de Conf&eacute;rences&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 207,
-                &quot;nom&quot;: &quot;Objets Publicitaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 206,
-                &quot;nom&quot;: &quot;Marketing&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 205,
-                &quot;nom&quot;: &quot;Maison d&#039;&eacute;dition&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 204,
-                &quot;nom&quot;: &quot;Journaux et Presse&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 203,
-                &quot;nom&quot;: &quot;Ev&eacute;nementiel&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 202,
-                &quot;nom&quot;: &quot;Audiovisuel - Mat&eacute;riels et Production&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 201,
-                &quot;nom&quot;: &quot;Agences de Publicit&eacute; et de Communication&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 200,
-                &quot;nom&quot;: &quot;Agences de Presse et d&#039;Information&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 199,
-                &quot;nom&quot;: &quot;Agences de Mannequins&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 10,
-                    &quot;nom&quot;: &quot;Communication, Journalisme, Audiovisuel&quot;,
-                    &quot;shortname&quot;: &quot;Communication&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-communication.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-communication.png&quot;,
-                    &quot;color&quot;: &quot;#3C8694&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 198,
-                &quot;nom&quot;: &quot;Repr&eacute;sentation Commerciale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 197,
-                &quot;nom&quot;: &quot;Recouvrements Commerciaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 196,
-                &quot;nom&quot;: &quot;Promotion Commerciale et Etudes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 195,
-                &quot;nom&quot;: &quot;Import et Export&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 194,
-                &quot;nom&quot;: &quot;Groupements D&#039;Entreprises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 193,
-                &quot;nom&quot;: &quot;E-Commerce&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 192,
-                &quot;nom&quot;: &quot;Commerce G&eacute;n&eacute;ral&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 191,
-                &quot;nom&quot;: &quot;Commerce Exterieur - Promotion&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 190,
-                &quot;nom&quot;: &quot;Chambres de Commerce&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 189,
-                &quot;nom&quot;: &quot;Centrales d&#039;Achats&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 9,
-                    &quot;nom&quot;: &quot;Commerce - Import &amp; Export&quot;,
-                    &quot;shortname&quot;: &quot;Commerce&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-commerce.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-commerce.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 188,
-                &quot;nom&quot;: &quot;Massages&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 8,
-                    &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 187,
-                &quot;nom&quot;: &quot;Institut de beaut&eacute;, parfumerie, relaxation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 8,
-                    &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 186,
-                &quot;nom&quot;: &quot;Coiffeur&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 8,
-                    &quot;nom&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;shortname&quot;: &quot;Bien-&ecirc;tre&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-bienetre.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-bienetre.png&quot;,
-                    &quot;color&quot;: &quot;#7A5FDB&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 185,
-                &quot;nom&quot;: &quot;Tuyauteries et PVC&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 184,
-                &quot;nom&quot;: &quot;Travaux Publics et Terrassement - Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 183,
-                &quot;nom&quot;: &quot;Travaux Publics et Terrassement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 182,
-                &quot;nom&quot;: &quot;Topographie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 181,
-                &quot;nom&quot;: &quot;T&ocirc;les&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 180,
-                &quot;nom&quot;: &quot;Toitures - Mat&eacute;riaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 179,
-                &quot;nom&quot;: &quot;Serrureries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 178,
-                &quot;nom&quot;: &quot;Routes - Signalisation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 177,
-                &quot;nom&quot;: &quot;Routes - Mat&eacute;riaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 176,
-                &quot;nom&quot;: &quot;Routes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 175,
-                &quot;nom&quot;: &quot;Quincailleries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 174,
-                &quot;nom&quot;: &quot;Propret&eacute; urbaine&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 173,
-                &quot;nom&quot;: &quot;Portes et Fen&ecirc;tres&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 172,
-                &quot;nom&quot;: &quot;Plomberie et Sanitaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
                 &quot;id&quot;: 171,
                 &quot;nom&quot;: &quot;Piscines&quot;,
                 &quot;logourl&quot;: null,
@@ -41402,2726 +31416,6 @@ vary: Origin
                     &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
                     &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
                     &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 170,
-                &quot;nom&quot;: &quot;Peinture&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 169,
-                &quot;nom&quot;: &quot;Peintres&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 168,
-                &quot;nom&quot;: &quot;Ouvrages d&#039;Art&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 167,
-                &quot;nom&quot;: &quot;Miroiteries et Vitreries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 166,
-                &quot;nom&quot;: &quot;Mines - Recherche&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 165,
-                &quot;nom&quot;: &quot;Mines - Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 164,
-                &quot;nom&quot;: &quot;Mines - Import et Export&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 163,
-                &quot;nom&quot;: &quot;Mines - Exploitations et Exploration&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 162,
-                &quot;nom&quot;: &quot;Menuiseries M&eacute;talliques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 161,
-                &quot;nom&quot;: &quot;Menuiseries Industrielles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 160,
-                &quot;nom&quot;: &quot;Menuiseries Bois&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 159,
-                &quot;nom&quot;: &quot;Menuiseries Aluminium&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 158,
-                &quot;nom&quot;: &quot;Mat&eacute;riaux de Construction&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 157,
-                &quot;nom&quot;: &quot;Location d&#039;Engins de Chantier&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 156,
-                &quot;nom&quot;: &quot;Laboratoires d&#039;Analyses du B&acirc;timent&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 155,
-                &quot;nom&quot;: &quot;Isolation industrielle&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 154,
-                &quot;nom&quot;: &quot;Hydraulique - Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 153,
-                &quot;nom&quot;: &quot;Hydraulique - Constructions&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 152,
-                &quot;nom&quot;: &quot;Hydraulique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 151,
-                &quot;nom&quot;: &quot;Groupes Electrog&egrave;nes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 150,
-                &quot;nom&quot;: &quot;G&eacute;om&egrave;tres - topographes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 149,
-                &quot;nom&quot;: &quot;G&eacute;ologues&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 148,
-                &quot;nom&quot;: &quot;G&eacute;nie Civil&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 147,
-                &quot;nom&quot;: &quot;Forestiers - Mat&eacute;riels et Equipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 146,
-                &quot;nom&quot;: &quot;Forages - Mat&eacute;riels et Equipements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 145,
-                &quot;nom&quot;: &quot;Forages - Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 144,
-                &quot;nom&quot;: &quot;Forages&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 143,
-                &quot;nom&quot;: &quot;Fer et Acier&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 142,
-                &quot;nom&quot;: &quot;Faux-Plafonds et Staff&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 141,
-                &quot;nom&quot;: &quot;Etanch&eacute;it&eacute;&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 140,
-                &quot;nom&quot;: &quot;Espaces Verts et Jardins&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 139,
-                &quot;nom&quot;: &quot;Echafaudages&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 138,
-                &quot;nom&quot;: &quot;Ebenistes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 137,
-                &quot;nom&quot;: &quot;D&eacute;veloppement Rural et Urbain&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 136,
-                &quot;nom&quot;: &quot;Constructions M&eacute;talliques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 135,
-                &quot;nom&quot;: &quot;Constructions Industrielles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 134,
-                &quot;nom&quot;: &quot;Climatisation - D&eacute;pannage et Maintenance&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 133,
-                &quot;nom&quot;: &quot;Climatisation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 132,
-                &quot;nom&quot;: &quot;Citernes - M&eacute;tallique et Plastique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 131,
-                &quot;nom&quot;: &quot;Cimenteries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 130,
-                &quot;nom&quot;: &quot;Chaudronnerie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 129,
-                &quot;nom&quot;: &quot;Carri&egrave;res - Exploitations et Exploration&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 128,
-                &quot;nom&quot;: &quot;Carrelages&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 127,
-                &quot;nom&quot;: &quot;Caoutchouc&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 126,
-                &quot;nom&quot;: &quot;C&acirc;bles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 125,
-                &quot;nom&quot;: &quot;Bureaux d&#039;Etudes et D&#039;Ing&eacute;nierie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 124,
-                &quot;nom&quot;: &quot;Briqueteries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 123,
-                &quot;nom&quot;: &quot;Bricolage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 122,
-                &quot;nom&quot;: &quot;Bois - Scieries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 121,
-                &quot;nom&quot;: &quot;Bois - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 120,
-                &quot;nom&quot;: &quot;Bois et N&eacute;goce&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 119,
-                &quot;nom&quot;: &quot;Bitume&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 118,
-                &quot;nom&quot;: &quot;B&acirc;timents - Second &OElig;uvre&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 117,
-                &quot;nom&quot;: &quot;B&acirc;timents - R&eacute;habilitation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 116,
-                &quot;nom&quot;: &quot;B&acirc;timents - Ravalement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 115,
-                &quot;nom&quot;: &quot;B&acirc;timents - Pr&eacute;fabriqu&eacute;&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 114,
-                &quot;nom&quot;: &quot;B&acirc;timents - Nettoyage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 113,
-                &quot;nom&quot;: &quot;B&acirc;timents - Expertises&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 112,
-                &quot;nom&quot;: &quot;B&acirc;timents et Travaux Publics&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 111,
-                &quot;nom&quot;: &quot;B&acirc;ches et Stores&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 110,
-                &quot;nom&quot;: &quot;Assainissement et Canalisations&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 109,
-                &quot;nom&quot;: &quot;Ascenseurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 108,
-                &quot;nom&quot;: &quot;Architecture et Urbanisme&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 107,
-                &quot;nom&quot;: &quot;Am&eacute;nagement des Terrains Urbains&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 106,
-                &quot;nom&quot;: &quot;Industrie d&#039;aluminium&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 105,
-                &quot;nom&quot;: &quot;Agencement et D&eacute;coration&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 104,
-                &quot;nom&quot;: &quot;Adduction d&#039;eau et VRD&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;nom&quot;: &quot;Batiments &amp; Constructions&quot;,
-                    &quot;shortname&quot;: &quot;Construction&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-batiments.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-batiments&amp;constructions.png&quot;,
-                    &quot;color&quot;: &quot;#03B38B&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 103,
-                &quot;nom&quot;: &quot;Transports de Fonds&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 102,
-                &quot;nom&quot;: &quot;Investissements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 101,
-                &quot;nom&quot;: &quot;Holdings&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 100,
-                &quot;nom&quot;: &quot;Enqu&ecirc;tes, recherches et investigation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 99,
-                &quot;nom&quot;: &quot;Cr&eacute;dits et Finances&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 98,
-                &quot;nom&quot;: &quot;Centres d&#039;Information&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 97,
-                &quot;nom&quot;: &quot;Cabinets Comptables&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 96,
-                &quot;nom&quot;: &quot;Bureaux de Contr&ocirc;le&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 95,
-                &quot;nom&quot;: &quot;Bureaux de Change et Transferts d&#039;argent&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 94,
-                &quot;nom&quot;: &quot;Banques - Services Mobiles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 93,
-                &quot;nom&quot;: &quot;Equipements de S&eacute;curit&eacute; Bancaire&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 92,
-                &quot;nom&quot;: &quot;Banques et Organismes Financiers&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 91,
-                &quot;nom&quot;: &quot;Assureurs - Courtiers Et Conseils&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 90,
-                &quot;nom&quot;: &quot;Assurances m&eacute;dicales&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 89,
-                &quot;nom&quot;: &quot;Assurances Vies&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 88,
-                &quot;nom&quot;: &quot;Assurances&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;nom&quot;: &quot;Banques, finances et assurances&quot;,
-                    &quot;shortname&quot;: &quot;Finance&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-banques.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/pin-banques.png&quot;,
-                    &quot;color&quot;: &quot;#6D7278&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 87,
-                &quot;nom&quot;: &quot;Garage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 86,
-                &quot;nom&quot;: &quot;Parking&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 85,
-                &quot;nom&quot;: &quot;Station-service&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 84,
-                &quot;nom&quot;: &quot;V&eacute;hicules Industriels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 83,
-                &quot;nom&quot;: &quot;Tracking&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 82,
-                &quot;nom&quot;: &quot;Pneumatiques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 81,
-                &quot;nom&quot;: &quot;Moteurs et Pompes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 80,
-                &quot;nom&quot;: &quot;M&eacute;canique - Industries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 79,
-                &quot;nom&quot;: &quot;M&eacute;canique G&eacute;n&eacute;rale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 78,
-                &quot;nom&quot;: &quot;Garages&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 77,
-                &quot;nom&quot;: &quot;Engins ee Chantier et Mat&eacute;riels&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 76,
-                &quot;nom&quot;: &quot;Cycles et Motos&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 75,
-                &quot;nom&quot;: &quot;Contr&ocirc;les Techniques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 74,
-                &quot;nom&quot;: &quot;Constructions M&eacute;caniques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 73,
-                &quot;nom&quot;: &quot;Voitures d&#039;occasion&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 72,
-                &quot;nom&quot;: &quot;Automobiles - Pi&egrave;ces D&eacute;tach&eacute;es et Accessoires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 71,
-                &quot;nom&quot;: &quot;Expertises automobiles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 70,
-                &quot;nom&quot;: &quot;Automobiles et Concessionnaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 69,
-                &quot;nom&quot;: &quot;Auto-Ecoles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
-                    &quot;shortname&quot;: &quot;Auto &amp; moto&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-automobile.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-automobile.png&quot;,
-                    &quot;color&quot;: &quot;#005596&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 68,
-                &quot;nom&quot;: &quot;Traiteurs&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 67,
-                &quot;nom&quot;: &quot;Th&eacute; - Production et Commercialisation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 66,
-                &quot;nom&quot;: &quot;Supermarch&eacute;s&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 65,
-                &quot;nom&quot;: &quot;Sucre, Fabrication et Raffinage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 64,
-                &quot;nom&quot;: &quot;P&ecirc;che - Congelation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 63,
-                &quot;nom&quot;: &quot;P&ecirc;che - Commercialisation et Exportation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 62,
-                &quot;nom&quot;: &quot;Minoteries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 61,
-                &quot;nom&quot;: &quot;Laiteries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 60,
-                &quot;nom&quot;: &quot;Lait, Yaourt et Fromage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 59,
-                &quot;nom&quot;: &quot;Gomme Arabique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 58,
-                &quot;nom&quot;: &quot;Environnement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 57,
-                &quot;nom&quot;: &quot;Distilleries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 56,
-                &quot;nom&quot;: &quot;Catering&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 55,
-                &quot;nom&quot;: &quot;Caf&eacute; - Production et Exportation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 54,
-                &quot;nom&quot;: &quot;Cacao - Production et Exportation&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 53,
-                &quot;nom&quot;: &quot;Brasseries - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 52,
-                &quot;nom&quot;: &quot;Brasseries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 51,
-                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces - mat&eacute;riel &amp; &eacute;quipement&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 50,
-                &quot;nom&quot;: &quot;Boulangeries, Patisseries, Glaces&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 49,
-                &quot;nom&quot;: &quot;Boucherie - charcuterie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 48,
-                &quot;nom&quot;: &quot;Boissons&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 47,
-                &quot;nom&quot;: &quot;Alimentation G&eacute;n&eacute;rale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 46,
-                &quot;nom&quot;: &quot;Alimentation Animale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 45,
-                &quot;nom&quot;: &quot;Produits alimentaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 44,
-                &quot;nom&quot;: &quot;Industries alimentaires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 43,
-                &quot;nom&quot;: &quot;Alimentaire, Distributeurs et Grossistes&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 42,
-                &quot;nom&quot;: &quot;Alcools, vins, spiritueux, drogueries&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 41,
-                &quot;nom&quot;: &quot;Abattoirs et Viande en Gros&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;nom&quot;: &quot;Alimentation&quot;,
-                    &quot;shortname&quot;: &quot;Alimentation&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-alimentation.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-alimentation.png&quot;,
-                    &quot;color&quot;: &quot;#F78300&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 40,
-                &quot;nom&quot;: &quot;Elevage - Consultants&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 39,
-                &quot;nom&quot;: &quot;Elevage&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 38,
-                &quot;nom&quot;: &quot;Agro-Industrie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 37,
-                &quot;nom&quot;: &quot;Agro-Alimentaire&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 36,
-                &quot;nom&quot;: &quot;Equipements et Mat&eacute;riel agricoles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 35,
-                &quot;nom&quot;: &quot;Agriculture&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 34,
-                &quot;nom&quot;: &quot;Agricole, Produits Chimiques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 33,
-                &quot;nom&quot;: &quot;Mat&eacute;riels et Produits agricoles&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;nom&quot;: &quot;Agriculture&quot;,
-                    &quot;shortname&quot;: &quot;Agriculture&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-agriculture.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-agriculture.png&quot;,
-                    &quot;color&quot;: &quot;#FFB74D&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 32,
-                &quot;nom&quot;: &quot;Institution publique&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 31,
-                &quot;nom&quot;: &quot;S&eacute;curit&eacute; Sociale&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 30,
-                &quot;nom&quot;: &quot;Poste&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 29,
-                &quot;nom&quot;: &quot;Offices Nationaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 28,
-                &quot;nom&quot;: &quot;O.N.G &amp; Organisations Internationales&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 27,
-                &quot;nom&quot;: &quot;Minis&egrave;res&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 26,
-                &quot;nom&quot;: &quot;Douane, Agences&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 25,
-                &quot;nom&quot;: &quot;Associations, syndicats&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 24,
-                &quot;nom&quot;: &quot;Ambassades et Consulats&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 23,
-                &quot;nom&quot;: &quot;Administrations&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;nom&quot;: &quot;Administrations&quot;,
-                    &quot;shortname&quot;: &quot;Administration&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-administration.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-administration.png&quot;,
-                    &quot;color&quot;: &quot;#90A8B5&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 22,
-                &quot;nom&quot;: &quot;Pu&eacute;riculture&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 21,
-                &quot;nom&quot;: &quot;Bijoux et accessoires&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 20,
-                &quot;nom&quot;: &quot;Chaussures&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 19,
-                &quot;nom&quot;: &quot;V&ecirc;tements&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 18,
-                &quot;nom&quot;: &quot;Mobilier de Jardin&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 17,
-                &quot;nom&quot;: &quot;Mobilier de Bureaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 16,
-                &quot;nom&quot;: &quot;Fournitures de Bureaux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 15,
-                &quot;nom&quot;: &quot;Ameublement et Mobilier&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 14,
-                &quot;nom&quot;: &quot;Magasin de sport&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 13,
-                &quot;nom&quot;: &quot;Jouets et jeux&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 12,
-                &quot;nom&quot;: &quot;Tabac&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 11,
-                &quot;nom&quot;: &quot;Caviste&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 10,
-                &quot;nom&quot;: &quot;Boulangerie, P&acirc;tisserie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 9,
-                &quot;nom&quot;: &quot;Fleuriste&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 8,
-                &quot;nom&quot;: &quot;Hifi, t&eacute;l&eacute;phonie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 7,
-                &quot;nom&quot;: &quot;Maison et Jardin&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 6,
-                &quot;nom&quot;: &quot;Centre Commercial&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 5,
-                &quot;nom&quot;: &quot;Blanchisseries et Pressings&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 4,
-                &quot;nom&quot;: &quot;Epicerie&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 3,
-                &quot;nom&quot;: &quot;Supermarch&eacute;&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 2,
-                &quot;nom&quot;: &quot;Brocante&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
-                    &quot;vues&quot;: 0
-                }
-            },
-            {
-                &quot;id&quot;: 1,
-                &quot;nom&quot;: &quot;Boutiques&quot;,
-                &quot;logourl&quot;: null,
-                &quot;logourlmap&quot;: null,
-                &quot;color&quot;: null,
-                &quot;categorie&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;nom&quot;: &quot;Achats&quot;,
-                    &quot;shortname&quot;: &quot;Achats&quot;,
-                    &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                    &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                    &quot;color&quot;: &quot;#2196F3&quot;,
                     &quot;vues&quot;: 0
                 }
             }
@@ -44246,9 +31540,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "categorie_id=5" \
-    --form "color=ipsam" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp" </code></pre></div>
+    --form "color=recusandae" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -44266,7 +31560,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('categorie_id', '5');
-body.append('color', 'ipsam');
+body.append('color', 'recusandae');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -44299,15 +31593,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'ipsam'
+                'contents' =&gt; 'recusandae'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'r')
             ],
         ],
     ]
@@ -44322,13 +31616,13 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "categorie_id": 5,
-    "color": "ipsam"
+    "color": "recusandae"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -44353,7 +31647,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 4
+x-ratelimit-remaining: 51
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -44363,9 +31657,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 481,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;color&quot;: &quot;ipsam&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1704451482_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1704451482_test.jpg&quot;,
+            &quot;color&quot;: &quot;recusandae&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 5,
                 &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
@@ -44504,7 +31798,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8CE.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -44515,7 +31809,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8CF.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -44523,10 +31817,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-souscategories"
-               value="ipsam"
+               value="recusandae"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>ipsam</code></p>
+<p>the color of the subcategory Example: <code>recusandae</code></p>
         </div>
         </form>
 
@@ -44550,11 +31844,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "color=earum" \
+    --form "color=praesentium" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -44571,7 +31865,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('color', 'earum');
+body.append('color', 'praesentium');
 body.append('idcategorie', '5');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
@@ -44602,7 +31896,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'earum'
+                'contents' =&gt; 'praesentium'
             ],
             [
                 'name' =&gt; 'idcategorie',
@@ -44614,11 +31908,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'r')
             ],
         ],
     ]
@@ -44633,12 +31927,12 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "color": "earum",
+    "color": "praesentium",
     "idcategorie": 5,
     "_method": "PUT"
 }
@@ -44665,7 +31959,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 3
+x-ratelimit-remaining: 50
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -44675,9 +31969,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1704451482_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1704451482_test.jpg&quot;,
-            &quot;color&quot;: &quot;earum&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
+            &quot;color&quot;: &quot;praesentium&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Achats&quot;,
@@ -44806,7 +32100,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE8FF.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -44817,7 +32111,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpE900.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -44836,10 +32130,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-souscategories--id-"
-               value="earum"
+               value="praesentium"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>earum</code></p>
+<p>the color of the subcategory Example: <code>praesentium</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>idcategorie</code></b>&nbsp;&nbsp;
@@ -44949,7 +32243,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 2
+x-ratelimit-remaining: 49
 vary: Origin
  </code></pre></details>         <pre>
 

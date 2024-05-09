@@ -39,8 +39,6 @@ class BatimentController extends BaseController
                 } else {
                     $etablissement->isFavoris = false;
                 }
-
-
                 $isOpen = $this->checkIfEtablissementIsOpen($etablissement->id);
 
                 $etablissement->isopen = $isOpen;
@@ -57,7 +55,7 @@ class BatimentController extends BaseController
 
                 $etablissement->user->abonnement;
 
-                $etablissement['sousCategories'] = $etablissement->sousCategories;
+                //  $etablissement['sousCategories'] = $etablissement->sousCategories;
                 $etablissement->commodites;
                 foreach ($etablissement->sousCategories as  $sousCategories) {
                     $sousCategories->categorie;
@@ -65,7 +63,7 @@ class BatimentController extends BaseController
 
                 $etablissement->horaires;
                 $etablissement->images;
-                $etablissement->commentaires;
+                //  $etablissement->commentaires;
 
                 foreach ($etablissement->commentaires as  $commentaires) {
                     $commentaires->user;
@@ -181,7 +179,7 @@ class BatimentController extends BaseController
             $etablissement->user->abonnement;
 
 
-            $etablissement['sousCategories'] = $etablissement->sousCategories;
+            // $etablissement['sousCategories'] = $etablissement->sousCategories;
             $etablissement->commodites;
             foreach ($etablissement->sousCategories as  $sousCategories) {
                 $sousCategories->categorie;
@@ -255,7 +253,7 @@ class BatimentController extends BaseController
      * Delete Building.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the building. Example: 3
+     * @urlParam id int required the id of the building. Example: 1
      */
     public function destroy($id)
     {
@@ -301,7 +299,7 @@ class BatimentController extends BaseController
      * Add Complet Batiment Process.
      *
      * @header Content-Type application/json
-     * @bodyParam batiment required JSONObject.
+     * @bodyParam batiment String required. Example : {"nom": "BOUTIQUE DE MICAL","nombre_niveau": "3","code": "BATIMENT_1013434286","longitude": "11.229207","latitude": "4.078288","indication": "derrierre station","rue": "Rue de la Mairie","ville": "Douala","commune": "Douala 3","quartier": "Nyalla","user_id": 1,"etablissement": {"id": 1,"nom": "BOUTIQUE DE MICAL","indication_adresse": "Face station","code_postal": "BP 4326 Douala", "site_internet": "www.site.com","user_id": "1","etage": "1","phone": "699999999","whatsapp1": "699999999","whatsapp2": "699999998","description": "bel etablissement","nom_manager": "Mical","contact_manager": "Mical","commodites": "Wifi","services": "OM;MOMO","ameliorations": "Ajouter des videos","idSousCategorie": "1","horaires": [{"jour": "lundi","plage_horaire": "07:00-12:00;14:00-17:00"}]}}
      */
 
     public function addCompletBatiment(Request $request)

@@ -21,9 +21,13 @@ use Amendozaaguiar\FilamentRouteStatistics\FilamentRouteStatisticsPlugin;
 use Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin;
 use ShuvroRoy\FilamentSpatieLaravelBackup\FilamentSpatieLaravelBackupPlugin;
 use ShuvroRoy\FilamentSpatieLaravelHealth\FilamentSpatieLaravelHealthPlugin;
+use App\Filament\Pages\BackupPage;
+use App\Filament\Pages\HealthPage;
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
 use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
+use Tapp\FilamentMailLog\FilamentMailLogPlugin;
+use Awcodes\FilamentVersions\VersionsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -35,28 +39,30 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-        ->registration()
-        ->passwordReset()
-        ->emailVerification()
-        ->profile()
-        ->authGuard('web')
+            ->registration()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
+            ->authGuard('web')
             ->plugin(FilamentProgressbarPlugin::make()->color('#05BF95'))
-            ->plugin(FilamentSpatieLaravelBackupPlugin::make())
-            ->plugin(FilamentSpatieLaravelHealthPlugin::make())
+            ->plugin(FilamentSpatieLaravelBackupPlugin::make()->usingPage(BackupPage::class))
+            ->plugin(FilamentSpatieLaravelHealthPlugin::make()->usingPage(HealthPage::class))
             ->plugin(FilamentSpatieRolesPermissionsPlugin::make())
-             ->plugins([
-            OverlookPlugin::make()
-            ->alphabetical()
-                ->sort(4)
-                ->columns([
-                    'default' => 1,
-                    'sm' => 2,
-                    'md' => 3,
-                    'lg' => 4,
-                    'xl' => 5,
-                    '2xl' => null,
-                ]),
-        ])
+            ->plugins([
+                OverlookPlugin::make()
+                    ->alphabetical()
+                    ->sort(4)
+                    ->columns([
+                        'default' => 1,
+                        'sm' => 2,
+                        'md' => 3,
+                        'lg' => 4,
+                        'xl' => 5,
+                        '2xl' => null,
+                    ]),
+                FilamentMailLogPlugin::make(),
+                VersionsPlugin::make(),
+            ])
             ->login()
             ->colors([
                 'primary' => '#05BF95',
@@ -86,8 +92,8 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-            FilamentRouteStatisticsPlugin::make(),
-            //...
-        ]);
+                FilamentRouteStatisticsPlugin::make(),
+                //...
+            ]);
     }
 }

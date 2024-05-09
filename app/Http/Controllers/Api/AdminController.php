@@ -43,7 +43,7 @@ class AdminController extends BaseController
      * @bodyParam name string required the name of the admin. Example: Gautier
      * @bodyParam email string required the email of the admin. Example: gautier@position.cm
      * @bodyParam password string required the password of the admin. Example: gautier123
-     * @bodyParam phone int required The phone number of the admin. Example:699999998
+     * @bodyParam phone int required The phone number of the admin. Example:699999990
      * @bodyParam image_profil file Profile Image.
      */
     public function store(Request $request)
@@ -126,7 +126,7 @@ class AdminController extends BaseController
      * @header Content-Type application/json
      * @urlParam id int required the id of the admin. Example: 1
      * @bodyParam name string the name of the user. Example: Gautier
-     * @bodyParam phone int The phone number of the user. Example:699999998
+     * @bodyParam phone int The phone number of the user. Example:699999992
      * @bodyParam isSuperAdmin bool. Example:true
      * @bodyParam image_profil file Profile Image.
      * @bodyParam _method string "required if update (change the PUT method of the request by the POST method)" Example: PUT
