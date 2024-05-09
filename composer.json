@@ -33,7 +33,7 @@
         "laravel/vonage-notification-channel": "^3.0",
         "meilisearch/meilisearch-php": "^1.5.0",
         "njxqlus/filament-progressbar": "^1.0",
-        "psr/simple-cache": "2.0",
+        "psr/simple-cache": "3.0.0",
         "pxlrbt/filament-excel": "^2.1",
         "saade/filament-laravel-log": "3.0",
         "shuvroroy/filament-spatie-laravel-backup": "^2.0",
