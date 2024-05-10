@@ -19,11 +19,8 @@ Route::get('auth/email/resend', [App\Http\Controllers\Api\VerificationController
 Route::get('auth/phone/verify/{id}', [App\Http\Controllers\Api\VerificationController::class, 'verifyByPhone']);
 
 
-
 Route::middleware('auth.apikey')->group(
     function () {
-
-
         Route::post('auth/password/forgot', [App\Http\Controllers\Api\UserController::class, 'forgot']);
         Route::post('auth/password/reset', [App\Http\Controllers\Api\UserController::class, 'reset'])->name('password.reset');
 
@@ -34,6 +31,8 @@ Route::middleware('auth.apikey')->group(
         //  Route::post('auth/register/twitter', [App\Http\Controllers\Api\SocialApiAuthTwitterController::class, 'twitterConnect']);
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
 
+        Route::get('settings', [App\Http\Controllers\Api\SettingController::class, 'index']);
+        Route::get('settings/{id}', [App\Http\Controllers\Api\SettingController::class, 'show']);
 
         Route::get('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'index']);
         Route::get('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'show']);
@@ -94,6 +93,8 @@ Route::middleware('auth.apikey')->group(
                 Route::apiResource('roles', App\Http\Controllers\Api\RoleController::class);
                 Route::apiResource('permissions', App\Http\Controllers\Api\PermissionController::class);
                 Route::apiResource('admins', App\Http\Controllers\Api\AdminController::class);
+
+                Route::put('settings/{id}', [App\Http\Controllers\Api\SettingController::class, 'update']);
 
                 Route::post('abonnements', [App\Http\Controllers\Api\AbonnementController::class, 'store']);
                 Route::put('abonnements/{id}', [App\Http\Controllers\Api\AbonnementController::class, 'update']);

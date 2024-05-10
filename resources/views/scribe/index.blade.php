@@ -32,9 +32,9 @@
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="{{ asset("/vendor/scribe/js/tryitout-4.29.0.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/tryitout-4.35.0.js") }}"></script>
 
-    <script src="{{ asset("/vendor/scribe/js/theme-default-4.29.0.js") }}"></script>
+    <script src="{{ asset("/vendor/scribe/js/theme-default-4.35.0.js") }}"></script>
 
 </head>
 
@@ -305,6 +305,22 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-setting-management" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="setting-management">
+                    <a href="#setting-management">Setting management</a>
+                </li>
+                                    <ul id="tocify-subheader-setting-management" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="setting-management-GETapi-settings">
+                                <a href="#setting-management-GETapi-settings">Get the application settings.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="setting-management-GETapi-settings--id-">
+                                <a href="#setting-management-GETapi-settings--id-">Show Setting by id.</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="setting-management-PUTapi-settings--id-">
+                                <a href="#setting-management-PUTapi-settings--id-">Update the specified resource in storage.</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-subcategory-management" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="subcategory-management">
                     <a href="#subcategory-management">SubCategory management</a>
@@ -352,7 +368,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 8, 2024</li>
+        <li>Last updated: May 10, 2024</li>
     </ul>
 </div>
 
@@ -456,7 +472,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
+x-ratelimit-remaining: 57
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -638,7 +654,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 56
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -862,7 +878,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 5
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -873,7 +889,7 @@ vary: Origin
             &quot;nom&quot;: &quot;Smart&quot;,
             &quot;prix&quot;: 5000,
             &quot;duree&quot;: 1,
-            &quot;id&quot;: 18
+            &quot;id&quot;: 20
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;abonnement reussie&quot;
@@ -1133,7 +1149,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 4
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1397,7 +1413,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 3
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -1602,7 +1618,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-auth-password-forgot">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1616,579 +1632,9 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Failed to create dynamic link: cURL error 56: OpenSSL SSL_read: error:0A000126:SSL routines::unexpected eof while reading, errno 0 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://firebasedynamiclinks.googleapis.com/v1/shortLinks&quot;,
-    &quot;exception&quot;: &quot;Kreait\\Firebase\\DynamicLink\\CreateDynamicLink\\FailedToCreateDynamicLink&quot;,
-    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\kreait\\firebase-php\\src\\Firebase\\DynamicLinks.php&quot;,
-    &quot;line&quot;: 82,
-    &quot;trace&quot;: [
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Notifications\\SendResetLinkParams.php&quot;,
-            &quot;line&quot;: 57,
-            &quot;function&quot;: &quot;createDynamicLink&quot;,
-            &quot;class&quot;: &quot;Kreait\\Firebase\\DynamicLinks&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\Channels\\MailChannel.php&quot;,
-            &quot;line&quot;: 55,
-            &quot;function&quot;: &quot;toMail&quot;,
-            &quot;class&quot;: &quot;App\\Notifications\\SendResetLinkParams&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 148,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\Channels\\MailChannel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 106,
-            &quot;function&quot;: &quot;sendToNotifiable&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\Localizable.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Notifications\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 101,
-            &quot;function&quot;: &quot;withLocale&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\NotificationSender.php&quot;,
-            &quot;line&quot;: 79,
-            &quot;function&quot;: &quot;sendNow&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\ChannelManager.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\NotificationSender&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Notifications\\RoutesNotifications.php&quot;,
-            &quot;line&quot;: 18,
-            &quot;function&quot;: &quot;send&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Notifications\\ChannelManager&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Models\\User.php&quot;,
-            &quot;line&quot;: 140,
-            &quot;function&quot;: &quot;notify&quot;,
-            &quot;class&quot;: &quot;App\\Models\\User&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBroker.php&quot;,
-            &quot;line&quot;: 72,
-            &quot;function&quot;: &quot;sendPasswordResetNotification&quot;,
-            &quot;class&quot;: &quot;App\\Models\\User&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Passwords\\PasswordBrokerManager.php&quot;,
-            &quot;line&quot;: 143,
-            &quot;function&quot;: &quot;sendResetLink&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBroker&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php&quot;,
-            &quot;line&quot;: 355,
-            &quot;function&quot;: &quot;__call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Auth\\Passwords\\PasswordBrokerManager&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\app\\Http\\Controllers\\Api\\UserController.php&quot;,
-            &quot;line&quot;: 228,
-            &quot;function&quot;: &quot;__callStatic&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Support\\Facades\\Facade&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php&quot;,
-            &quot;line&quot;: 54,
-            &quot;function&quot;: &quot;forgot&quot;,
-            &quot;class&quot;: &quot;App\\Http\\Controllers\\Api\\UserController&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php&quot;,
-            &quot;line&quot;: 43,
-            &quot;function&quot;: &quot;callAction&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Controller&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 259,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\ControllerDispatcher&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php&quot;,
-            &quot;line&quot;: 205,
-            &quot;function&quot;: &quot;runController&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 806,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Route&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;Illuminate\\Routing\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\ejarnutowski\\laravel-api-key\\src\\Http\\Middleware\\AuthorizeApiKey.php&quot;,
-            &quot;line&quot;: 28,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Ejarnutowski\\LaravelApiKey\\Http\\Middleware\\AuthorizeApiKey&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\SubstituteBindings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 159,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 125,
-            &quot;function&quot;: &quot;handleRequest&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
-            &quot;line&quot;: 87,
-            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 119,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 805,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 784,
-            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 748,
-            &quot;function&quot;: &quot;runRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
-            &quot;line&quot;: 737,
-            &quot;function&quot;: &quot;dispatchToRoute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 200,
-            &quot;function&quot;: &quot;dispatch&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
-            &quot;line&quot;: 19,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
-            &quot;line&quot;: 31,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
-            &quot;line&quot;: 21,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
-            &quot;line&quot;: 40,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
-            &quot;line&quot;: 27,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
-            &quot;line&quot;: 99,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
-            &quot;line&quot;: 62,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
-            &quot;line&quot;: 39,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
-            &quot;line&quot;: 22,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 183,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
-            &quot;line&quot;: 119,
-            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;then&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
-            &quot;line&quot;: 144,
-            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 300,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 288,
-            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 91,
-            &quot;function&quot;: &quot;makeApiCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 44,
-            &quot;function&quot;: &quot;makeResponseCall&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 236,
-            &quot;function&quot;: &quot;__invoke&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 163,
-            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
-            &quot;line&quot;: 95,
-            &quot;function&quot;: &quot;fetchResponses&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 125,
-            &quot;function&quot;: &quot;processRoute&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 72,
-            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
-            &quot;line&quot;: 50,
-            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
-            &quot;line&quot;: 53,
-            &quot;function&quot;: &quot;get&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 36,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
-            &quot;line&quot;: 41,
-            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 93,
-            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;callBoundMethod&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
-            &quot;line&quot;: 662,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
-            &quot;type&quot;: &quot;::&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 211,
-            &quot;function&quot;: &quot;call&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
-            &quot;line&quot;: 326,
-            &quot;function&quot;: &quot;execute&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
-            &quot;line&quot;: 180,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 1096,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 324,
-            &quot;function&quot;: &quot;doRunCommand&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
-            &quot;line&quot;: 175,
-            &quot;function&quot;: &quot;doRun&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
-            &quot;line&quot;: 201,
-            &quot;function&quot;: &quot;run&quot;,
-            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        },
-        {
-            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
-            &quot;line&quot;: 35,
-            &quot;function&quot;: &quot;handle&quot;,
-            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
-            &quot;type&quot;: &quot;-&gt;&quot;
-        }
-    ]
+    &quot;success&quot;: true,
+    &quot;data&quot;: &quot;&quot;,
+    &quot;message&quot;: &quot;Un lien de reinitialisation vous a &eacute;t&eacute; envoy&eacute; par mail.&quot;
 }</code>
  </pre>
     </span>
@@ -2305,7 +1751,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
     \"email\": \"admin@position.cm\",
-    \"token\": \"ut\",
+    \"token\": \"sed\",
     \"password\": \"gautier124\",
     \"password_confirmation\": \"gautier124\"
 }"
@@ -2325,7 +1771,7 @@ const headers = {
 
 let body = {
     "email": "admin@position.cm",
-    "token": "ut",
+    "token": "sed",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 };
@@ -2349,7 +1795,7 @@ $response = $client-&gt;post(
         ],
         'json' =&gt; [
             'email' =&gt; 'admin@position.cm',
-            'token' =&gt; 'ut',
+            'token' =&gt; 'sed',
             'password' =&gt; 'gautier124',
             'password_confirmation' =&gt; 'gautier124',
         ],
@@ -2366,7 +1812,7 @@ import json
 url = 'http://localhost:8000/api/auth/password/reset'
 payload = {
     "email": "admin@position.cm",
-    "token": "ut",
+    "token": "sed",
     "password": "gautier124",
     "password_confirmation": "gautier124"
 }
@@ -2503,10 +1949,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-auth-password-reset"
-               value="ut"
+               value="sed"
                data-component="body">
     <br>
-<p>token give in mail. Example: <code>ut</code></p>
+<p>token give in mail. Example: <code>sed</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -2553,7 +1999,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999999" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php4995.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -2610,7 +2056,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4995.tmp', 'r')
             ],
         ],
     ]
@@ -2625,7 +2071,7 @@ import json
 
 url = 'http://localhost:8000/api/auth/register'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php4995.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -2815,7 +2261,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC11A.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4995.tmp</code></p>
         </div>
         </form>
 
@@ -2928,7 +2374,7 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYWNiNmNhMmViZTY1YzY3ODA2ZmJhMDdhMTZiZWEzZjNmMmJhNTgzZGRlYjgxZGEyNzQ5MzM1YWU2MWQ1OTNiZjRiZTdkNTg1ZmM2MzQ4ZTAiLCJpYXQiOjE3MTUyMDg0NjIuMTE0NDQ1LCJuYmYiOjE3MTUyMDg0NjIuMTE0NDQ5LCJleHAiOjE3MTc4MDA0NjIuMTEyMjQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NzJc-CRfYdn7c3vc1drZX4hupPRZWXP2kxVF7OxAmj96TlLnPQnklol3hlYDvL94jtEnGc3dQKOsA6-GD5KpZYpE7bq9PHoNFwmQk5AOcF-Xt9_9v95sAByo2kdst4qm6M3yILe3silbcqVip-xR-t_rmdHDZ5ToDSOFmSTa90FVpyqt0ADb4fBGAzsDMpUIaFc-2jFArB0TFC1uylWRrxrnnEmjRN4ulMYqMz3Y2EYN-d4V6buDMQGMY0X3AF9b8VSuHYtSU1QvtB42hJ3B_2wjKRaV-dyPo5yNq4haUXL5Wi-uvrDvxP6LaG4awp_QGSQXvN9EeAs2uhPcPg6xbzZH9IGWbtaPydYn1fBJbJQo8rJISWueSr-DcDwtsi7LkX_jWD06J8cWWSE0_tapOK6jq1j2-TR8O0ysW5vew2s24qaNvxa2lSTeTIP6-Meu-t8dQONyQa013MCATYwG5TUKUI6GB6MFLBmw_BkXe1RkAKrfK9PoFgHfaMCO4xtn--H8MM6SzUHvHYYL2FXHxXYWr9KVPBUFrXqAmLrqgmR55p9VV87iHm3Ss_FuHHcSHDuvgzso-ZNjLX3TIJljMQmPeiMIQaPsPM6_unuKNLJS_dB_MLN0ruRz-rQ_-zfuCtuUZ0KA6ouh3Ti_UYiymP77J97skiYd0nBFZKsjjuk&quot;,
+        &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzIwZDU4ZGVlZmE1NDg4YWEwY2YyNjJhZGVkNmM0NmFmYjIzOTJhNmQyMTNmMDllZGMyOWQ0MzMzNjM1NzQ3NDBmMWRmYzM5OTNlNjJkYmUiLCJpYXQiOjE3MTUzNTQ2MzguNDMyNTg4LCJuYmYiOjE3MTUzNTQ2MzguNDMyNTkxLCJleHAiOjE3MTc5NDY2MzguNDMwNTc2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.XzNXI2kAJx4py9beYHHxbN7xFo-8ETkwnkjRZDrj7jICsk9NN_3sJM8HDqhXsWXxLEC5wBRxZAScYBOwOwwGmn9MHcBc8i91ZCZSfRwABc5fmjwgKZjajzQQhyA6EkrgVSACclc9PvMjc8art92YTUAwjir1eqLIV710-JnXLeQ2NgK4xVZAV6UNqqjOG8txWxj0Qhz7-EncRBGs_tKTtpz0VvHVjximLLc1Cm-Q1S53QMmlZyJYRhDwky6cHHY1UGFOA37kB4NvQIfqvccNlIx2XUrN9mFnsVIzZ81Y2XMI59JaP4C3hDfu8KftYHn4r7bvKgBaz4mH08fqMwcHniTds-4lDVwJRGvomgZ2ZP1DZXgVDRssG3UgbtqD2P4_5am96gt9wXkmZsMOJYir4Je6g1JNP6oNuy3kpxXu7iPBJ5nwz3vz8MUp7sq0sAHGvU2jm4UZNT-Lu0QxQikDeD76z0lLeQH_p0ph3Bw8jcJwuVwqHfXYSJvli3bGlM5Vp1n-6aCxmrVFxXTU19FM-QtpfX7hjc_c-vCobBx5Cbh5pNUXVPZoytqbWbSv494V42NJ7AfGvz44eC1DsENREMsMEngEMT3tGv7mTYnyTEsvQALdDqGN2BN47XeYjPHm-fiMrhtlcS2b3QYeHeeOOosVssfSgQZOLWSh5TaERa8&quot;,
         &quot;user&quot;: {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;Admin&quot;,
@@ -3581,7 +3027,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 42
+x-ratelimit-remaining: 40
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3707,7 +3153,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "name=Gautier" \
     --form "phone=699999999" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php57C2.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3761,7 +3207,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php57C2.tmp', 'r')
             ],
         ],
     ]
@@ -3776,7 +3222,7 @@ import json
 
 url = 'http://localhost:8000/api/user/update/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php57C2.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -3806,7 +3252,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 41
+x-ratelimit-remaining: 39
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -3820,7 +3266,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715354641_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1
         }
     },
@@ -3963,7 +3409,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCCB7.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php57C2.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -4062,7 +3508,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 40
+x-ratelimit-remaining: 38
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4262,7 +3708,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 39
+x-ratelimit-remaining: 37
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4276,7 +3722,7 @@ vary: Origin
             &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
             &quot;phone&quot;: 699999999,
             &quot;fcm_token&quot;: null,
-            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
+            &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715354641_test.jpg&quot;,
             &quot;abonnement_id&quot;: 1,
             &quot;roles&quot;: [
                 {
@@ -4477,7 +3923,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 16
+x-ratelimit-remaining: 14
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4669,7 +4115,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 13
+x-ratelimit-remaining: 11
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -4822,7 +4268,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=gautier@position.cm" \
     --form "password=gautier123" \
     --form "phone=699999990" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php6A7F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4881,7 +4327,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6A7F.tmp', 'r')
             ],
         ],
     ]
@@ -4896,7 +4342,7 @@ import json
 
 url = 'http://localhost:8000/api/admins'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php6A7F.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -4918,7 +4364,7 @@ response.json()</code></pre></div>
 
 <span id="example-responses-POSTapi-admins">
             <blockquote>
-            <p>Example response (400):</p>
+            <p>Example response (201):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4927,16 +4373,37 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 60
+x-ratelimit-remaining: 10
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: false,
-    &quot;message&quot;: &quot;Erreur.&quot;,
+    &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;error&quot;: &quot;Connection to \&quot;smtp.mailgun.org:25\&quot; timed out.&quot;
-    }
+        &quot;admin&quot;: {
+            &quot;id&quot;: 10,
+            &quot;user&quot;: {
+                &quot;id&quot;: 21,
+                &quot;name&quot;: &quot;Gautier&quot;,
+                &quot;email&quot;: &quot;gautier@position.cm&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;phone&quot;: &quot;699999990&quot;,
+                &quot;fcm_token&quot;: null,
+                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715354646_test.jpg&quot;,
+                &quot;abonnement_id&quot;: 1,
+                &quot;roles&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;name&quot;: &quot;admin&quot;,
+                        &quot;guard_name&quot;: &quot;api&quot;,
+                        &quot;created_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;
+                    }
+                ]
+            }
+        }
+    },
+    &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;admin reussie&quot;
 }</code>
  </pre>
     </span>
@@ -5085,7 +4552,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD708.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6A7F.tmp</code></p>
         </div>
         </form>
 
@@ -5173,7 +4640,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
+x-ratelimit-remaining: 9
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5336,7 +4803,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "phone=699999992" \
     --form "isSuperAdmin=true" \
     --form "_method=PUT" \
-    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp" </code></pre></div>
+    --form "image_profil=@C:\Users\HWTP4412\AppData\Local\Temp\php73F6.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -5395,7 +4862,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_profil',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php73F6.tmp', 'r')
             ],
         ],
     ]
@@ -5410,7 +4877,7 @@ import json
 
 url = 'http://localhost:8000/api/admins/1'
 files = {
-  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp', 'rb')
+  'image_profil': open('C:\Users\HWTP4412\AppData\Local\Temp\php73F6.tmp', 'rb')
 }
 payload = {
     "name": "Gautier",
@@ -5441,7 +4908,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 58
+x-ratelimit-remaining: 8
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5458,7 +4925,7 @@ vary: Origin
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                 &quot;phone&quot;: &quot;699999992&quot;,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715208620_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/admins/profils/1715354649_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -5626,7 +5093,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2D3D.tmp</code></p>
+<p>Profile Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php73F6.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -5725,7 +5192,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 7
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -5941,7 +5408,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 37
+x-ratelimit-remaining: 35
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7592,6 +7059,36 @@ vary: Origin
                         &quot;commentaires&quot;: []
                     }
                 ]
+            },
+            {
+                &quot;id&quot;: 40,
+                &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1013434286&quot;,
+                &quot;longitude&quot;: &quot;11.2292075&quot;,
+                &quot;latitude&quot;: &quot;4.0782882&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Pont de Ngobo&quot;,
+                &quot;ville&quot;: &quot;Centre&quot;,
+                &quot;commune&quot;: &quot;undefined&quot;,
+                &quot;quartier&quot;: &quot;undefined&quot;,
+                &quot;etablissements&quot;: []
+            },
+            {
+                &quot;id&quot;: 41,
+                &quot;nom&quot;: &quot;Rosine&quot;,
+                &quot;nombre_niveau&quot;: 0,
+                &quot;code&quot;: &quot;BATIMENT_1987382969&quot;,
+                &quot;longitude&quot;: &quot;11.5002933&quot;,
+                &quot;latitude&quot;: &quot;3.8502254&quot;,
+                &quot;image&quot;: &quot;/images/logo-nom.jpg&quot;,
+                &quot;indication&quot;: null,
+                &quot;rue&quot;: &quot;Rue 3.452&quot;,
+                &quot;ville&quot;: &quot;Communaut&eacute; urbaine de Yaound&eacute;&quot;,
+                &quot;commune&quot;: &quot;Yaound&eacute; III&quot;,
+                &quot;quartier&quot;: &quot;Ngoa-&Eacute;k&eacute;l&eacute;&quot;,
+                &quot;etablissements&quot;: []
             }
         ]
     },
@@ -7725,15 +7222,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nombre_niveau=3" \
     --form "code=BATIMENT_MELEN_0569" \
-    --form "longitude=eum" \
-    --form "latitude=velit" \
+    --form "longitude=aperiam" \
+    --form "latitude=totam" \
     --form "ville=Douala" \
     --form "commune=Yaounde IV" \
     --form "quartier=Melen" \
     --form "nom=Sogefi" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php5CC4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7751,8 +7248,8 @@ const headers = {
 const body = new FormData();
 body.append('nombre_niveau', '3');
 body.append('code', 'BATIMENT_MELEN_0569');
-body.append('longitude', 'eum');
-body.append('latitude', 'velit');
+body.append('longitude', 'aperiam');
+body.append('latitude', 'totam');
 body.append('ville', 'Douala');
 body.append('commune', 'Yaounde IV');
 body.append('quartier', 'Melen');
@@ -7790,11 +7287,11 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'eum'
+                'contents' =&gt; 'aperiam'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'velit'
+                'contents' =&gt; 'totam'
             ],
             [
                 'name' =&gt; 'ville',
@@ -7822,7 +7319,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php5CC4.tmp', 'r')
             ],
         ],
     ]
@@ -7837,13 +7334,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php5CC4.tmp', 'rb')
 }
 payload = {
     "nombre_niveau": 3,
     "code": "BATIMENT_MELEN_0569",
-    "longitude": "eum",
-    "latitude": "velit",
+    "longitude": "aperiam",
+    "latitude": "totam",
     "ville": "Douala",
     "commune": "Yaounde IV",
     "quartier": "Melen",
@@ -7874,7 +7371,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 36
+x-ratelimit-remaining: 34
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -7885,15 +7382,15 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_MELEN_0569&quot;,
-            &quot;longitude&quot;: &quot;eum&quot;,
-            &quot;latitude&quot;: &quot;velit&quot;,
+            &quot;longitude&quot;: &quot;aperiam&quot;,
+            &quot;latitude&quot;: &quot;totam&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
             &quot;commune&quot;: &quot;Yaounde IV&quot;,
             &quot;quartier&quot;: &quot;Melen&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1715208465_test.jpg&quot;,
-            &quot;id&quot;: 39
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_MELEN_0569/1715354643_test.jpg&quot;,
+            &quot;id&quot;: 43
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation du batiment reussie&quot;
@@ -8020,10 +7517,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="POSTapi-batiments"
-               value="eum"
+               value="aperiam"
                data-component="body">
     <br>
-<p>required. Example: <code>eum</code></p>
+<p>required. Example: <code>aperiam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8031,10 +7528,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="POSTapi-batiments"
-               value="velit"
+               value="totam"
                data-component="body">
     <br>
-<p>required. Example: <code>velit</code></p>
+<p>required. Example: <code>totam</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>ville</code></b>&nbsp;&nbsp;
@@ -8089,7 +7586,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCFD5.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php5CC4.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8211,7 +7708,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 35
+x-ratelimit-remaining: 33
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8445,15 +7942,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Sogefi" \
     --form "nombre_niveau=3" \
-    --form "longitude=et" \
-    --form "latitude=voluptates" \
+    --form "longitude=vel" \
+    --form "latitude=laudantium" \
     --form "indication=Rue de melen" \
     --form "rue=Rue de Melen" \
     --form "ville=Douala" \
     --form "quartier=Melen" \
     --form "commune=Yaounde IV" \
     --form "_method=PUT" \
-    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp" </code></pre></div>
+    --form "image=@C:\Users\HWTP4412\AppData\Local\Temp\php5E3D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8471,8 +7968,8 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Sogefi');
 body.append('nombre_niveau', '3');
-body.append('longitude', 'et');
-body.append('latitude', 'voluptates');
+body.append('longitude', 'vel');
+body.append('latitude', 'laudantium');
 body.append('indication', 'Rue de melen');
 body.append('rue', 'Rue de Melen');
 body.append('ville', 'Douala');
@@ -8510,11 +8007,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'longitude',
-                'contents' =&gt; 'et'
+                'contents' =&gt; 'vel'
             ],
             [
                 'name' =&gt; 'latitude',
-                'contents' =&gt; 'voluptates'
+                'contents' =&gt; 'laudantium'
             ],
             [
                 'name' =&gt; 'indication',
@@ -8542,7 +8039,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php5E3D.tmp', 'r')
             ],
         ],
     ]
@@ -8557,13 +8054,13 @@ import json
 
 url = 'http://localhost:8000/api/batiments/3'
 files = {
-  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp', 'rb')
+  'image': open('C:\Users\HWTP4412\AppData\Local\Temp\php5E3D.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
     "nombre_niveau": 3,
-    "longitude": "et",
-    "latitude": "voluptates",
+    "longitude": "vel",
+    "latitude": "laudantium",
     "indication": "Rue de melen",
     "rue": "Rue de Melen",
     "ville": "Douala",
@@ -8594,7 +8091,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 34
+x-ratelimit-remaining: 32
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -8606,9 +8103,9 @@ vary: Origin
             &quot;nom&quot;: &quot;Sogefi&quot;,
             &quot;nombre_niveau&quot;: 3,
             &quot;code&quot;: &quot;BATIMENT_6771633360&quot;,
-            &quot;longitude&quot;: &quot;et&quot;,
-            &quot;latitude&quot;: &quot;voluptates&quot;,
-            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1715208465_test.jpg&quot;,
+            &quot;longitude&quot;: &quot;vel&quot;,
+            &quot;latitude&quot;: &quot;laudantium&quot;,
+            &quot;image&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/1715354643_test.jpg&quot;,
             &quot;indication&quot;: &quot;Rue de melen&quot;,
             &quot;rue&quot;: &quot;Rue de Melen&quot;,
             &quot;ville&quot;: &quot;Douala&quot;,
@@ -8756,10 +8253,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="longitude"                data-endpoint="PUTapi-batiments--id-"
-               value="et"
+               value="vel"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>vel</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
@@ -8767,10 +8264,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="latitude"                data-endpoint="PUTapi-batiments--id-"
-               value="voluptates"
+               value="laudantium"
                data-component="body">
     <br>
-<p>Example: <code>voluptates</code></p>
+<p>Example: <code>laudantium</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -8781,7 +8278,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD0A2.tmp</code></p>
+<p>Building Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php5E3D.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>indication</code></b>&nbsp;&nbsp;
@@ -8935,7 +8432,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 33
+x-ratelimit-remaining: 31
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -9073,7 +8570,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --data "{
-    \"batiment\": \"aut\"
+    \"batiment\": \"excepturi\"
 }"
 </code></pre></div>
 
@@ -9091,7 +8588,7 @@ const headers = {
 };
 
 let body = {
-    "batiment": "aut"
+    "batiment": "excepturi"
 };
 
 fetch(url, {
@@ -9113,7 +8610,7 @@ $response = $client-&gt;post(
             'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
         ],
         'json' =&gt; [
-            'batiment' =&gt; 'aut',
+            'batiment' =&gt; 'excepturi',
         ],
     ]
 );
@@ -9127,7 +8624,7 @@ import json
 
 url = 'http://localhost:8000/api/add/batiments'
 payload = {
-    "batiment": "aut"
+    "batiment": "excepturi"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -9152,7 +8649,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 32
+x-ratelimit-remaining: 30
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -9747,10 +9244,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="batiment"                data-endpoint="POSTapi-add-batiments"
-               value="aut"
+               value="excepturi"
                data-component="body">
     <br>
-<p>required. Example : {&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;nombre_niveau&quot;: &quot;3&quot;,&quot;code&quot;: &quot;BATIMENT_1013434286&quot;,&quot;longitude&quot;: &quot;11.229207&quot;,&quot;latitude&quot;: &quot;4.078288&quot;,&quot;indication&quot;: &quot;derrierre station&quot;,&quot;rue&quot;: &quot;Rue de la Mairie&quot;,&quot;ville&quot;: &quot;Douala&quot;,&quot;commune&quot;: &quot;Douala 3&quot;,&quot;quartier&quot;: &quot;Nyalla&quot;,&quot;user_id&quot;: 1,&quot;etablissement&quot;: {&quot;id&quot;: 1,&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;indication_adresse&quot;: &quot;Face station&quot;,&quot;code_postal&quot;: &quot;BP 4326 Douala&quot;, &quot;site_internet&quot;: &quot;www.site.com&quot;,&quot;user_id&quot;: &quot;1&quot;,&quot;etage&quot;: &quot;1&quot;,&quot;phone&quot;: &quot;699999999&quot;,&quot;whatsapp1&quot;: &quot;699999999&quot;,&quot;whatsapp2&quot;: &quot;699999998&quot;,&quot;description&quot;: &quot;bel etablissement&quot;,&quot;nom_manager&quot;: &quot;Mical&quot;,&quot;contact_manager&quot;: &quot;Mical&quot;,&quot;commodites&quot;: &quot;Wifi&quot;,&quot;services&quot;: &quot;OM;MOMO&quot;,&quot;ameliorations&quot;: &quot;Ajouter des videos&quot;,&quot;idSousCategorie&quot;: &quot;1&quot;,&quot;horaires&quot;: [{&quot;jour&quot;: &quot;lundi&quot;,&quot;plage_horaire&quot;: &quot;07:00-12:00;14:00-17:00&quot;}]}} Example: <code>aut</code></p>
+<p>required. Example : {&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;nombre_niveau&quot;: &quot;3&quot;,&quot;code&quot;: &quot;BATIMENT_1013434286&quot;,&quot;longitude&quot;: &quot;11.229207&quot;,&quot;latitude&quot;: &quot;4.078288&quot;,&quot;indication&quot;: &quot;derrierre station&quot;,&quot;rue&quot;: &quot;Rue de la Mairie&quot;,&quot;ville&quot;: &quot;Douala&quot;,&quot;commune&quot;: &quot;Douala 3&quot;,&quot;quartier&quot;: &quot;Nyalla&quot;,&quot;user_id&quot;: 1,&quot;etablissement&quot;: {&quot;id&quot;: 1,&quot;nom&quot;: &quot;BOUTIQUE DE MICAL&quot;,&quot;indication_adresse&quot;: &quot;Face station&quot;,&quot;code_postal&quot;: &quot;BP 4326 Douala&quot;, &quot;site_internet&quot;: &quot;www.site.com&quot;,&quot;user_id&quot;: &quot;1&quot;,&quot;etage&quot;: &quot;1&quot;,&quot;phone&quot;: &quot;699999999&quot;,&quot;whatsapp1&quot;: &quot;699999999&quot;,&quot;whatsapp2&quot;: &quot;699999998&quot;,&quot;description&quot;: &quot;bel etablissement&quot;,&quot;nom_manager&quot;: &quot;Mical&quot;,&quot;contact_manager&quot;: &quot;Mical&quot;,&quot;commodites&quot;: &quot;Wifi&quot;,&quot;services&quot;: &quot;OM;MOMO&quot;,&quot;ameliorations&quot;: &quot;Ajouter des videos&quot;,&quot;idSousCategorie&quot;: &quot;1&quot;,&quot;horaires&quot;: [{&quot;jour&quot;: &quot;lundi&quot;,&quot;plage_horaire&quot;: &quot;07:00-12:00;14:00-17:00&quot;}]}} Example: <code>excepturi</code></p>
         </div>
         </form>
 
@@ -9837,7 +9334,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 57
+x-ratelimit-remaining: 55
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -13669,7 +13166,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 56
+x-ratelimit-remaining: 54
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -13947,7 +13444,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 55
+x-ratelimit-remaining: 53
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -14241,10 +13738,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "vues=true" \
-    --form "color=enim" \
+    --form "color=quaerat" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php4E68.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php4E79.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14262,7 +13759,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('vues', 'true');
-body.append('color', 'enim');
+body.append('color', 'quaerat');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
@@ -14296,7 +13793,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'enim'
+                'contents' =&gt; 'quaerat'
             ],
             [
                 'name' =&gt; '_method',
@@ -14304,11 +13801,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4E68.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php4E79.tmp', 'r')
             ],
         ],
     ]
@@ -14323,13 +13820,13 @@ import json
 
 url = 'http://localhost:8000/api/categories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php4E68.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php4E79.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "vues": "true",
-    "color": "enim",
+    "color": "quaerat",
     "_method": "PUT"
 }
 headers = {
@@ -14355,7 +13852,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 54
+x-ratelimit-remaining: 52
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -14366,9 +13863,9 @@ vary: Origin
             &quot;id&quot;: 2,
             &quot;nom&quot;: &quot;Achat&quot;,
             &quot;shortname&quot;: &quot;Administration&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715208462_test.jpg&quot;,
-            &quot;color&quot;: &quot;enim&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715354639_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Administrations/1715354639_test.jpg&quot;,
+            &quot;color&quot;: &quot;quaerat&quot;,
             &quot;vues&quot;: 1
         }
     },
@@ -14489,7 +13986,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B5.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4E68.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -14500,7 +13997,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpC4B6.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php4E79.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -14530,10 +14027,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-categories--id-"
-               value="enim"
+               value="quaerat"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>enim</code></p>
+<p>the color of the category Example: <code>quaerat</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -14568,10 +14065,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "shortname=molestiae" \
-    --form "color=animi" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp" </code></pre></div>
+    --form "shortname=et" \
+    --form "color=possimus" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php7762.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php7763.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -14588,8 +14085,8 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('shortname', 'molestiae');
-body.append('color', 'animi');
+body.append('shortname', 'et');
+body.append('color', 'possimus');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -14618,19 +14115,19 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'shortname',
-                'contents' =&gt; 'molestiae'
+                'contents' =&gt; 'et'
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'animi'
+                'contents' =&gt; 'possimus'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7762.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php7763.tmp', 'r')
             ],
         ],
     ]
@@ -14645,13 +14142,13 @@ import json
 
 url = 'http://localhost:8000/api/categories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php7762.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php7763.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "shortname": "molestiae",
-    "color": "animi"
+    "shortname": "et",
+    "color": "possimus"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -14676,7 +14173,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 2
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -14686,10 +14183,10 @@ vary: Origin
         &quot;categorie&quot;: {
             &quot;id&quot;: 28,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;shortname&quot;: &quot;molestiae&quot;,
-            &quot;color&quot;: &quot;animi&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1715208621_test.jpg&quot;
+            &quot;shortname&quot;: &quot;et&quot;,
+            &quot;color&quot;: &quot;possimus&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achat/1715354649_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achat/1715354649_test.jpg&quot;
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de la cat&eacute;gorie reussie&quot;
@@ -14805,10 +14302,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="shortname"                data-endpoint="POSTapi-categories"
-               value="molestiae"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>molestiae</code></p>
+<p>Example: <code>et</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourl</code></b>&nbsp;&nbsp;
@@ -14819,7 +14316,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB5.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7762.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -14830,7 +14327,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2EB6.tmp</code></p>
+<p>the picture of the category Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php7763.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -14838,10 +14335,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-categories"
-               value="animi"
+               value="possimus"
                data-component="body">
     <br>
-<p>the color of the category Example: <code>animi</code></p>
+<p>the color of the category Example: <code>possimus</code></p>
         </div>
         </form>
 
@@ -14929,7 +14426,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 1
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -15133,7 +14630,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 31
+x-ratelimit-remaining: 29
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -15346,7 +14843,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 30
+x-ratelimit-remaining: 28
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -15357,9 +14854,9 @@ vary: Origin
             &quot;user_id&quot;: 1,
             &quot;commentaire&quot;: &quot;J&#039;aime ce lieu&quot;,
             &quot;rating&quot;: 3,
-            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
-            &quot;id&quot;: 17,
+            &quot;updated_at&quot;: &quot;2024-05-10T15:24:03.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-10T15:24:03.000000Z&quot;,
+            &quot;id&quot;: 19,
             &quot;user&quot;: {
                 &quot;id&quot;: 1,
                 &quot;name&quot;: &quot;Gautier&quot;,
@@ -15367,7 +14864,7 @@ vary: Origin
                 &quot;email_verified_at&quot;: &quot;2023-04-08T13:45:37.000000Z&quot;,
                 &quot;phone&quot;: 699999999,
                 &quot;fcm_token&quot;: null,
-                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715208464_test.jpg&quot;,
+                &quot;image_profil&quot;: &quot;/storage/uploads/users/profils/1715354641_test.jpg&quot;,
                 &quot;abonnement_id&quot;: 1,
                 &quot;roles&quot;: [
                     {
@@ -15603,7 +15100,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 29
+x-ratelimit-remaining: 27
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -16326,7 +15823,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 28
+x-ratelimit-remaining: 26
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -16566,7 +16063,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 27
+x-ratelimit-remaining: 25
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -16783,7 +16280,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
+x-ratelimit-remaining: 48
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -17473,7 +16970,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
+x-ratelimit-remaining: 47
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -17785,7 +17282,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 48
+x-ratelimit-remaining: 46
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18030,7 +17527,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 47
+x-ratelimit-remaining: 45
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18735,7 +18232,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 46
+x-ratelimit-remaining: 44
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -18940,7 +18437,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/etablissements/vues/non" \
+    "http://localhost:8000/api/etablissements/vues/excepturi" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
@@ -18948,7 +18445,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/etablissements/vues/non"
+    "http://localhost:8000/api/etablissements/vues/excepturi"
 );
 
 const headers = {
@@ -18966,7 +18463,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://localhost:8000/api/etablissements/vues/non',
+    'http://localhost:8000/api/etablissements/vues/excepturi',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -18983,7 +18480,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://localhost:8000/api/etablissements/vues/non'
+url = 'http://localhost:8000/api/etablissements/vues/excepturi'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
@@ -19084,10 +18581,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-etablissements-vues--id-"
-               value="non"
+               value="excepturi"
                data-component="url">
     <br>
-<p>The ID of the vue. Example: <code>non</code></p>
+<p>The ID of the vue. Example: <code>excepturi</code></p>
             </div>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -19122,7 +18619,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php562B.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -19166,7 +18663,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php562B.tmp', 'r')
             ],
         ],
     ]
@@ -19181,7 +18678,7 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/cover/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php562B.tmp', 'rb')
 }
 payload = {
     "_method": "PUT"
@@ -19209,7 +18706,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 44
+x-ratelimit-remaining: 42
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19225,7 +18722,7 @@ vary: Origin
             &quot;nom_manager&quot;: null,
             &quot;contact_manager&quot;: null,
             &quot;etage&quot;: 0,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208464_test.jpg&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715354641_test.jpg&quot;,
             &quot;phone&quot;: &quot;000000000&quot;,
             &quot;whatsapp1&quot;: &quot;000000000&quot;,
             &quot;whatsapp2&quot;: null,
@@ -19239,7 +18736,7 @@ vary: Origin
             &quot;logo_map&quot;: null,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-08T22:47:44.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-10T15:24:01.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
@@ -19373,7 +18870,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpCBBC.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php562B.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -19467,7 +18964,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 43
+x-ratelimit-remaining: 41
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19599,9 +19096,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "osm_id=111259658236" \
     --form "commodites=Wifi;Parking" \
     --form "ameliorations=Site internet;videos" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php62C2.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php62D3.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php62D4.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -19727,15 +19224,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php62C2.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php62D3.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php62D4.tmp', 'r')
             ],
         ],
     ]
@@ -19750,9 +19247,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php62C2.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php62D3.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php62D4.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -19796,7 +19293,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 25
+x-ratelimit-remaining: 23
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -19819,12 +19316,12 @@ vary: Origin
             &quot;ameliorations&quot;: &quot;Site internet;videos&quot;,
             &quot;nom_manager&quot;: &quot;Nom Manager.&quot;,
             &quot;contact_manager&quot;: &quot;699999999.&quot;,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715208466_test.jpg&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
-            &quot;created_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
-            &quot;id&quot;: 39
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715354644_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715354644_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_6771633360/Sogefi/1715354644_test.jpg&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-10T15:24:04.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2024-05-10T15:24:04.000000Z&quot;,
+            &quot;id&quot;: 43
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;etablissement reussie&quot;
@@ -20075,7 +19572,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD323.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php62C2.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>whatsapp2</code></b>&nbsp;&nbsp;
@@ -20130,7 +19627,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD324.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php62D3.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -20141,7 +19638,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD325.tmp</code></p>
+<p>establishment Logo in map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php62D4.tmp</code></p>
         </div>
         </form>
 
@@ -20179,9 +19676,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "ameliorations=Site internet,videos" \
     --form "vues=true" \
     --form "_method=PUT" \
-    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp" \
-    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp" \
-    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp" </code></pre></div>
+    --form "cover=@C:\Users\HWTP4412\AppData\Local\Temp\php6430.tmp" \
+    --form "logo=@C:\Users\HWTP4412\AppData\Local\Temp\php6440.tmp" \
+    --form "logo_map=@C:\Users\HWTP4412\AppData\Local\Temp\php6441.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -20297,15 +19794,15 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'cover',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6430.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6440.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logo_map',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6441.tmp', 'r')
             ],
         ],
     ]
@@ -20320,9 +19817,9 @@ import json
 
 url = 'http://localhost:8000/api/etablissements/1'
 files = {
-  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp', 'rb'),
-  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp', 'rb'),
-  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp', 'rb')
+  'cover': open('C:\Users\HWTP4412\AppData\Local\Temp\php6430.tmp', 'rb'),
+  'logo': open('C:\Users\HWTP4412\AppData\Local\Temp\php6440.tmp', 'rb'),
+  'logo_map': open('C:\Users\HWTP4412\AppData\Local\Temp\php6441.tmp', 'rb')
 }
 payload = {
     "nom": "Sogefi",
@@ -20364,7 +19861,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 24
+x-ratelimit-remaining: 22
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -20380,7 +19877,7 @@ vary: Origin
             &quot;nom_manager&quot;: null,
             &quot;contact_manager&quot;: null,
             &quot;etage&quot;: 3,
-            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
+            &quot;cover&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715354645_test.jpg&quot;,
             &quot;phone&quot;: &quot;699999999&quot;,
             &quot;whatsapp1&quot;: &quot;699999999&quot;,
             &quot;whatsapp2&quot;: &quot;699999999&quot;,
@@ -20390,11 +19887,11 @@ vary: Origin
             &quot;commodites&quot;: &quot;Wifi;Parking&quot;,
             &quot;ameliorations&quot;: &quot;Site internet,videos&quot;,
             &quot;vues&quot;: 2,
-            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
-            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715208466_test.jpg&quot;,
+            &quot;logo&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715354645_test.jpg&quot;,
+            &quot;logo_map&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/1715354645_test.jpg&quot;,
             &quot;deleted_at&quot;: null,
             &quot;created_at&quot;: &quot;2023-04-08T13:55:36.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2024-05-08T22:47:46.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2024-05-10T15:24:05.000000Z&quot;,
             &quot;batiment&quot;: {
                 &quot;id&quot;: 1,
                 &quot;nom&quot;: &quot;Boutique de Nkol Poblo&quot;,
@@ -20583,7 +20080,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3D5.tmp</code></p>
+<p>establishment Image. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6430.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etage</code></b>&nbsp;&nbsp;
@@ -20693,7 +20190,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E6.tmp</code></p>
+<p>establishment Logo. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6440.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logo_map</code></b>&nbsp;&nbsp;
@@ -20704,7 +20201,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD3E7.tmp</code></p>
+<p>establishment Logo Map. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6441.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>_method</code></b>&nbsp;&nbsp;
@@ -20803,7 +20300,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 23
+x-ratelimit-remaining: 21
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -21020,7 +20517,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 15
+x-ratelimit-remaining: 13
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -21030,7 +20527,7 @@ vary: Origin
         &quot;favorite&quot;: {
             &quot;etablissement_id&quot;: 1,
             &quot;user_id&quot;: 1,
-            &quot;id&quot;: 17
+            &quot;id&quot;: 19
         }
     },
     &quot;message&quot;: &quot;Etablissement ajout&eacute; aux favoris&quot;
@@ -21241,7 +20738,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 14
+x-ratelimit-remaining: 12
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -21380,7 +20877,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php6721.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -21424,7 +20921,7 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php6721.tmp', 'r')
             ],
         ],
     ]
@@ -21439,7 +20936,7 @@ import json
 
 url = 'http://localhost:8000/api/images'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php6721.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1
@@ -21467,7 +20964,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 19
+x-ratelimit-remaining: 17
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -21475,9 +20972,9 @@ vary: Origin
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;image&quot;: {
-            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715208467_test.jpg&quot;,
+            &quot;image_url&quot;: &quot;/storage/uploads/batiments/images/BATIMENT_1013434286/Boutique de Nkol Poblo/1715354645_test.jpg&quot;,
             &quot;etablissement_id&quot;: 1,
-            &quot;id&quot;: 17
+            &quot;id&quot;: 19
         }
     },
     &quot;message&quot;: &quot;Cr&eacute;ation de l&#039;image reussie&quot;
@@ -21596,7 +21093,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD55F.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php6721.tmp</code></p>
         </div>
         </form>
 
@@ -21621,7 +21118,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "etablissement_id=1" \
     --form "_method=PUT" \
-    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp" </code></pre></div>
+    --form "image_url=@C:\Users\HWTP4412\AppData\Local\Temp\php67BF.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -21670,7 +21167,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'image_url',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php67BF.tmp', 'r')
             ],
         ],
     ]
@@ -21685,7 +21182,7 @@ import json
 
 url = 'http://localhost:8000/api/images/1'
 files = {
-  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp', 'rb')
+  'image_url': open('C:\Users\HWTP4412\AppData\Local\Temp\php67BF.tmp', 'rb')
 }
 payload = {
     "etablissement_id": 1,
@@ -21714,7 +21211,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 18
+x-ratelimit-remaining: 16
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -22338,7 +21835,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\phpD5AF.tmp</code></p>
+<p>picture. Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php67BF.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>etablissement_id</code></b>&nbsp;&nbsp;
@@ -22448,7 +21945,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 17
+x-ratelimit-remaining: 15
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -22671,7 +22168,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 22
+x-ratelimit-remaining: 20
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -22903,7 +22400,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 21
+x-ratelimit-remaining: 19
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -23128,7 +22625,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 20
+x-ratelimit-remaining: 18
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -23244,6 +22741,1034 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
+                <h1 id="setting-management">Setting management</h1>
+
+    <p>APIs for managing Setting</p>
+
+                                <h2 id="setting-management-GETapi-settings">Get the application settings.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-settings">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/settings" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/settings"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/settings',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/settings'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-settings">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;setting&quot;: {
+            &quot;id&quot;: 1,
+            &quot;app_name&quot;: &quot;Position&quot;,
+            &quot;app_api_url&quot;: &quot;https://api.position.cm&quot;,
+            &quot;app_api_key&quot;: &quot;GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E&quot;,
+            &quot;app_version&quot;: &quot;1.0.0&quot;,
+            &quot;app_description&quot;: &quot;Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.&quot;,
+            &quot;app_logo&quot;: &quot;images/logo-nom.jpg&quot;,
+            &quot;android_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_link&quot;: &quot;https://apps.apple.com/app/id1234567890&quot;,
+            &quot;android_app_link&quot;: &quot;https://play.google.com/store/apps/details?id=com.example.app&quot;,
+            &quot;privacy_policy_link&quot;: &quot;https://example.com/privacy-policy&quot;,
+            &quot;terms_of_service_link&quot;: &quot;https://example.com/terms-of-service&quot;,
+            &quot;contact_email&quot;: &quot;infos@position.cm&quot;,
+            &quot;contact_phone&quot;: &quot;+237 6 00 00 00 00&quot;,
+            &quot;contact_address&quot;: &quot;Douala, Cameroun&quot;,
+            &quot;facebook_link&quot;: &quot;https://facebook.com/position&quot;,
+            &quot;twitter_link&quot;: &quot;https://twitter.com/position&quot;,
+            &quot;linkedin_link&quot;: &quot;https://linkedin.com/position&quot;,
+            &quot;maintenance_mode&quot;: false,
+            &quot;map_api_key&quot;: &quot;GZun6glaQh7PwnoBZoOm&quot;,
+            &quot;default_map_style&quot;: &quot;https://api.maptiler.com/maps/streets-v2/style.json&quot;,
+            &quot;is_facebook_login_enabled&quot;: true,
+            &quot;is_google_login_enabled&quot;: true
+        }
+    },
+    &quot;message&quot;: &quot;Param&egrave;tres de l&#039;application&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-settings" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-settings"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-settings"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-settings" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-settings">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-settings" data-method="GET"
+      data-path="api/settings"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-settings', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-settings"
+                    onclick="tryItOut('GETapi-settings');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-settings"
+                    onclick="cancelTryOut('GETapi-settings');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-settings"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/settings</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-settings"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-settings"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>X-Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="X-Authorization"                data-endpoint="GETapi-settings"
+               value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
+               data-component="header">
+    <br>
+<p>Example: <code>GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="setting-management-GETapi-settings--id-">Show Setting by id.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-settings--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/settings/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/settings/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost:8000/api/settings/1',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/settings/1'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-settings--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;setting&quot;: {
+            &quot;id&quot;: 1,
+            &quot;app_name&quot;: &quot;Position&quot;,
+            &quot;app_api_url&quot;: &quot;https://api.position.cm&quot;,
+            &quot;app_api_key&quot;: &quot;GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E&quot;,
+            &quot;app_version&quot;: &quot;1.0.0&quot;,
+            &quot;app_description&quot;: &quot;Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.&quot;,
+            &quot;app_logo&quot;: &quot;images/logo-nom.jpg&quot;,
+            &quot;android_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_link&quot;: &quot;https://apps.apple.com/app/id1234567890&quot;,
+            &quot;android_app_link&quot;: &quot;https://play.google.com/store/apps/details?id=com.example.app&quot;,
+            &quot;privacy_policy_link&quot;: &quot;https://example.com/privacy-policy&quot;,
+            &quot;terms_of_service_link&quot;: &quot;https://example.com/terms-of-service&quot;,
+            &quot;contact_email&quot;: &quot;infos@position.cm&quot;,
+            &quot;contact_phone&quot;: &quot;+237 6 00 00 00 00&quot;,
+            &quot;contact_address&quot;: &quot;Douala, Cameroun&quot;,
+            &quot;facebook_link&quot;: &quot;https://facebook.com/position&quot;,
+            &quot;twitter_link&quot;: &quot;https://twitter.com/position&quot;,
+            &quot;linkedin_link&quot;: &quot;https://linkedin.com/position&quot;,
+            &quot;maintenance_mode&quot;: false,
+            &quot;map_api_key&quot;: &quot;GZun6glaQh7PwnoBZoOm&quot;,
+            &quot;default_map_style&quot;: &quot;https://api.maptiler.com/maps/streets-v2/style.json&quot;,
+            &quot;is_facebook_login_enabled&quot;: true,
+            &quot;is_google_login_enabled&quot;: true
+        }
+    },
+    &quot;message&quot;: &quot;Param&egrave;tre trouv&eacute;.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-settings--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-settings--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-settings--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-settings--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-settings--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-settings--id-" data-method="GET"
+      data-path="api/settings/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-settings--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-settings--id-"
+                    onclick="tryItOut('GETapi-settings--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-settings--id-"
+                    onclick="cancelTryOut('GETapi-settings--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-settings--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/settings/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-settings--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-settings--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>X-Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="X-Authorization"                data-endpoint="GETapi-settings--id-"
+               value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
+               data-component="header">
+    <br>
+<p>Example: <code>GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-settings--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>the id of the setting. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="setting-management-PUTapi-settings--id-">Update the specified resource in storage.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-settings--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://localhost:8000/api/settings/1" \
+    --header "Authorization: Bearer {TOKEN}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
+    --data "{
+    \"app_name\": \"Position\",
+    \"app_api_url\": \"https:\\/\\/api.position.cm\",
+    \"app_api_key\": \"GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E\",
+    \"app_version\": \"1.0.0\",
+    \"app_description\": \"Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.\",
+    \"app_logo\": \"id\",
+    \"android_app_version\": \"1.0.0\",
+    \"ios_app_version\": \"1.0.0\",
+    \"ios_app_link\": \"https:\\/\\/apps.apple.com\\/app\\/id1234567890\",
+    \"android_app_link\": \"https:\\/\\/play.google.com\\/store\\/apps\\/details?id=com.example.app\",
+    \"privacy_policy_link\": \"https:\\/\\/example.com\\/privacy-policy\",
+    \"terms_of_service_link\": \"https:\\/\\/example.com\\/terms-of-service\",
+    \"contact_email\": \"infos@position.cm\",
+    \"contact_phone\": \"+237 6 00 00 00 00\",
+    \"contact_address\": \"Douala, Cameroun\",
+    \"facebook_link\": \"https:\\/\\/facebook.com\\/position\",
+    \"twitter_link\": \"https:\\/\\/twitter.com\\/position\",
+    \"linkedin_link\": \"https:\\/\\/linkedin.com\\/position\",
+    \"maintenance_mode\": false,
+    \"map_api_key\": \"GZun6glaQh7PwnoBZoOm\",
+    \"default_map_style\": \"https:\\/\\/api.maptiler.com\\/maps\\/streets-v2\\/style.json\",
+    \"is_facebook_login_enabled\": true,
+    \"is_google_login_enabled\": true
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/settings/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {TOKEN}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "X-Authorization": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+};
+
+let body = {
+    "app_name": "Position",
+    "app_api_url": "https:\/\/api.position.cm",
+    "app_api_key": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+    "app_version": "1.0.0",
+    "app_description": "Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.",
+    "app_logo": "id",
+    "android_app_version": "1.0.0",
+    "ios_app_version": "1.0.0",
+    "ios_app_link": "https:\/\/apps.apple.com\/app\/id1234567890",
+    "android_app_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.example.app",
+    "privacy_policy_link": "https:\/\/example.com\/privacy-policy",
+    "terms_of_service_link": "https:\/\/example.com\/terms-of-service",
+    "contact_email": "infos@position.cm",
+    "contact_phone": "+237 6 00 00 00 00",
+    "contact_address": "Douala, Cameroun",
+    "facebook_link": "https:\/\/facebook.com\/position",
+    "twitter_link": "https:\/\/twitter.com\/position",
+    "linkedin_link": "https:\/\/linkedin.com\/position",
+    "maintenance_mode": false,
+    "map_api_key": "GZun6glaQh7PwnoBZoOm",
+    "default_map_style": "https:\/\/api.maptiler.com\/maps\/streets-v2\/style.json",
+    "is_facebook_login_enabled": true,
+    "is_google_login_enabled": true
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+
+<div class="php-example">
+    <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://localhost:8000/api/settings/1',
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {TOKEN}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+            'X-Authorization' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
+        ],
+        'json' =&gt; [
+            'app_name' =&gt; 'Position',
+            'app_api_url' =&gt; 'https://api.position.cm',
+            'app_api_key' =&gt; 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E',
+            'app_version' =&gt; '1.0.0',
+            'app_description' =&gt; 'Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.',
+            'app_logo' =&gt; 'id',
+            'android_app_version' =&gt; '1.0.0',
+            'ios_app_version' =&gt; '1.0.0',
+            'ios_app_link' =&gt; 'https://apps.apple.com/app/id1234567890',
+            'android_app_link' =&gt; 'https://play.google.com/store/apps/details?id=com.example.app',
+            'privacy_policy_link' =&gt; 'https://example.com/privacy-policy',
+            'terms_of_service_link' =&gt; 'https://example.com/terms-of-service',
+            'contact_email' =&gt; 'infos@position.cm',
+            'contact_phone' =&gt; '+237 6 00 00 00 00',
+            'contact_address' =&gt; 'Douala, Cameroun',
+            'facebook_link' =&gt; 'https://facebook.com/position',
+            'twitter_link' =&gt; 'https://twitter.com/position',
+            'linkedin_link' =&gt; 'https://linkedin.com/position',
+            'maintenance_mode' =&gt; false,
+            'map_api_key' =&gt; 'GZun6glaQh7PwnoBZoOm',
+            'default_map_style' =&gt; 'https://api.maptiler.com/maps/streets-v2/style.json',
+            'is_facebook_login_enabled' =&gt; true,
+            'is_google_login_enabled' =&gt; true,
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre></div>
+
+
+<div class="python-example">
+    <pre><code class="language-python">import requests
+import json
+
+url = 'http://localhost:8000/api/settings/1'
+payload = {
+    "app_name": "Position",
+    "app_api_url": "https:\/\/api.position.cm",
+    "app_api_key": "GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E",
+    "app_version": "1.0.0",
+    "app_description": "Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.",
+    "app_logo": "id",
+    "android_app_version": "1.0.0",
+    "ios_app_version": "1.0.0",
+    "ios_app_link": "https:\/\/apps.apple.com\/app\/id1234567890",
+    "android_app_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.example.app",
+    "privacy_policy_link": "https:\/\/example.com\/privacy-policy",
+    "terms_of_service_link": "https:\/\/example.com\/terms-of-service",
+    "contact_email": "infos@position.cm",
+    "contact_phone": "+237 6 00 00 00 00",
+    "contact_address": "Douala, Cameroun",
+    "facebook_link": "https:\/\/facebook.com\/position",
+    "twitter_link": "https:\/\/twitter.com\/position",
+    "linkedin_link": "https:\/\/linkedin.com\/position",
+    "maintenance_mode": false,
+    "map_api_key": "GZun6glaQh7PwnoBZoOm",
+    "default_map_style": "https:\/\/api.maptiler.com\/maps\/streets-v2\/style.json",
+    "is_facebook_login_enabled": true,
+    "is_google_login_enabled": true
+}
+headers = {
+  'Authorization': 'Bearer {TOKEN}',
+  'Content-Type': 'application/json',
+  'Accept': 'application/json',
+  'X-Authorization': 'GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E'
+}
+
+response = requests.request('PUT', url, headers=headers, json=payload)
+response.json()</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-settings--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 6
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;setting&quot;: {
+            &quot;id&quot;: 1,
+            &quot;app_name&quot;: &quot;Position&quot;,
+            &quot;app_api_url&quot;: &quot;https://api.position.cm&quot;,
+            &quot;app_api_key&quot;: &quot;GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E&quot;,
+            &quot;app_version&quot;: &quot;1.0.0&quot;,
+            &quot;app_description&quot;: &quot;Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.&quot;,
+            &quot;app_logo&quot;: &quot;id&quot;,
+            &quot;android_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_version&quot;: &quot;1.0.0&quot;,
+            &quot;ios_app_link&quot;: &quot;https://apps.apple.com/app/id1234567890&quot;,
+            &quot;android_app_link&quot;: &quot;https://play.google.com/store/apps/details?id=com.example.app&quot;,
+            &quot;privacy_policy_link&quot;: &quot;https://example.com/privacy-policy&quot;,
+            &quot;terms_of_service_link&quot;: &quot;https://example.com/terms-of-service&quot;,
+            &quot;contact_email&quot;: &quot;infos@position.cm&quot;,
+            &quot;contact_phone&quot;: &quot;+237 6 00 00 00 00&quot;,
+            &quot;contact_address&quot;: &quot;Douala, Cameroun&quot;,
+            &quot;facebook_link&quot;: &quot;https://facebook.com/position&quot;,
+            &quot;twitter_link&quot;: &quot;https://twitter.com/position&quot;,
+            &quot;linkedin_link&quot;: &quot;https://linkedin.com/position&quot;,
+            &quot;maintenance_mode&quot;: false,
+            &quot;map_api_key&quot;: &quot;GZun6glaQh7PwnoBZoOm&quot;,
+            &quot;default_map_style&quot;: &quot;https://api.maptiler.com/maps/streets-v2/style.json&quot;,
+            &quot;is_facebook_login_enabled&quot;: true,
+            &quot;is_google_login_enabled&quot;: true
+        }
+    },
+    &quot;message&quot;: &quot;Param&egrave;tre mis &agrave; jour.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-settings--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-settings--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-settings--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-settings--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-settings--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-settings--id-" data-method="PUT"
+      data-path="api/settings/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-settings--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-settings--id-"
+                    onclick="tryItOut('PUTapi-settings--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-settings--id-"
+                    onclick="cancelTryOut('PUTapi-settings--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-settings--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/settings/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-settings--id-"
+               value="Bearer {TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-settings--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-settings--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>X-Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="X-Authorization"                data-endpoint="PUTapi-settings--id-"
+               value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
+               data-component="header">
+    <br>
+<p>Example: <code>GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-settings--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>the id of the setting. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_name"                data-endpoint="PUTapi-settings--id-"
+               value="Position"
+               data-component="body">
+    <br>
+<p>the name of the application. Example: <code>Position</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_api_url</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_api_url"                data-endpoint="PUTapi-settings--id-"
+               value="https://api.position.cm"
+               data-component="body">
+    <br>
+<p>the api url of the application. Example: <code>https://api.position.cm</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_api_key</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_api_key"                data-endpoint="PUTapi-settings--id-"
+               value="GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E"
+               data-component="body">
+    <br>
+<p>the api key of the application. Example: <code>GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_version</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_version"                data-endpoint="PUTapi-settings--id-"
+               value="1.0.0"
+               data-component="body">
+    <br>
+<p>the version of the application. Example: <code>1.0.0</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_description"                data-endpoint="PUTapi-settings--id-"
+               value="Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous."
+               data-component="body">
+    <br>
+<p>the description of the application. Example: <code>Position est une application web qui vous permet de trouver les meilleurs endroits autour de vous.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>app_logo</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="app_logo"                data-endpoint="PUTapi-settings--id-"
+               value="id"
+               data-component="body">
+    <br>
+<p>the logo of the application Example: <code>id</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>android_app_version</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="android_app_version"                data-endpoint="PUTapi-settings--id-"
+               value="1.0.0"
+               data-component="body">
+    <br>
+<p>the android version of the application. Example: <code>1.0.0</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ios_app_version</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="ios_app_version"                data-endpoint="PUTapi-settings--id-"
+               value="1.0.0"
+               data-component="body">
+    <br>
+<p>the ios version of the application. Example: <code>1.0.0</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ios_app_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="ios_app_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://apps.apple.com/app/id1234567890"
+               data-component="body">
+    <br>
+<p>the ios link of the application. Example: <code>https://apps.apple.com/app/id1234567890</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>android_app_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="android_app_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://play.google.com/store/apps/details?id=com.example.app"
+               data-component="body">
+    <br>
+<p>the android link of the application. Example: <code>https://play.google.com/store/apps/details?id=com.example.app</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>privacy_policy_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="privacy_policy_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://example.com/privacy-policy"
+               data-component="body">
+    <br>
+<p>the privacy policy link of the application. Example: <code>https://example.com/privacy-policy</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>terms_of_service_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="terms_of_service_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://example.com/terms-of-service"
+               data-component="body">
+    <br>
+<p>the terms of service link of the application. Example: <code>https://example.com/terms-of-service</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>contact_email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="contact_email"                data-endpoint="PUTapi-settings--id-"
+               value="infos@position.cm"
+               data-component="body">
+    <br>
+<p>the contact email of the application. Example: <code>infos@position.cm</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>contact_phone</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="contact_phone"                data-endpoint="PUTapi-settings--id-"
+               value="+237 6 00 00 00 00"
+               data-component="body">
+    <br>
+<p>the contact phone of the application. Example: <code>+237 6 00 00 00 00</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>contact_address</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="contact_address"                data-endpoint="PUTapi-settings--id-"
+               value="Douala, Cameroun"
+               data-component="body">
+    <br>
+<p>the contact address of the application. Example: <code>Douala, Cameroun</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>facebook_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="facebook_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://facebook.com/position"
+               data-component="body">
+    <br>
+<p>the facebook link of the application. Example: <code>https://facebook.com/position</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>twitter_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="twitter_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://twitter.com/position"
+               data-component="body">
+    <br>
+<p>the twitter link of the application. Example: <code>https://twitter.com/position</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>linkedin_link</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="linkedin_link"                data-endpoint="PUTapi-settings--id-"
+               value="https://linkedin.com/position"
+               data-component="body">
+    <br>
+<p>the linkedin link of the application. Example: <code>https://linkedin.com/position</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>maintenance_mode</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="maintenance_mode"
+                   value="true"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="maintenance_mode"
+                   value="false"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>the maintenance mode of the application. Example: <code>false</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>map_api_key</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="map_api_key"                data-endpoint="PUTapi-settings--id-"
+               value="GZun6glaQh7PwnoBZoOm"
+               data-component="body">
+    <br>
+<p>the map api key of the application. Example: <code>GZun6glaQh7PwnoBZoOm</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>default_map_style</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="default_map_style"                data-endpoint="PUTapi-settings--id-"
+               value="https://api.maptiler.com/maps/streets-v2/style.json"
+               data-component="body">
+    <br>
+<p>the default map style of the application. Example: <code>https://api.maptiler.com/maps/streets-v2/style.json</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>is_facebook_login_enabled</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="is_facebook_login_enabled"
+                   value="true"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="is_facebook_login_enabled"
+                   value="false"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>the facebook login status of the application. Example: <code>true</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>is_google_login_enabled</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="is_google_login_enabled"
+                   value="true"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="PUTapi-settings--id-" style="display: none">
+            <input type="radio" name="is_google_login_enabled"
+                   value="false"
+                   data-endpoint="PUTapi-settings--id-"
+                   data-component="body"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>the google login status of the application. Example: <code>true</code></p>
+        </div>
+        </form>
+
                 <h1 id="subcategory-management">SubCategory management</h1>
 
     <p>APIs for managing SubCategory</p>
@@ -23327,7 +23852,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 53
+x-ratelimit-remaining: 51
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31182,7 +31707,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 52
+x-ratelimit-remaining: 50
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31395,7 +31920,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
+x-ratelimit-remaining: 49
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31540,9 +32065,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
     --form "categorie_id=5" \
-    --form "color=recusandae" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp" </code></pre></div>
+    --form "color=cum" \
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php78AC.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php78BD.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -31560,7 +32085,7 @@ const headers = {
 const body = new FormData();
 body.append('nom', 'Achat');
 body.append('categorie_id', '5');
-body.append('color', 'recusandae');
+body.append('color', 'cum');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
 body.append('logourlmap', document.querySelector('input[name="logourlmap"]').files[0]);
 
@@ -31593,15 +32118,15 @@ $response = $client-&gt;post(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'recusandae'
+                'contents' =&gt; 'cum'
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php78AC.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php78BD.tmp', 'r')
             ],
         ],
     ]
@@ -31616,13 +32141,13 @@ import json
 
 url = 'http://localhost:8000/api/souscategories'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php78AC.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php78BD.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
     "categorie_id": 5,
-    "color": "recusandae"
+    "color": "cum"
 }
 headers = {
   'Authorization': 'Bearer {TOKEN}',
@@ -31647,7 +32172,7 @@ response.json()</code></pre></div>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
 x-ratelimit-limit: 60
-x-ratelimit-remaining: 51
+x-ratelimit-remaining: 0
 vary: Origin
  </code></pre></details>         <pre>
 
@@ -31657,9 +32182,9 @@ vary: Origin
         &quot;sous_categorie&quot;: {
             &quot;id&quot;: 481,
             &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;color&quot;: &quot;recusandae&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715208621_test.jpg&quot;,
+            &quot;color&quot;: &quot;cum&quot;,
+            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715354650_test.jpg&quot;,
+            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Automobile, Moto, Engins/Achat/1715354650_test.jpg&quot;,
             &quot;categorie&quot;: {
                 &quot;id&quot;: 5,
                 &quot;nom&quot;: &quot;Automobile, Moto, Engins&quot;,
@@ -31798,7 +32323,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F63.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php78AC.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -31809,7 +32334,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2F64.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php78BD.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>color</code></b>&nbsp;&nbsp;
@@ -31817,10 +32342,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="POSTapi-souscategories"
-               value="recusandae"
+               value="cum"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>recusandae</code></p>
+<p>the color of the subcategory Example: <code>cum</code></p>
         </div>
         </form>
 
@@ -31844,11 +32369,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --header "X-Authorization: GngCfqQT9ydj8BtQIPqWWDJsIittDKOWucVRDSdHLBBXbOxdbTJizDUc0hrjYw6E" \
     --form "nom=Achat" \
-    --form "color=praesentium" \
+    --form "color=mollitia" \
     --form "idcategorie=5" \
     --form "_method=PUT" \
-    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp" \
-    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp" </code></pre></div>
+    --form "logourl=@C:\Users\HWTP4412\AppData\Local\Temp\php79B8.tmp" \
+    --form "logourlmap=@C:\Users\HWTP4412\AppData\Local\Temp\php79B9.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -31865,7 +32390,7 @@ const headers = {
 
 const body = new FormData();
 body.append('nom', 'Achat');
-body.append('color', 'praesentium');
+body.append('color', 'mollitia');
 body.append('idcategorie', '5');
 body.append('_method', 'PUT');
 body.append('logourl', document.querySelector('input[name="logourl"]').files[0]);
@@ -31896,7 +32421,7 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'color',
-                'contents' =&gt; 'praesentium'
+                'contents' =&gt; 'mollitia'
             ],
             [
                 'name' =&gt; 'idcategorie',
@@ -31908,11 +32433,11 @@ $response = $client-&gt;put(
             ],
             [
                 'name' =&gt; 'logourl',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php79B8.tmp', 'r')
             ],
             [
                 'name' =&gt; 'logourlmap',
-                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\HWTP4412\AppData\Local\Temp\php79B9.tmp', 'r')
             ],
         ],
     ]
@@ -31927,12 +32452,12 @@ import json
 
 url = 'http://localhost:8000/api/souscategories/2'
 files = {
-  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp', 'rb'),
-  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp', 'rb')
+  'logourl': open('C:\Users\HWTP4412\AppData\Local\Temp\php79B8.tmp', 'rb'),
+  'logourlmap': open('C:\Users\HWTP4412\AppData\Local\Temp\php79B9.tmp', 'rb')
 }
 payload = {
     "nom": "Achat",
-    "color": "praesentium",
+    "color": "mollitia",
     "idcategorie": 5,
     "_method": "PUT"
 }
@@ -31950,40 +32475,441 @@ response.json()</code></pre></div>
 
 <span id="example-responses-PUTapi-souscategories--id-">
             <blockquote>
-            <p>Example response (201):</p>
+            <p>Example response (429):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
+            <pre><code class="language-http">x-ratelimit-limit: 60
+x-ratelimit-remaining: 0
+retry-after: 48
+x-ratelimit-reset: 1715354698
+cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 50
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: {
-        &quot;sous_categorie&quot;: {
-            &quot;id&quot;: 2,
-            &quot;nom&quot;: &quot;Achat&quot;,
-            &quot;logourl&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
-            &quot;logourlmap&quot;: &quot;/storage/uploads/categories/logos/Achats/Brocante/1715208621_test.jpg&quot;,
-            &quot;color&quot;: &quot;praesentium&quot;,
-            &quot;categorie&quot;: {
-                &quot;id&quot;: 1,
-                &quot;nom&quot;: &quot;Achats&quot;,
-                &quot;shortname&quot;: &quot;Achats&quot;,
-                &quot;logourl&quot;: &quot;/images/categories/logo/icon-list-categorie-achats.svg&quot;,
-                &quot;logourlmap&quot;: &quot;/images/categories/logo/map/pin-achats.png&quot;,
-                &quot;color&quot;: &quot;#2196F3&quot;,
-                &quot;vues&quot;: 0
-            }
+    &quot;message&quot;: &quot;Too Many Attempts.&quot;,
+    &quot;exception&quot;: &quot;Illuminate\\Http\\Exceptions\\ThrottleRequestsException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+    &quot;line&quot;: 232,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 153,
+            &quot;function&quot;: &quot;buildException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
+            &quot;line&quot;: 57,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 805,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 784,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 748,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 737,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 99,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 300,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 288,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 91,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 44,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 236,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 72,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 53,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1096,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 324,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
         }
-    },
-    &quot;message&quot;: &quot;Update Success&quot;
+    ]
 }</code>
  </pre>
     </span>
@@ -32100,7 +33026,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC3.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php79B8.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>logourlmap</code></b>&nbsp;&nbsp;
@@ -32111,7 +33037,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php2FC4.tmp</code></p>
+<p>the picture of the subcategory Example: <code>C:\Users\HWTP4412\AppData\Local\Temp\php79B9.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nom</code></b>&nbsp;&nbsp;
@@ -32130,10 +33056,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="color"                data-endpoint="PUTapi-souscategories--id-"
-               value="praesentium"
+               value="mollitia"
                data-component="body">
     <br>
-<p>the color of the subcategory Example: <code>praesentium</code></p>
+<p>the color of the subcategory Example: <code>mollitia</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>idcategorie</code></b>&nbsp;&nbsp;
@@ -32234,23 +33160,441 @@ response.json()</code></pre></div>
 
 <span id="example-responses-DELETEapi-souscategories--id-">
             <blockquote>
-            <p>Example response (201):</p>
+            <p>Example response (429):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
+            <pre><code class="language-http">x-ratelimit-limit: 60
+x-ratelimit-remaining: 0
+retry-after: 48
+x-ratelimit-reset: 1715354698
+cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 49
 vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;success&quot;: true,
-    &quot;data&quot;: &quot;&quot;,
-    &quot;message&quot;: &quot;Delete Success&quot;
+    &quot;message&quot;: &quot;Too Many Attempts.&quot;,
+    &quot;exception&quot;: &quot;Illuminate\\Http\\Exceptions\\ThrottleRequestsException&quot;,
+    &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+    &quot;line&quot;: 232,
+    &quot;trace&quot;: [
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 153,
+            &quot;function&quot;: &quot;buildException&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;handleRequest&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php&quot;,
+            &quot;line&quot;: 87,
+            &quot;function&quot;: &quot;handleRequestUsingNamedLimiter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Middleware\\ThrottleRequests&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php&quot;,
+            &quot;line&quot;: 57,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Auth\\Middleware\\Authenticate&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 805,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 784,
+            &quot;function&quot;: &quot;runRouteWithinStack&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 748,
+            &quot;function&quot;: &quot;runRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php&quot;,
+            &quot;line&quot;: 737,
+            &quot;function&quot;: &quot;dispatchToRoute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 200,
+            &quot;function&quot;: &quot;dispatch&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Routing\\Router&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;Illuminate\\Foundation\\Http\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\livewire\\livewire\\src\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware.php&quot;,
+            &quot;line&quot;: 19,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php&quot;,
+            &quot;line&quot;: 31,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php&quot;,
+            &quot;line&quot;: 21,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php&quot;,
+            &quot;line&quot;: 40,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\TrimStrings&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php&quot;,
+            &quot;line&quot;: 27,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php&quot;,
+            &quot;line&quot;: 99,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php&quot;,
+            &quot;line&quot;: 62,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\HandleCors&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php&quot;,
+            &quot;line&quot;: 39,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Http\\Middleware\\TrustProxies&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\bilfeldt\\laravel-route-statistics\\src\\Http\\Middleware\\RouteStatisticsMiddleware.php&quot;,
+            &quot;line&quot;: 22,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 183,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Bilfeldt\\LaravelRouteStatistics\\Http\\Middleware\\RouteStatisticsMiddleware&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php&quot;,
+            &quot;line&quot;: 119,
+            &quot;function&quot;: &quot;Illuminate\\Pipeline\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;then&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Pipeline\\Pipeline&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php&quot;,
+            &quot;line&quot;: 144,
+            &quot;function&quot;: &quot;sendRequestThroughRouter&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 300,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Http\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 288,
+            &quot;function&quot;: &quot;callLaravelOrLumenRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 91,
+            &quot;function&quot;: &quot;makeApiCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 44,
+            &quot;function&quot;: &quot;makeResponseCall&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;makeResponseCallIfConditionsPass&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 236,
+            &quot;function&quot;: &quot;__invoke&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 163,
+            &quot;function&quot;: &quot;iterateThroughStrategies&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php&quot;,
+            &quot;line&quot;: 95,
+            &quot;function&quot;: &quot;fetchResponses&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 125,
+            &quot;function&quot;: &quot;processRoute&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Extracting\\Extractor&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 72,
+            &quot;function&quot;: &quot;extractEndpointsInfoFromLaravelApp&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php&quot;,
+            &quot;line&quot;: 50,
+            &quot;function&quot;: &quot;extractEndpointsInfoAndWriteToDisk&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php&quot;,
+            &quot;line&quot;: 53,
+            &quot;function&quot;: &quot;get&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 36,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Knuckles\\Scribe\\Commands\\GenerateDocumentation&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php&quot;,
+            &quot;line&quot;: 41,
+            &quot;function&quot;: &quot;Illuminate\\Container\\{closure}&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 93,
+            &quot;function&quot;: &quot;unwrapIfClosure&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Util&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;callBoundMethod&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php&quot;,
+            &quot;line&quot;: 662,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\BoundMethod&quot;,
+            &quot;type&quot;: &quot;::&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 211,
+            &quot;function&quot;: &quot;call&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Container\\Container&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Command\\Command.php&quot;,
+            &quot;line&quot;: 326,
+            &quot;function&quot;: &quot;execute&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php&quot;,
+            &quot;line&quot;: 180,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Command\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 1096,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Console\\Command&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 324,
+            &quot;function&quot;: &quot;doRunCommand&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\symfony\\console\\Application.php&quot;,
+            &quot;line&quot;: 175,
+            &quot;function&quot;: &quot;doRun&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php&quot;,
+            &quot;line&quot;: 201,
+            &quot;function&quot;: &quot;run&quot;,
+            &quot;class&quot;: &quot;Symfony\\Component\\Console\\Application&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        },
+        {
+            &quot;file&quot;: &quot;C:\\Users\\HWTP4412\\Documents\\Projets\\Laravel\\services\\artisan&quot;,
+            &quot;line&quot;: 35,
+            &quot;function&quot;: &quot;handle&quot;,
+            &quot;class&quot;: &quot;Illuminate\\Foundation\\Console\\Kernel&quot;,
+            &quot;type&quot;: &quot;-&gt;&quot;
+        }
+    ]
 }</code>
  </pre>
     </span>
