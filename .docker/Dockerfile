@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-source delete
 
 RUN apt-get update &&\
-    apt-get install -y binutils libproj-dev gdal-bin
+    apt-get install -y binutils libproj-dev gdal-bin postgresql-client
 
 RUN apt-get install -y apache2
 
