@@ -53,7 +53,7 @@ class EtablissementController extends BaseController
         $etablissements = DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
             ->select('etablissements.*')
-            ->selectRaw($sqlDistance, [$lat, $lon, $lat])
+            ->selectRaw("$sqlDistance AS distance", [$lat, $lon, $lat])
             ->orderBy('distance')
             ->paginate(50);
 
@@ -146,7 +146,7 @@ class EtablissementController extends BaseController
         $etablissements = DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
             ->select('etablissements.*')
-            ->selectRaw($sqlDistance, [$lat, $lon, $lat])
+            ->selectRaw("$sqlDistance AS distance", [$lat, $lon, $lat])
             ->orderBy('distance')
             ->paginate(30);
 
