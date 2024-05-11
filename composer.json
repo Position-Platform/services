@@ -35,7 +35,7 @@
         "njxqlus/filament-progressbar": "^1.0",
         "psr/simple-cache": "3.0.0",
         "pxlrbt/filament-excel": "^2.1",
-        "saade/filament-laravel-log": "3.0",
+        "saade/filament-laravel-log": "3.2.1",
         "shuvroroy/filament-spatie-laravel-backup": "^2.0",
         "shuvroroy/filament-spatie-laravel-health": "^2.0",
         "spatie/laravel-backup": "^8.3",
