@@ -56,7 +56,7 @@ class EtablissementController extends BaseController
             ->select(
                 'etablissements.*'
             )
-            ->selectRaw("{$sqlDistance} AS distance")
+            ->selectRaw("({$sqlDistance}) AS distance")
             ->orderBy('distance')
             ->paginate(50);
 
@@ -152,7 +152,7 @@ class EtablissementController extends BaseController
             ->select(
                 'etablissements.*'
             )
-            ->selectRaw("{$sqlDistance} AS distance")
+            ->selectRaw("({$sqlDistance}) AS distance")
             ->orderBy('distance')
             ->paginate(30);
 
@@ -606,7 +606,7 @@ class EtablissementController extends BaseController
 
         // Requête Eloquent avec le constructeur de requête
         $query = Etablissement::query();
-        $query->select('etablissements.*', $sqlDistance);
+        $query->select('etablissements.*', ($sqlDistance));
         $query->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id');
         $query->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id');
         $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
