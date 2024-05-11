@@ -25,7 +25,7 @@
         "http-interop/http-factory-guzzle": "^1.2",
         "kreait/laravel-firebase": "^5.2",
         "laravel/framework": "^10.38.2",
-        "laravel/passport": "^11.0",
+        "laravel/passport": "^12.2",
         "laravel/sanctum": "^3.2",
         "laravel/scout": "^10.6.1",
         "laravel/socialite": "^5.5",
