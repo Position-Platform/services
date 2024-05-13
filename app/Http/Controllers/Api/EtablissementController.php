@@ -35,8 +35,8 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
-     * @queryParam lat string latitude. Example: "4.056"
-     * @queryParam lon string longitude. Example: "8.056"
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      */
     public function index(Request $request)
     {
@@ -44,16 +44,19 @@ class EtablissementController extends BaseController
         $lat = $request->lat;
         $lon = $request->lon;
 
-        $sqlDistance = DB::raw("6371 * acos(cos(radians(?)) 
-    * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-    * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(?)) 
-    + sin(radians(?)) 
-    * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
-        $etablissements = DB::table('etablissements')
+
+        $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select('etablissements.*')
-            ->selectRaw("$sqlDistance AS distance", [$lat, $lon, $lat])
+            ->select(
+                'etablissements.*'
+            )
+            ->selectRaw($sqlDistance)
             ->orderBy('distance')
             ->paginate(50);
 
@@ -129,24 +132,27 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
-     * @queryParam lat string latitude. Example: "4.056"
-     * @queryParam lon string longitude. Example: "8.056"
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      */
     public function getEtablissementByDistance(Request $request)
     {
         $lat = $request->lat;
         $lon = $request->lon;
 
-        $sqlDistance = DB::raw("6371 * acos(cos(radians(?)) 
-    * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
-    * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(?)) 
-    + sin(radians(?)) 
-    * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+        $sqlDistance =  DB::raw("6371 * acos(cos(radians(" . $lat . ")) 
+                * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
+                * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
+                + sin(radians(" . $lat . ")) 
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
-        $etablissements = DB::table('etablissements')
+
+        $etablissements =  DB::table('etablissements')
             ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
-            ->select('etablissements.*')
-            ->selectRaw("$sqlDistance AS distance", [$lat, $lon, $lat])
+            ->select(
+                'etablissements.*'
+            )
+            ->selectRaw($sqlDistance)
             ->orderBy('distance')
             ->paginate(30);
 
@@ -208,7 +214,7 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam nom string required  the name of the establishment. Example: Sogefi
+     * @bodyParam nom string required the name of the establishment. Example: Sogefi
      * @bodyParam batiment_id int required the id of the Building. Example: 3
      * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
      * @bodyParam code_postal string postal code. Example: 59684
@@ -579,8 +585,8 @@ class EtablissementController extends BaseController
      * @queryParam user_id string id of user conncted . Example: 1
      * @queryParam id_categorie string required id of categorie . Example: 1
      * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
-     * @queryParam lat string latitude. Example: 4.056
-     * @queryParam lon string longitude. Example: 8.056
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      * @queryParam ville string ville. Example: Bameka
      */
     public function filterSearch(Request $request)
@@ -592,11 +598,11 @@ class EtablissementController extends BaseController
         $ville = $request->input('ville');
 
         // Calcul de la distance
-        $sqlDistance = DB::raw("6371 * acos(cos(radians(?))
-    * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
-    * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(?))
-    + sin(radians(?))
-    * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
+        $sqlDistance = DB::raw("6371 * acos(cos(radians($lat))
+        * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
+        * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
+        + sin(radians($lat))
+        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
         // Requête Eloquent avec le constructeur de requête
         $query = Etablissement::query();
@@ -606,13 +612,6 @@ class EtablissementController extends BaseController
         $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
         $query->join('categories', 'sous_categories.categorie_id', '=', 'categories.id');
         $query->where('categories.id', '=', $idcategorie);
-
-        // Liage des valeurs de latitude et longitude
-        $query->setBindings([$lat, $lon, $lat]);
-
-        // Exécution de la requête
-        $etablissements = $query->get();
-
 
         if ($commodites != null) {
             $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
