@@ -18,3 +18,4 @@ position-79196-firebase-adminsdk-fsrxt-4f4fdf9f0b.json
 /public/osm/datasources/*.osm.pbf
 /resources/views/scribe
 /public/vendor/scribe
+composer.lock
