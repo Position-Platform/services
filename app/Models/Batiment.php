@@ -66,7 +66,7 @@ class Batiment extends Model
         'user_id',
         'created_at',
         'updated_at',
-        'deleted_at',
+        'deleted_at', 'pivot'
     ];
 
     public function etablissements()

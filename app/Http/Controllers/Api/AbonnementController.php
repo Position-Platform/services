@@ -70,7 +70,7 @@ class AbonnementController extends BaseController
      * Show Subscription by id.
      *
      * @header Content-Type application/json
-     * @urlParam id int required the id of the subscription. Example: 2
+     * @urlParam id int required the id of the subscription. Example: 1
      */
     public function show($id)
     {
@@ -86,7 +86,7 @@ class AbonnementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the subscription. Example: 2
+     * @urlParam id int required the id of the subscription. Example: 1
      * @bodyParam nom string the name of the subscription. Example: Smart
      * @bodyParam prix int the price of the subscription. Example: 5000
      * @bodyParam duree int duration of the subscription. Example: 1
@@ -119,7 +119,7 @@ class AbonnementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @urlParam id int required the id of the subscription. Example: 2
+     * @urlParam id int required the id of the subscription. Example: 1
      */
     public function destroy($id)
     {

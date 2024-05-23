@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 LABEL maintainer="Position"
 
@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     nano \
     git \
+    nodejs \
+    npm \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-configure gd \
@@ -29,16 +31,26 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install exif \
     && docker-php-ext-install zip \
+    && docker-php-ext-install intl \
+    && docker-php-ext-install bcmath \
     && docker-php-source delete
 
 RUN apt-get update &&\
-    apt-get install -y binutils libproj-dev gdal-bin
+    apt-get install -y binutils libproj-dev gdal-bin postgresql-client
 
 RUN apt-get install -y apache2
 
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN npm install
+
+RUN npx tailwindcss --input ./resources/css/filament/admin/theme.css --output ./public/css/filament/admin/theme.css --config ./resources/css/filament/admin/tailwind.config.js --minify
+
+RUN npm run prod
+
+RUN composer install
 
 RUN chown -R www-data:www-data /var/www/html \
     && a2enmod rewrite

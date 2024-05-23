@@ -91,7 +91,7 @@ class Etablissement extends Model
 
     protected $hidden = [
         'batiment_id',
-        'user_id',
+        'user_id', 'pivot'
     ];
 
     public function batiment()
