@@ -49,6 +49,10 @@ PG_PASSWORD=
 ```
 $ docker-compose up -d
 $ docker exec -it position-services bash
+$ composer install
+$ npm install
+$ npx tailwindcss --input ./resources/css/filament/admin/theme.css --output ./public/css/filament/admin/theme.css --config ./resources/css/filament/admin/tailwind.config.js --minify
+$ npm run prod
 ```
 
 ```
