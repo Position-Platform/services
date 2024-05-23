@@ -44,13 +44,5 @@ COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN npm install
-
-RUN npx tailwindcss --input ./resources/css/filament/admin/theme.css --output ./public/css/filament/admin/theme.css --config ./resources/css/filament/admin/tailwind.config.js --minify
-
-RUN npm run prod
-
-RUN composer install
-
 RUN chown -R www-data:www-data /var/www/html \
     && a2enmod rewrite
