@@ -113,6 +113,8 @@ class SettingResource extends Resource
                     ->required(),
                 Forms\Components\Toggle::make('is_google_login_enabled')
                     ->required(),
+                Forms\Components\Toggle::make('is_osm_login_enabled')
+                    ->required(),
             ]);
     }
 
@@ -165,6 +167,8 @@ class SettingResource extends Resource
                 Tables\Columns\IconColumn::make('is_facebook_login_enabled')
                     ->boolean(),
                 Tables\Columns\IconColumn::make('is_google_login_enabled')
+                    ->boolean(),
+                Tables\Columns\IconColumn::make('is_osm_login_enabled')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

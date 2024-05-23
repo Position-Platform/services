@@ -16,6 +16,7 @@ use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
 use Althinect\FilamentSpatieRolesPermissions\Concerns\HasSuperAdmin;
+use App\Models\Social\SocialOsmAccount;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 
@@ -85,6 +86,9 @@ use Filament\Panel;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|User withTrashed()
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
+ * @property-read SocialOsmAccount|null $osm
+ * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
  * @mixin \Eloquent
  */
 class User extends Authenticatable implements MustVerifyEmail, FilamentUser
@@ -181,6 +185,11 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
     public function google()
     {
         return $this->hasOne(SocialGoogleAccount::class);
+    }
+
+    public function osm()
+    {
+        return $this->hasOne(SocialOsmAccount::class);
     }
 
     public function abonnement()

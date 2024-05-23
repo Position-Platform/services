@@ -48,4 +48,10 @@ return [
         'redirect' => env('GOOGLE_REDIRECT'),
     ],
 
+    'openstreetmap' => [
+        'client_id' => env('OPENSTREETMAP_CLIENT_ID'),
+        'client_secret' => env('OPENSTREETMAP_CLIENT_SECRET'),
+        'redirect' => env('OPENSTREETMAP_REDIRECT_URI')
+    ],
+
 ];

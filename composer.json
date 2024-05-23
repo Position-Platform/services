@@ -38,6 +38,7 @@
         "saade/filament-laravel-log": "3.2.2",
         "shuvroroy/filament-spatie-laravel-backup": "^2.0",
         "shuvroroy/filament-spatie-laravel-health": "^2.0",
+        "socialiteproviders/openstreetmap": "^5.0",
         "spatie/laravel-backup": "^8.3",
         "spatie/laravel-health": "^1.23",
         "spatie/laravel-permission": "^6.7",

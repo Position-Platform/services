@@ -37,6 +37,7 @@ class SettingSeeders extends Seeder
                 "default_map_style" => "https://api.maptiler.com/maps/streets-v2/style.json",
                 "is_facebook_login_enabled" => true,
                 "is_google_login_enabled" => true,
+                "is_osm_login_enabled" => true,
                 "created_at" => now(),
                 "updated_at" => now(),
             ],
