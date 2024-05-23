@@ -87,9 +87,9 @@ use Filament\Panel;
  * @method static \Illuminate\Database\Query\Builder|User withoutTrashed()
  * @mixin \Eloquent
  */
-class User extends Authenticatable implements MustVerifyEmail,FilamentUser
+class User extends Authenticatable implements MustVerifyEmail, FilamentUser
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes, Searchable,HasSuperAdmin;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes, Searchable, HasSuperAdmin;
 
     protected $guard_name = 'api';
 
@@ -115,7 +115,7 @@ class User extends Authenticatable implements MustVerifyEmail,FilamentUser
         'password',
         'remember_token', 'token', 'token_secret', 'created_at',
         'updated_at',
-        'deleted_at',
+        'deleted_at', 'pivot'
     ];
 
     /**
@@ -208,8 +208,8 @@ class User extends Authenticatable implements MustVerifyEmail,FilamentUser
         return $this->hasMany(Batiment::class, "user_id");
     }
 
-     public function canAccessPanel(Panel $panel): bool
+    public function canAccessPanel(Panel $panel): bool
     {
-        return $this->hasRole(['admin','user']);
+        return $this->hasRole(['admin', 'user']);
     }
 }

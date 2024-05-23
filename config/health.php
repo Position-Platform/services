@@ -38,7 +38,7 @@ return [
         'enabled' => true,
 
         'notifications' => [
-            Spatie\Health\Notifications\CheckFailedNotification::class => ['mail'],
+            Spatie\Health\Notifications\CheckFailedNotification::class => ['mail', 'slack'],
         ],
 
         /*
@@ -58,7 +58,7 @@ return [
         'throttle_notifications_key' => 'health:latestNotificationSentAt:',
 
         'mail' => [
-            'to' => 'your@example.com',
+            'to' => 'bt@position.cm',
 
             'from' => [
                 'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
@@ -67,7 +67,7 @@ return [
         ],
 
         'slack' => [
-            'webhook_url' => env('HEALTH_SLACK_WEBHOOK_URL', ''),
+            'webhook_url' => env('SLACK_WEBHOOK_URL', ''),
 
             /*
              * If this is set to null the default channel of the webhook will be used.

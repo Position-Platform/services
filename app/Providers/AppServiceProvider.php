@@ -13,6 +13,11 @@ use Spatie\Health\Facades\Health;
 use Spatie\Health\Checks\Checks\OptimizedAppCheck;
 use Spatie\Health\Checks\Checks\DebugModeCheck;
 use Spatie\Health\Checks\Checks\EnvironmentCheck;
+use Spatie\Health\Checks\Checks\DatabaseCheck;
+use Spatie\Health\Checks\Checks\DatabaseSizeCheck;
+use Spatie\Health\Checks\Checks\MeiliSearchCheck;
+use Spatie\Health\Checks\Checks\UsedDiskSpaceCheck;
+use Spatie\Health\Checks\Checks\CacheCheck;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -46,10 +51,14 @@ class AppServiceProvider extends ServiceProvider
             });
         }
 
-          Health::checks([
-            OptimizedAppCheck::new(),
+        Health::checks([
             DebugModeCheck::new(),
             EnvironmentCheck::new(),
+            DatabaseCheck::new(),
+            DatabaseSizeCheck::new(),
+            MeiliSearchCheck::new()->url(env('MEILISEARCH_HOST') . '/health'),
+            UsedDiskSpaceCheck::new(),
+            CacheCheck::new()
         ]);
     }
 }
