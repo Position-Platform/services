@@ -35,8 +35,8 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
-     * @queryParam lat string latitude. Example: 4.056
-     * @queryParam lon string longitude. Example: 8.056
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      */
     public function index(Request $request)
     {
@@ -48,7 +48,7 @@ class EtablissementController extends BaseController
                 * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
                 * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
                 + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
 
         $etablissements =  DB::table('etablissements')
@@ -56,7 +56,7 @@ class EtablissementController extends BaseController
             ->select(
                 'etablissements.*'
             )
-            ->selectRaw("{$sqlDistance} AS distance")
+            ->selectRaw($sqlDistance)
             ->orderBy('distance')
             ->paginate(50);
 
@@ -113,7 +113,7 @@ class EtablissementController extends BaseController
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
-      /**
+    /**
      * count all establishment.
      *
      * @header Content-Type application/json
@@ -132,8 +132,8 @@ class EtablissementController extends BaseController
      *
      * @header Content-Type application/json
      * @queryParam user_id string id of user. Example: 1
-     * @queryParam lat string latitude. Example: 4.056
-     * @queryParam lon string longitude. Example: 8.056
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      */
     public function getEtablissementByDistance(Request $request)
     {
@@ -144,7 +144,7 @@ class EtablissementController extends BaseController
                 * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION))) 
                 * cos( radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians(" . $lon . ")) 
                 + sin(radians(" . $lat . ")) 
-                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION))))");
+                * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
 
         $etablissements =  DB::table('etablissements')
@@ -152,7 +152,7 @@ class EtablissementController extends BaseController
             ->select(
                 'etablissements.*'
             )
-            ->selectRaw("{$sqlDistance} AS distance")
+            ->selectRaw($sqlDistance)
             ->orderBy('distance')
             ->paginate(30);
 
@@ -214,7 +214,7 @@ class EtablissementController extends BaseController
      *
      * @authenticated
      * @header Content-Type application/json
-     * @bodyParam nom string required  the name of the establishment. Example: Sogefi
+     * @bodyParam nom string required the name of the establishment. Example: Sogefi
      * @bodyParam batiment_id int required the id of the Building. Example: 3
      * @bodyParam indication_adresse string precise address of the establishment. Example: Rue de Melen
      * @bodyParam code_postal string postal code. Example: 59684
@@ -585,69 +585,69 @@ class EtablissementController extends BaseController
      * @queryParam user_id string id of user conncted . Example: 1
      * @queryParam id_categorie string required id of categorie . Example: 1
      * @queryParam commodites string commodites recherchées. Example: Wifi;Parking
-     * @queryParam lat string latitude. Example: 4.056
-     * @queryParam lon string longitude. Example: 8.056
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
      * @queryParam ville string ville. Example: Bameka
      */
- public function filterSearch(Request $request)
-{
-    $idcategorie = $request->input('id_categorie');
-    $commodites = $request->input('commodites');
-    $lat = $request->input('lat');
-    $lon = $request->input('lon');
-    $ville = $request->input('ville');
+    public function filterSearch(Request $request)
+    {
+        $idcategorie = $request->input('id_categorie');
+        $commodites = $request->input('commodites');
+        $lat = $request->input('lat');
+        $lon = $request->input('lon');
+        $ville = $request->input('ville');
 
-    // Calcul de la distance
-    $sqlDistance = DB::raw("6371 * acos(cos(radians($lat))
+        // Calcul de la distance
+        $sqlDistance = DB::raw("6371 * acos(cos(radians($lat))
         * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
         * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
         + sin(radians($lat))
         * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
 
-    // Requête Eloquent avec le constructeur de requête
-    $query = Etablissement::query();
-    $query->select('etablissements.*', $sqlDistance);
-    $query->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id');
-    $query->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id');
-    $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
-    $query->join('categories', 'sous_categories.categorie_id', '=', 'categories.id');
-    $query->where('categories.id', '=', $idcategorie);
+        // Requête Eloquent avec le constructeur de requête
+        $query = Etablissement::query();
+        $query->select('etablissements.*', $sqlDistance);
+        $query->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id');
+        $query->join('sous_categories_etablissements', 'etablissements.id', '=', 'sous_categories_etablissements.etablissement_id');
+        $query->join('sous_categories', 'sous_categories_etablissements.sous_categorie_id', '=', 'sous_categories.id');
+        $query->join('categories', 'sous_categories.categorie_id', '=', 'categories.id');
+        $query->where('categories.id', '=', $idcategorie);
 
-    if ($commodites != null) {
-        $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
-    }
-
-    if ($ville != null) {
-        $query->where('batiments.ville', '=', $ville);
-    }
-
-    $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
-
-
-    // Ajout des autres paramètres à la réponse
-    foreach ($etablissements as $etablissement) {
-         $etablissement->distance = $etablissement->distance;
-        
-
-        $etablissement->batiment = $etablissement->batiment;
-        
-
-        if ($request->user_id) {
-            $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
-        } else {
-            $etablissement->isFavoris = false;
+        if ($commodites != null) {
+            $query->where('etablissements.commodites', 'like', '%' . $commodites . '%');
         }
 
-        
+        if ($ville != null) {
+            $query->where('batiments.ville', '=', $ville);
+        }
 
-        $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
-        $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
-        $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
-        $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+        $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
 
-        $etab = Etablissement::find($etablissement->id);
-        
-        $etablissement['sousCategories'] = $etab->sousCategories;
+
+        // Ajout des autres paramètres à la réponse
+        foreach ($etablissements as $etablissement) {
+            $etablissement->distance = $etablissement->distance;
+
+
+            $etablissement->batiment = $etablissement->batiment;
+
+
+            if ($request->user_id) {
+                $etablissement->isFavoris = $this->checkIfEtablissementInFavoris($etablissement->id, $request->user_id);
+            } else {
+                $etablissement->isFavoris = false;
+            }
+
+
+
+            $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
+            $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+
+            $etab = Etablissement::find($etablissement->id);
+
+            $etablissement['sousCategories'] = $etab->sousCategories;
 
 
 
@@ -663,13 +663,12 @@ class EtablissementController extends BaseController
             foreach ($etablissement->commentaires as $commentaires) {
                 $commentaires->user;
             }
+        }
 
+        $success['etablissements'] = $etablissements;
+
+        return $this->sendResponse($success, 'Liste des Etablissements');
     }
-
-    $success['etablissements'] = $etablissements;
-
-    return $this->sendResponse($success, 'Liste des Etablissements');
-}
 
     /**
      * Add Favorite Establishment.

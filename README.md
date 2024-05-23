@@ -49,7 +49,6 @@ PG_PASSWORD=
 ```
 $ docker-compose up -d
 $ docker exec -it position-services bash
-$ composer update
 ```
 
 ```
@@ -62,6 +61,9 @@ $ php artisan storage:link
 $ php artisan scribe:generate
 $ php artisan scout:import "App\Models\Categorie"
 $ php artisan scout:import "App\Models\SousCategorie"
+$ php artisan scout:import "App\Models\Batiment"
+$ php artisan scout:import "App\Models\Etablissement"
+$ php artisan icons:cache
 $ exit
 ```
 

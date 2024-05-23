@@ -50,6 +50,12 @@ class Paiement extends Model
         "abonnement_id", "user_id",  "date_paiement", "reference_id", "reference_position", "type_paiement", "statut"
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at', 'pivot'
+    ];
+
     public function abonnement()
     {
         return $this->belongsTo(Abonnement::class);
