@@ -49,7 +49,6 @@ PG_PASSWORD=
 ```
 $ docker-compose up -d
 $ docker exec -it position-services bash
-$ composer update
 ```
 
 ```
