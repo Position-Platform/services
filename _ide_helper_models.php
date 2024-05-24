@@ -433,11 +433,41 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Setting whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Setting withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Setting withoutTrashed()
- * @mixin \Eloquent
  * @property bool $is_osm_login_enabled
  * @method static \Illuminate\Database\Eloquent\Builder|Setting whereIsOsmLoginEnabled($value)
+ * @mixin \Eloquent
  */
 	class Setting extends \Eloquent {}
+}
+
+namespace App\Models\Social{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $provider_user_id
+ * @property string $provider
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read User|null $user
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount query()
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereProvider($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereProviderUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|SocialAppleAccount withoutTrashed()
+ * @mixin \Eloquent
+ */
+	class SocialAppleAccount extends \Eloquent {}
 }
 
 namespace App\Models\Social{
@@ -721,6 +751,7 @@ namespace App\Models{
  * @property-read SocialOsmAccount|null $osm
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
+ * @property-read SocialAppleAccount|null $apple
  * @mixin \Eloquent
  */
 	class User extends \Eloquent implements \Illuminate\Contracts\Auth\MustVerifyEmail, \Filament\Models\Contracts\FilamentUser {}

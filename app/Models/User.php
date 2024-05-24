@@ -16,6 +16,7 @@ use Laravel\Passport\HasApiTokens;
 use Laravel\Scout\Searchable;
 use Spatie\Permission\Traits\HasRoles;
 use Althinect\FilamentSpatieRolesPermissions\Concerns\HasSuperAdmin;
+use App\Models\Social\SocialAppleAccount;
 use App\Models\Social\SocialOsmAccount;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
@@ -89,6 +90,7 @@ use Filament\Panel;
  * @property-read SocialOsmAccount|null $osm
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutPermission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|User withoutRole($roles, $guard = null)
+ * @property-read SocialAppleAccount|null $apple
  * @mixin \Eloquent
  */
 class User extends Authenticatable implements MustVerifyEmail, FilamentUser
@@ -190,6 +192,11 @@ class User extends Authenticatable implements MustVerifyEmail, FilamentUser
     public function osm()
     {
         return $this->hasOne(SocialOsmAccount::class);
+    }
+
+    public function apple()
+    {
+        return $this->hasOne(SocialAppleAccount::class);
     }
 
     public function abonnement()

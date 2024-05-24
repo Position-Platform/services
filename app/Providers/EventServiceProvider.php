@@ -20,6 +20,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [
             \SocialiteProviders\OpenStreetMap\OpenStreetMapExtendSocialite::class . '@handle',
+            \SocialiteProviders\Apple\AppleExtendSocialite::class . '@handle',
         ],
     ];
 

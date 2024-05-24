@@ -30,6 +30,7 @@ Route::middleware('auth.apikey')->group(
         Route::post('auth/register/facebook', [App\Http\Controllers\Api\SocialApiAuthFacebookController::class, 'facebookConnect']);
         Route::post('auth/register/osm', [App\Http\Controllers\Api\SocialApiAuthOsmController::class, 'osmConnect']);
         Route::post('auth/register/google', [App\Http\Controllers\Api\SocialApiAuthGoogleController::class, 'googleConnect']);
+        Route::post('auth/register/apple', [App\Http\Controllers\Api\SocialApiAuthAppleController::class, 'appleConnect']);
 
         Route::get('settings', [App\Http\Controllers\Api\SettingController::class, 'index']);
         Route::get('settings/{id}', [App\Http\Controllers\Api\SettingController::class, 'show']);

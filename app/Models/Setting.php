@@ -71,6 +71,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|Setting withoutTrashed()
  * @property bool $is_osm_login_enabled
  * @method static \Illuminate\Database\Eloquent\Builder|Setting whereIsOsmLoginEnabled($value)
+ * @property bool $is_apple_login_enabled
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereIsAppleLoginEnabled($value)
  * @mixin \Eloquent
  */
 class Setting extends Model
@@ -78,7 +80,7 @@ class Setting extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        "app_name", "app_api_url", "app_api_key", "app_version", "app_description", "app_logo", "android_app_version", "ios_app_version", "ios_app_link", "android_app_link", "privacy_policy_link", "terms_of_service_link", "contact_email", "contact_phone", "contact_address", "facebook_link", "twitter_link", "linkedin_link", "maintenance_mode", "map_api_key", "default_map_style", "is_facebook_login_enabled", "is_google_login_enabled", "is_osm_login_enabled"
+        "app_name", "app_api_url", "app_api_key", "app_version", "app_description", "app_logo", "android_app_version", "ios_app_version", "ios_app_link", "android_app_link", "privacy_policy_link", "terms_of_service_link", "contact_email", "contact_phone", "contact_address", "facebook_link", "twitter_link", "linkedin_link", "maintenance_mode", "map_api_key", "default_map_style", "is_facebook_login_enabled", "is_google_login_enabled", "is_osm_login_enabled", "is_apple_login_enabled"
     ];
 
     protected $hidden = [

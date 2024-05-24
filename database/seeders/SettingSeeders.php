@@ -38,6 +38,7 @@ class SettingSeeders extends Seeder
                 "is_facebook_login_enabled" => true,
                 "is_google_login_enabled" => true,
                 "is_osm_login_enabled" => true,
+                "is_apple_login_enabled" => true,
                 "created_at" => now(),
                 "updated_at" => now(),
             ],
