@@ -78,6 +78,7 @@ class SettingController extends BaseController
      * @bodyParam default_map_style string the default map style of the application. Example: https://api.maptiler.com/maps/streets-v2/style.json
      * @bodyParam is_facebook_login_enabled boolean the facebook login status of the application. Example: true
      * @bodyParam is_google_login_enabled boolean the google login status of the application. Example: true
+     * @bodyParam is_osm_login_enabled boolean the osm login status of the application. Example: true
      * @urlParam id int required the id of the setting. Example: 1
      */
     public function update(Request $request, $id)
