@@ -79,6 +79,7 @@ class SettingController extends BaseController
      * @bodyParam is_facebook_login_enabled boolean the facebook login status of the application. Example: true
      * @bodyParam is_google_login_enabled boolean the google login status of the application. Example: true
      * @bodyParam is_osm_login_enabled boolean the osm login status of the application. Example: true
+     * @bodyParam is_apple_login_enabled boolean the apple login status of the application. Example: true
      * @urlParam id int required the id of the setting. Example: 1
      */
     public function update(Request $request, $id)
