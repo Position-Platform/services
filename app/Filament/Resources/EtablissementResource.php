@@ -31,9 +31,9 @@ class EtablissementResource extends Resource
                     ->maxLength(125),
                 Forms\Components\Select::make('batiment_id')
                     ->relationship(name: 'batiment', titleAttribute: 'nom')
-                ->searchable(['nom', 'id'])
-                ->preload()
-                ->label('Batiment')
+                    ->searchable(['nom', 'id'])
+                    ->preload()
+                    ->label('Batiment')
                     ->required(),
                 Forms\Components\Hidden::make('user_id')->default(auth()->user()->id),
                 Forms\Components\Textarea::make('indication_adresse')
@@ -52,9 +52,9 @@ class EtablissementResource extends Resource
                     ->default(0),
                 Forms\Components\FileUpload::make('cover')
                     ->directory('uploads/batiments/images')->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
-                            
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
+
                 Forms\Components\TextInput::make('phone')
                     ->tel()
                     ->required()
@@ -75,52 +75,52 @@ class EtablissementResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\Textarea::make('ameliorations')
                     ->columnSpanFull(),
-                
-                 Forms\Components\FileUpload::make('logo')->directory('uploads/etablissements/logos')->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
-                 Forms\Components\FileUpload::make('logo_map')->directory('uploads/etablissements/logos')->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
+
+                Forms\Components\FileUpload::make('logo')->directory('uploads/etablissements/logos')->image()
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
+                Forms\Components\FileUpload::make('logo_map')->directory('uploads/etablissements/logos')->image()
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
                 Forms\Components\Repeater::make('sous_categorie_id')
                     ->relationship('sousCategories')
                     ->required()
                     ->schema([
                         Forms\Components\Select::make('sous_categorie_id')
-                    ->options(\App\Models\SousCategorie::all()->pluck('nom', 'id')->toArray())
-                ->searchable(['nom', 'id'])
-                ->preload()
-                ->label('Liste des Sous Catégories')
-                    ->required(),
+                            ->options(\App\Models\SousCategorie::all()->pluck('nom', 'id')->toArray())
+                            ->searchable(['nom', 'id'])
+                            ->preload()
+                            ->label('Liste des Sous Catégories')
+                            ->required(),
                     ])
                     ->columns(1),
 
-                    Forms\Components\Repeater::make('images')
+                Forms\Components\Repeater::make('images')
                     ->relationship()
                     ->schema([
-                       Forms\Components\FileUpload::make('image_url')
+                        Forms\Components\FileUpload::make('image_url')
                             ->disk('public')
                             ->directory('uploads/batiments/images')
                             ->image()
                             ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
+                            ->downloadable(),
                     ])
                     ->columns(1),
 
-                    Forms\Components\Repeater::make('horaires')
+                Forms\Components\Repeater::make('horaires')
                     ->relationship()
                     ->schema([
-                         Forms\Components\Select::make('jour')
-                    ->required()
-                    ->options([
-                        'lundi' => 'Lundi',
-                        'mardi' => 'Mardi',
-                        'mercredi' => 'Mercredi',
-                        'jeudi' => 'Jeudi',
-                        'vendredi' => 'Vendredi',
-                        'samedi' => 'Samedi',
-                        'dimanche' => 'Dimanche',
-                    ]),
+                        Forms\Components\Select::make('jour')
+                            ->required()
+                            ->options([
+                                'lundi' => 'Lundi',
+                                'mardi' => 'Mardi',
+                                'mercredi' => 'Mercredi',
+                                'jeudi' => 'Jeudi',
+                                'vendredi' => 'Vendredi',
+                                'samedi' => 'Samedi',
+                                'dimanche' => 'Dimanche',
+                            ]),
                         Forms\Components\TextInput::make('plage_horaire')->required()->placeholder('Exemple: 08h00-12h00;14h00-18h00'),
                     ])
                     ->columns(2),
@@ -172,7 +172,7 @@ class EtablissementResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-             ->bulkActions([
+            ->bulkActions([
                 ExportBulkAction::make()
             ])
             ->filters([
@@ -193,14 +193,14 @@ class EtablissementResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -209,8 +209,8 @@ class EtablissementResource extends Resource
             'view' => Pages\ViewEtablissement::route('/{record}'),
             'edit' => Pages\EditEtablissement::route('/{record}/edit'),
         ];
-    }    
-    
+    }
+
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
@@ -220,7 +220,7 @@ class EtablissementResource extends Resource
     }
 
     public static function getNavigationBadge(): ?string
-{
-    return static::getModel()::count();
-}
+    {
+        return static::getModel()::count();
+    }
 }

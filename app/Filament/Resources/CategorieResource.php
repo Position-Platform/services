@@ -32,14 +32,14 @@ class CategorieResource extends Resource
                     ->required()
                     ->maxLength(125),
                 Forms\Components\FileUpload::make('logourl')->directory('uploads/categories/logos')->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
-                   
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
+
                 Forms\Components\FileUpload::make('logourlmap')->directory('uploads/categories/logos')
-                   ->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
-                            
+                    ->image()
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
+
                 Forms\Components\ColorPicker::make('color'),
             ]);
     }
@@ -89,14 +89,14 @@ class CategorieResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -105,8 +105,8 @@ class CategorieResource extends Resource
             'view' => Pages\ViewCategorie::route('/{record}'),
             'edit' => Pages\EditCategorie::route('/{record}/edit'),
         ];
-    }    
-    
+    }
+
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
@@ -116,7 +116,7 @@ class CategorieResource extends Resource
     }
 
     public static function getNavigationBadge(): ?string
-{
-    return static::getModel()::count();
-}
+    {
+        return static::getModel()::count();
+    }
 }
