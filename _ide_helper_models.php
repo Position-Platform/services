@@ -332,6 +332,61 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * 
+ *
+ * @property int $id
+ * @property string $sous_categorie_id
+ * @property string $osm_id
+ * @property string $name
+ * @property string $lon
+ * @property string $lat
+ * @property string|null $opening_hours
+ * @property string|null $phone
+ * @property string|null $website
+ * @property string|null $code_postal
+ * @property string|null $city
+ * @property string|null $quartier
+ * @property string|null $rue
+ * @property string|null $image
+ * @property string|null $description
+ * @property string|null $services
+ * @property string|null $commodites
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\SousCategorie|null $souscategorie
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData query()
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereCodePostal($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereCommodites($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereLat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereLon($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereOpeningHours($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereOsmId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereQuartier($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereRue($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereServices($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereSousCategorieId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereWebsite($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|OsmData withoutTrashed()
+ */
+	class OsmData extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Paiement
  *
  * @property int $id
@@ -435,6 +490,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Setting withoutTrashed()
  * @property bool $is_osm_login_enabled
  * @method static \Illuminate\Database\Eloquent\Builder|Setting whereIsOsmLoginEnabled($value)
+ * @property bool $is_apple_login_enabled
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereIsAppleLoginEnabled($value)
  * @mixin \Eloquent
  */
 	class Setting extends \Eloquent {}
@@ -646,6 +703,34 @@ namespace App\Models{
  * @mixin \Eloquent
  */
 	class SousCategoriesEtablissement extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $nom
+ * @property string $id_categorie
+ * @property string|null $tags_osm
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereIdCategorie($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereNom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereTagsOsm($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Tag withoutTrashed()
+ */
+	class Tag extends \Eloquent {}
 }
 
 namespace App\Models{
