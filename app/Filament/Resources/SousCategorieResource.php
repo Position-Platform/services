@@ -30,21 +30,20 @@ class SousCategorieResource extends Resource
                     ->required()
                     ->maxLength(125),
                 Forms\Components\Select::make('categorie_id')
-                ->relationship(name: 'categorie', titleAttribute: 'nom')
-                ->searchable(['nom', 'id'])
-                ->preload()
-                ->label('Catégorie')
+                    ->relationship(name: 'categorie', titleAttribute: 'nom')
+                    ->searchable(['nom', 'id'])
+                    ->preload()
+                    ->label('Catégorie')
                     ->required(),
                 Forms\Components\FileUpload::make('logourl')->directory('uploads/categories/logos')->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload(),
-                            
-                   
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
+
+
                 Forms\Components\FileUpload::make('logourlmap')->directory('uploads/categories/logos')
-                   ->image()
-                            ->loadingIndicatorPosition('left')
-                            ->enableDownload()
-                            ,
+                    ->image()
+                    ->loadingIndicatorPosition('left')
+                    ->downloadable(),
                 Forms\Components\ColorPicker::make('color'),
             ]);
     }
@@ -91,14 +90,14 @@ class SousCategorieResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -107,8 +106,8 @@ class SousCategorieResource extends Resource
             'view' => Pages\ViewSousCategorie::route('/{record}'),
             'edit' => Pages\EditSousCategorie::route('/{record}/edit'),
         ];
-    }    
-    
+    }
+
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()
@@ -118,7 +117,7 @@ class SousCategorieResource extends Resource
     }
 
     public static function getNavigationBadge(): ?string
-{
-    return static::getModel()::count();
-}
+    {
+        return static::getModel()::count();
+    }
 }

@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BatimentResource\Pages;
-use App\Filament\Resources\BatimentResource\RelationManagers;
-use App\Models\Batiment;
+use App\Filament\Resources\OsmDataResource\Pages;
+use App\Filament\Resources\OsmDataResource\RelationManagers;
+use App\Models\OsmData;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,13 +12,12 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use pxlrbt\FilamentExcel\Actions\Tables\ExportBulkAction;
 
-class BatimentResource extends Resource
+class OsmDataResource extends Resource
 {
-    protected static ?string $model = Batiment::class;
+    protected static ?string $model = OsmData::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-building-library';
+    protected static ?string $navigationIcon = 'heroicon-s-home';
 
     protected static ?string $navigationGroup = 'Gestion des Etablissements';
 
@@ -26,38 +25,43 @@ class BatimentResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Hidden::make('user_id')->default(auth()->user()->id),
-                Forms\Components\TextInput::make('nom')
-                    ->maxLength(125),
-                Forms\Components\TextInput::make('nombre_niveau')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('code')
+                Forms\Components\TextInput::make('sous_categorie_id')
                     ->required()
                     ->maxLength(125),
-                Forms\Components\TextInput::make('longitude')
+                Forms\Components\TextInput::make('osm_id')
                     ->required()
                     ->maxLength(125),
-                Forms\Components\TextInput::make('latitude')
+                Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(125),
-                Forms\Components\FileUpload::make('image')
-                    ->directory('uploads/batiments/images')->image()
-                    ->loadingIndicatorPosition('left')
-                    ->downloadable(),
-
-                Forms\Components\Textarea::make('indication')
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('rue')
-                    ->maxLength(125),
-                Forms\Components\TextInput::make('ville')
+                Forms\Components\TextInput::make('lon')
                     ->required()
                     ->maxLength(125),
-                Forms\Components\TextInput::make('commune')
+                Forms\Components\TextInput::make('lat')
                     ->required()
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('opening_hours')
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('phone')
+                    ->tel()
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('website')
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('code_postal')
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('city')
                     ->maxLength(125),
                 Forms\Components\TextInput::make('quartier')
-                    ->required()
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('rue')
+                    ->maxLength(125),
+                Forms\Components\FileUpload::make('image')
+                    ->image(),
+                Forms\Components\TextInput::make('description')
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('services')
+                    ->maxLength(125),
+                Forms\Components\TextInput::make('commodites')
                     ->maxLength(125),
             ]);
     }
@@ -66,27 +70,36 @@ class BatimentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('nom')
+                Tables\Columns\TextColumn::make('sous_categorie_id')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('nombre_niveau')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('code')
+                Tables\Columns\TextColumn::make('osm_id')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('longitude')
+                Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('latitude')
+                Tables\Columns\TextColumn::make('lon')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('lat')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('opening_hours')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('phone')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('website')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('code_postal')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('city')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('quartier')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('rue')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('ville')
+                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('description')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('commune')
+                Tables\Columns\TextColumn::make('services')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('quartier')
+                Tables\Columns\TextColumn::make('commodites')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('deleted_at')
                     ->dateTime()
@@ -101,9 +114,6 @@ class BatimentResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->bulkActions([
-                ExportBulkAction::make()
-            ])
             ->filters([
                 Tables\Filters\TrashedFilter::make(),
             ])
@@ -117,9 +127,6 @@ class BatimentResource extends Resource
                     Tables\Actions\ForceDeleteBulkAction::make(),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
-            ])
-            ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
             ]);
     }
 
@@ -133,10 +140,10 @@ class BatimentResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBatiments::route('/'),
-            'create' => Pages\CreateBatiment::route('/create'),
-            'view' => Pages\ViewBatiment::route('/{record}'),
-            'edit' => Pages\EditBatiment::route('/{record}/edit'),
+            'index' => Pages\ListOsmData::route('/'),
+            'create' => Pages\CreateOsmData::route('/create'),
+            'view' => Pages\ViewOsmData::route('/{record}'),
+            'edit' => Pages\EditOsmData::route('/{record}/edit'),
         ];
     }
 
@@ -146,15 +153,5 @@ class BatimentResource extends Resource
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
-    }
-
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getModel()::count();
-    }
-
-    public static function authorization()
-    {
-        return auth()->user()->id == 2 ? true : null;
     }
 }

@@ -381,6 +381,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|OsmData whereWebsite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|OsmData withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|OsmData withoutTrashed()
+ * @mixin \Eloquent
  */
 	class OsmData extends \Eloquent {}
 }
@@ -729,6 +730,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Tag withoutTrashed()
+ * @mixin \Eloquent
  */
 	class Tag extends \Eloquent {}
 }

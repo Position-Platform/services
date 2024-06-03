@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
+use Laravel\Scout\Searchable;
 
 /**
  * 
@@ -60,7 +62,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class OsmData extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, SoftDeletes, Searchable;
 
     protected $table = 'osm_data';
 
@@ -92,5 +94,37 @@ class OsmData extends Model
     public function souscategorie()
     {
         return $this->belongsTo(Souscategorie::class);
+    }
+
+    /**
+     * Récupère les données de la table osmData, calcule la distance, et pagine les résultats.
+     *
+     * @param float $latitude
+     * @param float $longitude
+     * @param int $perPage
+     * @param int $page
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public static function getDataWithDistance($latitude, $longitude, $perPage = 50, $page = 1, $categorieId = null)
+    {
+        $sqlDistance = DB::raw("6371 * acos(cos(radians(" . $latitude . ")) 
+            * cos(radians(CAST(lat as DOUBLE PRECISION))) 
+            * cos(radians(CAST(lon as DOUBLE PRECISION)) - radians(" . $longitude . ")) 
+            + sin(radians(" . $latitude . ")) 
+            * sin(radians(CAST(lat as DOUBLE PRECISION)))) AS distance");
+
+        $query = DB::table('osm_data')
+            ->join('sous_categories', DB::raw('CAST(osm_data.sous_categorie_id AS INTEGER)'), '=', 'sous_categories.id')
+            ->join('categories', 'sous_categories.categorie_id', '=', 'categories.id')
+            ->select('osm_data.*')
+            ->selectRaw($sqlDistance);
+
+        if (!is_null($categorieId)) {
+            $query->where('categories.id', $categorieId);
+        }
+
+        $query->orderBy('distance');
+
+        return $query->paginate($perPage, ['*'], 'page', $page);
     }
 }
