@@ -51,6 +51,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
 
+        Route::get('globalsearch', [App\Http\Controllers\Api\EtablissementController::class, 'globalsearch']);
+
         Route::get('osmdatas', [App\Http\Controllers\Api\OsmDataController::class, 'index']);
         Route::get('osmdatas/{id}', [App\Http\Controllers\Api\OsmDataController::class, 'show']);
         Route::get('search/osmdatas', [App\Http\Controllers\Api\OsmDataController::class, 'search']);

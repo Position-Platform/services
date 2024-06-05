@@ -15,6 +15,9 @@ services:
             - position-services
         depends_on:
             - position-services-pgsql
+            - position-services-meilisearch
+            - position-services-redis
+
 
     position-services-pgsql:
         restart: always
@@ -70,6 +73,27 @@ services:
                     "--no-verbose",
                     "--spider",
                     "http://position-services-meilisearch:7700/health",
+                ]
+            retries: 3
+            timeout: 5s
+    position-services-redis:
+        container_name: position-services-redis
+        image: redis
+        restart: always
+        ports:
+            - ${REDIS_PORT:-6379}:6379
+        environment:
+            - REDIS_PASSWORD=${REDIS_PASSWORD:-secret}
+            - REDIS_PORT=6379
+            - REDIS_DATABASES=16
+        networks:
+            - position-services
+        healthcheck:
+            test:
+                [
+                    "CMD",
+                    "redis-cli",
+                    "ping",
                 ]
             retries: 3
             timeout: 5s
