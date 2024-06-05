@@ -813,7 +813,6 @@ class EtablissementController extends BaseController
             $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
             $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
             $etablissement->batiment;
-            $etablissement['sousCategories'] = $etablissement->sousCategories;
 
             foreach ($etablissement->sousCategories as $sousCategories) {
                 $sousCategories->categorie;
