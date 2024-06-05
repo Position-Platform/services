@@ -9,6 +9,7 @@ use App\Models\Commentaire;
 use App\Models\Etablissement;
 use App\Models\Horaire;
 use App\Models\Image;
+use App\Models\OsmData;
 use App\Models\SousCategorie;
 use App\Models\SousCategoriesEtablissement;
 use App\Models\User;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Builder;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Redis;
 
 /**
  *
@@ -779,5 +782,90 @@ class EtablissementController extends BaseController
         } catch (\Throwable $th) {
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
+    }
+
+    /**
+     * Global Search.
+     *
+     * @header Content-Type application/json
+     * @queryParam q string required search value. Example: piscine
+     * @queryParam user_id string id of user. Example: 1
+     */
+    public function globalsearch(Request $request)
+    {
+        $q = $request->input('q');
+        $user_id = $request->user_id;
+        $cacheKey = 'search:' . $q;
+
+        // Vérifier si les résultats sont en cache
+        $cachedResults = Redis::get($cacheKey);
+        if ($cachedResults) {
+            return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
+        }
+
+        // Recherche des établissements
+        $etablissements = Etablissement::search($q)->get();
+
+        foreach ($etablissements as $etablissement) {
+            $etablissement->isFavoris = $user_id ? $this->checkIfEtablissementInFavoris($etablissement->id, $user_id) : false;
+            $etablissement->moyenne = $this->getMoyenneRatingByEtablissmeent($etablissement->id);
+            $etablissement->isopen = $this->checkIfEtablissementIsOpen($etablissement->id);
+            $etablissement->avis = $this->getCommentNumberByEtablissmeent($etablissement->id);
+            $etablissement->count = $this->countOccurenceRatingInCommentTableByEtablissement($etablissement->id);
+            $etablissement->batiment;
+            $etablissement['sousCategories'] = $etablissement->sousCategories;
+
+            foreach ($etablissement->sousCategories as $sousCategories) {
+                $sousCategories->categorie;
+            }
+
+            $etablissement->commodites;
+            $etablissement->images;
+            $etablissement->horaires;
+            $etablissement->commentaires;
+
+            foreach ($etablissement->commentaires as $commentaires) {
+                $commentaires->user;
+            }
+        }
+
+        // Recherche des données osm
+        $osmDatas = OsmData::search($q)->get();
+
+        // Ajouter des informations sur la catégorie dans chaque objet osmData
+        foreach ($osmDatas as $osmData) {
+            $sousCategorie = SousCategorie::find($osmData->sous_categorie_id);
+            $osmData->categorie = $sousCategorie ? $sousCategorie->categorie : null;
+        }
+
+        // Collecter les osm_id existants
+        $existingOsmIds = $osmDatas->pluck('osm_id')->toArray();
+
+        // Recherche des lieux dits via Nominatim
+        $nominatimResponse = Http::get('https://nominatim.position.cm/search', [
+            'q' => $q,
+            'format' => 'json',
+            'polygon' => 0,
+            'addressdetails' => 1,
+            'countrycodes' => 'cm'
+        ]);
+        $places = $nominatimResponse->json();
+
+        // Exclure les résultats de Nominatim si leur osm_id est déjà présent dans osmDatas
+        $places = array_filter($places, function ($place) use ($existingOsmIds) {
+            return !in_array((string) $place['osm_id'], $existingOsmIds);
+        });
+
+        // Combiner les résultats
+        $results = [
+            'etablissements' => $etablissements,
+            'osmDatas' => $osmDatas,
+            'places' => array_values($places) // Réindexer les résultats
+        ];
+
+        // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
+        Redis::setex($cacheKey, 3600, json_encode($results));
+
+        return $this->sendResponse($results, 'Résultats de la recherche');
     }
 }
