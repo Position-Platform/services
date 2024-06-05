@@ -82,10 +82,6 @@ services:
         restart: always
         ports:
             - ${REDIS_PORT:-6379}:6379
-        environment:
-            - REDIS_PASSWORD=${REDIS_PASSWORD:-secret}
-            - REDIS_PORT=6379
-            - REDIS_DATABASES=16
         networks:
             - position-services
         healthcheck:
