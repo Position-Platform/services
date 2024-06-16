@@ -113,13 +113,13 @@ class EtablissementResource extends Resource
                         Forms\Components\Select::make('jour')
                             ->required()
                             ->options([
-                                'lundi' => 'Lundi',
-                                'mardi' => 'Mardi',
-                                'mercredi' => 'Mercredi',
-                                'jeudi' => 'Jeudi',
-                                'vendredi' => 'Vendredi',
-                                'samedi' => 'Samedi',
-                                'dimanche' => 'Dimanche',
+                                'Lundi' => 'Lundi',
+                                'Mardi' => 'Mardi',
+                                'Mercredi' => 'Mercredi',
+                                'Jeudi' => 'Jeudi',
+                                'Vendredi' => 'Vendredi',
+                                'Samedi' => 'Samedi',
+                                'Dimanche' => 'Dimanche',
                             ]),
                         Forms\Components\TextInput::make('plage_horaire')->required()->placeholder('Exemple: 08h00-12h00;14h00-18h00'),
                     ])
