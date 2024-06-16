@@ -621,7 +621,7 @@ class EtablissementController extends BaseController
         }
 
         if ($ville != null) {
-            $query->where('batiments.ville', '=', $ville);
+            $query->where('batiments.ville', 'like', '%' . $ville . '%');
         }
 
         $etablissements = $query->orderBy('distance', 'ASC')->distinct()->paginate(50);
