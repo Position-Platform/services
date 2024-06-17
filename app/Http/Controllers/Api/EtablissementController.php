@@ -532,6 +532,26 @@ class EtablissementController extends BaseController
     public function search(Request $request)
     {
         $q = $request->input('q');
+        $cacheKey = 'search query:' . $q;
+
+        // Vérifier si les résultats sont en cache
+        $cachedResults = Redis::get($cacheKey);
+        if ($cachedResults) {
+            return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
+        }
+
+        // Recherche des lieux dits via Nominatim
+        $nominatimResponse = Http::get('https://nominatim.position.cm/search', [
+            'q' => $q,
+            'format' => 'json',
+            'polygon' => 0,
+            'addressdetails' => 1,
+            'countrycodes' => 'cm'
+        ]);
+        $places = $nominatimResponse->json();
+
+
+
         $etablissements = Etablissement::search($q)->paginate(30);
 
         foreach ($etablissements as $etablissement) {
@@ -577,8 +597,12 @@ class EtablissementController extends BaseController
 
 
         $success['etablissements'] = $etablissements;
+        $success['places'] = $places;
 
-        return $this->sendResponse($success, 'Liste des Etablissements');
+        // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
+        Redis::setex($cacheKey, 3600, json_encode($success));
+
+        return $this->sendResponse($success, 'Resultats de la recherche');
     }
 
     /**
@@ -795,7 +819,7 @@ class EtablissementController extends BaseController
     {
         $q = $request->input('q');
         $user_id = $request->user_id;
-        $cacheKey = 'search:' . $q;
+        $cacheKey = 'search global:' . $q;
 
         // Vérifier si les résultats sont en cache
         $cachedResults = Redis::get($cacheKey);
@@ -866,5 +890,38 @@ class EtablissementController extends BaseController
         Redis::setex($cacheKey, 3600, json_encode($results));
 
         return $this->sendResponse($results, 'Résultats de la recherche');
+    }
+
+    /**
+     * Global Search.
+     *
+     * @header Content-Type application/json
+     * @queryParam q string required search value. Example: piscine
+     */
+    public function nominatimSearch(Request $request)
+    {
+        $q = $request->input('q');
+        $cacheKey = 'searchNominatim:' . $q;
+
+        // Vérifier si les résultats sont en cache
+        $cachedResults = Redis::get($cacheKey);
+        if ($cachedResults) {
+            return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
+        }
+
+        // Recherche des lieux dits via Nominatim
+        $nominatimResponse = Http::get('https://nominatim.position.cm/search', [
+            'q' => $q,
+            'format' => 'json',
+            'polygon' => 0,
+            'addressdetails' => 1,
+            'countrycodes' => 'cm'
+        ]);
+        $places = $nominatimResponse->json();
+
+        // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
+        Redis::setex($cacheKey, 3600, json_encode($places));
+
+        return $this->sendResponse($places, 'Résultats de la recherche');
     }
 }

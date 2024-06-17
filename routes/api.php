@@ -50,6 +50,7 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'index']);
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
+        Route::get('search/nominatim', [App\Http\Controllers\Api\EtablissementController::class, 'nominatimSearch']);
 
         Route::get('globalsearch', [App\Http\Controllers\Api\EtablissementController::class, 'globalsearch']);
 
