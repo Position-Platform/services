@@ -865,7 +865,7 @@ class EtablissementController extends BaseController
         $existingOsmIds = $osmDatas->pluck('osm_id')->toArray();
 
         // Recherche des lieux dits via Nominatim
-        $nominatimResponse = Http::get('https://nominatim.position.cm/search', [
+        $nominatimResponse = Http::get('https://nominatim.openstreetmap.org/search', [
             'q' => $q,
             'format' => 'json',
             'polygon' => 0,
@@ -910,7 +910,7 @@ class EtablissementController extends BaseController
         }
 
         // Recherche des lieux dits via Nominatim
-        $nominatimResponse = Http::get('https://nominatim.position.cm/search', [
+        $nominatimResponse = Http::get('https://nominatim.openstreetmap.org/search', [
             'q' => $q,
             'format' => 'json',
             'polygon' => 0,
