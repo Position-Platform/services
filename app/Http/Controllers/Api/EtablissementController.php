@@ -597,7 +597,7 @@ class EtablissementController extends BaseController
 
 
         $success['etablissements'] = $etablissements;
-        $success['places'] = $places;
+        $success['places'] = $places ?? [];
 
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($success));
@@ -920,7 +920,7 @@ class EtablissementController extends BaseController
         $places = $nominatimResponse->json();
 
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
-        Redis::setex($cacheKey, 3600, json_encode($places));
+        Redis::setex($cacheKey, 3600, json_encode($places ?? []));
 
         return $this->sendResponse($places, 'Résultats de la recherche');
     }
