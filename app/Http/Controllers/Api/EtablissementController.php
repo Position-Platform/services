@@ -541,7 +541,7 @@ class EtablissementController extends BaseController
         }
 
         // Recherche des lieux dits via Nominatim
-        $nominatimResponse = Http::get('https://nominatim.openstreetmap.org/search', [
+        $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/search', [
             'q' => $q,
             'format' => 'json',
             'polygon' => 0,
@@ -597,7 +597,7 @@ class EtablissementController extends BaseController
 
 
         $success['etablissements'] = $etablissements;
-        $success['places'] = $places;
+        $success['places'] = $places ?? [];
 
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($success));
@@ -865,7 +865,7 @@ class EtablissementController extends BaseController
         $existingOsmIds = $osmDatas->pluck('osm_id')->toArray();
 
         // Recherche des lieux dits via Nominatim
-        $nominatimResponse = Http::get('https://nominatim.openstreetmap.org/search', [
+        $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/search', [
             'q' => $q,
             'format' => 'json',
             'polygon' => 0,
@@ -910,7 +910,7 @@ class EtablissementController extends BaseController
         }
 
         // Recherche des lieux dits via Nominatim
-        $nominatimResponse = Http::get('https://nominatim.openstreetmap.org/search', [
+        $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/search', [
             'q' => $q,
             'format' => 'json',
             'polygon' => 0,
@@ -920,8 +920,41 @@ class EtablissementController extends BaseController
         $places = $nominatimResponse->json();
 
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
-        Redis::setex($cacheKey, 3600, json_encode($places));
+        Redis::setex($cacheKey, 3600, json_encode($places ?? []));
 
         return $this->sendResponse($places, 'Résultats de la recherche');
+    }
+
+    /**
+     * Nominatim Reverse Search.
+     * @header Content-Type application/json
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
+     */
+    public function nominatimReverseSearch(Request $request)
+    {
+        $lat = $request->input('lat');
+        $lon = $request->input('lon');
+        $cacheKey = 'reverseSearch:' . $lat . ',' . $lon;
+
+        // Vérifier si les résultats sont en cache
+        $cachedResults = Redis::get($cacheKey);
+        if ($cachedResults) {
+            return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
+        }
+
+        // Recherche des lieux dits via Nominatim
+        $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/reverse', [
+            'lat' => $lat,
+            'lon' => $lon,
+            'format' => 'json',
+            'addressdetails' => 1
+        ]);
+        $place = $nominatimResponse->json();
+
+        // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
+        Redis::setex($cacheKey, 3600, json_encode($place));
+
+        return $this->sendResponse($place, 'Résultats de la recherche');
     }
 }
