@@ -957,4 +957,97 @@ class EtablissementController extends BaseController
 
         return $this->sendResponse($place, 'Résultats de la recherche');
     }
+
+    /**
+     * Get Nearby Etablissement.
+     *
+     * @header Content-Type application/json
+     * @queryParam lat string required latitude. Example: 4.056
+     * @queryParam lon string required longitude. Example: 8.056
+     */
+    public function getNearbyEtablissement(Request $request)
+    {
+        $lat = $request->input('lat');
+        $lon = $request->input('lon');
+        $radius = 0.1; // Rayon de recherche en kilomètres (100 mètres = 0.1 kilomètres)
+
+        // Calcul de la distance en kilomètres entre le point donné et les bâtiments dans la base de données
+        $sqlDistance = DB::raw("6371 * acos(cos(radians($lat))
+        * cos(radians(CAST(batiments.latitude as DOUBLE PRECISION)))
+        * cos(radians(CAST(batiments.longitude as DOUBLE PRECISION)) - radians($lon))
+        + sin(radians($lat))
+        * sin(radians(CAST(batiments.latitude as DOUBLE PRECISION)))) AS distance");
+
+        // Requête pour obtenir les établissements dans un rayon de 100 mètres
+        $etablissements = Etablissement::select('etablissements.*', 'batiments.ville', 'batiments.quartier', $sqlDistance)
+            ->join('batiments', 'etablissements.batiment_id', '=', 'batiments.id')
+            ->orderBy('distance', 'ASC')
+            ->get();
+
+        // Si un ou plusieurs établissements sont trouvés, retourner le plus proche
+        if ($etablissements->isNotEmpty() && $etablissements->first()->distance < $radius) {
+            $etablissement = $etablissements->first();
+            $result = [
+                'etablissement_id' => $etablissement->id,
+                'place_id' => null,
+                'type' => 'etablissement',
+                'lon' => $lon,
+                'lat' => $lat,
+                'name' => $etablissement->nom,
+                'distance' => $etablissement->distance,
+                'ville' => $etablissement->ville,
+                'quartier' => $etablissement->quartier,
+            ];
+
+            return $this->sendResponse($result, 'Résultats de la recherche');
+        }
+
+        // Si aucun établissement n'est trouvé, faire une requête à l'API Nominatim pour obtenir des lieux dits
+        $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/reverse', [
+            'lat' => $lat,
+            'lon' => $lon,
+            'format' => 'json',
+            'addressdetails' => 1
+        ]);
+        $place = $nominatimResponse->json();
+
+        // Si Nominatim retourne un résultat, calculer la distance et le retourner
+        if (!empty($place)) {
+            $placeLat = $place['lat'];
+            $placeLon = $place['lon'];
+            $distance = $this->calculateDistance($lat, $lon, $placeLat, $placeLon);
+            $result = [
+                'etablissement_id' => null,
+                'place_id' => $place['place_id'],
+                'type' => 'place',
+                'lon' => $placeLon,
+                'lat' => $placeLat,
+                'name' => $place['display_name'],
+                'distance' => $distance,
+                'ville' => $place['address']['city'] ?? null,
+                'quartier' => $place['address']['suburb'] ?? null,
+            ];
+
+            return $this->sendResponse($result, 'Résultats de la recherche');
+        }
+
+        // Si aucun résultat n'est trouvé, retourner null
+        return $this->sendError('Aucun résultat trouvé', [], 404);
+    }
+
+    private function calculateDistance($lat1, $lon1, $lat2, $lon2)
+    {
+        $earthRadius = 6371; // Rayon de la Terre en kilomètres
+
+        $dLat = deg2rad($lat2 - $lat1);
+        $dLon = deg2rad($lon2 - $lon1);
+
+        $a = sin($dLat / 2) * sin($dLat / 2) +
+            cos(deg2rad($lat1)) * cos(deg2rad($lat2)) *
+            sin($dLon / 2) * sin($dLon / 2);
+
+        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+
+        return $earthRadius * $c; // Distance en kilomètres
+    }
 }
