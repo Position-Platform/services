@@ -51,7 +51,8 @@ Route::middleware('auth.apikey')->group(
         Route::get('etablissements/{id}', [App\Http\Controllers\Api\EtablissementController::class, 'show']);
         Route::get('search/etablissements', [App\Http\Controllers\Api\EtablissementController::class, 'search']);
         Route::get('search/nominatim', [App\Http\Controllers\Api\EtablissementController::class, 'nominatimSearch']);
-        Route::get('search/nominatim/reverse', [App\Http\Controllers\Api\EtablissementController::class, 'nominatimReverseSearch']);
+        Route::get('search/nominatim/reverse', [App\Http\Controllers\Api\EtablissementController::class, 'getNearbyEtablissement']);
+
 
         Route::get('globalsearch', [App\Http\Controllers\Api\EtablissementController::class, 'globalsearch']);
 
