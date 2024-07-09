@@ -41,7 +41,7 @@
         "shuvroroy/filament-spatie-laravel-health": "^2.0",
         "socialiteproviders/apple": "^5.6",
         "socialiteproviders/openstreetmap": "^5.0",
-        "spatie/laravel-backup": "^8.3",
+        "spatie/laravel-backup": "^9.0",
         "spatie/laravel-health": "^1.23",
         "spatie/laravel-permission": "^6.7",
         "tapp/filament-maillog": "^1.0"
