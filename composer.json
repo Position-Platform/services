@@ -20,7 +20,7 @@
         "bilfeldt/laravel-route-statistics": "^2.2",
         "doctrine/dbal": "^3.7.2",
         "ejarnutowski/laravel-api-key": "^1.0",
-        "filament/filament": "3.2.81",
+        "filament/filament": "3.2.106",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.2",
         "kreait/laravel-firebase": "^5.8.0",
