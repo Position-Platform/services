@@ -28,6 +28,7 @@ use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
 use Tapp\FilamentMailLog\FilamentMailLogPlugin;
 use Awcodes\FilamentVersions\VersionsPlugin;
+use Saade\FilamentLaravelLog\FilamentLaravelLogPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -62,6 +63,12 @@ class AdminPanelProvider extends PanelProvider
                     ]),
                 FilamentMailLogPlugin::make(),
                 VersionsPlugin::make(),
+                FilamentLaravelLogPlugin::make()
+                    ->navigationGroup('Paramètres')
+                    ->navigationLabel('Logs')
+                    ->navigationIcon('heroicon-o-bug-ant')
+                    ->navigationSort(1)
+                    ->slug('logs')
             ])
             ->login()
             ->colors([
