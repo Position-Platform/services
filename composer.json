@@ -20,7 +20,7 @@
         "bilfeldt/laravel-route-statistics": "^2.2",
         "doctrine/dbal": "^3.7.2",
         "ejarnutowski/laravel-api-key": "^1.0",
-        "filament/filament": "3.2.81",
+        "filament/filament": "3.3.4",
         "guzzlehttp/guzzle": "^7.4",
         "http-interop/http-factory-guzzle": "^1.2",
         "kreait/laravel-firebase": "^5.8.0",
@@ -49,7 +49,7 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
         "fakerphp/faker": "^1.9.1",
-        "knuckleswtf/scribe": "^4.0",
+        "knuckleswtf/scribe": "^5.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.1",
