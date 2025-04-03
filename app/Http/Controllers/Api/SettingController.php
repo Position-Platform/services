@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 /**
  *
@@ -20,14 +21,25 @@ class SettingController extends BaseController
      */
     public function index()
     {
+        // Log du début de la requête
+        Log::debug('Récupération des paramètres de l\'application', [
+            'controller' => 'SettingController',
+            'method' => 'index'
+        ]);
+
         $setting = Setting::first();
+
+        // Log du résultat de la récupération
+        Log::info('Paramètres de l\'application récupérés', [
+            'controller' => 'SettingController',
+            'method' => 'index',
+            'setting_id' => $setting ? $setting->id : null
+        ]);
 
         $success['setting'] = $setting;
 
         return $this->sendResponse($success, 'Paramètres de l\'application');
     }
-
-
 
     /**
      * Show Setting by id.
@@ -37,18 +49,37 @@ class SettingController extends BaseController
      */
     public function show($id)
     {
+        // Log de la demande de détails
+        Log::debug('Récupération des détails d\'un paramètre', [
+            'controller' => 'SettingController',
+            'method' => 'show',
+            'setting_id' => $id
+        ]);
+
         $setting = Setting::find($id);
 
         if (is_null($setting)) {
+            // Log du paramètre non trouvé
+            Log::warning('Paramètre non trouvé', [
+                'controller' => 'SettingController',
+                'method' => 'show',
+                'setting_id' => $id
+            ]);
+
             return $this->sendError('Paramètre non trouvé.');
         }
+
+        // Log du succès de la récupération
+        Log::info('Détails du paramètre récupérés', [
+            'controller' => 'SettingController',
+            'method' => 'show',
+            'setting_id' => $id
+        ]);
 
         $success['setting'] = $setting;
 
         return $this->sendResponse($success, 'Paramètre trouvé.');
     }
-
-
 
     /**
      * Update the specified resource in storage.
@@ -84,21 +115,73 @@ class SettingController extends BaseController
      */
     public function update(Request $request, $id)
     {
+        // Log de la tentative de mise à jour
+        Log::debug('Tentative de mise à jour des paramètres de l\'application', [
+            'controller' => 'SettingController',
+            'method' => 'update',
+            'setting_id' => $id,
+            'inputs' => $request->except('app_logo', 'app_api_key')
+        ]);
+
         $setting = Setting::find($id);
 
         if (is_null($setting)) {
+            // Log du paramètre non trouvé
+            Log::warning('Tentative de mise à jour d\'un paramètre inexistant', [
+                'controller' => 'SettingController',
+                'method' => 'update',
+                'setting_id' => $id
+            ]);
+
             return $this->sendError('Paramètre non trouvé.');
         }
 
+        // Log des anciennes valeurs avant mise à jour
+        Log::debug('Anciennes valeurs des paramètres', [
+            'controller' => 'SettingController',
+            'method' => 'update',
+            'setting_id' => $id,
+            'old_values' => [
+                'app_name' => $setting->app_name,
+                'app_version' => $setting->app_version,
+                'maintenance_mode' => $setting->maintenance_mode,
+                'android_app_version' => $setting->android_app_version,
+                'ios_app_version' => $setting->ios_app_version
+            ]
+        ]);
+
         $input = $request->all();
 
-        if ($request->file()) {
+        if ($request->file('app_logo')) {
             $fileName = time() . '_' . $request->app_logo->getClientOriginalName();
             $filePath = $request->file('app_logo')->storeAs('uploads/settings/logos', $fileName, 'public');
             $input['app_logo'] = '/storage/' . $filePath;
+
+            // Log de l'upload de fichier
+            Log::debug('Logo de l\'application mis à jour', [
+                'controller' => 'SettingController',
+                'method' => 'update',
+                'setting_id' => $id,
+                'filename' => $fileName,
+                'path' => $filePath
+            ]);
         }
 
         $setting->update($input);
+
+        // Log du succès de la mise à jour
+        Log::info('Paramètres de l\'application mis à jour avec succès', [
+            'controller' => 'SettingController',
+            'method' => 'update',
+            'setting_id' => $id,
+            'new_values' => [
+                'app_name' => $setting->app_name,
+                'app_version' => $setting->app_version,
+                'maintenance_mode' => $setting->maintenance_mode,
+                'android_app_version' => $setting->android_app_version,
+                'ios_app_version' => $setting->ios_app_version
+            ]
+        ]);
 
         $success['setting'] = $setting;
 

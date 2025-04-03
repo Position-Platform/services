@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Builder;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Log;
 
 /**
  *
@@ -43,6 +44,13 @@ class EtablissementController extends BaseController
      */
     public function index(Request $request)
     {
+        Log::debug('Récupération de la liste des établissements', [
+            'controller' => 'EtablissementController',
+            'method' => 'index',
+            'lat' => $request->lat,
+            'lon' => $request->lon,
+            'user_id' => $request->user_id
+        ]);
 
         $lat = $request->lat;
         $lon = $request->lon;
@@ -62,6 +70,7 @@ class EtablissementController extends BaseController
             ->selectRaw($sqlDistance)
             ->orderBy('distance')
             ->paginate(50);
+
 
 
         foreach ($etablissements as $etablissement) {
@@ -113,6 +122,12 @@ class EtablissementController extends BaseController
 
         $success['etablissements'] = $etablissements;
 
+        Log::info('Liste des établissements récupérée avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'index',
+            'nombre_etablissements' => count($etablissements)
+        ]);
+
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
@@ -123,10 +138,21 @@ class EtablissementController extends BaseController
      */
     public function countEtablissement()
     {
+        Log::debug('Récupération du nombre total d\'établissements', [
+            'controller' => 'EtablissementController',
+            'method' => 'countEtablissement'
+        ]);
+
         $nbre_etablissements = Etablissement::count();
         $nbre_page = ceil($nbre_etablissements / 100);
         $success['nbre_etablissements'] = $nbre_etablissements;
         $success['nbre_page'] = $nbre_page;
+        Log::info('Nombre total d\'établissements récupéré avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'countEtablissement',
+            'nombre_etablissements' => $nbre_etablissements,
+            'nombre_pages' => $nbre_page
+        ]);
         return $this->sendResponse($success, 'Nombre des Etablissements');
     }
 
@@ -140,6 +166,13 @@ class EtablissementController extends BaseController
      */
     public function getEtablissementByDistance(Request $request)
     {
+        Log::debug('Récupération de la liste des établissements par distance', [
+            'controller' => 'EtablissementController',
+            'method' => 'getEtablissementByDistance',
+            'lat' => $request->lat,
+            'lon' => $request->lon,
+            'user_id' => $request->user_id
+        ]);
         $lat = $request->lat;
         $lon = $request->lon;
 
@@ -209,6 +242,12 @@ class EtablissementController extends BaseController
 
         $success['etablissements'] = $etablissements;
 
+        Log::info('Liste des établissements par distance récupérée avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'getEtablissementByDistance',
+            'nombre_etablissements' => count($etablissements)
+        ]);
+
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
@@ -240,6 +279,11 @@ class EtablissementController extends BaseController
      */
     public function store(Request $request)
     {
+        Log::debug('Tentative de création d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'store',
+            'inputs' => $request->all()
+        ]);
 
         $user = Auth::user();
 
@@ -297,6 +341,13 @@ class EtablissementController extends BaseController
 
         try {
 
+            // Log du début de la transaction
+            Log::debug('Début de transaction pour la création d\'un établissement', [
+                'controller' => 'EtablissementController',
+                'method' => 'store',
+                'batiment_id' => $request->batiment_id
+            ]);
+
 
             DB::beginTransaction();
 
@@ -318,8 +369,22 @@ class EtablissementController extends BaseController
 
             $success['etablissement'] = $etablissement;
 
+            Log::info('Etablissement créé avec succès', [
+                'controller' => 'EtablissementController',
+                'method' => 'store',
+                'etablissement_id' => $etablissement->id,
+                'etablissement_nom' => $etablissement->nom
+            ]);
+
             return $this->sendResponse($success, "Création de l'etablissement reussie", 201);
         } catch (\Exception $ex) {
+            // Log de l'erreur
+            Log::error('Erreur lors de la création d\'un établissement', [
+                'controller' => 'EtablissementController',
+                'method' => 'store',
+                'exception' => $ex->getMessage(),
+                'trace' => $ex->getTraceAsString()
+            ]);
             DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $ex->getMessage()], 400);
         }
@@ -334,6 +399,12 @@ class EtablissementController extends BaseController
      */
     public function show($id, Request $request)
     {
+        Log::debug('Récupération des détails d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'show',
+            'etablissement_id' => $id,
+            'user_id' => $request->user_id
+        ]);
         $etablissement = Etablissement::find($id);
 
 
@@ -378,6 +449,13 @@ class EtablissementController extends BaseController
 
         $success['etablissement'] = $etablissement;
 
+        Log::info('Détails de l\'établissement récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'show',
+            'etablissement_id' => $id,
+            'etablissement_nom' => $etablissement->nom
+        ]);
+
 
         return $this->sendResponse($success, "Etablissement");
     }
@@ -409,6 +487,12 @@ class EtablissementController extends BaseController
      */
     public function update(Request $request, $id)
     {
+        Log::debug('Tentative de mise à jour d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'update',
+            'etablissement_id' => $id,
+            'inputs' => $request->all()
+        ]);
         Auth::user();
         $etablissement = Etablissement::find($id);
 
@@ -470,8 +554,23 @@ class EtablissementController extends BaseController
 
             $success['etablissement'] = $etablissement;
 
+            Log::info('Etablissement mis à jour avec succès', [
+                'controller' => 'EtablissementController',
+                'method' => 'update',
+                'etablissement_id' => $etablissement->id,
+                'etablissement_nom' => $etablissement->nom
+            ]);
+
             return $this->sendResponse($success, "Update Success", 201);
         } catch (\Throwable $th) {
+            // Log de l'erreur
+            Log::error('Erreur lors de la mise à jour d\'un établissement', [
+                'controller' => 'EtablissementController',
+                'method' => 'update',
+                'etablissement_id' => $id,
+                'exception' => $th->getMessage(),
+                'trace' => $th->getTraceAsString()
+            ]);
             DB::rollBack();
             return $this->sendError('Erreur.', ['error' => $th->getMessage()], 400);
         }
@@ -486,6 +585,11 @@ class EtablissementController extends BaseController
      */
     public function destroy($id)
     {
+        Log::debug('Tentative de suppression d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'destroy',
+            'etablissement_id' => $id
+        ]);
         $user = Auth::user();
         $etablissement = Etablissement::find($id);
         $admin = Admin::where('user_id', $user->id)->first();
@@ -512,8 +616,23 @@ class EtablissementController extends BaseController
 
                 DB::commit();
 
+                // Log de la réussite de la suppression
+                Log::info('Etablissement supprimé avec succès', [
+                    'controller' => 'EtablissementController',
+                    'method' => 'destroy',
+                    'etablissement_id' => $id
+                ]);
+
                 return $this->sendResponse("", "Delete Success", 201);
             } catch (\Throwable $th) {
+                // Log de l'erreur
+                Log::error('Erreur lors de la suppression d\'un établissement', [
+                    'controller' => 'EtablissementController',
+                    'method' => 'destroy',
+                    'etablissement_id' => $id,
+                    'exception' => $th->getMessage(),
+                    'trace' => $th->getTraceAsString()
+                ]);
                 DB::rollBack();
                 return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
             }
@@ -531,14 +650,27 @@ class EtablissementController extends BaseController
      */
     public function search(Request $request)
     {
+        Log::debug('Tentative de recherche d\'établissements', [
+            'controller' => 'EtablissementController',
+            'method' => 'search',
+            'query' => $request->q,
+            'user_id' => $request->user_id
+        ]);
         $q = $request->input('q');
         $cacheKey = 'search query:' . $q;
 
         // Vérifier si les résultats sont en cache
         $cachedResults = Redis::get($cacheKey);
         if ($cachedResults) {
+            Log::info('Résultats de recherche récupérés à partir du cache', [
+                'controller' => 'EtablissementController',
+                'method' => 'search',
+                'cache_key' => $cacheKey
+            ]);
             return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
         }
+
+
 
         // Recherche des lieux dits via Nominatim
         $nominatimResponse = Http::get(env('NOMINATIM_URL') . '/search', [
@@ -599,8 +731,21 @@ class EtablissementController extends BaseController
         $success['etablissements'] = $etablissements;
         $success['places'] = $places ?? [];
 
+        Log::info('Résultats de recherche récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'search',
+            'nombre_etablissements' => count($etablissements),
+            'query' => $q
+        ]);
+
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($success));
+
+        Log::info('Résultats de recherche enregistrés dans le cache', [
+            'controller' => 'EtablissementController',
+            'method' => 'search',
+            'cache_key' => $cacheKey
+        ]);
 
         return $this->sendResponse($success, 'Resultats de la recherche');
     }
@@ -618,6 +763,16 @@ class EtablissementController extends BaseController
      */
     public function filterSearch(Request $request)
     {
+        Log::debug('Tentative de recherche d\'établissements par filtre', [
+            'controller' => 'EtablissementController',
+            'method' => 'filterSearch',
+            'id_categorie' => $request->id_categorie,
+            'commodites' => $request->commodites,
+            'lat' => $request->lat,
+            'lon' => $request->lon,
+            'ville' => $request->ville,
+            'user_id' => $request->user_id
+        ]);
         $idcategorie = $request->input('id_categorie');
         $commodites = $request->input('commodites');
         $lat = $request->input('lat');
@@ -694,6 +849,17 @@ class EtablissementController extends BaseController
 
         $success['etablissements'] = $etablissements;
 
+        Log::info('Résultats de recherche par filtre récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'filterSearch',
+            'nombre_etablissements' => count($etablissements),
+            'id_categorie' => $idcategorie,
+            'commodites' => $commodites,
+            'lat' => $lat,
+            'lon' => $lon,
+            'ville' => $ville
+        ]);
+
         return $this->sendResponse($success, 'Liste des Etablissements');
     }
 
@@ -706,6 +872,11 @@ class EtablissementController extends BaseController
 
     public function addFavorite(Request $request)
     {
+        Log::debug('Tentative d\'ajout d\'un établissement aux favoris', [
+            'controller' => 'EtablissementController',
+            'method' => 'addFavorite',
+            'etablissement_id' => $request->etablissement_id
+        ]);
         $user = Auth::user();
         $etablissement_id = $request->etablissement_id;
 
@@ -723,6 +894,13 @@ class EtablissementController extends BaseController
 
         $success['favorite'] = $favorite;
 
+        Log::info('Etablissement ajouté aux favoris avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'addFavorite',
+            'etablissement_id' => $etablissement_id,
+            'user_id' => $user->id
+        ]);
+
         return $this->sendResponse($success, 'Etablissement ajouté aux favoris');
     }
 
@@ -735,6 +913,11 @@ class EtablissementController extends BaseController
 
     public function removeFavorite(Request $request)
     {
+        Log::debug('Tentative de suppression d\'un établissement des favoris', [
+            'controller' => 'EtablissementController',
+            'method' => 'removeFavorite',
+            'etablissement_id' => $request->etablissement_id
+        ]);
         $user = Auth::user();
         $etablissement_id = $request->etablissement_id;
 
@@ -748,6 +931,13 @@ class EtablissementController extends BaseController
 
         $success['favorite'] = $favorite;
 
+        Log::info('Etablissement retiré des favoris avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'removeFavorite',
+            'etablissement_id' => $etablissement_id,
+            'user_id' => $user->id
+        ]);
+
         return $this->sendResponse($success, 'Etablissement retiré des favoris');
     }
 
@@ -758,6 +948,11 @@ class EtablissementController extends BaseController
      */
     public function updateVues($etablissement_id)
     {
+        Log::debug('Tentative de mise à jour des vues d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'updateVues',
+            'etablissement_id' => $etablissement_id
+        ]);
 
         $etablissement = Etablissement::find($etablissement_id);
 
@@ -765,6 +960,13 @@ class EtablissementController extends BaseController
         $etablissement->save();
 
         $success['etablissement'] = $etablissement;
+
+        Log::info('Vues de l\'établissement mises à jour avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'updateVues',
+            'etablissement_id' => $etablissement_id,
+            'vues' => $etablissement->vues
+        ]);
 
         return $this->sendResponse($success, 'Vues du Etablissement incrémentées');
     }
@@ -780,6 +982,12 @@ class EtablissementController extends BaseController
      */
     public function updateCover(Request $request, $etablissement_id)
     {
+        Log::debug('Tentative de mise à jour de la couverture d\'un établissement', [
+            'controller' => 'EtablissementController',
+            'method' => 'updateCover',
+            'etablissement_id' => $etablissement_id,
+            'inputs' => $request->all()
+        ]);
         Auth::user();
         $etablissement = Etablissement::find($etablissement_id);
 
@@ -801,9 +1009,24 @@ class EtablissementController extends BaseController
 
             $success['etablissement'] = $etablissement;
 
+            Log::info('Couverture de l\'établissement mise à jour avec succès', [
+                'controller' => 'EtablissementController',
+                'method' => 'updateCover',
+                'etablissement_id' => $etablissement->id,
+                'cover_path' => $etablissement->cover
+            ]);
+
 
             return $this->sendResponse($success, "Update success", 201);
         } catch (\Throwable $th) {
+            // Log de l'erreur
+            Log::error('Erreur lors de la mise à jour de la couverture d\'un établissement', [
+                'controller' => 'EtablissementController',
+                'method' => 'updateCover',
+                'etablissement_id' => $etablissement_id,
+                'exception' => $th->getMessage(),
+                'trace' => $th->getTraceAsString()
+            ]);
             return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
         }
     }
@@ -817,6 +1040,12 @@ class EtablissementController extends BaseController
      */
     public function globalsearch(Request $request)
     {
+        Log::debug('Tentative de recherche globale', [
+            'controller' => 'EtablissementController',
+            'method' => 'globalsearch',
+            'query' => $request->q,
+            'user_id' => $request->user_id
+        ]);
         $q = $request->input('q');
         $user_id = $request->user_id;
         $cacheKey = 'search global:' . $q;
@@ -824,6 +1053,11 @@ class EtablissementController extends BaseController
         // Vérifier si les résultats sont en cache
         $cachedResults = Redis::get($cacheKey);
         if ($cachedResults) {
+            Log::info('Résultats de recherche globale récupérés à partir du cache', [
+                'controller' => 'EtablissementController',
+                'method' => 'globalsearch',
+                'cache_key' => $cacheKey
+            ]);
             return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
         }
 
@@ -886,8 +1120,23 @@ class EtablissementController extends BaseController
             'places' => array_values($places) // Réindexer les résultats
         ];
 
+        // Log des résultats de recherche
+        Log::info('Résultats de recherche globale récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'globalsearch',
+            'nombre_etablissements' => count($etablissements),
+            'nombre_osmDatas' => count($osmDatas),
+            'query' => $q
+        ]);
+
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($results));
+
+        Log::info('Résultats de recherche globale enregistrés dans le cache', [
+            'controller' => 'EtablissementController',
+            'method' => 'globalsearch',
+            'cache_key' => $cacheKey
+        ]);
 
         return $this->sendResponse($results, 'Résultats de la recherche');
     }
@@ -900,12 +1149,22 @@ class EtablissementController extends BaseController
      */
     public function nominatimSearch(Request $request)
     {
+        Log::debug('Tentative de recherche Nominatim', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimSearch',
+            'query' => $request->q
+        ]);
         $q = $request->input('q');
         $cacheKey = 'searchNominatim:' . $q;
 
         // Vérifier si les résultats sont en cache
         $cachedResults = Redis::get($cacheKey);
         if ($cachedResults) {
+            Log::info('Résultats de recherche Nominatim récupérés à partir du cache', [
+                'controller' => 'EtablissementController',
+                'method' => 'nominatimSearch',
+                'cache_key' => $cacheKey
+            ]);
             return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
         }
 
@@ -919,8 +1178,22 @@ class EtablissementController extends BaseController
         ]);
         $places = $nominatimResponse->json();
 
+        // Log des résultats de recherche
+        Log::info('Résultats de recherche Nominatim récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimSearch',
+            'nombre_lieux_dits' => count($places),
+            'query' => $q
+        ]);
+
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($places ?? []));
+
+        Log::info('Résultats de recherche Nominatim enregistrés dans le cache', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimSearch',
+            'cache_key' => $cacheKey
+        ]);
 
         return $this->sendResponse($places, 'Résultats de la recherche');
     }
@@ -933,6 +1206,12 @@ class EtablissementController extends BaseController
      */
     public function nominatimReverseSearch(Request $request)
     {
+        Log::debug('Tentative de recherche inversée Nominatim', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimReverseSearch',
+            'lat' => $request->lat,
+            'lon' => $request->lon
+        ]);
         $lat = $request->input('lat');
         $lon = $request->input('lon');
         $cacheKey = 'reverseSearch:' . $lat . ',' . $lon;
@@ -940,6 +1219,11 @@ class EtablissementController extends BaseController
         // Vérifier si les résultats sont en cache
         $cachedResults = Redis::get($cacheKey);
         if ($cachedResults) {
+            Log::info('Résultats de recherche inversée Nominatim récupérés à partir du cache', [
+                'controller' => 'EtablissementController',
+                'method' => 'nominatimReverseSearch',
+                'cache_key' => $cacheKey
+            ]);
             return $this->sendResponse(json_decode($cachedResults), 'Résultats de la recherche dans le cache');
         }
 
@@ -952,8 +1236,23 @@ class EtablissementController extends BaseController
         ]);
         $place = $nominatimResponse->json();
 
+        // Log des résultats de recherche
+        Log::info('Résultats de recherche inversée Nominatim récupérés avec succès', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimReverseSearch',
+            'place_id' => $place['place_id'] ?? null,
+            'lat' => $lat,
+            'lon' => $lon
+        ]);
+
         // Mettre les résultats en cache pendant une durée spécifique (par exemple, 1 heure)
         Redis::setex($cacheKey, 3600, json_encode($place));
+
+        Log::info('Résultats de recherche inversée Nominatim enregistrés dans le cache', [
+            'controller' => 'EtablissementController',
+            'method' => 'nominatimReverseSearch',
+            'cache_key' => $cacheKey
+        ]);
 
         return $this->sendResponse($place, 'Résultats de la recherche');
     }
@@ -967,6 +1266,12 @@ class EtablissementController extends BaseController
      */
     public function getNearbyEtablissement(Request $request)
     {
+        Log::debug('Tentative de recherche d\'établissements à proximité', [
+            'controller' => 'EtablissementController',
+            'method' => 'getNearbyEtablissement',
+            'lat' => $request->lat,
+            'lon' => $request->lon
+        ]);
         $lat = $request->input('lat');
         $lon = $request->input('lon');
         $radius = 0.1; // Rayon de recherche en kilomètres (100 mètres = 0.1 kilomètres)
@@ -999,6 +1304,14 @@ class EtablissementController extends BaseController
                 'quartier' => $etablissement->quartier,
             ];
 
+            // Log des résultats de recherche
+            Log::info('Résultats de recherche d\'établissements à proximité récupérés avec succès', [
+                'controller' => 'EtablissementController',
+                'method' => 'getNearbyEtablissement',
+                'etablissement_id' => $etablissement->id,
+                'distance' => $etablissement->distance
+            ]);
+
             return $this->sendResponse($result, 'Résultats de la recherche');
         }
 
@@ -1028,6 +1341,14 @@ class EtablissementController extends BaseController
                 'quartier' => $place['address']['suburb'] ?? null,
             ];
 
+            // Log des résultats de recherche
+            Log::info('Résultats de recherche de lieux dits à proximité récupérés avec succès', [
+                'controller' => 'EtablissementController',
+                'method' => 'getNearbyEtablissement',
+                'place_id' => $place['place_id'],
+                'distance' => $distance
+            ]);
+
             return $this->sendResponse($result, 'Résultats de la recherche');
         }
 
@@ -1037,6 +1358,7 @@ class EtablissementController extends BaseController
 
     private function calculateDistance($lat1, $lon1, $lat2, $lon2)
     {
+
         $earthRadius = 6371; // Rayon de la Terre en kilomètres
 
         $dLat = deg2rad($lat2 - $lat1);
