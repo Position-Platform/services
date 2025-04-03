@@ -5,7 +5,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 10.48.11.
+ * Generated for Laravel 10.48.29.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -722,7 +722,7 @@ namespace Illuminate\Support\Facades {
          * @param int $code
          * @param string $message
          * @param array $headers
-         * @return \Illuminate\Foundation\never 
+         * @return never 
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
          * @static 
@@ -1146,7 +1146,7 @@ namespace Illuminate\Support\Facades {
          * Resolve all of the bindings for a given tag.
          *
          * @param string $tag
-         * @return \Illuminate\Container\iterable 
+         * @return iterable 
          * @static 
          */        public static function tagged($tag)
         {            //Method inherited from \Illuminate\Container\Container         
@@ -3535,8 +3535,8 @@ namespace Illuminate\Support\Facades {
          *
          * @template TCacheValue
          * @param array|string $key
-         * @param \Illuminate\Cache\TCacheValue|\Illuminate\Cache\(\Closure():  TCacheValue)  $default
-         * @return \Illuminate\Cache\(TCacheValue is null ? mixed : TCacheValue)
+         * @param TCacheValue|(\Closure(): TCacheValue) $default
+         * @return (TCacheValue is null ? mixed : TCacheValue)
          * @static 
          */        public static function get($key, $default = null)
         {
@@ -3559,10 +3559,10 @@ namespace Illuminate\Support\Facades {
                     /**
          * Obtains multiple cache items by their unique keys.
          *
-         * @return \Illuminate\Cache\iterable 
-         * @param \Psr\SimpleCache\iterable<string> $keys A list of keys that can be obtained in a single operation.
+         * @return iterable 
+         * @param iterable<string> $keys A list of keys that can be obtained in a single operation.
          * @param mixed $default Default value to return for keys that do not exist.
-         * @return \Psr\SimpleCache\iterable<string, mixed> A list of key => value pairs. Cache keys that do not exist or are stale will have $default as value.
+         * @return iterable<string, mixed> A list of key => value pairs. Cache keys that do not exist or are stale will have $default as value.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $keys is neither an array nor a Traversable,
          *   or if any of the $keys are not a legal value.
@@ -3577,8 +3577,8 @@ namespace Illuminate\Support\Facades {
          *
          * @template TCacheValue
          * @param array|string $key
-         * @param \Illuminate\Cache\TCacheValue|\Illuminate\Cache\(\Closure():  TCacheValue)  $default
-         * @return \Illuminate\Cache\(TCacheValue is null ? mixed : TCacheValue)
+         * @param TCacheValue|(\Closure(): TCacheValue) $default
+         * @return (TCacheValue is null ? mixed : TCacheValue)
          * @static 
          */        public static function pull($key, $default = null)
         {
@@ -3632,7 +3632,7 @@ namespace Illuminate\Support\Facades {
          * Persists a set of key => value pairs in the cache, with an optional TTL.
          *
          * @return bool 
-         * @param \Psr\SimpleCache\iterable $values A list of key => value pairs for a multiple-set operation.
+         * @param iterable $values A list of key => value pairs for a multiple-set operation.
          * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
          *                                       the driver supports TTL then the library may set a default value
          *                                       for it or let the driver take care of that.
@@ -3702,7 +3702,7 @@ namespace Illuminate\Support\Facades {
          * @param string $key
          * @param \Closure|\DateTimeInterface|\DateInterval|int|null $ttl
          * @param \Closure():  TCacheValue  $callback
-         * @return \Illuminate\Cache\TCacheValue 
+         * @return TCacheValue 
          * @static 
          */        public static function remember($key, $ttl, $callback)
         {
@@ -3715,7 +3715,7 @@ namespace Illuminate\Support\Facades {
          * @template TCacheValue
          * @param string $key
          * @param \Closure():  TCacheValue  $callback
-         * @return \Illuminate\Cache\TCacheValue 
+         * @return TCacheValue 
          * @static 
          */        public static function sear($key, $callback)
         {
@@ -3728,7 +3728,7 @@ namespace Illuminate\Support\Facades {
          * @template TCacheValue
          * @param string $key
          * @param \Closure():  TCacheValue  $callback
-         * @return \Illuminate\Cache\TCacheValue 
+         * @return TCacheValue 
          * @static 
          */        public static function rememberForever($key, $callback)
         {
@@ -3764,7 +3764,7 @@ namespace Illuminate\Support\Facades {
          * Deletes multiple cache items in a single operation.
          *
          * @return bool 
-         * @param \Psr\SimpleCache\iterable<string> $keys A list of string-based keys to be deleted.
+         * @param iterable<string> $keys A list of string-based keys to be deleted.
          * @return bool True if the items were successfully removed. False if there was an error.
          * @throws \Psr\SimpleCache\InvalidArgumentException
          *   MUST be thrown if $keys is neither an array nor a Traversable,
@@ -6700,10 +6700,10 @@ namespace Illuminate\Support\Facades {
          *
          * @template TWhenParameter
          * @template TWhenReturnType
-         * @param \Illuminate\Filesystem\(\Closure($this):  TWhenParameter)|TWhenParameter|null  $value
-         * @param \Illuminate\Filesystem\(callable($this,  TWhenParameter): TWhenReturnType)|null  $callback
-         * @param \Illuminate\Filesystem\(callable($this,  TWhenParameter): TWhenReturnType)|null  $default
-         * @return $this|\Illuminate\Filesystem\TWhenReturnType 
+         * @param (\Closure($this): TWhenParameter)|TWhenParameter|null $value
+         * @param (callable($this, TWhenParameter): TWhenReturnType)|null $callback
+         * @param (callable($this, TWhenParameter): TWhenReturnType)|null $default
+         * @return $this|TWhenReturnType 
          * @static 
          */        public static function when($value = null, $callback = null, $default = null)
         {
@@ -6715,10 +6715,10 @@ namespace Illuminate\Support\Facades {
          *
          * @template TUnlessParameter
          * @template TUnlessReturnType
-         * @param \Illuminate\Filesystem\(\Closure($this):  TUnlessParameter)|TUnlessParameter|null  $value
-         * @param \Illuminate\Filesystem\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $callback
-         * @param \Illuminate\Filesystem\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $default
-         * @return $this|\Illuminate\Filesystem\TUnlessReturnType 
+         * @param (\Closure($this): TUnlessParameter)|TUnlessParameter|null $value
+         * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $callback
+         * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $default
+         * @return $this|TUnlessReturnType 
          * @static 
          */        public static function unless($value = null, $callback = null, $default = null)
         {
@@ -6875,7 +6875,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Determine if all of the given abilities should be granted for the current user.
          *
-         * @param \Illuminate\Auth\Access\iterable|string $ability
+         * @param iterable|string $ability
          * @param array|mixed $arguments
          * @return bool 
          * @static 
@@ -6887,7 +6887,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Determine if any of the given abilities should be denied for the current user.
          *
-         * @param \Illuminate\Auth\Access\iterable|string $ability
+         * @param iterable|string $ability
          * @param array|mixed $arguments
          * @return bool 
          * @static 
@@ -6899,7 +6899,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Determine if all of the given abilities should be granted for the current user.
          *
-         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param iterable|string $abilities
          * @param array|mixed $arguments
          * @return bool 
          * @static 
@@ -6911,7 +6911,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Determine if any one of the given abilities should be granted for the current user.
          *
-         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param iterable|string $abilities
          * @param array|mixed $arguments
          * @return bool 
          * @static 
@@ -6923,7 +6923,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Determine if all of the given abilities should be denied for the current user.
          *
-         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param iterable|string $abilities
          * @param array|mixed $arguments
          * @return bool 
          * @static 
@@ -10787,6 +10787,7 @@ namespace Illuminate\Support\Facades {
          * @param array $files The request files ($_FILES)
          * @param array $server The server parameters ($_SERVER)
          * @param string|resource|null $content The raw body data
+         * @throws BadRequestException When the URI is invalid
          * @static 
          */        public static function create($uri, $method = 'GET', $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
         {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
@@ -10930,7 +10931,7 @@ namespace Illuminate\Support\Facades {
          * 
          *
          * @internal 
-         * @param \Symfony\Component\HttpFoundation\callable():  SessionInterface $factory
+         * @param callable():  SessionInterface $factory
          * @static 
          */        public static function setSessionFactory($factory)
         {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
@@ -12018,8 +12019,8 @@ namespace Illuminate\Support\Facades {
          *
          * @template TEnum
          * @param string $key
-         * @param \Illuminate\Http\class-string<TEnum> $enumClass
-         * @return \Illuminate\Http\TEnum|null 
+         * @param class-string<TEnum> $enumClass
+         * @return TEnum|null 
          * @static 
          */        public static function enum($key, $enumClass)
         {
@@ -12143,7 +12144,7 @@ namespace Illuminate\Support\Facades {
          * Dump the request items and end the script.
          *
          * @param mixed $keys
-         * @return \Illuminate\Http\never 
+         * @return never 
          * @static 
          */        public static function dd(...$keys)
         {
@@ -15349,10 +15350,10 @@ namespace Illuminate\Support\Facades {
          *
          * @template TWhenParameter
          * @template TWhenReturnType
-         * @param \Illuminate\Filesystem\(\Closure($this):  TWhenParameter)|TWhenParameter|null  $value
-         * @param \Illuminate\Filesystem\(callable($this,  TWhenParameter): TWhenReturnType)|null  $callback
-         * @param \Illuminate\Filesystem\(callable($this,  TWhenParameter): TWhenReturnType)|null  $default
-         * @return $this|\Illuminate\Filesystem\TWhenReturnType 
+         * @param (\Closure($this): TWhenParameter)|TWhenParameter|null $value
+         * @param (callable($this, TWhenParameter): TWhenReturnType)|null $callback
+         * @param (callable($this, TWhenParameter): TWhenReturnType)|null $default
+         * @return $this|TWhenReturnType 
          * @static 
          */        public static function when($value = null, $callback = null, $default = null)
         {
@@ -15364,10 +15365,10 @@ namespace Illuminate\Support\Facades {
          *
          * @template TUnlessParameter
          * @template TUnlessReturnType
-         * @param \Illuminate\Filesystem\(\Closure($this):  TUnlessParameter)|TUnlessParameter|null  $value
-         * @param \Illuminate\Filesystem\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $callback
-         * @param \Illuminate\Filesystem\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $default
-         * @return $this|\Illuminate\Filesystem\TUnlessReturnType 
+         * @param (\Closure($this): TUnlessParameter)|TUnlessParameter|null $value
+         * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $callback
+         * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $default
+         * @return $this|TUnlessReturnType 
          * @static 
          */        public static function unless($value = null, $callback = null, $default = null)
         {
@@ -17080,7 +17081,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Use the given callback to resolve attributes for script tags.
          *
-         * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): array)|array  $attributes
+         * @param (callable(string, string, ?array, ?array): array)|array $attributes
          * @return \Illuminate\Foundation\Vite 
          * @static 
          */        public static function useScriptTagAttributes($attributes)
@@ -17091,7 +17092,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Use the given callback to resolve attributes for style tags.
          *
-         * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): array)|array  $attributes
+         * @param (callable(string, string, ?array, ?array): array)|array $attributes
          * @return \Illuminate\Foundation\Vite 
          * @static 
          */        public static function useStyleTagAttributes($attributes)
@@ -17102,7 +17103,7 @@ namespace Illuminate\Support\Facades {
                     /**
          * Use the given callback to resolve attributes for preload tags.
          *
-         * @param \Illuminate\Foundation\(callable(string,  string, ?array, ?array): (array|false))|array|false  $attributes
+         * @param (callable(string, string, ?array, ?array): (array|false))|array|false $attributes
          * @return \Illuminate\Foundation\Vite 
          * @static 
          */        public static function usePreloadTagAttributes($attributes)
@@ -17221,6 +17222,126 @@ namespace Illuminate\Support\Facades {
             }
     }
 
+namespace Althinect\FilamentSpatieRolesPermissions {
+            /**
+     * 
+     *
+     */        class FilamentSpatieRolesPermissionsFacade {
+                    /**
+         * Run a Closure when the facade has been resolved.
+         *
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */        public static function resolved($callback)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::resolved($callback);
+        }
+                    /**
+         * Convert the facade into a Mockery spy.
+         *
+         * @return \Mockery\MockInterface 
+         * @static 
+         */        public static function spy()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::spy();
+        }
+                    /**
+         * Initiate a partial mock on the facade.
+         *
+         * @return \Mockery\MockInterface 
+         * @static 
+         */        public static function partialMock()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::partialMock();
+        }
+                    /**
+         * Initiate a mock expectation on the facade.
+         *
+         * @return \Mockery\Expectation 
+         * @static 
+         */        public static function shouldReceive()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::shouldReceive();
+        }
+                    /**
+         * Initiate a mock expectation on the facade.
+         *
+         * @return \Mockery\Expectation 
+         * @static 
+         */        public static function expects()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::expects();
+        }
+                    /**
+         * Hotswap the underlying instance behind the facade.
+         *
+         * @param mixed $instance
+         * @return void 
+         * @static 
+         */        public static function swap($instance)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::swap($instance);
+        }
+                    /**
+         * Get the root object behind the facade.
+         *
+         * @return mixed 
+         * @static 
+         */        public static function getFacadeRoot()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::getFacadeRoot();
+        }
+                    /**
+         * Clear a resolved facade instance.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */        public static function clearResolvedInstance($name)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::clearResolvedInstance($name);
+        }
+                    /**
+         * Clear all of the resolved instances.
+         *
+         * @return void 
+         * @static 
+         */        public static function clearResolvedInstances()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::clearResolvedInstances();
+        }
+                    /**
+         * Get the application default aliases.
+         *
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */        public static function defaultAliases()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::defaultAliases();
+        }
+                    /**
+         * Get the application instance behind the facade.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application|null 
+         * @static 
+         */        public static function getFacadeApplication()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::getFacadeApplication();
+        }
+                    /**
+         * Set the application instance.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application|null $app
+         * @return void 
+         * @static 
+         */        public static function setFacadeApplication($app)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade::setFacadeApplication($app);
+        }
+            }
+    }
+
 namespace AnourValar\EloquentSerialize\Facades {
             /**
      * 
@@ -17229,8 +17350,9 @@ namespace AnourValar\EloquentSerialize\Facades {
                     /**
          * Pack
          *
-         * @param \Illuminate\Database\Eloquent\Builder $builder
+         * @param \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Relations\Relation $builder
          * @return string 
+         * @throws \RuntimeException
          * @static 
          */        public static function serialize($builder)
         {
@@ -17684,6 +17806,15 @@ namespace Livewire {
          * 
          *
          * @static 
+         */        public static function findSynth($keyOrTarget, $component)
+        {
+                        /** @var \Livewire\LivewireManager $instance */
+                        return $instance->findSynth($keyOrTarget, $component);
+        }
+                    /**
+         * 
+         *
+         * @static 
          */        public static function update($snapshot, $diff, $calls)
         {
                         /** @var \Livewire\LivewireManager $instance */
@@ -18040,6 +18171,48 @@ namespace Maatwebsite\Excel\Facades {
                         return $instance->queueImport($import, $filePath, $disk, $readerType);
         }
                     /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */        public static function macro($name, $macro)
+        {
+                        \Maatwebsite\Excel\Excel::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */        public static function mixin($mixin, $replace = true)
+        {
+                        \Maatwebsite\Excel\Excel::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */        public static function hasMacro($name)
+        {
+                        return \Maatwebsite\Excel\Excel::hasMacro($name);
+        }
+                    /**
+         * Flush the existing macros.
+         *
+         * @return void 
+         * @static 
+         */        public static function flushMacros()
+        {
+                        \Maatwebsite\Excel\Excel::flushMacros();
+        }
+                    /**
          * 
          *
          * @param string $concern
@@ -18170,7 +18343,7 @@ namespace Spatie\Health\Facades {
                     /**
          * 
          *
-         * @return \Spatie\Health\Collection<int, Check> 
+         * @return Collection<int, Check> 
          * @static 
          */        public static function registeredChecks()
         {
@@ -18180,7 +18353,7 @@ namespace Spatie\Health\Facades {
                     /**
          * 
          *
-         * @return \Spatie\Health\Collection<int, ResultStore> 
+         * @return Collection<int, ResultStore> 
          * @static 
          */        public static function resultStores()
         {
@@ -18317,10 +18490,20 @@ namespace Spatie\LaravelIgnition\Facades {
          * 
          *
          * @static 
-         */        public static function withStackFrameArguments($withStackFrameArguments = true)
+         */        public static function withStackFrameArguments($withStackFrameArguments = true, $forcePHPIniSetting = false)
         {
                         /** @var \Spatie\FlareClient\Flare $instance */
-                        return $instance->withStackFrameArguments($withStackFrameArguments);
+                        return $instance->withStackFrameArguments($withStackFrameArguments, $forcePHPIniSetting);
+        }
+                    /**
+         * 
+         *
+         * @param class-string $exceptionClass
+         * @static 
+         */        public static function overrideGrouping($exceptionClass, $type = 'exception_message_and_class')
+        {
+                        /** @var \Spatie\FlareClient\Flare $instance */
+                        return $instance->overrideGrouping($exceptionClass, $type);
         }
                     /**
          * 
@@ -18389,7 +18572,7 @@ namespace Spatie\LaravelIgnition\Facades {
                     /**
          * 
          *
-         * @param \Spatie\FlareClient\FlareMiddleware\FlareMiddleware|array<FlareMiddleware>|\Spatie\FlareClient\class-string<FlareMiddleware>|callable $middleware
+         * @param \Spatie\FlareClient\FlareMiddleware\FlareMiddleware|array<FlareMiddleware>|class-string<FlareMiddleware>|callable $middleware
          * @return \Spatie\FlareClient\Flare 
          * @static 
          */        public static function registerMiddleware($middleware)
@@ -18852,10 +19035,11 @@ namespace Illuminate\Database\Eloquent\Relations {
          * @param mixed $alias
          * @param bool $disableExtraConditions
          * @param string|null $morphable
+         * @param bool $hasCheck
          * @static 
-         */        public static function performJoinForEloquentPowerJoins($builder, $joinType = 'leftJoin', $callback = null, $alias = null, $disableExtraConditions = false, $morphable = null)
+         */        public static function performJoinForEloquentPowerJoins($builder, $joinType = 'leftJoin', $callback = null, $alias = null, $disableExtraConditions = false, $morphable = null, $hasCheck = false)
         {
-                        return \Illuminate\Database\Eloquent\Relations\Relation::performJoinForEloquentPowerJoins($builder, $joinType, $callback, $alias, $disableExtraConditions, $morphable);
+                        return \Illuminate\Database\Eloquent\Relations\Relation::performJoinForEloquentPowerJoins($builder, $joinType, $callback, $alias, $disableExtraConditions, $morphable, $hasCheck);
         }
                     /**
          * 
@@ -18937,10 +19121,11 @@ namespace Illuminate\Database\Eloquent\Relations {
          * @param mixed $callback
          * @param mixed $alias
          * @param bool $disableExtraConditions
+         * @param bool $hasCheck
          * @static 
-         */        public static function performJoinForEloquentPowerJoinsForHasMany($builder, $joinType, $callback = null, $alias = null, $disableExtraConditions = false)
+         */        public static function performJoinForEloquentPowerJoinsForHasMany($builder, $joinType, $callback = null, $alias = null, $disableExtraConditions = false, $hasCheck = false)
         {
-                        return \Illuminate\Database\Eloquent\Relations\Relation::performJoinForEloquentPowerJoinsForHasMany($builder, $joinType, $callback, $alias, $disableExtraConditions);
+                        return \Illuminate\Database\Eloquent\Relations\Relation::performJoinForEloquentPowerJoinsForHasMany($builder, $joinType, $callback, $alias, $disableExtraConditions, $hasCheck);
         }
                     /**
          * 
@@ -19212,22 +19397,24 @@ namespace Livewire\Features\SupportTesting {
          *
          * @see \Filament\Actions\Testing\TestsActions::assertActionVisible()
          * @param array|string $name
+         * @param array $arguments
          * @return static 
          * @static 
-         */        public static function assertActionVisible($name)
+         */        public static function assertActionVisible($name, $arguments = [])
         {
-                        return \Livewire\Features\SupportTesting\Testable::assertActionVisible($name);
+                        return \Livewire\Features\SupportTesting\Testable::assertActionVisible($name, $arguments);
         }
                     /**
          * 
          *
          * @see \Filament\Actions\Testing\TestsActions::assertActionHidden()
          * @param array|string $name
+         * @param array $arguments
          * @return static 
          * @static 
-         */        public static function assertActionHidden($name)
+         */        public static function assertActionHidden($name, $arguments = [])
         {
-                        return \Livewire\Features\SupportTesting\Testable::assertActionHidden($name);
+                        return \Livewire\Features\SupportTesting\Testable::assertActionHidden($name, $arguments);
         }
                     /**
          * 
@@ -19543,6 +19730,31 @@ namespace Livewire\Features\SupportTesting {
                     /**
          * 
          *
+         * @see \Filament\Forms\Testing\TestsForms::assertFormComponentExists()
+         * @param string $componentKey
+         * @param \Closure|string $formName
+         * @param \Closure|null $checkComponentUsing
+         * @return static 
+         * @static 
+         */        public static function assertFormComponentExists($componentKey, $formName = 'form', $checkComponentUsing = null)
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertFormComponentExists($componentKey, $formName, $checkComponentUsing);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::assertFormComponentDoesNotExist()
+         * @param string $componentKey
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function assertFormComponentDoesNotExist($componentKey, $formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertFormComponentDoesNotExist($componentKey, $formName);
+        }
+                    /**
+         * 
+         *
          * @see \Filament\Forms\Testing\TestsForms::assertFormFieldExists()
          * @param string $fieldName
          * @param \Closure|string $formName
@@ -19552,6 +19764,18 @@ namespace Livewire\Features\SupportTesting {
          */        public static function assertFormFieldExists($fieldName, $formName = 'form', $checkFieldUsing = null)
         {
                         return \Livewire\Features\SupportTesting\Testable::assertFormFieldExists($fieldName, $formName, $checkFieldUsing);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::assertFormFieldDoesNotExist()
+         * @param string $fieldName
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function assertFormFieldDoesNotExist($fieldName, $formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertFormFieldDoesNotExist($fieldName, $formName);
         }
                     /**
          * 
@@ -19612,6 +19836,64 @@ namespace Livewire\Features\SupportTesting {
          */        public static function assertFormFieldIsVisible($fieldName, $formName = 'form')
         {
                         return \Livewire\Features\SupportTesting\Testable::assertFormFieldIsVisible($fieldName, $formName);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::assertWizardStepExists()
+         * @param int $step
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function assertWizardStepExists($step, $formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertWizardStepExists($step, $formName);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::assertWizardCurrentStep()
+         * @param int $step
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function assertWizardCurrentStep($step, $formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertWizardCurrentStep($step, $formName);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::goToWizardStep()
+         * @param int $step
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function goToWizardStep($step, $formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::goToWizardStep($step, $formName);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::goToNextWizardStep()
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function goToNextWizardStep($formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::goToNextWizardStep($formName);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Forms\Testing\TestsForms::goToPreviousWizardStep()
+         * @param string $formName
+         * @return static 
+         * @static 
+         */        public static function goToPreviousWizardStep($formName = 'form')
+        {
+                        return \Livewire\Features\SupportTesting\Testable::goToPreviousWizardStep($formName);
         }
                     /**
          * 
@@ -20423,12 +20705,12 @@ namespace Livewire\Features\SupportTesting {
          * 
          *
          * @see \Filament\Tables\Testing\TestsActions::assertTableActionDataSet()
-         * @param array $data
+         * @param \Closure|array $state
          * @return static 
          * @static 
-         */        public static function assertTableActionDataSet($data)
+         */        public static function assertTableActionDataSet($state)
         {
-                        return \Livewire\Features\SupportTesting\Testable::assertTableActionDataSet($data);
+                        return \Livewire\Features\SupportTesting\Testable::assertTableActionDataSet($state);
         }
                     /**
          * 
@@ -20783,12 +21065,12 @@ namespace Livewire\Features\SupportTesting {
          * 
          *
          * @see \Filament\Tables\Testing\TestsBulkActions::assertTableBulkActionDataSet()
-         * @param array $data
+         * @param \Closure|array $state
          * @return static 
          * @static 
-         */        public static function assertTableBulkActionDataSet($data)
+         */        public static function assertTableBulkActionDataSet($state)
         {
-                        return \Livewire\Features\SupportTesting\Testable::assertTableBulkActionDataSet($data);
+                        return \Livewire\Features\SupportTesting\Testable::assertTableBulkActionDataSet($state);
         }
                     /**
          * 
@@ -21327,11 +21609,34 @@ namespace Livewire\Features\SupportTesting {
          *
          * @see \Filament\Tables\Testing\TestsFilters::assertTableFilterExists()
          * @param string $name
+         * @param \Closure|null $checkFilterUsing
          * @return static 
          * @static 
-         */        public static function assertTableFilterExists($name)
+         */        public static function assertTableFilterExists($name, $checkFilterUsing = null)
         {
-                        return \Livewire\Features\SupportTesting\Testable::assertTableFilterExists($name);
+                        return \Livewire\Features\SupportTesting\Testable::assertTableFilterExists($name, $checkFilterUsing);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Tables\Testing\TestsFilters::assertTableFilterVisible()
+         * @param string $name
+         * @return static 
+         * @static 
+         */        public static function assertTableFilterVisible($name)
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertTableFilterVisible($name);
+        }
+                    /**
+         * 
+         *
+         * @see \Filament\Tables\Testing\TestsFilters::assertTableFilterHidden()
+         * @param string $name
+         * @return static 
+         * @static 
+         */        public static function assertTableFilterHidden($name)
+        {
+                        return \Livewire\Features\SupportTesting\Testable::assertTableFilterHidden($name);
         }
                     /**
          * 
@@ -22129,7 +22434,7 @@ namespace  {
              *
              * @template TModelValue
              * @param \Closure():  TModelValue  $scope
-             * @return \Illuminate\Database\Eloquent\TModelValue 
+             * @return TModelValue 
              * @static 
              */            public static function withSavepointIfNeeded($scope)
             {
@@ -22456,10 +22761,10 @@ namespace  {
              *
              * @template TWhenParameter
              * @template TWhenReturnType
-             * @param \Illuminate\Database\Eloquent\(\Closure($this):  TWhenParameter)|TWhenParameter|null  $value
-             * @param \Illuminate\Database\Eloquent\(callable($this,  TWhenParameter): TWhenReturnType)|null  $callback
-             * @param \Illuminate\Database\Eloquent\(callable($this,  TWhenParameter): TWhenReturnType)|null  $default
-             * @return $this|\Illuminate\Database\Eloquent\TWhenReturnType 
+             * @param (\Closure($this): TWhenParameter)|TWhenParameter|null $value
+             * @param (callable($this, TWhenParameter): TWhenReturnType)|null $callback
+             * @param (callable($this, TWhenParameter): TWhenReturnType)|null $default
+             * @return $this|TWhenReturnType 
              * @static 
              */            public static function when($value = null, $callback = null, $default = null)
             {
@@ -22471,10 +22776,10 @@ namespace  {
              *
              * @template TUnlessParameter
              * @template TUnlessReturnType
-             * @param \Illuminate\Database\Eloquent\(\Closure($this):  TUnlessParameter)|TUnlessParameter|null  $value
-             * @param \Illuminate\Database\Eloquent\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $callback
-             * @param \Illuminate\Database\Eloquent\(callable($this,  TUnlessParameter): TUnlessReturnType)|null  $default
-             * @return $this|\Illuminate\Database\Eloquent\TUnlessReturnType 
+             * @param (\Closure($this): TUnlessParameter)|TUnlessParameter|null $value
+             * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $callback
+             * @param (callable($this, TUnlessParameter): TUnlessReturnType)|null $default
+             * @return $this|TUnlessReturnType 
              * @static 
              */            public static function unless($value = null, $callback = null, $default = null)
             {
@@ -22988,8 +23293,8 @@ namespace  {
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::newPowerJoinClause()
              * @param \Illuminate\Database\Query\Builder $parentQuery
-             * @param mixed $type
-             * @param mixed $table
+             * @param string $type
+             * @param string $table
              * @param \Illuminate\Database\Eloquent\Model|null $model
              * @static 
              */            public static function newPowerJoinClause($parentQuery, $type, $table, $model = null)
@@ -23000,10 +23305,10 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::joinRelationship()
-             * @param mixed $relationName
-             * @param mixed $callback
-             * @param mixed $joinType
-             * @param mixed $useAlias
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
+             * @param string $joinType
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
              * @param string|null $morphable
              * @static 
@@ -23015,126 +23320,135 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::joinRelationshipUsingAlias()
-             * @param mixed $relationName
-             * @param mixed $callback
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function joinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false)
+             */            public static function joinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::joinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::joinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::leftJoinRelationshipUsingAlias()
-             * @param mixed $relationName
-             * @param mixed $callback
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function leftJoinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false)
+             */            public static function leftJoinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::rightJoinRelationshipUsingAlias()
-             * @param mixed $relationName
-             * @param mixed $callback
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function rightJoinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false)
+             */            public static function rightJoinRelationshipUsingAlias($relationName, $callback = null, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelationshipUsingAlias($relationName, $callback, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::joinRelation()
-             * @param mixed $relationName
-             * @param mixed $callback
-             * @param mixed $joinType
-             * @param mixed $useAlias
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
+             * @param string $joinType
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function joinRelation($relationName, $callback = null, $joinType = 'join', $useAlias = false, $disableExtraConditions = false)
+             */            public static function joinRelation($relationName, $callback = null, $joinType = 'join', $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::joinRelation($relationName, $callback, $joinType, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::joinRelation($relationName, $callback, $joinType, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::leftJoinRelationship()
-             * @param mixed $relation
-             * @param mixed $callback
-             * @param mixed $useAlias
+             * @param string $relationName
+             * @param \Closure|array|string|null $callback
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function leftJoinRelationship($relation, $callback = null, $useAlias = false, $disableExtraConditions = false)
+             */            public static function leftJoinRelationship($relationName, $callback = null, $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelationship($relation, $callback, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelationship($relationName, $callback, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::leftJoinRelation()
-             * @param mixed $relation
-             * @param mixed $callback
-             * @param mixed $useAlias
+             * @param string $relation
+             * @param \Closure|array|string|null $callback
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function leftJoinRelation($relation, $callback = null, $useAlias = false, $disableExtraConditions = false)
+             */            public static function leftJoinRelation($relation, $callback = null, $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelation($relation, $callback, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::leftJoinRelation($relation, $callback, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::rightJoinRelationship()
-             * @param mixed $relation
-             * @param mixed $callback
-             * @param mixed $useAlias
+             * @param string $relation
+             * @param \Closure|array|string|null $callback
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function rightJoinRelationship($relation, $callback = null, $useAlias = false, $disableExtraConditions = false)
+             */            public static function rightJoinRelationship($relation, $callback = null, $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelationship($relation, $callback, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelationship($relation, $callback, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::rightJoinRelation()
-             * @param mixed $relation
-             * @param mixed $callback
-             * @param mixed $useAlias
+             * @param string $relation
+             * @param \Closure|array|string|null $callback
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function rightJoinRelation($relation, $callback = null, $useAlias = false, $disableExtraConditions = false)
+             */            public static function rightJoinRelation($relation, $callback = null, $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelation($relation, $callback, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::rightJoinRelation($relation, $callback, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::joinNestedRelationship()
              * @param string $relationships
-             * @param mixed $callback
-             * @param mixed $joinType
-             * @param mixed $useAlias
+             * @param \Closure|array|string|null $callback
+             * @param string $joinType
+             * @param bool $useAlias
              * @param bool $disableExtraConditions
+             * @param string|null $morphable
              * @static 
-             */            public static function joinNestedRelationship($relationships, $callback = null, $joinType = 'join', $useAlias = false, $disableExtraConditions = false)
+             */            public static function joinNestedRelationship($relationships, $callback = null, $joinType = 'join', $useAlias = false, $disableExtraConditions = false, $morphable = null)
             {
-                                return \Illuminate\Database\Eloquent\Builder::joinNestedRelationship($relationships, $callback, $joinType, $useAlias, $disableExtraConditions);
+                                return \Illuminate\Database\Eloquent\Builder::joinNestedRelationship($relationships, $callback, $joinType, $useAlias, $disableExtraConditions, $morphable);
             }
                             /**
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoins()
-             * @param mixed $sort
-             * @param mixed $direction
-             * @param mixed $aggregation
-             * @param mixed $joinType
+             * @param array|string $sort
+             * @param string $direction
+             * @param string|null $aggregation
+             * @param string $joinType
              * @param mixed $aliases
              * @static 
              */            public static function orderByPowerJoins($sort, $direction = 'asc', $aggregation = null, $joinType = 'join', $aliases = null)
@@ -23145,8 +23459,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoins()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoins($sort, $direction = 'asc')
             {
@@ -23156,8 +23470,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoinsCount()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByPowerJoinsCount($sort, $direction = 'asc')
             {
@@ -23167,8 +23481,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoinsCount()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoinsCount($sort, $direction = 'asc')
             {
@@ -23178,8 +23492,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoinsSum()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByPowerJoinsSum($sort, $direction = 'asc')
             {
@@ -23189,8 +23503,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoinsSum()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoinsSum($sort, $direction = 'asc')
             {
@@ -23200,8 +23514,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoinsAvg()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByPowerJoinsAvg($sort, $direction = 'asc')
             {
@@ -23211,8 +23525,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoinsAvg()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoinsAvg($sort, $direction = 'asc')
             {
@@ -23222,8 +23536,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoinsMin()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByPowerJoinsMin($sort, $direction = 'asc')
             {
@@ -23233,8 +23547,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoinsMin()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoinsMin($sort, $direction = 'asc')
             {
@@ -23244,8 +23558,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByPowerJoinsMax()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByPowerJoinsMax($sort, $direction = 'asc')
             {
@@ -23255,8 +23569,8 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::orderByLeftPowerJoinsMax()
-             * @param mixed $sort
-             * @param mixed $direction
+             * @param array|string $sort
+             * @param string $direction
              * @static 
              */            public static function orderByLeftPowerJoinsMax($sort, $direction = 'asc')
             {
@@ -23266,11 +23580,11 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::powerJoinHas()
-             * @param mixed $relation
-             * @param mixed $operator
-             * @param mixed $count
+             * @param string $relation
+             * @param string $operator
+             * @param int $count
              * @param mixed $boolean
-             * @param \Closure|array|null $callback
+             * @param \Closure|array|string|null $callback
              * @param string|null $morphable
              * @return static 
              * @static 
@@ -23282,11 +23596,11 @@ namespace  {
              * 
              *
              * @see \Kirschbaum\PowerJoins\Mixins\JoinRelationship::hasNestedUsingJoins()
-             * @param mixed $relations
-             * @param mixed $operator
-             * @param mixed $count
-             * @param mixed $boolean
-             * @param \Closure|array|null $callback
+             * @param string $relations
+             * @param string $operator
+             * @param int $count
+             * @param string $boolean
+             * @param \Closure|array|string|null $callback
              * @return static 
              * @static 
              */            public static function hasNestedUsingJoins($relations, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
@@ -23326,6 +23640,15 @@ namespace  {
              */            public static function getGroupBy()
             {
                                 return \Illuminate\Database\Eloquent\Builder::getGroupBy();
+            }
+                            /**
+             * 
+             *
+             * @see \Kirschbaum\PowerJoins\Mixins\QueryRelationshipExistence::getScopes()
+             * @static 
+             */            public static function getScopes()
+            {
+                                return \Illuminate\Database\Eloquent\Builder::getScopes();
             }
                             /**
              * 
@@ -23929,7 +24252,7 @@ namespace  {
              * Add a where between statement to the query.
              *
              * @param \Illuminate\Contracts\Database\Query\Expression|string $column
-             * @param \Illuminate\Database\Query\iterable $values
+             * @param iterable $values
              * @param string $boolean
              * @param bool $not
              * @return \Illuminate\Database\Query\Builder 
@@ -23957,7 +24280,7 @@ namespace  {
              * Add an or where between statement to the query.
              *
              * @param \Illuminate\Contracts\Database\Query\Expression|string $column
-             * @param \Illuminate\Database\Query\iterable $values
+             * @param iterable $values
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */            public static function orWhereBetween($column, $values)
@@ -23981,7 +24304,7 @@ namespace  {
              * Add a where not between statement to the query.
              *
              * @param \Illuminate\Contracts\Database\Query\Expression|string $column
-             * @param \Illuminate\Database\Query\iterable $values
+             * @param iterable $values
              * @param string $boolean
              * @return \Illuminate\Database\Query\Builder 
              * @static 
@@ -24007,7 +24330,7 @@ namespace  {
              * Add an or where not between statement to the query.
              *
              * @param \Illuminate\Contracts\Database\Query\Expression|string $column
-             * @param \Illuminate\Database\Query\iterable $values
+             * @param iterable $values
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */            public static function orWhereNotBetween($column, $values)
@@ -24637,7 +24960,7 @@ namespace  {
              * Add a "having between " clause to the query.
              *
              * @param string $column
-             * @param \Illuminate\Database\Query\iterable $values
+             * @param iterable $values
              * @param string $boolean
              * @param bool $not
              * @return \Illuminate\Database\Query\Builder 
@@ -25367,7 +25690,7 @@ namespace  {
                             /**
              * Die and dump the current SQL and bindings.
              *
-             * @return \Illuminate\Database\Query\never 
+             * @return never 
              * @static 
              */            public static function dd()
             {
@@ -25377,7 +25700,7 @@ namespace  {
                             /**
              * Die and dump the current SQL with embedded bindings.
              *
-             * @return \Illuminate\Database\Query\never 
+             * @return never 
              * @static 
              */            public static function ddRawSql()
             {
@@ -25467,6 +25790,7 @@ namespace  {
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
             class Vite extends \Illuminate\Support\Facades\Vite {}
+            class FilamentSpatieRolesPermissions extends \Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsFacade {}
             class EloquentSerialize extends \AnourValar\EloquentSerialize\Facades\EloquentSerializeFacade {}
             class RequestLogger extends \Bilfeldt\RequestLogger\RequestLoggerFacade {}
             class Firebase extends \Kreait\Laravel\Firebase\Facades\Firebase {}

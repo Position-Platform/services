@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Password;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends BaseController
 {
@@ -27,6 +28,12 @@ class UserController extends BaseController
      */
     public function register(Request $request)
     {
+        // Log de la tentative d'inscription
+        Log::debug('Tentative d\'inscription', [
+            'controller' => 'UserController',
+            'method' => 'register',
+            'inputs' => $request->all()
+        ]);
         $validator = Validator::make($request->all(), [
             'name' => 'string|max:191',
             'email' => 'email|unique:users,email',
@@ -56,8 +63,21 @@ class UserController extends BaseController
         $success['user'] = $user;
 
         if ($user) {
+            // Log de l'inscription réussie
+            Log::info('Inscription réussie', [
+                'controller' => 'UserController',
+                'method' => 'register',
+                'user_id' => $user->id,
+                'email' => $user->email
+            ]);
             return $this->sendResponse($success, 'Création réussie verifiez vos mails.');
         } else {
+            // Log de l'échec de l'inscription
+            Log::error('Échec de l\'inscription', [
+                'controller' => 'UserController',
+                'method' => 'register',
+                'input' => $input
+            ]);
             return $this->sendError("Pas autorisé.", ['error' => 'Unauthorised']);
         }
     }
@@ -73,6 +93,12 @@ class UserController extends BaseController
      */
     public function login(Request $request)
     {
+        // Log de la tentative de connexion
+        Log::debug('Tentative de connexion', [
+            'controller' => 'UserController',
+            'method' => 'login',
+            'inputs' => $request->all()
+        ]);
         $credentials = $request->only(['email', 'phone', 'password']);
 
         if (Auth::attempt($credentials)) {
@@ -82,11 +108,32 @@ class UserController extends BaseController
                 $success['token'] = $user->createToken('Position')->accessToken;
                 $success['user'] = $user;
 
+                // Log de la connexion réussie
+                Log::info('Connexion réussie', [
+                    'controller' => 'UserController',
+                    'method' => 'login',
+                    'user_id' => $user->id,
+                    'email' => $user->email
+                ]);
+
                 return $this->sendResponse($success, 'Connexion réussie.');
             } else {
+                // Log de l'échec de la connexion en raison d'un email non vérifié
+                Log::warning('Connexion échouée - Email non vérifié', [
+                    'controller' => 'UserController',
+                    'method' => 'login',
+                    'user_id' => $user->id,
+                    'email' => $user->email
+                ]);
                 return $this->sendError("Email not verified.", ['error' => 'Unauthorised'], 400);
             }
         } else {
+            // Log de l'échec de la connexion
+            Log::error('Échec de la connexion', [
+                'controller' => 'UserController',
+                'method' => 'login',
+                'credentials' => $credentials
+            ]);
             return $this->sendError('Pas autorisé.', ['error' => 'Login Error']);
         }
     }
@@ -100,19 +147,42 @@ class UserController extends BaseController
      */
     public function logout()
     {
+        // Log de la tentative de déconnexion
+        Log::debug('Tentative de déconnexion', [
+            'controller' => 'UserController',
+            'method' => 'logout',
+            'user_id' => Auth::id()
+        ]);
         $user = Auth::user();
 
-        if($user) {
+        if ($user) {
             $token = $user->token();
             $revoque = $token->revoke();
 
             if ($revoque) {
+                // Log de la déconnexion réussie
+                Log::info('Déconnexion réussie', [
+                    'controller' => 'UserController',
+                    'method' => 'logout',
+                    'user_id' => $user->id
+                ]);
                 return $this->sendResponse("", 'Deconnexion réussie.');
             } else {
+                // Log de l'échec de la déconnexion
+                Log::error('Échec de la déconnexion', [
+                    'controller' => 'UserController',
+                    'method' => 'logout',
+                    'user_id' => $user->id
+                ]);
                 return $this->sendError('Pas autorisé.', ['error' => 'Echec de deconnexion'], 400);
             }
         } else {
-           return $this->sendResponse("", 'Deconnexion réussie.');
+            // Log de l'échec de la déconnexion en raison d'un utilisateur non authentifié
+            Log::warning('Tentative de déconnexion sans utilisateur authentifié', [
+                'controller' => 'UserController',
+                'method' => 'logout'
+            ]);
+            return $this->sendResponse("", 'Deconnexion réussie.');
         }
     }
 
@@ -125,6 +195,12 @@ class UserController extends BaseController
      */
     public function getUser()
     {
+        // Log de la récupération des informations utilisateur
+        Log::debug('Récupération des informations utilisateur', [
+            'controller' => 'UserController',
+            'method' => 'getUser',
+            'user_id' => Auth::id()
+        ]);
         $user = Auth::user();
 
         if ($user) {
@@ -133,8 +209,20 @@ class UserController extends BaseController
             $success["user"] = $user;
             $succes['roles'] = $roles;
 
+            // Log du succès de la récupération
+            Log::info('Informations utilisateur récupérées', [
+                'controller' => 'UserController',
+                'method' => 'getUser',
+                'user_id' => $user->id
+            ]);
+
             return $this->sendResponse($success, 'Utilisateur');
         } else {
+            // Log de l'échec de la récupération en raison d'un utilisateur non authentifié
+            Log::warning('Echec Unauthorised', [
+                'controller' => 'UserController',
+                'method' => 'getUser'
+            ]);
             return $this->sendError('Pas autorisé.', ['error' => 'Unauthorised']);
         }
     }
@@ -153,6 +241,13 @@ class UserController extends BaseController
      */
     public function updateuser($id, Request $request)
     {
+        // Log de la tentative de mise à jour
+        Log::debug('Tentative de mise à jour de l\'utilisateur', [
+            'controller' => 'UserController',
+            'method' => 'updateuser',
+            'user_id' => $id,
+            'inputs' => $request->all()
+        ]);
         $user = Auth::user();
         $admin = Admin::where('user_id', $user->id)->first();
         if ($admin || $user->id == $id) {
@@ -178,12 +273,30 @@ class UserController extends BaseController
             $save = $user->save();
 
             if ($save) {
+                // Log de la mise à jour réussie
+                Log::info('Mise à jour réussie', [
+                    'controller' => 'UserController',
+                    'method' => 'updateuser',
+                    'user_id' => $user->id
+                ]);
                 $success["user"] = $user;
                 return $this->sendResponse($success, "Utilisateur", 201);
             } else {
+                // Log de l'échec de la mise à jour
+                Log::error('Échec de la mise à jour', [
+                    'controller' => 'UserController',
+                    'method' => 'updateuser',
+                    'user_id' => $user->id
+                ]);
                 return $this->sendError('Erreur.', ['error' => 'Echec de mise à jour'], 400);
             }
         } else {
+            // Log de l'échec de la mise à jour en raison d'un utilisateur non autorisé
+            Log::warning('Tentative de mise à jour d\'un utilisateur non autorisé', [
+                'controller' => 'UserController',
+                'method' => 'updateuser',
+                'user_id' => $id
+            ]);
             return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
         }
     }
@@ -199,6 +312,12 @@ class UserController extends BaseController
      */
     public function deleteuser($id)
     {
+        // Log de la tentative de suppression
+        Log::debug('Tentative de suppression de l\'utilisateur', [
+            'controller' => 'UserController',
+            'method' => 'deleteuser',
+            'user_id' => $id
+        ]);
         $user = Auth::user();
         $admin = Admin::where('user_id', $user->id)->first();
         if ($admin || $user->id == $id) {
@@ -206,8 +325,23 @@ class UserController extends BaseController
             try {
                 User::destroy($id);
 
+                // Log de la suppression réussie
+                Log::info('Suppression réussie', [
+                    'controller' => 'UserController',
+                    'method' => 'deleteuser',
+                    'user_id' => $id
+                ]);
+
                 return $this->sendResponse("", "Delete Success", 200);
             } catch (\Throwable $th) {
+                // Log de l'échec de la suppression
+                Log::error('Échec de la suppression', [
+                    'controller' => 'UserController',
+                    'method' => 'deleteuser',
+                    'user_id' => $id,
+                    'exception' => $th->getMessage(),
+                    'trace' => $th->getTraceAsString()
+                ]);
                 return $this->sendError('Erreur.', ['error' => 'Echec de suppression'], 400);
             }
         }
@@ -223,9 +357,22 @@ class UserController extends BaseController
      */
     public function forgot()
     {
+        // Log de la tentative de réinitialisation du mot de passe
+        Log::debug('Tentative de réinitialisation du mot de passe', [
+            'controller' => 'UserController',
+            'method' => 'forgot',
+            'inputs' => request()->all()
+        ]);
         $credentials = request()->validate(['email' => 'required|email']);
 
         Password::sendResetLink($credentials);
+
+        // Log de l'envoi du lien de réinitialisation
+        Log::info('Lien de réinitialisation envoyé', [
+            'controller' => 'UserController',
+            'method' => 'forgot',
+            'email' => $credentials['email']
+        ]);
 
         return $this->sendResponse("", "Un lien de reinitialisation vous a été envoyé par mail.", 200);
     }
@@ -242,6 +389,12 @@ class UserController extends BaseController
      */
     public function reset(Request $request)
     {
+        // Log de la tentative de réinitialisation du mot de passe
+        Log::debug('Tentative de réinitialisation du mot de passe', [
+            'controller' => 'UserController',
+            'method' => 'reset',
+            'inputs' => $request->all()
+        ]);
 
 
         $validator = Validator::make($request->all(), [
@@ -251,6 +404,12 @@ class UserController extends BaseController
         ]);
 
         if ($validator->fails()) {
+            // Log des erreurs de validation
+            Log::error('Erreur de validation', [
+                'controller' => 'UserController',
+                'method' => 'reset',
+                'errors' => $validator->errors()
+            ]);
             return $this->sendError('Erreur de paramètres.', $validator->errors(), 400);
         }
 
@@ -261,9 +420,37 @@ class UserController extends BaseController
             $user->save();
         });
 
+        // Log de la réinitialisation du mot de passe
+        Log::info('Réinitialisation du mot de passe', [
+            'controller' => 'UserController',
+            'method' => 'reset',
+            'email' => $credentials['email'],
+            'status' => $reset_password_status
+        ]);
+
         if ($reset_password_status == Password::INVALID_TOKEN) {
+            // Log de l'échec de la réinitialisation en raison d'un token invalide
+            Log::error('Échec de la réinitialisation du mot de passe - Token invalide', [
+                'controller' => 'UserController',
+                'method' => 'reset',
+                'email' => $credentials['email']
+            ]);
             return $this->sendError("Invalid token provided", ['error' => 'Unauthorised']);
         }
+        if ($reset_password_status == Password::INVALID_USER) {
+            // Log de l'échec de la réinitialisation en raison d'un utilisateur invalide
+            Log::error('Échec de la réinitialisation du mot de passe - Utilisateur invalide', [
+                'controller' => 'UserController',
+                'method' => 'reset',
+                'email' => $credentials['email']
+            ]);
+            return $this->sendError("Invalid user provided", ['error' => 'Unauthorised']);
+        }
+        Log::info('Réinitialisation du mot de passe réussie', [
+            'controller' => 'UserController',
+            'method' => 'reset',
+            'email' => $credentials['email']
+        ]);
 
         return $this->sendResponse("", "Password has been successfully changed", 201);
     }
@@ -277,6 +464,12 @@ class UserController extends BaseController
 
     public function favorites()
     {
+        // Log de la récupération des favoris
+        Log::debug('Récupération des favoris', [
+            'controller' => 'UserController',
+            'method' => 'favorites',
+            'user_id' => Auth::id()
+        ]);
         $user = Auth::user();
         $favorites = UserFavoris::where('user_id', $user->id)->get();
 
@@ -319,6 +512,14 @@ class UserController extends BaseController
                 $commentaires->user;
             }
         }
+
+        // Log du succès de la récupération
+        Log::info('Favoris récupérés avec succès', [
+            'controller' => 'UserController',
+            'method' => 'favorites',
+            'user_id' => $user->id,
+            'nombre_favoris' => count($etablissements)
+        ]);
 
         return $this->sendResponse($etablissements, 'Favorites');
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Tracking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 /**
  *
@@ -37,8 +38,12 @@ class TrackingController extends BaseController
     public function store(Request $request)
     {
         try {
-
-
+            // Log du début de la création
+            Log::debug('Tentative de création d\'une position', [
+                'controller' => 'TrackingController',
+                'method' => 'store',
+                'inputs' => $request->all()
+            ]);
 
             $user = Auth::user();
 
@@ -48,6 +53,13 @@ class TrackingController extends BaseController
 
 
             $success['tracking'] = $tracking;
+
+            // Log de la création réussie
+            Log::info('Position créée avec succès', [
+                'controller' => 'TrackingController',
+                'method' => 'store',
+                'tracking_id' => $tracking->id
+            ]);
 
             return $this->sendResponse($success, "Ajout de la position reussie", 201);
         } catch (\Exception $ex) {
