@@ -17,7 +17,7 @@
         "amendozaaguiar/filament-route-statistics": "^1.4",
         "awcodes/filament-versions": "^2.0",
         "awcodes/overlook": "^2.0",
-        "bilfeldt/laravel-route-statistics": "^2.2",
+        "bilfeldt/laravel-route-statistics": "^3.4",
         "doctrine/dbal": "^3.7.2",
         "ejarnutowski/laravel-api-key": "^1.0",
         "filament/filament": "3.3.4",
