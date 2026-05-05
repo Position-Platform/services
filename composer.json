@@ -30,7 +30,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/scout": "^10.6.1",
         "laravel/socialite": "^5.5",
-        "laravel/tinker": "^2.7",
+        "laravel/tinker": "^3.0",
         "laravel/vonage-notification-channel": "^3.3.0",
         "meilisearch/meilisearch-php": "^1.5.0",
         "njxqlus/filament-progressbar": "^1.0",
