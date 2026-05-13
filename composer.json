@@ -28,7 +28,7 @@
         "laravel/framework": "^10.38.2",
         "laravel/passport": "^12.2",
         "laravel/sanctum": "^3.2",
-        "laravel/scout": "^10.6.1",
+        "laravel/scout": "^11.2.0",
         "laravel/socialite": "^5.5",
         "laravel/tinker": "^2.7",
         "laravel/vonage-notification-channel": "^3.3.0",
